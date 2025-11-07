@@ -1,1 +1,11 @@
-# repo-template
+
+  # Catholic Foundations Website Design
+
+  This is a code bundle for Catholic Foundations Website Design. The original project is available at https://www.figma.com/design/E0Rw33EfVNeuwUi0up5USr/Catholic-Foundations-Website-Design.
+
+  ## Running the code
+
+  Run `npm i` to install the dependencies.
+
+  Run `npm run dev` to start the development server.
+  
