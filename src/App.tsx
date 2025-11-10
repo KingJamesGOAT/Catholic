@@ -36,6 +36,7 @@ export interface Topic {
 }
 
 export const topics: Topic[] = [
+  // ... (Your existing topics array remains unchanged) ...
   {
     id: "existence-of-god",
     title: "Existence of God",
@@ -153,6 +154,16 @@ function AppContent() {
   const { language } = useLanguage();
   const trans = translations;
 
+  // REPLACE previous hover states with these
+  const [showOnLoad, setShowOnLoad] = useState(true);
+  const [isNavHovering, setIsNavHovering] = useState(false);
+  const [isProgressHovering, setIsProgressHovering] =
+    useState(false);
+
+  // DERIVED STATE: The bar is visible if any of these are true
+  const isProgressVisible =
+    showOnLoad || isNavHovering || isProgressHovering;
+
   // Load progress from localStorage
   useEffect(() => {
     const saved = localStorage.getItem("journey-progress");
@@ -162,6 +173,20 @@ function AppContent() {
       setCompletedTopics(new Set(completed));
     }
   }, []);
+
+  // REPLACE the previous hover/timer useEffect with this one
+  // This timer just controls the "show on load" behavior
+  useEffect(() => {
+    if (showTransition) return;
+
+    setShowOnLoad(true); // Show on new page
+
+    const timer = setTimeout(() => {
+      setShowOnLoad(false); // Hide after 3 seconds
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, [currentTopicIndex, showTransition]); // Only runs on page change
 
   // Save progress to localStorage
   useEffect(() => {
@@ -239,7 +264,7 @@ function AppContent() {
       {/* Show Early Church page or Journey */}
       {showEarlyChurch ? (
         <>
-          {/* Simplified nav for Early Church page */}
+          {/* Simplified nav for Early Church page (No changes needed here) */}
           <motion.nav
             initial={{ y: -100 }}
             animate={{ y: 0 }}
@@ -282,12 +307,19 @@ function AppContent() {
             onNavigate={goToTopic}
             completedTopics={completedTopics}
             onEarlyChurchClick={handleEarlyChurchClick}
+            // UPDATE HOVER HANDLERS
+            onHoverStart={() => setIsNavHovering(true)}
+            onHoverEnd={() => setIsNavHovering(false)}
           />
 
           <ProgressTracker
             currentIndex={currentTopicIndex}
             total={topics.length}
             completedTopics={completedTopics}
+            isVisible={isProgressVisible} // PASS DERIVED STATE
+            onNavigate={goToTopic} // PASS NAVIGATION FUNCTION
+            onHoverStart={() => setIsProgressHovering(true)} // ADD HOVER HANDLERS
+            onHoverEnd={() => setIsProgressHovering(false)} // ADD HOVER HANDLERS
           />
 
           <AnimatePresence mode="wait">
@@ -313,17 +345,30 @@ function AppContent() {
                   opacity: 0,
                   x: direction === "forward" ? 100 : -100,
                 }}
-                animate={{ opacity: 1, x: 0 }}
+                animate={{
+                  opacity: 1,
+                  x: 0,
+                  // UPDATE padding logic to use derived state
+                  paddingTop: isProgressVisible
+                    ? "256px"
+                    : "80px",
+                }}
                 exit={{
                   opacity: 0,
                   x: direction === "forward" ? -100 : 100,
                 }}
-                transition={{ duration: 0.5 }}
-                className="pt-64"
+                transition={{
+                  opacity: { duration: 0.5 },
+                  x: { duration: 0.5 },
+                  paddingTop: {
+                    duration: 0.3,
+                    ease: "easeInOut",
+                  },
+                }}
               >
                 <CurrentTopicComponent />
 
-                {/* Navigation Buttons */}
+                {/* Navigation Buttons (No changes needed) */}
                 <div className="container mx-auto px-4 py-16 max-w-4xl">
                   <div className="flex items-center justify-between border-t border-gray-800 pt-8">
                     <button

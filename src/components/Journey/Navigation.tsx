@@ -11,9 +11,18 @@ interface NavigationProps {
   onNavigate: (index: number) => void;
   completedTopics: Set<number>;
   onEarlyChurchClick?: () => void;
+  onHoverStart?: () => void; // ADD THIS
+  onHoverEnd?: () => void;   // ADD THIS
 }
 
-export default function Navigation({ currentTopicIndex, onNavigate, completedTopics, onEarlyChurchClick }: NavigationProps) {
+export default function Navigation({ 
+  currentTopicIndex, 
+  onNavigate, 
+  completedTopics, 
+  onEarlyChurchClick, 
+  onHoverStart, // ADD THIS
+  onHoverEnd    // ADD THIS
+}: NavigationProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const { language } = useLanguage();
   const trans = translations;
@@ -24,6 +33,8 @@ export default function Navigation({ currentTopicIndex, onNavigate, completedTop
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-gray-800"
+        onHoverStart={onHoverStart} // ADD THIS
+        onHoverEnd={onHoverEnd}     // ADD THIS
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
@@ -71,7 +82,7 @@ export default function Navigation({ currentTopicIndex, onNavigate, completedTop
         </div>
       </motion.nav>
 
-      {/* Full Screen Menu */}
+      {/* Full Screen Menu (No changes needed here) */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div

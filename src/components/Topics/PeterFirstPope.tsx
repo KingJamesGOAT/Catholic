@@ -1,99 +1,111 @@
-import TopicLayout from '../Journey/TopicLayout';
-import { motion } from 'motion/react';
-import { Separator } from '../ui/separator';
-import { Key, Crown, BookOpen, Users, CheckCircle, MessageSquare, Award, AlertCircle, ScrollText } from 'lucide-react';
+import TopicLayout from "../Journey/TopicLayout";
+import { motion } from "motion/react";
+import { Separator } from "../ui/separator";
+import {
+  Key,
+  Crown,
+  BookOpen,
+  Users,
+  CheckCircle,
+  MessageSquare,
+  Award,
+  AlertCircle,
+  ScrollText,
+} from "lucide-react";
+import { useLanguage } from "../../lib/i18n/LanguageContext";
+import { translations, t } from "../../lib/i18n/translations";
 
 export default function PeterFirstPope() {
+  const { language } = useLanguage();
+  const trans = translations.peterFirstPope;
+
   const gospelEvidence = [
     {
-      text: 'Peter\'s name is mentioned over 150 times — more than all the other apostles combined.',
-      icon: MessageSquare
+      text: t(trans.gospels.evidence.e1, language),
+      icon: MessageSquare,
     },
     {
-      text: 'He is always listed first in apostolic lists (e.g., Matthew 10:2).',
-      icon: Users
-    }
+      text: t(trans.gospels.evidence.e2, language),
+      icon: Users,
+    },
   ];
 
   const actsLeadership = [
     {
-      action: 'Leads the selection of Judas\' replacement',
-      reference: 'Acts 1:15–26'
+      action: t(trans.acts.points.p1.action, language),
+      reference: t(trans.acts.points.p1.ref, language),
     },
     {
-      action: 'Gives the first public sermon at Pentecost',
-      reference: 'Acts 2:14–41'
+      action: t(trans.acts.points.p2.action, language),
+      reference: t(trans.acts.points.p2.ref, language),
     },
     {
-      action: 'Performs the first healing',
-      reference: 'Acts 3:1–10'
+      action: t(trans.acts.points.p3.action, language),
+      reference: t(trans.acts.points.p3.ref, language),
     },
     {
-      action: 'Is the first to preach to Gentiles',
-      reference: 'Acts 10'
+      action: t(trans.acts.points.p4.action, language),
+      reference: t(trans.acts.points.p4.ref, language),
     },
     {
-      action: 'Settles doctrinal dispute at the Council of Jerusalem',
-      reference: 'Acts 15'
-    }
+      action: t(trans.acts.points.p5.action, language),
+      reference: t(trans.acts.points.p5.ref, language),
+    },
   ];
 
   const churchFathers = [
     {
-      name: 'St. Irenaeus',
-      year: 'c. 180 AD',
-      quote: '...the Church founded and organized at Rome by the two most glorious apostles, Peter and Paul...'
+      name: t(trans.fathers.f1.name, language),
+      year: t(trans.fathers.f1.year, language),
+      quote: t(trans.fathers.f1.quote, language),
     },
     {
-      name: 'Tertullian',
-      year: 'c. 200 AD',
-      quote: 'Refers to the bishop of Rome as the successor of Peter.'
+      name: t(trans.fathers.f2.name, language),
+      year: t(trans.fathers.f2.year, language),
+      quote: t(trans.fathers.f2.quote, language),
     },
     {
-      name: 'St. Cyprian',
-      year: 'c. 250 AD',
-      quote: 'The primacy is given to Peter...'
-    }
+      name: t(trans.fathers.f3.name, language),
+      year: t(trans.fathers.f3.year, language),
+      quote: t(trans.fathers.f3.quote, language),
+    },
   ];
 
   const objections = [
     {
-      objection: 'Peter wasn\'t in Rome.',
-      response: 'Historical evidence (e.g., writings of Clement, Ignatius, Irenaeus) strongly affirm Peter\'s Roman ministry and martyrdom.'
+      objection: t(trans.objections.o1.obj, language),
+      response: t(trans.objections.o1.res, language),
     },
     {
-      objection: 'Peter never called himself Pope.',
-      response: 'Titles develop; the early Church emphasized roles and authority. "Pope" (from Latin papa) was used later to designate his unique pastoral authority.'
+      objection: t(trans.objections.o2.obj, language),
+      response: t(trans.objections.o2.res, language),
     },
     {
-      objection: 'All apostles were equal.',
-      response: 'All shared in apostolic ministry, but Peter was singled out for specific responsibilities (Luke 22:32; John 21:15–17).'
-    }
+      objection: t(trans.objections.o3.obj, language),
+      response: t(trans.objections.o3.res, language),
+    },
   ];
 
   return (
     <TopicLayout
-      title="Was Peter the First Pope?"
-      subtitle="Examining the biblical and historical evidence for the papacy"
+      title={t(trans.title, language)}
+      subtitle={t(trans.subtitle, language)}
       quote={{
-        text: "You are Peter, and on this rock I will build my church, and the gates of hell shall not prevail against it. I will give you the keys of the kingdom of heaven.",
-        source: "Matthew 16:18-19"
+        text: t(trans.quote.text, language),
+        source: t(trans.quote.source, language),
       }}
     >
       {/* Introduction */}
       <div className="space-y-6 text-gray-300 leading-relaxed mb-16">
-        <p>
-          The Catholic Church teaches that St. Peter was the first Pope — the visible head of the Church on earth, 
-          appointed by Christ Himself. This belief is rooted in Scripture, affirmed by early Christian writings, and 
-          sustained through an unbroken line of successors in Rome.
-        </p>
+        <p>{t(trans.intro.p1, language)}</p>
 
         <div className="bg-gray-900/50 border-l-4 border-blue-600 p-6 rounded-r-lg">
           <p className="text-gray-300 italic mb-3">
-            &quot;The Lord made Simon alone, whom he named Peter, the &apos;rock&apos; of his Church. He gave him the 
-            keys of his Church and instituted him shepherd of the whole flock.&quot;
+            {t(trans.intro.callout.text, language)}
           </p>
-          <p className="text-gray-500">— Catechism of the Catholic Church 881</p>
+          <p className="text-gray-500">
+            — {t(trans.intro.callout.source, language)}
+          </p>
         </div>
       </div>
 
@@ -104,7 +116,7 @@ export default function PeterFirstPope() {
             width="100%"
             height="100%"
             src="https://www.youtube.com/embed/2SzRhqbVPes?start=881"
-            title="Was Peter the First Pope?"
+            title={t(trans.videos.v1.title, language)}
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -117,7 +129,7 @@ export default function PeterFirstPope() {
             width="100%"
             height="100%"
             src="https://www.youtube.com/embed/ZWMfxDCUbbs"
-            title="Peter and the Papacy"
+            title={t(trans.videos.v2.title, language)}
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -130,7 +142,7 @@ export default function PeterFirstPope() {
             width="100%"
             height="100%"
             src="https://www.youtube.com/embed/42A632z0dOA"
-            title="Biblical Evidence for the Papacy"
+            title={t(trans.videos.v3.title, language)}
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -148,12 +160,12 @@ export default function PeterFirstPope() {
         viewport={{ once: true }}
         className="mb-16"
       >
-        <h2 className="text-white mb-6">I. Peter&apos;s Role in the Gospels</h2>
+        <h2 className="text-white mb-6">
+          {t(trans.gospels.h2, language)}
+        </h2>
 
         <div className="space-y-6 text-gray-300 leading-relaxed">
-          <p>
-            Peter, originally named Simon, is the most prominent of the apostles in the New Testament:
-          </p>
+          <p>{t(trans.gospels.p1, language)}</p>
 
           <div className="grid md:grid-cols-2 gap-4">
             {gospelEvidence.map((item, index) => (
@@ -162,49 +174,82 @@ export default function PeterFirstPope() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                }}
                 className="bg-gradient-to-r from-blue-900/20 to-blue-900/5 border border-blue-800 rounded-lg p-6 flex items-start gap-3"
               >
-                <item.icon className="text-blue-400 flex-shrink-0 mt-1" size={24} />
+                <item.icon
+                  className="text-blue-400 flex-shrink-0 mt-1"
+                  size={24}
+                />
                 <p className="text-gray-300">{item.text}</p>
               </motion.div>
             ))}
           </div>
 
-          <h3 className="text-white mt-8 mb-6">Matthew 16:18–19 – The Foundational Text</h3>
+          <h3 className="text-white mt-8 mb-6">
+            {t(trans.gospels.matthew.h3, language)}
+          </h3>
 
           <div className="bg-gray-900/50 border-l-4 border-purple-600 p-6 rounded-r-lg">
             <p className="text-white text-lg mb-2">
-              &quot;You are Peter, and on this rock I will build my Church... I will give you the keys of the kingdom 
-              of heaven...&quot;
+              {t(trans.gospels.matthew.quote, language)}
             </p>
           </div>
 
           <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-6 mt-6">
-            <h4 className="text-white mb-4">Key elements:</h4>
+            <h4 className="text-white mb-4">
+              {t(trans.gospels.matthew.points.h4, language)}
+            </h4>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
-                <Key className="text-blue-400 flex-shrink-0 mt-1" size={20} />
+                <Key
+                  className="text-blue-400 flex-shrink-0 mt-1"
+                  size={20}
+                />
+                <div>
+                  <p
+                    className="text-gray-300"
+                    dangerouslySetInnerHTML={{
+                      __html: t(
+                        trans.gospels.matthew.points.p1,
+                        language,
+                      ),
+                    }}
+                  />
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <ScrollText
+                  className="text-blue-400 flex-shrink-0 mt-1"
+                  size={20}
+                />
                 <div>
                   <p className="text-gray-300">
-                    <strong className="text-white">&quot;Peter&quot;</strong> (Greek: <em>Petros</em>) means rock.
+                    {t(
+                      trans.gospels.matthew.points.p2,
+                      language,
+                    )}
                   </p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <ScrollText className="text-blue-400 flex-shrink-0 mt-1" size={20} />
+                <Award
+                  className="text-blue-400 flex-shrink-0 mt-1"
+                  size={20}
+                />
                 <div>
-                  <p className="text-gray-300">
-                    Jesus changes Simon&apos;s name — a biblical act denoting mission (cf. Abram → Abraham).
-                  </p>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <Award className="text-blue-400 flex-shrink-0 mt-1" size={20} />
-                <div>
-                  <p className="text-gray-300">
-                    The <strong className="text-white">&quot;keys&quot;</strong> symbolize authority (cf. Isaiah 22:22).
-                  </p>
+                  <p
+                    className="text-gray-300"
+                    dangerouslySetInnerHTML={{
+                      __html: t(
+                        trans.gospels.matthew.points.p3,
+                        language,
+                      ),
+                    }}
+                  />
                 </div>
               </li>
             </ul>
@@ -212,10 +257,11 @@ export default function PeterFirstPope() {
 
           <div className="bg-gray-900/50 border-l-4 border-blue-600 p-6 rounded-r-lg mt-6">
             <p className="text-gray-300 italic mb-3">
-              &quot;Christ, the &apos;living stone,&apos; makes of Peter the rock of his Church. He gave him the keys 
-              of the Church and instituted him shepherd of the whole flock.&quot;
+              {t(trans.gospels.matthew.ccc.text, language)}
             </p>
-            <p className="text-gray-500">— Catechism of the Catholic Church 552</p>
+            <p className="text-gray-500">
+              — {t(trans.gospels.matthew.ccc.source, language)}
+            </p>
           </div>
         </div>
       </motion.section>
@@ -229,12 +275,12 @@ export default function PeterFirstPope() {
         viewport={{ once: true }}
         className="mb-16"
       >
-        <h2 className="text-white mb-6">II. Peter&apos;s Leadership in the Early Church</h2>
+        <h2 className="text-white mb-6">
+          {t(trans.acts.h2, language)}
+        </h2>
 
         <div className="space-y-6 text-gray-300 leading-relaxed">
-          <p>
-            The Acts of the Apostles highlights Peter&apos;s central role:
-          </p>
+          <p>{t(trans.acts.p1, language)}</p>
 
           <div className="space-y-4">
             {actsLeadership.map((item, index) => (
@@ -243,23 +289,30 @@ export default function PeterFirstPope() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                }}
                 className="bg-gradient-to-r from-purple-900/20 to-purple-900/5 border border-purple-800 rounded-lg p-6 flex items-start gap-4"
               >
                 <div className="flex-shrink-0 w-8 h-8 rounded-full bg-purple-900/50 border border-purple-700 flex items-center justify-center">
-                  <span className="text-purple-300 font-mono text-sm">{index + 1}</span>
+                  <span className="text-purple-300 font-mono text-sm">
+                    {index + 1}
+                  </span>
                 </div>
                 <div className="flex-1">
-                  <p className="text-white mb-1">{item.action}</p>
-                  <p className="text-purple-400 text-sm font-mono">{item.reference}</p>
+                  <p className="text-white mb-1">
+                    {item.action}
+                  </p>
+                  <p className="text-purple-400 text-sm font-mono">
+                    {item.reference}
+                  </p>
                 </div>
               </motion.div>
             ))}
           </div>
 
-          <p className="mt-6">
-            Though others also played major roles (especially Paul), Peter consistently acts with recognized authority.
-          </p>
+          <p className="mt-6">{t(trans.acts.p2, language)}</p>
         </div>
       </motion.section>
 
@@ -272,12 +325,12 @@ export default function PeterFirstPope() {
         viewport={{ once: true }}
         className="mb-16"
       >
-        <h2 className="text-white mb-6">III. Early Christian Witness</h2>
+        <h2 className="text-white mb-6">
+          {t(trans.fathers.h2, language)}
+        </h2>
 
         <div className="space-y-6 text-gray-300 leading-relaxed">
-          <p>
-            Church Fathers unanimously acknowledged Peter&apos;s unique role:
-          </p>
+          <p>{t(trans.fathers.p1, language)}</p>
 
           <div className="space-y-6">
             {churchFathers.map((father, index) => (
@@ -286,17 +339,29 @@ export default function PeterFirstPope() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                }}
                 className="bg-gradient-to-br from-amber-900/20 to-orange-900/20 border border-amber-800/50 rounded-lg p-6"
               >
                 <div className="flex items-start gap-4">
-                  <BookOpen className="text-amber-400 flex-shrink-0 mt-1" size={24} />
+                  <BookOpen
+                    className="text-amber-400 flex-shrink-0 mt-1"
+                    size={24}
+                  />
                   <div className="flex-1">
                     <div className="flex items-baseline gap-3 mb-3">
-                      <h4 className="text-white">{father.name}</h4>
-                      <span className="text-amber-400 text-sm font-mono">{father.year}</span>
+                      <h4 className="text-white">
+                        {father.name}
+                      </h4>
+                      <span className="text-amber-400 text-sm font-mono">
+                        {father.year}
+                      </span>
                     </div>
-                    <p className="text-gray-300 italic">&quot;{father.quote}&quot;</p>
+                    <p className="text-gray-300 italic">
+                      &quot;{father.quote}&quot;
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -304,7 +369,7 @@ export default function PeterFirstPope() {
           </div>
 
           <p className="mt-6">
-            Rome, as the city where Peter was martyred and buried, became the natural seat of his successor.
+            {t(trans.fathers.p2, language)}
           </p>
         </div>
       </motion.section>
@@ -318,27 +383,37 @@ export default function PeterFirstPope() {
         viewport={{ once: true }}
         className="mb-16"
       >
-        <h2 className="text-white mb-6">IV. Apostolic Succession and the Papacy</h2>
+        <h2 className="text-white mb-6">
+          {t(trans.succession.h2, language)}
+        </h2>
 
         <div className="space-y-6 text-gray-300 leading-relaxed">
-          <p>
-            The Catholic understanding is not that Peter alone mattered, but that his office continues through apostolic 
-            succession:
-          </p>
+          <p>{t(trans.succession.p1, language)}</p>
 
           <div className="bg-gradient-to-br from-green-900/20 to-blue-900/20 border border-green-800/50 rounded-lg p-8">
             <div className="flex items-start gap-4">
-              <Crown className="text-green-400 flex-shrink-0 mt-1" size={32} />
+              <Crown
+                className="text-green-400 flex-shrink-0 mt-1"
+                size={32}
+              />
               <div>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="text-green-400 flex-shrink-0 mt-1" size={20} />
-                    <span className="text-gray-300">Each Pope is a successor of Peter.</span>
+                    <CheckCircle
+                      className="text-green-400 flex-shrink-0 mt-1"
+                      size={20}
+                    />
+                    <span className="text-gray-300">
+                      {t(trans.succession.points.p1, language)}
+                    </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="text-green-400 flex-shrink-0 mt-1" size={20} />
+                    <CheckCircle
+                      className="text-green-400 flex-shrink-0 mt-1"
+                      size={20}
+                    />
                     <span className="text-gray-300">
-                      The office of the Pope is to preserve unity, defend truth, and shepherd the universal Church.
+                      {t(trans.succession.points.p2, language)}
                     </span>
                   </li>
                 </ul>
@@ -348,10 +423,11 @@ export default function PeterFirstPope() {
 
           <div className="bg-gray-900/50 border-l-4 border-purple-600 p-6 rounded-r-lg">
             <p className="text-gray-300 italic mb-3">
-              &quot;The Pope, Bishop of Rome and Peter&apos;s successor, is the perpetual and visible source and 
-              foundation of the unity both of the bishops and of the whole company of the faithful.&quot;
+              {t(trans.succession.ccc.text, language)}
             </p>
-            <p className="text-gray-500">— Catechism of the Catholic Church 882</p>
+            <p className="text-gray-500">
+              — {t(trans.succession.ccc.source, language)}
+            </p>
           </div>
         </div>
       </motion.section>
@@ -365,7 +441,9 @@ export default function PeterFirstPope() {
         viewport={{ once: true }}
         className="mb-16"
       >
-        <h2 className="text-white mb-8">V. Objections Addressed</h2>
+        <h2 className="text-white mb-8">
+          {t(trans.objections.h2, language)}
+        </h2>
 
         <div className="space-y-6">
           {objections.map((item, index) => (
@@ -379,14 +457,24 @@ export default function PeterFirstPope() {
             >
               <div className="bg-gradient-to-r from-red-900/30 to-red-900/10 border-b border-gray-800 p-6">
                 <div className="flex items-start gap-3">
-                  <AlertCircle className="text-red-400 flex-shrink-0 mt-1" size={24} />
-                  <p className="text-red-300 text-lg">&quot;{item.objection}&quot;</p>
+                  <AlertCircle
+                    className="text-red-400 flex-shrink-0 mt-1"
+                    size={24}
+                  />
+                  <p className="text-red-300 text-lg">
+                    &quot;{item.objection}&quot;
+                  </p>
                 </div>
               </div>
               <div className="p-6">
                 <div className="flex items-start gap-3">
-                  <CheckCircle className="text-green-400 flex-shrink-0 mt-1" size={24} />
-                  <p className="text-gray-300">{item.response}</p>
+                  <CheckCircle
+                    className="text-green-400 flex-shrink-0 mt-1"
+                    size={24}
+                  />
+                  <p className="text-gray-300">
+                    {item.response}
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -403,20 +491,20 @@ export default function PeterFirstPope() {
         viewport={{ once: true }}
         className="mb-16"
       >
-        <h2 className="text-white mb-6">Conclusion</h2>
+        <h2 className="text-white mb-6">
+          {t(trans.conclusion.h2, language)}
+        </h2>
 
         <div className="space-y-6 text-gray-300 leading-relaxed">
-          <p>
-            The Catholic belief that Peter was the first Pope is deeply grounded in Scripture, affirmed by early Church 
-            history, and realized in the continuing leadership of the bishops of Rome. The papacy exists not as a personal 
-            honor, but as a pastoral office to preserve unity and truth in the Church Christ founded.
-          </p>
+          <p>{t(trans.conclusion.p1, language)}</p>
 
           <div className="bg-gray-900/50 border-l-4 border-blue-600 p-6 rounded-r-lg">
             <p className="text-white text-xl text-center">
-              &quot;Feed my sheep.&quot;
+              {t(trans.conclusion.callout.text, language)}
             </p>
-            <p className="text-gray-500 text-center mt-2">— John 21:17</p>
+            <p className="text-gray-500 text-center mt-2">
+              — {t(trans.conclusion.callout.source, language)}
+            </p>
           </div>
         </div>
       </motion.section>
@@ -429,17 +517,19 @@ export default function PeterFirstPope() {
         className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-800/50 rounded-lg p-8"
       >
         <div className="flex items-start gap-4">
-          <Users className="text-purple-400 flex-shrink-0 mt-1" size={28} />
+          <Users
+            className="text-purple-400 flex-shrink-0 mt-1"
+            size={28}
+          />
           <div>
-            <h3 className="text-white mb-4">The Succession Continues</h3>
+            <h3 className="text-white mb-4">
+              {t(trans.bridge.h3, language)}
+            </h3>
             <p className="text-gray-300 leading-relaxed mb-4">
-              Peter&apos;s authority didn&apos;t die with him—it was passed on through apostolic succession to his 
-              successors in Rome. This unbroken line continues to the present day with Pope Francis as the 266th 
-              successor of Peter.
+              {t(trans.bridge.p1, language)}
             </p>
             <p className="text-gray-400 leading-relaxed">
-              The papacy isn&apos;t just about one man&apos;s authority—it&apos;s about the Church&apos;s teaching 
-              authority as a whole. Let&apos;s explore what that means and how the Magisterium functions.
+              {t(trans.bridge.p2, language)}
             </p>
           </div>
         </div>

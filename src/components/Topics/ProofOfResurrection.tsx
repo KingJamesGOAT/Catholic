@@ -1,9 +1,16 @@
-import TopicLayout from '../Journey/TopicLayout';
-import { motion } from 'motion/react';
-import { Separator } from '../ui/separator';
-import { BookOpen, Shield, Users, TrendingUp, XCircle, CheckCircle } from 'lucide-react';
-import { useLanguage } from '../../lib/i18n/LanguageContext';
-import { translations, t } from '../../lib/i18n/translations';
+import TopicLayout from "../Journey/TopicLayout";
+import { motion } from "motion/react";
+import { Separator } from "../ui/separator";
+import {
+  BookOpen,
+  Shield,
+  Users,
+  TrendingUp,
+  XCircle,
+  CheckCircle,
+} from "lucide-react";
+import { useLanguage } from "../../lib/i18n/LanguageContext";
+import { translations, t } from "../../lib/i18n/translations";
 
 export default function ProofOfResurrection() {
   const { language } = useLanguage();
@@ -11,25 +18,25 @@ export default function ProofOfResurrection() {
 
   const minimalFacts = [
     {
-      number: '1',
+      number: "1",
       fact: t(trans.fourMinimalFacts.fact1, language),
-      icon: Shield
+      icon: Shield,
     },
     {
-      number: '2',
+      number: "2",
       fact: t(trans.fourMinimalFacts.fact2, language),
-      icon: BookOpen
+      icon: BookOpen,
     },
     {
-      number: '3',
+      number: "3",
       fact: t(trans.fourMinimalFacts.fact3, language),
-      icon: Users
+      icon: Users,
     },
     {
-      number: '4',
+      number: "4",
       fact: t(trans.fourMinimalFacts.fact4, language),
-      icon: TrendingUp
-    }
+      icon: TrendingUp,
+    },
   ];
 
   return (
@@ -38,7 +45,7 @@ export default function ProofOfResurrection() {
       subtitle={t(trans.subtitle, language)}
       quote={{
         text: t(trans.quote, language),
-        source: t(trans.quoteSource, language)
+        source: t(trans.quoteSource, language),
       }}
     >
       {/* Video Section */}
@@ -59,10 +66,20 @@ export default function ProofOfResurrection() {
 
       {/* Introduction */}
       <div className="space-y-6 text-gray-300 leading-relaxed mb-16">
-        <h2 className="text-white">{t(trans.introHeading, language)}</h2>
-        
-        <p dangerouslySetInnerHTML={{ __html: t(trans.introPara1, language) }} />
-        <p dangerouslySetInnerHTML={{ __html: t(trans.introPara2, language) }} />
+        <h2 className="text-white">
+          {t(trans.introHeading, language)}
+        </h2>
+
+        <p
+          dangerouslySetInnerHTML={{
+            __html: t(trans.introPara1, language),
+          }}
+        />
+        <p
+          dangerouslySetInnerHTML={{
+            __html: t(trans.introPara2, language),
+          }}
+        />
       </div>
 
       <Separator className="my-16 bg-gray-800" />
@@ -74,20 +91,40 @@ export default function ProofOfResurrection() {
         viewport={{ once: true }}
         className="mb-16"
       >
-        <h2 className="text-white mb-6">{t(trans.minimalFacts.heading, language)}</h2>
-        
+        <h2 className="text-white mb-6">
+          {t(trans.minimalFacts.heading, language)}
+        </h2>
+
         <div className="space-y-4 text-gray-300 leading-relaxed">
-          <p dangerouslySetInnerHTML={{ __html: t(trans.minimalFacts.intro, language) }} />
+          <p
+            dangerouslySetInnerHTML={{
+              __html: t(trans.minimalFacts.intro, language),
+            }}
+          />
 
           <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
             <ul className="list-none space-y-3 pl-4">
               <li className="flex items-start gap-3">
                 <span className="text-blue-400 mt-1">1.</span>
-                <span dangerouslySetInnerHTML={{ __html: t(trans.minimalFacts.criterion1, language) }} />
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: t(
+                      trans.minimalFacts.criterion1,
+                      language,
+                    ),
+                  }}
+                />
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-blue-400 mt-1">2.</span>
-                <span dangerouslySetInnerHTML={{ __html: t(trans.minimalFacts.criterion2, language) }} />
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: t(
+                      trans.minimalFacts.criterion2,
+                      language,
+                    ),
+                  }}
+                />
               </li>
             </ul>
           </div>
@@ -101,52 +138,132 @@ export default function ProofOfResurrection() {
         viewport={{ once: true }}
         className="mb-16"
       >
-        <h2 className="text-white mb-6">{t(trans.manuscriptEvidence.heading, language)}</h2>
-        
+        <h2 className="text-white mb-6">
+          {t(trans.manuscriptEvidence.heading, language)}
+        </h2>
+
         <div className="space-y-6 text-gray-300 leading-relaxed">
-          <p dangerouslySetInnerHTML={{ __html: t(trans.manuscriptEvidence.intro, language) }} />
+          <p
+            dangerouslySetInnerHTML={{
+              __html: t(
+                trans.manuscriptEvidence.intro,
+                language,
+              ),
+            }}
+          />
 
           {/* Table */}
           <div className="overflow-x-auto">
             <table className="w-full border-collapse bg-gray-900/30 border border-gray-800 rounded-lg overflow-hidden">
               <thead>
                 <tr className="bg-gray-900/50">
-                  <th className="border border-gray-800 p-4 text-left text-white">{t(trans.manuscriptEvidence.tableAuthor, language)}</th>
-                  <th className="border border-gray-800 p-4 text-left text-white">{t(trans.manuscriptEvidence.tableTimeGap, language)}</th>
-                  <th className="border border-gray-800 p-4 text-left text-white">{t(trans.manuscriptEvidence.tableManuscripts, language)}</th>
+                  <th className="border border-gray-800 p-4 text-left text-white">
+                    {t(
+                      trans.manuscriptEvidence.tableAuthor,
+                      language,
+                    )}
+                  </th>
+                  <th className="border border-gray-800 p-4 text-left text-white">
+                    {t(
+                      trans.manuscriptEvidence.tableTimeGap,
+                      language,
+                    )}
+                  </th>
+                  <th className="border border-gray-800 p-4 text-left text-white">
+                    {t(
+                      trans.manuscriptEvidence.tableManuscripts,
+                      language,
+                    )}
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="bg-blue-900/20">
-                  <td className="border border-gray-800 p-4 text-white font-medium">{t(trans.manuscriptEvidence.newTestament, language)}</td>
-                  <td className="border border-gray-800 p-4 text-white font-medium">{t(trans.manuscriptEvidence.timeGap25, language)}</td>
-                  <td className="border border-gray-800 p-4 text-white font-medium">5,800+</td>
+                  <td className="border border-gray-800 p-4 text-white font-medium">
+                    {t(
+                      trans.manuscriptEvidence.newTestament,
+                      language,
+                    )}
+                  </td>
+                  <td className="border border-gray-800 p-4 text-white font-medium">
+                    {t(
+                      trans.manuscriptEvidence.timeGap25,
+                      language,
+                    )}
+                  </td>
+                  <td className="border border-gray-800 p-4 text-white font-medium">
+                    5,800+
+                  </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-800 p-4 text-gray-300">Homer</td>
-                  <td className="border border-gray-800 p-4 text-gray-400">{t(trans.manuscriptEvidence.timeGap400, language)}</td>
-                  <td className="border border-gray-800 p-4 text-gray-400">1,800</td>
+                  <td className="border border-gray-800 p-4 text-gray-300">
+                    Homer
+                  </td>
+                  <td className="border border-gray-800 p-4 text-gray-400">
+                    {t(
+                      trans.manuscriptEvidence.timeGap400,
+                      language,
+                    )}
+                  </td>
+                  <td className="border border-gray-800 p-4 text-gray-400">
+                    1,800
+                  </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-800 p-4 text-gray-300">Plato</td>
-                  <td className="border border-gray-800 p-4 text-gray-400">{t(trans.manuscriptEvidence.timeGap1400, language)}</td>
-                  <td className="border border-gray-800 p-4 text-gray-400">7</td>
+                  <td className="border border-gray-800 p-4 text-gray-300">
+                    Plato
+                  </td>
+                  <td className="border border-gray-800 p-4 text-gray-400">
+                    {t(
+                      trans.manuscriptEvidence.timeGap1400,
+                      language,
+                    )}
+                  </td>
+                  <td className="border border-gray-800 p-4 text-gray-400">
+                    7
+                  </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-800 p-4 text-gray-300">Caesar</td>
-                  <td className="border border-gray-800 p-4 text-gray-400">{t(trans.manuscriptEvidence.timeGap1000, language)}</td>
-                  <td className="border border-gray-800 p-4 text-gray-400">10</td>
+                  <td className="border border-gray-800 p-4 text-gray-300">
+                    Caesar
+                  </td>
+                  <td className="border border-gray-800 p-4 text-gray-400">
+                    {t(
+                      trans.manuscriptEvidence.timeGap1000,
+                      language,
+                    )}
+                  </td>
+                  <td className="border border-gray-800 p-4 text-gray-400">
+                    10
+                  </td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-800 p-4 text-gray-300">Tacitus</td>
-                  <td className="border border-gray-800 p-4 text-gray-400">{t(trans.manuscriptEvidence.timeGap1200, language)}</td>
-                  <td className="border border-gray-800 p-4 text-gray-400">20</td>
+                  <td className="border border-gray-800 p-4 text-gray-300">
+                    Tacitus
+                  </td>
+                  <td className="border border-gray-800 p-4 text-gray-400">
+                    {t(
+                      trans.manuscriptEvidence.timeGap1200,
+                      language,
+                    )}
+                  </td>
+                  <td className="border border-gray-800 p-4 text-gray-400">
+                    20
+                  </td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <p className="text-lg" dangerouslySetInnerHTML={{ __html: t(trans.manuscriptEvidence.conclusion, language) }} />
+          <p
+            className="text-lg"
+            dangerouslySetInnerHTML={{
+              __html: t(
+                trans.manuscriptEvidence.conclusion,
+                language,
+              ),
+            }}
+          />
         </div>
       </motion.section>
 
@@ -157,27 +274,43 @@ export default function ProofOfResurrection() {
         viewport={{ once: true }}
         className="mb-16"
       >
-        <h2 className="text-white mb-6">{t(trans.whoWasJesus.heading, language)}</h2>
-        
+        <h2 className="text-white mb-6">
+          {t(trans.whoWasJesus.heading, language)}
+        </h2>
+
         <div className="space-y-4 text-gray-300 leading-relaxed">
           <p>{t(trans.whoWasJesus.intro, language)}</p>
 
           <ul className="list-none space-y-3 pl-6">
             <li className="flex items-start gap-3">
               <span className="text-blue-400 mt-1">•</span>
-              <span dangerouslySetInnerHTML={{ __html: t(trans.whoWasJesus.fact1, language) }} />
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: t(trans.whoWasJesus.fact1, language),
+                }}
+              />
             </li>
             <li className="flex items-start gap-3">
               <span className="text-blue-400 mt-1">•</span>
-              <span dangerouslySetInnerHTML={{ __html: t(trans.whoWasJesus.fact2, language) }} />
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: t(trans.whoWasJesus.fact2, language),
+                }}
+              />
             </li>
             <li className="flex items-start gap-3">
               <span className="text-blue-400 mt-1">•</span>
-              <span dangerouslySetInnerHTML={{ __html: t(trans.whoWasJesus.fact3, language) }} />
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: t(trans.whoWasJesus.fact3, language),
+                }}
+              />
             </li>
           </ul>
 
-          <p className="mt-6">{t(trans.whoWasJesus.divineClaimIntro, language)}</p>
+          <p className="mt-6">
+            {t(trans.whoWasJesus.divineClaimIntro, language)}
+          </p>
 
           <div className="bg-gray-900/50 border-l-4 border-blue-600 p-6 rounded-r-lg my-6">
             <p className="text-gray-300 italic">
@@ -197,8 +330,10 @@ export default function ProofOfResurrection() {
         viewport={{ once: true }}
         className="mb-16"
       >
-        <h2 className="text-white mb-6">{t(trans.fourMinimalFacts.heading, language)}</h2>
-        
+        <h2 className="text-white mb-6">
+          {t(trans.fourMinimalFacts.heading, language)}
+        </h2>
+
         <div className="grid md:grid-cols-2 gap-6">
           {minimalFacts.map((item, index) => (
             <motion.div
@@ -212,12 +347,17 @@ export default function ProofOfResurrection() {
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 rounded-lg bg-purple-900/30 flex items-center justify-center border border-purple-800">
-                    <item.icon className="text-purple-400" size={24} />
+                    <item.icon
+                      className="text-purple-400"
+                      size={24}
+                    />
                   </div>
                 </div>
                 <div>
                   <div className="flex items-baseline gap-2 mb-2">
-                    <span className="text-purple-400 font-mono">#{item.number}</span>
+                    <span className="text-purple-400 font-mono">
+                      #{item.number}
+                    </span>
                     <h4 className="text-white">{item.fact}</h4>
                   </div>
                 </div>
@@ -226,7 +366,9 @@ export default function ProofOfResurrection() {
           ))}
         </div>
 
-        <p className="text-gray-300 mt-8">{t(trans.fourMinimalFacts.support, language)}</p>
+        <p className="text-gray-300 mt-8">
+          {t(trans.fourMinimalFacts.support, language)}
+        </p>
       </motion.section>
 
       <Separator className="my-16 bg-gray-800" />
@@ -238,8 +380,10 @@ export default function ProofOfResurrection() {
         viewport={{ once: true }}
         className="mb-16"
       >
-        <h2 className="text-white mb-8">{t(trans.evaluatingExplanations.heading, language)}</h2>
-        
+        <h2 className="text-white mb-8">
+          {t(trans.evaluatingExplanations.heading, language)}
+        </h2>
+
         <p className="text-gray-300 leading-relaxed mb-8">
           {t(trans.evaluatingExplanations.intro, language)}
         </p>
@@ -247,20 +391,51 @@ export default function ProofOfResurrection() {
         {/* Hallucination Hypothesis */}
         <div className="mb-8 bg-gray-900/30 border border-gray-800 rounded-lg p-6">
           <div className="flex items-start gap-4 mb-4">
-            <XCircle className="text-red-400 flex-shrink-0" size={24} />
-            <h3 className="text-white">{t(trans.evaluatingExplanations.hallucinationTitle, language)}</h3>
+            <XCircle
+              className="text-red-400 flex-shrink-0"
+              size={24}
+            />
+            <h3 className="text-white">
+              {t(
+                trans.evaluatingExplanations.hallucinationTitle,
+                language,
+              )}
+            </h3>
           </div>
-          
-          <p className="text-gray-300 mb-4">{t(trans.evaluatingExplanations.hallucinationIntro, language)}</p>
-          
+
+          <p className="text-gray-300 mb-4">
+            {t(
+              trans.evaluatingExplanations.hallucinationIntro,
+              language,
+            )}
+          </p>
+
           <ul className="list-none space-y-2 pl-6">
             <li className="flex items-start gap-3">
               <span className="text-red-400 mt-1">•</span>
-              <span className="text-gray-400" dangerouslySetInnerHTML={{ __html: t(trans.evaluatingExplanations.hallucinationPoint1, language) }} />
+              <span
+                className="text-gray-400"
+                dangerouslySetInnerHTML={{
+                  __html: t(
+                    trans.evaluatingExplanations
+                      .hallucinationPoint1,
+                    language,
+                  ),
+                }}
+              />
             </li>
             <li className="flex items-start gap-3">
               <span className="text-red-400 mt-1">•</span>
-              <span className="text-gray-400" dangerouslySetInnerHTML={{ __html: t(trans.evaluatingExplanations.hallucinationPoint2, language) }} />
+              <span
+                className="text-gray-400"
+                dangerouslySetInnerHTML={{
+                  __html: t(
+                    trans.evaluatingExplanations
+                      .hallucinationPoint2,
+                    language,
+                  ),
+                }}
+              />
             </li>
           </ul>
         </div>
@@ -268,20 +443,47 @@ export default function ProofOfResurrection() {
         {/* Wrong Tomb */}
         <div className="mb-8 bg-gray-900/30 border border-gray-800 rounded-lg p-6">
           <div className="flex items-start gap-4 mb-4">
-            <XCircle className="text-red-400 flex-shrink-0" size={24} />
-            <h3 className="text-white">{t(trans.evaluatingExplanations.wrongTombTitle, language)}</h3>
+            <XCircle
+              className="text-red-400 flex-shrink-0"
+              size={24}
+            />
+            <h3 className="text-white">
+              {t(
+                trans.evaluatingExplanations.wrongTombTitle,
+                language,
+              )}
+            </h3>
           </div>
-          
-          <p className="text-gray-300 mb-4">{t(trans.evaluatingExplanations.wrongTombIntro, language)}</p>
-          
+
+          <p className="text-gray-300 mb-4">
+            {t(
+              trans.evaluatingExplanations.wrongTombIntro,
+              language,
+            )}
+          </p>
+
           <ul className="list-none space-y-2 pl-6">
             <li className="flex items-start gap-3">
               <span className="text-red-400 mt-1">•</span>
-              <span className="text-gray-400" dangerouslySetInnerHTML={{ __html: t(trans.evaluatingExplanations.wrongTombPoint1, language) }} />
+              <span
+                className="text-gray-400"
+                dangerouslySetInnerHTML={{
+                  __html: t(
+                    trans.evaluatingExplanations
+                      .wrongTombPoint1,
+                    language,
+                  ),
+                }}
+              />
             </li>
             <li className="flex items-start gap-3">
               <span className="text-red-400 mt-1">•</span>
-              <span className="text-gray-400">{t(trans.evaluatingExplanations.wrongTombPoint2, language)}</span>
+              <span className="text-gray-400">
+                {t(
+                  trans.evaluatingExplanations.wrongTombPoint2,
+                  language,
+                )}
+              </span>
             </li>
           </ul>
         </div>
@@ -289,20 +491,51 @@ export default function ProofOfResurrection() {
         {/* Stolen Body */}
         <div className="mb-8 bg-gray-900/30 border border-gray-800 rounded-lg p-6">
           <div className="flex items-start gap-4 mb-4">
-            <XCircle className="text-red-400 flex-shrink-0" size={24} />
-            <h3 className="text-white">{t(trans.evaluatingExplanations.stolenBodyTitle, language)}</h3>
+            <XCircle
+              className="text-red-400 flex-shrink-0"
+              size={24}
+            />
+            <h3 className="text-white">
+              {t(
+                trans.evaluatingExplanations.stolenBodyTitle,
+                language,
+              )}
+            </h3>
           </div>
-          
-          <p className="text-gray-300 mb-4">{t(trans.evaluatingExplanations.stolenBodyIntro, language)}</p>
-          
+
+          <p className="text-gray-300 mb-4">
+            {t(
+              trans.evaluatingExplanations.stolenBodyIntro,
+              language,
+            )}
+          </p>
+
           <ul className="list-none space-y-2 pl-6">
             <li className="flex items-start gap-3">
               <span className="text-red-400 mt-1">•</span>
-              <span className="text-gray-400" dangerouslySetInnerHTML={{ __html: t(trans.evaluatingExplanations.stolenBodyPoint1, language) }} />
+              <span
+                className="text-gray-400"
+                dangerouslySetInnerHTML={{
+                  __html: t(
+                    trans.evaluatingExplanations
+                      .stolenBodyPoint1,
+                    language,
+                  ),
+                }}
+              />
             </li>
             <li className="flex items-start gap-3">
               <span className="text-red-400 mt-1">•</span>
-              <span className="text-gray-400" dangerouslySetInnerHTML={{ __html: t(trans.evaluatingExplanations.stolenBodyPoint2, language) }} />
+              <span
+                className="text-gray-400"
+                dangerouslySetInnerHTML={{
+                  __html: t(
+                    trans.evaluatingExplanations
+                      .stolenBodyPoint2,
+                    language,
+                  ),
+                }}
+              />
             </li>
           </ul>
         </div>
@@ -310,20 +543,48 @@ export default function ProofOfResurrection() {
         {/* Resurrection - Correct */}
         <div className="bg-gradient-to-br from-green-900/20 to-blue-900/20 border border-green-800/50 rounded-lg p-6">
           <div className="flex items-start gap-4 mb-4">
-            <CheckCircle className="text-green-400 flex-shrink-0" size={24} />
-            <h3 className="text-white">{t(trans.evaluatingExplanations.resurrectionTitle, language)}</h3>
+            <CheckCircle
+              className="text-green-400 flex-shrink-0"
+              size={24}
+            />
+            <h3 className="text-white">
+              {t(
+                trans.evaluatingExplanations.resurrectionTitle,
+                language,
+              )}
+            </h3>
           </div>
-          
-          <p className="text-gray-300 mb-4">{t(trans.evaluatingExplanations.resurrectionIntro, language)}</p>
-          
+
+          <p className="text-gray-300 mb-4">
+            {t(
+              trans.evaluatingExplanations.resurrectionIntro,
+              language,
+            )}
+          </p>
+
           <ul className="list-none space-y-2 pl-6">
             <li className="flex items-start gap-3">
               <span className="text-green-400 mt-1">•</span>
-              <span className="text-gray-400">{t(trans.evaluatingExplanations.resurrectionPoint1, language)}</span>
+              <span className="text-gray-400">
+                {t(
+                  trans.evaluatingExplanations
+                    .resurrectionPoint1,
+                  language,
+                )}
+              </span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-green-400 mt-1">•</span>
-              <span className="text-gray-400" dangerouslySetInnerHTML={{ __html: t(trans.evaluatingExplanations.resurrectionPoint2, language) }} />
+              <span
+                className="text-gray-400"
+                dangerouslySetInnerHTML={{
+                  __html: t(
+                    trans.evaluatingExplanations
+                      .resurrectionPoint2,
+                    language,
+                  ),
+                }}
+              />
             </li>
           </ul>
         </div>
@@ -336,25 +597,51 @@ export default function ProofOfResurrection() {
         viewport={{ once: true }}
         className="mb-16"
       >
-        <h2 className="text-white mb-6">{t(trans.rationality.heading, language)}</h2>
-        
-        <div className="space-y-4 text-gray-300 leading-relaxed">
-          <p dangerouslySetInnerHTML={{ __html: t(trans.rationality.intro, language) }} />
+        <h2 className="text-white mb-6">
+          {t(trans.rationality.heading, language)}
+        </h2>
 
-          <p>{t(trans.rationality.hypothesisLabel, language)}</p>
+        <div className="space-y-4 text-gray-300 leading-relaxed">
+          <p
+            dangerouslySetInnerHTML={{
+              __html: t(trans.rationality.intro, language),
+            }}
+          />
+
+          <p>
+            {t(trans.rationality.hypothesisLabel, language)}
+          </p>
 
           <ul className="list-none space-y-3 pl-6">
             <li className="flex items-start gap-3">
               <span className="text-blue-400 mt-1">•</span>
-              <span><strong className="text-white">{t(trans.rationality.plausible, language)}</strong> {t(trans.rationality.plausibleDetail, language)}</span>
+              <span>
+                <strong className="text-white">
+                  {t(trans.rationality.plausible, language)}
+                </strong>{" "}
+                {t(trans.rationality.plausibleDetail, language)}
+              </span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-blue-400 mt-1">•</span>
-              <span><strong className="text-white">{t(trans.rationality.powerful, language)}</strong> {t(trans.rationality.powerfulDetail, language)}</span>
+              <span>
+                <strong className="text-white">
+                  {t(trans.rationality.powerful, language)}
+                </strong>{" "}
+                {t(trans.rationality.powerfulDetail, language)}
+              </span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-blue-400 mt-1">•</span>
-              <span><strong className="text-white">{t(trans.rationality.consistent, language)}</strong> {t(trans.rationality.consistentDetail, language)}</span>
+              <span>
+                <strong className="text-white">
+                  {t(trans.rationality.consistent, language)}
+                </strong>{" "}
+                {t(
+                  trans.rationality.consistentDetail,
+                  language,
+                )}
+              </span>
             </li>
           </ul>
 
@@ -362,7 +649,9 @@ export default function ProofOfResurrection() {
             <p className="text-gray-300 italic">
               "{t(trans.rationality.craigQuote, language)}"
             </p>
-            <p className="text-gray-500 mt-2">— William Lane Craig</p>
+            <p className="text-gray-500 mt-2">
+              — William Lane Craig
+            </p>
           </div>
         </div>
       </motion.section>
@@ -376,13 +665,48 @@ export default function ProofOfResurrection() {
         viewport={{ once: true }}
         className="mb-16"
       >
-        <h2 className="text-white mb-6">{t(trans.conclusion.heading, language)}</h2>
-        
+        <h2 className="text-white mb-6">
+          {t(trans.conclusion.heading, language)}
+        </h2>
+
         <div className="space-y-4 text-gray-300 leading-relaxed">
-          <p dangerouslySetInnerHTML={{ __html: t(trans.conclusion.para1, language) }} />
-          <p className="text-lg" dangerouslySetInnerHTML={{ __html: t(trans.conclusion.para2, language) }} />
+          <p
+            dangerouslySetInnerHTML={{
+              __html: t(trans.conclusion.para1, language),
+            }}
+          />
+          <p
+            className="text-lg"
+            dangerouslySetInnerHTML={{
+              __html: t(trans.conclusion.para2, language),
+            }}
+          />
         </div>
       </motion.section>
+
+      {/* --- ADDED SECTION --- */}
+      <Separator className="my-16 bg-gray-800" />
+
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="mb-16"
+      >
+        <div className="aspect-video w-full rounded-lg overflow-hidden bg-gray-900 border border-gray-800">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/Z8lkuuhVkOI?start=127"
+            title="Additional Video on Resurrection"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full h-full"
+          ></iframe>
+        </div>
+      </motion.section>
+      {/* --- END OF ADDED SECTION --- */}
 
       {/* Bridge to Next Topic */}
       <motion.div
@@ -391,9 +715,21 @@ export default function ProofOfResurrection() {
         viewport={{ once: true }}
         className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-800/50 rounded-lg p-8"
       >
-        <h3 className="text-white mb-4">{t(trans.bridge.heading, language)}</h3>
-        <p className="text-gray-300 leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: t(trans.bridge.para1, language) }} />
-        <p className="text-gray-400 leading-relaxed" dangerouslySetInnerHTML={{ __html: t(trans.bridge.para2, language) }} />
+        <h3 className="text-white mb-4">
+          {t(trans.bridge.heading, language)}
+        </h3>
+        <p
+          className="text-gray-300 leading-relaxed mb-4"
+          dangerouslySetInnerHTML={{
+            __html: t(trans.bridge.para1, language),
+          }}
+        />
+        <p
+          className="text-gray-400 leading-relaxed"
+          dangerouslySetInnerHTML={{
+            __html: t(trans.bridge.para2, language),
+          }}
+        />
       </motion.div>
     </TopicLayout>
   );

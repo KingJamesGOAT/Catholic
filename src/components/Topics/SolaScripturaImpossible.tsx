@@ -1,64 +1,92 @@
-import TopicLayout from '../Journey/TopicLayout';
-import { motion } from 'motion/react';
-import { Separator } from '../ui/separator';
-import { XCircle, AlertTriangle, BookOpen, Scale, Lightbulb, Users, CheckCircle, ChevronRight } from 'lucide-react';
+import TopicLayout from "../Journey/TopicLayout";
+import { motion } from "motion/react";
+import { Separator } from "../ui/separator";
+import {
+  XCircle,
+  AlertTriangle,
+  BookOpen,
+  Scale,
+  Lightbulb,
+  Users,
+  CheckCircle,
+  ChevronRight,
+} from "lucide-react";
+import { useLanguage } from "../../lib/i18n/LanguageContext";
+import { translations, t } from "../../lib/i18n/translations";
 
 export default function SolaScripturaImpossible() {
+  const { language } = useLanguage();
+  const trans = translations.solaScripturaImpossible;
+
   const faithElements = [
-    { label: 'Principle', description: 'Grace stirred by the Holy Spirit', icon: Lightbulb },
-    { label: 'Material Object', description: 'Supernatural truth', icon: BookOpen },
-    { label: 'Formal Object', description: 'Believed as revealed by God', icon: Scale }
+    {
+      label: t(trans.natureOfFaith.elements.e1.label, language),
+      description: t(
+        trans.natureOfFaith.elements.e1.desc,
+        language,
+      ),
+      icon: Lightbulb,
+    },
+    {
+      label: t(trans.natureOfFaith.elements.e2.label, language),
+      description: t(
+        trans.natureOfFaith.elements.e2.desc,
+        language,
+      ),
+      icon: BookOpen,
+    },
+    {
+      label: t(trans.natureOfFaith.elements.e3.label, language),
+      description: t(
+        trans.natureOfFaith.elements.e3.desc,
+        language,
+      ),
+      icon: Scale,
+    },
   ];
 
   const distinguishedTerms = [
     {
-      term: 'Divine Revelation',
-      definition: 'God speaking to man, typically through prophets or apostles.',
-      color: 'blue'
+      term: t(trans.definitions.terms.t1.term, language),
+      definition: t(trans.definitions.terms.t1.def, language),
+      color: "blue",
     },
     {
-      term: 'Infallibility',
-      definition: 'Freedom from error, either absolute or in a restricted domain.',
-      color: 'purple'
+      term: t(trans.definitions.terms.t2.term, language),
+      definition: t(trans.definitions.terms.t2.def, language),
+      color: "purple",
     },
     {
-      term: 'Inspiration',
-      definition: 'The very words are authored by God.',
-      color: 'green'
-    }
+      term: t(trans.definitions.terms.t3.term, language),
+      definition: t(trans.definitions.terms.t3.def, language),
+      color: "green",
+    },
   ];
 
   return (
     <TopicLayout
-      title="Sola Scriptura is Impossible"
-      subtitle="A Comprehensive Scholastic Critique"
+      title={t(trans.title, language)}
+      subtitle={t(trans.subtitle, language)}
       quote={{
-        text: "Do you understand what you are reading? How can I, unless someone guides me?",
-        source: "Acts 8:30-31"
+        text: t(trans.quote.text, language),
+        source: t(trans.quote.source, language),
       }}
     >
       {/* Introduction */}
       <div className="space-y-6 text-gray-300 leading-relaxed mb-16">
-        <h2 className="text-white">Introduction: The Difficult Task of Protestant-Catholic Apologetics</h2>
+        <h2 className="text-white">
+          {t(trans.intro.h2, language)}
+        </h2>
 
         <div className="bg-gray-900/50 border-l-4 border-purple-600 p-6 rounded-r-lg">
           <p className="text-gray-300 italic">
-            "Anytime you make an apologetic argument against Protestantism, you are surrounded by a number of pitfalls 
-            that make it an almost impossible task."
+            &quot;{t(trans.intro.quote, language)}&quot;
           </p>
         </div>
 
-        <p>
-          Whenever an apologetic argument is made against Protestantism, a number of pitfalls arise. Oversimplify the 
-          argument, and it loses depth. Make it overly complex, and it becomes inaccessible. If the argument is too broad, 
-          some Protestants will feel misrepresented. If too narrow, it fails to address Protestantism as a whole.
-        </p>
+        <p>{t(trans.intro.p1, language)}</p>
 
-        <p>
-          Every decision in this work is made for the good of Protestant listeners and for the salvation of their souls. 
-          There is no intent to strawman or misrepresent, and no ignorance of Protestant sources. Charity is requested, 
-          and a sincere, open-minded examination.
-        </p>
+        <p>{t(trans.intro.p2, language)}</p>
       </div>
 
       {/* Videos */}
@@ -68,7 +96,7 @@ export default function SolaScripturaImpossible() {
             width="100%"
             height="100%"
             src="https://www.youtube.com/embed/5159MqzEUy8"
-            title="Sola Scriptura is Impossible"
+            title={t(trans.video.title, language)}
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -84,29 +112,36 @@ export default function SolaScripturaImpossible() {
         viewport={{ once: true }}
         className="mb-16"
       >
-        <h2 className="text-white mb-6">Summary of the Argument</h2>
+        <h2 className="text-white mb-6">
+          {t(trans.summary.h2, language)}
+        </h2>
 
-        <p className="text-gray-300 mb-6">The argument is simple:</p>
+        <p className="text-gray-300 mb-6">
+          {t(trans.summary.p1, language)}
+        </p>
 
         <div className="bg-red-900/10 border border-red-800 rounded-lg p-8">
           <div className="flex items-start gap-4">
-            <XCircle className="text-red-400 flex-shrink-0 mt-1" size={28} />
+            <XCircle
+              className="text-red-400 flex-shrink-0 mt-1"
+              size={28}
+            />
             <div>
               <p className="text-white text-lg mb-4">
-                In the Protestant view, there is no consistent way to make an act of faith in the fact that the books 
-                of the New Testament are divinely inspired.
+                {t(trans.summary.callout.p1, language)}
               </p>
-              <p className="text-gray-300">
-                This is because that knowledge must come to us by divine revelation through sacred tradition, proposed 
-                authoritatively by the Magisterium—elements rejected by the Protestant rule of faith (<em>Sola Scriptura</em>).
-              </p>
+              <p
+                className="text-gray-300"
+                dangerouslySetInnerHTML={{
+                  __html: t(trans.summary.callout.p2, language),
+                }}
+              />
             </div>
           </div>
         </div>
 
         <p className="text-gray-300 mt-6">
-          Common Protestant objections are anticipated: appeals to tradition, ecclesial authority, motives of credibility, 
-          or accusations of circularity. These will be answered clearly and fairly.
+          {t(trans.summary.p2, language)}
         </p>
       </motion.section>
 
@@ -119,40 +154,60 @@ export default function SolaScripturaImpossible() {
         viewport={{ once: true }}
         className="mb-16"
       >
-        <h2 className="text-white mb-6">Presumption of the Case and State of the Question</h2>
+        <h2 className="text-white mb-6">
+          {t(trans.presumption.h2, language)}
+        </h2>
 
         <p className="text-gray-300 mb-6">
-          Two classical rhetorical principles frame the debate:
+          {t(trans.presumption.p1, language)}
         </p>
 
         {/* Presumption */}
         <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-6 mb-6">
-          <h3 className="text-white mb-4">Presumption of the Case</h3>
+          <h3 className="text-white mb-4">
+            {t(trans.presumption.presumptionCase.h3, language)}
+          </h3>
           <p className="text-gray-300">
-            Arguments are built on shared assumptions. Papal encyclicals are not cited against Protestants. Instead, 
-            Scripture, reason, and Protestant sources are used. Shared axioms on faith and revelation are the foundation.
+            {t(trans.presumption.presumptionCase.p1, language)}
           </p>
         </div>
 
         {/* State of Question */}
         <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-6">
-          <h3 className="text-white mb-4">State of the Question</h3>
-          <p className="text-gray-300 mb-4">
-            The issue is not proving Catholicism. It is evaluating whether the Protestant doctrine of <em>Sola Scriptura</em> 
-            can account for the canon of Scripture. Protestants must:
-          </p>
+          <h3 className="text-white mb-4">
+            {t(trans.presumption.stateQuestion.h3, language)}
+          </h3>
+          <p
+            className="text-gray-300 mb-4"
+            dangerouslySetInnerHTML={{
+              __html: t(
+                trans.presumption.stateQuestion.p1,
+                language,
+              ),
+            }}
+          />
           <ol className="space-y-2 pl-6">
             <li className="flex items-start gap-3">
               <span className="text-blue-400 mt-1">1.</span>
-              <span>Prove their doctrine does not fall into contradiction.</span>
+              <span>
+                {t(
+                  trans.presumption.stateQuestion.li1,
+                  language,
+                )}
+              </span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-blue-400 mt-1">2.</span>
-              <span>Or show that the contradiction does not follow.</span>
+              <span>
+                {t(
+                  trans.presumption.stateQuestion.li2,
+                  language,
+                )}
+              </span>
             </li>
           </ol>
           <p className="text-gray-400 mt-4">
-            Too often, Protestant replies do anything but address the actual state of the question.
+            {t(trans.presumption.stateQuestion.p2, language)}
           </p>
         </div>
       </motion.section>
@@ -166,68 +221,94 @@ export default function SolaScripturaImpossible() {
         viewport={{ once: true }}
         className="mb-16"
       >
-        <h2 className="text-white mb-6">What Is Sola Scriptura?</h2>
+        <h2 className="text-white mb-6">
+          {t(trans.whatIsSS.h2, language)}
+        </h2>
 
         <div className="space-y-4 text-gray-300 leading-relaxed">
-          <p>
-            The doctrine under critique is not merely that Scripture is the only <strong className="text-white">
-            infallible</strong> rule of faith, but that:
-          </p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: t(trans.whatIsSS.p1, language),
+            }}
+          />
 
           <div className="bg-gray-900/50 border-l-4 border-blue-600 p-6 rounded-r-lg my-6">
             <p className="text-white text-lg">
-              Scripture alone is the rule of faith.
+              {t(trans.whatIsSS.callout, language)}
             </p>
           </div>
 
-          <p>This is the classical formulation. Confessions affirm this clearly:</p>
+          <p>{t(trans.whatIsSS.p2, language)}</p>
 
           <div className="space-y-4 my-6">
             <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-4">
-              <p className="text-gray-300">
-                <strong className="text-white">Westminster Confession:</strong> Synods or councils are not to be made 
-                the rule of faith.
-              </p>
+              <p
+                className="text-gray-300"
+                dangerouslySetInnerHTML={{
+                  __html: t(
+                    trans.whatIsSS.confessions.c1,
+                    language,
+                  ),
+                }}
+              />
             </div>
             <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-4">
-              <p className="text-gray-300">
-                <strong className="text-white">Westminster Larger Catechism:</strong> Scripture is the only rule of 
-                faith and obedience.
-              </p>
+              <p
+                className="text-gray-300"
+                dangerouslySetInnerHTML={{
+                  __html: t(
+                    trans.whatIsSS.confessions.c2,
+                    language,
+                  ),
+                }}
+              />
             </div>
             <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-4">
-              <p className="text-gray-300">
-                <strong className="text-white">Helvetic Consensus:</strong> Scripture is the sole and complete rule.
-              </p>
+              <p
+                className="text-gray-300"
+                dangerouslySetInnerHTML={{
+                  __html: t(
+                    trans.whatIsSS.confessions.c3,
+                    language,
+                  ),
+                }}
+              />
             </div>
             <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-4">
-              <p className="text-gray-300">
-                <strong className="text-white">Formula of Concord:</strong> God's word alone is the guiding principle.
-              </p>
+              <p
+                className="text-gray-300"
+                dangerouslySetInnerHTML={{
+                  __html: t(
+                    trans.whatIsSS.confessions.c4,
+                    language,
+                  ),
+                }}
+              />
             </div>
           </div>
 
-          <p>
-            Modern Protestant attempts to add the word <em>infallible</em> shift the meaning. This addition is inconsistent 
-            with classical theology. For example:
-          </p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: t(trans.whatIsSS.p3, language),
+            }}
+          />
 
           <ul className="space-y-2 pl-6 my-4">
             <li className="flex items-start gap-3">
               <span className="text-blue-400 mt-1">•</span>
-              <span>Moses Amyraut and Richard Baxter believed infallibility could apply to councils.</span>
+              <span>{t(trans.whatIsSS.li1, language)}</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-blue-400 mt-1">•</span>
-              <span>Catholics distinguish between fallible and infallible rules of faith.</span>
+              <span>{t(trans.whatIsSS.li2, language)}</span>
             </li>
           </ul>
 
-          <p>
-            Being a rule of faith means having <strong className="text-white">authenticity</strong>—the authority to 
-            bind conscience. Tradition and ecclesial authority may assist in interpretation, but in <em>Sola Scriptura</em> 
-            they do not bind.
-          </p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: t(trans.whatIsSS.p4, language),
+            }}
+          />
         </div>
       </motion.section>
 
@@ -240,23 +321,30 @@ export default function SolaScripturaImpossible() {
         viewport={{ once: true }}
         className="mb-16"
       >
-        <h2 className="text-white mb-6">The Nature of Faith</h2>
+        <h2 className="text-white mb-6">
+          {t(trans.natureOfFaith.h2, language)}
+        </h2>
 
         <div className="space-y-4 text-gray-300 leading-relaxed">
-          <p>
-            Understanding <em>faith</em> is key. Dogmatic faith (not fiduciary faith) is distinct from sense perception, 
-            self-evident principles, or demonstration. Lude Le Blanc writes:
-          </p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: t(trans.natureOfFaith.p1, language),
+            }}
+          />
 
           <div className="bg-gray-900/50 border-l-4 border-purple-600 p-6 rounded-r-lg my-6">
             <p className="text-gray-300 italic">
-              "We do not properly hold by faith those things which we perceive by sense, nor also those things which 
-              have been necessarily and evidently demonstrated to us."
+              &quot;{t(trans.natureOfFaith.quote, language)}
+              &quot;
             </p>
-            <p className="text-gray-500 mt-2">— Lude Le Blanc</p>
+            <p className="text-gray-500 mt-2">
+              — {t(trans.natureOfFaith.source, language)}
+            </p>
           </div>
 
-          <p className="mb-6">Faith includes:</p>
+          <p className="mb-6">
+            {t(trans.natureOfFaith.p2, language)}
+          </p>
 
           <div className="grid md:grid-cols-3 gap-6">
             {faithElements.map((element, index) => (
@@ -265,23 +353,34 @@ export default function SolaScripturaImpossible() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                }}
                 className="bg-gradient-to-br from-gray-900/50 to-gray-900/30 border border-gray-800 rounded-lg p-6"
               >
                 <div className="w-12 h-12 rounded-full bg-purple-900/30 border border-purple-700 flex items-center justify-center mb-4">
-                  <element.icon className="text-purple-400" size={24} />
+                  <element.icon
+                    className="text-purple-400"
+                    size={24}
+                  />
                 </div>
-                <h4 className="text-white mb-2">{element.label}</h4>
-                <p className="text-gray-400 text-sm">{element.description}</p>
+                <h4 className="text-white mb-2">
+                  {element.label}
+                </h4>
+                <p className="text-gray-400 text-sm">
+                  {element.description}
+                </p>
               </motion.div>
             ))}
           </div>
 
-          <h3 className="text-white mt-8 mb-4">Faith vs Vision</h3>
+          <h3 className="text-white mt-8 mb-4">
+            {t(trans.natureOfFaith.faithVsVision.h3, language)}
+          </h3>
 
           <p>
-            What is believed by faith now will be known by sight in the beatific vision. When divine truths are seen 
-            directly, faith is abolished, not perfected.
+            {t(trans.natureOfFaith.faithVsVision.p1, language)}
           </p>
         </div>
       </motion.section>
@@ -295,10 +394,12 @@ export default function SolaScripturaImpossible() {
         viewport={{ once: true }}
         className="mb-16"
       >
-        <h2 className="text-white mb-6">Revelation, Infallibility, and Inspiration</h2>
+        <h2 className="text-white mb-6">
+          {t(trans.definitions.h2, language)}
+        </h2>
 
         <p className="text-gray-300 mb-6">
-          These three terms must be distinguished:
+          {t(trans.definitions.p1, language)}
         </p>
 
         <div className="space-y-4">
@@ -319,14 +420,14 @@ export default function SolaScripturaImpossible() {
 
         <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-6 mt-8">
           <p className="text-gray-300 mb-4">
-            A prophet may communicate revelation, even infallibly, without inspiration. For example, Paul may preach 
-            with divine authority without every word being divinely authored.
+            {t(trans.definitions.callout.p1, language)}
           </p>
-          <p className="text-gray-300">
-            <strong className="text-white">Inspiration is mysterious and interior.</strong> It is not publicly verifiable. 
-            Therefore, the knowledge that a book is inspired must come through divine revelation. This presents a problem 
-            for Protestants.
-          </p>
+          <p
+            className="text-gray-300"
+            dangerouslySetInnerHTML={{
+              __html: t(trans.definitions.callout.p2, language),
+            }}
+          />
         </div>
       </motion.section>
 
@@ -339,44 +440,85 @@ export default function SolaScripturaImpossible() {
         viewport={{ once: true }}
         className="mb-16"
       >
-        <h2 className="text-white mb-6">Restating the Argument Fully</h2>
+        <h2 className="text-white mb-6">
+          {t(trans.argument.h2, language)}
+        </h2>
 
         <div className="bg-gradient-to-br from-red-900/20 to-orange-900/20 border border-red-800/50 rounded-lg p-8">
           <ol className="space-y-4">
             <li className="flex items-start gap-3">
-              <span className="text-red-400 flex-shrink-0 mt-1 font-mono">1.</span>
-              <span className="text-gray-300"><em>Sola Scriptura</em> claims Scripture is the sole rule of faith.</span>
+              <span className="text-red-400 flex-shrink-0 mt-1 font-mono">
+                1.
+              </span>
+              <span
+                className="text-gray-300"
+                dangerouslySetInnerHTML={{
+                  __html: t(trans.argument.li1, language),
+                }}
+              />
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-red-400 flex-shrink-0 mt-1 font-mono">2.</span>
-              <span className="text-gray-300">The fact that a book is divinely inspired must be believed by faith.</span>
+              <span className="text-red-400 flex-shrink-0 mt-1 font-mono">
+                2.
+              </span>
+              <span className="text-gray-300">
+                {t(trans.argument.li2, language)}
+              </span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-red-400 flex-shrink-0 mt-1 font-mono">3.</span>
-              <span className="text-gray-300">Faith requires divine revelation.</span>
+              <span className="text-red-400 flex-shrink-0 mt-1 font-mono">
+                3.
+              </span>
+              <span className="text-gray-300">
+                {t(trans.argument.li3, language)}
+              </span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-red-400 flex-shrink-0 mt-1 font-mono">4.</span>
-              <span className="text-gray-300">The inspiration of the New Testament books is not found in Scripture.</span>
+              <span className="text-red-400 flex-shrink-0 mt-1 font-mono">
+                4.
+              </span>
+              <span className="text-gray-300">
+                {t(trans.argument.li4, language)}
+              </span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-orange-400 flex-shrink-0 mt-1 font-mono">5.</span>
-              <span className="text-gray-300"><strong className="text-white">Therefore</strong>, Protestants must appeal to an extrabiblical source of divine revelation.</span>
+              <span className="text-orange-400 flex-shrink-0 mt-1 font-mono">
+                5.
+              </span>
+              <span
+                className="text-gray-300"
+                dangerouslySetInnerHTML={{
+                  __html: t(trans.argument.li5, language),
+                }}
+              />
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-orange-400 flex-shrink-0 mt-1 font-mono">6.</span>
-              <span className="text-gray-300"><strong className="text-white">Therefore</strong>, <em>Sola Scriptura</em> cannot consistently account for the canon.</span>
+              <span className="text-orange-400 flex-shrink-0 mt-1 font-mono">
+                6.
+              </span>
+              <span
+                className="text-gray-300"
+                dangerouslySetInnerHTML={{
+                  __html: t(trans.argument.li6, language),
+                }}
+              />
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-red-400 flex-shrink-0 mt-1 font-mono">7.</span>
-              <span className="text-white font-medium">But <em>Sola Scriptura</em> rejects such sources.</span>
+              <span className="text-red-400 flex-shrink-0 mt-1 font-mono">
+                7.
+              </span>
+              <span
+                className="text-white font-medium"
+                dangerouslySetInnerHTML={{
+                  __html: t(trans.argument.li7, language),
+                }}
+              />
             </li>
           </ol>
         </div>
 
         <p className="text-gray-300 mt-6">
-          The Catholic account avoids this problem by appealing to divine revelation transmitted through sacred tradition 
-          and authoritatively taught by the Church.
+          {t(trans.argument.p1, language)}
         </p>
       </motion.section>
 
@@ -389,36 +531,50 @@ export default function SolaScripturaImpossible() {
         viewport={{ once: true }}
         className="mb-16"
       >
-        <h2 className="text-white mb-6">The Tu Quoque Objection: Does Catholicism Have the Same Problem?</h2>
+        <h2 className="text-white mb-6">
+          {t(trans.tuQuoque.h2, language)}
+        </h2>
 
         <div className="space-y-4 text-gray-300 leading-relaxed">
-          <p>
-            Some Protestants will respond that Catholics have the same problem: if inspiration must be known through 
-            divine revelation, doesn't that create an infinite regress? Doesn't Catholicism also fall into circularity?
-          </p>
+          <p>{t(trans.tuQuoque.p1, language)}</p>
 
           <div className="bg-green-900/10 border border-green-800 rounded-lg p-6 my-6">
-            <h4 className="text-white mb-4">No. The Catholic model avoids these problems:</h4>
+            <h4 className="text-white mb-4">
+              {t(trans.tuQuoque.callout.h4, language)}
+            </h4>
             <ol className="space-y-3">
               <li className="flex items-start gap-3">
                 <span className="text-green-400 mt-1">1.</span>
-                <span><strong className="text-white">We do not say</strong> that divine revelation needs a divine revelation to confirm it.</span>
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: t(
+                      trans.tuQuoque.callout.li1,
+                      language,
+                    ),
+                  }}
+                />
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-green-400 mt-1">2.</span>
-                <span>Rather, we say that <em>inspiration</em> is a revealed fact which must be proposed for belief.</span>
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: t(
+                      trans.tuQuoque.callout.li2,
+                      language,
+                    ),
+                  }}
+                />
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-green-400 mt-1">3.</span>
-                <span>The Church is a divine legate, authenticated by Christ, and thus can propose the canon.</span>
+                <span>
+                  {t(trans.tuQuoque.callout.li3, language)}
+                </span>
               </li>
             </ol>
           </div>
 
-          <p>
-            This is not circular because we begin with the historical reliability of the Gospels, establish Christ's 
-            authority through motives of credibility, and then proceed to the Church's authority as His appointed legate.
-          </p>
+          <p>{t(trans.tuQuoque.p2, language)}</p>
         </div>
       </motion.section>
 
@@ -431,89 +587,112 @@ export default function SolaScripturaImpossible() {
         viewport={{ once: true }}
         className="mb-16"
       >
-        <h2 className="text-white mb-8">Addressing Protestant Counterarguments</h2>
+        <h2 className="text-white mb-8">
+          {t(trans.counterarguments.h2, language)}
+        </h2>
 
         {/* Illumination of Spirit */}
         <div className="mb-8">
           <div className="flex items-start gap-4 mb-4">
-            <XCircle className="text-red-400 flex-shrink-0 mt-1" size={24} />
-            <h3 className="text-white">1. Illumination of the Spirit</h3>
+            <XCircle
+              className="text-red-400 flex-shrink-0 mt-1"
+              size={24}
+            />
+            <h3 className="text-white">
+              {t(trans.counterarguments.c1.h3, language)}
+            </h3>
           </div>
-          <p className="text-gray-300">
-            Some Protestants say the Spirit testifies internally to the canon. But this cannot supply the 
-            <strong className="text-white"> formal object</strong> of faith—that it is revealed by God. If the Spirit 
-            provides this directly, then each Christian receives a private revelation of the canon, which Protestants 
-            reject. If it does not, then the formal object is missing.
-          </p>
+          <p
+            className="text-gray-300"
+            dangerouslySetInnerHTML={{
+              __html: t(trans.counterarguments.c1.p1, language),
+            }}
+          />
         </div>
 
         {/* Canon in Scripture */}
         <div className="mb-8">
           <div className="flex items-start gap-4 mb-4">
-            <XCircle className="text-red-400 flex-shrink-0 mt-1" size={24} />
-            <h3 className="text-white">2. Canon Contained in Scripture</h3>
+            <XCircle
+              className="text-red-400 flex-shrink-0 mt-1"
+              size={24}
+            />
+            <h3 className="text-white">
+              {t(trans.counterarguments.c2.h3, language)}
+            </h3>
           </div>
           <p className="text-gray-300">
-            Others say the canon is revealed within Scripture. But not every book identifies itself. Third John, for 
-            example, never claims inspiration. Appeals to apostolic authorship also fail because not all books are 
-            apostolic, and not all apostolic writings are inspired.
+            {t(trans.counterarguments.c2.p1, language)}
           </p>
         </div>
 
         {/* Internal Marks */}
         <div className="mb-8">
           <div className="flex items-start gap-4 mb-4">
-            <XCircle className="text-red-400 flex-shrink-0 mt-1" size={24} />
-            <h3 className="text-white">3. Internal Marks of Sublimity</h3>
+            <XCircle
+              className="text-red-400 flex-shrink-0 mt-1"
+              size={24}
+            />
+            <h3 className="text-white">
+              {t(trans.counterarguments.c3.h3, language)}
+            </h3>
           </div>
-          <p className="text-gray-300">
-            Some claim the canon can be known by the internal beauty or sublimity of Scripture. But this is a 
-            <strong className="text-white"> scientific</strong> judgment, not a judgment of faith. Supernatural truths 
-            are not known by natural reasoning. Further, many sublime texts are not canonical, and some canonical books 
-            lack apparent sublimity.
-          </p>
+          <p
+            className="text-gray-300"
+            dangerouslySetInnerHTML={{
+              __html: t(trans.counterarguments.c3.p1, language),
+            }}
+          />
         </div>
 
         {/* Historical Witness */}
         <div className="mb-8">
           <div className="flex items-start gap-4 mb-4">
-            <XCircle className="text-red-400 flex-shrink-0 mt-1" size={24} />
-            <h3 className="text-white">4. Historical Witness of the Church</h3>
+            <XCircle
+              className="text-red-400 flex-shrink-0 mt-1"
+              size={24}
+            />
+            <h3 className="text-white">
+              {t(trans.counterarguments.c4.h3, language)}
+            </h3>
           </div>
-          <p className="text-gray-300">
-            Some concede that the Church historically testified to the canon. But this raises the question: is belief 
-            in the canon an act of human faith or divine faith? If it is human, it cannot ground divine inspiration. If 
-            it is divine, then where is the revelation? If it is outside Scripture, <em>Sola Scriptura</em> collapses.
-          </p>
+          <p
+            className="text-gray-300"
+            dangerouslySetInnerHTML={{
+              __html: t(trans.counterarguments.c4.p1, language),
+            }}
+          />
         </div>
 
         {/* Motives of Credibility */}
         <div className="mb-8">
           <div className="flex items-start gap-4 mb-4">
-            <XCircle className="text-red-400 flex-shrink-0 mt-1" size={24} />
-            <h3 className="text-white">5. The Appeal to Motives of Credibility Alone</h3>
+            <XCircle
+              className="text-red-400 flex-shrink-0 mt-1"
+              size={24}
+            />
+            <h3 className="text-white">
+              {t(trans.counterarguments.c5.h3, language)}
+            </h3>
           </div>
           <p className="text-gray-300">
-            Some Protestants attempt to bridge the gap by appealing to motives of credibility—miracles, fulfilled 
-            prophecies, or the moral excellence of Scripture—to justify belief in the canon. Yet this approach also fails 
-            for the same fundamental reason: it confuses the concepts of divine revelation and inspiration. Motives of 
-            credibility can confirm the truthfulness of a messenger or message, but they cannot establish inspiration, 
-            which is a supernatural act of God that cannot be inferred solely from external signs.
+            {t(trans.counterarguments.c5.p1, language)}
           </p>
         </div>
 
         {/* Historical Judgment */}
         <div className="mb-8">
           <div className="flex items-start gap-4 mb-4">
-            <XCircle className="text-red-400 flex-shrink-0 mt-1" size={24} />
-            <h3 className="text-white">6. The Canon as a Historical Judgment</h3>
+            <XCircle
+              className="text-red-400 flex-shrink-0 mt-1"
+              size={24}
+            />
+            <h3 className="text-white">
+              {t(trans.counterarguments.c6.h3, language)}
+            </h3>
           </div>
           <p className="text-gray-300">
-            Another fallback is to treat the canon as a historically reliable tradition—something that emerged organically 
-            from the Church's common recognition over time. This too collapses under scrutiny. If belief in the canon is 
-            based solely on historical investigation, then the assent to its inspiration is based on human reasoning, not 
-            divine faith. But divine inspiration is not a merely historical claim—it is a supernatural truth, and thus it 
-            demands a supernatural source of revelation.
+            {t(trans.counterarguments.c6.p1, language)}
           </p>
         </div>
       </motion.section>
@@ -527,13 +706,17 @@ export default function SolaScripturaImpossible() {
         viewport={{ once: true }}
         className="mb-16"
       >
-        <h2 className="text-white mb-6">The Catholic Solution: Coherent and Consistent</h2>
+        <h2 className="text-white mb-6">
+          {t(trans.solution.h2, language)}
+        </h2>
 
         <p className="text-gray-300 mb-8">
-          The Catholic position resolves all these difficulties.
+          {t(trans.solution.p1, language)}
         </p>
 
-        <h3 className="text-white mb-6">Step-by-Step Coherence</h3>
+        <h3 className="text-white mb-6">
+          {t(trans.solution.h3, language)}
+        </h3>
 
         <div className="space-y-4">
           <motion.div
@@ -544,12 +727,16 @@ export default function SolaScripturaImpossible() {
             className="flex items-start gap-4 bg-gradient-to-r from-green-900/20 to-green-900/5 border border-green-800 rounded-lg p-4"
           >
             <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-900/50 border border-green-700 flex items-center justify-center">
-              <span className="text-green-300 font-mono text-sm">1</span>
+              <span className="text-green-300 font-mono text-sm">
+                1
+              </span>
             </div>
-            <p className="text-gray-300">
-              Begin with the <strong className="text-white">historical reliability</strong> of the Gospels, using the 
-              same critical methods applied to any ancient text.
-            </p>
+            <p
+              className="text-gray-300"
+              dangerouslySetInnerHTML={{
+                __html: t(trans.solution.steps.s1, language),
+              }}
+            />
           </motion.div>
 
           <motion.div
@@ -560,12 +747,16 @@ export default function SolaScripturaImpossible() {
             className="flex items-start gap-4 bg-gradient-to-r from-green-900/20 to-green-900/5 border border-green-800 rounded-lg p-4"
           >
             <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-900/50 border border-green-700 flex items-center justify-center">
-              <span className="text-green-300 font-mono text-sm">2</span>
+              <span className="text-green-300 font-mono text-sm">
+                2
+              </span>
             </div>
-            <p className="text-gray-300">
-              From there, recognize the <strong className="text-white">motives of credibility</strong> that confirm 
-              Christ&apos;s identity as the divine legate: His miracles, His resurrection, His fulfillment of prophecy.
-            </p>
+            <p
+              className="text-gray-300"
+              dangerouslySetInnerHTML={{
+                __html: t(trans.solution.steps.s2, language),
+              }}
+            />
           </motion.div>
 
           <motion.div
@@ -576,12 +767,16 @@ export default function SolaScripturaImpossible() {
             className="flex items-start gap-4 bg-gradient-to-r from-green-900/20 to-green-900/5 border border-green-800 rounded-lg p-4"
           >
             <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-900/50 border border-green-700 flex items-center justify-center">
-              <span className="text-green-300 font-mono text-sm">3</span>
+              <span className="text-green-300 font-mono text-sm">
+                3
+              </span>
             </div>
-            <p className="text-gray-300">
-              Understand that Christ <strong className="text-white">established a Church</strong> with divine authority, 
-              promising it the guidance of the Holy Spirit.
-            </p>
+            <p
+              className="text-gray-300"
+              dangerouslySetInnerHTML={{
+                __html: t(trans.solution.steps.s3, language),
+              }}
+            />
           </motion.div>
 
           <motion.div
@@ -592,12 +787,16 @@ export default function SolaScripturaImpossible() {
             className="flex items-start gap-4 bg-gradient-to-r from-green-900/20 to-green-900/5 border border-green-800 rounded-lg p-4"
           >
             <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-900/50 border border-green-700 flex items-center justify-center">
-              <span className="text-green-300 font-mono text-sm">4</span>
+              <span className="text-green-300 font-mono text-sm">
+                4
+              </span>
             </div>
-            <p className="text-gray-300">
-              Acknowledge that this Church, through its <strong className="text-white">apostolic succession</strong> and 
-              fidelity to Christ&apos;s command, is a divine legate.
-            </p>
+            <p
+              className="text-gray-300"
+              dangerouslySetInnerHTML={{
+                __html: t(trans.solution.steps.s4, language),
+              }}
+            />
           </motion.div>
 
           <motion.div
@@ -608,54 +807,60 @@ export default function SolaScripturaImpossible() {
             className="flex items-start gap-4 bg-gradient-to-r from-green-900/20 to-green-900/5 border border-green-800 rounded-lg p-4"
           >
             <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-900/50 border border-green-700 flex items-center justify-center">
-              <span className="text-green-300 font-mono text-sm">5</span>
+              <span className="text-green-300 font-mono text-sm">
+                5
+              </span>
             </div>
-            <p className="text-gray-300">
-              Receive the canon of Scripture as proposed by that Church, as a <strong className="text-white">divinely 
-              revealed truth</strong>.
-            </p>
+            <p
+              className="text-gray-300"
+              dangerouslySetInnerHTML={{
+                __html: t(trans.solution.steps.s5, language),
+              }}
+            />
           </motion.div>
         </div>
 
         <div className="bg-gray-900/50 border-l-4 border-purple-600 p-6 rounded-r-lg my-8">
           <p className="text-gray-300 italic">
-            "We do not begin by supposing their inspiration to prove the Church from the Bible and the Bible from the 
-            Church. This is a gross mischaracterization."
+            &quot;{t(trans.solution.quote1, language)}&quot;
           </p>
         </div>
 
         <p className="text-gray-300 mb-4">
-          This is not circular. We do not start with an infallible Church and derive an inspired Bible, nor do we start 
-          with an inspired Bible to prove the Church. Rather, both are affirmed through a chain of rational credibility 
-          leading to supernatural revelation.
+          {t(trans.solution.p2, language)}
         </p>
 
-        <h3 className="text-white mt-8 mb-4">The Role of Sacred Tradition</h3>
+        <h3 className="text-white mt-8 mb-4">
+          {t(trans.solution.h3tradition, language)}
+        </h3>
 
-        <p className="text-gray-300 mb-4">
-          Sacred Tradition is not an inspired text in the same sense as Scripture. It is the <strong className="text-white">
-          living transmission</strong> of divine revelation entrusted by Christ to the apostles and their successors. It 
-          is authoritative and divine in origin but not reducible to written words.
-        </p>
+        <p
+          className="text-gray-300 mb-4"
+          dangerouslySetInnerHTML={{
+            __html: t(trans.solution.p3, language),
+          }}
+        />
 
         <div className="bg-gray-900/50 border-l-4 border-blue-600 p-6 rounded-r-lg my-6">
           <p className="text-gray-300 italic mb-3">
-            "Sacred Tradition and Sacred Scripture form one sacred deposit of the word of God, committed to the Church."
+            &quot;{t(trans.solution.quote2.text, language)}
+            &quot;
           </p>
-          <p className="text-gray-500">— <em>Dei Verbum</em> §9</p>
+          <p className="text-gray-500">
+            — {t(trans.solution.quote2.source, language)}
+          </p>
         </div>
 
         <p className="text-gray-300 mb-4">
-          Tradition makes known what has been revealed, including the fact of inspiration for the canon. It does not 
-          replace revelation; it transmits it faithfully.
+          {t(trans.solution.p4, language)}
         </p>
 
-        <h3 className="text-white mt-8 mb-4">Magisterial Authority</h3>
+        <h3 className="text-white mt-8 mb-4">
+          {t(trans.solution.h3magisterium, language)}
+        </h3>
 
         <p className="text-gray-300">
-          The Magisterium—the Church's teaching office—authentically interprets and proposes what has been revealed. 
-          This includes dogmas, moral teachings, and the canon of Scripture. The Church does not create inspiration; it 
-          discerns and declares what God has revealed.
+          {t(trans.solution.p5, language)}
         </p>
       </motion.section>
 
@@ -668,29 +873,41 @@ export default function SolaScripturaImpossible() {
         viewport={{ once: true }}
         className="mb-16"
       >
-        <h2 className="text-white mb-6">Conclusion: A Call to Intellectual Honesty and Faith</h2>
+        <h2 className="text-white mb-6">
+          {t(trans.conclusion.h2, language)}
+        </h2>
 
         <div className="space-y-4 text-gray-300 leading-relaxed">
-          <p>
-            Every Protestant must confront this dilemma:
-          </p>
+          <p>{t(trans.conclusion.p1, language)}</p>
 
           <div className="bg-red-900/10 border border-red-800 rounded-lg p-6 my-6">
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
-                <ChevronRight className="text-red-400 flex-shrink-0 mt-1" size={20} />
-                <span className="text-gray-300">Either abandon <em>Sola Scriptura</em>, or</span>
+                <ChevronRight
+                  className="text-red-400 flex-shrink-0 mt-1"
+                  size={20}
+                />
+                <span
+                  className="text-gray-300"
+                  dangerouslySetInnerHTML={{
+                    __html: t(trans.conclusion.li1, language),
+                  }}
+                />
               </li>
               <li className="flex items-start gap-3">
-                <ChevronRight className="text-red-400 flex-shrink-0 mt-1" size={20} />
-                <span className="text-gray-300">Admit there is no consistent basis to believe the Bible is inspired.</span>
+                <ChevronRight
+                  className="text-red-400 flex-shrink-0 mt-1"
+                  size={20}
+                />
+                <span className="text-gray-300">
+                  {t(trans.conclusion.li2, language)}
+                </span>
               </li>
             </ul>
           </div>
 
           <p className="text-lg">
-            The only coherent path forward is the Catholic one. The canon of Scripture, like all dogmas of faith, must 
-            be received through divine revelation—preserved in sacred tradition and taught by the Church.
+            {t(trans.conclusion.p2, language)}
           </p>
         </div>
       </motion.section>
@@ -703,16 +920,22 @@ export default function SolaScripturaImpossible() {
         className="bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-blue-800/50 rounded-lg p-8"
       >
         <div className="flex items-start gap-4">
-          <CheckCircle className="text-blue-400 flex-shrink-0 mt-1" size={28} />
+          <CheckCircle
+            className="text-blue-400 flex-shrink-0 mt-1"
+            size={28}
+          />
           <div>
-            <h3 className="text-white mb-4">The Path Forward</h3>
-            <p className="text-gray-300 leading-relaxed mb-4">
-              Having established that <em>Sola Scriptura</em> is impossible in principle, we can now explore the positive 
-              case for the Catholic model of Scripture, Tradition, and Magisterium working together.
-            </p>
+            <h3 className="text-white mb-4">
+              {t(trans.bridge.h3, language)}
+            </h3>
+            <p
+              className="text-gray-300 leading-relaxed mb-4"
+              dangerouslySetInnerHTML={{
+                __html: t(trans.bridge.p1, language),
+              }}
+            />
             <p className="text-gray-400 leading-relaxed">
-              The next topics will examine how the Church discerned the canon, why we have 73 books instead of 66, and 
-              the role of the Magisterium in preserving and interpreting divine revelation.
+              {t(trans.bridge.p2, language)}
             </p>
           </div>
         </div>
