@@ -595,49 +595,135 @@ export const scienceAndMiraclesTranslations = {
         en: "This case is... most visually and structurally remarkable, demonstrating cross-matrix biological continuity between bread and tissue...",
       },
     },
+
     lanciano: {
       h3: { en: "Medical Report of Lanciano (8th Century)" },
       vid1: { en: "Dr. Linoli's Report on Lanciano" },
-      h4: { en: "Summary of Scientific Findings" },
-      p1: {
-        en: "Dr. Linoli’s conclusions are divided into several key points...",
+      h4: { en: "Summary of Scientific Findings" }, // KEPT for H4 heading
+
+      // ADDED the new structured data to match the styled JSX output
+      findings: {
+        p1_intro: {
+          en: "Dr. Linoli’s conclusions are divided into several key points, all supporting the authenticity of the material as real human tissue and blood, with properties that challenge scientific explanation.",
+        },
+
+        // Point 1: Presence of Human Blood Components
+        li1_title: {
+          en: "1. Presence of Human Blood Components",
+        },
+        li1_desc: {
+          en: "The blood was confirmed to be genuine through the presence of hemoglobin and alkaline hematin, using layer chromatography:",
+        },
+        li1_quote: {
+          en: "The blood of the Eucharistic miracle of Lanciano was truly such based on the demonstration of hemoglobin [and] alkaline hematin within layer chromatography.",
+        },
+
+        // Point 2: Identification of Myocardial Tissue
+        li2_title: {
+          en: "2. Identification of Myocardial Tissue (Human Heart Muscle)",
+        },
+        li2_desc: {
+          en: "The solid part (flesh) was determined to be striated muscle tissue, specifically myocardium (heart muscle), as proven by the syncytial structure of the fibers:",
+        },
+        li2_quote: {
+          en: "The flesh was made up of striated muscle tissue which due to the syncytial union of the fibers proves to belong to the myocardium.",
+        },
+
+        // Point 3: Confirmation of Human Origin
+        li3_title: { en: "3. Confirmation of Human Origin" },
+        li3_desc: {
+          en: "Using immunological testing, both the flesh and blood were confirmed to be of human origin:",
+        },
+        li3_quote: {
+          en: "Flesh and blood belong to the human species as ascertained based on the zonal precipitation reaction of Oudin-Hoeff.",
+        },
+
+        // Point 4: AB Blood Type in Both Flesh and Blood
+        li4_title: {
+          en: "4. AB Blood Type in Both Flesh and Blood",
+        },
+        li4_desc: {
+          en: "Through the absorption-elution method, the blood type was identified as AB, which is the same in both the blood and the tissue:",
+        },
+        li4_quote: {
+          en: "The blood group determined by the absorption-elution method was identical — AB — in the flesh and blood.",
+        },
+
+        // Point 5: Protein Profile Matches That of Normal Human Blood
+        li5_title: {
+          en: "5. Protein Profile Matches That of Normal Human Blood",
+        },
+        li5_desc: {
+          en: "The serum protein profile matched that of freshly drawn human blood, including Albumin and Globulins in normal ratios:",
+        },
+        li5_quote: {
+          en: "Proteins have been demonstrated in the blood elution liquid fractioned in the percentage ratios that occur in the serum protein framework of normal fresh blood.",
+        },
+
+        // Point 6: Presence of Electrolytes and Elevated Calcium
+        li6_title: {
+          en: "6. Presence of Electrolytes and Elevated Calcium",
+        },
+        li6_desc: {
+          en: "The blood samples contained Chlorides, Phosphorus, Potassium, Sodium, and a significantly elevated level of calcium:",
+        },
+        li6_quote: {
+          en: "Chlorides, phosphorus, potassium and sodium were found in the blood, while calcium was significantly increased.",
+        },
       },
-      li1: {
-        en: '<strong>1. Presence of Human Blood Components</strong><br>..."The blood of the Eucharistic miracle of Lanciano was truly such based on the demonstration of hemoglobin [and] alkaline hematin within layer chromatography."',
-      },
-      li2: {
-        en: '<strong>2. Identification of Myocardial Tissue (Human Heart Muscle)</strong><br>..."The flesh was made up of striated muscle tissue which due to the syncytial union of the fibers proves to belong to the myocardium."',
-      },
-      li3: {
-        en: '<strong>3. Confirmation of Human Origin</strong><br>..."Flesh and blood belong to the human species as ascertained based on the zonal precipitation reaction of Oudin-Hoeff."',
-      },
-      li4: {
-        en: '<strong>4. AB Blood Type in Both Flesh and Blood</strong><br>..."The blood group determined by the absorption-elution method was identical — AB — in the flesh and blood."',
-      },
-      li5: {
-        en: '<strong>5. Protein Profile Matches... Normal Human Blood</strong><br>..."Proteins have been demonstrated in the blood elution liquid fractioned in the percentage ratios that occur in the serum protein framework of normal fresh blood."',
-      },
-      li6: {
-        en: '<strong>6. Presence of Electrolytes and Elevated Calcium</strong><br>..."Chlorides, phosphorus, potassium and sodium were found in the blood, while calcium was significantly increased."',
-      },
-      h5: { en: "Anomalous Freshness of the Samples" },
-      p2: {
-        en: 'One of the most striking aspects... was the observation that the blood appeared fresh, despite being over 1,200 years old. "It was amazing how he stated that this appeared to be normal fresh blood. How can 1200-year-old blood appear to be fresh?"...',
-      },
-      conc: {
-        h5: { en: "Conclusion" },
+      // Anomalous Freshness section (new keys)
+      freshness: {
+        h5: { en: "Anomalous Freshness of the Samples" },
         p1: {
-          en: "Dr. Linoli’s investigation... revealed that the samples are: Human myocardial tissue, Human AB blood, Biochemically active... Physiologically similar to fresh samples, despite originating in the 8th century...",
+          en: "One of the most striking aspects of the analysis was the observation that the blood appeared fresh, despite being over 1,200 years old.",
+        },
+        quote: {
+          en: "It was amazing how he stated that this appeared to be normal fresh blood. How can 1200-year-old blood appear to be fresh?",
+        },
+        p2: {
+          en: "This characteristic defies known principles of biology and natural preservation and remains one of the key scientific anomalies pointing to the miraculous nature of the event.",
+        },
+      },
+      // Conclusion section (new keys)
+      conclusion: {
+        h5: { en: "Conclusion" },
+        p1_methods: {
+          en: "Dr. Linoli’s investigation employed modern medical and scientific techniques, including:",
+        },
+        li_methods1: {
+          en: "Histological analysis of muscle fibers",
+        },
+        li_methods2: {
+          en: "Immunological testing for species identification",
+        },
+        li_methods3: {
+          en: "Biochemical profiling of blood contents",
+        },
+        li_methods4: {
+          en: "Serological identification of blood group",
+        },
+        p2_results: {
+          en: "These techniques revealed that the samples are:",
+        },
+        li_results1: { en: "Human myocardial tissue" },
+        li_results2: { en: "Human AB blood" },
+        li_results3: {
+          en: "Biochemically active with preserved protein structure",
+        },
+        li_results4: {
+          en: "Physiologically similar to fresh samples, despite originating in the 8th century",
+        },
+        p3_final: {
+          en: "The inexplicable preservation and biological integrity of the samples suggest that no natural explanation suffices, reinforcing the traditional claim of a Eucharistic miracle.",
         },
       },
     },
+
+    
+
     critique: {
-      h3: { en: "Critique and Scientific Rebuttal" },
-      pdf1_name: { en: "JFSR Article (PDF)" },
-      pdf1_url: {
-        en: "https://jumpshare.com/share/O1W86nE41fOQjZz1AzfP",
-      }, // Fixed - Scientific Analysis of Eucharistic.pdf
-      h4: { en: "Scientific Rebuttal to the JFSR Article" },
+      
+      h4: { en: "Scientific Rebuttal to the JFSR Article" }, // KEPT
       // --- ADDED FULL TEXT ---
       abs: {
         en: 'This paper offers a critical examination of the 2024 article by Kearse and Ligaj, published in the Journal of Forensic Science and Research, titled "Scientific Analysis of Eucharistic Miracles: Importance of a Standardization in Evaluation". The article attempts to propose naturalistic explanations for reported Eucharistic miracles by replicating some visual characteristics of "bleeding hosts" using decomposed, unconsecrated communion wafers.\n\nIn contrast, this review presents rigorous scientific and histopathological evidence from three contemporary Eucharistic miracles — Buenos Aires (1996), Tixtla (2006), and Sokółka (2008) — to demonstrate that the findings of Kearse and Ligaj fail to account for several key phenomena, particularly those involving integrated cardiac tissue, immunological cellular structures, and consistent biochemical markers such as blood typing. This document also integrates counterpoints to claims found in a related paper by Kearse, "The relics of Jesus and Eucharistic miracles: scientific analysis of shared AB blood type," published in Forensic Science, Medicine and Pathology.',
@@ -675,6 +761,13 @@ export const scienceAndMiraclesTranslations = {
       p_conc: {
         en: "<strong>Conclusion</strong><br>While the article by Kearse and Ligaj offers a valid critique of some superficial visual similarities between mold growth and \"bleeding hosts,\" it fails to engage with the molecular, histological, and immunological depth of the evidence supporting Eucharistic miracles. Their experiments with unconsecrated wafers, although scientifically sound within their limits, do not replicate:<ul><li style='margin-left: 20px;'>Cardiac histology and intact myocytes</li><li style='margin-left: 20px;'>Immune cell preservation</li><li style='margin-left: 20px;'>Specific biochemical markers (AB blood, glycophorin A)</li><li style='margin-left: 20px;'>DNA identity and lack of human profile matches</li><li style='margin-left: 20px;'>Structural integration of host and human tissue</li></ul>Although Kearse and Ligaj acknowledge that some Eucharistic miracle cases reported histological findings... they do not attempt to reproduce or refute these through modern histopathology...<br><br>Crucially, Kearse and Ligaj do not address or even mention the documented phenomenon of fusion between myocardial tissue and the bread matrix... Their omission of this key forensic feature undermines the comprehensiveness of their critique.<br><br>...If their skepticism is to be taken seriously, it must meet the same scientific standards demanded of the miracles themselves... Until then, the evidence of supernatural transformation remains strong, and the faith of the Church in the Real Presence continues to be echoed by science, not undone by it.",
       },
+
+
+
+
+
+
+      
       // --- END FULL TEXT ---
       faq: {
         h4: { en: "FAQ Based on the JFSR Critique" },
