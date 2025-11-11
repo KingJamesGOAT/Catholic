@@ -27,6 +27,22 @@ export const translations = {
       es: "Iglesia Primitiva",
       de: "Frühe Kirche",
     },
+
+    // --- ADD THIS ---
+    scienceAndMiracles: {
+      en: "Science & Miracles",
+      fr: "Science & Miracles", // Placeholder
+      es: "Ciencia y Milagros", // Placeholder
+      de: "Wissenschaft & Wunder", // Placeholder
+    },
+
+    scienceAndMiraclesDescription: {
+      en: "Explore supernatural phenomena",
+      fr: "Explorer les phénomènes surnaturels", // Placeholder
+      es: "Explorar fenómenos sobrenaturales", // Placeholder
+      de: "Übernatürliche Phänomene entdecken", // Placeholder
+    },
+
     backToJourney: {
       en: "Back to Journey",
       fr: "Retour au Parcours",
@@ -342,6 +358,14 @@ export const translations = {
       fr: "Pas de Filioque ? Pas de Trinité.",
       es: "¿Sin Filioque? Sin Trinidad.",
       de: "Kein Filioque? Keine Trinität.",
+    },
+
+    // --- ADD THIS ---
+    "science-and-miracles": {
+      en: "Science & Miracles",
+      fr: "Science & Miracles", // Placeholder
+      es: "Ciencia y Milagros", // Placeholder
+      de: "Wissenschaft & Wunder", // Placeholder
     },
   },
 

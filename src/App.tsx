@@ -26,6 +26,7 @@ import SeventyThreeBooks from "./components/Topics/SeventyThreeBooks";
 import PeterFirstPope from "./components/Topics/PeterFirstPope";
 import Magisterium from "./components/Topics/Magisterium";
 import NoFilioque from "./components/Topics/NoFilioque";
+import ScienceAndMiracles from "./components/ScienceAndMiracles";
 
 export interface Topic {
   id: string;
@@ -35,8 +36,10 @@ export interface Topic {
   transition?: string;
 }
 
+// --- THIS IS THE FIX ---
+// The 'topics' array is now at the top level and EXPORTED,
+// so 'Navigation.tsx' can import it.
 export const topics: Topic[] = [
-  // ... (Your existing topics array remains unchanged) ...
   {
     id: "existence-of-god",
     title: "Existence of God",
@@ -140,6 +143,7 @@ export const topics: Topic[] = [
     component: NoFilioque,
   },
 ];
+// --- END OF FIX ---
 
 function AppContent() {
   const [currentTopicIndex, setCurrentTopicIndex] = useState(0);
@@ -151,20 +155,18 @@ function AppContent() {
     Set<number>
   >(new Set());
   const [showEarlyChurch, setShowEarlyChurch] = useState(false);
+  const [showScience, setShowScience] = useState(false); // State for new page
   const { language } = useLanguage();
   const trans = translations;
 
-  // REPLACE previous hover states with these
   const [showOnLoad, setShowOnLoad] = useState(true);
   const [isNavHovering, setIsNavHovering] = useState(false);
   const [isProgressHovering, setIsProgressHovering] =
     useState(false);
 
-  // DERIVED STATE: The bar is visible if any of these are true
   const isProgressVisible =
     showOnLoad || isNavHovering || isProgressHovering;
 
-  // Load progress from localStorage
   useEffect(() => {
     const saved = localStorage.getItem("journey-progress");
     if (saved) {
@@ -174,21 +176,19 @@ function AppContent() {
     }
   }, []);
 
-  // REPLACE the previous hover/timer useEffect with this one
-  // This timer just controls the "show on load" behavior
   useEffect(() => {
-    if (showTransition) return;
+    // Check if on a special page
+    if (showTransition || showEarlyChurch || showScience) return;
 
-    setShowOnLoad(true); // Show on new page
+    setShowOnLoad(true);
 
     const timer = setTimeout(() => {
-      setShowOnLoad(false); // Hide after 3 seconds
+      setShowOnLoad(false);
     }, 3000);
 
     return () => clearTimeout(timer);
-  }, [currentTopicIndex, showTransition]); // Only runs on page change
+  }, [currentTopicIndex, showTransition, showEarlyChurch, showScience]); // Added dependencies
 
-  // Save progress to localStorage
   useEffect(() => {
     localStorage.setItem(
       "journey-progress",
@@ -202,11 +202,14 @@ function AppContent() {
   const goToTopic = (index: number) => {
     if (index === currentTopicIndex) return;
 
+    // Hide special pages when navigating
+    setShowEarlyChurch(false);
+    setShowScience(false);
+
     setDirection(
       index > currentTopicIndex ? "forward" : "backward",
     );
 
-    // Mark current topic as completed when leaving it
     if (index > currentTopicIndex) {
       setCompletedTopics(
         (prev) => new Set([...prev, currentTopicIndex]),
@@ -221,12 +224,10 @@ function AppContent() {
     if (currentTopicIndex < topics.length - 1) {
       const currentTopic = topics[currentTopicIndex];
 
-      // Mark current as completed
       setCompletedTopics(
         (prev) => new Set([...prev, currentTopicIndex]),
       );
 
-      // Show transition if available
       if (currentTopic.transition) {
         setShowTransition(true);
         setTimeout(() => {
@@ -248,23 +249,33 @@ function AppContent() {
   const CurrentTopicComponent =
     topics[currentTopicIndex].component;
 
-  // Handle Early Church navigation
+  // Click handler for Early Church
   const handleEarlyChurchClick = () => {
+    setShowScience(false);
     setShowEarlyChurch(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  // Click handler for Science & Miracles
+  const handleScienceClick = () => {
+    setShowEarlyChurch(false);
+    setShowScience(true);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  // Click handler to return to main journey
   const handleBackToJourney = () => {
     setShowEarlyChurch(false);
+    setShowScience(false);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <div className="bg-black text-gray-100 min-h-screen">
-      {/* Show Early Church page or Journey */}
-      {showEarlyChurch ? (
+      {/* Show special page OR the main journey */}
+      {showEarlyChurch || showScience ? (
         <>
-          {/* Simplified nav for Early Church page (No changes needed here) */}
+          {/* Simplified nav for special pages */}
           <motion.nav
             initial={{ y: -100 }}
             animate={{ y: 0 }}
@@ -297,17 +308,20 @@ function AppContent() {
               </div>
             </div>
           </motion.nav>
-
-          <EarlyChurch />
+          
+          {/* Render the correct special page */}
+          {showEarlyChurch && <EarlyChurch />}
+          {showScience && <ScienceAndMiracles />}
         </>
       ) : (
+        // Main Journey View
         <>
           <Navigation
             currentTopicIndex={currentTopicIndex}
             onNavigate={goToTopic}
             completedTopics={completedTopics}
             onEarlyChurchClick={handleEarlyChurchClick}
-            // UPDATE HOVER HANDLERS
+            onScienceClick={handleScienceClick} // Pass the new handler
             onHoverStart={() => setIsNavHovering(true)}
             onHoverEnd={() => setIsNavHovering(false)}
           />
@@ -316,10 +330,10 @@ function AppContent() {
             currentIndex={currentTopicIndex}
             total={topics.length}
             completedTopics={completedTopics}
-            isVisible={isProgressVisible} // PASS DERIVED STATE
-            onNavigate={goToTopic} // PASS NAVIGATION FUNCTION
-            onHoverStart={() => setIsProgressHovering(true)} // ADD HOVER HANDLERS
-            onHoverEnd={() => setIsProgressHovering(false)} // ADD HOVER HANDLERS
+            isVisible={isProgressVisible}
+            onNavigate={goToTopic}
+            onHoverStart={() => setIsProgressHovering(true)}
+            onHoverEnd={() => setIsProgressHovering(false)}
           />
 
           <AnimatePresence mode="wait">
@@ -348,7 +362,6 @@ function AppContent() {
                 animate={{
                   opacity: 1,
                   x: 0,
-                  // UPDATE padding logic to use derived state
                   paddingTop: isProgressVisible
                     ? "256px"
                     : "80px",
@@ -368,7 +381,7 @@ function AppContent() {
               >
                 <CurrentTopicComponent />
 
-                {/* Navigation Buttons (No changes needed) */}
+                {/* Next/Previous Buttons */}
                 <div className="container mx-auto px-4 py-16 max-w-4xl">
                   <div className="flex items-center justify-between border-t border-gray-800 pt-8">
                     <button

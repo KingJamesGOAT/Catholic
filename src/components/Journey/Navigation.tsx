@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, Check, Circle, BookOpen } from 'lucide-react';
+import { Menu, X, Check, Circle, BookOpen, Sparkles } from 'lucide-react';
+// --- THIS IMPORT WILL NOW WORK ---
 import { topics } from '../../App';
+// ---
 import LanguageSelector from '../LanguageSelector';
 import { useLanguage } from '../../lib/i18n/LanguageContext';
 import { translations, t } from '../../lib/i18n/translations';
@@ -11,8 +13,9 @@ interface NavigationProps {
   onNavigate: (index: number) => void;
   completedTopics: Set<number>;
   onEarlyChurchClick?: () => void;
-  onHoverStart?: () => void; // ADD THIS
-  onHoverEnd?: () => void;   // ADD THIS
+  onScienceClick?: () => void;
+  onHoverStart?: () => void;
+  onHoverEnd?: () => void;
 }
 
 export default function Navigation({ 
@@ -20,8 +23,9 @@ export default function Navigation({
   onNavigate, 
   completedTopics, 
   onEarlyChurchClick, 
-  onHoverStart, // ADD THIS
-  onHoverEnd    // ADD THIS
+  onScienceClick,
+  onHoverStart, 
+  onHoverEnd    
 }: NavigationProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const { language } = useLanguage();
@@ -33,8 +37,8 @@ export default function Navigation({
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-gray-800"
-        onHoverStart={onHoverStart} // ADD THIS
-        onHoverEnd={onHoverEnd}     // ADD THIS
+        onHoverStart={onHoverStart} 
+        onHoverEnd={onHoverEnd}     
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
@@ -50,6 +54,14 @@ export default function Navigation({
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-4">
+              {onScienceClick && (
+                <button
+                  onClick={onScienceClick}
+                  className="text-gray-400 hover:text-white transition-colors text-sm"
+                >
+                  {t(trans.nav.scienceAndMiracles, language)}
+                </button>
+              )}
               {onEarlyChurchClick && (
                 <button
                   onClick={onEarlyChurchClick}
@@ -82,7 +94,7 @@ export default function Navigation({
         </div>
       </motion.nav>
 
-      {/* Full Screen Menu (No changes needed here) */}
+      {/* Full Screen Menu */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -112,9 +124,9 @@ export default function Navigation({
                 </button>
               </div>
 
-              {/* Early Church Link - Mobile & Desktop */}
-              {onEarlyChurchClick && (
-                <div className="mb-8">
+              <div className="mb-8 grid md:grid-cols-2 gap-4">
+                {/* Early Church Link */}
+                {onEarlyChurchClick && (
                   <button
                     onClick={() => {
                       onEarlyChurchClick();
@@ -132,8 +144,30 @@ export default function Navigation({
                       </div>
                     </div>
                   </button>
-                </div>
-              )}
+                )}
+
+                {/* Science & Miracles Link */}
+                {onScienceClick && (
+                  <button
+                    onClick={() => {
+                      onScienceClick();
+                      setMenuOpen(false);
+                    }}
+                    className="w-full text-left p-6 rounded-lg border bg-purple-900/20 border-purple-800 hover:bg-purple-900/30 hover:border-purple-700 transition-all duration-300"
+                  >
+                    <div className="flex items-center gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-purple-600 border-2 border-purple-400 flex items-center justify-center">
+                        <Sparkles size={20} className="text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-white mb-1">{t(trans.nav.scienceAndMiracles, language)}</h3>
+                        <p className="text-sm text-gray-400">{t(trans.nav.scienceAndMiraclesDescription, language)}</p>
+                      </div>
+                    </div>
+                  </button>
+                )}
+              </div>
+
 
               <div className="grid md:grid-cols-2 gap-4 max-h-[60vh] overflow-y-auto pr-4">
                 {topics.map((topic, index) => {

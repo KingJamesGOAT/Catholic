@@ -26,3 +26,22 @@ These documents can be obtained from:
 - Christian Classics Ethereal Library (www.ccel.org)
 
 Place all PDF files in this `/public/pdfs/` directory with the exact filenames listed above.
+
+---
+
+# Science & Miracles PDFs
+
+This directory also contains the PDF files for the "Science & Miracles" page.
+
+## Required PDFs:
+
+1.  `ssi3233part3.pdf` - Shroud 3D Reconstruction
+2.  `Fatima_compressed.pdf` - Fatima In-depth Analysis
+3.  `Mary-and-Ftima-A-Modest-CInductive-Argument-for-Catholicism.pdf` - Fatima C-Inductive Argument
+4.  `OLMVE.pdf` - Our Lady of Zeitoun Excerpt
+5.  `Mary - Miraculous Image of Guadalupe.pdf` - Guadalupe Miraculous Image Summary
+6.  `SCIENCE_GUADALUPE_VIRGIN.pdf` - Science & Guadalupe
+7.  `Contemporary-Eucharistic-Miracles-Magis-Center.pdf` - Contemporary Eucharistic Miracles
+8.  `Zugibe-scanned-reports.pdf` - Dr. Zugibe's Reports (Buenos Aires)
+9.  `Scientific Analysis of Eucharistic.pdf` - JFSR Critique Article
+10. `The_Semantics_of_Eucharistic_Miracles_250513_20204_250515_180005.pdf` - Semantics of Eucharistic Miracles
