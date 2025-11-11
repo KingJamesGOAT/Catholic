@@ -1015,6 +1015,7 @@ const EucharisticContent = () => {
 
       <h3>{t(trans.tixtla.h3, language)}</h3>
       <p>{t(trans.tixtla.p1, language)}</p>
+
       <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-6">
         <ul className="list-none space-y-2 pl-4">
           <li className="flex items-start gap-3">
@@ -1106,12 +1107,8 @@ const EucharisticContent = () => {
         title={t(trans.lanciano.vid1, language)}
       />
 
-
-      
       <h4>{t(trans.lanciano.h4, language)}</h4>
-      <p>
-        {t(trans.lanciano.p1, language)}
-      </p>
+      <p>{t(trans.lanciano.p1, language)}</p>
 
       {/* Re-formatted 6 points */}
       <div className="space-y-4 mt-6">
@@ -1126,13 +1123,15 @@ const EucharisticContent = () => {
                 1. Presence of Human Blood Components
               </h5>
               <p className="text-gray-400 mb-3">
-                The blood was confirmed to be genuine through the presence of
-                hemoglobin and alkaline hematin, using layer chromatography:
+                The blood was confirmed to be genuine through
+                the presence of hemoglobin and alkaline hematin,
+                using layer chromatography:
               </p>
               <div className="bg-gray-800/50 border-l-4 border-blue-600 p-4 rounded-r-lg">
                 <p className="text-gray-300 italic text-sm">
-                  "The blood of the Eucharistic miracle of Lanciano was truly
-                  such based on the demonstration of hemoglobin [and] alkaline
+                  "The blood of the Eucharistic miracle of
+                  Lanciano was truly such based on the
+                  demonstration of hemoglobin [and] alkaline
                   hematin within layer chromatography."
                 </p>
               </div>
@@ -1148,18 +1147,20 @@ const EucharisticContent = () => {
             />
             <div>
               <h5 className="text-white font-semibold mb-1">
-                2. Identification of Myocardial Tissue (Human Heart Muscle)
+                2. Identification of Myocardial Tissue (Human
+                Heart Muscle)
               </h5>
               <p className="text-gray-400 mb-3">
-                The solid part (flesh) was determined to be striated muscle
-                tissue, specifically myocardium (heart muscle), as proven by
-                the syncytial structure of the fibers:
+                The solid part (flesh) was determined to be
+                striated muscle tissue, specifically myocardium
+                (heart muscle), as proven by the syncytial
+                structure of the fibers:
               </p>
               <div className="bg-gray-800/50 border-l-4 border-blue-600 p-4 rounded-r-lg">
                 <p className="text-gray-300 italic text-sm">
-                  "The flesh was made up of striated muscle tissue which due to
-                  the syncytial union of the fibers proves to belong to the
-                  myocardium."
+                  "The flesh was made up of striated muscle
+                  tissue which due to the syncytial union of the
+                  fibers proves to belong to the myocardium."
                 </p>
               </div>
             </div>
@@ -1177,13 +1178,14 @@ const EucharisticContent = () => {
                 3. Confirmation of Human Origin
               </h5>
               <p className="text-gray-400 mb-3">
-                Using immunological testing... both the flesh and blood were
-                confirmed to be of human origin:
+                Using immunological testing... both the flesh
+                and blood were confirmed to be of human origin:
               </p>
               <div className="bg-gray-800/50 border-l-4 border-blue-600 p-4 rounded-r-lg">
                 <p className="text-gray-300 italic text-sm">
-                  "Flesh and blood belong to the human species as ascertained
-                  based on the zonal precipitation reaction of Oudin-Hoeff."
+                  "Flesh and blood belong to the human species
+                  as ascertained based on the zonal
+                  precipitation reaction of Oudin-Hoeff."
                 </p>
               </div>
             </div>
@@ -1201,13 +1203,14 @@ const EucharisticContent = () => {
                 4. AB Blood Type in Both Flesh and Blood
               </h5>
               <p className="text-gray-400 mb-3">
-                The blood type was identified as AB, which is the same in
-                both the blood and the tissue:
+                The blood type was identified as AB, which is
+                the same in both the blood and the tissue:
               </p>
               <div className="bg-gray-800/50 border-l-4 border-blue-600 p-4 rounded-r-lg">
                 <p className="text-gray-300 italic text-sm">
-                  "The blood group determined by the absorption-elution method
-                  was identical — AB — in the flesh and blood."
+                  "The blood group determined by the
+                  absorption-elution method was identical — AB —
+                  in the flesh and blood."
                 </p>
               </div>
             </div>
@@ -1222,17 +1225,20 @@ const EucharisticContent = () => {
             />
             <div>
               <h5 className="text-white font-semibold mb-1">
-                5. Protein Profile Matches That of Normal Human Blood
+                5. Protein Profile Matches That of Normal Human
+                Blood
               </h5>
               <p className="text-gray-400 mb-3">
-                The serum protein profile matched that of freshly drawn human
-                blood, including Albumin and Globulins in normal ratios:
+                The serum protein profile matched that of
+                freshly drawn human blood, including Albumin and
+                Globulins in normal ratios:
               </p>
               <div className="bg-gray-800/50 border-l-4 border-blue-600 p-4 rounded-r-lg">
                 <p className="text-gray-300 italic text-sm">
-                  "Proteins have been demonstrated in the blood elution liquid
-                  fractioned in the percentage ratios that occur in the serum
-                  protein framework of normal fresh blood."
+                  "Proteins have been demonstrated in the blood
+                  elution liquid fractioned in the percentage
+                  ratios that occur in the serum protein
+                  framework of normal fresh blood."
                 </p>
               </div>
             </div>
@@ -1250,13 +1256,15 @@ const EucharisticContent = () => {
                 6. Presence of Electrolytes and Elevated Calcium
               </h5>
               <p className="text-gray-400 mb-3">
-                The blood samples contained Chlorides, Phosphorus, Potassium,
-                Sodium, and a significantly elevated level of calcium:
+                The blood samples contained Chlorides,
+                Phosphorus, Potassium, Sodium, and a
+                significantly elevated level of calcium:
               </p>
               <div className="bg-gray-800/50 border-l-4 border-blue-600 p-4 rounded-r-lg">
                 <p className="text-gray-300 italic text-sm">
-                  "Chlorides, phosphorus, potassium and sodium were found in
-                  the blood, while calcium was significantly increased."
+                  "Chlorides, phosphorus, potassium and sodium
+                  were found in the blood, while calcium was
+                  significantly increased."
                 </p>
               </div>
             </div>
@@ -1266,22 +1274,26 @@ const EucharisticContent = () => {
 
       {/* Anomalous Freshness */}
       <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 my-6">
-        <h5 className="text-white mb-3">Anomalous Freshness of the Samples</h5>
+        <h5 className="text-white mb-3">
+          Anomalous Freshness of the Samples
+        </h5>
         <p className="text-gray-300">
-          One of the most striking aspects of the analysis was the
-          observation that the blood appeared fresh, despite being over
-          1,200 years old.
+          One of the most striking aspects of the analysis was
+          the observation that the blood appeared fresh, despite
+          being over 1,200 years old.
         </p>
         <div className="bg-gray-800/50 border-l-4 border-purple-600 p-4 rounded-r-lg mt-4">
           <p className="text-gray-300 italic text-sm">
-            "It was amazing how he stated that this appeared to be normal
-            fresh blood. How can 1200-year-old blood appear to be fresh?"
+            "It was amazing how he stated that this appeared to
+            be normal fresh blood. How can 1200-year-old blood
+            appear to be fresh?"
           </p>
         </div>
         <p className="text-gray-400 mt-4">
-          This characteristic defies known principles of biology and natural
-          preservation and remains one of the key scientific anomalies
-          pointing to the miraculous nature of the event.
+          This characteristic defies known principles of biology
+          and natural preservation and remains one of the key
+          scientific anomalies pointing to the miraculous nature
+          of the event.
         </p>
       </div>
 
@@ -1289,8 +1301,8 @@ const EucharisticContent = () => {
       <div className="bg-green-900/10 border border-green-800 rounded-lg p-6 my-6">
         <h5 className="text-white mb-3">Conclusion</h5>
         <p className="text-gray-300 mb-4">
-          Dr. Linoli’s investigation employed modern medical and scientific
-          techniques, including:
+          Dr. Linoli’s investigation employed modern medical and
+          scientific techniques, including:
         </p>
         <ul className="list-none space-y-2 pl-4 mb-4">
           <li className="flex items-start gap-3">
@@ -1324,118 +1336,203 @@ const EucharisticContent = () => {
         <ul className="list-none space-y-2 pl-4">
           <li className="flex items-start gap-3">
             <span className="text-green-400 mt-1">•</span>
-            <span className="text-gray-300">Human myocardial tissue</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-green-400 mt-1">•</span>
-            <span className="text-gray-300">Human AB blood</span>
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-green-400 mt-1">•</span>
             <span className="text-gray-300">
-              Biochemically active with preserved protein structure
+              Human myocardial tissue
             </span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-green-400 mt-1">•</span>
             <span className="text-gray-300">
-              Physiologically similar to fresh samples, despite originating
-              in the 8th century
+              Human AB blood
+            </span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="text-green-400 mt-1">•</span>
+            <span className="text-gray-300">
+              Biochemically active with preserved protein
+              structure
+            </span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="text-green-400 mt-1">•</span>
+            <span className="text-gray-300">
+              Physiologically similar to fresh samples, despite
+              originating in the 8th century
             </span>
           </li>
         </ul>
         <p className="text-white font-semibold mt-4">
-          The inexplicable preservation and biological integrity of the
-          samples suggest that no natural explanation suffices, reinforcing
-          the traditional claim of a Eucharistic miracle.
+          The inexplicable preservation and biological integrity
+          of the samples suggest that no natural explanation
+          suffices, reinforcing the traditional claim of a
+          Eucharistic miracle.
         </p>
       </div>
 
 
-
-
+      
       
 
       <Separator className="my-12 bg-gray-800" />
-
-
-      
 
       <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-6">
         <h4 className="text-white mb-3">
           {t(trans.critique.h4, language)}
         </h4>
-        <p className="whitespace-pre-wrap">
-          {t(trans.critique.abs, language)}
-        </p>
-        <br />
-        <p className="whitespace-pre-wrap">
-          {t(trans.critique.p_intro, language)}
-        </p>
-        <br />
-        <p
-          dangerouslySetInnerHTML={{
-            __html: t(trans.critique.p_hist, language),
-          }}
-        />
-        <br />
-        <p
-          dangerouslySetInnerHTML={{
-            __html: t(trans.critique.p_immune, language),
-          }}
-        />
-        <br />
-        <p
-          dangerouslySetInnerHTML={{
-            __html: t(trans.critique.p_dna, language),
-          }}
-        />
-        <br />
-        <p
-          dangerouslySetInnerHTML={{
-            __html: t(trans.critique.p_dna_clarify, language),
-          }}
-        />
-        <br />
-        <p
-          dangerouslySetInnerHTML={{
-            __html: t(trans.critique.p_blood, language),
-          }}
-        />
-        <br />
-        <p
-          dangerouslySetInnerHTML={{
-            __html: t(
-              trans.critique.p_blood_rebuttal,
-              language,
-            ),
-          }}
-        />
-        <br />
-        <p
-          dangerouslySetInnerHTML={{
-            __html: t(trans.critique.p_fusion, language),
-          }}
-        />
-        <br />
-        <p
-          dangerouslySetInnerHTML={{
-            __html: t(trans.critique.p_stats, language),
-          }}
-        />
-        <br />
-        <p
-          dangerouslySetInnerHTML={{
-            __html: t(trans.critique.p_method, language),
-          }}
-        />
-        <br />
-        <p
-          dangerouslySetInnerHTML={{
-            __html: t(trans.critique.p_conc, language),
-          }}
-        />
+        <div className="space-y-6">
+          <div className="bg-blue-900/10 border border-blue-800 rounded-lg p-6">
+            <h5 className="text-white font-semibold mb-2">
+              Abstract & Introduction
+            </h5>
+            <p
+              className="text-gray-300 mb-4"
+              dangerouslySetInnerHTML={{
+                __html: t(trans.critique.abs, language),
+              }}
+            />
+            <p
+              className="text-gray-400 text-sm"
+              dangerouslySetInnerHTML={{
+                __html: t(trans.critique.p_intro, language),
+              }}
+            />
+          </div>
+
+          <div className="space-y-4">
+            {/* I. Myocardial Histopathology */}
+            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
+              <p
+                className="text-gray-300"
+                dangerouslySetInnerHTML={{
+                  __html: t(trans.critique.p_hist, language),
+                }}
+              />
+            </div>
+
+            {/* II. Presence of Viable Inflammatory Cells */}
+            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
+              <p
+                className="text-gray-300"
+                dangerouslySetInnerHTML={{
+                  __html: t(trans.critique.p_immune, language),
+                }}
+              />
+            </div>
+
+            {/* III. DNA Analysis and STR Limitations */}
+            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
+              <p
+                className="text-gray-300"
+                dangerouslySetInnerHTML={{
+                  __html: t(trans.critique.p_dna, language),
+                }}
+              />
+            </div>
+
+            {/* Clarifying the Misunderstanding */}
+            <div className="bg-blue-900/10 border border-blue-800 rounded-lg p-6">
+              <p
+                className="text-gray-300 font-medium"
+                dangerouslySetInnerHTML={{
+                  __html: t(
+                    trans.critique.p_dna_clarify,
+                    language,
+                  ),
+                }}
+              />
+            </div>
+
+            {/* IV. Blood Typing and Hemagglutination Analysis */}
+            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
+              <p
+                className="text-gray-300 mb-4"
+                dangerouslySetInnerHTML={{
+                  __html: t(trans.critique.p_blood, language),
+                }}
+              />
+              <p
+                className="text-gray-300"
+                dangerouslySetInnerHTML={{
+                  __html: t(
+                    trans.critique.p_blood_rebuttal,
+                    language,
+                  ),
+                }}
+              />
+            </div>
+
+            {/* V. Microscopic Fusion of Tissue and Bread Matrix (Highlight Fusion Point) */}
+            <div className="bg-red-900/10 border border-red-800 rounded-lg p-6">
+              <div className="flex items-start gap-4">
+                <Sparkles
+                  className="text-red-400 flex-shrink-0 mt-1"
+                  size={24}
+                />
+                <div>
+                  <h5 className="text-white font-semibold mb-2">
+                    V. Microscopic Fusion of Tissue and Bread
+                    Matrix
+                  </h5>
+                  <p
+                    className="text-gray-300"
+                    dangerouslySetInnerHTML={{
+                      __html: t(
+                        trans.critique.p_fusion,
+                        language,
+                      ),
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* VI. Statistical Improbability and Multi-Case Consistency */}
+            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
+              <p
+                className="text-gray-300"
+                dangerouslySetInnerHTML={{
+                  __html: t(trans.critique.p_stats, language),
+                }}
+              />
+            </div>
+
+            {/* VII. Methodological Clarifications and Minimum Protocol */}
+            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
+              <p
+                className="text-gray-300"
+                dangerouslySetInnerHTML={{
+                  __html: t(trans.critique.p_method, language),
+                }}
+              />
+            </div>
+          </div>
+
+          {/* Final Conclusion Block (Styled as a compelling summary) */}
+          <div className="bg-green-900/10 border border-green-800 rounded-lg p-8 mt-6">
+            <div className="flex items-start gap-4">
+              <CheckCircle
+                className="text-green-400 flex-shrink-0 mt-1"
+                size={32}
+              />
+              <div>
+                <h3 className="text-white mb-2">
+                  Conclusion of Rebuttal
+                </h3>
+                <p
+                  className="text-gray-300 text-sm"
+                  dangerouslySetInnerHTML={{
+                    __html: t(trans.critique.p_conc, language),
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+
+
+      
 
       <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-6">
         <h4 className="text-white mb-3">

@@ -2165,10 +2165,6 @@
     letter-spacing: var(--tracking-wide);
   }
 
-  .whitespace-pre-wrap {
-    white-space: pre-wrap;
-  }
-
   .text-amber-300 {
     color: var(--color-amber-300);
   }
