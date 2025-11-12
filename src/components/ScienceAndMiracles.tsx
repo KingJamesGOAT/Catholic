@@ -9,7 +9,7 @@ import {
   Sparkles,
   Heart,
   CheckCircle,
-  XCircle, // ADDED XCircle
+  XCircle,
 } from "lucide-react";
 import { useLanguage } from "../lib/i18n/LanguageContext";
 import { t } from "../lib/i18n/translations";
@@ -870,7 +870,7 @@ const EucharisticContent = () => {
     >
       <h2>{t(trans.h2, language)}</h2>
       <YouTubeEmbed
-        videoId="ZbSjuMxXX-E"
+        videoId="ZbSjuMxXX-E?start=128"
         title={t(trans.h2, language)}
       />
       <div className="flex flex-wrap gap-4">

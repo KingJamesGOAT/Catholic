@@ -5196,12 +5196,7 @@ export const translations = {
           de: "Die katholische Kirche allein entspricht der Vitalität und Katholizität des Wortes Gottes. In ihrem Lehramt spricht das Wort Christi weiter – nicht als toter Buchstabe oder private Interpretation – sondern durch lebendige Botschafter der Wahrheit.",
         },
       },
-      final: {
-        en: "Soli Deo gloria.",
-        fr: "Soli Deo gloria.",
-        es: "Soli Deo gloria.",
-        de: "Soli Deo gloria.",
-      },
+      
     },
     visual: {
       h3: {

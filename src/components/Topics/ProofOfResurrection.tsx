@@ -1,5 +1,3 @@
-// kingjamesgoat/catholic/Catholic-9fa91d3b7a7dc54d4c122777284ed3a1f92c5303/src/components/Topics/ProofOfResurrection.tsx
-
 import TopicLayout from "../Journey/TopicLayout";
 import { motion } from "motion/react";
 import { Separator } from "../ui/separator";
@@ -13,7 +11,7 @@ import {
 } from "lucide-react";
 import { useLanguage } from "../../lib/i18n/LanguageContext";
 import { translations, t } from "../../lib/i18n/translations";
-import { cn } from "../ui/utils"; // FIXED: Import cn utility function
+import { cn } from "../ui/utils";
 
 export default function ProofOfResurrection() {
   const { language } = useLanguage();
@@ -42,7 +40,6 @@ export default function ProofOfResurrection() {
     },
   ];
 
-  // --- START NEW DATA STRUCTURE AND VISUALIZER COMPONENT LOGIC (Simplified Bars) ---
   // Data: New Testament, Homer, Demosthenes, Herodotus, Plato, Tacitus, Caesar, Pliny
   const rawManuscriptData = [
     { name: t(trans.manuscriptEvidence.newTestament, language), manuscripts: 5800, timeGap: 25, timeGapText: t(trans.manuscriptEvidence.timeGap25, language), sortManuscripts: 5800, isNewTestament: true, key: 'nt' },
@@ -72,7 +69,6 @@ export default function ProofOfResurrection() {
       return "bg-red-600";
   }
   
-  // MAX SCALING VALUES (Updated)
   const maxManuscripts = 6000;
   const maxTimeGap = 1500;
 
@@ -82,26 +78,25 @@ export default function ProofOfResurrection() {
             {t(trans.manuscriptEvidence.intro, language)}
         </p>
 
-        {/* Header for the Chart/List */}
-        <div className="flex bg-gray-900/50 border-b border-gray-800 p-4 text-xs font-semibold text-gray-400">
+        {/* Header for the Chart/List - Hidden on mobile to prevent overlap */}
+        <div className="hidden md:flex bg-gray-900/50 border-b border-gray-800 p-4 text-xs font-semibold text-gray-400">
             <div className="w-1/4">{t(trans.manuscriptEvidence.tableAuthor, language).toUpperCase()}</div>
             <div className="w-1/4 text-center">{t(trans.manuscriptEvidence.tableManuscripts, language).toUpperCase()}</div>
-            <div className="w-1/2 text-left">{t(trans.manuscriptEvidence.tableTimeGap, language).toUpperCase()}</div>
+            <div className="w-1/2 text-left pl-4">{t(trans.manuscriptEvidence.tableTimeGap, language).toUpperCase()}</div>
         </div>
 
-        <div className="grid grid-cols-1 divide-y divide-gray-800 border border-gray-800 rounded-lg overflow-hidden">
+        {/* Container with thick blue border to match the separators */}
+        <div className="grid grid-cols-1 border-4 border-blue-700 rounded-lg overflow-hidden">
             {sortedManuscriptData.map((data, index) => {
                 const isNT = data.isNewTestament;
                 
-                // 1. Manuscript Bar Calculation (Updated to use maxManuscripts = 6000)
-                // Use a logarithmic-like scale for contrast (5800 is 100%, 6000 is used as max for calculation base)
+                // 1. Manuscript Bar Calculation
                 let msBarRatio = (data.manuscripts / maxManuscripts) * 100;
-                if (!isNT) msBarRatio = Math.min(msBarRatio, 35); // Cap non-NT width at 35% for visualization contrast
+                if (!isNT) msBarRatio = Math.min(msBarRatio, 35);
 
-                // 2. Time Gap Bar Calculation (CORRECTED LOGIC: Longer gap = Longer bar. Max gap is 1500)
-                // Ratio calculation: (Document Gap / Max Gap) * Max Length (85%) + Min Length (15%)
+                // 2. Time Gap Bar Calculation
                 let gapBarRatio = (data.timeGap / maxTimeGap) * 85 + 15; 
-                if (isNT) gapBarRatio = 15; // Set NT to minimum length (15%) to indicate minimal gap
+                if (isNT) gapBarRatio = 15;
 
                 const textColor = isNT ? "text-blue-400" : "text-gray-300";
                 const bgClass = isNT ? "bg-gradient-to-r from-blue-900/50 to-blue-900/20" : "bg-gray-900/50";
@@ -110,32 +105,39 @@ export default function ProofOfResurrection() {
 
                 return (
                     <motion.div
-                        key={data.key} // Using unique key property for map stability
+                        key={data.key}
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
                         className={cn( 
-                            "flex items-center p-4 transition-all duration-300",
+                            "flex flex-col md:flex-row items-center p-4 transition-all duration-300 gap-4 md:gap-0",
                             bgClass,
-                            isNT ? "border-l-4 border-blue-600 hover:bg-blue-900/30" : "hover:bg-gray-900/70"
+                            isNT ? "border-l-4 border-blue-600 hover:bg-blue-900/30" : "hover:bg-gray-900/70",
+                            // Separators: Thick blue on mobile, thin gray on desktop. Last item has no border.
+                            "border-b-4 border-blue-700 last:border-0 md:border-b md:border-gray-800"
                         )}
                     >
                         {/* Column 1: Author */}
-                        <div className={cn("w-1/4 font-semibold", textColor)}>
+                        <div className={cn("w-full md:w-1/4 font-semibold text-center md:text-left", textColor)}>
                             {/* Ranking on a separate line for visibility */}
-                            <span className="text-xs font-medium text-gray-500 block">
+                            <span className="text-xs font-medium text-gray-500 block mb-1">
                                 {isNT 
                                     ? t(trans.rankUnmatched, language)
                                     : t(trans.rankHistorical, language) + (index + 1)
                                 }
                             </span>
-                            {data.name}
+                            <span className="text-xl md:text-base block">{data.name}</span>
                         </div>
 
                         {/* Column 2: Manuscript Count (Visualization) */}
-                        <div className="w-1/4 flex flex-col items-center gap-1">
-                            <span className={cn("text-lg font-bold tabular-nums", isNT ? "text-white" : "text-gray-200")}>
+                        <div className="w-full md:w-1/4 flex flex-col items-center gap-1 relative">
+                            {/* Mobile Label */}
+                            <span className="md:hidden text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-1 block">
+                                {t(trans.manuscriptEvidence.tableManuscripts, language)}
+                            </span>
+
+                            <span className={cn("text-lg font-bold tabular-nums block", isNT ? "text-white" : "text-gray-200")}>
                                 {data.manuscripts.toLocaleString()}{isNT && "+"}
                             </span>
                             <div className="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
@@ -147,17 +149,22 @@ export default function ProofOfResurrection() {
                                     style={{ maxWidth: '100%' }}
                                 />
                             </div>
-                            <span className="text-xs text-gray-500">
+                            <span className="text-xs text-gray-500 block">
                                 {isNT 
                                     ? t(trans.scaleCount, language) 
-                                    : t(trans.scaleMaxMs, language).replace('{0}', maxManuscripts.toLocaleString()) // Updated to 6000
+                                    : t(trans.scaleMaxMs, language).replace('{0}', maxManuscripts.toLocaleString())
                                 }
                             </span>
                         </div>
 
                         {/* Column 3: Time Gap (Visualization) */}
-                        <div className="w-1/2 flex flex-col pl-4 text-left gap-1">
-                            <span className={cn("text-base font-medium", isNT ? "text-white" : "text-gray-300")}>
+                        <div className="w-full md:w-1/2 flex flex-col pl-0 md:pl-4 text-center md:text-left gap-1 mt-2 md:mt-0">
+                            {/* Mobile Label */}
+                            <span className="md:hidden text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-1 block">
+                                {t(trans.manuscriptEvidence.tableTimeGap, language)}
+                            </span>
+
+                            <span className={cn("text-base font-medium block", isNT ? "text-white" : "text-gray-300")}>
                                 {data.timeGapText}
                             </span>
                             <div className="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
@@ -168,10 +175,10 @@ export default function ProofOfResurrection() {
                                     className={cn("h-full", gapBarColor)}
                                 />
                             </div>
-                            <span className="text-xs text-gray-500">
+                            <span className="text-xs text-gray-500 block">
                                 {isNT 
                                     ? t(trans.scaleTimeClose, language) 
-                                    : t(trans.scaleMaxGap, language).replace('{0}', maxTimeGap.toLocaleString()) // Updated to 1500
+                                    : t(trans.scaleMaxGap, language).replace('{0}', maxTimeGap.toLocaleString())
                                 }
                             </span>
                         </div>
@@ -192,7 +199,6 @@ export default function ProofOfResurrection() {
         />
     </div>
   );
-  // --- END NEW DATA STRUCTURE AND VISUALIZER COMPONENT LOGIC ---
 
   return (
     <TopicLayout
@@ -559,7 +565,7 @@ export default function ProofOfResurrection() {
                   __html: t(
                     trans.evaluatingExplanations
                       .stolenBodyPoint1,
-                    language,
+                      language,
                   ),
                 }}
               />

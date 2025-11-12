@@ -328,6 +328,9 @@ function AppContent() {
                 }
               />
             ) : (
+
+
+          
               <motion.main
                 key={currentTopicIndex}
                 initial={{
@@ -356,46 +359,56 @@ function AppContent() {
               >
                 <CurrentTopicComponent />
 
-                {/* Next/Previous Buttons */}
+                {/* Next/Previous Buttons - Optimized for Mobile */}
                 <div className="container mx-auto px-4 py-16 max-w-4xl">
-                  <div className="flex items-center justify-between border-t border-gray-800 pt-8">
-                    <button
-                      onClick={previousTopic}
-                      disabled={currentTopicIndex === 0}
-                      className={`px-6 py-3 rounded-lg transition-all duration-300 ${
-                        currentTopicIndex === 0
-                          ? "bg-gray-900 text-gray-600 cursor-not-allowed"
-                          : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white"
-                      }`}
-                    >
-                      ← {t(trans.progress.previous, language)}
-                    </button>
-
-                    <div className="text-center text-gray-500">
+                  <div className="flex flex-col md:flex-row items-center justify-between border-t border-gray-800 pt-8 gap-6 md:gap-4">
+                    
+                    {/* Topic Counter (Mobile: Top, Desktop: Middle) */}
+                    <div className="text-center text-gray-500 order-1 md:order-2 text-sm md:text-base">
                       {t(trans.progress.topicOf, language)}{" "}
                       {currentTopicIndex + 1}{" "}
                       {t(trans.progress.of, language)}{" "}
                       {topics.length}
                     </div>
 
-                    <button
-                      onClick={nextTopic}
-                      disabled={
-                        currentTopicIndex === topics.length - 1
-                      }
-                      className={`px-6 py-3 rounded-lg transition-all duration-300 ${
-                        currentTopicIndex === topics.length - 1
-                          ? "bg-gray-900 text-gray-600 cursor-not-allowed"
-                          : "bg-white text-black hover:bg-gray-200"
-                      }`}
-                    >
-                      {currentTopicIndex === topics.length - 1
-                        ? t(trans.progress.complete, language)
-                        : `${t(trans.progress.next, language)} →`}
-                    </button>
+                    {/* Buttons Wrapper (Mobile: Bottom Row, Desktop: Spread) */}
+                    {/* 'md:contents' allows children to be direct flex items of parent on desktop */}
+                    {/* justify-between pushes buttons to edges on mobile */}
+                    <div className="flex w-full md:w-auto justify-between gap-4 order-2 md:contents">
+                      <button
+                        onClick={previousTopic}
+                        disabled={currentTopicIndex === 0}
+                        className={`px-6 py-3 rounded-lg transition-all duration-300 md:order-1 ${
+                          currentTopicIndex === 0
+                            ? "bg-gray-900 text-gray-600 cursor-not-allowed"
+                            : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white"
+                        }`}
+                      >
+                        ← {t(trans.progress.previous, language)}
+                      </button>
+
+                      <button
+                        onClick={nextTopic}
+                        disabled={
+                          currentTopicIndex === topics.length - 1
+                        }
+                        className={`px-6 py-3 rounded-lg transition-all duration-300 md:order-3 ${
+                          currentTopicIndex === topics.length - 1
+                            ? "bg-gray-900 text-gray-600 cursor-not-allowed"
+                            : "bg-white text-black hover:bg-gray-200"
+                        }`}
+                      >
+                        {currentTopicIndex === topics.length - 1
+                          ? t(trans.progress.complete, language)
+                          : `${t(trans.progress.next, language)} →`}
+                      </button>
+                    </div>
                   </div>
                 </div>
               </motion.main>
+
+
+          
             )}
           </AnimatePresence>
         </>
