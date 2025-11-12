@@ -1425,10 +1425,10 @@ export const translations = {
     // Conclusion
     conclusion: {
       heading: {
-        en: "Faith Rooted in History",
-        fr: "Foi Enracinée dans l'Histoire",
-        es: "Fe Arraigada en la Historia",
-        de: "Glaube Verwurzelt in der Geschichte",
+        en: "7. Faith Rooted in History",
+        fr: "7. Foi Enracinée dans l'Histoire",
+        es: "7. Fe Arraigada en la Historia",
+        de: "7. Glaube Verwurzelt in der Geschichte",
       },
       para1: {
         en: "Faith in Christ is not blind. It is a reasonable trust based on strong historical evidence. As early as the Book of Acts, Christians were defending their faith using historical arguments (see Acts 26). Christianity invites examination—and it passes the test.",
@@ -2195,9 +2195,9 @@ export const translations = {
   youLoseSoIWinFallacy: {
     title: {
       en: 'The "You Lose, So I Win" Fallacy',
-      fr: "La Sophisme « Vous Perdez, Donc Je Gagne »",
+      fr: "Le Sophisme « Vous Perdez, Donc Je Gagne »",
       es: 'La Falacia "Tú Pierdes, Luego Yo Gano"',
-      de: 'Der „Du Verlierst, Also Gewinne Ich" Fehlschluss',
+      de: "Der Trugschluss „Du verlierst, also gewinne ich“",
     },
     subtitle: {
       en: "Can We Know the Biblical Canon Without an Infallible Church?",
@@ -2581,6 +2581,325 @@ export const translations = {
         fr: "L'exigence d'un mécanisme ou d'une autorité infaillible pour <em>préserver</em> et <em>définir</em> un corps de vérité infaillible pour toute l'Église.",
         es: "El requisito de un mecanismo o autoridad infalible para <em>preservar</em> y <em>definir</em> un cuerpo de verdad infalible para toda la Iglesia.",
         de: "Die Anforderung eines unfehlbaren Mechanismus oder einer Autorität, um einen Körper unfehlbarer Wahrheit für die gesamte Kirche zu <em>bewahren</em> und zu <em>definieren</em>.",
+      },
+    },
+
+    section3A: {
+      h3: {
+        en: "Recognizing Truth vs. Defining and Preserving Truth",
+        fr: "Reconnaître la Vérité vs. Définir et Préserver la Vérité",
+        es: "Reconocer la Verdad vs. Definir y Preservar la Verdad",
+        de: "Wahrheit Erkennen vs. Wahrheit Definieren und Bewahren",
+      },
+      p1: {
+        en: "Philosophically, the distinction is critical. It is one thing for a person, despite their own fallibility, to <em>believe</em> or <em>recognize</em> that a truth is true. It is quite another for a community to <em>establish with certainty</em> which propositions constitute that truth, especially when those propositions form the basis of faith and practice for millions across centuries.",
+        fr: "Philosophiquement, la distinction est critique. C'est une chose pour une personne, malgré sa propre faillibilité, de <em>croire</em> ou <em>reconnaître</em> qu'une vérité est vraie. C'en est une autre pour une communauté d'<em>établir avec certitude</em> quelles propositions constituent cette vérité, surtout lorsque ces propositions forment la base de la foi et de la pratique pour des millions à travers les siècles.",
+        es: "Filosóficamente, la distinción es crítica. Una cosa es que una persona, a pesar de su falibilidad, <em>crea</em> o <em>reconozca</em> que una verdad es cierta. Otra muy distinta es que una comunidad <em>establezca con certeza</em> qué proposiciones constituyen esa verdad, especialmente cuando esas proposiciones forman la base de la fe y la práctica a lo largo de los siglos.",
+        de: "Philosophisch ist die Unterscheidung entscheidend. Es ist eine Sache für eine Person, trotz ihrer eigenen Fehlbarkeit, eine Wahrheit zu <em>glauben</em> oder zu <em>erkennen</em>. Es ist eine ganz andere Sache für eine Gemeinschaft, <em>mit Gewissheit festzulegen</em>, welche Aussagen diese Wahrheit ausmachen, insbesondere wenn diese Aussagen die Grundlage des Glaubens und der Praxis für Millionen über Jahrhunderte hinweg bilden.",
+      },
+      quote: {
+        text: {
+          en: '"Infallibility is the absence of error, not merely the possession of a true belief. While fallible persons can have true beliefs, reliably identifying a complete, inerrant canon requires a reliable, authoritative process."',
+          fr: "« L'infaillibilité est l'absence d'erreur, pas simplement la possession d'une croyance vraie. Alors que des personnes faillibles peuvent avoir des croyances vraies, identifier de manière fiable un canon complet et sans erreur exige un processus fiable et faisant autorité. »",
+          es: '"La infalibilidad es la ausencia de error, no meramente la posesión de una creencia verdadera. Mientras que las personas falibles pueden tener creencias verdaderas, identificar de manera fiable un canon completo e inerrante requiere un proceso fiable y autorizado."',
+          de: '„Unfehlbarkeit ist die Abwesenheit von Irrtum, nicht bloß der Besitz einer wahren Überzeugung. Während fehlbare Personen wahre Überzeugungen haben können, erfordert die zuverlässige Identifizierung eines vollständigen, irrtumslosen Kanons einen zuverlässigen, autoritativen Prozess."',
+        },
+        source: {
+          en: "Alvin Plantinga, <em>Warranted Christian Belief</em>, 2000",
+          fr: "Alvin Plantinga, <em>Warranted Christian Belief</em>, 2000",
+          es: "Alvin Plantinga, <em>Warranted Christian Belief</em>, 2000",
+          de: "Alvin Plantinga, <em>Warranted Christian Belief</em>, 2000",
+        },
+      },
+      p2: {
+        en: 'If the process by which the biblical canon was recognized was itself fallible—subject to error, disagreement, or human weakness—then the end result is only <em>probable</em> certainty about the canon, not absolute certainty. This introduces what philosophers call <strong class="text-white">epistemic uncertainty</strong>.',
+        fr: "Si le processus par lequel le canon biblique a été reconnu était lui-même faillible—sujet à l'erreur, au désaccord ou à la faiblesse humaine—alors le résultat final n'est qu'une <em>probabilité</em> de certitude sur le canon, pas une certitude absolue. Cela introduit ce que les philosophes appellent l' <strong class=\"text-white\">incertitude épistémique</strong>.",
+        es: 'Si el proceso por el cual se reconoció el canon bíblico fuera en sí mismo falible—sujeto a error, desacuerdo o debilidad humana—entonces el resultado final es solo <em>probable</em> certeza sobre el canon, no certeza absoluta. Esto introduce lo que los filósofos llaman <strong class="text-white">incertidumbre epistémica</strong>.',
+        de: 'Wenn der Prozess, durch den der biblische Kanon erkannt wurde, selbst fehlbar wäre—fehlbar, dem Irrtum, der Uneinigkeit oder menschlicher Schwäche unterworfen—dann ist das Endergebnis nur <em>wahrscheinliche</em> Gewissheit über den Kanon, nicht absolute Gewissheit. Dies führt zu dem, was Philosophen die <strong class="text-white">epistemische Unsicherheit</strong> nennen.',
+      },
+    },
+    section3B: {
+      h3: {
+        en: "The Problem of Certainty in a Fallible Process",
+        fr: "Le Problème de la Certitude dans un Processus Faillible",
+        es: "El Problema de la Certeza en un Proceso Falible",
+        de: "Das Problem der Gewissheit in einem Fehlbaren Prozess",
+      },
+      p1: {
+        en: 'If the process by which the biblical canon was recognized was itself fallible—subject to error, disagreement, or human weakness—then the end result is only <em>probable</em> certainty about the canon, not absolute certainty. This introduces what philosophers call <strong class="text-white">epistemic uncertainty</strong>.',
+        fr: "Si le processus par lequel le canon biblique a été reconnu était lui-même faillible—sujet à l'erreur, au désaccord ou à la faiblesse humaine—alors le résultat final n'est qu'une <em>probabilité</em> de certitude sur le canon, pas une certitude absolue. Cela introduit ce que les philosophes appellent l' <strong class=\"text-white\">incertitude épistémique</strong>.",
+        es: 'Si el proceso por el cual se reconoció el canon bíblico fuera en sí mismo falible—sujeto a error, desacuerdo o debilidad humana—entonces el resultado final es solo <em>probable</em> certeza sobre el canon, no certeza absoluta. Esto introduce lo que los filósofos llaman <strong class="text-white">incertidumbre epistémica</strong>.',
+        de: 'Wenn der Prozess, durch den der biblische Kanon erkannt wurde, selbst fehlbar wäre—fehlbar, dem Irrtum, der Uneinigkeit oder menschlicher Schwäche unterworfen—dann ist das Endergebnis nur <em>wahrscheinliche</em> Gewissheit über den Kanon, nicht absolute Gewissheit. Dies führt zu dem, was Philosophen die <strong class="text-white">epistemische Unsicherheit</strong> nennen.',
+      },
+      quote: {
+        text: {
+          en: '"Religious truths require a high standard of evidence; anything less than near certainty diminishes their authority and reliability."',
+          fr: "« Les vérités religieuses exigent un niveau de preuve élevé ; tout ce qui est moins que la quasi-certitude diminue leur autorité et leur fiabilité. »",
+          es: '"Las verdades religiosas requieren un alto estándar de evidencia; cualquier cosa menos que la casi certeza disminuye su autoridad y fiabilidad."',
+          de: '„Religiöse Wahrheiten erfordern einen hohen Beweisstandard; alles, was weniger als annähernde Gewissheit ist, mindert ihre Autorität und Zuverlässigkeit."',
+        },
+        source: {
+          en: "Richard Swinburne, <em>The Existence of God</em>, 2004",
+          fr: "Richard Swinburne, <em>The Existence of God</em>, 2004",
+          es: "Richard Swinburne, <em>The Existence of God</em>, 2004",
+          de: "Richard Swinburne, <em>The Existence of God</em>, 2004",
+        },
+      },
+      p2: {
+        en: "This uncertainty has real consequences: if the Church's recognition of the canon is fallible, then the foundation of Christian faith—the Word of God—is on shaky ground. Faith, in the Catholic understanding, is not a leap into the unknown but an assent to revealed truth, guaranteed by divine authority.",
+        fr: "Cette incertitude a des conséquences réelles : si la reconnaissance du canon par l'Église est faillible, alors le fondement de la foi chrétienne—la Parole de Dieu—est sur un terrain instable. La foi, dans la compréhension catholique, n'est pas un saut dans l'inconnu mais un assentiment à la vérité révélée, garantie par l'autorité divine.",
+        es: "Esta incertidumbre tiene consecuencias reales: si el reconocimiento del canon por parte de la Iglesia es falible, entonces el fundamento de la fe cristiana—la Palabra de Dios—está en terreno inestable. La fe, en la comprensión católica, no es un salto a lo desconocido sino un asentimiento a la verdad revelada, garantizada por la autoridad divina.",
+        de: "Diese Unsicherheit hat reale Konsequenzen: Wenn die Anerkennung des Kanons durch die Kirche fehlbar ist, dann steht das Fundament des christlichen Glaubens—das Wort Gottes—auf wackligem Boden. Der Glaube ist im katholischen Verständnis kein Sprung ins Ungewisse, sondern eine Zustimmung zur offenbarten Wahrheit, die durch göttliche Autorität gewährleistet wird.",
+      },
+    },
+    section3C: {
+      h3: {
+        en: "Biblical and Patristic Support for an Infallible Church",
+        fr: "Soutien Biblique et Patristique pour une Église Infaillible",
+        es: "Soporte Bíblico y Patrístico para una Iglesia Infalible",
+        de: "Biblische und Patristische Unterstützung für eine Unfehlbare Kirche",
+      },
+      p1: {
+        en: 'Catholic theology holds that God, who inspired Scripture, did not abandon His people to human fallibility when it came to preserving His Word. Rather, He established a <strong class="text-white">living, Spirit-guided Church</strong> to guard and define the canon of Scripture with infallible authority.',
+        fr: "La théologie catholique soutient que Dieu, qui a inspiré l'Écriture, n'a pas abandonné Son peuple à la faillibilité humaine lorsqu'il s'agissait de préserver Sa Parole. Au contraire, Il a établi une <strong class=\"text-white\">Église vivante, guidée par l'Esprit</strong> pour garder et définir le canon de l'Écriture avec une autorité infaillible.",
+        es: 'La teología católica sostiene que Dios, que inspiró la Escritura, no abandonó a Su pueblo a la falibilidad humana cuando se trataba de preservar Su Palabra. Más bien, Él estableció una <strong class="text-white">Iglesia viva, guiada por el Espíritu</strong> para guardar y definir el canon de la Escritura con autoridad infalible.',
+        de: 'Die katholische Theologie vertritt, dass Gott, der die Schrift inspiriert hat, Sein Volk nicht der menschlichen Fehlbarkeit überlassen hat, wenn es darum ging, Sein Wort zu bewahren. Vielmehr hat Er eine <strong class="text-white">lebendige, vom Geist geführte Kirche</strong> eingesetzt, um den Kanon der Schrift mit unfehlbarer Autorität zu hüten und zu definieren.',
+      },
+      p2: {
+        en: "This is explicitly stated in Scripture itself. Consider Paul's instruction to Timothy:",
+        fr: "Ceci est explicitement énoncé dans l'Écriture elle-même. Considérez l'instruction de Paul à Timothée :",
+        es: "Esto se afirma explícitamente en la Escritura misma. Considere la instrucción de Pablo a Timoteo:",
+        de: "Dies wird in der Schrift selbst explizit dargelegt. Betrachten Sie die Anweisung des Paulus an Timotheus:",
+      },
+      quote1: {
+        text: {
+          en: "If you put these things before the brothers, you will be a good servant of Christ Jesus, being trained in the words of the faith and of the good doctrine that you have followed. By the Holy Spirit who dwells within us, guard the good deposit entrusted to you.",
+          fr: "Si tu mets ces choses devant les frères, tu seras un bon serviteur de Christ Jésus, étant nourri des paroles de la foi et de la bonne doctrine que tu as fidèlement suivie. Garde le bon dépôt qui t'a été confié, par le Saint-Esprit qui habite en nous.",
+          es: "Si pones estas cosas delante de los hermanos, serás un buen ministro de Jesucristo, nutrido con las palabras de la fe y de la buena doctrina que has seguido. Guarda el buen depósito por el Espíritu Santo que mora en nosotros.",
+          de: "Wenn du diese Dinge den Brüdern vorlegst, wirst du ein guter Diener Christi Jesu sein, auferzogen in den Worten des Glaubens und der guten Lehre, der du gefolgt bist. Bewahre das dir anvertraute Gut durch den Heiligen Geist, der in uns wohnt.",
+        },
+        source: {
+          en: "2 Timothy 1:13-14",
+          fr: "2 Timothée 1:13-14",
+          es: "2 Timoteo 1:13-14",
+          de: "2. Timotheus 1:13-14",
+        },
+      },
+      p3: {
+        en: "Similarly, Jesus promises in Matthew 18:17-18 that the Church has binding authority:",
+        fr: "De même, Jésus promet dans Matthieu 18:17-18 que l'Église a une autorité contraignante :",
+        es: "Similarmente, Jesús promete en Mateo 18:17-18 que la Iglesia tiene autoridad vinculante:",
+        de: "Ebenso verspricht Jesus in Matthäus 18:17-18, dass die Kirche bindende Autorität hat:",
+      },
+      quote2: {
+        text: {
+          en: "If he refuses to listen even to the church, let him be to you as a Gentile and a tax collector. Truly, I say to you, whatever you bind on earth shall be bound in heaven, and whatever you loose on earth shall be loosed in heaven.",
+          fr: "S'il refuse d'écouter même l'Église, qu'il soit pour toi comme un païen et un publicain. En vérité, je vous dis que tout ce que vous lierez sur la terre sera lié dans le ciel, et tout ce que vous délierez sur la terre sera délié dans le ciel.",
+          es: "Si se niega a escuchar incluso a la iglesia, que sea para ti como un gentil y un publicano. De cierto os digo que todo lo que atéis en la tierra será atado en el cielo, y todo lo que desatéis en la tierra será desatado en el cielo.",
+          de: "Wenn er sich weigert, auch auf die Gemeinde zu hören, so sei er für dich wie ein Heide und ein Zöllner. Wahrlich, ich sage euch: Was immer ihr auf Erden bindet, wird im Himmel gebunden sein, und was immer ihr auf Erden löst, wird im Himmel gelöst sein.",
+        },
+        source: {
+          en: "Matthew 18:17-18",
+          fr: "Matthieu 18:17-18",
+          es: "Mateo 18:17-18",
+          de: "Matthäus 18:17-18",
+        },
+      },
+      p4: {
+        en: "The Fathers of the Church echoed this understanding. St. Augustine wrote:",
+        fr: "Les Pères de l'Église se sont fait l'écho de cette compréhension. Saint Augustin a écrit :",
+        es: "Los Padres de la Iglesia se hicieron eco de esta comprensión. San Agustín escribió:",
+        de: "Die Kirchenväter bekräftigten dieses Verständnis. Der heilige Augustinus schrieb:",
+      },
+      quote3: {
+        text: {
+          en: "The Church is not built on the shifting sands of human judgment, but upon the rock of Peter and the promise of Christ, where the Spirit of truth presides to keep her from error.",
+          fr: "L'Église n'est pas bâtie sur les sables mouvants du jugement humain, mais sur le roc de Pierre et la promesse du Christ, où l'Esprit de vérité préside pour la préserver de l'erreur.",
+          es: "La Iglesia no está construida sobre las arenas movedizas del juicio humano, sino sobre la roca de Pedro y la promesa de Cristo, donde el Espíritu de verdad preside para mantenerla a salvo del error.",
+          de: "Die Kirche ist nicht auf dem schwankenden Sand menschlicher Urteile aufgebaut, sondern auf dem Felsen Petri und der Verheißung Christi, wo der Geist der Wahrheit präsidiert, um sie vor Irrtum zu bewahren.",
+        },
+        source: {
+          en: "St. Augustine, <em>On the Unity of the Church</em>, 401 A.D.",
+          fr: "Saint Augustin, <em>De l'Unité de l'Église</em>, 401 ap. J.-C.",
+          es: "San Agustín, <em>Sobre la Unidad de la Iglesia</em>, 401 d.C.",
+          de: "Hl. Augustinus, <em>Über die Einheit der Kirche</em>, 401 n. Chr.",
+        },
+      },
+    },
+    section3D: {
+      h3: {
+        en: "Recognizing the Need for Authority: Protestant Voices",
+        fr: "Reconnaître le Besoin d'Autorité : Voix Protestantes",
+        es: "Reconocer la Necesidad de Autoridad: Voces Protestantes",
+        de: "Anerkennung der Notwendigkeit von Autorität: Protestantische Stimmen",
+      },
+      p1: {
+        en: "Notably, some Protestant scholars have acknowledged difficulties with sola scriptura and the necessity for authoritative structures:",
+        fr: "Notamment, certains érudits protestants ont reconnu les difficultés de la Sola Scriptura et la nécessité de structures d'autorité :",
+        es: "Notablemente, algunos eruditos protestantes han reconocido dificultades con la sola scriptura y la necesidad de estructuras autoritativas:",
+        de: "Anerkanntermaßen haben einige protestantische Gelehrte die Schwierigkeiten der Sola Scriptura und die Notwendigkeit autoritativer Strukturen anerkannt:",
+      },
+      scholar1: {
+        name: {
+          en: "R.C. Sproul",
+          fr: "R.C. Sproul",
+          es: "R.C. Sproul",
+          de: "R.C. Sproul",
+        },
+        p1: {
+          en: "a well-known Reformed theologian, admitted",
+          fr: "un théologien réformé bien connu, a admis",
+          es: "un conocido teólogo reformado, admitió",
+          de: "ein bekannter reformierter Theologe, räumte ein",
+        },
+        quote: {
+          text: {
+            en: "While the Bible is the ultimate authority, the church plays a crucial role in discerning and interpreting Scripture. We cannot simply ignore the church's historical role in defining the canon.",
+            fr: "Bien que la Bible soit l'autorité ultime, l'Église joue un rôle crucial dans le discernement et l'interprétation de l'Écriture. Nous ne pouvons pas simplement ignorer le rôle historique de l'Église dans la définition du canon.",
+            es: "Aunque la Biblia es la autoridad suprema, la iglesia desempeña un papel crucial en el discernimiento e interpretación de la Escritura. No podemos simplemente ignorar el papel histórico de la iglesia en la definición del canon.",
+            de: "Während die Bibel die ultimative Autorität ist, spielt die Kirche eine entscheidende Rolle bei der Unterscheidung und Interpretation der Schrift. Wir können die historische Rolle der Kirche bei der Definition des Kanons nicht einfach ignorieren.",
+          },
+          source: {
+            en: "R.C. Sproul, <em>Scripture Alone</em>, 1995",
+            fr: "R.C. Sproul, <em>Scripture Alone</em>, 1995",
+            es: "R.C. Sproul, <em>Scripture Alone</em>, 1995",
+            de: "R.C. Sproul, <em>Scripture Alone</em>, 1995",
+          },
+        },
+      },
+      scholar2: {
+        name: {
+          en: "Michael J. Kruger",
+          fr: "Michael J. Kruger",
+          es: "Michael J. Kruger",
+          de: "Michael J. Kruger",
+        },
+        p1: {
+          en: "a Protestant expert on the canon, writes",
+          fr: "un expert protestant sur le canon, écrit",
+          es: "un experto protestante en el canon, escribe",
+          de: "ein protestantischer Experte für den Kanon, schreibt",
+        },
+        quote: {
+          text: {
+            en: "The formation of the canon was not a matter of private judgment but a corporate, ecclesial decision—showing that the church's authority was indispensable.",
+            fr: "La formation du canon n'était pas une question de jugement privé mais une décision collégiale et ecclésiale—montrant que l'autorité de l'Église était indispensable.",
+            es: "La formación del canon no fue una cuestión de juicio privado sino una decisión corporativa y eclesial—mostrando que la autoridad de la iglesia era indispensable.",
+            de: "Die Bildung des Kanons war keine Frage des privaten Urteils, sondern eine korporative, kirchliche Entscheidung—was zeigt, dass die Autorität der Kirche unverzichtbar war.",
+          },
+          source: {
+            en: "Michael J. Kruger, <em>The Question of Canon</em>, 2003",
+            fr: "Michael J. Kruger, <em>The Question of Canon</em>, 2003",
+            es: "Michael J. Kruger, <em>The Question of Canon</em>, 2003",
+            de: "Michael J. Kruger, <em>The Question of Canon</em>, 2003",
+          },
+        },
+      },
+      scholar3: {
+        name: {
+          en: "Darrell L. Bock",
+          fr: "Darrell L. Bock",
+          es: "Darrell L. Bock",
+          de: "Darrell L. Bock",
+        },
+        p1: {
+          en: "concedes",
+          fr: "concède",
+          es: "concede",
+          de: "räumt ein",
+        },
+        quote: {
+          text: {
+            en: "There was a recognized process, guided by the Spirit, that ensured the church did not err in its recognition of Scripture.",
+            fr: "Il y avait un processus reconnu, guidé par l'Esprit, qui assurait que l'Église ne se trompe pas dans sa reconnaissance de l'Écriture.",
+            es: "Hubo un proceso reconocido, guiado por el Espíritu, que aseguró que la iglesia no se equivocara en su reconocimiento de la Escritura.",
+            de: "Es gab einen anerkannten, vom Geist geführten Prozess, der sicherstellte, dass die Kirche sich bei der Anerkennung der Schrift nicht irrte.",
+          },
+          source: {
+            en: "Darrell L. Bock, <em>The Canon of Scripture</em>, 2007",
+            fr: "Darrell L. Bock, <em>The Canon of Scripture</em>, 2007",
+            es: "Darrell L. Bock, <em>The Canon of Scripture</em>, 2007",
+            de: "Darrell L. Bock, <em>The Canon of Scripture</em>, 2007",
+          },
+        },
+      },
+      p2: {
+        en: "These acknowledgments highlight that even Protestant scholarship sees the necessity of a reliable, Spirit-led authority in establishing the canon.",
+        fr: "Ces reconnaissances soulignent que même l'érudition protestante voit la nécessité d'une autorité fiable et guidée par l'Esprit pour établir le canon.",
+        es: "Estos reconocimientos resaltan que incluso la erudición protestante ve la necesidad de una autoridad fiable y guiada por el Espíritu para establecer el canon.",
+        de: "Diese Anerkennungen unterstreichen, dass selbst die protestantische Wissenschaft die Notwendigkeit einer zuverlässigen, vom Geist geführten Autorität bei der Festlegung des Kanons sieht.",
+      },
+    },
+    section3E: {
+      h3: {
+        en: "Philosophical Considerations on Authority and Infallibility",
+        fr: "Considérations Philosophiques sur l'Autorité et l'Infaillibilité",
+        es: "Consideraciones Filosóficas sobre la Autoridad y la Infalibilidad",
+        de: "Philosophische Überlegungen zu Autorität und Unfehlbarkeit",
+      },
+      p1: {
+        en: 'From a philosophical standpoint, consider the epistemological challenge of <strong class="text-white">foundationalism</strong>—the view that knowledge rests on certain basic, self-evident truths or reliable authorities. If the Church\'s authority to define the canon is not infallible, the entire foundation of Scripture becomes suspect.',
+        fr: "D'un point de vue philosophique, considérez le défi épistémologique du <strong class=\"text-white\">fondationnalisme</strong>—la vue selon laquelle la connaissance repose sur certaines vérités de base, évidentes en soi ou sur des autorités fiables. Si l'autorité de l'Église pour définir le canon n'est pas infaillible, le fondement même de l'Écriture devient suspect.",
+        es: 'Desde un punto de vista filosófico, considere el desafío epistemológico del <strong class="text-white">fundacionalismo</strong>—la visión de que el conocimiento se basa en ciertas verdades básicas, autoevidentes o autoridades fiables. Si la autoridad de la Iglesia para definir el canon no es infalible, la base misma de la Escritura se vuelve sospechosa.',
+        de: 'Aus philosophischer Sicht betrachten Sie die erkenntnistheoretische Herausforderung des <strong class="text-white">Fundationalismus</strong>—die Ansicht, dass Wissen auf bestimmten grundlegenden, selbstverständlichen Wahrheiten oder zuverlässigen Autoritäten beruht. Wenn die Autorität der Kirche zur Definition des Kanons nicht unfehlbar ist, wird das gesamte Fundament der Schrift verdächtig.',
+      },
+      quote: {
+        text: {
+          en: '"An infallible Scripture requires an infallible interpreter. Without a stable, authoritative custodian, the Bible becomes a source of endless dispute and confusion."',
+          fr: "« Une Écriture infaillible nécessite un interprète infaillible. Sans un gardien stable et faisant autorité, la Bible devient une source de disputes et de confusion sans fin. »",
+          es: '"Una Escritura infalible requiere un intérprete infalible. Sin un custodio estable y autorizado, la Biblia se convierte en una fuente de disputa y confusión interminables."',
+          de: '„Eine unfehlbare Schrift erfordert einen unfehlbaren Interpreten. Ohne einen stabilen, autoritativen Hüter wird die Bibel zu einer Quelle endloser Streitigkeiten und Verwirrung."',
+        },
+        source: {
+          en: "Peter Kreeft, <em>Catholic Christianity</em>, 1987",
+          fr: "Peter Kreeft, <em>Catholic Christianity</em>, 1987",
+          es: "Peter Kreeft, <em>Catholic Christianity</em>, 1987",
+          de: "Peter Kreeft, <em>Catholic Christianity</em>, 1987",
+        },
+      },
+      p2: {
+        en: "This leads to a regress problem: if the canon is identified by fallible historical investigation or individual judgment alone, who then determines the correctness of that investigation or judgment? Without an infallible arbiter, the process is unstable.",
+        fr: "Cela mène à un problème de régression : si le canon est identifié uniquement par une investigation historique faillible ou un jugement individuel, qui détermine alors l'exactitude de cette investigation ou de ce jugement ? Sans arbitre infaillible, le processus est instable.",
+        es: "Esto lleva a un problema de regresión: si el canon es identificado únicamente por una investigación histórica falible o un juicio individual, ¿quién determina entonces la exactitud de esa investigación o juicio? Sin un árbitro infalible, el proceso es inestable.",
+        de: "Dies führt zu einem Regressproblem: Wenn der Kanon allein durch fehlbare historische Untersuchung oder individuelles Urteil identifiziert wird, wer bestimmt dann die Richtigkeit dieser Untersuchung oder dieses Urteils? Ohne einen unfehlbaren Schiedsrichter ist der Prozess instabil.",
+      },
+    },
+    section3F: {
+      h3: {
+        en: "Summary: Why Infallibility Is Necessary to Recognize Infallible Truth",
+        fr: "Résumé : Pourquoi l'Infaillibilité est Nécessaire pour Reconnaître la Vérité Infaillible",
+        es: "Resumen: Por Qué la Infalibilidad es Necesaria para Reconocer la Verdad Infalible",
+        de: "Zusammenfassung: Warum Unfehlbarkeit zur Erkennung Unfehlbarer Wahrheit Notwendig Ist",
+      },
+      li1: {
+        en: "Recognizing infallible truth as an individual is possible despite personal fallibility.",
+        fr: "Reconnaître la vérité infaillible en tant qu'individu est possible malgré la faillibilité personnelle.",
+        es: "Reconocer la verdad infalible como individuo es posible a pesar de la falibilidad personal.",
+        de: "Unfehlbare Wahrheit als Individuum zu erkennen ist trotz persönlicher Fehlbarkeit möglich.",
+      },
+      li2: {
+        en: "Defining and preserving an infallible corpus of truth (the canon) for the entire Church requires a mechanism immune from error.",
+        fr: "Définir et préserver un corpus de vérité infaillible (le canon) pour toute l'Église nécessite un mécanisme immunisé contre l'erreur.",
+        es: "Definir y preservar un corpus de verdad infalible (el canon) para toda la Iglesia requiere un mecanismo inmune al error.",
+        de: "Die Definition und Bewahrung eines unfehlbaren Wahrheitskorpus (des Kanons) für die gesamte Kirche erfordert einen Mechanismus, der gegen Irrtümer gefeit ist.",
+      },
+      li3: {
+        en: "A fallible Church can only produce probable, not certain, recognition of the canon, undermining the authority of Scripture.",
+        fr: "Une Église faillible ne peut produire qu'une reconnaissance probable, non certaine, du canon, minant ainsi l'autorité de l'Écriture.",
+        es: "Una Iglesia falible solo puede producir un reconocimiento probable, no cierto, del canon, socavando la autoridad de la Escritura.",
+        de: "Eine fehlbare Kirche kann nur eine wahrscheinliche, nicht aber eine sichere Anerkennung des Kanons hervorbringen, was die Autorität der Schrift untergräbt.",
+      },
+      li4: {
+        en: "Catholic doctrine affirms that God instituted an infallible Church, guided by the Holy Spirit, to define and protect the biblical canon.",
+        fr: "La doctrine catholique affirme que Dieu a institué une Église infaillible, guidée par le Saint-Esprit, pour définir et protéger le canon biblique.",
+        es: "La doctrina católica afirma que Dios instituyó una Iglesia infalible, guiada por el Espíritu Santo, para definir y proteger el canon bíblico.",
+        de: "Die katholische Lehre bekräftigt, dass Gott eine unfehlbare Kirche eingesetzt hat, die vom Heiligen Geist geleitet wird, um den biblischen Kanon zu definieren und zu schützen.",
+      },
+      li5: {
+        en: "This divine guarantee ensures that the Bible we hold is truly the inspired, inerrant Word of God, providing a secure foundation for faith.",
+        fr: "Cette garantie divine assure que la Bible que nous détenons est véritablement la Parole de Dieu inspirée et inerrante, offrant un fondement sûr pour la foi.",
+        es: "Esta garantía divina asegura que la Biblia que tenemos es verdaderamente la Palabra de Dios inspirada e inerrante, proporcionando un fundamento seguro para la fe.",
+        de: "Diese göttliche Garantie stellt sicher, dass die Bibel, die wir halten, wahrhaftig das inspirierte, irrtumslose Wort Gottes ist und eine sichere Grundlage für den Glauben bietet.",
       },
     },
 
@@ -6109,9 +6428,9 @@ export const translations = {
         books: {
           b1: {
             en: "Second Peter",
-            fr: "Deuxième Pierre",
-            es: "Segunda de Pedro",
-            de: "Zweiter Petrusbrief",
+            fr: "Deuxième épître de saint Pierre apôtre",
+            es: "Segunda carta del apóstol san Pedro",
+            de: "Zweiter Brief des heiligen Apostels Petrus",
           },
           b2: {
             en: "Hebrews",

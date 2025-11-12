@@ -367,14 +367,7 @@ export default function WhyNotSolaScriptura() {
                   />
                 </li>
 
-                <li className="flex items-start gap-3">
-                  <span className="text-red-400 mt-1">•</span>
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: t(trans.arg8.stats.s4, language),
-                    }}
-                  />
-                </li>
+                
               </ul>
 
               <p className="text-gray-400 mt-4 italic text-sm md:text-base text-center">
