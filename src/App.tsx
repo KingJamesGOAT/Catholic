@@ -11,6 +11,7 @@ import {
 } from "./lib/i18n/LanguageContext";
 import { translations, t } from "./lib/i18n/translations";
 import LanguageSelector from "./components/LanguageSelector";
+import { cn } from "./components/ui/utils"; // ADDED cn import
 
 // Topic Components
 import ExistenceOfGod from "./components/Topics/ExistenceOfGod";
@@ -36,9 +37,7 @@ export interface Topic {
   transition?: string;
 }
 
-// --- THIS IS THE FIX ---
-// The 'topics' array is now at the top level and EXPORTED,
-// so 'Navigation.tsx' can import it.
+// The 'topics' array is exported for use in Navigation.tsx
 export const topics: Topic[] = [
   {
     id: "existence-of-god",
@@ -143,7 +142,6 @@ export const topics: Topic[] = [
     component: NoFilioque,
   },
 ];
-// --- END OF FIX ---
 
 function AppContent() {
   const [currentTopicIndex, setCurrentTopicIndex] = useState(0);
@@ -155,7 +153,7 @@ function AppContent() {
     Set<number>
   >(new Set());
   const [showEarlyChurch, setShowEarlyChurch] = useState(false);
-  const [showScience, setShowScience] = useState(false); // State for new page
+  const [showScience, setShowScience] = useState(false);
   const { language } = useLanguage();
   const trans = translations;
 
@@ -164,8 +162,8 @@ function AppContent() {
   const [isProgressHovering, setIsProgressHovering] =
     useState(false);
 
-  const isProgressVisible =
-    showOnLoad || isNavHovering || isProgressHovering;
+  // Progress tracker visibility is determined by the main journey state
+  const isProgressVisible = !(showEarlyChurch || showScience) && (showOnLoad || isNavHovering || isProgressHovering);
 
   useEffect(() => {
     const saved = localStorage.getItem("journey-progress");
@@ -177,8 +175,11 @@ function AppContent() {
   }, []);
 
   useEffect(() => {
-    // Check if on a special page
-    if (showTransition || showEarlyChurch || showScience) return;
+    // Only show the welcome overlay when returning to the main journey
+    if (showEarlyChurch || showScience) {
+      setShowOnLoad(false);
+      return;
+    }
 
     setShowOnLoad(true);
 
@@ -187,7 +188,7 @@ function AppContent() {
     }, 3000);
 
     return () => clearTimeout(timer);
-  }, [currentTopicIndex, showTransition, showEarlyChurch, showScience]); // Added dependencies
+  }, [currentTopicIndex, showTransition, showEarlyChurch, showScience]);
 
   useEffect(() => {
     localStorage.setItem(
@@ -200,11 +201,11 @@ function AppContent() {
   }, [currentTopicIndex, completedTopics]);
 
   const goToTopic = (index: number) => {
-    if (index === currentTopicIndex) return;
-
-    // Hide special pages when navigating
+    // Navigating back to journey from special page
     setShowEarlyChurch(false);
     setShowScience(false);
+    
+    if (index === currentTopicIndex) return;
 
     setDirection(
       index > currentTopicIndex ? "forward" : "backward",
@@ -263,7 +264,7 @@ function AppContent() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // Click handler to return to main journey
+  // Click handler to return to main journey (via logo or 'All Topics')
   const handleBackToJourney = () => {
     setShowEarlyChurch(false);
     setShowScience(false);
@@ -272,60 +273,34 @@ function AppContent() {
 
   return (
     <div className="bg-black text-gray-100 min-h-screen">
-      {/* Show special page OR the main journey */}
+      
+      {/* UNIFIED NAVIGATION BAR - ALWAYS RENDERED */}
+      <Navigation
+        currentTopicIndex={currentTopicIndex}
+        onNavigate={goToTopic}
+        completedTopics={completedTopics}
+        onEarlyChurchClick={handleEarlyChurchClick}
+        onScienceClick={handleScienceClick}
+        onHoverStart={() => setIsNavHovering(true)}
+        onHoverEnd={() => setIsNavHovering(false)}
+        // NEW PROPS to tell Navigation the current view state
+        isSpecialPage={showEarlyChurch || showScience}
+        showEarlyChurch={showEarlyChurch}
+        showScience={showScience}
+        onLogoClick={handleBackToJourney} // Pass the default logo behavior
+      />
+      
+      {/* Content Area */}
       {showEarlyChurch || showScience ? (
+        // Special Page View
         <>
-          {/* Simplified nav for special pages */}
-          <motion.nav
-            initial={{ y: -100 }}
-            animate={{ y: 0 }}
-            className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-gray-800"
-          >
-            <div className="container mx-auto px-4">
-              <div className="flex items-center justify-between h-20">
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className="cursor-pointer"
-                  onClick={handleBackToJourney}
-                >
-                  <h1 className="text-white tracking-wide">
-                    {t(trans.nav.title, language)}
-                  </h1>
-                  <p className="text-xs text-gray-500">
-                    {t(trans.nav.subtitle, language)}
-                  </p>
-                </motion.div>
-
-                <div className="flex items-center gap-4">
-                  <button
-                    onClick={handleBackToJourney}
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
-                  >
-                    ← {t(trans.nav.backToJourney, language)}
-                  </button>
-                  <LanguageSelector />
-                </div>
-              </div>
-            </div>
-          </motion.nav>
-          
-          {/* Render the correct special page */}
           {showEarlyChurch && <EarlyChurch />}
           {showScience && <ScienceAndMiracles />}
         </>
       ) : (
         // Main Journey View
         <>
-          <Navigation
-            currentTopicIndex={currentTopicIndex}
-            onNavigate={goToTopic}
-            completedTopics={completedTopics}
-            onEarlyChurchClick={handleEarlyChurchClick}
-            onScienceClick={handleScienceClick} // Pass the new handler
-            onHoverStart={() => setIsNavHovering(true)}
-            onHoverEnd={() => setIsNavHovering(false)}
-          />
-
+          {/* Progress Tracker remains conditionally visible below the main navigation */}
           <ProgressTracker
             currentIndex={currentTopicIndex}
             total={topics.length}

@@ -8,12 +8,13 @@ import {
   BookOpen,
   Sparkles,
   Heart,
-  CheckCircle, // Add this
+  CheckCircle,
+  XCircle, // ADDED XCircle
 } from "lucide-react";
 import { useLanguage } from "../lib/i18n/LanguageContext";
 import { t } from "../lib/i18n/translations";
 import { scienceAndMiraclesTranslations } from "../lib/i18n/ScienceAndMiraclesTranslations";
-import TableOfContents from "./Journey/TableOfContents"; // 1. IMPORTED
+import TableOfContents from "./Journey/TableOfContents";
 
 type Topic = "shroud" | "marian" | "eucharistic";
 
@@ -86,7 +87,6 @@ export default function ScienceAndMiracles() {
   const { language } = useLanguage();
   const trans = scienceAndMiraclesTranslations;
 
-  // 2. MODIFIED THIS FUNCTION per your plan
   const renderContent = () => {
     switch (selectedTopic) {
       case "shroud":
@@ -117,11 +117,9 @@ export default function ScienceAndMiracles() {
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-7xl relative">
-      {/* 3. REMOVED TableOfContents from here */}
-
       {/* Header (No sidebar) */}
       <motion.header
-        className="text-center max-w-4xl mx-auto mb-12 pt-24" // Added pt-24 here
+        className="text-center max-w-4xl mx-auto mb-12 pt-24"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -132,7 +130,8 @@ export default function ScienceAndMiracles() {
         <p className="text-gray-400 text-lg md:text-xl mb-8">
           {t(trans.subtitle, language)}
         </p>
-        <div className="border-l-4 border-blue-600 pl-6 py-2 bg-gray-900/50 rounded-r-lg max-w-2xl mx-auto">
+
+        <div className="border-l-4 border-blue-600 px-6 py-4 bg-gray-900/50 rounded-lg max-w-2xl mx-auto text-center">
           <blockquote className="italic text-gray-300">
             "{t(trans.quote.text, language)}"
           </blockquote>
@@ -142,41 +141,47 @@ export default function ScienceAndMiracles() {
         </div>
       </motion.header>
 
-      {/* 4. REMOVED <main> wrapper from here */}
-      {/* 3-Block Selector */}
+      {/* 3-Block Selector (Centered) */}
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-4"
+        // Added flex and justify-center for centering the inner block
+        className="flex justify-center max-w-5xl mx-auto mb-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <SelectorButton
-          title={t(trans.selector.title1, language)}
-          icon={
-            <BookOpen className="w-6 h-6 text-yellow-300" />
-          }
-          isSelected={selectedTopic === "shroud"}
-          onClick={() => setSelectedTopic("shroud")}
-          colorClass="hover:border-yellow-300/50"
-          selectedClass="border-yellow-300/80 bg-yellow-900/20"
-        />
-        <SelectorButton
-          title={t(trans.selector.title2, language)}
-          icon={<Sparkles className="w-6 h-6 text-blue-300" />}
-          isSelected={selectedTopic === "marian"}
-          onClick={() => setSelectedTopic("marian")}
-          colorClass="hover:border-blue-300/50"
-          selectedClass="border-blue-300/80 bg-blue-900/20"
-        />
-        <SelectorButton
-          title={t(trans.selector.title3, language)}
-          icon={<Heart className="w-6 h-6 text-red-300" />}
-          isSelected={selectedTopic === "eucharistic"}
-          onClick={() => setSelectedTopic("eucharistic")}
-          colorClass="hover:border-red-300/50"
-          selectedClass="border-red-300/80 bg-red-900/20"
-        />
+        {/* Inner div restricts width to content and applies the grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-fit">
+          <SelectorButton
+            title={t(trans.selector.title1, language)}
+            icon={
+              <BookOpen className="w-6 h-6 text-yellow-300" />
+            }
+            isSelected={selectedTopic === "shroud"}
+            onClick={() => setSelectedTopic("shroud")}
+            colorClass="hover:border-yellow-300/50"
+            selectedClass="border-yellow-300/80 bg-yellow-900/20"
+          />
+          <SelectorButton
+            title={t(trans.selector.title2, language)}
+            icon={
+              <Sparkles className="w-6 h-6 text-blue-300" />
+            }
+            isSelected={selectedTopic === "marian"}
+            onClick={() => setSelectedTopic("marian")}
+            colorClass="hover:border-blue-300/50"
+            selectedClass="border-blue-300/80 bg-blue-900/20"
+          />
+          <SelectorButton
+            title={t(trans.selector.title3, language)}
+            icon={<Heart className="w-6 h-6 text-red-300" />}
+            isSelected={selectedTopic === "eucharistic"}
+            onClick={() => setSelectedTopic("eucharistic")}
+            colorClass="hover:border-red-300/50"
+            selectedClass="border-red-300/80 bg-red-900/20"
+          />
+        </div>
       </motion.div>
+
       <p className="text-center text-gray-500 text-sm mb-12">
         {t(trans.selector.prompt, language)}
       </p>
@@ -227,7 +232,6 @@ const SelectorButton = ({
 );
 
 // --- Content Components ---
-// 4. THESE ARE UNCHANGED. The <motion.section> root is correct.
 const ShroudContent = () => {
   const { language } = useLanguage();
   const trans = scienceAndMiraclesTranslations.shroud;
@@ -531,6 +535,22 @@ const ShroudContent = () => {
 const MarianContent = () => {
   const { language } = useLanguage();
   const trans = scienceAndMiraclesTranslations.marian;
+
+  const keySciList = [
+    trans.fatima.keySci.li1,
+    trans.fatima.keySci.li2,
+    trans.fatima.keySci.li3,
+    trans.fatima.keySci.li4,
+    trans.fatima.keySci.li5,
+  ];
+
+  const invalidList = [
+    trans.fatima.invalid.li1,
+    trans.fatima.invalid.li2,
+    trans.fatima.invalid.li3,
+    trans.fatima.invalid.li4,
+  ];
+
   return (
     <motion.section
       key="marian"
@@ -605,97 +625,80 @@ const MarianContent = () => {
         title={t(trans.fatima.pdf1_name, language)}
       />
 
+      {/* RENDER KEY SCIENTIFIC OBSERVATIONS - NEW STYLED VERSION */}
       <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-6">
-        <h4 className="text-white mb-3">
+        <h4 className="text-white mb-4">
           {t(trans.fatima.keySci.h4, language)}
         </h4>
-        <ul className="list-none space-y-2 pl-4">
-          <li className="flex items-start gap-3">
-            <span className="text-blue-400 mt-1">•</span>
-            <span
-              dangerouslySetInnerHTML={{
-                __html: t(trans.fatima.keySci.li1, language),
-              }}
-            />
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-blue-400 mt-1">•</span>
-            <span
-              dangerouslySetInnerHTML={{
-                __html: t(trans.fatima.keySci.li2, language),
-              }}
-            />
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-blue-400 mt-1">•</span>
-            <span
-              dangerouslySetInnerHTML={{
-                __html: t(trans.fatima.keySci.li3, language),
-              }}
-            />
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-blue-400 mt-1">•</span>
-            <span
-              dangerouslySetInnerHTML={{
-                __html: t(trans.fatima.keySci.li4, language),
-              }}
-            />
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-blue-400 mt-1">•</span>
-            <span
-              dangerouslySetInnerHTML={{
-                __html: t(trans.fatima.keySci.li5, language),
-              }}
-            />
-          </li>
-        </ul>
+        <div className="space-y-4">
+          {keySciList.map((item, index) => {
+            // Logic to separate the leading number (1., 2., 3., etc.) from the content
+            const rawHtml = t(item, language);
+            const match = rawHtml.match(/^(\d+\.\s)(.*)/s);
+
+            const number = match ? match[1] : "";
+            const content = match ? match[2] : rawHtml;
+
+            return (
+              <div
+                key={index}
+                // Apply a visually distinct card-like style for each observation
+                className="flex items-start gap-3 p-4 bg-gray-900/50 rounded-lg border border-gray-700 hover:border-blue-700 transition-all duration-300"
+              >
+                <span className="text-blue-400 font-semibold flex-shrink-0 mt-1">
+                  {number}
+                </span>
+                <span
+                  className="text-gray-300 leading-relaxed"
+                  // Use dangerouslySetInnerHTML for the remaining complex content
+                  dangerouslySetInnerHTML={{
+                    __html: content,
+                  }}
+                />
+              </div>
+            );
+          })}
+        </div>
       </div>
 
-      <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-6">
-        <h4 className="text-white mb-3">
+      {/* RENDER INVALIDATED HYPOTHESES - NEW STYLED VERSION */}
+      <div className="bg-red-900/20 border border-red-800 rounded-lg p-6 mt-6">
+        <h4 className="text-white mb-4">
           {t(trans.fatima.invalid.h4, language)}
         </h4>
-        <ul className="list-none space-y-2 pl-4">
-          <li className="flex items-start gap-3">
-            <span className="text-blue-400 mt-1">•</span>
-            <span
-              dangerouslySetInnerHTML={{
-                __html: t(trans.fatima.invalid.li1, language),
-              }}
-            />
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-blue-400 mt-1">•</span>
-            <span
-              dangerouslySetInnerHTML={{
-                __html: t(trans.fatima.invalid.li2, language),
-              }}
-            />
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-blue-400 mt-1">•</span>
-            <span
-              dangerouslySetInnerHTML={{
-                __html: t(trans.fatima.invalid.li3, language),
-              }}
-            />
-          </li>
-          <li className="flex items-start gap-3">
-            <span className="text-blue-400 mt-1">•</span>
-            <span
-              dangerouslySetInnerHTML={{
-                __html: t(trans.fatima.invalid.li4, language),
-              }}
-            />
-          </li>
-        </ul>
+        <div className="space-y-4">
+          {invalidList.map((item, index) => (
+            <div
+              key={index}
+              // Style block to clearly mark refuted hypothesis
+              className="flex items-start gap-3 p-3 bg-red-900/30 rounded-lg border border-red-700"
+            >
+              <XCircle
+                className="text-red-400 mt-1 flex-shrink-0"
+                size={20}
+              />
+              <span
+                className="text-gray-300"
+                dangerouslySetInnerHTML={{
+                  __html: t(item, language),
+                }}
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
-      <h4>{t(trans.fatima.conclusion.h4, language)}</h4>
-      <p>{t(trans.fatima.conclusion.p1, language)}</p>
+      {/* RENDER CONCLUSION IN STYLED BLOCK */}
+      <div className="bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-blue-800 rounded-lg p-6">
+        <h4 className="text-white mb-2">
+          {t(trans.fatima.conclusion.h4, language)}
+        </h4>
+        <p className="text-gray-300">
+          {t(trans.fatima.conclusion.p1, language)}
+        </p>
+      </div>
 
+      {/* RENDER ARGUMENT PDF */}
       <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-6">
         <h4 className="text-white mb-3">
           {t(trans.fatima.argument.h4, language)}
@@ -883,7 +886,11 @@ const EucharisticContent = () => {
         />
       </div>
       <h3>{t(trans.intro.h3, language)}</h3>
-      <p>{t(trans.intro.p1, language)}</p>
+      <p
+        dangerouslySetInnerHTML={{
+          __html: t(trans.intro.p1, language),
+        }}
+      />
       <p>{t(trans.intro.p2, language)}</p>
       <ul className="list-none space-y-2 pl-6">
         <li className="flex items-start gap-3">
@@ -1369,10 +1376,6 @@ const EucharisticContent = () => {
         </p>
       </div>
 
-
-      
-      
-
       <Separator className="my-12 bg-gray-800" />
 
       <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-6">
@@ -1469,10 +1472,7 @@ const EucharisticContent = () => {
                   size={24}
                 />
                 <div>
-                  <h5 className="text-white font-semibold mb-2">
-                    V. Microscopic Fusion of Tissue and Bread
-                    Matrix
-                  </h5>
+                  {/* The title is now rendered via dangerouslySetInnerHTML from trans.critique.p_fusion, which starts with a bold tag */}
                   <p
                     className="text-gray-300"
                     dangerouslySetInnerHTML={{
@@ -1530,127 +1530,51 @@ const EucharisticContent = () => {
         </div>
       </div>
 
-
-
-      
-
       <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-6">
         <h4 className="text-white mb-3">
           {t(trans.critique.faq.h4, language)}
         </h4>
         <ul className="list-none space-y-4">
-          <li>
-            <p className="text-gray-400 italic">
-              {t(trans.critique.faq.q1, language)}
-            </p>
-            <p
-              className="text-gray-300 pl-4 border-l-2 border-blue-700 ml-2 mt-2"
-              dangerouslySetInnerHTML={{
-                __html: t(trans.critique.faq.a1, language),
-              }}
-            />
-          </li>
-          <li>
-            <p className="text-gray-400 italic">
-              {t(trans.critique.faq.q2, language)}
-            </p>
-            <p
-              className="text-gray-300 pl-4 border-l-2 border-blue-700 ml-2 mt-2"
-              dangerouslySetInnerHTML={{
-                __html: t(trans.critique.faq.a2, language),
-              }}
-            />
-          </li>
-          <li>
-            <p className="text-gray-400 italic">
-              {t(trans.critique.faq.q3, language)}
-            </p>
-            <p
-              className="text-gray-300 pl-4 border-l-2 border-blue-700 ml-2 mt-2"
-              dangerouslySetInnerHTML={{
-                __html: t(trans.critique.faq.a3, language),
-              }}
-            />
-          </li>
-          <li>
-            <p className="text-gray-400 italic">
-              {t(trans.critique.faq.q4, language)}
-            </p>
-            <p
-              className="text-gray-300 pl-4 border-l-2 border-blue-700 ml-2 mt-2"
-              dangerouslySetInnerHTML={{
-                __html: t(trans.critique.faq.a4, language),
-              }}
-            />
-          </li>
-          <li>
-            <p className="text-gray-400 italic">
-              {t(trans.critique.faq.q5, language)}
-            </p>
-            <p
-              className="text-gray-300 pl-4 border-l-2 border-blue-700 ml-2 mt-2"
-              dangerouslySetInnerHTML={{
-                __html: t(trans.critique.faq.a5, language),
-              }}
-            />
-          </li>
-          <li>
-            <p className="text-gray-400 italic">
-              {t(trans.critique.faq.q6, language)}
-            </p>
-            <p
-              className="text-gray-300 pl-4 border-l-2 border-blue-700 ml-2 mt-2"
-              dangerouslySetInnerHTML={{
-                __html: t(trans.critique.faq.a6, language),
-              }}
-            />
-          </li>
-          <li>
-            <p className="text-gray-400 italic">
-              {t(trans.critique.faq.q7, language)}
-            </p>
-            <p
-              className="text-gray-300 pl-4 border-l-2 border-blue-700 ml-2 mt-2"
-              dangerouslySetInnerHTML={{
-                __html: t(trans.critique.faq.a7, language),
-              }}
-            />
-          </li>
-          <li>
-            <p className="text-gray-400 italic">
-              {t(trans.critique.faq.q8, language)}
-            </p>
-            <p
-              className="text-gray-300 pl-4 border-l-2 border-blue-700 ml-2 mt-2"
-              dangerouslySetInnerHTML={{
-                __html: t(trans.critique.faq.a8, language),
-              }}
-            />
-          </li>
-          <li>
-            <p className="text-gray-400 italic">
-              {t(trans.critique.faq.q9, language)}
-            </p>
-            <p
-              className="text-gray-300 pl-4 border-l-2 border-blue-700 ml-2 mt-2"
-              dangerouslySetInnerHTML={{
-                __html: t(trans.critique.faq.a9, language),
-              }}
-            />
-          </li>
-          <li>
-            <p className="text-gray-400 italic">
-              {t(trans.critique.faq.q10, language)}
-            </p>
-            <p
-              className="text-gray-300 pl-4 border-l-2 border-blue-700 ml-2 mt-2"
-              dangerouslySetInnerHTML={{
-                __html: t(trans.critique.faq.a10, language),
-              }}
-            />
-          </li>
+          {/* FAQ list items rendering logic must remain here */}
+          {trans.critique.faq.q1 &&
+            Array.from({ length: 10 }).map((_, index) => {
+              const qKey =
+                `q${index + 1}` as keyof typeof trans.critique.faq;
+              const aKey =
+                `a${index + 1}` as keyof typeof trans.critique.faq;
+
+              // Ensure both Q and A keys exist before trying to render
+              if (
+                !trans.critique.faq[qKey] ||
+                !trans.critique.faq[aKey]
+              )
+                return null;
+
+              return (
+                <li key={index}>
+                  <p className="text-gray-400 italic">
+                    {t(trans.critique.faq[qKey], language)}
+                  </p>
+                  <p
+                    className="text-gray-300 pl-4 border-l-2 border-blue-700 ml-2 mt-2"
+                    dangerouslySetInnerHTML={{
+                      __html: t(
+                        trans.critique.faq[aKey],
+                        language,
+                      ),
+                    }}
+                  />
+                </li>
+              );
+            })}
         </ul>
       </div>
+
+      {/* INSERTED: Plain Text Title for Semantics PDF */}
+      <p className="text-gray-300 font-semibold mb-3 mt-8">
+        {t(trans.critique.pdf_semantics_text, language)}
+      </p>
+
       <PdfEmbed
         src={t(trans.critique.pdf_semantics_url, language)}
         title={t(trans.critique.pdf_semantics_name, language)}

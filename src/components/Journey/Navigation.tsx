@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, Check, Circle, BookOpen, Sparkles } from 'lucide-react';
-// --- THIS IMPORT WILL NOW WORK ---
+import { Menu, X, Check, Circle, BookOpen, Sparkles, AlertCircle, XCircle } from 'lucide-react';
 import { topics } from '../../App';
-// ---
 import LanguageSelector from '../LanguageSelector';
 import { useLanguage } from '../../lib/i18n/LanguageContext';
 import { translations, t } from '../../lib/i18n/translations';
+import { cn } from '../ui/utils';
 
 interface NavigationProps {
   currentTopicIndex: number;
@@ -16,6 +15,11 @@ interface NavigationProps {
   onScienceClick?: () => void;
   onHoverStart?: () => void;
   onHoverEnd?: () => void;
+  // NEW PROPS for unified bar
+  isSpecialPage?: boolean;
+  showEarlyChurch?: boolean;
+  showScience?: boolean;
+  onLogoClick: () => void;
 }
 
 export default function Navigation({ 
@@ -25,11 +29,41 @@ export default function Navigation({
   onEarlyChurchClick, 
   onScienceClick,
   onHoverStart, 
-  onHoverEnd    
+  onHoverEnd,
+  isSpecialPage = false,
+  showEarlyChurch = false,
+  showScience = false,
+  onLogoClick
 }: NavigationProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const { language } = useLanguage();
   const trans = translations;
+
+  // Function to navigate back to the main journey and then to the selected topic
+  const navigateToTopic = (index: number) => {
+    onNavigate(index);
+    setMenuOpen(false);
+  };
+  
+  // Function to handle click on the logo/title
+  const handleLogoClick = () => {
+      onLogoClick();
+      // Wait for the transition to complete before setting index 0, 
+      // although setting the index here handles the initial redirect if needed.
+      if (currentTopicIndex !== 0) {
+          onNavigate(0);
+      }
+  };
+
+  // Helper function for special page navigation
+  const handleSpecialPageClick = (action: 'earlyChurch' | 'science') => {
+    setMenuOpen(false);
+    if (action === 'earlyChurch' && onEarlyChurchClick) {
+      onEarlyChurchClick();
+    } else if (action === 'science' && onScienceClick) {
+      onScienceClick();
+    }
+  };
 
   return (
     <>
@@ -46,45 +80,58 @@ export default function Navigation({
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="cursor-pointer"
-              onClick={() => onNavigate(0)}
+              onClick={handleLogoClick}
             >
               <h1 className="text-white tracking-wide">{t(trans.nav.title, language)}</h1>
               <p className="text-xs text-gray-500">{t(trans.nav.subtitle, language)}</p>
             </motion.div>
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-4">
-              {onScienceClick && (
+            {/* --- UNIFIED NAVIGATION BLOCK --- */}
+            <div className="flex items-center gap-4">
+              
+              {/* Special Pages Button Block: Styled, rounded edges, active blue state */}
+              <div className="flex rounded-lg border border-gray-700 bg-gray-900/50 p-1">
+                {/* Science & Miracles Button */}
                 <button
-                  onClick={onScienceClick}
-                  className="text-gray-400 hover:text-white transition-colors text-sm"
+                  onClick={() => handleSpecialPageClick('science')}
+                  className={cn(
+                    "px-3 py-2 rounded-md text-sm transition-colors duration-200 whitespace-nowrap",
+                    showScience
+                      ? "bg-blue-600 text-white hover:bg-blue-700" // Active State
+                      : "text-gray-400 hover:bg-gray-800/50 hover:text-white" // Inactive State
+                  )}
                 >
                   {t(trans.nav.scienceAndMiracles, language)}
                 </button>
-              )}
-              {onEarlyChurchClick && (
+
+                {/* Early Church Button */}
                 <button
-                  onClick={onEarlyChurchClick}
-                  className="text-gray-400 hover:text-white transition-colors text-sm"
+                  onClick={() => handleSpecialPageClick('earlyChurch')}
+                  className={cn(
+                    "px-3 py-2 rounded-md text-sm transition-colors duration-200 whitespace-nowrap",
+                    showEarlyChurch
+                      ? "bg-blue-600 text-white hover:bg-blue-700" // Active State
+                      : "text-gray-400 hover:bg-gray-800/50 hover:text-white" // Inactive State
+                  )}
                 >
                   {t(trans.nav.earlyChurch, language)}
                 </button>
-              )}
+              </div>
+              
+              {/* All Topics / Menu Button */}
               <button
                 onClick={() => setMenuOpen(true)}
-                className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 text-sm"
+                className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 text-sm hidden md:flex"
               >
                 <Menu size={20} />
                 <span>{t(trans.nav.allTopics, language)}</span>
               </button>
+              
               <LanguageSelector />
-            </div>
 
-            {/* Mobile Navigation */}
-            <div className="flex md:hidden items-center gap-3">
-              <LanguageSelector />
+              {/* Mobile Menu Button for All Topics */}
               <button
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-white transition-colors md:hidden"
                 onClick={() => setMenuOpen(!menuOpen)}
               >
                 {menuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -124,14 +171,11 @@ export default function Navigation({
                 </button>
               </div>
 
+              {/* Special Pages Quick Links */}
               <div className="mb-8 grid md:grid-cols-2 gap-4">
-                {/* Early Church Link */}
                 {onEarlyChurchClick && (
                   <button
-                    onClick={() => {
-                      onEarlyChurchClick();
-                      setMenuOpen(false);
-                    }}
+                    onClick={() => handleSpecialPageClick('earlyChurch')}
                     className="w-full text-left p-6 rounded-lg border bg-blue-900/20 border-blue-800 hover:bg-blue-900/30 hover:border-blue-700 transition-all duration-300"
                   >
                     <div className="flex items-center gap-4">
@@ -146,13 +190,9 @@ export default function Navigation({
                   </button>
                 )}
 
-                {/* Science & Miracles Link */}
                 {onScienceClick && (
                   <button
-                    onClick={() => {
-                      onScienceClick();
-                      setMenuOpen(false);
-                    }}
+                    onClick={() => handleSpecialPageClick('science')}
                     className="w-full text-left p-6 rounded-lg border bg-purple-900/20 border-purple-800 hover:bg-purple-900/30 hover:border-purple-700 transition-all duration-300"
                   >
                     <div className="flex items-center gap-4">
@@ -169,6 +209,7 @@ export default function Navigation({
               </div>
 
 
+              {/* Main Topic List */}
               <div className="grid md:grid-cols-2 gap-4 max-h-[60vh] overflow-y-auto pr-4">
                 {topics.map((topic, index) => {
                   const isCompleted = completedTopics.has(index);
@@ -177,10 +218,7 @@ export default function Navigation({
                   return (
                     <motion.button
                       key={topic.id}
-                      onClick={() => {
-                        onNavigate(index);
-                        setMenuOpen(false);
-                      }}
+                      onClick={() => navigateToTopic(index)}
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                       className={`text-left p-6 rounded-lg border transition-all duration-300 ${

@@ -292,39 +292,41 @@ export const scienceAndMiraclesTranslations = {
       pdf1_url: {
         en: "https://jumpshare.com/share/Aw19bX3jBmie3XEtUc79",
       }, // Fixed
+
       keySci: {
         h4: { en: "Key Scientific Observations" },
         li1: {
-          en: "<strong>Photographic Evidence:</strong> Six high-resolution photographs... reveal shadows cast in unexpected directions... [and] two distinct light sources... incompatible with a single solar source.",
+          en: "1. Photographic Evidence<br>Six high-resolution photographs taken at the scene were analyzed. These images, captured by engineer Judah Bento Ruah, reveal:<ul><li>Shadows cast in unexpected directions.</li><li>Evidence of two distinct light sources:<br>LSa: A warm, pale light source in the direction of the sun.<br>LSb: A diffuse, overhead light source likely caused by a bright, isolated cloud.</li></ul>For example, shadows under a woman’s hat and on nearby objects confirm two intersecting light vectors, incompatible with a single solar source.",
         },
         li2: {
-          en: "<strong>Rapid Drying of Wet Clothes:</strong> Eyewitnesses noted that soaked clothes dried within minutes... Infrared-like heat was recorded...",
+          en: "2. Rapid Drying of Wet Clothes<br>Eyewitnesses noted that soaked clothes dried within minutes, despite the low October temperatures and high humidity. Infrared-like heat was recorded in photos by comparing dry and wet areas on people’s clothes, showing localized heating consistent with exposure to LSa.",
         },
         li3: {
-          en: "<strong>Geometric Light Source Analysis:</strong> ...the elevation of the observed light source (LSa) was calculated at 28–30° above the horizon, while the actual sun’s position at the time was 42.7°.",
+          en: "3. Geometric Light Source Analysis<br>Using image perspective, vanishing points, and shadow angles, the elevation of the observed light source (LSa) was calculated at 28–30° above the horizon, while the actual sun’s position at the time was 42.7°. This discrepancy suggests that LSa could not have been the real sun.",
         },
         li4: {
-          en: "<strong>Atmospheric and Weather Data:</strong> Official weather records confirm heavy rain... a sudden break in the clouds... Temperatures around 15°C...",
+          en: "4. Atmospheric and Weather Data<br>Official weather records confirm:<ul><li>Heavy rain in the hours leading up to the event.</li><li>A sudden break in the clouds around noon.</li><li>Temperatures around 15°C and light wind.</li></ul>This contradicts skeptical claims of no significant weather changes.",
         },
         li5: {
-          en: "<strong>Distant Observers:</strong> The phenomenon was independently witnessed up to 30–35 km away... in directions inconsistent with the actual sun’s path.",
+          en: "5. Distant Observers<br>The phenomenon was independently witnessed up to 30–35 km away in directions inconsistent with the actual sun’s path. For example:<ul><li>In Leiria, 16 km northwest, a witness saw flashes in the sky toward Fatima—not the noon sun.</li><li>In Minde, 12 km south, the phenomenon was seen in the northern sky—opposite to where the sun was.</li></ul>These observations challenge the hypothesis of retinal illusions or localized hallucinations.",
         },
       },
       invalid: {
         h4: { en: "Invalidated Hypotheses" },
         li1: {
-          en: "<strong>Sundogs (parhelia):</strong> Not viable at sun elevations above 42° and do not produce heat.",
+          en: "Sundogs (parhelia): Not viable at sun elevations above 42° and do not produce heat.",
         },
         li2: {
-          en: "<strong>Dust clouds or atmospheric lenses:</strong> Could not produce the fast, localized heat or observed movement.",
+          en: "Dust clouds or atmospheric lenses: Could not produce the fast, localized heat or observed movement.",
         },
         li3: {
-          en: "<strong>Retinal effects (phosphenes):</strong> No recorded eye damage; the sun-like object could be looked at without discomfort.",
+          en: "Retinal effects (phosphenes): No recorded eye damage; the sun-like object could be looked at without discomfort.",
         },
         li4: {
-          en: "<strong>Mass hallucination:</strong> Inconsistent with distant, independent witnesses.",
+          en: "Mass hallucination: Inconsistent with distant, independent witnesses.",
         },
       },
+
       conclusion: {
         h4: { en: "Conclusion" },
         p1: {
@@ -454,6 +456,7 @@ export const scienceAndMiraclesTranslations = {
       },
     },
   },
+  
   // --- Eucharistic Content ---
   eucharistic: {
     h2: { en: "Eucharistic Miracles" },
@@ -463,17 +466,21 @@ export const scienceAndMiraclesTranslations = {
     link2: {
       en: "https://www.saintbeluga.org/eucharistic-miracles-god-under-the-microscope",
     },
+
+    
     intro: {
       h3: { en: "Contemporary Eucharistic Miracles" },
       p1: {
-        en: "A true Eucharistic miracle occurs at every holy mass... However, this term is sometimes used to refer to extraordinary empirical signs... most notably, bleeding hosts, or the transmutation of a consecrated host into a piece of cardiac muscle tissue.",
+        en: "Fr. Robert Spitzer, S.J., Ph.D January 7, 2021<br><br>A true Eucharistic miracle occurs at every holy mass when the priest utters the words of consecration and the substance of the bread is transformed into the substance of Jesus’ body and the substance of the wine is transformed into the substance of His blood. However, this term is sometimes used to refer to extraordinary empirical signs of Jesus’ presence in the Eucharist, most notably, bleeding hosts, or the transmutation of a consecrated host into a piece of cardiac muscle tissue.",
       },
       p2: {
-        en: "Eucharistic miracles are quite difficult to certify scientifically... Yet, there are three major contemporary eucharistic miracles that have been scientifically examined and found to be without natural or physical explanation (implying supernatural origin):",
+        en: "Eucharistic miracles are quite difficult to certify scientifically, because of problems certifying that the blood came from the host or that the transmuted flesh was originally a consecrated host. Yet, there are three major contemporary eucharistic miracles that have been scientifically examined and found to be without natural or physical explanation (implying supernatural origin):",
       },
       li1: {
         en: "Buenos Aires, Argentina – 1996 – overseen by Archbishop Bergoglio (Section I).",
       },
+
+      
       li2: { en: "Tixtla, Mexico – 2006 (Section II)." },
       li3: { en: "Sokolka, Poland – 2008 (Section III)." },
       p3: {
@@ -720,7 +727,6 @@ export const scienceAndMiraclesTranslations = {
     },
 
     critique: {
-      
       h4: { en: "Scientific Rebuttal to the JFSR Article" }, // KEPT
       // --- ADDED FULL TEXT ---
       abs: {
@@ -854,7 +860,7 @@ export const scienceAndMiraclesTranslations = {
         desc: {
           en: "Dr. Serafini... reviews scientific and forensic reports on... Buenos Aires (1996), Tixtla (2006), and Sokolka (2008)... He analyzes: Histological findings... Cardiac pathology... Immunological evidence... Dr. Serafini emphasizes that these studies were conducted blindly... ensuring objective results.",
         },
-        source: { en: "Source (1)" },
+        
       },
     },
   },
