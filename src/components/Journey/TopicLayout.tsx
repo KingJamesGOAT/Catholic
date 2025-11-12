@@ -1,3 +1,5 @@
+// kingjamesgoat/catholic/Catholic-9fa91d3b7a7dc54d4c122777284ed3a1f92c5303/src/components/Journey/TopicLayout.tsx
+
 import { ReactNode } from 'react';
 import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
@@ -36,7 +38,8 @@ export default function TopicLayout({ children, title, subtitle, quote }: TopicL
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-white mb-4"
+              // MODIFIED: Increased font size and set to extra bold for all topics
+              className="text-3xl md:text-5xl font-extrabold text-white mb-4"
             >
               {title}
             </motion.h1>

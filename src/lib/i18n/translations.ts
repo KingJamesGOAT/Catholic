@@ -1074,6 +1074,74 @@ export const translations = {
       },
     },
 
+    // --- DÉBUT DE LA MODIFICATION ---
+    rankHistorical: {
+        en: "Historical Document #",
+        fr: "Document Historique n°",
+        es: "Documento Histórico n.º",
+        de: "Historisches Dokument Nr.",
+    },
+    rankUnmatched: {
+        en: "The Unmatched Standard",
+        fr: "Le Standard Inégalé",
+        es: "El Estándar Inigualable",
+        de: "Der Unübertroffene Standard",
+    },
+    typeChristian: {
+        en: "The Christian Scriptures",
+        fr: "Les Écritures Chrétiennes",
+        es: "Las Escrituras Cristianas",
+        de: "Die Christlichen Schriften",
+    },
+    typeSecular: {
+        en: "Secular/Classical Text",
+        fr: "Texte Séculier/Classique",
+        es: "Texto Secular/Clásico",
+        de: "Säkularer/Klassischer Text",
+    },
+    labelManuscripts: {
+        en: "Manuscripts",
+        fr: "Manuscrits",
+        es: "Manuscritos",
+        de: "Manuskripte",
+    },
+    labelTimeGap: {
+        en: "Time Gap to Original Event:",
+        fr: "Écart Temporel à l'Événement Original:",
+        es: "Intervalo de Tiempo al Evento Original:",
+        de: "Zeitspanne zum Originalereignis:",
+    },
+    scaleCount: {
+        en: "The Overwhelming Count",
+        fr: "Le Compte Écrasant",
+        es: "El Recuento Abrumador",
+        de: "Die Überwältigende Zahl",
+    },
+    scaleMaxMs: {
+        en: "Scale: {0} max",
+        fr: "Échelle: {0} max",
+        es: "Escala: {0} máx",
+        de: "Skala: {0} max",
+    },
+    scaleTimeClose: {
+        en: "The Closest in Time",
+        fr: "Le Plus Proche dans le Temps",
+        es: "El Más Cercano en el Temps",
+        de: "Der Zeitlich Nächste",
+    },
+    scaleMaxGap: {
+        en: "Max Gap: {0} years",
+        fr: "Écart Max: {0} ans",
+        es: "Intervalo Máx: {0} años",
+        de: "Max. Zeitspanne: {0} Jahre",
+    },
+    scaleVisualNote: {
+        en: "(Visual length of bar indicates relative closeness to original document)",
+        fr: "(La longueur visuelle de la barre indique la proximité relative avec le document original)",
+        es: "(La longitud visual de la barre indique la proximidad relative au document original)",
+        de: "(Die visuelle Länge des Balkens gibt die relative Nähe zum Originaldokument an)",
+    },
+    
     // Section 2: Manuscript Evidence
     manuscriptEvidence: {
       heading: {
@@ -1148,6 +1216,100 @@ export const translations = {
         es: "Ningún otro documento antiguo se acerca en términos de atestación temprana y cantidad de manuscritos. Esto hace del Nuevo Testamento el documento más históricamente confiable de la antigüedad.",
         de: "Kein anderes antikes Dokument kommt in Bezug auf frühe Bezeugung und Manuskriptmenge nahe. Dies macht das Neue Testament zum historisch zuverlässigsten Dokument der Antike.",
       },
+      timeGap750: {
+          en: "750 years",
+          fr: "750 ans",
+          es: "750 años",
+          de: "750 Jahre",
+        },
+    },
+
+    // Author Name Translations
+    authorHomer: {
+        en: "Homer",
+        fr: "Homère",
+        es: "Homero",
+        de: "Homer",
+    },
+    authorDemosthenes: {
+        en: "Demosthenes",
+        fr: "Démosthène",
+        es: "Demóstenes",
+        de: "Demosthenes",
+    },
+    authorHerodotus: {
+        en: "Herodotus",
+        fr: "Hérodote",
+        es: "Heródoto",
+        de: "Herodot",
+    },
+    authorPlato: {
+        en: "Plato",
+        fr: "Platon",
+        es: "Platón",
+        de: "Plato",
+    },
+    authorTacitus: {
+        en: "Tacitus",
+        fr: "Tacite",
+        es: "Tácito",
+        de: "Tacitus",
+    },
+    authorCaesar: {
+        en: "Caesar",
+        fr: "César",
+        es: "César",
+        de: "Cäsar",
+    },
+    authorPliny: {
+        en: "Pliny",
+        fr: "Pline",
+        es: "Plinio",
+        de: "Plinius",
+    },
+
+    // Visualization and Scale Keys
+    rankHistorical: {
+        en: "Historical Document #",
+        fr: "Document Historique n°",
+        es: "Documento Histórico n.º",
+        de: "Historisches Dokument Nr.",
+    },
+    rankUnmatched: {
+        en: "The Unmatched Standard",
+        fr: "Le Standard Inégalé",
+        es: "El Estándar Inigualable",
+        de: "Der Unübertroffene Standard",
+    },
+    scaleCount: {
+        en: "The Overwhelming Count",
+        fr: "Le Compte Écrasant",
+        es: "El Recuento Abrumador",
+        de: "Die Überwältigende Zahl",
+    },
+    scaleMaxMs: {
+        en: "Scale: {0} max",
+        fr: "Échelle: {0} max",
+        es: "Escala: {0} máx",
+        de: "Skala: {0} max",
+    },
+    scaleTimeClose: {
+        en: "The Closest in Time",
+        fr: "Le Plus Proche dans le Temps",
+        es: "El Más Cercano en el Temps",
+        de: "Der Zeitlich Nächste",
+    },
+    scaleMaxGap: {
+        en: "Max Gap: {0} years",
+        fr: "Écart Max: {0} ans",
+        es: "Intervalo Máx: {0} años",
+        de: "Max. Zeitspanne: {0} Jahre",
+    },
+    scaleVisualNote: {
+        en: "(Visual length of bar indicates relative closeness to original document)",
+        fr: "(La longueur visuelle de la barre indique la proximité relative avec le document original)",
+        es: "(La longitud visual de la barre indique la proximité relative au document original)",
+        de: "(Die visuelle Länge des Balkens gibt die relative Nähe zum Originaldokument an)",
     },
 
     // Section 3: Who Was Jesus
@@ -2605,17 +2767,11 @@ export const translations = {
           de: '„Unfehlbarkeit ist die Abwesenheit von Irrtum, nicht bloß der Besitz einer wahren Überzeugung. Während fehlbare Personen wahre Überzeugungen haben können, erfordert die zuverlässige Identifizierung eines vollständigen, irrtumslosen Kanons einen zuverlässigen, autoritativen Prozess."',
         },
         source: {
-          en: "Alvin Plantinga, <em>Warranted Christian Belief</em>, 2000",
-          fr: "Alvin Plantinga, <em>Warranted Christian Belief</em>, 2000",
-          es: "Alvin Plantinga, <em>Warranted Christian Belief</em>, 2000",
-          de: "Alvin Plantinga, <em>Warranted Christian Belief</em>, 2000",
+          en: "Alvin Plantinga, Warranted Christian Belief, 2000",
+          fr: "Alvin Plantinga, Warranted Christian Belief, 2000",
+          es: "Alvin Plantinga, Warranted Christian Belief, 2000",
+          de: "Alvin Plantinga, Warranted Christian Belief, 2000",
         },
-      },
-      p2: {
-        en: 'If the process by which the biblical canon was recognized was itself fallible—subject to error, disagreement, or human weakness—then the end result is only <em>probable</em> certainty about the canon, not absolute certainty. This introduces what philosophers call <strong class="text-white">epistemic uncertainty</strong>.',
-        fr: "Si le processus par lequel le canon biblique a été reconnu était lui-même faillible—sujet à l'erreur, au désaccord ou à la faiblesse humaine—alors le résultat final n'est qu'une <em>probabilité</em> de certitude sur le canon, pas une certitude absolue. Cela introduit ce que les philosophes appellent l' <strong class=\"text-white\">incertitude épistémique</strong>.",
-        es: 'Si el proceso por el cual se reconoció el canon bíblico fuera en sí mismo falible—sujeto a error, desacuerdo o debilidad humana—entonces el resultado final es solo <em>probable</em> certeza sobre el canon, no certeza absoluta. Esto introduce lo que los filósofos llaman <strong class="text-white">incertidumbre epistémica</strong>.',
-        de: 'Wenn der Prozess, durch den der biblische Kanon erkannt wurde, selbst fehlbar wäre—fehlbar, dem Irrtum, der Uneinigkeit oder menschlicher Schwäche unterworfen—dann ist das Endergebnis nur <em>wahrscheinliche</em> Gewissheit über den Kanon, nicht absolute Gewissheit. Dies führt zu dem, was Philosophen die <strong class="text-white">epistemische Unsicherheit</strong> nennen.',
       },
     },
     section3B: {
@@ -2639,10 +2795,10 @@ export const translations = {
           de: '„Religiöse Wahrheiten erfordern einen hohen Beweisstandard; alles, was weniger als annähernde Gewissheit ist, mindert ihre Autorität und Zuverlässigkeit."',
         },
         source: {
-          en: "Richard Swinburne, <em>The Existence of God</em>, 2004",
-          fr: "Richard Swinburne, <em>The Existence of God</em>, 2004",
-          es: "Richard Swinburne, <em>The Existence of God</em>, 2004",
-          de: "Richard Swinburne, <em>The Existence of God</em>, 2004",
+          en: "Richard Swinburne, The Existence of God, 2004",
+          fr: "Richard Swinburne, The Existence of God, 2004",
+          es: "Richard Swinburne, The Existence of God, 2004",
+          de: "Richard Swinburne, The Existence of God, 2004",
         },
       },
       p2: {
@@ -2719,10 +2875,10 @@ export const translations = {
           de: "Die Kirche ist nicht auf dem schwankenden Sand menschlicher Urteile aufgebaut, sondern auf dem Felsen Petri und der Verheißung Christi, wo der Geist der Wahrheit präsidiert, um sie vor Irrtum zu bewahren.",
         },
         source: {
-          en: "St. Augustine, <em>On the Unity of the Church</em>, 401 A.D.",
-          fr: "Saint Augustin, <em>De l'Unité de l'Église</em>, 401 ap. J.-C.",
-          es: "San Agustín, <em>Sobre la Unidad de la Iglesia</em>, 401 d.C.",
-          de: "Hl. Augustinus, <em>Über die Einheit der Kirche</em>, 401 n. Chr.",
+          en: "St. Augustine, On the Unity of the Church, 401 A.D.",
+          fr: "Saint Augustin, De l'Unité de l'Église, 401 ap. J.-C.",
+          es: "San Agustín, Sobre la Unidad de la Iglesia, 401 d.C.",
+          de: "Hl. Augustinus, Über die Einheit der Kirche, 401 n. Chr.",
         },
       },
     },

@@ -1,3 +1,5 @@
+// kingjamesgoat/catholic/Catholic-9fa91d3b7a7dc54d4c122777284ed3a1f92c5303/src/components/Topics/ProofOfResurrection.tsx
+
 import TopicLayout from "../Journey/TopicLayout";
 import { motion } from "motion/react";
 import { Separator } from "../ui/separator";
@@ -11,6 +13,7 @@ import {
 } from "lucide-react";
 import { useLanguage } from "../../lib/i18n/LanguageContext";
 import { translations, t } from "../../lib/i18n/translations";
+import { cn } from "../ui/utils"; // FIXED: Import cn utility function
 
 export default function ProofOfResurrection() {
   const { language } = useLanguage();
@@ -38,6 +41,158 @@ export default function ProofOfResurrection() {
       icon: TrendingUp,
     },
   ];
+
+  // --- START NEW DATA STRUCTURE AND VISUALIZER COMPONENT LOGIC (Simplified Bars) ---
+  // Data: New Testament, Homer, Demosthenes, Herodotus, Plato, Tacitus, Caesar, Pliny
+  const rawManuscriptData = [
+    { name: t(trans.manuscriptEvidence.newTestament, language), manuscripts: 5800, timeGap: 25, timeGapText: t(trans.manuscriptEvidence.timeGap25, language), sortManuscripts: 5800, isNewTestament: true, key: 'nt' },
+    { name: t(trans.authorHomer, language), manuscripts: 1800, timeGap: 400, timeGapText: t(trans.manuscriptEvidence.timeGap400, language), sortManuscripts: 1800, isNewTestament: false, key: 'hom' },
+    { name: t(trans.authorDemosthenes, language), manuscripts: 200, timeGap: 1400, timeGapText: t(trans.manuscriptEvidence.timeGap1400, language), sortManuscripts: 200, isNewTestament: false, key: 'dem' },
+    { name: t(trans.authorHerodotus, language), manuscripts: 8, timeGap: 1400, timeGapText: t(trans.manuscriptEvidence.timeGap1400, language), sortManuscripts: 8, isNewTestament: false, key: 'her' },
+    { name: t(trans.authorPlato, language), manuscripts: 7, timeGap: 1200, timeGapText: t(trans.manuscriptEvidence.timeGap1200, language), sortManuscripts: 7, isNewTestament: false, key: 'pla' },
+    { name: t(trans.authorTacitus, language), manuscripts: 20, timeGap: 1000, timeGapText: t(trans.manuscriptEvidence.timeGap1000, language), sortManuscripts: 20, isNewTestament: false, key: 'tac' },
+    { name: t(trans.authorCaesar, language), manuscripts: 10, timeGap: 1000, timeGapText: t(trans.manuscriptEvidence.timeGap1000, language), sortManuscripts: 10, isNewTestament: false, key: 'cae' },
+    { name: t(trans.authorPliny, language), manuscripts: 7, timeGap: 750, timeGapText: t(trans.manuscriptEvidence.timeGap750, language), sortManuscripts: 7, isNewTestament: false, key: 'pli' },
+  ];
+
+  const sortedManuscriptData = rawManuscriptData.sort((a, b) => {
+      // Sort 1: Manuscripts Ascending (Least impressive first)
+      if (a.sortManuscripts !== b.sortManuscripts) {
+          return a.sortManuscripts - b.sortManuscripts;
+      }
+      // Sort 2: Time Gap Descending (If manuscript count is tied, longer gap is less impressive)
+      return b.timeGap - a.timeGap;
+  });
+
+  function getTimeGapColor(timeGap: number) {
+      if (timeGap <= 25) return "bg-green-600";
+      if (timeGap <= 400) return "bg-blue-600";
+      if (timeGap <= 750) return "bg-amber-600";
+      if (timeGap <= 1000) return "bg-orange-600";
+      return "bg-red-600";
+  }
+  
+  // MAX SCALING VALUES (Updated)
+  const maxManuscripts = 6000;
+  const maxTimeGap = 1500;
+
+  const ManuscriptVisualizer = (
+    <div className="space-y-6">
+        <p className="text-gray-300 leading-relaxed mb-6">
+            {t(trans.manuscriptEvidence.intro, language)}
+        </p>
+
+        {/* Header for the Chart/List */}
+        <div className="flex bg-gray-900/50 border-b border-gray-800 p-4 text-xs font-semibold text-gray-400">
+            <div className="w-1/4">{t(trans.manuscriptEvidence.tableAuthor, language).toUpperCase()}</div>
+            <div className="w-1/4 text-center">{t(trans.manuscriptEvidence.tableManuscripts, language).toUpperCase()}</div>
+            <div className="w-1/2 text-left">{t(trans.manuscriptEvidence.tableTimeGap, language).toUpperCase()}</div>
+        </div>
+
+        <div className="grid grid-cols-1 divide-y divide-gray-800 border border-gray-800 rounded-lg overflow-hidden">
+            {sortedManuscriptData.map((data, index) => {
+                const isNT = data.isNewTestament;
+                
+                // 1. Manuscript Bar Calculation (Updated to use maxManuscripts = 6000)
+                // Use a logarithmic-like scale for contrast (5800 is 100%, 6000 is used as max for calculation base)
+                let msBarRatio = (data.manuscripts / maxManuscripts) * 100;
+                if (!isNT) msBarRatio = Math.min(msBarRatio, 35); // Cap non-NT width at 35% for visualization contrast
+
+                // 2. Time Gap Bar Calculation (CORRECTED LOGIC: Longer gap = Longer bar. Max gap is 1500)
+                // Ratio calculation: (Document Gap / Max Gap) * Max Length (85%) + Min Length (15%)
+                let gapBarRatio = (data.timeGap / maxTimeGap) * 85 + 15; 
+                if (isNT) gapBarRatio = 15; // Set NT to minimum length (15%) to indicate minimal gap
+
+                const textColor = isNT ? "text-blue-400" : "text-gray-300";
+                const bgClass = isNT ? "bg-gradient-to-r from-blue-900/50 to-blue-900/20" : "bg-gray-900/50";
+                const msBarColor = isNT ? "bg-green-600" : "bg-purple-600";
+                const gapBarColor = getTimeGapColor(data.timeGap);
+
+                return (
+                    <motion.div
+                        key={data.key} // Using unique key property for map stability
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        className={cn( 
+                            "flex items-center p-4 transition-all duration-300",
+                            bgClass,
+                            isNT ? "border-l-4 border-blue-600 hover:bg-blue-900/30" : "hover:bg-gray-900/70"
+                        )}
+                    >
+                        {/* Column 1: Author */}
+                        <div className={cn("w-1/4 font-semibold", textColor)}>
+                            {/* Ranking on a separate line for visibility */}
+                            <span className="text-xs font-medium text-gray-500 block">
+                                {isNT 
+                                    ? t(trans.rankUnmatched, language)
+                                    : t(trans.rankHistorical, language) + (index + 1)
+                                }
+                            </span>
+                            {data.name}
+                        </div>
+
+                        {/* Column 2: Manuscript Count (Visualization) */}
+                        <div className="w-1/4 flex flex-col items-center gap-1">
+                            <span className={cn("text-lg font-bold tabular-nums", isNT ? "text-white" : "text-gray-200")}>
+                                {data.manuscripts.toLocaleString()}{isNT && "+"}
+                            </span>
+                            <div className="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <motion.div
+                                    initial={{ width: 0 }}
+                                    whileInView={{ width: `${msBarRatio}%` }}
+                                    transition={{ duration: 1.0, delay: index * 0.1 + 0.3 }}
+                                    className={cn("h-full", msBarColor)}
+                                    style={{ maxWidth: '100%' }}
+                                />
+                            </div>
+                            <span className="text-xs text-gray-500">
+                                {isNT 
+                                    ? t(trans.scaleCount, language) 
+                                    : t(trans.scaleMaxMs, language).replace('{0}', maxManuscripts.toLocaleString()) // Updated to 6000
+                                }
+                            </span>
+                        </div>
+
+                        {/* Column 3: Time Gap (Visualization) */}
+                        <div className="w-1/2 flex flex-col pl-4 text-left gap-1">
+                            <span className={cn("text-base font-medium", isNT ? "text-white" : "text-gray-300")}>
+                                {data.timeGapText}
+                            </span>
+                            <div className="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
+                                <motion.div
+                                    initial={{ width: 0 }}
+                                    whileInView={{ width: `${gapBarRatio}%` }}
+                                    transition={{ duration: 1.0, delay: index * 0.1 + 0.3 }}
+                                    className={cn("h-full", gapBarColor)}
+                                />
+                            </div>
+                            <span className="text-xs text-gray-500">
+                                {isNT 
+                                    ? t(trans.scaleTimeClose, language) 
+                                    : t(trans.scaleMaxGap, language).replace('{0}', maxTimeGap.toLocaleString()) // Updated to 1500
+                                }
+                            </span>
+                        </div>
+                    </motion.div>
+                );
+            })}
+        </div>
+        
+        <p className="text-xs text-gray-500 text-center mt-4">
+            {t(trans.scaleVisualNote, language)}
+        </p>
+
+        <p 
+            className="text-gray-300 mt-8 text-lg"
+            dangerouslySetInnerHTML={{
+                __html: t(trans.manuscriptEvidence.conclusion, language),
+            }}
+        />
+    </div>
+  );
+  // --- END NEW DATA STRUCTURE AND VISUALIZER COMPONENT LOGIC ---
 
   return (
     <TopicLayout
@@ -131,7 +286,9 @@ export default function ProofOfResurrection() {
         </div>
       </motion.section>
 
-      {/* Section 2: Manuscript Evidence */}
+      <Separator className="my-16 bg-gray-800" />
+
+      {/* Section 2: Manuscript Evidence - REPLACED WITH VISUALIZER */}
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -142,130 +299,11 @@ export default function ProofOfResurrection() {
           {t(trans.manuscriptEvidence.heading, language)}
         </h2>
 
-        <div className="space-y-6 text-gray-300 leading-relaxed">
-          <p
-            dangerouslySetInnerHTML={{
-              __html: t(
-                trans.manuscriptEvidence.intro,
-                language,
-              ),
-            }}
-          />
+        {ManuscriptVisualizer}
 
-          {/* Table */}
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse bg-gray-900/30 border border-gray-800 rounded-lg overflow-hidden">
-              <thead>
-                <tr className="bg-gray-900/50">
-                  <th className="border border-gray-800 p-4 text-left text-white">
-                    {t(
-                      trans.manuscriptEvidence.tableAuthor,
-                      language,
-                    )}
-                  </th>
-                  <th className="border border-gray-800 p-4 text-left text-white">
-                    {t(
-                      trans.manuscriptEvidence.tableTimeGap,
-                      language,
-                    )}
-                  </th>
-                  <th className="border border-gray-800 p-4 text-left text-white">
-                    {t(
-                      trans.manuscriptEvidence.tableManuscripts,
-                      language,
-                    )}
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-blue-900/20">
-                  <td className="border border-gray-800 p-4 text-white font-medium">
-                    {t(
-                      trans.manuscriptEvidence.newTestament,
-                      language,
-                    )}
-                  </td>
-                  <td className="border border-gray-800 p-4 text-white font-medium">
-                    {t(
-                      trans.manuscriptEvidence.timeGap25,
-                      language,
-                    )}
-                  </td>
-                  <td className="border border-gray-800 p-4 text-white font-medium">
-                    5,800+
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-800 p-4 text-gray-300">
-                    Homer
-                  </td>
-                  <td className="border border-gray-800 p-4 text-gray-400">
-                    {t(
-                      trans.manuscriptEvidence.timeGap400,
-                      language,
-                    )}
-                  </td>
-                  <td className="border border-gray-800 p-4 text-gray-400">
-                    1,800
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-800 p-4 text-gray-300">
-                    Plato
-                  </td>
-                  <td className="border border-gray-800 p-4 text-gray-400">
-                    {t(
-                      trans.manuscriptEvidence.timeGap1400,
-                      language,
-                    )}
-                  </td>
-                  <td className="border border-gray-800 p-4 text-gray-400">
-                    7
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-800 p-4 text-gray-300">
-                    Caesar
-                  </td>
-                  <td className="border border-gray-800 p-4 text-gray-400">
-                    {t(
-                      trans.manuscriptEvidence.timeGap1000,
-                      language,
-                    )}
-                  </td>
-                  <td className="border border-gray-800 p-4 text-gray-400">
-                    10
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border border-gray-800 p-4 text-gray-300">
-                    Tacitus
-                  </td>
-                  <td className="border border-gray-800 p-4 text-gray-400">
-                    {t(
-                      trans.manuscriptEvidence.timeGap1200,
-                      language,
-                    )}
-                  </td>
-                  <td className="border border-gray-800 p-4 text-gray-400">
-                    20
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <p
-            className="text-lg"
-            dangerouslySetInnerHTML={{
-              __html: t(
-                trans.manuscriptEvidence.conclusion,
-                language,
-              ),
-            }}
-          />
-        </div>
       </motion.section>
+
+      <Separator className="my-16 bg-gray-800" />
 
       {/* Section 3: Who Was Jesus */}
       <motion.section
@@ -323,6 +361,8 @@ export default function ProofOfResurrection() {
         </div>
       </motion.section>
 
+      <Separator className="my-16 bg-gray-800" />
+
       {/* Section 4: Four Minimal Facts */}
       <motion.section
         initial={{ opacity: 0, y: 30 }}
@@ -332,7 +372,7 @@ export default function ProofOfResurrection() {
       >
         <h2 className="text-white mb-6">
           {t(trans.fourMinimalFacts.heading, language)}
-        </h2>
+        </h2 >
 
         <div className="grid md:grid-cols-2 gap-6">
           {minimalFacts.map((item, index) => (
@@ -471,7 +511,7 @@ export default function ProofOfResurrection() {
                   __html: t(
                     trans.evaluatingExplanations
                       .wrongTombPoint1,
-                    language,
+                      language,
                   ),
                 }}
               />
@@ -483,10 +523,10 @@ export default function ProofOfResurrection() {
                   trans.evaluatingExplanations.wrongTombPoint2,
                   language,
                 )}
-              </span>
+              </span >
             </li>
-          </ul>
-        </div>
+          </ul >
+        </div >
 
         {/* Stolen Body */}
         <div className="mb-8 bg-gray-900/30 border border-gray-800 rounded-lg p-6">
@@ -590,6 +630,8 @@ export default function ProofOfResurrection() {
         </div>
       </motion.section>
 
+      <Separator className="my-16 bg-gray-800" />
+
       {/* Section 6: Rationality */}
       <motion.section
         initial={{ opacity: 0, y: 30 }}
@@ -618,32 +660,32 @@ export default function ProofOfResurrection() {
               <span>
                 <strong className="text-white">
                   {t(trans.rationality.plausible, language)}
-                </strong>{" "}
+                </strong >{" "}
                 {t(trans.rationality.plausibleDetail, language)}
-              </span>
-            </li>
+              </span >
+            </li >
             <li className="flex items-start gap-3">
               <span className="text-blue-400 mt-1">•</span>
               <span>
                 <strong className="text-white">
                   {t(trans.rationality.powerful, language)}
-                </strong>{" "}
+                </strong >{" "}
                 {t(trans.rationality.powerfulDetail, language)}
-              </span>
-            </li>
+              </span >
+            </li >
             <li className="flex items-start gap-3">
               <span className="text-blue-400 mt-1">•</span>
               <span>
                 <strong className="text-white">
                   {t(trans.rationality.consistent, language)}
-                </strong>{" "}
+                </strong >{" "}
                 {t(
                   trans.rationality.consistentDetail,
                   language,
                 )}
-              </span>
-            </li>
-          </ul>
+              </span >
+            </li >
+          </ul >
 
           <div className="bg-gray-900/50 border-l-4 border-blue-600 p-6 rounded-r-lg my-8">
             <p className="text-gray-300 italic">
@@ -653,8 +695,8 @@ export default function ProofOfResurrection() {
               — William Lane Craig
             </p>
           </div>
-        </div>
-      </motion.section>
+        </div >
+      </motion.section >
 
       <Separator className="my-16 bg-gray-800" />
 
@@ -667,7 +709,7 @@ export default function ProofOfResurrection() {
       >
         <h2 className="text-white mb-6">
           {t(trans.conclusion.heading, language)}
-        </h2>
+        </h2 >
 
         <div className="space-y-4 text-gray-300 leading-relaxed">
           <p
@@ -681,8 +723,8 @@ export default function ProofOfResurrection() {
               __html: t(trans.conclusion.para2, language),
             }}
           />
-        </div>
-      </motion.section>
+        </div >
+      </motion.section >
 
       {/* --- ADDED SECTION --- */}
       <Separator className="my-16 bg-gray-800" />
@@ -717,7 +759,7 @@ export default function ProofOfResurrection() {
       >
         <h3 className="text-white mb-4">
           {t(trans.bridge.heading, language)}
-        </h3>
+        </h3 >
         <p
           className="text-gray-300 leading-relaxed mb-4"
           dangerouslySetInnerHTML={{
