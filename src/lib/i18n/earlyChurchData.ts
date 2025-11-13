@@ -1,819 +1,2363 @@
-import { Language } from './LanguageContext';
+import { Language } from "./LanguageContext";
 
-export interface QuoteData {
-  text: { en: string; fr: string; es: string; de: string };
-  reference: { en: string; fr: string; es: string; de: string };
-  theme?: string;
-}
-
-export interface DocumentData {
-  title: { en: string; fr: string; es: string; de: string };
+export interface EarlyChurchQuote {
+  id: string;
   author: { en: string; fr: string; es: string; de: string };
-  date: { en: string; fr: string; es: string; de: string };
-  summary: { en: string; fr: string; es: string; de: string };
-  primaryQuote: QuoteData;
-  additionalQuotes?: QuoteData[];
-  pdfFile: string;
-  themes?: string[];
+  work: { en: string; fr: string; es: string; de: string };
+  date: string;
+  text: { en: string; fr: string; es: string; de: string };
+  sourceReference: string;
 }
 
-export const earlyChurchDocumentsData: DocumentData[] = [
+export interface EarlyChurchTopic {
+  id: string;
+  title: { en: string; fr: string; es: string; de: string };
+  icon: string;
+  quotes: EarlyChurchQuote[];
+}
+
+export const earlyChurchTopics: EarlyChurchTopic[] = [
   {
+    id: "faith-and-church",
     title: {
-      en: 'Letter of Barnabas',
-      fr: 'Lettre de Barnabé',
-      es: 'Carta de Bernabé',
-      de: 'Brief des Barnabas'
+      en: "The Catholic Church and Faith in the Church Fathers",
+      fr: "L'Église Catholique et la Foi chez les Pères de l'Église",
+      es: "La Iglesia Católica y la Fe en los Padres de la Iglesia",
+      de: "Die Katholische Kirche und der Glaube bei den Kirchenvätern",
     },
-    author: {
-      en: 'St. Barnabas',
-      fr: 'Saint Barnabé',
-      es: 'San Bernabé',
-      de: 'Hl. Barnabas'
-    },
-    date: {
-      en: 'c. 75 AD',
-      fr: 'vers 75 apr. J.-C.',
-      es: 'c. 75 d.C.',
-      de: 'ca. 75 n. Chr.'
-    },
-    summary: {
-      en: 'An early epistle attributed to Barnabas, companion of St. Paul. Demonstrates early Christian use of the deuterocanonical books as Scripture.',
-      fr: 'Une épître ancienne attribuée à Barnabé, compagnon de saint Paul. Démontre l\'utilisation chrétienne primitive des livres deutérocanoniques comme Écriture.',
-      es: 'Una epístola temprana atribuida a Bernabé, compañero de San Pablo. Demuestra el uso cristiano primitivo de los libros deuterocanónicos como Escritura.',
-      de: 'Ein früher Brief, der Barnabas, dem Gefährten des Hl. Paulus, zugeschrieben wird. Zeigt die frühchristliche Verwendung der deuterokanonischen Bücher als Heilige Schrift.'
-    },
-    primaryQuote: {
-      text: {
-        en: 'Since, therefore, He was about to be manifested and to suffer in the flesh, His suffering was foreshown. For the prophet speaks against Israel, "Woe to their soul, because they have counseled an evil counsel against themselves" saying, "Let us bind the just one, because he is displeasing to us."',
-        fr: 'Puisque, par conséquent, Il devait être manifesté et souffrir dans la chair, Sa souffrance a été préfigurée. Car le prophète parle contre Israël : « Malheur à leur âme, car ils ont délibéré un mauvais conseil contre eux-mêmes » disant : « Lions le juste, car il nous déplaît. »',
-        es: 'Puesto que, por lo tanto, Él iba a ser manifestado y a sufrir en la carne, Su sufrimiento fue prefigurado. Porque el profeta habla contra Israel: "Ay de su alma, porque han deliberado un mal consejo contra sí mismos" diciendo: "Atemos al justo, porque nos desagrada."',
-        de: 'Da Er nun im Fleisch offenbart werden und leiden sollte, wurde Sein Leiden vorhergesagt. Denn der Prophet spricht gegen Israel: „Wehe ihrer Seele, denn sie haben bösen Rat gegen sich selbst beschlossen", indem er sagte: „Lasst uns den Gerechten binden, denn er missfällt uns."'
+    icon: "Church",
+    quotes: [
+      {
+        id: "ignatius-smyrnaeans",
+        author: {
+          en: "Saint Ignatius of Antioch",
+          fr: "Saint Ignace d'Antioche",
+          es: "San Ignacio de Antioquía",
+          de: "Hl. Ignatius von Antiochien",
+        },
+        work: {
+          en: "Letter to the Smyrnaeans",
+          fr: "Lettre aux Smyrniotes",
+          es: "Carta a los Esmirnenses",
+          de: "Brief an die Smyrnäer",
+        },
+        date: "c. 107 AD",
+        text: {
+          en: "Let no man do anything connected with the Church without the bishop. Let that be deemed a proper Eucharist, which is [administered] either by the bishop, or by one to whom he has entrusted it. Wherever the bishop shall appear, there let the multitude [of the people] also be; even as, wherever Jesus Christ is, there is the Catholic Church.",
+          fr: "Que personne ne fasse rien de ce qui concerne l'Église sans l'évêque. Que soit considérée comme une Eucharistie légitime celle qui est célébrée soit par l'évêque, soit par celui à qui il l'a confiée. Là où paraît l'évêque, que soit aussi la multitude ; de même que là où est Jésus-Christ, là est l'Église catholique.",
+          es: "Que nadie haga nada relacionado con la Iglesia sin el obispo. Que se considere como una Eucaristía apropiada aquella que es administrada por el obispo, o por uno a quien él se la ha confiado. Dondequiera que aparezca el obispo, allí esté también la multitud; así como, dondequiera que esté Jesucristo, allí está la Iglesia Católica.",
+          de: "Niemand soll irgendetwas tun, was mit der Kirche zu tun hat, ohne den Bischof. Als rechtmäßige Eucharistie gelte jene, die vom Bischof oder von einem, dem er es anvertraut hat, gefeiert wird. Wo der Bischof erscheint, dort sei auch die Menge; ebenso wie dort, wo Jesus Christus ist, dort ist die katholische Kirche.",
+        },
+        sourceReference: "§8",
       },
-      reference: {
-        en: 'Letter of Barnabas §6, citing Isaiah 3:9 and Wisdom 2:12',
-        fr: 'Lettre de Barnabé §6, citant Isaïe 3:9 et Sagesse 2:12',
-        es: 'Carta de Bernabé §6, citando Isaías 3:9 y Sabiduría 2:12',
-        de: 'Brief des Barnabas §6, Zitat aus Jesaja 3:9 und Weisheit 2:12'
+      {
+        id: "polycarp-martyrdom",
+        author: {
+          en: "Saint Polycarp (Martyrdom)",
+          fr: "Saint Polycarpe (Martyre)",
+          es: "San Policarpo (Martirio)",
+          de: "Hl. Polykarp (Martyrium)",
+        },
+        work: {
+          en: "The Martyrdom of Polycarp",
+          fr: "Le Martyre de Polycarpe",
+          es: "El Martirio de Policarpo",
+          de: "Das Martyrium des Polykarp",
+        },
+        date: "c. 156 AD",
+        text: {
+          en: "He was not merely an illustrious teacher, but also a pre-eminent martyr... For, having through patience overcome the unjust governor, and thus acquired the crown of immortality, he now, with the apostles and all the righteous [in heaven], rejoicingly glorifies God, even the Father, and blesses our Lord Jesus Christ, the Savior of our souls, the Governor of our bodies, and the Shepherd of the Catholic Church throughout the world.",
+          fr: "Il n'était pas seulement un enseignant illustre, mais aussi un martyr éminent... Car, ayant par la patience vaincu le gouverneur injuste, et ainsi acquis la couronne d'immortalité, il glorifie maintenant avec joie Dieu, avec les apôtres et tous les justes [au ciel], et bénit notre Seigneur Jésus-Christ, le Sauveur de nos âmes, le Gouverneur de nos corps, et le Pasteur de l'Église catholique dans le monde entier.",
+          es: "No fue meramente un maestro ilustre, sino también un mártir preeminente... Porque, habiendo superado con paciencia al gobernador injuste, y así adquirido la corona de inmortalidad, ahora, con los apóstoles y todos los justos [en el cielo], glorifica gozosamente a Dios, incluso al Padre, y bendice a nuestro Señor Jesucristo, el Salvador de nuestras almas, el Gobernador de nuestros cuerpos, y el Pastor de la Iglesia Católica en todo el mundo.",
+          de: "Er war nicht nur ein herausragender Lehrer, sondern auch ein hervorragender Märtyrer... Denn nachdem er durch Geduld den ungerechten Statthalter überwunden und so die Krone der Unsterblichkeit erlangt hatte, verherrlicht er nun freudig mit den Aposteln und allen Gerechten [im Himmel] Gott, sogar den Vater, und segnet unseren Herrn Jesus Christus, den Retter unserer Seelen, den Lenker unserer Leiber und den Hirten der katholischen Kirche in der ganzen Welt.",
+        },
+        sourceReference: "§19",
       },
-      theme: 'Deuterocanon'
-    },
-    pdfFile: 'Letter_of_Barnabas.pdf',
-    themes: ['Deuterocanon', 'Scripture', 'Prophecy']
+      {
+        id: "justin-sole-gov",
+        author: {
+          en: "Saint Justin Martyr",
+          fr: "Saint Justin Martyr",
+          es: "San Justino Mártir",
+          de: "Hl. Justin der Märtyrer",
+        },
+        work: {
+          en: "On the Sole Government of God",
+          fr: "Sur le Gouvernement Unique de Dieu",
+          es: "Sobre el Gobierno Único de Dios",
+          de: "Über die alleinige Herrschaft Gottes",
+        },
+        date: "c. 150-165 AD",
+        text: {
+          en: "For the men of former generations, who instituted private and public rites in honor of such as were more powerful, caused forgetfulness of the Catholic faith to take possession of their posterity...",
+          fr: "Car les hommes des générations précédentes, qui ont institué des rites privés et publics en l'honneur de ceux qui étaient plus puissants, ont causé l'oubli de la foi catholique à s'emparer de leur postérité...",
+          es: "Porque los hombres de generaciones anteriores, que instituyeron ritos privados y públicos en honor de los más poderosos, causaron que el olvido de la fe católica se apoderara de su posteridad...",
+          de: "Denn die Menschen früherer Generationen, die private und öffentliche Riten zu Ehren der Mächtigeren einführten, verursachten, dass die Vergessenheit des katholischen Glaubens von ihrer Nachkommenschaft Besitz ergriff...",
+        },
+        sourceReference: "Ch. 1",
+      },
+      {
+        id: "irenaeus-heresies-1",
+        author: {
+          en: "Saint Irenaeus of Lyon",
+          fr: "Saint Irénée de Lyon",
+          es: "San Ireneo de Lyon",
+          de: "Hl. Irenäus von Lyon",
+        },
+        work: {
+          en: "Against Heresies",
+          fr: "Contre les Hérésies",
+          es: "Contra las Herejías",
+          de: "Gegen die Häresien",
+        },
+        date: "c. 180 AD",
+        text: {
+          en: "But [the superior skill spoken of] is not found in this... while the Catholic Church possesses one and the same faith throughout the whole world, as we have already said.",
+          fr: "Mais [l'habileté supérieure dont on parle] ne se trouve pas en cela... tandis que l'Église catholique possède une seule et même foi dans le monde entier, comme nous l'avons déjà dit.",
+          es: "Pero [la habilidad superior de la que se habla] no se encuentra en esto... mientras que la Iglesia Católica posee una y la misma fe en todo el mundo, como ya hemos dicho.",
+          de: "Aber [die erwähnte überlegene Fähigkeit] findet sich nicht darin... während die katholische Kirche ein und denselben Glauben in der ganzen Welt besitzt, wie wir bereits gesagt haben.",
+        },
+        sourceReference: "Book 1, Ch. 10, §3",
+      },
+      {
+        id: "irenaeus-heresies-2",
+        author: {
+          en: "Saint Irenaeus of Lyon",
+          fr: "Saint Irénée de Lyon",
+          es: "San Ireneo de Lyon",
+          de: "Hl. Irenäus von Lyon",
+        },
+        work: {
+          en: "Against Heresies",
+          fr: "Contre les Hérésies",
+          es: "Contra las Herejías",
+          de: "Gegen die Häresien",
+        },
+        date: "c. 180 AD",
+        text: {
+          en: "For even creation reveals Him who formed it... The Universal Church, moreover, through the whole world, has received this tradition from the apostles.",
+          fr: "Car la création elle-même révèle Celui qui l'a formée... L'Église Universelle, de plus, à travers le monde entier, a reçu cette tradition des apôtres.",
+          es: "Porque incluso la creación revela a Aquel que la formó... La Iglesia Universal, además, a través de todo el mundo, ha recibido esta tradition de los apóstoles.",
+          de: "Denn sogar die Schöpfung offenbart Den, der sie geformt hat... Die Universalkirche hat zudem in der ganzen Welt diese Tradition von den Aposteln empfangen.",
+        },
+        sourceReference: "Book 2, Ch. 9, §1",
+      },
+      {
+        id: "clement-stromata-1",
+        author: {
+          en: "Saint Clement of Alexandria",
+          fr: "Saint Clément d'Alexandrie",
+          es: "San Clemente de Alejandría",
+          de: "Hl. Klemens von Alexandria",
+        },
+        work: {
+          en: "The Stromata",
+          fr: "Les Stromates",
+          es: "Los Stromata",
+          de: "Die Stromateis",
+        },
+        date: "c. 200 AD",
+        text: {
+          en: "For that the human assemblies which they held were posterior to the Catholic Church requires not many words to show...",
+          fr: "Car que les assemblées humaines qu'ils tenaient étaient postérieures à l'Église catholique ne nécessite pas beaucoup de mots pour le montrer...",
+          es: "Porque que las asambleas humanas que celebraban eran posteriores a la Iglesia Católica no requiere muchas palabras para demostrarlo...",
+          de: "Dass die menschlichen Versammlungen, die sie abhielten, der katholischen Kirche nachfolgten, erfordert nicht viele Worte zu zeigen...",
+        },
+        sourceReference: "Book 7, Ch. 17",
+      },
+      {
+        id: "clement-stromata-2",
+        author: {
+          en: "Saint Clement of Alexandria",
+          fr: "Saint Clément d'Alexandrie",
+          es: "San Clemente de Alejandría",
+          de: "Hl. Klemens von Alexandria",
+        },
+        work: {
+          en: "The Stromata",
+          fr: "Les Stromates",
+          es: "Los Stromata",
+          de: "Die Stromateis",
+        },
+        date: "c. 200 AD",
+        text: {
+          en: "Therefore in substance and idea, in origin, in pre-eminence, we say that the ancient and Catholic Church is alone, collecting as it does into the unity of the one faith...",
+          fr: "Par conséquent, en substance et en idée, en origine, en prééminence, nous disons que l'Église catholique ancienne est seule, rassemblant comme elle le fait dans l'unité de la foi unique...",
+          es: "Por lo tanto, en sustancia e idea, en origen, en preeminencia, decimos que la Iglesia Católica antigua está sola, reuniendo en la unidad de la única fe...",
+          de: "Daher sagen wir, dass die alte und katholische Kirche in Substanz und Idee, in Ursprung, in Vorrang allein ist, da sie in der Einheit des einen Glaubens sammelt...",
+        },
+        sourceReference: "Book 7, Ch. 17",
+      },
+      {
+        id: "tertullian-prescription-26",
+        author: {
+          en: "Tertullian",
+          fr: "Tertullien",
+          es: "Tertuliano",
+          de: "Tertullian",
+        },
+        work: {
+          en: "Prescription Against Heretics",
+          fr: "Prescription Contre les Hérétiques",
+          es: "Prescripción Contra los Herejes",
+          de: "Die Prozeßeinrede gegen die Häretiker",
+        },
+        date: "c. 200 AD",
+        text: {
+          en: "...differing from and contrary to that which they were proclaiming through the Catholic churches—as if they spoke of one God in the Church, (and) another at home...",
+          fr: "...différant de et contraire à ce qu'ils proclamaient à travers les églises catholiques—comme s'ils parlaient d'un Dieu dans l'Église, (et) d'un autre à la maison...",
+          es: "...difiriendo de y contrario a lo que proclamaban a través de las iglesias católicas—como si hablaran de un Dios en la Iglesia, (y) otro en casa...",
+          de: "...abweichend von und im Gegensatz zu dem, was sie durch die katholischen Kirchen verkündeten—als ob sie von einem Gott in der Kirche sprachen, (und) einem anderen zu Hause...",
+        },
+        sourceReference: "Ch. 26",
+      },
+      {
+        id: "tertullian-prescription-30",
+        author: {
+          en: "Tertullian",
+          fr: "Tertullien",
+          es: "Tertuliano",
+          de: "Tertullian",
+        },
+        work: {
+          en: "Prescription Against Heretics",
+          fr: "Prescription Contre les Hérétiques",
+          es: "Prescripción Contra los Herejes",
+          de: "Die Prozeßeinrede gegen die Häretiker",
+        },
+        date: "c. 200 AD",
+        text: {
+          en: "For it is evident that those men lived not so long ago... and that they at first were believers in the doctrine of the Catholic Church, in the church of Rome under the episcopate of the blessed Eleutherus...",
+          fr: "Car il est évident que ces hommes ne vivaient pas il y a si longtemps... et qu'ils étaient d'abord croyants dans la doctrine de l'Église catholique, dans l'église de Rome sous l'épiscopat du bienheureux Éleuthère...",
+          es: "Porque es evidente que esos hombres vivieron no hace mucho tiempo... y que al principio eran creyentes en la doctrina de la Iglesia Católica, en la iglesia de Roma bajo el episcopado del beato Eleuterio...",
+          de: "Denn es ist offensichtlich, dass jene Männer vor nicht allzu langer Zeit lebten... und dass sie zuerst Gläubige der Lehre der katholischen Kirche waren, in der Kirche von Rom unter dem Episkopat des seligen Eleutherus...",
+        },
+        sourceReference: "Ch. 30",
+      },
+      {
+        id: "tertullian-marcion-3",
+        author: {
+          en: "Tertullian",
+          fr: "Tertullien",
+          es: "Tertuliano",
+          de: "Tertullian",
+        },
+        work: {
+          en: "Against Marcion",
+          fr: "Contre Marcion",
+          es: "Contra Marción",
+          de: "Gegen Marcion",
+        },
+        date: "c. 207 AD",
+        text: {
+          en: "And it shall come to pass in the last days, that the mountain of the Lord... the Catholic temple of God, in which God is worshipped, shall be established... [and] the true Catholic Jerusalem...",
+          fr: "Et il arrivera dans les derniers jours, que la montagne du Seigneur... le temple catholique de Dieu, dans lequel Dieu est adoré, sera établi... [et] la vraie Jérusalem catholique...",
+          es: "Y sucederá en los últimos días, que el monte del Señor... el templo católico de Dios, en el cual Dios es adorado, será establecido... [y] la verdadera Jerusalén católica...",
+          de: "Und es wird geschehen in den letzten Tagen, dass der Berg des Herrn... der katholische Tempel Gottes, in dem Gott angebetet wird, errichtet wird... [und] das wahre katholische Jerusalem...",
+        },
+        sourceReference: "Book 3, Ch. 21, 22",
+      },
+      {
+        id: "tertullian-marcion-4",
+        author: {
+          en: "Tertullian",
+          fr: "Tertullien",
+          es: "Tertuliano",
+          de: "Tertullian",
+        },
+        work: {
+          en: "Against Marcion",
+          fr: "Contre Marcion",
+          es: "Contra Marción",
+          de: "Gegen Marcion",
+        },
+        date: "c. 207 AD",
+        text: {
+          en: "...he contributed money to the Catholic church, which along with himself was afterwards rejected... Christ Jesus, who is the Catholic Priest of the Father...",
+          fr: "...il a contribué de l'argent à l'église catholique, qui avec lui-même a été rejetée par la suite... le Christ Jésus, qui est le Prêtre Catholique du Père...",
+          es: "...contribuyó con dinero a la iglesia católica, la cual junto con él fue rechazada después... Cristo Jesús, quien es el Sacerdote Católico del Padre...",
+          de: "...er spendete Geld an die katholische Kirche, die zusammen mit ihm später abgelehnt wurde... Christus Jesus, der der katholische Priester des Vaters ist...",
+        },
+        sourceReference: "Book 4, Ch. 4, 9",
+      },
+      {
+        id: "tertullian-marcion-5",
+        author: {
+          en: "Tertullian",
+          fr: "Tertullien",
+          es: "Tertuliano",
+          de: "Tertullian",
+        },
+        work: {
+          en: "Against Marcion",
+          fr: "Contre Marcion",
+          es: "Contra Marción",
+          de: "Gegen Marcion",
+        },
+        date: "c. 207 AD",
+        text: {
+          en: "But how remote is our (Catholic) verity from the artifices of this heretic...",
+          fr: "Mais combien notre vérité (catholique) est éloignée des artifices de cet hérétique...",
+          es: "Pero qué remota es nuestra verdad (católica) de los artificios de este hereje...",
+          de: "Aber wie fern ist unsere (katholische) Wahrheit von den Kunstgriffen dieses Ketzers...",
+        },
+        sourceReference: "Book 5, Ch. 19",
+      },
+      {
+        id: "tertullian-monogamy",
+        author: {
+          en: "Tertullian",
+          fr: "Tertullien",
+          es: "Tertuliano",
+          de: "Tertullian",
+        },
+        work: {
+          en: "On Monogamy",
+          fr: "Sur la Monogamie",
+          es: "Sobre la Monogamia",
+          de: "Über die Monogamie",
+        },
+        date: "c. 213 AD",
+        text: {
+          en: "...whether there is room for maintaining that the Paraclete has taught any such thing as can either be charged with novelty, in opposition to catholic tradition...",
+          fr: "...s'il y a lieu de soutenir que le Paraclet a enseigné une telle chose qui puisse être accusée de nouveauté, en opposition à la tradition catholique...",
+          es: "...si hay lugar para sostener que el Paráclito ha enseñado tal cosa que pueda ser acusada de novedad, en oposición a la tradición católica...",
+          de: "...ob es Raum gibt zu behaupten, dass der Paraklet etwas gelehrt hat, das entweder der Neuerung beschuldigt werden kann, im Widerspruch zur katholischen Tradition...",
+        },
+        sourceReference: "Ch. 2",
+      },
+      {
+        id: "tertullian-fasting",
+        author: {
+          en: "Tertullian",
+          fr: "Tertullien",
+          es: "Tertuliano",
+          de: "Tertullian",
+        },
+        work: {
+          en: "On Fasting",
+          fr: "Sur le Jeûne",
+          es: "Sobre el Ayuno",
+          de: "Über das Fasten",
+        },
+        date: "c. 213 AD",
+        text: {
+          en: "But it is enough for me that it is a customary practice for the bishops withal to issue mandates for fasts to the universal commonalty of the Church... those councils gathered out of the universal Churches...",
+          fr: "Mais il me suffit que ce soit une pratique coutumière pour les évêques de publier des mandats pour des jeûnes à la communauté universelle de l'Église... ces conciles rassemblés des Églises universelles...",
+          es: "Pero es suficiente para mí que sea una práctica habitual de los obispos emitir mandatos de ayuno a la comunidad universal de la Iglesia... esos concilios reunidos de las Iglesias universales...",
+          de: "Aber es genügt mir, dass es eine übliche Praxis für die Bischöfe ist, Mandate für das Fasten an die universale Gemeinschaft der Kirche zu erlassen... jene Konzilien, die aus den universalen Kirchen versammelt wurden...",
+        },
+        sourceReference: "Ch. 13",
+      },
+    ],
   },
   {
+    id: "canon-scripture",
     title: {
-      en: 'First Epistle of Clement to the Corinthians',
-      fr: 'Première Épître de Clément aux Corinthiens',
-      es: 'Primera Epístola de Clemente a los Corintios',
-      de: 'Erster Brief des Klemens an die Korinther'
+      en: "The Canon of Scripture",
+      fr: "Le Canon de l'Écriture",
+      es: "El Canon de las Escrituras",
+      de: "Der Kanon der Heiligen Schrift",
     },
-    author: {
-      en: 'St. Pope Clement I',
-      fr: 'Saint Pape Clément Ier',
-      es: 'San Papa Clemente I',
-      de: 'Hl. Papst Klemens I.'
-    },
-    date: {
-      en: 'c. 80 AD',
-      fr: 'vers 80 apr. J.-C.',
-      es: 'c. 80 d.C.',
-      de: 'ca. 80 n. Chr.'
-    },
-    summary: {
-      en: 'Written by the fourth Pope to restore order in Corinth. Demonstrates papal authority, apostolic succession, and early use of deuterocanonical books.',
-      fr: 'Écrit par le quatrième Pape pour rétablir l\'ordre à Corinthe. Démontre l\'autorité papale, la succession apostolique et l\'utilisation précoce des livres deutérocanoniques.',
-      es: 'Escrito por el cuarto Papa para restaurar el orden en Corinto. Demuestra la autoridad papal, la sucesión apostólica y el uso temprano de los libros deuterocanónicos.',
-      de: 'Vom vierten Papst geschrieben, um die Ordnung in Korinth wiederherzustellen. Zeigt päpstliche Autorität, apostolische Sukzession und frühen Gebrauch der deuterokanonischen Bücher.'
-    },
-    primaryQuote: {
-      text: {
-        en: 'The apostles have preached the gospel to us from the Lord Jesus Christ... they appointed the first fruits of their labors, having first proved them by the Spirit, to be bishops and deacons... they appointed those ministers already mentioned, and afterwards gave instructions, that when these should fall asleep, other approved men should succeed them in their ministry.',
-        fr: 'Les apôtres nous ont prêché l\'évangile de la part du Seigneur Jésus-Christ... ils ont établi les prémices de leurs travaux, les ayant d\'abord éprouvés par l\'Esprit, comme évêques et diacres... ils ont établi ces ministres déjà mentionnés, et ont ensuite donné des instructions pour que, lorsqu\'ils s\'endormiraient, d\'autres hommes approuvés leur succèdent dans leur ministère.',
-        es: 'Los apóstoles nos han predicado el evangelio del Señor Jesucristo... nombraron las primicias de sus labores, habiéndolos probado primero por el Espíritu, como obispos y diáconos... nombraron a esos ministros ya mencionados, y luego dieron instrucciones para que, cuando estos durmieran, otros hombres aprobados les sucedieran en su ministerio.',
-        de: 'Die Apostel haben uns das Evangelium vom Herrn Jesus Christus gepredigt... sie setzten die Erstlinge ihrer Arbeit ein, nachdem sie sie durch den Geist geprüft hatten, als Bischöfe und Diakone... sie setzten jene bereits erwähnten Diener ein und gaben danach Anweisungen, dass, wenn diese entschlafen sollten, andere bewährte Männer ihnen in ihrem Dienst nachfolgen sollten.'
-      },
-      reference: {
-        en: '1 Clement §§42, 44',
-        fr: '1 Clément §§42, 44',
-        es: '1 Clemente §§42, 44',
-        de: '1. Klemens §§42, 44'
-      },
-      theme: 'Succession'
-    },
-    additionalQuotes: [
+    icon: "BookOpen",
+    quotes: [
       {
+        id: "barnabas-letter",
+        author: {
+          en: "Saint Barnabas",
+          fr: "Saint Barnabé",
+          es: "San Bernabé",
+          de: "Hl. Barnabas",
+        },
+        work: {
+          en: "Letter of Barnabas",
+          fr: "Épître de Barnabé",
+          es: "Carta de Bernabé",
+          de: "Brief des Barnabas",
+        },
+        date: "c. 75 AD",
         text: {
-          en: 'By the word of His might He established all things, and by His word He can overthrow them. "Who shall say unto Him, \'What have you done?\' or, \'Who shall resist the power of His strength?\'"',
-          fr: 'Par la parole de Sa puissance, Il a établi toutes choses, et par Sa parole Il peut les renverser. « Qui Lui dira : "Qu\'as-tu fait ?" ou "Qui résistera à la puissance de Sa force ?" »',
-          es: 'Por la palabra de Su poder Él estableció todas las cosas, y por Su palabra Él puede derribarlas. "¿Quién le dirá: \'Qué has hecho?\' o \'¿Quién resistirá el poder de Su fuerza?\'"',
-          de: 'Durch das Wort Seiner Macht hat Er alles geschaffen, und durch Sein Wort kann Er es stürzen. „Wer wird zu Ihm sagen: \'Was hast du getan?\' oder \'Wer wird der Macht Seiner Stärke widerstehen?\'"'
+          en: "For the prophet speaks against Israel... saying, 'Let us bind the just one, because he is displeasing to us' (Wis. 2:12).",
+          fr: "Car le prophète parle contre Israël... disant : 'Lions le juste, car il nous déplaît' (Sag. 2:12).",
+          es: "Porque el profeta habla contra Israel... diciendo: 'Atemos al justo, porque nos desagrada' (Sab. 2:12).",
+          de: "Denn der Prophet spricht gegen Israel... und sagt: 'Lasst uns den Gerechten binden, denn er missfällt uns' (Weish. 2:12).",
         },
-        reference: {
-          en: '1 Clement §27, citing Wisdom 12:12',
-          fr: '1 Clément §27, citant Sagesse 12:12',
-          es: '1 Clemente §27, citando Sabiduría 12:12',
-          de: '1. Klemens §27, Zitat aus Weisheit 12:12'
-        },
-        theme: 'Deuterocanon'
+        sourceReference: "§6",
       },
       {
+        id: "clement-corinthians",
+        author: {
+          en: "Saint Pope Clement I",
+          fr: "Saint Pape Clément Ier",
+          es: "San Papa Clemente I",
+          de: "Hl. Papst Klemens I.",
+        },
+        work: {
+          en: "Letter to the Corinthians",
+          fr: "Épître aux Corinthiens",
+          es: "Carta a los Corintios",
+          de: "Brief an die Korinther",
+        },
+        date: "c. 80 AD",
         text: {
-          en: 'You therefore, who laid the foundation of this sedition, submit yourselves to the presbyters... If, however, any shall disobey the words spoken by Him through us, let them know that they will involve themselves in transgression and serious danger.',
-          fr: 'Vous donc, qui avez posé les fondements de cette sédition, soumettez-vous aux presbytres... Si toutefois quelqu\'un désobéit aux paroles prononcées par Lui à travers nous, qu\'il sache qu\'il s\'impliquera dans la transgression et le danger grave.',
-          es: 'Ustedes, por lo tanto, que pusieron el fundamento de esta sedición, sométanse a los presbíteros... Si, sin embargo, alguien desobedece las palabras habladas por Él a través de nosotros, que sepa que se involucrará en transgresión y peligro grave.',
-          de: 'Ihr also, die ihr den Grundstein zu diesem Aufruhr gelegt habt, unterwerfet euch den Presbytern... Wenn jedoch jemand den Worten, die Er durch uns gesprochen hat, nicht gehorcht, so soll er wissen, dass er sich in Übertretung und ernste Gefahr begibt.'
+          en: "By the word of His might He established all things... 'Who shall say unto Him, What have you done? or, Who shall resist the power of His strength?' (Wis. 12:12).",
+          fr: "Par la parole de Sa puissance Il a établi toutes choses... 'Qui Lui dira : Qu'as-tu fait ? ou, Qui résistera à la puissance de Sa force ?' (Sag. 12:12).",
+          es: "Por la palabra de Su poder Él estableció todas las cosas... '¿Quién le dirá: Qué has hecho? o, ¿Quién resistirá el poder de Su fuerza?' (Sab. 12:12).",
+          de: "Durch das Wort Seiner Macht hat Er alles geschaffen... 'Wer wird zu Ihm sagen: Was hast du getan? oder, Wer wird der Macht Seiner Stärke widerstehen?' (Weish. 12:12).",
         },
-        reference: {
-          en: '1 Clement §§57-59',
-          fr: '1 Clément §§57-59',
-          es: '1 Clemente §§57-59',
-          de: '1. Klemens §§57-59'
-        },
-        theme: 'Authority'
+        sourceReference: "§27",
       },
       {
+        id: "polycarp-philippians",
+        author: {
+          en: "Saint Polycarp",
+          fr: "Saint Polycarpe",
+          es: "San Policarpo",
+          de: "Hl. Polykarp",
+        },
+        work: {
+          en: "Letter to the Philippians",
+          fr: "Épître aux Philippiens",
+          es: "Carta a los Filipenses",
+          de: "Brief an die Philipper",
+        },
+        date: "c. 135 AD",
         text: {
-          en: 'The church of God which sojourns at Rome, to the church of God sojourning at Corinth... that shameful and detestable sedition... has suffered grievous injury. It is right and holy therefore, men and brethren, rather to obey God than to follow those who, through pride and sedition, have become the leaders of a detestable emulation.',
-          fr: 'L\'église de Dieu qui séjourne à Rome, à l\'église de Dieu séjournant à Corinthe... cette sédition honteuse et détestable... a subi une blessure grave. Il est donc juste et saint, hommes et frères, d\'obéir plutôt à Dieu que de suivre ceux qui, par orgueil et sédition, sont devenus les meneurs d\'une émulation détestable.',
-          es: 'La iglesia de Dios que peregrina en Roma, a la iglesia de Dios que peregrina en Corinto... esa sedición vergonzosa y detestable... ha sufrido una grave lesión. Es justo y santo, por lo tanto, hombres y hermanos, obedecer a Dios antes que seguir a aquellos que, por orgullo y sedición, se han convertido en líderes de una emulación detestable.',
-          de: 'Die Kirche Gottes, die in Rom weilt, an die Kirche Gottes, die in Korinth weilt... diese schändliche und verabscheuungswürdige Rebellion... hat schweren Schaden erlitten. Es ist daher recht und heilig, Männer und Brüder, Gott zu gehorchen, anstatt denen zu folgen, die durch Stolz und Aufruhr zu Anführern einer verabscheuungswürdigen Nachahmung geworden sind.'
+          en: "When you can do good, defer it not, because 'alms delivers from death' (Tob. 4:10, 12:9).",
+          fr: "Quand vous pouvez faire le bien, ne le différez pas, car 'l'aumône délivre de la mort' (Tob. 4:10, 12:9).",
+          es: "Cuando podáis hacer el bien, no lo pospongáis, porque 'la limosna libra de la muerte' (Tob. 4:10, 12:9).",
+          de: "Wenn ihr Gutes tun könnt, schiebt es nicht auf, denn 'Almosen rettet vom Tod' (Tob. 4:10, 12:9).",
         },
-        reference: {
-          en: '1 Clement §§1, 14',
-          fr: '1 Clément §§1, 14',
-          es: '1 Clemente §§1, 14',
-          de: '1. Klemens §§1, 14'
+        sourceReference: "§10",
+      },
+      {
+        id: "irenaeus-heresies-4-26",
+        author: {
+          en: "Saint Irenaeus of Lyon",
+          fr: "Saint Irénée de Lyon",
+          es: "San Ireneo de Lyon",
+          de: "Hl. Irenäus von Lyon",
         },
-        theme: 'Primacy'
+        work: {
+          en: "Against Heresies",
+          fr: "Contre les Hérésies",
+          es: "Contra las Herejías",
+          de: "Gegen die Häresien",
+        },
+        date: "c. 180 AD",
+        text: {
+          en: "And they shall hear those words, to be found in Daniel the prophet: 'O you seed of Canaan, and not of Judah, beauty has deceived you, and lust perverted your heart' (Dan. 13:56)... albeit the Lord says, 'The innocent and the righteous shall you not slay' (Dan. 13:52).",
+          fr: "Et ils entendront ces paroles, qui se trouvent dans le prophète Daniel : 'Ô race de Canaan, et non de Juda, la beauté t'a séduit, et la convoitise a perverti ton cœur' (Dan. 13:56)... bien que le Seigneur dise : 'Tu ne feras pas mourir l'innocent et le juste' (Dan. 13:52).",
+          es: "Y oirán aquellas palabras, que se encuentran en el profeta Daniel: '¡Oh raza de Canaán, y no de Judá, la belleza te ha seducido, y la lujuria ha pervertido tu corazón' (Dan. 13:56)... aunque el Señor dice: 'No matarás al inocente y al justo' (Dan. 13:52).",
+          de: "Und sie werden jene Worte hören, die beim Propheten Daniel zu finden sind: 'O Same Kanaans und nicht Judas, die Schönheit hat dich betört, und die Begierde hat dein Herz verkehrt' (Dan. 13:56)... obwohl der Herr sagt: 'Den Unschuldigen und Gerechten sollst du nicht töten' (Dan. 13:52).",
+        },
+        sourceReference: "Book 4, Ch. 26, §3",
+      },
+      {
+        id: "irenaeus-heresies-5-35",
+        author: {
+          en: "Saint Irenaeus of Lyon",
+          fr: "Saint Irénée de Lyon",
+          es: "San Ireneo de Lyon",
+          de: "Hl. Irenäus von Lyon",
+        },
+        work: {
+          en: "Against Heresies",
+          fr: "Contre les Hérésies",
+          es: "Contra las Herejías",
+          de: "Gegen die Häresien",
+        },
+        date: "c. 180 AD",
+        text: {
+          en: "Jeremiah the prophet has pointed out... saying, 'Look around Jerusalem towards the east, and behold the joy which comes to you from God Himself...' (Bar. 4:36-5:9).",
+          fr: "Jérémie le prophète a souligné... disant : 'Regarde vers l'orient, Jérusalem, et vois la joie qui te vient de Dieu lui-même...' (Bar. 4:36-5:9).",
+          es: "Jeremías el profeta ha señalado... diciendo: 'Mira, Jerusalén, hacia el oriente, y ve el gozo que te viene de Dios mismo...' (Bar. 4:36-5:9).",
+          de: "Der Prophet Jeremia hat darauf hingewiesen... und gesagt: 'Schau umher, Jerusalem, gegen Osten, und siehe die Freude, die von Gott selbst zu dir kommt...' (Bar. 4:36-5:9).",
+        },
+        sourceReference: "Book 5, Ch. 35, §1",
+      },
+      {
+        id: "tertullian-marcion-4-5",
+        author: {
+          en: "Tertullian",
+          fr: "Tertullien",
+          es: "Tertuliano",
+          de: "Tertullian",
+        },
+        work: {
+          en: "Against Marcion",
+          fr: "Contre Marcion",
+          es: "Contra Marción",
+          de: "Gegen Marcion",
+        },
+        date: "c. 200 AD",
+        text: {
+          en: "The same authority of the apostolic churches will afford evidence to the other Gospels also... maintaining... that authority of churches which lends support to the tradition of the apostles.",
+          fr: "La même autorité des églises apostoliques fournira des preuves pour les autres Évangiles aussi... maintenant... cette autorité des églises qui prête appui à la tradition des apôtres.",
+          es: "La misma autoridad de las iglesias apostólicas proporcionará evidencia para los otros Evangelios también... manteniendo... esa autoridad de las iglesias que da soporte a la tradición de los apóstoles.",
+          de: "Dieselbe Autorität der apostolischen Kirchen wird auch für die anderen Evangelien Beweis liefern... indem sie... jene Autorität der Kirchen aufrechterhält, die der Tradition der Apostel Unterstützung verleiht.",
+        },
+        sourceReference: "Book 4, Ch. 5",
+      },
+      {
+        id: "hippolytus-daniel",
+        author: {
+          en: "Saint Hippolytus of Rome",
+          fr: "Saint Hippolyte de Rome",
+          es: "San Hipólito de Roma",
+          de: "Hl. Hippolyt von Rom",
+        },
+        work: {
+          en: "Commentary on Daniel",
+          fr: "Commentaire sur Daniel",
+          es: "Comentario sobre Daniel",
+          de: "Kommentar zu Daniel",
+        },
+        date: "c. 204 AD",
+        text: {
+          en: "What is narrated here [the story of Susannah], happened at a later time... Therefore, always watchful in heart and pure in life, let us imitate Susannah.",
+          fr: "Ce qui est raconté ici [l'histoire de Suzanne], s'est passé plus tard... Par conséquent, toujours vigilants de cœur et purs de vie, imitons Suzanne.",
+          es: "Lo que se narra aquí [la historia de Susana], sucedió en un tiempo posterior... Por tanto, siempre vigilantes de corazón y puros de vida, imitemos a Susana.",
+          de: "Was hier erzählt wird [die Geschichte der Susanna], geschah zu einer späteren Zeit... Deshalb lasst uns, immer wachsam im Herzen und rein im Leben, Susanna nachahmen.",
+        },
+        sourceReference: "§6",
+      },
+      {
+        id: "origen-john",
+        author: {
+          en: "Origen",
+          fr: "Origène",
+          es: "Orígenes",
+          de: "Origenes",
+        },
+        work: {
+          en: "Commentary on John",
+          fr: "Commentaire sur Jean",
+          es: "Comentario sobre Juan",
+          de: "Kommentar zu Johannes",
+        },
+        date: "c. 250 AD",
+        text: {
+          en: "Paul... did not even write to all the churches which he taught... And Peter... has left behind one letter which is accepted. Perhaps there is also a second, but it is doubted. Why must I speak of John... who has left one Gospel... He also wrote the Apocalypse... and an epistle of very few lines.",
+          fr: "Paul... n'a même pas écrit à toutes les églises qu'il a enseignées... Et Pierre... a laissé une lettre qui est acceptée. Peut-être y en a-t-il aussi une seconde, mais elle est mise en doute. Pourquoi dois-je parler de Jean... qui a laissé un Évangile... Il a aussi écrit l'Apocalypse... et une épître de très peu de lignes.",
+          es: "Pablo... ni siquiera escribió a todas las iglesias que enseñó... Y Pedro... ha dejado una carta que es aceptada. Quizás hay también una segunda, pero se duda de ella. ¿Por qué debo hablar de Juan... que ha dejado un Evangelio... También escribió el Apocalipsis... y una epístola de muy pocas líneas.",
+          de: "Paulus... schrieb nicht einmal an alle Kirchen, die er lehrte... Und Petrus... hat einen Brief hinterlassen, der anerkannt ist. Vielleicht gibt es auch einen zweiten, aber er wird angezweifelt. Warum muss ich von Johannes sprechen... der ein Evangelium hinterlassen hat... Er schrieb auch die Apokalypse... und einen Brief von sehr wenigen Zeilen.",
+        },
+        sourceReference: "Book 5, §3",
+      },
+      {
+        id: "cyprian-treatise-12",
+        author: {
+          en: "Saint Cyprian of Carthage",
+          fr: "Saint Cyprien de Carthage",
+          es: "San Cipriano de Cartago",
+          de: "Hl. Cyprian von Karthago",
+        },
+        work: {
+          en: "Three Books of Testimonies Against the Jews",
+          fr: "Trois Livres de Témoignages Contre les Juifs",
+          es: "Tres Libros de Testimonios Contra los Judíos",
+          de: "Drei Bücher mit Zeugnissen gegen die Juden",
+        },
+        date: "248 AD",
+        text: {
+          en: "Of this same thing in the Wisdom of Solomon: 'Although in the sight of men they suffered torments, their hope is full of immortality...' (Wis. 3:4-8). Of this same thing in the Maccabees: 'Was not Abraham found faithful in temptation...?' (1 Mac. 2:52).",
+          fr: "De la même chose dans la Sagesse de Salomon : 'Bien qu'aux yeux des hommes ils aient souffert des tourments, leur espérance est pleine d'immortalité...' (Sag. 3:4-8). De la même chose dans les Maccabées : 'Abraham n'a-t-il pas été trouvé fidèle dans la tentation...?' (1 Mac. 2:52).",
+          es: "De esto mismo en la Sabiduría de Salomón: 'Aunque a los ojos de los hombres sufrieron tormentos, su esperanza está llena de inmortalidad...' (Sab. 3:4-8). De esto mismo en los Macabeos: '¿No fue Abraham hallado fiel en la tentación...?' (1 Mac. 2:52).",
+          de: "Dasselbe in der Weisheit Salomos: 'Obwohl sie in den Augen der Menschen Qualen litten, ist ihre Hoffnung voll Unsterblichkeit...' (Weish. 3:4-8). Dasselbe in den Makkabäern: 'Wurde Abraham nicht in der Versuchung treu erfunden...?' (1 Makk. 2:52).",
+        },
+        sourceReference: "Book 3, §15",
+      },
+      {
+        id: "cyprian-letter-55",
+        author: {
+          en: "Saint Cyprian of Carthage",
+          fr: "Saint Cyprien de Carthage",
+          es: "San Cipriano de Cartago",
+          de: "Hl. Cyprian von Karthago",
+        },
+        work: {
+          en: "Letter 55",
+          fr: "Lettre 55",
+          es: "Carta 55",
+          de: "Brief 55",
+        },
+        date: "c. 253 AD",
+        text: {
+          en: "So Daniel, too... broke forth with full faith and freedom, saying, 'I worship nothing but the Lord my God, who created the heaven and the earth' (Dan. 14:5).",
+          fr: "Ainsi Daniel aussi... éclata avec une foi et une liberté entières, disant : 'Je n'adore rien d'autre que le Seigneur mon Dieu, qui a créé le ciel et la terre' (Dan. 14:5).",
+          es: "Así Daniel también... prorrumpió con plena fe y libertad, diciendo: 'No adoro nada más que al Señor mi Dios, que creó el cielo y la tierra' (Dan. 14:5).",
+          de: "So brach auch Daniel... mit vollem Glauben und Freiheit aus und sagte: 'Ich bete nichts an als den Herrn, meinen Gott, der den Himmel und die Erde geschaffen hat' (Dan. 14:5).",
+        },
+        sourceReference: "§5",
+      },
+      {
+        id: "eusebius-proof",
+        author: {
+          en: "Eusebius of Caesarea",
+          fr: "Eusèbe de Césarée",
+          es: "Eusebio de Cesarea",
+          de: "Eusebius von Cäsarea",
+        },
+        work: {
+          en: "The Proof of the Gospel",
+          fr: "La Démonstration Évangélique",
+          es: "La Demostración Evangélica",
+          de: "Der Beweis des Evangeliums",
+        },
+        date: "after 314 AD",
+        text: {
+          en: "The Seventy Hebrews in concert have translated them together [the Septuagint], and I shall pay the greatest attention to them, because it is the custom of the Christian Church to use their work.",
+          fr: "Les Soixante-dix Hébreux de concert les ont traduits ensemble [la Septante], et je leur prêterai la plus grande attention, car c'est la coutume de l'Église chrétienne d'utiliser leur œuvre.",
+          es: "Los Setenta Hebreos en concierto los han traducido juntos [la Septuaginta], y les prestaré la mayor atención, porque es costumbre de la Iglesia Cristiana usar su obra.",
+          de: "Die siebzig Hebräer haben sie gemeinsam übersetzt [die Septuaginta], und ich werde ihnen die größte Aufmerksamkeit schenken, weil es Brauch der christlichen Kirche ist, ihr Werk zu verwenden.",
+        },
+        sourceReference: "Book 5, Introduction",
+      },
+      {
+        id: "jerome-rufinus",
+        author: {
+          en: "Saint Jerome",
+          fr: "Saint Jérôme",
+          es: "San Jerónimo",
+          de: "Hl. Hieronymus",
+        },
+        work: {
+          en: "Apology Against Rufinus",
+          fr: "Apologie contre Rufin",
+          es: "Apología contra Rufino",
+          de: "Apologie gegen Rufinus",
+        },
+        date: "402 AD",
+        text: {
+          en: "But when I repeat what the Jews say against the Story of Susanna... and the fables of Bel and the Dragon... the man who makes this a charge against me proves himself to be a fool and a slanderer...",
+          fr: "Mais quand je répète ce que les Juifs disent contre l'Histoire de Suzanne... et les fables de Bel et du Dragon... l'homme qui m'en fait un reproche se prouve être un sot et un calomniateur...",
+          es: "Pero cuando repito lo que los judíos dicen contra la Historia de Susana... y las fábulas de Bel y el Dragón... el hombre que me hace este cargo demuestra ser un tonto y un calumniador...",
+          de: "Aber wenn ich wiederhole, was die Juden gegen die Geschichte der Susanna... und die Fabeln von Bel und dem Drachen sagen... beweist der Mann, der mir das vorwirft, dass er ein Narr und ein Verleumder ist...",
+        },
+        sourceReference: "Book 2, §33",
+      },
+    ],
+  },
+  {
+    id: "apostolic-tradition",
+    title: {
+      en: "Apostolic Tradition",
+      fr: "La Tradition Apostolique",
+      es: "La Tradición Apostólica",
+      de: "Apostolische Tradition",
+    },
+    icon: "ScrollText",
+    quotes: [
+      {
+        id: "papias-tradition",
+        author: {
+          en: "Saint Papias of Hierapolis",
+          fr: "Saint Papias de Hiérapolis",
+          es: "San Papías de Hierápolis",
+          de: "Hl. Papias von Hierapolis",
+        },
+        work: {
+          en: "quoted in Eusebius, Church History",
+          fr: "cité dans Eusèbe, Histoire Ecclésiastique",
+          es: "citado en Eusebio, Historia Eclesiástica",
+          de: "zitiert in Eusebius, Kirchengeschichte",
+        },
+        date: "c. 130 AD",
+        text: {
+          en: "At least he mentions them frequently by name, and gives their traditions in his writings... he relates some other wonderful events which he claims to have received from tradition.",
+          fr: "Du moins, il les mentionne fréquemment par leur nom, et donne leurs traditions dans ses écrits... il relate d'autres événements merveilleux qu'il prétend avoir reçus de la tradition.",
+          es: "Al menos los menciona frecuentemente por su nombre, y da sus traditions en sus escritos... relata algunos otros eventos maravillosos que afirma haber recibido de la tradición.",
+          de: "Zumindest erwähnt er sie häufig namentlich und gibt ihre Traditionen in seinen Schriften wieder... er berichtet von einigen anderen wunderbaren Ereignissen, von denen er behauptet, sie aus der Tradition empfangen zu haben.",
+        },
+        sourceReference: "Book 3, Ch. 39, §§7-8",
+      },
+      {
+        id: "mathetes-diognetus",
+        author: {
+          en: "Mathetes",
+          fr: "Mathètes",
+          es: "Matetes",
+          de: "Mathetes",
+        },
+        work: {
+          en: "To Diognetus",
+          fr: "À Diognète",
+          es: "A Diogneto",
+          de: "An Diognet",
+        },
+        date: "c. 160 AD",
+        text: {
+          en: "Then the fear of the law is chanted, and the grace of the prophets is known, and the faith of the gospels is established, and the tradition of the Apostles is preserved, and the grace of the Church exults...",
+          fr: "Alors la crainte de la loi est chantée, et la grâce des prophètes est connue, et la foi des évangiles est établie, et la tradition des Apôtres est préservée, et la grâce de l'Église exulte...",
+          es: "Entonces se canta el temor de la ley, y se conoce la gracia de los profetas, y se establece la fe de los evangelios, y se preserva la tradición de los Apóstoles, y la gracia de la Iglesia se regocija...",
+          de: "Dann wird die Furcht vor dem Gesetz besungen, und die Gnade der Propheten wird bekannt, und der Glaube der Evangelien wird begründet, und die Tradition der Apostel wird bewahrt, und die Gnade der Kirche jubelt...",
+        },
+        sourceReference: "§11",
+      },
+      {
+        id: "irenaeus-heresies-1-10",
+        author: {
+          en: "Saint Irenaeus of Lyon",
+          fr: "Saint Irénée de Lyon",
+          es: "San Ireneo de Lyon",
+          de: "Hl. Irenäus von Lyon",
+        },
+        work: {
+          en: "Against Heresies",
+          fr: "Contre les Hérésies",
+          es: "Contra las Herejías",
+          de: "Gegen die Häresien",
+        },
+        date: "c. 180 AD",
+        text: {
+          en: "She also believes these points [of doctrine] just as if she had but one soul... and she proclaims them, and teaches them, and hands them down, with perfect harmony... For, although the languages of the world are dissimilar, yet the import of the tradition is one and the same.",
+          fr: "Elle croit aussi ces points [de doctrine] tout comme si elle n'avait qu'une seule âme... et elle les proclame, les enseigne et les transmet, avec une harmonie parfaite... Car, bien que les langues du monde soient dissemblables, la portée de la tradition est une et la même.",
+          es: "Ella también cree estos puntos [de doctrina] como si tuviera una sola alma... y los proclama, los enseña y los transmite, con perfecta armonía... Porque, aunque las lenguas del mundo son diferentes, el sentido de la tradición es uno y el mismo.",
+          de: "Sie glaubt auch diese Punkte [der Lehre], als ob sie nur eine Seele hätte... und sie verkündet sie und lehrt sie und überliefert sie mit vollkommener Harmonie... Denn obwohl die Sprachen der Welt unähnlich sind, ist der Inhalt der Tradition ein und derselbe.",
+        },
+        sourceReference: "Book 1, Ch. 10, §2",
+      },
+      {
+        id: "irenaeus-heresies-3-3",
+        author: {
+          en: "Saint Irenaeus of Lyon",
+          fr: "Saint Irénée de Lyon",
+          es: "San Ireneo de Lyon",
+          de: "Hl. Irenäus von Lyon",
+        },
+        work: {
+          en: "Against Heresies",
+          fr: "Contre les Hérésies",
+          es: "Contra las Herejías",
+          de: "Gegen die Häresien",
+        },
+        date: "c. 180 AD",
+        text: {
+          en: "It is within the power of all... to contemplate clearly the tradition of the apostles manifested throughout the whole world... by indicating that tradition derived from the apostles, of the very great, the very ancient, and universally known Church founded and organized at Rome...",
+          fr: "Il est au pouvoir de tous... de contempler clairement la tradition des apôtres manifestée dans le monde entier... en indiquant cette tradition dérivée des apôtres, de la très grande, très ancienne et universellement connue Église fondée et organisée à Rome...",
+          es: "Está al alcance de todos... contemplar claramente la tradición de los apóstoles manifestada en todo el mundo... indicando esa tradición derivada de los apóstoles, de la muy grande, muy antigua y universalmente conocida Iglesia fundada y organizada en Roma...",
+          de: "Es steht in der Macht aller... die Tradition der Apostel, die in der ganzen Welt manifestiert ist, klar zu betrachten... indem wir auf jene Tradition hinweisen, die von den Aposteln stammt, der sehr großen, sehr alten und allgemein bekannten Kirche, die in Rom gegründet und organisiert wurde...",
+        },
+        sourceReference: "Book 3, Ch. 3, §§1-2",
+      },
+      {
+        id: "irenaeus-heresies-3-4",
+        author: {
+          en: "Saint Irenaeus of Lyon",
+          fr: "Saint Irénée de Lyon",
+          es: "San Ireneo de Lyon",
+          de: "Hl. Irenäus von Lyon",
+        },
+        work: {
+          en: "Against Heresies",
+          fr: "Contre les Hérésies",
+          es: "Contra las Herejías",
+          de: "Gegen die Häresien",
+        },
+        date: "c. 180 AD",
+        text: {
+          en: "On this account are we bound to avoid them, but to make choice of the thing pertaining to the Church with the utmost diligence, and to lay hold of the tradition of the truth... Would it not be necessary, [in that case,] to follow the course of the tradition which they handed down to those to whom they did commit the Churches?",
+          fr: "C'est pourquoi nous sommes tenus de les éviter, mais de choisir ce qui concerne l'Église avec la plus grande diligence, et de saisir la tradition de la vérité... Ne serait-il pas nécessaire, [dans ce cas,] de suivre le cours de la tradition qu'ils ont transmise à ceux à qui ils ont confié les Églises ?",
+          es: "Por esta razón estamos obligados a evitarlos, pero a elegir lo que pertenece a la Iglesia con la mayor diligencia, y a aferrarnos a la tradición de la verdad... ¿No sería necesario, [en ese caso,] seguir el curso de la tradición que transmitieron a aquellos a quienes encomendaron las Iglesias?",
+          de: "Aus diesem Grund sind wir verpflichtet, sie zu meiden, aber das, was zur Kirche gehört, mit größter Sorgfalt zu wählen und die Tradition der Wahrheit zu ergreifen... Wäre es nicht notwendig, [in diesem Fall] dem Lauf der Tradition zu folgen, die sie denen überliefert haben, denen sie die Kirchen anvertraut haben?",
+        },
+        sourceReference: "Book 3, Ch. 4, §1",
+      },
+      {
+        id: "clement-alex-stromata-1",
+        author: {
+          en: "Saint Clement of Alexandria",
+          fr: "Saint Clément d'Alexandrie",
+          es: "San Clemente de Alejandría",
+          de: "Hl. Klemens von Alexandria",
+        },
+        work: {
+          en: "The Stromata",
+          fr: "Les Stromates",
+          es: "Los Stromata",
+          de: "Die Stromateis",
+        },
+        date: "c. 207 AD",
+        text: {
+          en: "Well, they preserving the tradition of the blessed doctrine derived directly from the holy apostles... And well I know that they will exult... solely on account of the preservation of the truth, according as they delivered it.",
+          fr: "Eh bien, ils préservent la tradition de la doctrine bénie dérivée directement des saints apôtres... Et je sais bien qu'ils exulteront... uniquement à cause de la préservation de la vérité, telle qu'ils l'ont transmise.",
+          es: "Pues bien, ellos preservando la tradición de la bendita doctrina derivada directamente de los santos apóstoles... Y bien sé que se regocijarán... únicamente por la preservación de la verdad, tal como la entregaron.",
+          de: "Nun, sie bewahren die Tradition der gesegneten Lehre, die direkt von den heiligen Aposteln stammt... Und ich weiß wohl, dass sie frohlocken werden... allein wegen der Bewahrung der Wahrheit, so wie sie sie überliefert haben.",
+        },
+        sourceReference: "Book 1, Ch. 1",
+      },
+      {
+        id: "origen-principles",
+        author: {
+          en: "Origen",
+          fr: "Origène",
+          es: "Orígenes",
+          de: "Origenes",
+        },
+        work: {
+          en: "On First Principles",
+          fr: "Des Principes",
+          es: "Sobre los Principios",
+          de: "Über die Prinzipien",
+        },
+        date: "c. 225 AD",
+        text: {
+          en: "Yet as the teaching of the Church, transmitted in orderly succession from the apostles, and remaining in the Churches to the present day, is still preserved, that alone is to be accepted as truth which differs in no respect from ecclesiastical and apostolic tradition.",
+          fr: "Pourtant, comme l'enseignement de l'Église, transmis en succession ordonnée depuis les apôtres, et demeurant dans les Églises jusqu'à ce jour, est encore préservé, cela seul doit être accepté comme vérité qui ne diffère en rien de la tradition ecclésiastique et apostolique.",
+          es: "Sin embargo, como la enseñanza de la Iglesia, transmitida en sucesión ordenada desde los apóstoles, y que permanece en las Iglesias hasta el día de hoy, todavía se conserva, solo debe aceptarse como verdad aquello que no difiere en ningún aspecto de la tradición eclesiástica y apostólica.",
+          de: "Da jedoch die Lehre der Kirche, die in geordneter Nachfolge von den Aposteln überliefert wurde und bis zum heutigen Tag in den Kirchen verbleibt, noch bewahrt wird, ist nur das als Wahrheit zu akzeptieren, was in keiner Weise von der kirchlichen und apostolischen Tradition abweicht.",
+        },
+        sourceReference: "Preface, §2",
+      },
+      {
+        id: "cyprian-letter-75",
+        author: {
+          en: "Saint Cyprian of Carthage",
+          fr: "Saint Cyprien de Carthage",
+          es: "San Cipriano de Cartago",
+          de: "Hl. Cyprian von Karthago",
+        },
+        work: {
+          en: "Letter 75",
+          fr: "Lettre 75",
+          es: "Carta 75",
+          de: "Brief 75",
+        },
+        date: "254 AD",
+        text: {
+          en: "Nor can he be reckoned as a bishop, who, succeeding to no one, and despising the evangelical and apostolic tradition, sprang from himself.",
+          fr: "Il ne peut pas non plus être compté comme évêque, celui qui, ne succédant à personne, et méprisant la tradition évangélique et apostolique, est sorti de lui-même.",
+          es: "Tampoco puede ser contado como obispo, quien, no sucediendo a nadie, y despreciando la tradición evangélica y apostólica, surgió de sí mismo.",
+          de: "Noch kann er als Bischof gerechnet werden, der, niemandem nachfolgend und die evangelische und apostolische Tradition verachtend, aus sich selbst entsprang.",
+        },
+        sourceReference: "§3",
+      },
+      {
+        id: "eusebius-history-4-21",
+        author: {
+          en: "Eusebius of Caesarea",
+          fr: "Eusèbe de Césarée",
+          es: "Eusebio de Cesarea",
+          de: "Eusebius von Cäsarea",
+        },
+        work: {
+          en: "Church History",
+          fr: "Histoire Ecclésiastique",
+          es: "Historia Eclesiástica",
+          de: "Kirchengeschichte",
+        },
+        date: "c. 312 AD",
+        text: {
+          en: "From them has come down to us in writing, the sound and orthodox faith received from apostolic tradition.",
+          fr: "D'eux nous est parvenue par écrit, la foi saine et orthodoxe reçue de la tradition apostolique.",
+          es: "De ellos nos ha llegado por escrito, la fe sana y ortodoxa recibida de la tradición apostólica.",
+          de: "Von ihnen ist uns schriftlich der gesunde und orthodoxe Glaube überliefert worden, der aus der apostolischen Tradition empfangen wurde.",
+        },
+        sourceReference: "Book 4, Ch. 21, §1",
+      },
+      {
+        id: "athanasius-festal-2",
+        author: {
+          en: "Saint Athanasius",
+          fr: "Saint Athanase",
+          es: "San Atanasio",
+          de: "Hl. Athanasius",
+        },
+        work: {
+          en: "Festal Letter 2",
+          fr: "Lettre Festale 2",
+          es: "Carta Festal 2",
+          de: "Osterfestbrief 2",
+        },
+        date: "330 AD",
+        text: {
+          en: "Again we write, again keeping to the apostolic traditions, we remind each other when we come together for prayer...",
+          fr: "De nouveau nous écrivons, gardant de nouveau les traditions apostoliques, nous nous rappelons les uns aux autres lorsque nous nous réunissons pour la prière...",
+          es: "De nuevo escribimos, guardando de nuevo las tradiciones apostólicas, nos recordamos mutuamente cuando nos reunimos para la oración...",
+          de: "Wieder schreiben wir, wieder halten wir uns an die apostolischen Traditionen, wir erinnern uns gegenseitig, wenn wir zum Gebet zusammenkommen...",
+        },
+        sourceReference: "§7",
+      },
+      {
+        id: "athanasius-fragment",
+        author: {
+          en: "Saint Athanasius",
+          fr: "Saint Athanase",
+          es: "San Atanasio",
+          de: "Hl. Athanasius",
+        },
+        work: {
+          en: "Fragment",
+          fr: "Fragment",
+          es: "Fragmento",
+          de: "Fragment",
+        },
+        date: "c. 330-373 AD",
+        text: {
+          en: "For it has come down to you from Apostolic tradition, and frequently has accursed envy wished to unsettle it, but has not been able.",
+          fr: "Car cela vous est parvenu de la tradition apostolique, et fréquemment l'envie maudite a souhaité l'ébranler, mais n'a pas pu.",
+          es: "Porque os ha llegado de la tradición apostólica, y frecuentemente la envidia maldita ha deseado perturbarla, pero no ha podido.",
+          de: "Denn es ist von der apostolischen Tradition zu euch gekommen, und häufig wollte der verfluchte Neid es erschüttern, konnte es aber nicht.",
+        },
+        sourceReference: "Fragment",
+      },
+    ],
+  },
+
+  {
+    id: "apostolic-succession",
+    title: {
+      en: "Apostolic Succession",
+      fr: "La Succession Apostolique",
+      es: "La Sucesión Apostólica",
+      de: "Apostolische Sukzession",
+    },
+    icon: "Users",
+    quotes: [
+      {
+        id: "clement-corinthians-42-44",
+        author: {
+          en: "Saint Pope Clement I",
+          fr: "Saint Pape Clément Ier",
+          es: "San Papa Clemente I",
+          de: "Hl. Papst Klemens I.",
+        },
+        work: {
+          en: "Letter to the Corinthians",
+          fr: "Lettre aux Corinthiens",
+          es: "Carta a los Corintios",
+          de: "Brief an die Korinther",
+        },
+        date: "c. 80 AD",
+        text: {
+          en: "Our apostles also knew... they appointed those [ministers] already mentioned, and afterwards gave instructions, that when these should fall asleep, other approved men should succeed them in their ministry.",
+          fr: "Nos apôtres savaient aussi... ils nommèrent ceux [les ministres] déjà mentionnés, et ensuite donnèrent des instructions pour que, lorsqu'ils s'endormiraient, d'autres hommes approuvés leur succèdent dans leur ministère.",
+          es: "Nuestros apóstoles también sabían... nombraron a aquellos [ministros] ya mencionados, y luego dieron instrucciones de que, cuando estos durmieran, otros hombres aprobados les sucedieran en su ministerio.",
+          de: "Unsere Apostel wussten auch... sie setzten jene [Diener] bereits erwähnten ein und gaben danach Anweisungen, dass, wenn diese entschlafen sollten, andere bewährte Männer ihnen in ihrem Dienst nachfolgen sollten.",
+        },
+        sourceReference: "§§42, 44",
+      },
+      {
+        id: "hegesippus-memoirs",
+        author: {
+          en: "Saint Hegesippus",
+          fr: "Saint Hégésippe",
+          es: "San Hegesipo",
+          de: "Hl. Hegesippus",
+        },
+        work: {
+          en: "Memoirs, quoted in Eusebius",
+          fr: "Mémoires, cités dans Eusèbe",
+          es: "Memorias, citado en Eusebio",
+          de: "Memoiren, zitiert in Eusebius",
+        },
+        date: "c. 180 AD",
+        text: {
+          en: "And Anicetus was succeeded by Soter, and he by Eleutherus. In every succession, and in every city that is held which is preached by the law and the prophets and the Lord.",
+          fr: "Et Anicet fut succédé par Soter, et lui par Éleuthère. Dans chaque succession, et dans chaque ville, ce qui est prêché par la loi, les prophètes et le Seigneur est maintenu.",
+          es: "Y a Aniceto le sucedió Sotero, y a él Eleuterio. En cada sucesión, y en cada ciudad se mantiene lo que es predicado por la ley, los profetas y el Señor.",
+          de: "Und Anicetus wurde von Soter nachgefolgt, und er von Eleutherus. In jeder Sukzession und in jeder Stadt wird das gehalten, was durch das Gesetz und die Propheten und den Herrn gepredigt wird.",
+        },
+        sourceReference: "Book 4, Ch. 22, §3",
+      },
+      {
+        id: "irenaeus-heresies-3-3-1",
+        author: {
+          en: "Saint Irenaeus of Lyon",
+          fr: "Saint Irénée de Lyon",
+          es: "San Ireneo de Lyon",
+          de: "Hl. Irenäus von Lyon",
+        },
+        work: {
+          en: "Against Heresies",
+          fr: "Contre les Hérésies",
+          es: "Contra las Herejías",
+          de: "Gegen die Häresien",
+        },
+        date: "c. 180 AD",
+        text: {
+          en: "We are in a position to reckon up those who were by the apostles instituted bishops in the Churches, and [to demonstrate] the succession of these men to our own times... they were leaving behind as their successors, delivering up their own place of government to these men.",
+          fr: "Nous sommes en mesure de compter ceux qui ont été institués évêques dans les Églises par les apôtres, et [de démontrer] la succession de ces hommes jusqu'à nos jours... ils laissaient derrière eux comme leurs successeurs, leur transmettant leur propre place de gouvernement.",
+          es: "Estamos en condiciones de enumerar a aquellos que fueron instituidos obispos en las Iglesias por los apóstoles, y [demostrar] la sucesión de estos hombres hasta nuestros tiempos... los dejaban como sus sucesores, entregándoles su propio lugar de gobierno.",
+          de: "Wir sind in der Lage, diejenigen aufzuzählen, die von den Aposteln als Bischöfe in den Kirchen eingesetzt wurden, und [zu demonstrieren] die Nachfolge dieser Männer bis in unsere eigene Zeit... sie ließen sie als ihre Nachfolger zurück und übergaben ihnen ihren eigenen Platz der Leitung.",
+        },
+        sourceReference: "Book 3, Ch. 3, §1",
+      },
+      {
+        id: "irenaeus-heresies-3-3-2",
+        author: {
+          en: "Saint Irenaeus of Lyon",
+          fr: "Saint Irénée de Lyon",
+          es: "San Ireneo de Lyon",
+          de: "Hl. Irenäus von Lyon",
+        },
+        work: {
+          en: "Against Heresies",
+          fr: "Contre les Hérésies",
+          es: "Contra las Herejías",
+          de: "Gegen die Häresien",
+        },
+        date: "c. 180 AD",
+        text: {
+          en: "Since, however, it would be very tedious... to reckon up the successions of all the Churches... by indicating that tradition derived from the apostles, of the... Church founded and organized at Rome... which comes down to our time by means of the successions of the bishops.",
+          fr: "Cependant, comme il serait très fastidieux... d'énumérer les successions de toutes les Églises... en indiquant cette tradition dérivée des apôtres, de la... Église fondée et organisée à Rome... qui parvient jusqu'à notre temps par le moyen des successions des évêques.",
+          es: "Dado que sería muy tedioso... enumerar las sucesiones de todas las Iglesias... indicando esa tradición derivada de los apóstoles, de la... Iglesia fundada y organizada en Roma... que llega hasta nuestro tiempo por medio de las sucesiones de los obispos.",
+          de: "Da es jedoch sehr mühsam wäre... die Nachfolgen aller Kirchen aufzuzählen... indem wir auf jene Tradition hinweisen, die von den Aposteln stammt, der... Kirche, die in Rom gegründet und organisiert wurde... die durch die Nachfolgen der Bischöfe bis auf unsere Zeit herabgekommen ist.",
+        },
+        sourceReference: "Book 3, Ch. 3, §2",
+      },
+      {
+        id: "irenaeus-heresies-3-4-1",
+        author: {
+          en: "Saint Irenaeus of Lyon",
+          fr: "Saint Irénée de Lyon",
+          es: "San Ireneo de Lyon",
+          de: "Hl. Irenäus von Lyon",
+        },
+        work: {
+          en: "Against Heresies",
+          fr: "Contre les Hérésies",
+          es: "Contra las Herejías",
+          de: "Gegen die Häresien",
+        },
+        date: "c. 180 AD",
+        text: {
+          en: "Suppose there arise a dispute... should we not have recourse to the most ancient Churches with which the apostles held constant intercourse... Would it not be necessary... to follow the course of the tradition which they handed down to those to whom they did commit the Churches?",
+          fr: "Supposez qu'un différend s'élève... ne devrions-nous pas avoir recours aux Églises les plus anciennes avec lesquelles les apôtres ont eu des relations constantes... Ne serait-il pas nécessaire... de suivre le cours de la tradition qu'ils ont transmise à ceux à qui ils ont confié les Églises ?",
+          es: "Supongamos que surge una disputa... ¿no deberíamos recurrir a las Iglesias más antiguas con las que los apóstoles mantuvieron constante relación... ¿No sería necesario... seguir el curso de la tradición que ellos transmitieron a aquellos a quienes encomendaron las Iglesias?",
+          de: "Angenommen, es entstünde ein Streit... sollten wir nicht auf die ältesten Kirchen zurückgreifen, mit denen die Apostel ständigen Verkehr hatten... Wäre es nicht notwendig... dem Lauf der Tradition zu folgen, die sie denen überlieferten, denen sie die Kirchen anvertrauten?",
+        },
+        sourceReference: "Book 3, Ch. 4, §1",
+      },
+      {
+        id: "irenaeus-heresies-4-26",
+        author: {
+          en: "Saint Irenaeus of Lyon",
+          fr: "Saint Irénée de Lyon",
+          es: "San Ireneo de Lyon",
+          de: "Hl. Irenäus von Lyon",
+        },
+        work: {
+          en: "Against Heresies",
+          fr: "Contre les Hérésies",
+          es: "Contra las Herejías",
+          de: "Gegen die Häresien",
+        },
+        date: "c. 180 AD",
+        text: {
+          en: "Wherefore it is incumbent to obey the presbyters [priests] who are in the Church—those who, as I have shown, possess the succession from the apostles; those who, together with the succession of the episcopate [bishops], have received the certain gift of truth...",
+          fr: "C'est pourquoi il faut obéir aux presbytres [prêtres] qui sont dans l'Église, — ceux qui, comme je l'ai montré, possèdent la succession depuis les apôtres ; ceux qui, avec la succession de l'épiscopat [évêques], ont reçu le don certain de la vérité...",
+          es: "Por lo cual es menester obedecer a los presbíteros [sacerdotes] que están en la Iglesia, — aquellos que, como he demostrado, poseen la sucesión desde los apóstoles; aquellos que, junto con la sucesión del episcopado [obispos], han recibido el don cierto de la verdad...",
+          de: "Deshalb ist es geboten, den Presbytern [Priestern] zu gehorchen, die in der Kirche sind — jenen, die, wie ich gezeigt habe, die Nachfolge von den Aposteln besitzen; jenen, die zusammen mit der Nachfolge im Episkopat [Bischofsamt] die sichere Gnadengabe der Wahrheit empfangen haben...",
+        },
+        sourceReference: "Book 4, Ch. 26, §2",
+      },
+      {
+        id: "irenaeus-heresies-4-33",
+        author: {
+          en: "Saint Irenaeus of Lyon",
+          fr: "Saint Irénée de Lyon",
+          es: "San Ireneo de Lyon",
+          de: "Hl. Irenäus von Lyon",
+        },
+        work: {
+          en: "Against Heresies",
+          fr: "Contre les Hérésies",
+          es: "Contra las Herejías",
+          de: "Gegen die Häresien",
+        },
+        date: "c. 180 AD",
+        text: {
+          en: "True knowledge is [that which consists in] the doctrine of the apostles, and the ancient constitution of the Church throughout all the world, and the distinctive manifestation of the body of Christ according to the successions of the bishops, by which they have handed down that Church which exists in every place...",
+          fr: "La vraie connaissance est [celle qui consiste dans] la doctrine des apôtres, et l'ancienne constitution de l'Église dans le monde entier, et la manifestation distinctive du corps du Christ selon les successions des évêques, par lesquelles ils ont transmis cette Église qui existe en tout lieu...",
+          es: "El verdadero conocimiento es [el que consiste en] la doctrina de los apóstoles, y la antigua constitución de la Iglesia en todo el mundo, y la manifestación distintiva del cuerpo de Cristo según las sucesiones de los obispos, por las cuales han transmitido esa Iglesia que existe en todo lugar...",
+          de: "Wahres Wissen ist [das, was besteht in] der Lehre der Apostel und der alten Verfassung der Kirche in der ganzen Welt und der deutlichen Offenbarung des Leibes Christi gemäß den Nachfolgen der Bischöfe, durch die sie jene Kirche überliefert haben, die an jedem Ort besteht...",
+        },
+        sourceReference: "Book 4, Ch. 33, §8",
+      },
+      {
+        id: "tertullian-prescription-20-21",
+        author: {
+          en: "Tertullian",
+          fr: "Tertullien",
+          es: "Tertuliano",
+          de: "Tertullian",
+        },
+        work: {
+          en: "Prescription Against Heretics",
+          fr: "Prescription Contre les Hérétiques",
+          es: "Prescripción Contra los Herejes",
+          de: "Die Prozeßeinrede gegen die Häretiker",
+        },
+        date: "c. 200 AD",
+        text: {
+          en: "They [the apostles] then in like manner founded churches in every city, from which all the other churches... derived the tradition of the faith... all are apostolic, while they are all proved to be one... all doctrine which agrees with the apostolic churches... must be reckoned for truth, as undoubtedly containing that which the (said) churches received from the apostles, the apostles from Christ, Christ from God.",
+          fr: "Ils [les apôtres] fondèrent de même des églises dans chaque ville, d'où toutes les autres églises... ont dérivé la tradition de la foi... toutes sont apostoliques, tandis qu'il est prouvé que toutes sont une... toute doctrine qui s'accorde avec les églises apostoliques... doit être comptée pour vérité, comme contenant indubitablement ce que les (dites) églises ont reçu des apôtres, les apôtres du Christ, le Christ de Dieu.",
+          es: "Ellos [los apóstoles] de igual manera fundaron iglesias en cada ciudad, de las cuales todas las demás iglesias... derivaron la tradición de la fe... todas son apostólicas, mientras que todas demuestran ser una... toda doctrina que concuerda con las iglesias apostólicas... debe ser considerada como verdad, por contener indudablemente aquello que (dichas) iglesias recibieron de los apóstoles, los apóstoles de Cristo, Cristo de Dios.",
+          de: "Sie [die Apostel] gründeten dann in gleicher Weise Kirchen in jeder Stadt, von denen alle anderen Kirchen... die Überlieferung des Glaubens ableiteten... alle sind apostolisch, da sie alle als eins erwiesen werden... alle Lehre, die mit den apostolischen Kirchen übereinstimmt... muss als Wahrheit gelten, da sie zweifellos das enthält, was die (besagten) Kirchen von den Aposteln, die Apostel von Christus, Christus von Gott empfangen haben.",
+        },
+        sourceReference: "§§20-21",
+      },
+      {
+        id: "tertullian-prescription-32",
+        author: {
+          en: "Tertullian",
+          fr: "Tertullien",
+          es: "Tertuliano",
+          de: "Tertullian",
+        },
+        work: {
+          en: "Prescription Against Heretics",
+          fr: "Prescription Contre les Hérétiques",
+          es: "Prescripción Contra los Herejes",
+          de: "Die Prozeßeinrede gegen die Häretiker",
+        },
+        date: "c. 200 AD",
+        text: {
+          en: "Let them produce the original records of their churches; let them unfold the roll of their bishops, running down in due succession from the beginning... For this is the manner in which the apostolic churches transmit their registers: as the church of Smyrna, which records that Polycarp was placed therein by John; as also the church of Rome, which makes Clement to have been ordained in like manner by Peter.",
+          fr: "Qu'ils produisent les archives originales de leurs églises ; qu'ils déroulent la liste de leurs évêques, descendant en succession régulière depuis le commencement... Car c'est de cette manière que les églises apostoliques transmettent leurs registres : comme l'église de Smyrne, qui rapporte que Polycarpe y a été placé par Jean ; comme aussi l'église de Rome, qui fait que Clément a été ordonné de la même manière par Pierre.",
+          es: "Que presenten los registros originales de sus iglesias; que desplieguen la lista de sus obispos, descendiendo en debida sucesión desde el principio... Pues esta es la manera en que las iglesias apostólicas transmiten sus registros: como la iglesia de Esmirna, que registra que Policarpo fue puesto allí por Juan; como también la iglesia de Roma, que hace que Clemente haya sido ordenado de igual manera por Pedro.",
+          de: "Mögen sie die Originalarchive ihrer Kirchen vorlegen; mögen sie die Rolle ihrer Bischöfe entfalten, die in gebührender Nachfolge von Anfang an herabläuft... Denn dies ist die Art und Weise, wie die apostolischen Kirchen ihre Register übermitteln: wie die Kirche von Smyrna, die berichtet, dass Polykarp von Johannes dorthin eingesetzt wurde; wie auch die Kirche von Rom, die Clemens auf ähnliche Weise von Petrus ordiniert haben lässt.",
+        },
+        sourceReference: "§32",
+      },
+      {
+        id: "tertullian-marcion-4-2",
+        author: {
+          en: "Tertullian",
+          fr: "Tertullien",
+          es: "Tertuliano",
+          de: "Tertullian",
+        },
+        work: {
+          en: "Against Marcion",
+          fr: "Contre Marcion",
+          es: "Contra Marción",
+          de: "Gegen Marcion",
+        },
+        date: "c. 209 AD",
+        text: {
+          en: "Inasmuch, therefore, as the enlightener of St. Luke himself [St. Paul] desired the authority of his predecessors for both his own faith and preaching, how much more may not I require for Luke’s Gospel that which was necessary for the Gospel of his master.",
+          fr: "Par conséquent, dans la mesure où l'illuminateur de Saint Luc lui-même [Saint Paul] désirait l'autorité de ses prédécesseurs à la fois pour sa propre foi et sa prédication, combien plus ne puis-je pas exiger pour l'Évangile de Luc ce qui était nécessaire pour l'Évangile de son maître.",
+          es: "Por lo tanto, en la medida en que el propio iluminador de San Lucas [San Pablo] deseaba la autoridad de sus predecesores tanto para su propia fe como para su predicación, ¿cuánto más no puedo yo exigir para el Evangelio de Lucas aquello que fue necesario para el Evangelio de su maestro?",
+          de: "Insofern also der Erleuchter des Lukas selbst [der hl. Paulus] die Autorität seiner Vorgänger sowohl für seinen eigenen Glauben als auch für seine Predigt wünschte, wie viel mehr darf ich nicht für das Lukasevangelium das fordern, was für das Evangelium seines Meisters notwendig war.",
+        },
+        sourceReference: "Book 4, Ch. 2",
+      },
+      {
+        id: "cyprian-letter-75-3",
+        author: {
+          en: "Saint Cyprian of Carthage",
+          fr: "Saint Cyprien de Carthage",
+          es: "San Cipriano de Cartago",
+          de: "Hl. Cyprian von Karthago",
+        },
+        work: {
+          en: "Letter 75",
+          fr: "Lettre 75",
+          es: "Carta 75",
+          de: "Brief 75",
+        },
+        date: "254 AD",
+        text: {
+          en: "But if she was with Cornelius, who succeeded the bishop Fabian by lawful ordination... Novatian is not in the Church; nor can he be reckoned as a bishop, who, succeeding to no one, and despising the evangelical and apostolic tradition, sprang from himself.",
+          fr: "Mais si elle était avec Corneille, qui succéda à l'évêque Fabien par une ordination légitime... Novatien n'est pas dans l'Église ; il ne peut pas non plus être compté comme évêque, lui qui, ne succédant à personne et méprisant la tradition évangélique et apostolique, est sorti de lui-même.",
+          es: "Pero si estaba con Cornelio, que sucedió al obispo Fabián por ordenación legítima... Novaciano no está en la Iglesia; ni puede ser contado como obispo, quien, no sucediendo a nadie y despreciando la tradición evangélica y apostólica, surgió de sí mismo.",
+          de: "Wenn sie aber bei Cornelius war, der dem Bischof Fabian durch rechtmäßige Ordination nachfolgte... ist Novatian nicht in der Kirche; noch kann er als Bischof gerechnet werden, der, niemandem nachfolgend und die evangelische und apostolische Tradition verachtend, aus sich selbst entsprang.",
+        },
+        sourceReference: "§3",
+      },
+      {
+        id: "gregory-nazianzus-oration-2",
+        author: {
+          en: "Saint Gregory Nazianzus",
+          fr: "Saint Grégoire de Nazianze",
+          es: "San Gregorio Nacianceno",
+          de: "Hl. Gregor von Nazianz",
+        },
+        work: {
+          en: "Oration 2",
+          fr: "Oraison 2",
+          es: "Oración 2",
+          de: "Rede 2",
+        },
+        date: "362 AD",
+        text: {
+          en: "I will, with your permission, pass by all others... for instance, Moses, Aaron, Joshua, Elijah, Elisha, the Judges, Samuel, David, the company of Prophets, John, the Twelve Apostles, and their successors, who with many toils and labors exercised their authority...",
+          fr: "Je passerai, avec votre permission, sous silence tous les autres... par exemple, Moïse, Aaron, Josué, Élie, Élisée, les Juges, Samuel, David, la compagnie des Prophètes, Jean, les Douze Apôtres et leurs successeurs, qui avec beaucoup de peines et de travaux ont exercé leur autorité...",
+          es: "Pasaré por alto, con su permiso, a todos los demás... por ejemplo, Moisés, Aarón, Josué, Elías, Eliseo, los Jueces, Samuel, David, la compañía de los Profetas, Juan, los Doce Apóstoles y sus sucesores, que con muchas fatigas y trabajos ejercieron su autoridad...",
+          de: "Ich will, mit eurer Erlaubnis, alle anderen übergehen... zum Beispiel Mose, Aaron, Josua, Elia, Elisa, die Richter, Samuel, David, die Schar der Propheten, Johannes, die Zwölf Apostel und ihre Nachfolger, die mit vielen Mühen und Arbeiten ihre Autorität ausübten...",
+        },
+        sourceReference: "§52",
+      },
+      {
+        id: "jerome-letter-14",
+        author: {
+          en: "Saint Jerome",
+          fr: "Saint Jérôme",
+          es: "San Jerónimo",
+          de: "Hl. Hieronymus",
+        },
+        work: {
+          en: "Letter 14",
+          fr: "Lettre 14",
+          es: "Carta 14",
+          de: "Brief 14",
+        },
+        date: "c. 376 AD",
+        text: {
+          en: "Far be it from me to censure the successors of the apostles, who with holy words consecrate the body of Christ, and who make us Christians. Having the keys of the kingdom of heaven, they judge men to some extent before the day of judgment...",
+          fr: "Loin de moi de critiquer les successeurs des apôtres, qui par des paroles saintes consacrent le corps du Christ, et qui font de nous des chrétiens. Ayant les clés du royaume des cieux, ils jugent les hommes dans une certaine mesure avant le jour du jugement...",
+          es: "Lejos de mí censurar a los sucesores de los apóstoles, que con palabras santas consagran el cuerpo de Cristo, y que nos hacen cristianos. Teniendo las llaves del reino de los cielos, juzgan a los hombres en cierta medida antes del día del juicio...",
+          de: "Fern sei es von mir, die Nachfolger der Apostel zu tadeln, die mit heiligen Worten den Leib Christi weihen und uns zu Christen machen. Da sie die Schlüssel des Himmelreichs haben, richten sie die Menschen gewissermaßen schon vor dem Tag des Gerichts...",
+        },
+        sourceReference: "§8",
+      },
+      {
+        id: "augustine-epistle-manichaeus",
+        author: {
+          en: "Saint Augustine",
+          fr: "Saint Augustin",
+          es: "San Agustín",
+          de: "Hl. Augustinus",
+        },
+        work: {
+          en: "Against the Fundamental Epistle of Manichaeus",
+          fr: "Contre la Lettre Fondamentale de Manès",
+          es: "Contra la Epístola Fundamental de Maniqueo",
+          de: "Gegen den Grundlegenden Brief des Manichäus",
+        },
+        date: "397 AD",
+        text: {
+          en: "The succession of priests keeps me, beginning from the very seat of the Apostle Peter [Rome], to whom the Lord, after His resurrection, gave it in charge to feed His sheep, down to the present episcopate.",
+          fr: "La succession des prêtres me retient, commençant depuis le siège même de l'Apôtre Pierre [Rome], à qui le Seigneur, après Sa résurrection, a confié la charge de paître Ses brebis, jusqu'à l'épiscopat actuel.",
+          es: "Me mantiene la sucesión de sacerdotes, comenzando desde la sede misma del Apóstol Pedro [Roma], a quien el Señor, después de Su resurrección, encargó apacentar Sus ovejas, hasta el episcopado actual.",
+          de: "Die Nachfolge der Priester hält mich, angefangen vom Stuhl des Apostels Petrus [Rom] selbst, dem der Herr nach Seiner Auferstehung den Auftrag gab, Seine Schafe zu weiden, bis hin zum gegenwärtigen Episkopat.",
+        },
+        sourceReference: "§5",
+      },
+      {
+        id: "augustine-faustus-11",
+        author: {
+          en: "Saint Augustine",
+          fr: "Saint Augustin",
+          es: "San Agustín",
+          de: "Hl. Augustinus",
+        },
+        work: {
+          en: "Reply to Faustus the Manichaean",
+          fr: "Réponse à Fauste le Manichéen",
+          es: "Respuesta a Fausto el Maniqueo",
+          de: "Antwort an Faustus den Manichäer",
+        },
+        date: "c. 400 AD",
+        text: {
+          en: "The authority of these books [of Scripture] has come down to us from the apostles through the successions of bishops and the extension of the Church...",
+          fr: "L'autorité de ces livres [de l'Écriture] nous est parvenue des apôtres à travers les successions d'évêques et l'extension de l'Église...",
+          es: "La autoridad de estos libros [de la Escritura] nos ha llegado desde los apóstoles a través de las sucesiones de obispos y la extensión de la Iglesia...",
+          de: "Die Autorität dieser Bücher [der Schrift] ist von den Aposteln durch die Nachfolgen der Bischöfe und die Ausbreitung der Kirche auf uns gekommen...",
+        },
+        sourceReference: "Book 11, §5",
+      },
+      {
+        id: "augustine-faustus-33",
+        author: {
+          en: "Saint Augustine",
+          fr: "Saint Augustin",
+          es: "San Agustín",
+          de: "Hl. Augustinus",
+        },
+        work: {
+          en: "Reply to Faustus the Manichaean",
+          fr: "Réponse à Fauste le Manichéen",
+          es: "Respuesta a Fausto el Maniqueo",
+          de: "Antwort an Faustus den Manichäer",
+        },
+        date: "c. 400 AD",
+        text: {
+          en: "...you should recognize that authority which from the time of Christ Himself, through the ministry of His apostles, and through a regular succession of bishops in the seats of the apostles, has been preserved to our own day...",
+          fr: "...vous devriez reconnaître cette autorité qui, depuis le temps du Christ Lui-même, par le ministère de Ses apôtres, et par une succession régulière d'évêques dans les sièges des apôtres, a été préservée jusqu'à nos jours...",
+          es: "...deberían reconocer esa autoridad que desde el tiempo de Cristo Mismo, a través del ministerio de Sus apóstoles, y a través de una sucesión regular de obispos en las sedes de los apóstoles, se ha conservado hasta nuestros días...",
+          de: "...ihr solltet jene Autorität anerkennen, die von der Zeit Christi Selbst an, durch den Dienst Seiner Apostel und durch eine regelmäßige Nachfolge von Bischöfen auf den Sitzen der Apostel, bis auf unseren heutigen Tag bewahrt worden ist...",
+        },
+        sourceReference: "Book 33, §9",
+      },
+      {
+        id: "augustine-petilian",
+        author: {
+          en: "Saint Augustine",
+          fr: "Saint Augustin",
+          es: "San Agustín",
+          de: "Hl. Augustinus",
+        },
+        work: {
+          en: "Answer to Petilian the Donatist",
+          fr: "Réponse à Pétilien le Donatiste",
+          es: "Respuesta a Petiliano el Donatista",
+          de: "Antwort an Petilian den Donatisten",
+        },
+        date: "402 AD",
+        text: {
+          en: "...what has the chair done to you of the Roman Church, in which Peter sat, and which Anastasius fills to-day; or the chair of the Church of Jerusalem, in which James once sat, and in which John sits today, with which we are united in catholic unity...",
+          fr: "...que vous a fait la chaire de l'Église romaine, dans laquelle Pierre s'est assis, et qu'Anastase occupe aujourd'hui ; ou la chaire de l'Église de Jérusalem, dans laquelle Jacques s'est assis autrefois, et dans laquelle Jean est assis aujourd'hui, à laquelle nous sommes unis dans l'unité catholique...",
+          es: "...¿qué os ha hecho la cátedra de la Iglesia Romana, en la cual se sentó Pedro, y que Anastasio ocupa hoy; o la cátedra de la Iglesia de Jerusalén, en la cual se sentó Santiago una vez, y en la cual Juan se sienta hoy, con la que estamos unidos en unidad católica...",
+          de: "...was hat euch der Stuhl der römischen Kirche getan, auf dem Petrus saß und den Anastasius heute innehat; oder der Stuhl der Kirche von Jerusalem, auf dem einst Jakobus saß und auf dem heute Johannes sitzt, mit dem wir in katholischer Einheit verbunden sind...",
+        },
+        sourceReference: "Book 2, Ch. 51, §118",
+      },
+    ],
+  },
+
+  {
+    id: "papacy-invincibility",
+    title: {
+      en: "The Papacy and the Invincibility of the Church",
+      fr: "La Papauté et l'Invincibilité de l'Église",
+      es: "El Papado y la Invencibilidad de la Iglesia",
+      de: "Das Papsttum und die Unbesiegbarkeit der Kirche",
+    },
+    icon: "Key",
+    quotes: [
+      {
+        id: "clement-corinthians-1-59",
+        author: {
+          en: "Saint Pope Clement I",
+          fr: "Saint Pape Clément Ier",
+          es: "San Papa Clemente I",
+          de: "Hl. Papst Klemens I.",
+        },
+        work: {
+          en: "Letter to the Corinthians",
+          fr: "Lettre aux Corinthiens",
+          es: "Carta a los Corintios",
+          de: "Brief an die Korinther",
+        },
+        date: "c. 80 AD",
+        text: {
+          en: "The church of God which sojourns at Rome... If, however, any shall disobey the words spoken by Him through us, let them know that they will involve themselves in transgression and serious danger…",
+          fr: "L'Église de Dieu qui séjourne à Rome... Si, cependant, certains désobéissent aux paroles prononcées par Lui à travers nous, qu'ils sachent qu'ils s'impliqueront dans la transgression et un grave danger...",
+          es: "La iglesia de Dios que peregrina en Roma... Sin embargo, si alguno desobedece a las palabras dichas por Él a través de nosotros, sepa que se implicará en transgresión y grave peligro...",
+          de: "Die Kirche Gottes, die in Rom weilt... Wenn jedoch jemand den Worten, die von Ihm durch uns gesprochen wurden, nicht gehorcht, soll er wissen, dass er sich in Übertretung und ernste Gefahr begibt...",
+        },
+        sourceReference: "§§1, 59",
+      },
+      {
+        id: "clement-corinthians-63",
+        author: {
+          en: "Saint Pope Clement I",
+          fr: "Saint Pape Clément Ier",
+          es: "San Papa Clemente I",
+          de: "Hl. Papst Klemens I.",
+        },
+        work: {
+          en: "Letter to the Corinthians",
+          fr: "Lettre aux Corinthiens",
+          es: "Carta a los Corintios",
+          de: "Brief an die Korinther",
+        },
+        date: "c. 80 AD",
+        text: {
+          en: "Joy and gladness will you afford us, if you become obedient to the words written by us and through the Holy Spirit... We have sent men faithful and discreet... the same shall be witnesses between you and us.",
+          fr: "Vous nous procurerez joie et allégresse, si vous devenez obéissants aux paroles écrites par nous et par le Saint-Esprit... Nous avons envoyé des hommes fidèles et discrets... les mêmes seront témoins entre vous et nous.",
+          es: "Nos proporcionaréis alegría y gozo, si os hacéis obedientes a las palabras escritas por nosotros y por el Espíritu Santo... Hemos enviado hombres fieles y discretos... los mismos serán testigos entre vosotros y nosotros.",
+          de: "Freude und Frohsinn werdet ihr uns bereiten, wenn ihr den Worten gehorsam werdet, die von uns und durch den Heiligen Geist geschrieben wurden... Wir haben treue und kluge Männer gesandt... dieselben sollen Zeugen sein zwischen euch und uns.",
+        },
+        sourceReference: "§63",
+      },
+      {
+        id: "ignatius-romans-intro",
+        author: {
+          en: "Saint Ignatius of Antioch",
+          fr: "Saint Ignace d'Antioche",
+          es: "San Ignacio de Antioquía",
+          de: "Hl. Ignatius von Antiochien",
+        },
+        work: {
+          en: "Letter to the Romans",
+          fr: "Lettre aux Romains",
+          es: "Carta a los Romanos",
+          de: "Brief an die Römer",
+        },
+        date: "c. 107 AD",
+        text: {
+          en: "...the Church which is beloved and enlightened... which also presides in the place of the region of the Romans, worthy of God... and which presides over love, is named from Christ, and from the Father…",
+          fr: "...l'Église qui est aimée et illuminée... qui préside aussi à la place de la région des Romains, digne de Dieu... et qui préside à la charité, nommée du Christ et du Père...",
+          es: "...la Iglesia que es amada e iluminada... la que también preside en el lugar de la región de los Romanos, digna de Dios... y que preside sobre el amor, nombrada de Cristo y del Padre...",
+          de: "...die Kirche, die geliebt und erleuchtet ist... die auch den Vorsitz führt am Ort der Region der Römer, würdig Gottes... und die den Vorsitz führt in der Liebe, genannt nach Christus und dem Vater...",
+        },
+        sourceReference: "Intro",
+      },
+      {
+        id: "ignatius-romans-4",
+        author: {
+          en: "Saint Ignatius of Antioch",
+          fr: "Saint Ignace d'Antioche",
+          es: "San Ignacio de Antioquía",
+          de: "Hl. Ignatius von Antiochien",
+        },
+        work: {
+          en: "Letter to the Romans",
+          fr: "Lettre aux Romains",
+          es: "Carta a los Romanos",
+          de: "Brief an die Römer",
+        },
+        date: "c. 107 AD",
+        text: {
+          en: "I do not, as Peter and Paul, issue commandments unto you…",
+          fr: "Je ne vous donne pas des commandements comme Pierre et Paul...",
+          es: "No os doy mandamientos como Pedro y Pablo...",
+          de: "Ich erteile euch keine Befehle wie Petrus und Paulus...",
+        },
+        sourceReference: "§4",
+      },
+      {
+        id: "tatian-diatessaron",
+        author: {
+          en: "Tatian the Syrian",
+          fr: "Tatien le Syrien",
+          es: "Taciano el Sirio",
+          de: "Tatian der Syrer",
+        },
+        work: {
+          en: "Diatessaron",
+          fr: "Diatessaron",
+          es: "Diatessaron",
+          de: "Diatessaron",
+        },
+        date: "c. 160-175 AD",
+        text: {
+          en: "Simon Cephas answered and said, 'Thou art the Messiah, the Son of the living God.' ...thou art Cephas, and on this rock will I build my church; and the gates of Hades shall not prevail against it.",
+          fr: "Simon Céphas répondit et dit : 'Tu es le Messie, le Fils du Dieu vivant.' ...tu es Céphas, et sur ce roc je bâtirai mon église ; et les portes de l'Hadès ne prévaudront point contre elle.",
+          es: "Simón Cefas respondió y dijo: 'Tú eres el Mesías, el Hijo del Dios viviente.' ...tú eres Cefas, y sobre esta roca edificaré mi iglesia; y las puertas del Hades no prevalecerán contra ella.",
+          de: "Simon Kephas antwortete und sprach: 'Du bist der Messias, der Sohn des lebendigen Gottes.' ...du bist Kephas, und auf diesen Felsen will ich meine Kirche bauen; und die Pforten der Hölle werden sie nicht überwältigen.",
+        },
+        sourceReference: "§23 (Matt. 16:16-18)",
+      },
+      {
+        id: "dionysius-corinth-2-28",
+        author: {
+          en: "Saint Dionysius of Corinth",
+          fr: "Saint Denys de Corinthe",
+          es: "San Dionisio de Corinto",
+          de: "Hl. Dionysius von Korinth",
+        },
+        work: {
+          en: "Letter to Pope Soter (in Eusebius)",
+          fr: "Lettre au Pape Soter (dans Eusèbe)",
+          es: "Carta al Papa Soter (en Eusebio)",
+          de: "Brief an Papst Soter (in Eusebius)",
+        },
+        date: "c. 170 AD",
+        text: {
+          en: "You have thus by such an admonition bound together the planting of Peter and of Paul at Rome and Corinth. For both of them planted and likewise taught us in our Corinth. And they taught together in like manner in Italy, and suffered martyrdom at the same time.",
+          fr: "Vous avez ainsi, par une telle admonition, lié ensemble la plantation de Pierre et de Paul à Rome et à Corinthe. Car tous deux nous ont plantés et également enseignés dans notre Corinthe. Et ils ont enseigné ensemble de la même manière en Italie, et ont souffert le martyre en même temps.",
+          es: "Habéis así, por tal amonestación, unido la plantación de Pedro y de Pablo en Roma y Corinto. Porque ambos plantaron y también nos enseñaron en nuestra Corinto. Y enseñaron juntos de la misma manera en Italia, y sufrieron el martirio al mismo tiempo.",
+          de: "Ihr habt so durch eine solche Ermahnung die Pflanzung von Petrus und Paulus in Rom und Korinth miteinander verbunden. Denn beide haben in unserem Korinth gepflanzt und uns ebenso gelehrt. Und sie lehrten in gleicher Weise zusammen in Italien und erlitten zur selben Zeit das Martyrium.",
+        },
+        sourceReference: "Book 2, Ch. 28, §8",
+      },
+      {
+        id: "dionysius-corinth-4-23",
+        author: {
+          en: "Saint Dionysius of Corinth",
+          fr: "Saint Denys de Corinthe",
+          es: "San Dionisio de Corinto",
+          de: "Hl. Dionysius von Korinth",
+        },
+        work: {
+          en: "Letter to Pope Soter (in Eusebius)",
+          fr: "Lettre au Pape Soter (dans Eusèbe)",
+          es: "Carta al Papa Soter (en Eusebio)",
+          de: "Brief an Papst Soter (in Eusebius)",
+        },
+        date: "c. 170 AD",
+        text: {
+          en: "For from the beginning it has been your practice to do good to all the brethren... you Romans keep up the hereditary customs of the Romans, which your blessed bishop Soter has not only maintained, but also added to... To-day we have passed the Lord’s holy day, in which we have read your epistle... as also from the former epistle, which was written to us through Clement.",
+          fr: "Car depuis le commencement, c'est votre pratique de faire du bien à tous les frères... vous, Romains, gardez les coutumes héréditaires des Romains, que votre bienheureux évêque Soter n'a non seulement maintenues, mais aussi augmentées... Aujourd'hui, nous avons passé le saint jour du Seigneur, dans lequel nous avons lu votre épître... ainsi que de la précédente épître, qui nous a été écrite par Clément.",
+          es: "Porque desde el principio ha sido vuestra práctica hacer el bien a todos los hermanos... vosotros, los romanos, mantenéis las costumbres hereditarias de los romanos, que vuestro bienaventurado obispo Soter no solo ha mantenido, sino también aumentado... Hoy hemos pasado el santo día del Señor, en el cual hemos leído vuestra epístola... así como de la epístola anterior, que nos fue escrita por medio de Clemente.",
+          de: "Denn von Anfang an war es euer Brauch, allen Brüdern Gutes zu tun... ihr Römer haltet die ererbten Bräuche der Römer aufrecht, die euer seliger Bischof Soter nicht nur beibehalten, sondern auch vermehrt hat... Heute haben wir den heiligen Tag des Herrn begangen, an dem wir euren Brief gelesen haben... wie auch aus dem früheren Brief, der uns durch Klemens geschrieben wurde.",
+        },
+        sourceReference: "Book 4, Ch. 23, §§9-11",
+      },
+      {
+        id: "irenaeus-heresies-3-1",
+        author: {
+          en: "Saint Irenaeus of Lyon",
+          fr: "Saint Irénée de Lyon",
+          es: "San Ireneo de Lyon",
+          de: "Hl. Irenäus von Lyon",
+        },
+        work: {
+          en: "Against Heresies",
+          fr: "Contre les Hérésies",
+          es: "Contra las Herejías",
+          de: "Gegen die Häresien",
+        },
+        date: "c. 180 AD",
+        text: {
+          en: "Matthew also issued a written Gospel among the Hebrews in their own dialect, while Peter and Paul were preaching at Rome, and laying the foundations of the Church.",
+          fr: "Matthieu publia aussi un Évangile écrit parmi les Hébreux dans leur propre dialecte, pendant que Pierre et Paul prêchaient à Rome et posaient les fondements de l'Église.",
+          es: "Mateo también publicó un Evangelio escrito entre los hebreos en su propio dialecto, mientras Pedro y Pablo predicaban en Roma y ponían los cimientos de la Iglesia.",
+          de: "Matthäus gab auch ein geschriebenes Evangelium unter den Hebräern in ihrer eigenen Mundart heraus, während Petrus und Paulus in Rom predigten und die Grundlagen der Kirche legten.",
+        },
+        sourceReference: "Book 3, Ch. 1, §1",
+      },
+      {
+        id: "irenaeus-heresies-3-3",
+        author: {
+          en: "Saint Irenaeus of Lyon",
+          fr: "Saint Irénée de Lyon",
+          es: "San Ireneo de Lyon",
+          de: "Hl. Irenäus von Lyon",
+        },
+        work: {
+          en: "Against Heresies",
+          fr: "Contre les Hérésies",
+          es: "Contra las Herejías",
+          de: "Gegen die Häresien",
+        },
+        date: "c. 180 AD",
+        text: {
+          en: "For it is a matter of necessity that every Church should agree with this Church [Rome], on account of its pre-eminent authority... The blessed apostles... committed into the hands of Linus the office of the episcopate... To him succeeded Anacletus; and after him... Clement... Eleutherius does now, in the twelfth place from the apostles, hold the inheritance of the episcopate.",
+          fr: "Car il est nécessaire que toute Église s'accorde avec cette Église [Rome], à cause de son autorité prééminente... Les bienheureux apôtres... remirent entre les mains de Linus la charge de l'épiscopat... À lui succéda Anaclet... et après lui... Clément... Éleuthère détient maintenant, à la douzième place depuis les apôtres, l'héritage de l'épiscopat.",
+          es: "Porque es necesario que toda Iglesia esté de acuerdo con esta Iglesia [Roma], debido a su preeminente autoridad... Los bienaventurados apóstoles... encomendaron a Lino el oficio del episcopado... A él sucedió Anacleto; y después de él... Clemente... Eleuterio ocupa ahora, en el duodécimo lugar desde los apóstoles, la herencia del episcopado.",
+          de: "Denn es ist notwendig, dass jede Kirche mit dieser Kirche [Rom] übereinstimme, wegen ihres herausragenden Vorrangs... Die seligen Apostel... übergaben dem Linus das Amt des Episkopats... Auf ihn folgte Anaklet; und nach ihm... Klemens... Eleutherius hat jetzt, an zwölfter Stelle von den Aposteln, das Erbe des Episkopats inne.",
+        },
+        sourceReference: "Book 3, Ch. 3, §§2-3",
+      },
+      {
+        id: "clement-alex-stromata-6-15",
+        author: {
+          en: "Saint Clement of Alexandria",
+          fr: "Saint Clément d'Alexandrie",
+          es: "San Clemente de Alejandría",
+          de: "Hl. Klemens von Alexandria",
+        },
+        work: {
+          en: "The Stromata",
+          fr: "Les Stromates",
+          es: "Los Stromata",
+          de: "Die Stromateis",
+        },
+        date: "c. 207 AD",
+        text: {
+          en: "...according to the ecclesiastical rule, the exposition of the Scriptures explained by Him; and the ecclesiastical rule is the concord and harmony of the law and the prophets in the covenant delivered at the coming of the Lord.",
+          fr: "...selon la règle ecclésiastique, l'exposition des Écritures expliquée par Lui ; et la règle ecclésiastique est la concorde et l'harmonie de la loi et des prophètes dans l'alliance livrée à la venue du Seigneur.",
+          es: "...según la regla eclesiástica, la exposición de las Escrituras explicada por Él; y la regla eclesiástica es la concordia y armonía de la ley y los profetas en el pacto entregado en la venida del Señor.",
+          de: "...gemäß der kirchlichen Regel, die Auslegung der Schriften, die von Ihm erklärt wird; und die kirchliche Regel ist die Eintracht und Harmonie des Gesetzes und der Propheten im Bund, der bei der Ankunft des Herrn überliefert wurde.",
+        },
+        sourceReference: "Book 6, Ch. 15",
+      },
+      {
+        id: "clement-alex-eusebius-6-14",
+        author: {
+          en: "Saint Clement of Alexandria",
+          fr: "Saint Clément d'Alexandrie",
+          es: "San Clemente de Alejandría",
+          de: "Hl. Klemens von Alexandria",
+        },
+        work: {
+          en: "quoted in Eusebius, Church History",
+          fr: "cité dans Eusèbe, Histoire Ecclésiastique",
+          es: "citado en Eusebio, Historia Eclesiástica",
+          de: "zitiert in Eusebius, Kirchengeschichte",
+        },
+        date: "c. 200 AD",
+        text: {
+          en: "As Peter had preached the Word publicly at Rome, and declared the Gospel by the Spirit, many who were present requested that Mark, who had followed him for a long time and remembered his sayings, should write them out.",
+          fr: "Comme Pierre avait prêché la Parole publiquement à Rome, et déclaré l'Évangile par l'Esprit, beaucoup de ceux qui étaient présents demandèrent que Marc, qui l'avait suivi pendant longtemps et se souvenait de ses paroles, les mette par écrit.",
+          es: "Como Pedro había predicado la Palabra públicamente en Roma, y declarado el Evangelio por el Espíritu, muchos de los presentes solicitaron que Marcos, que lo había seguido durante mucho tiempo y recordaba sus dichos, los escribiera.",
+          de: "Da Petrus das Wort öffentlich in Rom gepredigt und das Evangelium durch den Geist verkündet hatte, baten viele, die anwesend waren, Markus, der ihm lange gefolgt war und sich an seine Worte erinnerte, diese aufzuschreiben.",
+        },
+        sourceReference: "Book 6, Ch. 14, §6",
+      },
+      {
+        id: "clement-alex-rich-man",
+        author: {
+          en: "Saint Clement of Alexandria",
+          fr: "Saint Clément d'Alexandrie",
+          es: "San Clemente de Alejandría",
+          de: "Hl. Klemens von Alexandria",
+        },
+        work: {
+          en: "Who is the Rich Man That Shall Be Saved?",
+          fr: "Quel riche sera sauvé ?",
+          es: "¿Qué rico se salvará?",
+          de: "Welcher Reiche wird gerettet werden?",
+        },
+        date: "c. 200 AD",
+        text: {
+          en: "Therefore on hearing those words, the blessed Peter, the chosen, the pre-eminent, the first of the disciples, for whom alone and Himself the Savior paid tribute, quickly seized and comprehended the saying.",
+          fr: "C'est pourquoi, en entendant ces paroles, le bienheureux Pierre, l'élu, le prééminent, le premier des disciples, pour qui seul et pour Lui-même le Sauveur paya le tribut, saisit et comprit rapidement la parole.",
+          es: "Por lo tanto, al oír esas palabras, el bienaventurado Pedro, el escogido, el preeminente, el primero de los discípulos, por quien únicamente y por Sí mismo el Salvador pagó el tributo, rápidamente captó y comprendió el dicho.",
+          de: "Als der selige Petrus, der Auserwählte, der Vorzüglichste, der Erste der Jünger, für den allein und für sich selbst der Erlöser die Steuer bezahlte, diese Worte hörte, erfasste er schnell den Sinn und verstand ihn.",
+        },
+        sourceReference: "§21",
+      },
+    ],
+  },
+
+  
+
+  {
+    id: "mary-mother",
+    title: {
+      en: "Saint Mary, Mother of God",
+      fr: "Sainte Marie, Mère de Dieu",
+      es: "Santa María, Madre de Dios",
+      de: "Heilige Maria, Mutter Gottes"
+    },
+    icon: "Sparkles",
+    quotes: [
+      {
+        id: "justin-dialogue-100",
+        author: { en: "Saint Justin Martyr", fr: "Saint Justin Martyr", es: "San Justino Mártir", de: "Hl. Justin der Märtyrer" },
+        work: { en: "Dialogue with Trypho", fr: "Dialogue avec Tryphon", es: "Diálogo con Trifón", de: "Dialog mit Trypho" },
+        date: "c. 155 AD",
+        text: {
+          en: "[Jesus] became man by the Virgin, in order that the disobedience which proceeded from the serpent might receive its destruction... For Eve... brought forth disobedience and death. But the Virgin Mary received faith and joy... and she replied, 'Be it unto me according to your word.' And by her has He been born... by whom God destroys both the serpent and those angels and men who are like him.",
+          fr: "[Jésus] s'est fait homme par la Vierge, afin que la désobéissance qui venait du serpent reçoive sa destruction... Car Ève... enfanta la désobéissance et la mort. Mais la Vierge Marie reçut la foi et la joie... et elle répondit : 'Qu'il me soit fait selon ta parole.' Et par elle Il est né... par qui Dieu détruit à la fois le serpent et les anges et les hommes qui lui ressemblent.",
+          es: "[Jesús] se hizo hombre por la Virgen, para que la desobediencia que procedía de la serpiente recibiera su destrucción... Porque Eva... dio a luz desobediencia y muerte. Pero la Virgen María recibió fe y alegría... y ella respondió: 'Hágase en mí según tu palabra.' Y por ella ha nacido Él... por quien Dios destruye tanto a la serpiente como a aquellos ángeles y hombres que son como él.",
+          de: "[Jesus] wurde Mensch durch die Jungfrau, damit der Ungehorsam, der von der Schlange ausging, seine Zerstörung empfange... Denn Eva... gebar Ungehorsam und Tod. Aber die Jungfrau Maria empfing Glauben und Freude... und sie antwortete: 'Mir geschehe nach deinem Wort.' Und durch sie ist Er geboren... durch den Gott sowohl die Schlange als auch jene Engel und Menschen vernichtet, die ihm gleich sind."
+        },
+        sourceReference: "§100"
+      },
+      {
+        id: "irenaeus-heresies-3-22",
+        author: { en: "Saint Irenaeus of Lyon", fr: "Saint Irénée de Lyon", es: "San Ireneo de Lyon", de: "Hl. Irenäus von Lyon" },
+        work: { en: "Against Heresies", fr: "Contre les Hérésies", es: "Contra las Herejías", de: "Gegen die Häresien" },
+        date: "c. 180 AD",
+        text: {
+          en: "Mary the Virgin is found obedient... having become disobedient, [Eve] was made the cause of death, both to herself and to the entire human race; so also did Mary... by yielding obedience, become the cause of salvation, both to herself and the whole human race... And thus also it was that the knot of Eve’s disobedience was loosed by the obedience of Mary. For what the virgin Eve had bound fast through unbelief, this did the virgin Mary set free through faith.",
+          fr: "Marie la Vierge se montre obéissante... étant devenue désobéissante, [Ève] devint la cause de la mort, et pour elle-même et pour tout le genre humain ; de même Marie... en obéissant, devint la cause du salut, et pour elle-même et pour tout le genre humain... Et c'est ainsi que le nœud de la désobéissance d'Ève fut dénoué par l'obéissance de Marie. Car ce que la vierge Ève avait lié fermement par l'incrédulité, la vierge Marie le délia par la foi.",
+          es: "Se halla a María la Virgen obediente... habiéndose vuelto desobediente, [Eva] se convirtió en causa de muerte, tanto para sí misma como para todo el género humano; así también María... al obedecer, se convirtió en causa de salvación, tanto para sí misma como para todo el género humano... Y así fue también como el nudo de la desobediencia de Eva fue desatado por la obediencia de María. Pues lo que la virgen Eva había atado fuertemente por la incredulidad, esto lo desató la virgen María por la fe.",
+          de: "Maria die Jungfrau wird gehorsam befunden... da [Eva] ungehorsam geworden war, wurde sie die Ursache des Todes, sowohl für sich selbst als auch für das ganze Menschengeschlecht; so wurde auch Maria... indem sie Gehorsam leistete, die Ursache des Heils, sowohl für sich selbst als auch für das ganze Menschengeschlecht... Und so wurde auch der Knoten des Ungehorsams Evas durch den Gehorsam Marias gelöst. Denn was die Jungfrau Eva durch Unglauben fest gebunden hatte, das löste die Jungfrau Maria durch den Glauben."
+        },
+        sourceReference: "Book 3, Ch. 22, §4"
+      },
+      {
+        id: "irenaeus-heresies-5-19",
+        author: { en: "Saint Irenaeus of Lyon", fr: "Saint Irénée de Lyon", es: "San Ireneo de Lyon", de: "Hl. Irenäus von Lyon" },
+        work: { en: "Against Heresies", fr: "Contre les Hérésies", es: "Contra las Herejías", de: "Gegen die Häresien" },
+        date: "c. 180 AD",
+        text: {
+          en: "...so did the latter, by an angelic communication, receive the glad tidings that she should sustain [bear] God [Mother of God], being obedient to His word. And if the former did disobey God, yet the latter was persuaded to be obedient to God, in order that the Virgin Mary might become the patroness of the virgin Eve. And thus, as the human race fell into bondage to death by means of a virgin, so is it rescued by a virgin; virginal disobedience having been balanced in the opposite scale by virginal obedience.",
+          fr: "...ainsi cette dernière, par une communication angélique, reçut la bonne nouvelle qu'elle soutiendrait [porterait] Dieu [Mère de Dieu], en obéissant à Sa parole. Et si la première désobéit à Dieu, la seconde fut persuadée d'obéir à Dieu, afin que la Vierge Marie devienne la patronne de la vierge Ève. Et ainsi, comme le genre humain tomba en servitude à la mort par le moyen d'une vierge, il est sauvé par une vierge ; la désobéissance virginale ayant été balancée dans le sens opposé par l'obéissance virginale.",
+          es: "...así la segunda, por una comunicación angélica, recibió la buena nueva de que sostendría [llevaría] a Dios [Madre de Dios], siendo obediente a Su palabra. Y si la primera desobedeció a Dios, la segunda fue persuadida a obedecer a Dios, para que la Virgen María se convirtiera en la patrona de la virgen Eva. Y así, como el género humano cayó en la esclavitud de la muerte por medio de una virgen, así es rescatado por una virgen; la desobediencia virginal habiendo sido equilibrada en la balanza opuesta por la obediencia virginal.",
+          de: "...so empfing die letztere durch eine engelhafte Mitteilung die frohe Botschaft, dass sie Gott tragen [gebären] sollte [Mutter Gottes], indem sie Seinem Wort gehorsam war. Und wenn die erstere Gott ungehorsam war, so wurde die letztere überredet, Gott gehorsam zu sein, damit die Jungfrau Maria die Patronin der Jungfrau Eva werde. Und so, wie das Menschengeschlecht durch eine Jungfrau in die Knechtschaft des Todes fiel, so wird es durch eine Jungfrau gerettet; indem der jungfräuliche Ungehorsam durch jungfräulichen Gehorsam in der entgegengesetzten Waagschale aufgewogen wurde."
+        },
+        sourceReference: "Book 5, Ch. 19, §1"
+      },
+      {
+        id: "tertullian-flesh-of-christ",
+        author: { en: "Tertullian", fr: "Tertullien", es: "Tertuliano", de: "Tertullian" },
+        work: { en: "The Flesh of Christ", fr: "La Chair du Christ", es: "La Carne de Cristo", de: "Über das Fleisch Christi" },
+        date: "c. 210 AD",
+        text: {
+          en: "For it was while Eve was yet a virgin, that the ensnaring word had crept into her ear... Into a virgin’s soul, in like manner, must be introduced that Word of God which was to raise the fabric of life... As Eve had believed the serpent, so Mary believed the angel. The delinquency which the one occasioned by believing, the other by believing effaced.",
+          fr: "Car c'est tandis qu'Ève était encore vierge que la parole insidieuse s'était glissée à son oreille... De la même manière, dans l'âme d'une vierge devait être introduit ce Verbe de Dieu qui devait élever l'édifice de la vie... Comme Ève avait cru le serpent, de même Marie crut l'ange. L'offense que l'une occasionna en croyant, l'autre l'effaça en croyant.",
+          es: "Pues fue mientras Eva era aún virgen, que la palabra engañosa se había deslizado en su oído... De igual modo, en el alma de una virgen debía introducirse aquella Palabra de Dios que levantaría el edificio de la vida... Así como Eva había creído a la serpiente, así María creyó al ángel. El delito que una ocasionó al creer, la otra lo borró al creer.",
+          de: "Denn während Eva noch Jungfrau war, war das verführerische Wort in ihr Ohr geschlichen... Auf die gleiche Weise musste in die Seele einer Jungfrau jenes Wort Gottes eingeführt werden, das das Gebäude des Lebens errichten sollte... Wie Eva der Schlange geglaubt hatte, so glaubte Maria dem Engel. Das Vergehen, das die eine durch den Glauben verursachte, tilgte die andere durch den Glauben."
+        },
+        sourceReference: "Ch. 17"
+      },
+      {
+        id: "hippolytus-beron",
+        author: { en: "Saint Hippolytus of Rome", fr: "Saint Hippolyte de Rome", es: "San Hipólito de Roma", de: "Hl. Hippolyt von Rom" },
+        work: { en: "Against Beron and Helix", fr: "Contre Béron et Hélix", es: "Contra Berón y Helice", de: "Gegen Beron und Helix" },
+        date: "c. 210 AD",
+        text: {
+          en: "...the Creator of all things incorporated with Himself a rational soul and a sensible body from the all-holy Mary, ever-virgin, by an undefiled conception...",
+          fr: "...le Créateur de toutes choses s'incorpora une âme rationnelle et un corps sensible de la toute-sainte Marie, toujours vierge, par une conception immaculée...",
+          es: "...el Creador de todas las cosas incorporó en Sí mismo un alma racional y un cuerpo sensible de la toda santa María, siempre virgen, por una concepción inmaculada...",
+          de: "...der Schöpfer aller Dinge vereinigte mit Sich eine vernünftige Seele und einen sinnlichen Leib aus der allheiligen Maria, immerdar Jungfrau, durch eine unbefleckte Empfängnis..."
+        },
+        sourceReference: "Fragment 8"
+      },
+      {
+        id: "ephrem-nisibene-hymn-27",
+        author: { en: "Saint Ephrem the Syrian", fr: "Saint Éphrem le Syrien", es: "San Efrén el Sirio", de: "Hl. Ephräm der Syrer" },
+        work: { en: "Nisibene Hymn 27", fr: "Hymne de Nisibe 27", es: "Himno Nisibeno 27", de: "Nisibenische Hymne 27" },
+        date: "c. 370 AD",
+        text: {
+          en: "You alone and your Mother are more beautiful than any others, for there is no blemish in you nor any stains upon your Mother. Who of my children can compare in beauty to these?",
+          fr: "Toi seul et ta Mère êtes plus beaux que tous les autres, car il n'y a pas de défaut en toi ni aucune tache sur ta Mère. Qui parmi mes enfants peut se comparer en beauté à ceux-ci ?",
+          es: "Solo tú y tu Madre sois más hermosos que cualquier otro, pues no hay defecto en ti ni mancha alguna en tu Madre. ¿Quién de mis hijos puede compararse en belleza con estos?",
+          de: "Du allein und deine Mutter seid schöner als alle anderen, denn kein Makel ist an dir, noch irgendein Flecken an deiner Mutter. Wer von meinen Kindern kann sich an Schönheit mit diesen vergleichen?"
+        },
+        sourceReference: "Ch. 8"
+      },
+      {
+        id: "ephrem-nativity-hymn-8",
+        author: { en: "Saint Ephrem the Syrian", fr: "Saint Éphrem le Syrien", es: "San Efrén el Sirio", de: "Hl. Ephräm der Syrer" },
+        work: { en: "Hymn 8 on the Nativity", fr: "Hymne 8 sur la Nativité", es: "Himno 8 sobre la Natividad", de: "Hymne 8 über die Geburt" },
+        date: "c. 370 AD",
+        text: {
+          en: "A wonder is Thy Mother. The Lord entered her, and became a servant: the Word entered her, and became silent within her... The Belly of Thy Mother changed the order of things... The Mighty went in, and clad Himself with fear from the Belly.",
+          fr: "Ta Mère est une merveille. Le Seigneur entra en elle, et devint serviteur : le Verbe entra en elle, et devint silencieux en elle... Le Sein de ta Mère changea l'ordre des choses... Le Puissant entra, et se vêtit de crainte depuis le Sein.",
+          es: "Maravilla es tu Madre. El Señor entró en ella, y se hizo siervo: el Verbo entró en ella, y enmudeció en su interior... El Vientre de tu Madre cambió el orden de las cosas... El Fuerte entró, y se vistió de temor desde el Vientre.",
+          de: "Ein Wunder ist deine Mutter. Der Herr trat in sie ein und wurde ein Diener: das Wort trat in sie ein und wurde still in ihr... Der Schoß deiner Mutter veränderte die Ordnung der Dinge... Der Mächtige trat ein und kleidete sich mit Furcht aus dem Schoß."
+        },
+        sourceReference: "Hymn 8"
+      },
+      {
+        id: "origen-matthew-10",
+        author: { en: "Origen", fr: "Origène", es: "Orígenes", de: "Origenes" },
+        work: { en: "Commentary on Matthew", fr: "Commentaire sur Matthieu", es: "Comentario sobre Mateo", de: "Matthäus-Kommentar" },
+        date: "c. 249 AD",
+        text: {
+          en: "Those who say this wish to preserve the dignity of Mary in virginity until the end... And I think it is reasonable that Jesus became the first-fruits of male purity in chastity, and Mary of female, for it is not pious that the first-fruits of virginity be attributed to another besides her.",
+          fr: "Ceux qui disent cela souhaitent préserver la dignité de Marie dans la virginité jusqu'à la fin... Et je pense qu'il est raisonnable que Jésus soit devenu les prémices de la pureté masculine dans la chasteté, et Marie de la féminine, car il n'est pas pieux d'attribuer les prémices de la virginité à une autre qu'elle.",
+          es: "Quienes dicen esto desean preservar la dignidad de María en virginidad hasta el fin... Y creo que es razonable que Jesús se convirtiera en las primicias de la pureza masculina en castidad, y María de la femenina, pues no es piadoso que las primicias de la virginidad se atribuyan a otra fuera de ella.",
+          de: "Diejenigen, die dies sagen, möchten die Würde Marias in der Jungfräulichkeit bis zum Ende bewahren... Und ich denke, es ist vernünftig, dass Jesus die Erstlingsfrucht der männlichen Reinheit in Keuschheit wurde, und Maria der weiblichen, denn es ist nicht fromm, die Erstlingsfrucht der Jungfräulichkeit einer anderen als ihr zuzuschreiben."
+        },
+        sourceReference: "Book 10, Ch. 17"
+      },
+      {
+        id: "gregory-thaumaturgus-homily-1",
+        author: { en: "Saint Gregory Thaumaturgus", fr: "Saint Grégoire le Thaumaturge", es: "San Gregorio Taumaturgo", de: "Hl. Gregor der Wundertäter" },
+        work: { en: "Homily 1: On the Annunciation", fr: "Homélie 1 : Sur l'Annonciation", es: "Homilía 1: Sobre la Anunciación", de: "Homilie 1: Über die Verkündigung" },
+        date: "c. 256 AD",
+        text: {
+          en: "For Luke, in the inspired Gospel narratives, delivers a testimony not to Joseph only, but also to Mary the mother of God...",
+          fr: "Car Luc, dans les récits inspirés de l'Évangile, rend témoignage non seulement à Joseph, mais aussi à Marie, la mère de Dieu...",
+          es: "Pues Lucas, en las narraciones inspiradas del Evangelio, da testimonio no solo de José, sino también de María, la madre de Dios...",
+          de: "Denn Lukas liefert in den inspirierten Evangelienberichten ein Zeugnis nicht nur für Joseph, sondern auch für Maria, die Mutter Gottes..."
+        },
+        sourceReference: "Homily 1"
+      },
+      {
+        id: "gregory-thaumaturgus-homily-2",
+        author: { en: "Saint Gregory Thaumaturgus", fr: "Saint Grégoire le Thaumaturge", es: "San Gregorio Taumaturgo", de: "Hl. Gregor der Wundertäter" },
+        work: { en: "Homily 2: On the Annunciation", fr: "Homélie 2 : Sur l'Annonciation", es: "Homilía 2: Sobre la Anunciación", de: "Homilie 2: Über die Verkündigung" },
+        date: "c. 256 AD",
+        text: {
+          en: "It is our duty to present to God... first of all, the annunciation to the holy mother of God...",
+          fr: "Il est de notre devoir de présenter à Dieu... avant tout, l'annonciation à la sainte mère de Dieu...",
+          es: "Es nuestro deber presentar a Dios... en primer lugar, la anunciación a la santa madre de Dios...",
+          de: "Es ist unsere Pflicht, Gott... zuallererst die Verkündigung an die heilige Mutter Gottes darzubringen..."
+        },
+        sourceReference: "Homily 2"
+      },
+      {
+        id: "peter-alexandria-acts",
+        author: { en: "Saint Peter of Alexandria", fr: "Saint Pierre d'Alexandrie", es: "San Pedro de Alejandría", de: "Hl. Petrus von Alexandrien" },
+        work: { en: "The Genuine Acts of Peter", fr: "Les Actes Véritables de Pierre", es: "Las Actas Genuinas de Pedro", de: "Die Echten Akten des Petrus" },
+        date: "c. 306 AD",
+        text: {
+          en: "[T]hey came to the church of the most blessed mother of God, and Ever-Virgin Mary, which... he had constructed... for a cemetery of the martyrs.",
+          fr: "[I]ls vinrent à l'église de la très bienheureuse mère de Dieu, et Toujours Vierge Marie, que... il avait construite... pour un cimetière des martyrs.",
+          es: "[V]inieron a la iglesia de la santísima madre de Dios, y Siempre Virgen María, que... él había construido... para un cementerio de los mártires.",
+          de: "[S]ie kamen zur Kirche der hochseligsten Mutter Gottes und Immerwährenden Jungfrau Maria, die... er erbaut hatte... als einen Friedhof für die Märtyrer."
+        },
+        sourceReference: "Genuine Acts"
+      },
+      {
+        id: "methodius-oration-simeon",
+        author: { en: "Saint Methodius of Olympus", fr: "Saint Méthode d'Olympe", es: "San Metodio de Olimpo", de: "Hl. Methodius von Olympus" },
+        work: { en: "Oration on Simeon and Anna", fr: "Oraison sur Siméon et Anne", es: "Oración sobre Simeón y Ana", de: "Rede über Simeon und Anna" },
+        date: "c. 300 AD",
+        text: {
+          en: "...the holy mother of God now manifestly fulfilled... Hail to you forever, you virgin mother of God, our unceasing joy... O holy mother of God, remember us...",
+          fr: "...la sainte mère de Dieu accomplit maintenant manifestement... Salut à toi pour toujours, vierge mère de Dieu, notre joie incessante... Ô sainte mère de Dieu, souviens-toi de nous...",
+          es: "...la santa madre de Dios cumplió ahora manifiestamente... ¡Salve por siempre, virgen madre de Dios, nuestra incesante alegría... Oh santa madre de Dios, acuérdate de nosotros...",
+          de: "...erfüllte nun die heilige Mutter Gottes offenkundig... Sei gegrüßt auf ewig, du jungfräuliche Mutter Gottes, unsere unaufhörliche Freude... O heilige Mutter Gottes, gedenke unser..."
+        },
+        sourceReference: "§§7, 14"
+      },
+      {
+        id: "athanasius-discourse-2",
+        author: { en: "Saint Athanasius", fr: "Saint Athanase", es: "San Atanasio", de: "Hl. Athanasius" },
+        work: { en: "Four Discourses Against the Arians", fr: "Quatre Discours Contre les Ariens", es: "Cuatro Discursos Contra los Arrianos", de: "Vier Reden gegen die Arianer" },
+        date: "c. 356-360 AD",
+        text: {
+          en: "Therefore let those who deny that the Son is from the Father by nature... deny also that He took true human flesh of Mary Ever-Virgin...",
+          fr: "Que ceux donc qui nient que le Fils est du Père par nature... nient aussi qu'Il a pris une vraie chair humaine de Marie Toujours Vierge...",
+          es: "Por lo tanto, que aquellos que niegan que el Hijo es del Padre por naturaleza... nieguen también que Él tomó verdadera carne humana de María Siempre Virgen...",
+          de: "Deshalb sollen jene, die leugnen, dass der Sohn von Natur aus dem Vater ist... auch leugnen, dass Er wahres menschliches Fleisch von Maria, der Immerwährenden Jungfrau, angenommen hat..."
+        },
+        sourceReference: "Discourse 2, §70"
+      },
+      {
+        id: "athanasius-incarnation",
+        author: { en: "Saint Athanasius", fr: "Saint Athanase", es: "San Atanasio", de: "Hl. Athanasius" },
+        work: { en: "On the Incarnation of the Word", fr: "Sur l'Incarnation du Verbe", es: "Sobre la Encarnación del Verbo", de: "Über die Menschwerdung des Wortes" },
+        date: "c. 330 AD",
+        text: {
+          en: "But He takes a body of our kind, and not merely so, but from a spotless and stainless virgin, knowing not a man, a body clean and in very truth pure from intercourse of men.",
+          fr: "Mais Il prend un corps de notre espèce, et non seulement cela, mais d'une vierge immaculée et sans tache, ne connaissant pas d'homme, un corps pur et en vérité pur de tout commerce avec les hommes.",
+          es: "Pero Él toma un cuerpo de nuestra especie, y no solo eso, sino de una virgen inmaculada y sin mancha, que no conoce varón, un cuerpo limpio y en verdad puro de relaciones con hombres.",
+          de: "Aber Er nimmt einen Körper unserer Art an, und nicht nur das, sondern von einer fleckenlosen und unbefleckten Jungfrau, die keinen Mann kannte, einen reinen und wahrhaftig reinen Körper von der Gemeinschaft mit Männern."
+        },
+        sourceReference: "§8"
+      },
+      {
+        id: "athanasius-papyrus-turin",
+        author: { en: "Saint Athanasius", fr: "Saint Athanase", es: "San Atanasio", de: "Hl. Athanasius" },
+        work: { en: "Homily of the Papyrus of Turin", fr: "Homélie du Papyrus de Turin", es: "Homilía del Papiro de Turín", de: "Homilie des Papyrus von Turin" },
+        date: "c. 330-373 AD",
+        text: {
+          en: "O noble Virgin, truly you are greater than any other greatness. For who is your equal in greatness, O dwelling place of God the Word? ...O [Ark of the New] Covenant, clothed with purity instead of gold! You are the Ark in which is found the golden vessel containing the true manna, that is, the flesh in which divinity resides.",
+          fr: "Ô noble Vierge, vraiment tu es plus grande que toute autre grandeur. Car qui est ton égal en grandeur, Ô demeure de Dieu le Verbe ? ...Ô [Arche de la Nouvelle] Alliance, vêtue de pureté au lieu d'or ! Tu es l'Arche dans laquelle se trouve le vase d'or contenant la vraie manne, c'est-à-dire la chair dans laquelle réside la divinité.",
+          es: "Oh noble Virgen, verdaderamente tú eres más grande que cualquier otra grandeza. Pues, ¿quién es igual a ti en grandeza, oh morada de Dios el Verbo? ...¡Oh [Arca de la Nueva] Alianza, vestida de pureza en lugar de oro! Tú eres el Arca en la que se encuentra el vaso de oro que contiene el verdadero maná, es decir, la carne en la que reside la divinidad.",
+          de: "O edle Jungfrau, wahrlich, du bist größer als jede andere Größe. Denn wer ist dir gleich an Größe, o Wohnstätte Gottes, des Wortes? ...O [Arche des Neuen] Bundes, bekleidet mit Reinheit statt mit Gold! Du bist die Arche, in der sich das goldene Gefäß befindet, das das wahre Manna enthält, das heißt, das Fleisch, in dem die Gottheit wohnt."
+        },
+        sourceReference: "Homily"
+      },
+      {
+        id: "hilary-matthew",
+        author: { en: "Saint Hilary of Poitiers", fr: "Saint Hilaire de Poitiers", es: "San Hilario de Poitiers", de: "Hl. Hilarius von Poitiers" },
+        work: { en: "Commentary on Matthew", fr: "Commentaire sur Matthieu", es: "Comentario sobre Mateo", de: "Matthäus-Kommentar" },
+        date: "c. 355 AD",
+        text: {
+          en: "If there had been sons of Mary... Mary never would have been transferred to the apostle John as his mother at the time of the Passion...",
+          fr: "S'il y avait eu des fils de Marie... Marie n'aurait jamais été transférée à l'apôtre Jean comme sa mère au moment de la Passion...",
+          es: "Si hubiera habido hijos de María... María nunca habría sido transferida al apóstol Juan como su madre en el momento de la Pasión...",
+          de: "Wenn es Söhne Marias gegeben hätte... wäre Maria zur Zeit der Passion niemals dem Apostel Johannes als dessen Mutter übergeben worden..."
+        },
+        sourceReference: "Ch. 1, §4"
+      },
+      {
+        id: "epiphanius-panarion",
+        author: { en: "Saint Epiphanius of Salamis", fr: "Saint Épiphane de Salamine", es: "San Epifanio de Salamina", de: "Hl. Epiphanius von Salamis" },
+        work: { en: "The Panarion", fr: "Le Panarion", es: "El Panarion", de: "Das Panarion" },
+        date: "c. 375 AD",
+        text: {
+          en: "Who, and in which generation, has ever dared to say St. Mary’s name and not add 'Virgin' at once when asked?... And St. Mary was given the title, 'Virgin,' and it will not be altered, for the holy woman remained undefiled.",
+          fr: "Qui, et dans quelle génération, a jamais osé dire le nom de Sainte Marie sans ajouter aussitôt 'Vierge' lorsqu'on le lui demandait ?... Et Sainte Marie a reçu le titre de 'Vierge', et il ne sera pas modifié, car la sainte femme est restée sans souillure.",
+          es: "¿Quién, y en qué generación, se ha atrevido jamás a decir el nombre de Santa María y no añadir 'Virgen' en seguida cuando se le pregunta?... Y a Santa María se le dio el título de 'Virgen', y no será alterado, pues la santa mujer permaneció sin mancha.",
+          de: "Wer, und in welcher Generation, hat es jemals gewagt, den Namen der heiligen Maria zu nennen und nicht sofort 'Jungfrau' hinzuzufügen, wenn er gefragt wurde?... Und der heiligen Maria wurde der Titel 'Jungfrau' gegeben, und er wird nicht geändert werden, denn die heilige Frau blieb unbefleckt."
+        },
+        sourceReference: "Book 2, Ch. 78, §§5-6"
+      },
+      {
+        id: "cyril-jerusalem-lecture-10",
+        author: { en: "Saint Cyril of Jerusalem", fr: "Saint Cyrille de Jérusalem", es: "San Cirilo de Jerusalén", de: "Hl. Kyrill von Jerusalem" },
+        work: { en: "Catechetical Lecture 10", fr: "Catéchèse 10", es: "Catequesis 10", de: "Katechese 10" },
+        date: "c. 350 AD",
+        text: {
+          en: "Many, my beloved, are the true testimonies concerning Christ. The Father bears witness... the Holy Ghost bears witness... the Archangel Gabriel bears witness... the Virgin Mother of God bears witness...",
+          fr: "Nombreux, mes bien-aimés, sont les vrais témoignages concernant le Christ. Le Père rend témoignage... le Saint-Esprit rend témoignage... l'Archange Gabriel rend témoignage... la Vierge Mère de Dieu rend témoignage...",
+          es: "Muchos, amados míos, son los verdaderos testimonios acerca de Cristo. El Padre da testimonio... el Espíritu Santo da testimonio... el Arcángel Gabriel da testimonio... la Virgen Madre de Dios da testimonio...",
+          de: "Viele, meine Geliebten, sind die wahren Zeugnisse über Christus. Der Vater legt Zeugnis ab... der Heilige Geist legt Zeugnis ab... der Erzengel Gabriel legt Zeugnis ab... die Jungfrau, die Mutter Gottes, legt Zeugnis ab..."
+        },
+        sourceReference: "§19"
+      }
+    ]
+  },
+
+
+
+  
+  {
+    id: "mortal-sin",
+    title: {
+      en: "Mortal Sin: Christians Can Lose Their Salvation",
+      fr: "Péché Mortel : Les Chrétiens Peuvent Perdre Leur Salut",
+      es: "Pecado Mortal: Los Cristianos Pueden Perder Su Salvación",
+      de: "Todsünde: Christen Können Ihr Heil Verlieren"
+    },
+    icon: "AlertCircle",
+    quotes: [
+      {
+        id: "didache-16",
+        author: { en: "Didache", fr: "Didachè", es: "Didaché", de: "Didache" },
+        work: { en: "Didache", fr: "Didachè", es: "Didaché", de: "Didache" },
+        date: "c. 50 AD",
+        text: {
+          en: "Come together frequently, and seek what pertains to your souls: for the whole time of your faith will not profit you, unless in the last hour you shall be found perfect.",
+          fr: "Rassemblez-vous fréquemment, et recherchez ce qui appartient à vos âmes : car tout le temps de votre foi ne vous profitera pas, si à la dernière heure vous n'êtes pas trouvés parfaits.",
+          es: "Reuníos con frecuencia, y buscad lo que atañe a vuestras almas: porque todo el tiempo de vuestra fe no os aprovechará, si en la última hora no sois hallados perfectos.",
+          de: "Kommt häufig zusammen und sucht, was euren Seelen zuträglich ist: denn die ganze Zeit eures Glaubens wird euch nichts nützen, wenn ihr nicht in der letzten Stunde vollkommen befunden werdet."
+        },
+        sourceReference: "Ch. 16, §§1-2"
+      },
+      {
+        id: "hermas-similitude-8",
+        author: { en: "The Shepherd of Hermas", fr: "Le Pasteur d'Hermas", es: "El Pastor de Hermas", de: "Der Hirt des Hermas" },
+        work: { en: "The Shepherd of Hermas", fr: "Le Pasteur d'Hermas", es: "El Pastor de Hermas", de: "Der Hirt des Hermas" },
+        date: "c. 80 AD",
+        text: {
+          en: "But if any one relapse into strife, he will be east out of the tower, and will lose his life. Life is the possession of all who keep the commandments of the Lord... but among the quarrelsome and transgressors, death.",
+          fr: "Mais si quelqu'un retombe dans la querelle, il sera chassé de la tour et perdra la vie. La vie est la possession de tous ceux qui gardent les commandements du Seigneur... mais parmi les querelleurs et les transgresseurs, c'est la mort.",
+          es: "Pero si alguno recae en la contienda, será echado de la torre y perderá la vida. La vida es posesión de todos los que guardan los mandamientos del Señor... pero entre los pendencieros y los transgresores, está la muerte.",
+          de: "Wenn aber jemand in Streit zurückfällt, wird er aus dem Turm geworfen werden und sein Leben verlieren. Das Leben ist der Besitz aller, die die Gebote des Herrn halten... aber unter den Streitlustigen und Übertretern ist der Tod."
+        },
+        sourceReference: "Book 3, Similitude 8, Ch. 7"
+      },
+      {
+        id: "ignatius-ephesians-10",
+        author: { en: "Saint Ignatius of Antioch", fr: "Saint Ignace d'Antioche", es: "San Ignacio de Antioquía", de: "Hl. Ignatius von Antiochien" },
+        work: { en: "Letter to the Ephesians", fr: "Lettre aux Éphésiens", es: "Carta a los Efesios", de: "Brief an die Epheser" },
+        date: "c. 107 AD",
+        text: {
+          en: "And pray without ceasing on behalf of other men. For there is in them hope of repentance that they may attain to God.",
+          fr: "Et priez sans cesse pour les autres hommes. Car il y a en eux l'espérance de la repentance afin qu'ils puissent atteindre Dieu.",
+          es: "Y orad sin cesar por los demás hombres. Porque hay en ellos esperanza de arrepentimiento para que puedan alcanzar a Dios.",
+          de: "Und betet ohne Unterlass für die anderen Menschen. Denn es gibt in ihnen Hoffnung auf Umkehr, damit sie zu Gott gelangen können."
+        },
+        sourceReference: "§10"
+      },
+      {
+        id: "justin-in-irenaeus-5-26",
+        author: { en: "Saint Justin Martyr (quoted by St. Irenaeus)", fr: "Saint Justin Martyr (cité par St Irénée)", es: "San Justino Mártir (citado por San Ireneo)", de: "Hl. Justin der Märtyrer (zitiert von Hl. Irenäus)" },
+        work: { en: "Against Heresies (quoting Justin)", fr: "Contre les Hérésies (citant Justin)", es: "Contra las Herejías (citando a Justino)", de: "Gegen die Häresien (zitiert Justin)" },
+        date: "c. 153 AD",
+        text: {
+          en: "...eternal fire has been prepared for him as he apostatized from God of his own free-will, and likewise for all who unrepentant continue in the apostasy...",
+          fr: "...le feu éternel a été préparé pour lui, car il a apostasié de Dieu de sa propre volonté, et de même pour tous ceux qui, sans se repentir, persistent dans l'apostasie...",
+          es: "...el fuego eterno ha sido preparado para él, ya que apostató de Dios por su propia voluntad, e igualmente para todos los que sin arrepentirse continúan en la apostasía...",
+          de: "...das ewige Feuer ist für ihn bereitet, da er aus eigenem freiem Willen von Gott abgefallen ist, und ebenso für alle, die unbußfertig in der Apostasie verharren..."
+        },
+        sourceReference: "Book 5, Ch. 26, §2"
+      },
+      {
+        id: "irenaeus-heresies-1-10",
+        author: { en: "Saint Irenaeus of Lyon", fr: "Saint Irénée de Lyon", es: "San Ireneo de Lyon", de: "Hl. Irenäus von Lyon" },
+        work: { en: "Against Heresies", fr: "Contre les Hérésies", es: "Contra las Herejías", de: "Gegen die Häresien" },
+        date: "c. 180 AD",
+        text: {
+          en: "...that He may send... the angels who transgressed and became apostates, together with the ungodly... into everlasting fire; but may... confer immortality on the righteous... and others from [the date of] their repentance...",
+          fr: "...qu'Il envoie... les anges qui ont transgressé et sont devenus apostats, ainsi que les impies... dans le feu éternel ; mais qu'Il puisse... conférer l'immortalité aux justes... et à d'autres depuis [la date de] leur repentance...",
+          es: "...para que envíe... a los ángeles que transgredieron y se convirtieron en apóstatas, junto con los impíos... al fuego eterno; pero que... confiera la inmortalidad a los justos... y a otros desde [la fecha de] su arrepentimiento...",
+          de: "...dass Er... die Engel, die übertreten haben und Abtrünnige wurden, zusammen mit den Gottlosen... ins ewige Feuer sende; aber... den Gerechten... Unsterblichkeit verleihe... und anderen seit [dem Datum] ihrer Buße..."
+        },
+        sourceReference: "Book 1, Ch. 10, §1"
+      },
+      {
+        id: "tertullian-repentance-10",
+        author: { en: "Tertullian", fr: "Tertullien", es: "Tertuliano", de: "Tertullian" },
+        work: { en: "Repentance", fr: "De la Pénitence", es: "Sobre la Penitencia", de: "Über die Buße" },
+        date: "c. 203 AD",
+        text: {
+          en: "Is it better to be damned in secret than absolved in public? But you say, 'It is a miserable thing thus to come to exomologesis [penitential rite]'; yes, for evil does bring to misery; but where repentance is to be made, the misery ceases...",
+          fr: "Vaut-il mieux être damné en secret qu'absorbé en public ? Mais vous dites : 'C'est une chose misérable que d'en venir ainsi à l'exomologèse [rite pénitentiel]' ; oui, car le mal mène à la misère ; mais là où la repentance doit être faite, la misère cesse...",
+          es: "¿Es mejor ser condenado en secreto que absuelto en público? Pero dices: 'Es algo miserable llegar así a la exomologesis [rito penitencial]'; sí, pues el mal ciertamente lleva a la miseria; pero donde se ha de hacer penitencia, la miseria cesa...",
+          de: "Ist es besser, im Verborgenen verdammt zu werden als öffentlich freigesprochen? Aber du sagst: 'Es ist eine elende Sache, so zur Exomologese [Bußritus] zu kommen'; ja, denn das Böse führt ins Elend; aber wo Buße getan werden soll, hört das Elend auf..."
+        },
+        sourceReference: "Ch. 10"
+      },
+      {
+        id: "tertullian-modesty-21",
+        author: { en: "Tertullian", fr: "Tertullien", es: "Tertuliano", de: "Tertullian" },
+        work: { en: "On Modesty", fr: "De la Pudeur", es: "Sobre la Modestia", de: "Über die Keuschheit" },
+        date: "c. 220 AD",
+        text: {
+          en: "Who, moreover, was able to forgive sins? This is his prerogative alone: for 'who remits sin but God alone?' And, of course, (who but he can remit) mortal sins, such as those committed against himself, and against his temple [the Church]?",
+          fr: "Qui, de plus, pouvait pardonner les péchés ? C'est sa prérogative seule : car 'qui remet les péchés sinon Dieu seul ?' Et, bien sûr, (qui d'autre que lui peut remettre) les péchés mortels, tels que ceux commis contre lui-même, et contre son temple [l'Église] ?",
+          es: "¿Quién, además, era capaz de perdonar los pecados? Esta es su prerrogativa única: pues '¿quién perdona el pecado sino solo Dios?' Y, por supuesto, (¿quién sino él puede perdonar) los pecados mortales, como los cometidos contra sí mismo, y contra su templo [la Iglesia]?",
+          de: "Wer war außerdem fähig, Sünden zu vergeben? Dies ist sein Vorrecht allein: denn 'wer erlässt Sünde außer Gott allein?' Und natürlich, (wer außer ihm kann) Todsünden erlassen, wie jene, die gegen ihn selbst und gegen seinen Tempel [die Kirche] begangen wurden?"
+        },
+        sourceReference: "Ch. 21"
+      },
+      {
+        id: "origen-matthew-14-10",
+        author: { en: "Origen", fr: "Origène", es: "Orígenes", de: "Origenes" },
+        work: { en: "Commentary on the Gospel of Matthew", fr: "Commentaire sur l'Évangile de Matthieu", es: "Comentario sobre el Evangelio de Mateo", de: "Kommentar zum Matthäusevangelium" },
+        date: "c. 249 AD",
+        text: {
+          en: "But observe here that every great sin is a loss of the talents of the master of the house, and such sins are committed by fornicators, adulterers, abusers of themselves with men, effeminate, idolaters, murderers…",
+          fr: "Mais observez ici que tout grand péché est une perte des talents du maître de maison, et de tels péchés sont commis par les fornicateurs, les adultères, les sodomites, les efféminés, les idolâtres, les meurtriers...",
+          es: "Pero observad aquí que todo gran pecado es una pérdida de los talentos del dueño de la casa, y tales pecados son cometidos por fornicarios, adúlteros, sodomitas, afeminados, idólatras, asesinos...",
+          de: "Aber beachte hier, dass jede große Sünde ein Verlust der Talente des Hausherrn ist, und solche Sünden werden von Unzüchtigen, Ebrechern, Knabenschändern, Weichlingen, Götzendienern, Mördern begangen..."
+        },
+        sourceReference: "Book 14, Ch. 10"
+      },
+      {
+        id: "cyprian-letter-6",
+        author: { en: "Saint Cyprian of Carthage", fr: "Saint Cyprien de Carthage", es: "San Cipriano de Cartago", de: "Hl. Cyprian von Karthago" },
+        work: { en: "Letter 6", fr: "Lettre 6", es: "Carta 6", de: "Brief 6" },
+        date: "250 AD",
+        text: {
+          en: "It is a slight thing to have been able to attain anything; it is more to be able to keep what you have attained... Solomon also, and Saul, and many others, so long as they walked in the Lord’s ways, were able to keep the grace given to them. When the discipline of the Lord was forsaken by them, grace also forsook them.",
+          fr: "C'est peu de chose d'avoir pu atteindre quelque chose ; c'est plus de pouvoir garder ce que vous avez atteint... Salomon aussi, et Saül, et beaucoup d'autres, tant qu'ils marchaient dans les voies du Seigneur, purent garder la grâce qui leur avait été donnée. Lorsque la discipline du Seigneur fut abandonnée par eux, la grâce aussi les abandonna.",
+          es: "Poca cosa es haber podido alcanzar algo; más es poder conservar lo que has alcanzado... También Salomón, y Saúl, y muchos otros, mientras anduvieron en los caminos del Señor, pudieron conservar la gracia que se les dio. Cuando la disciplina del Señor fue abandonada por ellos, la gracia también los abandonó.",
+          de: "Es ist eine geringe Sache, etwas erreicht haben zu können; es ist mehr, das Erreichte bewahren zu können... Auch Salomo und Saul und viele andere konnten, solange sie auf den Wegen des Herrn wandelten, die ihnen gegebene Gnade bewahren. Als aber die Zucht des Herrn von ihnen verlassen wurde, verließ sie auch die Gnade."
+        },
+        sourceReference: "§2"
+      },
+      {
+        id: "cyprian-treatise-3",
+        author: { en: "Saint Cyprian of Carthage", fr: "Saint Cyprien de Carthage", es: "San Cipriano de Cartago", de: "Hl. Cyprian von Karthago" },
+        work: { en: "Treatise 3: On the Lapsed", fr: "Traité 3 : Sur les Tombés", es: "Tratado 3: Sobre los Caídos", de: "Abhandlung 3: Über die Gefallenen" },
+        date: "251 AD",
+        text: {
+          en: "I entreat you, beloved brethren, that each one should confess his own sin, while he who has sinned is still in this world, while his confession may be received, while the satisfaction and remission made by the priests are pleasing to the Lord.",
+          fr: "Je vous en supplie, frères bien-aimés, que chacun confesse son propre péché, pendant que celui qui a péché est encore dans ce monde, pendant que sa confession peut être reçue, pendant que la satisfaction et la rémission faites par les prêtres sont agréables au Seigneur.",
+          es: "Os ruego, amados hermanos, que cada uno confiese su propio pecado, mientras el que ha pecado está todavía en este mundo, mientras su confesión puede ser recibida, mientras la satisfacción y la remisión hechas por los sacerdotes son agradables al Señor.",
+          de: "Ich bitte euch, geliebte Brüder, dass ein jeder seine eigene Sünde bekenne, solange der, der gesündigt hat, noch in dieser Welt ist, solange sein Bekenntnis angenommen werden kann, solange die Genugtuung und Vergebung durch die Priester dem Herrn wohlgefällig sind."
+        },
+        sourceReference: "§§28, 29"
+      },
+      {
+        id: "firmilian-letter-74",
+        author: { en: "Firmilian of Cappadocia", fr: "Firmilien de Césarée", es: "Firmiliano de Cesarea", de: "Firmilian von Cäsarea" },
+        work: { en: "Letter 74", fr: "Lettre 74", es: "Carta 74", de: "Brief 74" },
+        date: "256 AD",
+        text: {
+          en: "[B]y the sacrament of baptism, the filth of the old man is washed away by them, that they pardon the former mortal sins, that they make sons of God by heavenly regeneration...",
+          fr: "[P]ar le sacrement du baptême, la souillure du vieil homme est lavée par eux, qu'ils pardonnent les péchés mortels antérieurs, qu'ils font des fils de Dieu par la régénération céleste...",
+          es: "[P]or el sacramento del bautismo, la inmundicia del hombre viejo es lavada por ellos, que perdonan los pecados mortales anteriores, que hacen hijos de God por la regeneración celestial...",
+          de: "[D]urch das Sakrament der Taufe wird der Schmutz des alten Menschen von ihnen abgewaschen, dass sie die früheren Todsünden vergeben, dass sie Söhne Gottes machen durch himmlische Wiedergeburt..."
+        },
+        sourceReference: "§17"
+      },
+      {
+        id: "pacian-penitents-4",
+        author: { en: "Saint Pacian of Barcelona", fr: "Saint Pacien de Barcelone", es: "San Paciano de Barcelona", de: "Hl. Pacian von Barcelona" },
+        work: { en: "On Penitents", fr: "Sur les Pénitents", es: "Sobre los Penitentes", de: "Über die Büßer" },
+        date: "c. 387 AD",
+        text: {
+          en: "These, my brethren, are capital sins; these are mortal sins... there is a sin that leads to death: I do not say that you should pray about that (1 John 5:16).",
+          fr: "Ceux-ci, mes frères, sont des péchés capitaux ; ce sont des péchés mortels... il y a un péché qui mène à la mort : je ne dis pas que vous devriez prier pour cela (1 Jean 5:16).",
+          es: "Estos, hermanos míos, son pecados capitales; estos son pecados mortales... hay un pecado que lleva a la muerte: no digo que debáis orar por eso (1 Juan 5:16).",
+          de: "Diese, meine Brüder, sind Hauptsünden; dies sind Todsünden... es gibt eine Sünde, die zum Tode führt: Ich sage nicht, dass ihr dafür beten sollt (1. Joh 5,16)."
+        },
+        sourceReference: "Ch. 4, §§2-3"
+      },
+      {
+        id: "basil-letter-199",
+        author: { en: "Saint Basil", fr: "Saint Basile", es: "San Basilio", de: "Hl. Basilius" },
+        work: { en: "Letter 199", fr: "Lettre 199", es: "Carta 199", de: "Brief 199" },
+        date: "375 AD",
+        text: {
+          en: "Clerics who are guilty of the sin unto death [1 John 5:16] are degraded from their order, but not excluded from the communion of the laity…",
+          fr: "Les clercs coupables du péché qui mène à la mort [1 Jean 5:16] sont dégradés de leur ordre, mais non exclus de la communion des laïcs...",
+          es: "Los clérigos culpables del pecado que lleva a la muerte [1 Juan 5:16] son degradados de su orden, pero no excluidos de la comunión de los laicos...",
+          de: "Kleriker, die sich der Sünde zum Tode [1. Joh 5,16] schuldig gemacht haben, werden ihres Amtes enthoben, aber nicht von der Gemeinschaft der Laien ausgeschlossen..."
+        },
+        sourceReference: "§31"
+      },
+      {
+        id: "jerome-jovinian-2-30",
+        author: { en: "Saint Jerome", fr: "Saint Jérôme", es: "San Jerónimo", de: "Hl. Hieronymus" },
+        work: { en: "Against Jovinian", fr: "Contre Jovinien", es: "Contra Joviniano", de: "Gegen Jovinian" },
+        date: "c. 393 AD",
+        text: {
+          en: "Hear what the Apostle John says: 'He who knows that his brother sins a sin not unto death, let him ask, and he shall give him life... But he that has sinned unto death, who shall pray for him?' (1 John 5:16). You observe that if we entreat for smaller offenses, we obtain pardon: if for greater ones, it is difficult to obtain our request.",
+          fr: "Écoutez ce que dit l'Apôtre Jean : 'Celui qui sait que son frère pèche d'un péché qui ne mène pas à la mort, qu'il demande, et il lui donnera la vie... Mais celui qui a péché d'un péché qui mène à la mort, qui priera pour lui ?' (1 Jean 5:16). Vous remarquez que si nous supplions pour des offenses moindres, nous obtenons le pardon : si c'est pour des plus grandes, il est difficile d'obtenir notre demande.",
+          es: "Oíd lo que dice el Apóstol Juan: 'El que sabe que su hermano comete un pecado que no es de muerte, pida, y le dará vida... Pero el que ha pecado de muerte, ¿quién orará por él?' (1 Juan 5:16). Observáis que si suplicamos por ofensas menores, obtenemos perdón: si por mayores, es difícil obtener nuestra petición.",
+          de: "Hört, was der Apostel Johannes sagt: 'Wer weiß, dass sein Bruder eine Sünde begeht, die nicht zum Tode ist, der bitte, und er wird ihm das Leben geben... Aber wer eine Sünde zum Tode begangen hat, wer wird für den beten?' (1. Joh 5,16). Ihr seht, dass wir, wenn wir für geringere Vergehen bitten, Vergebung erlangen: wenn für größere, ist es schwierig, unsere Bitte zu erlangen."
+        },
+        sourceReference: "Book 2, §30"
+      },
+      {
+        id: "augustine-faustus-22-96",
+        author: { en: "Saint Augustine", fr: "Saint Augustin", es: "San Agustín", de: "Hl. Augustinus" },
+        work: { en: "Reply to Faustus the Manichaean", fr: "Réponse à Fauste le Manichéen", es: "Respuesta a Fausto el Maniqueo", de: "Antwort an Faustus den Manichäer" },
+        date: "c. 400 AD",
+        text: {
+          en: "...it should also narrate cases where good men have gone back and fallen into evil... in order that the righteous may be not lifted up in the pride of security, nor the wicked hardened in despair of cure…",
+          fr: "...il devrait aussi rapporter des cas où de bonnes personnes sont revenues en arrière et sont tombées dans le mal... afin que le juste ne s'élève pas dans l'orgueil de la sécurité, ni que le méchant ne s'endurcisse dans le désespoir de la guérison...",
+          es: "...también debería narrar casos en que hombres buenos han retrocedido y caído en el mal... para que el justo no se ensoberbezca en la soberbia de la seguridad, ni el impío se endurezca en la desesperación de la cura...",
+          de: "...es sollte auch Fälle erzählen, in denen gute Menschen zurückgefallen und ins Böse gefallen sind... damit der Gerechte nicht im Stolz der Sicherheit überheblich wird, noch der Böse in der Verzweiflung an der Heilung verhärtet wird..."
+        },
+        sourceReference: "Book 22, §96"
+      },
+      {
+        id: "augustine-rebuke-grace",
+        author: { en: "Saint Augustine", fr: "Saint Augustin", es: "San Agustín", de: "Hl. Augustinus" },
+        work: { en: "On Rebuke and Grace", fr: "De la Correction et de la Grâce", es: "Sobre la Corrección y la Gracia", de: "Über Zurechtweisung und Gnade" },
+        date: "c. 426 AD",
+        text: {
+          en: "...they have of their own will been changed from a good to an evil life, and on that account are worthy of rebuke; and if... they should persevere in their ruined life until death, they are also worthy of divine condemnation forever.",
+          fr: "...ils ont, de leur propre volonté, passé d'une bonne vie à une mauvaise, et à cause de cela sont dignes de réprimande ; et si... ils persévèrent dans leur vie de perdition jusqu'à la mort, ils sont aussi dignes de la condamnation divine pour toujours.",
+          es: "...por su propia voluntad han cambiado de una vida buena a una mala, y por eso son dignos de reprensión; y si... perseveran en su vida arruinada hasta la muerte, son también dignos de condenación divina para siempre.",
+          de: "...sie haben sich aus eigenem Willen von einem guten zu einem bösen Leben verändert und sind deshalb des Tadels würdig; und wenn... sie in ihrem ruinierten Leben bis zum Tod verharren, sind sie auch der göttlichen Verdammnis für immer würdig."
+        },
+        sourceReference: "Ch. 11, 13"
+      },
+      {
+        id: "augustine-predestination-2-21",
+        author: { en: "Saint Augustine", fr: "Saint Augustin", es: "San Agustín", de: "Hl. Augustinus" },
+        work: { en: "On the Predestination of the Saints", fr: "De la Prédestination des Saints", es: "Sobre la Predestinación de los Santos", de: "Über die Vorherbestimmung der Heiligen" },
+        date: "c. 428 AD",
+        text: {
+          en: "But of two pious men, why to the one should be given perseverance unto the end, and to the other it should not be given... 'For if they had been of us,' says one of the predestinated... 'certainly they would have continued with us' (1 John 2:19).",
+          fr: "Mais de deux hommes pieux, pourquoi à l'un serait-il donné la persévérance jusqu'à la fin, et à l'autre ne le serait-il pas... 'Car s'ils avaient été des nôtres', dit l'un des prédestinés... 'ils seraient certainement demeurés avec nous' (1 Jean 2:19).",
+          es: "Pero de dos hombres piadosos, ¿por qué a uno se le da la perseverancia hasta el fin, y al otro no se le da?... 'Porque si hubieran sido de los nuestros', dice uno de los predestinados... 'ciertamente habrían permanecido con nosotros' (1 Juan 2:19).",
+          de: "Aber von zwei frommen Männern, warum dem einen die Beharrlichkeit bis ans Ende gegeben wird und dem anderen nicht... 'Denn wenn sie von uns gewesen wären', sagt einer der Prädestinierten... 'wären sie gewiss bei uns geblieben' (1. Joh 2,19)."
+        },
+        sourceReference: "Book 2, Ch. 21"
+      },
+      {
+        id: "augustine-city-of-god-21-25",
+        author: { en: "Saint Augustine", fr: "Saint Augustin", es: "San Agustín", de: "Hl. Augustinus" },
+        work: { en: "City of God", fr: "La Cité de Dieu", es: "La Ciudad de Dios", de: "Vom Gottesstaat" },
+        date: "c. 413-426 AD",
+        text: {
+          en: "...they who do such things shall not inherit the kingdom of God (Gal. 5:21). Consequently, they who do such things shall not exist anywhere but in eternal punishment... they cannot be said to abide in Christ to the end; for to abide in Him is to abide in the faith of Christ.",
+          fr: "...ceux qui font de telles choses n'hériteront pas le royaume de Dieu (Gal. 5:21). Par conséquent, ceux qui font de telles choses n'existeront nulle part ailleurs que dans le châtiment éternel... on ne peut pas dire qu'ils demeurent en Christ jusqu'à la fin ; car demeurer en Lui, c'est demeurer dans la foi du Christ.",
+          es: "...los que tales cosas hacen no heredarán el reino de Dios (Gál. 5:21). Por consiguiente, los que tales cosas hacen no existirán en ningún lugar sino en el castigo eterno... no se puede decir que permanecen en Cristo hasta el fin; porque permanecer en Él es permanecer en la fe de Cristo.",
+          de: "...die solches tun, werden das Reich Gottes nicht erben (Gal. 5,21). Folglich werden die, die solches tun, nirgendwo anders existieren als in ewiger Strafe... es kann nicht gesagt werden, dass sie bis ans Ende in Christus bleiben; denn in Ihm bleiben heißt, im Glauben Christi bleiben."
+        },
+        sourceReference: "Book 21, Ch. 25"
+      },
+      {
+        id: "caesarius-sermon-10",
+        author: { en: "Saint Caesarius of Arles", fr: "Saint Césaire d'Arles", es: "San Cesáreo de Arlés", de: "Hl. Caesarius von Arles" },
+        work: { en: "Sermon 10", fr: "Sermon 10", es: "Sermón 10", de: "Predigt 10" },
+        date: "c. 542 AD",
+        text: {
+          en: "If anyone has committed any of the aforementioned offenses, he should quickly amend his life, make his confession, perform true penance, and then his sins will be forgiven him. If you are willing to do what I have suggested... you will merit pardon for your sins and obtain eternal life...",
+          fr: "Si quelqu'un a commis l'une des offenses susmentionnées, il doit rapidement amender sa vie, faire sa confession, accomplir une vraie pénitence, et alors ses péchés lui seront pardonnés. Si vous êtes disposés à faire ce que j'ai suggéré... vous mériterez le pardon de vos péchés et obtiendrez la vie éternelle...",
+          es: "Si alguno ha cometido alguna de las ofensas mencionadas, debe enmendar rápidamente su vida, hacer su confesión, realizar verdadera penitencia, y entonces sus pecados le serán perdonados. Si estáis dispuestos a hacer lo que he sugerido... mereceréis el perdón de vuestros pecados y obtendréis la vida eterna...",
+          de: "Wenn jemand eine der vorgenannten Sünden begangen hat, sollte er schnell sein Leben bessern, seine Beichte ablegen, wahre Buße tun, und dann werden ihm seine Sünden vergeben werden. Wenn ihr bereit seid zu tun, was ich vorgeschlagen habe... werdet ihr Vergebung für eure Sünden verdienen und das ewige Leben erlangen..."
+        },
+        sourceReference: "Sermon 10, §3"
+      },
+      {
+        id: "caesarius-sermon-16",
+        author: { en: "Saint Caesarius of Arles", fr: "Saint Césaire d'Arles", es: "San Cesáreo de Arlés", de: "Hl. Caesarius von Arles" },
+        work: { en: "Sermon 16", fr: "Sermon 16", es: "Sermón 16", de: "Predigt 16" },
+        date: "c. 542 AD",
+        text: {
+          en: "May those, then, who are good... persevere... may those who do evil correct themselves at once before their souls depart from this life. If they die without repentance they do not enter into life, but are cast into death.",
+          fr: "Que ceux donc qui sont bons... persévèrent... que ceux qui font le mal se corrigent sur-le-champ avant que leurs âmes ne quittent cette vie. S'ils meurent sans repentance, ils n'entrent pas dans la vie, mais sont jetés dans la mort.",
+          es: "Que aquellos, pues, que son buenos... perseveren... que los que hacen el mal se corrijan de inmediato antes de que sus almas partan de esta vida. Si mueren sin arrepentimiento, no entran en la vida, sino que son arrojados a la muerte.",
+          de: "Mögen denn diejenigen, die gut sind... ausharren... mögen diejenigen, die Böses tun, sich sofort bessern, bevor ihre Seelen aus diesem Leben scheiden. Wenn sie ohne Buße sterben, treten sie nicht ins Leben ein, sondern werden in den Tod geworfen."
+        },
+        sourceReference: "Sermon 16, §4"
+      }
+    ]
+  },
+
+
+  
+  {
+    id: "communion-saints",
+    title: {
+      en: "The Communion of Saints: Intercession and Relics",
+      fr: "La Communion des Saints : Intercession et Reliques",
+      es: "La Comunión de los Santos: Intercesión y Reliquias",
+      de: "Die Gemeinschaft der Heiligen: Fürbitte und Reliquien"
+    },
+    icon: "Users",
+    quotes: [
+      {
+        id: "clement-alex-stromata-7-12",
+        author: { en: "Saint Clement of Alexandria", fr: "Saint Clément d'Alexandrie", es: "San Clemente de Alejandría", de: "Hl. Klemens von Alexandria" },
+        work: { en: "The Stromata", fr: "Les Stromates", es: "Los Stromata", de: "Die Stromateis" },
+        date: "c. 207 AD",
+        text: {
+          en: "He also prays in the society of angels, as being already of angelic rank, and he is never out of their holy keeping; and though he pray alone, he has the choir of the saints standing with him…",
+          fr: "Il prie aussi en la société des anges, comme étant déjà du rang angélique, et il n'est jamais hors de leur sainte garde ; et bien qu'il prie seul, il a le chœur des saints qui se tient avec lui...",
+          es: "Él también ora en la sociedad de los ángeles, como siendo ya de rango angélico, y nunca está fuera de su santa custodia; y aunque ore solo, tiene el coro de los santos de pie con él...",
+          de: "Er betet auch in der Gesellschaft von Engeln, da er bereits von engelhaftem Rang ist, und er ist nie außerhalb ihrer heiligen Obhut; und obwohl er allein betet, hat er den Chor der Heiligen bei sich stehen..."
+        },
+        sourceReference: "Book 7, Ch. 12"
+      },
+      {
+        id: "origen-prayer-11-1",
+        author: { en: "Origen", fr: "Origène", es: "Orígenes", de: "Origenes" },
+        work: { en: "Prayer", fr: "De la Prière", es: "Sobre la Oración", de: "Über das Gebet" },
+        date: "233 AD",
+        text: {
+          en: "It is not only the High Priest who prays with those who truly pray, but also the angels... and also the souls of the saints who have passed away. This is clear from the case of Raphael... 'I am Raphael, one of the seven angels who bear up [the prayers of the saints] and enter before the glory of the holy one' (Tob. 12:15). ...[Onias] bore witness saying: 'This is he that prayeth much for the people and for all the holy city, Jeremias the prophet of God' (2 Mac. 15:14).",
+          fr: "Ce n'est pas seulement le Souverain Prêtre qui prie avec ceux qui prient vraiment, mais aussi les anges... et aussi les âmes des saints qui sont décédés. Ceci est clair par le cas de Raphaël... 'Je suis Raphaël, l'un des sept anges qui portent [les prières des saints] et entrent devant la gloire du Saint' (Tob. 12:15). ...[Onias] rendit témoignage en disant : 'C'est lui qui prie beaucoup pour le peuple et pour toute la ville sainte, Jérémie le prophète de Dieu' (2 Mac. 15:14).",
+          es: "No es solo el Sumo Sacerdote quien ora con los que oran de verdad, sino también los ángeles... y también las almas de los santos que han fallecido. Esto queda claro por el caso de Rafael... 'Soy Rafael, uno de los siete ángeles que llevan [las oraciones de los santos] y entran ante la gloria del Santo' (Tob. 12:15). ...[Onías] dio testimonio diciendo: 'Este es el que ora mucho por el pueblo y por toda la ciudad santa, Jeremías el profeta de Dios' (2 Mac. 15:14).",
+          de: "Es ist nicht nur der Hohepriester, der mit denen betet, die wahrhaft beten, sondern auch die Engel... und auch die Seelen der Heiligen, die hingeschieden sind. Dies wird deutlich am Fall Raphaels... 'Ich bin Raphael, einer der sieben Engel, die [die Gebete der Heiligen] emportragen und vor die Herrlichkeit des Heiligen treten' (Tob. 12:15). ...[Onias] bezeugte und sprach: 'Das ist der, der viel für das Volk und für die ganze heilige Stadt betet, Jeremia, der Prophet Gottes' (2 Makk. 15:14)."
+        },
+        sourceReference: "Ch. 11, §1"
+      },
+      {
+        id: "origen-prayer-11-2",
+        author: { en: "Origen", fr: "Origène", es: "Orígenes", de: "Origenes" },
+        work: { en: "Prayer", fr: "De la Prière", es: "Sobre la Oración", de: "Über das Gebet" },
+        date: "233 AD",
+        text: {
+          en: "We must believe that the saints who have died have this love in a far greater degree towards them that are engaged in the combat of life, than those who are still subject to human weakness... 'If one member suffer any thing, all the members suffer with it...' (1 Cor. 12:26), does not apply only to those who here on earth love their brethren.",
+          fr: "Nous devons croire que les saints qui sont morts ont cet amour à un degré bien plus grand envers ceux qui sont engagés dans le combat de la vie, que ceux qui sont encore sujets à la faiblesse humaine... 'Si un membre souffre quelque chose, tous les membres souffrent avec lui...' (1 Cor. 12:26), ne s'applique pas seulement à ceux qui, ici sur terre, aiment leurs frères.",
+          es: "Debemos creer que los santos que han muerto tienen este amor en un grado mucho mayor hacia aquellos que están comprometidos en el combate de la vida, que aquellos que todavía están sujetos a la debilidad humana... 'Si un miembro sufre algo, todos los miembros sufren con él...' (1 Cor. 12:26), no se aplica solo a aquellos que aquí en la tierra aman a sus hermanos.",
+          de: "Wir müssen glauben, dass die verstorbenen Heiligen diese Liebe in einem viel größeren Maße zu denen haben, die sich im Kampf des Lebens befinden, als jene, die noch menschlicher Schwachheit unterworfen sind... 'Wenn ein Glied etwas leidet, leiden alle Glieder mit...' (1 Kor. 12:26), gilt nicht nur für jene, die hier auf Erden ihre Brüder lieben."
+        },
+        sourceReference: "Ch. 11, §2"
+      },
+      {
+        id: "origen-prayer-11-5",
+        author: { en: "Origen", fr: "Origène", es: "Orígenes", de: "Origenes" },
+        work: { en: "Prayer", fr: "De la Prière", es: "Sobre la Oración", de: "Über das Gebet" },
+        date: "233 AD",
+        text: {
+          en: "In the same way we must suppose that the angels who are the overseers and ministers of God are present to one who is praying... The angel, indeed, of each one, even of the 'little ones' in the Church, always 'seeing the face of the Father who is in heaven' (Luke 18:10)... prays with us and cooperates with us, as far as is possible, in what we seek.",
+          fr: "De la même manière, nous devons supposer que les anges qui sont les surveillants et les ministres de Dieu sont présents à celui qui prie... L'ange, en effet, de chacun, même des 'petits' dans l'Église, 'voyant toujours la face du Père qui est dans les cieux' (Luc 18:10)... prie avec nous et coopère avec nous, autant qu'il est possible, dans ce que nous cherchons.",
+          es: "Del mismo modo debemos suponer que los ángeles que son los supervisores y ministros de Dios están presentes para quien está orando... El ángel, en verdad, de cada uno, incluso de los 'pequeños' en la Iglesia, que 'siempre ven el rostro del Padre que está en los cielos' (Lc 18:10)... ora con nosotros y coopera con nosotros, en la medida de lo posible, en lo que buscamos.",
+          de: "Auf dieselbe Weise müssen wir annehmen, dass die Engel, die Aufseher und Diener Gottes sind, bei demjenigen anwesend sind, der betet... Der Engel eines jeden, selbst der 'Kleinen' in der Kirche, der 'immer das Angesicht des Vaters im Himmel sieht' (Lk 18:10)... betet mit uns und wirkt mit uns, soweit es möglich ist, in dem, was wir suchen."
+        },
+        sourceReference: "Ch. 11, §5"
+      },
+      {
+        id: "origen-martyrdom-30",
+        author: { en: "Origen", fr: "Origène", es: "Orígenes", de: "Origenes" },
+        work: { en: "Exhortation to Martyrdom", fr: "Exhortation au Martyre", es: "Exhortación al Martirio", de: "Ermahnung zum Martyrium" },
+        date: "c. 235 AD",
+        text: {
+          en: "Just as they who assisted at the altar... seemed to procure for the Jews remission for sins by the blood of goats and oxen, so the souls of believers that 'are beheaded for the testimony of Jesus' (Apoc. 20:4), do not assist in vain at the altar of heaven, but procure for them that pray the remission of sins.",
+          fr: "De même que ceux qui assistaient à l'autel... semblaient procurer aux Juifs la rémission des péchés par le sang des boucs et des taureaux, de même les âmes des croyants qui 'sont décapités pour le témoignage de Jésus' (Apoc. 20:4), n'assistent pas en vain à l'autel du ciel, mais procurent à ceux qui prient la rémission des péchés.",
+          es: "Así como aquellos que asistían al altar... parecían procurar a los judíos la remisión de los pecados por la sangre de machos cabríos y bueyes, así las almas de los creyentes que 'son decapitados por el testimonio de Jesús' (Apoc. 20:4), no asisten en vano al altar del cielo, sino que procuran para los que oran la remisión de los pecados.",
+          de: "So wie jene, die am Altar dienten... den Juden Vergebung für Sünden durch das Blut von Böcken und Ochsen zu verschaffen schienen, so dienen die Seelen der Gläubigen, die 'um des Zeugnisses Jesu willen enthauptet sind' (Offb 20,4), nicht vergeblich am Altar des Himmels, sondern verschaffen denen, die beten, die Vergebung der Sünden."
+        },
+        sourceReference: "§30"
+      },
+      {
+        id: "cyprian-letter-56",
+        author: { en: "Saint Cyprian of Carthage", fr: "Saint Cyprien de Carthage", es: "San Cipriano de Cartago", de: "Hl. Cyprian von Karthago" },
+        work: { en: "Letter 56: To St. Pope Cornelius", fr: "Lettre 56 : Au Pape Corneille", es: "Carta 56: Al Papa San Cornelio", de: "Brief 56: An den Hl. Papst Cornelius" },
+        date: "252 AD",
+        text: {
+          en: "Let us remember one another in concord and unanimity. Let us on both sides always pray for one another... that if any one of us... shall go hence the first, our love may continue in the presence of the Lord, and our prayers for our brethren and sisters not cease in the presence of the Father’s mercy…",
+          fr: "Souvenons-nous les uns des autres dans la concorde et l'unanimité. Prions toujours les uns pour les autres des deux côtés... afin que si l'un de nous... part d'ici le premier, notre amour puisse continuer en présence du Seigneur, et nos prières pour nos frères et sœurs ne cessent pas en présence de la miséricorde du Père...",
+          es: "Recordémonos mutuamente en concordia y unanimidad. Oremos siempre los unos por los otros en ambos lados... para que si alguno de nosotros... parte primero de aquí, nuestro amor continúe en la presencia del Señor, y nuestras oraciones por nuestros hermanos y hermanas no cesen en la presencia de la misericordia del Padre...",
+          de: "Lasst uns in Eintracht und Einmütigkeit aneinander denken. Lasst uns auf beiden Seiten immer füreinander beten... dass, wenn einer von uns... als erster von hinnen geht, unsere Liebe in der Gegenwart des Herrn fortbestehe und unsere Gebete für unsere Brüder und Schwestern in der Gegenwart der Barmherzigkeit des Vaters nicht aufhören..."
+        },
+        sourceReference: "§5"
+      },
+      {
+        id: "methodius-oration-simeon-14",
+        author: { en: "Saint Methodius of Olympus", fr: "Saint Méthode d'Olympe", es: "San Metodio de Olimpo", de: "Hl. Methodius von Olympus" },
+        work: { en: "Oration Concerning Simeon and Anna", fr: "Oraison sur Siméon et Anne", es: "Oración sobre Simeón y Ana", de: "Rede über Simeon und Anna" },
+        date: "c. 300 AD",
+        text: {
+          en: "Wherefore, we pray thee, the most excellent among women... that thou wouldest unceasingly keep us in remembrance. O holy mother of God, remember us... And do thou also, O honored and venerable Simeon... be our patron and advocate with that Savior God...",
+          fr: "C'est pourquoi nous te prions, la plus excellente des femmes... de nous garder sans cesse en mémoire. Ô sainte mère de Dieu, souviens-toi de nous... Et toi aussi, Ô honoré et vénérable Siméon... sois notre patron et avocat auprès de ce Dieu Sauveur...",
+          es: "Por lo cual, te rogamos, la más excelente entre las mujeres... que incesantemente nos tengas presentes. Oh santa madre de Dios, acuérdate de nosotros... Y tú también, oh honrado y venerable Simeón... sé nuestro patrón y abogado ante ese Dios Salvador...",
+          de: "Deshalb bitten wir dich, die hervorragendste unter den Frauen... dass du uns unablässig in Erinnerung behältst. O heilige Mutter Gottes, gedenke unser... Und auch du, o geehrter und ehrwürdiger Simeon... sei unser Schutzherr und Fürsprecher bei jenem Erlösergott..."
+        },
+        sourceReference: "§14"
+      }
+    ]
+  },
+
+  
+  {
+    id: "purgatory",
+    title: {
+      en: "Purgatory",
+      fr: "Le Purgatoire",
+      es: "El Purgatorio",
+      de: "Das Fegefeuer",
+    },
+    icon: "Flame",
+    quotes: [
+
+      {
+        id: "perpetua-felicity-2",
+        author: { en: "Tertullian (Martyrdom of Perpetua)", fr: "Tertullien (Martyre de Perpétue)", es: "Tertuliano (Martirio de Perpetua)", de: "Tertullian (Martyrium von Perpetua)" },
+        work: { en: "The Martyrdom of Perpetua and Felicity", fr: "Le Martyre de Perpétue et Félicité", es: "El Martirio de Perpetua y Felicidad", de: "Das Martyrium von Perpetua und Felicitas" },
+        date: "c. 203 AD",
+        text: {
+          en: "I saw Dinocrates going out from a gloomy place... and I knew that my brother was in suffering. But I trusted that my prayer would bring help to his suffering... Then, on the day on which we remained in fetters, this was shown to me. I saw that that place... was now bright; and Dinocrates, with a clean body well clad, was finding refreshment... Then I understood that he was translated from the place of punishment.",
+          fr: "Je vis Dinocrate sortir d'un lieu sombre... et je savais que mon frère souffrait. Mais j'avais confiance que ma prière apporterait de l'aide à sa souffrance... Puis, le jour où nous restâmes dans les fers, ceci me fut montré. Je vis que ce lieu... était maintenant lumineux ; et Dinocrate, le corps pur et bien vêtu, trouvait du rafraîchissement... Alors je compris qu'il avait été transféré du lieu de punition.",
+          es: "Vi a Dinócrates salir de un lugar sombrío... y supe que mi hermano estaba sufriendo. Pero confiaba en que mi oración aliviaría su sufrimiento... Luego, el día en que permanecimos encadenados, se me mostró esto. Vi que aquel lugar... estaba ahora brillante; y Dinócrates, con un cuerpo limpio y bien vestido, encontraba alivio... Entonces comprendí que había sido trasladado del lugar del castigo.",
+          de: "Ich sah Dinokrates aus einem düsteren Ort herauskommen... und ich wusste, dass mein Bruder litt. Aber ich vertraute darauf, dass mein Gebet seinem Leiden helfen würde... Dann, an dem Tag, an dem wir in Fesseln blieben, wurde mir dies gezeigt. Ich sah, dass jener Ort... jetzt hell war; und Dinokrates, mit einem reinen Körper gut gekleidet, fand Erfrischung... Da verstand ich, dass er vom Ort der Strafe versetzt worden war."
+        },
+        sourceReference: "Ch. 2, §§3-4"
+      },
+      {
+        id: "clement-stromata-6-14",
+        author: { en: "Saint Clement of Alexandria", fr: "Saint Clément d'Alexandrie", es: "San Clemente de Alejandría", de: "Hl. Klemens von Alexandria" },
+        work: { en: "The Stromata", fr: "Les Stromates", es: "Los Stromata", de: "Die Stromateis" },
+        date: "c. 207 AD",
+        text: {
+          en: "Accordingly the believer, through great discipline... passes to the mansion which is better than the former one, viz., to the greatest torment, taking with him the characteristic of repentance from the sins he has committed after baptism. He is tortured then still more... And though the punishments cease in the course of the completion of the expiation and purification of each one...",
+          fr: "En conséquence, le croyant, par une grande discipline... passe à la demeure qui est meilleure que la précédente, c'est-à-dire au plus grand tourment, emportant avec lui la caractéristique de la repentance des péchés qu'il a commis après le baptême. Il est alors encore plus torturé... Et bien que les punitions cessent au cours de l'achèvement de l'expiation et de la purification de chacun...",
+          es: "En consecuencia, el creyente, a través de una gran disciplina... pasa a la mansión que es mejor que la anterior, a saber, al mayor tormento, llevando consigo la característica del arrepentimiento de los pecados que ha cometido después del bautismo. Es torturado entonces aún más... Y aunque los castigos cesan en el transcurso de la finalización de la expiación y purificación de cada uno...",
+          de: "Dementsprechend geht der Gläubige durch große Disziplin... in die Wohnung ein, die besser ist als die frühere, nämlich zur größten Qual, indem er das Merkmal der Reue für die Sünden, die er nach der Taufe begangen hat, mit sich nimmt. Er wird dann noch mehr gefoltert... Und obwohl die Strafen im Laufe der Vollendung der Sühne und Reinigung eines jeden aufhören..."
+        },
+        sourceReference: "Book 6, Ch. 14"
+      },
+      {
+        id: "tertullian-soul-58",
+        author: { en: "Tertullian", fr: "Tertullien", es: "Tertuliano", de: "Tertullian" },
+        work: { en: "A Treatise on the Soul", fr: "Traité de l'Âme", es: "Un Tratado sobre el Alma", de: "Abhandlung über die Seele" },
+        date: "c. 210 AD",
+        text: {
+          en: "...why, then, cannot you suppose that the soul undergoes punishment and consolation in Hades in the interval, while it awaits its alternative of judgment...? In short, inasmuch as we understand the prison pointed out in the Gospel to be Hades [Matt. 5:25], and as we also interpret the uttermost farthing to mean the very smallest offense which has to be recompensed there before the resurrection, no one will hesitate to believe that the soul undergoes in Hades some compensatory discipline, without prejudice to the full process of the resurrection...",
+          fr: "...pourquoi, alors, ne pouvez-vous pas supposer que l'âme subit une punition et une consolation dans l'Hadès dans l'intervalle, pendant qu'elle attend son alternative de jugement...? Bref, dans la mesure où nous comprenons que la prison indiquée dans l'Évangile est l'Hadès [Matt. 5:25], et comme nous interprétons aussi le dernier quadrant comme signifiant la plus petite offense qui doit y être compensée avant la résurrection, personne n'hésitera à croire que l'âme subit dans l'Hadès une certaine discipline compensatoire, sans préjudice du processus complet de la résurrection...",
+          es: "...¿por qué, entonces, no puedes suponer que el alma sufre castigo y consuelo en el Hades en el intervalo, mientras espera su alternativa de juicio...? En resumen, en la medida en que entendemos que la prisión señalada en el Evangelio es el Hades [Mat. 5:25], y como también interpretamos el último céntimo como la ofensa más pequeña que debe ser recompensada allí antes de la resurrección, nadie dudará en creer que el alma sufre en el Hades alguna disciplina compensatoria, sin perjuicio del proceso completo de la resurrección...",
+          de: "...warum kannst du also nicht annehmen, dass die Seele im Hades in der Zwischenzeit Strafe und Trost erfährt, während sie auf ihre Alternative des Gerichts wartet...? Kurz gesagt, da wir das im Evangelium gezeigte Gefängnis als Hades verstehen [Mt 5,25] und da wir auch den letzten Heller als das kleinste Vergehen deuten, das dort vor der Auferstehung ausgeglichen werden muss, wird niemand zögern zu glauben, dass die Seele im Hades eine gewisse ausgleichende Zucht erfährt, unbeschadet des vollen Prozesses der Auferstehung..."
+        },
+        sourceReference: "Ch. 58"
+      },
+      {
+        id: "tertullian-chaplet-3",
+        author: { en: "Tertullian", fr: "Tertullien", es: "Tertuliano", de: "Tertullian" },
+        work: { en: "The Chaplet", fr: "La Couronne du Soldat", es: "La Corona", de: "Der Kranz" },
+        date: "211 AD",
+        text: {
+          en: "As often as the anniversary comes round, we make offerings for the dead as birthday honors…",
+          fr: "Aussi souvent que l'anniversaire revient, nous faisons des offrandes pour les morts comme honneurs d'anniversaire...",
+          es: "Tan a menudo como llega el aniversario, hacemos ofrendas por los muertos como honores de cumpleaños...",
+          de: "Sooft der Jahrestag wiederkehrt, bringen wir Opfer für die Verstorbenen als Geburtstags-Ehren dar..."
+        },
+        sourceReference: "Ch. 3"
+      },
+      {
+        id: "tertullian-monogamy-10",
+        author: { en: "Tertullian", fr: "Tertullien", es: "Tertuliano", de: "Tertullian" },
+        work: { en: "On Monogamy", fr: "Sur la Monogamie", es: "Sobre la Monogamia", de: "Über die Monogamie" },
+        date: "c. 218 AD",
+        text: {
+          en: "Indeed, she [a widow] prays for his [her husband’s] soul, and requests refreshment for him meanwhile, and fellowship (with him) in the first resurrection; and she offers (her sacrifice) on the anniversaries of his falling asleep.",
+          fr: "En effet, elle [une veuve] prie pour son âme [celle de son mari], et demande pour lui du rafraîchissement en attendant, et la communion (avec lui) à la première résurrection ; et elle offre (son sacrifice) aux anniversaires de son endormissement.",
+          es: "En verdad, ella [una viuda] ora por el alma de él [su esposo], y pide refrigerio para él entretanto, y compañerismo (con él) en la primera resurrección; y ofrece (su sacrificio) en los aniversarios de su dormición.",
+          de: "In der Tat betet sie [eine Witwe] für seine [ihres Mannes] Seele und bittet um Erquickung für ihn einstweilen und Gemeinschaft (mit ihm) in der ersten Auferstehung; und sie opfert (ihr Opfer) an den Jahrestagen seines Entschlafens."
+        },
+        sourceReference: "Ch. 10"
+      },
+      {
+        id: "origen-celsus-4-13",
+        author: { en: "Origen", fr: "Origène", es: "Orígenes", de: "Origenes" },
+        work: { en: "Against Celsus", fr: "Contre Celse", es: "Contra Celso", de: "Gegen Celsus" },
+        date: "c. 248 AD",
+        text: {
+          en: "The divine word says that our God is 'a consuming fire' (Deut. 4:24)... 'The fire will try each man’s work of what sort it is... If any man’s work be burned, he shall suffer loss' (1 Cor. 3:13-15). But what work can be spoken of... as being 'burned,' save all that results from wickedness? Therefore our God is a 'consuming fire' in this sense; and thus He enters in as a 'refiner’s fire,' to refine the rational nature...",
+          fr: "La parole divine dit que notre Dieu est 'un feu consumant' (Deut. 4:24)... 'Le feu éprouvera l'œuvre de chacun, ce qu'elle est... Si l'œuvre de quelqu'un est brûlée, il subira une perte' (1 Cor. 3:13-15). Mais de quelle œuvre peut-on parler... comme étant 'brûlée', sinon tout ce qui résulte de la méchanceté ? C'est pourquoi notre Dieu est un 'feu consumant' en ce sens ; et c'est ainsi qu'Il entre comme un 'feu d'affineur', pour affiner la nature rationnelle...",
+          es: "La palabra divina dice que nuestro Dios es 'un fuego consumidor' (Deut. 4:24)... 'El fuego probará la obra de cada uno cuál sea... Si la obra de alguno se quema, sufrirá pérdida' (1 Cor. 3:13-15). Pero, ¿de qué obra se puede hablar... como 'quemada', sino de todo lo que resulta de la maldad? Por tanto, nuestro Dios es un 'fuego consumidor' en este sentido; y así entra Él como 'fuego de refinador', para refinar la naturaleza racional...",
+          de: "Das göttliche Wort sagt, dass unser Gott 'ein verzehrendes Feuer' ist (Dtn 4,24)... 'Das Feuer wird das Werk eines jeden prüfen, welcher Art es ist... Wenn jemandes Werk verbrennt, wird er Schaden erleiden' (1 Kor 3,13-15). Aber von welchem Werk kann man... sagen, dass es 'verbrannt' wird, außer allem, was aus der Bosheit resultiert? Deshalb ist unser Gott ein 'verzehrendes Feuer' in diesem Sinne; und so tritt Er ein als 'Feuer eines Läuterers', um die vernünftige Natur zu läutern..."
+        },
+        sourceReference: "Book 4, Ch. 13"
+      },
+      {
+        id: "cyprian-letter-51-20",
+        author: { en: "Saint Cyprian of Carthage", fr: "Saint Cyprien de Carthage", es: "San Cipriano de Cartago", de: "Hl. Cyprian von Karthago" },
+        work: { en: "Letter 51", fr: "Lettre 51", es: "Carta 51", de: "Brief 51" },
+        date: "252 AD",
+        text: {
+          en: "It is one thing to stand for pardon, another thing to attain to glory: it is one thing, when cast into prison, not to go out thence until one has paid the uttermost farthing; another thing at once to receive the wages of faith and courage. It is one thing, tortured by long suffering for sins, to be cleansed and long purged by fire; another to have purged all sins by suffering.",
+          fr: "C'est une chose de se tenir pour le pardon, une autre d'atteindre la gloire : c'est une chose, jeté en prison, de ne pas en sortir avant d'avoir payé jusqu'au dernier quadrant ; une autre de recevoir aussitôt le salaire de la foi et du courage. C'est une chose, torturé par une longue souffrance pour les péchés, d'être purifié et longuement purgé par le feu ; une autre d'avoir purgé tous les péchés par la souffrance.",
+          es: "Una cosa es estar en espera de perdón, otra cosa es alcanzar la gloria: una cosa es, arrojado en prisión, no salir de allí hasta haber pagado el último céntimo; otra cosa es recibir en seguida el salario de la fe y del valor. Una cosa es, torturado por un largo sufrimiento por los pecados, ser limpiado y largamente purgado por el fuego; otra cosa es haber purgado todos los pecados por el sufrimiento.",
+          de: "Es ist eine Sache, um Verzeihung dazustehen, eine andere, zur Herrlichkeit zu gelangen: Es ist eine Sache, ins Gefängnis geworfen, nicht von dort herauszukommen, bis man den letzten Heller bezahlt hat; eine andere, sogleich den Lohn des Glaubens und des Mutes zu empfangen. Es ist eine Sache, durch langes Leiden für Sünden gequält, gereinigt und lange durch Feuer geläutert zu werden; eine andere, alle Sünden durch Leiden gereinigt zu haben."
+        },
+        sourceReference: "§20"
+      },
+      {
+        id: "lactantius-institutes-7-21",
+        author: { en: "Lactantius", fr: "Lactance", es: "Lactancio", de: "Laktanz" },
+        work: { en: "The Divine Institutes", fr: "Les Institutions Divines", es: "Las Instituciones Divinas", de: "Die Göttlichen Unterweisungen" },
+        date: "c. 303-311 AD",
+        text: {
+          en: "But when He shall have judged the righteous, He will also try them with fire. Then they whose sins shall exceed either in weight or in number, shall be scorched by the fire and burnt: but they whom full justice and maturity of virtue has imbued will not perceive that fire...",
+          fr: "Mais quand Il aura jugé les justes, Il les éprouvera aussi par le feu. Alors ceux dont les péchés dépasseront soit en poids soit en nombre, seront roussis par le feu et brûlés : mais ceux que la pleine justice et la maturité de la vertu ont imprégnés ne sentiront pas ce feu...",
+          es: "Pero cuando haya juzgado a los justos, también los probará con fuego. Entonces aquellos cuyos pecados excedan en peso o en número, serán chamuscados por el fuego y quemados: pero aquellos a quienes la plena justicia y la madurez de la virtud han imbuido no percibirán ese fuego...",
+          de: "Aber wenn Er die Gerechten gerichtet haben wird, wird Er sie auch mit Feuer prüfen. Dann werden die, deren Sünden entweder an Gewicht oder an Zahl überwiegen, vom Feuer versengt und verbrannt werden: aber die, welche volle Gerechtigkeit und Reife der Tugend durchdrungen hat, werden jenes Feuer nicht wahrnehmen..."
+        },
+        sourceReference: "Book 7, Ch. 21"
+      },
+      {
+        id: "cyril-jerusalem-lecture-23",
+        author: { en: "Saint Cyril of Jerusalem", fr: "Saint Cyrille de Jérusalem", es: "San Cirilo de Jerusalén", de: "Hl. Kyrill von Jerusalem" },
+        work: { en: "Catechetical Lecture 23", fr: "Catéchèse 23", es: "Catequesis 23", de: "Katechese 23" },
+        date: "c. 350 AD",
+        text: {
+          en: "Then [during the Eucharistic prayer] we commemorate also those who have fallen asleep before us, first Patriarchs, Prophets, Apostles, Martyrs... Then on behalf also of the Holy Fathers and Bishops who have fallen asleep before us, and in a word of all who in past years have fallen asleep among us, believing that it will be a very great benefit to the souls for whom the supplication is put up...",
+          fr: "Ensuite [pendant la prière eucharistique] nous commémorons aussi ceux qui se sont endormis avant nous, d'abord les Patriarches, Prophètes, Apôtres, Martyrs... Puis aussi pour les Saints Pères et Évêques qui se sont endormis avant nous, et en un mot pour tous ceux qui, dans les années passées, se sont endormis parmi nous, croyant que ce sera un très grand bienfait pour les âmes pour lesquelles la supplication est offerte...",
+          es: "Luego [durante la plegaria eucarística] conmemoramos también a los que se durmieron antes que nosotros, primero Patriarcas, Profetas, Apóstoles, Mártires... Luego también por los Santos Padres y Obispos que se durmieron antes que nosotros, y en una palabra por todos los que en años pasados se durmieron entre nosotros, creyendo que será un grandísimo beneficio para las almas por quienes se ofrece la súplica...",
+          de: "Dann [während des Eucharistiegebets] gedenken wir auch derer, die vor uns entschlafen sind, zuerst der Patriarchen, Propheten, Apostel, Märtyrer... Dann auch für die Heiligen Väter und Bischöfe, die vor uns entschlafen sind, und mit einem Wort für alle, die in vergangenen Jahren unter uns entschlafen sind, im Glauben, dass es ein sehr großer Nutzen für die Seelen sein wird, für die die Fürbitte dargebracht wird..."
+        },
+        sourceReference: "§9"
       }
     ],
-    pdfFile: 'Clement_of_Rome.pdf',
-    themes: ['Authority', 'Succession', 'Primacy', 'Deuterocanon']
   },
-  {
-    title: {
-      en: 'Letters of Ignatius of Antioch',
-      fr: 'Lettres d\'Ignace d\'Antioche',
-      es: 'Cartas de Ignacio de Antioquía',
-      de: 'Briefe des Ignatius von Antiochien'
-    },
-    author: {
-      en: 'St. Ignatius of Antioch',
-      fr: 'Saint Ignace d\'Antioche',
-      es: 'San Ignacio de Antioquía',
-      de: 'Hl. Ignatius von Antiochien'
-    },
-    date: {
-      en: 'c. 107 AD',
-      fr: 'vers 107 apr. J.-C.',
-      es: 'c. 107 d.C.',
-      de: 'ca. 107 n. Chr.'
-    },
-    summary: {
-      en: 'Seven letters written en route to martyrdom in Rome. First use of "Catholic Church," affirms episcopal structure, Real Presence, and Roman primacy.',
-      fr: 'Sept lettres écrites en route vers le martyre à Rome. Première utilisation de « l\'Église catholique », affirme la structure épiscopale, la Présence réelle et la primauté romaine.',
-      es: 'Siete cartas escritas en camino al martirio en Roma. Primer uso de "Iglesia Católica", afirma la estructura episcopal, la Presencia Real y la primacía romana.',
-      de: 'Sieben Briefe, geschrieben auf dem Weg zum Martyrium in Rom. Erste Verwendung von „Katholische Kirche", bestätigt die bischöfliche Struktur, die wirkliche Gegenwart und den römischen Primat.'
-    },
-    primaryQuote: {
-      text: {
-        en: 'Let no man do anything connected with the Church without the bishop. Let that be deemed a proper Eucharist, which is administered either by the bishop, or by one to whom he has entrusted it. Wherever the bishop shall appear, there let the multitude also be; even as, wherever Jesus Christ is, there is the Catholic Church.',
-        fr: 'Que personne ne fasse rien qui concerne l\'Église sans l\'évêque. Que soit considérée comme une Eucharistie légitime celle qui est célébrée soit par l\'évêque, soit par celui à qui il l\'a confiée. Là où paraît l\'évêque, que soit aussi la multitude ; de même que là où est Jésus-Christ, là est l\'Église catholique.',
-        es: 'Que nadie haga nada relacionado con la Iglesia sin el obispo. Que se considere como una Eucaristía apropiada aquella que es administrada por el obispo, o por uno a quien él se la ha confiado. Dondequiera que aparezca el obispo, allí esté también la multitud; así como, dondequiera que esté Jesucristo, allí está la Iglesia Católica.',
-        de: 'Niemand soll irgendetwas tun, was mit der Kirche zu tun hat, ohne den Bischof. Als rechtmäßige Eucharistie gelte jene, die vom Bischof oder von einem, dem er es anvertraut hat, gefeiert wird. Wo der Bischof erscheint, dort sei auch die Menge; ebenso wie dort, wo Jesus Christus ist, dort ist die katholische Kirche.'
-      },
-      reference: {
-        en: 'Letter to the Smyrnaeans §8',
-        fr: 'Lettre aux Smyrniotes §8',
-        es: 'Carta a los Esmirnenses §8',
-        de: 'Brief an die Smyrnäer §8'
-      },
-      theme: 'Catholic Church'
-    },
-    additionalQuotes: [
-      {
-        text: {
-          en: 'Ignatius... to the Church which has obtained mercy... which is beloved and enlightened... which also presides in the place of the region of the Romans, worthy of God, worthy of honor, worthy of the highest happiness... and which presides over love, is named from Christ, and from the Father.',
-          fr: 'Ignace... à l\'Église qui a obtenu miséricorde... qui est aimée et éclairée... qui préside aussi dans la région des Romains, digne de Dieu, digne d\'honneur, digne du plus grand bonheur... et qui préside à la charité, nommée du Christ et du Père.',
-          es: 'Ignacio... a la Iglesia que ha obtenido misericordia... que es amada e iluminada... que también preside en la región de los Romanos, digna de Dios, digna de honor, digna de la mayor felicidad... y que preside en el amor, nombrada de Cristo y del Padre.',
-          de: 'Ignatius... an die Kirche, die Barmherzigkeit erlangt hat... die geliebt und erleuchtet ist... die auch im Gebiet der Römer den Vorsitz führt, Gottes würdig, der Ehre würdig, des höchsten Glücks würdig... und die über die Liebe den Vorsitz führt, benannt nach Christus und dem Vater.'
-        },
-        reference: {
-          en: 'Letter to the Romans, Introduction',
-          fr: 'Lettre aux Romains, Introduction',
-          es: 'Carta a los Romanos, Introducción',
-          de: 'Brief an die Römer, Einleitung'
-        },
-        theme: 'Primacy'
-      },
-      {
-        text: {
-          en: 'You have never envied anyone; you have taught others... I do not, as Peter and Paul, issue commandments unto you.',
-          fr: 'Vous n\'avez jamais envié personne ; vous avez enseigné aux autres... Je ne vous donne pas de commandements comme Pierre et Paul.',
-          es: 'Nunca han envidiado a nadie; han enseñado a otros... No les doy mandamientos como Pedro y Pablo.',
-          de: 'Ihr habt niemals jemanden beneidet; ihr habt andere gelehrt... Ich gebe euch keine Gebote wie Petrus und Paulus.'
-        },
-        reference: {
-          en: 'Letter to the Romans §§3-4',
-          fr: 'Lettre aux Romains §§3-4',
-          es: 'Carta a los Romanos §§3-4',
-          de: 'Brief an die Römer §§3-4'
-        },
-        theme: 'Primacy'
-      }
-    ],
-    pdfFile: 'Ignatius_of_Antioch.pdf',
-    themes: ['Catholic Church', 'Eucharist', 'Authority', 'Primacy']
-  },
-  {
-    title: {
-      en: 'Epistle to the Philippians',
-      fr: 'Épître aux Philippiens',
-      es: 'Epístola a los Filipenses',
-      de: 'Brief an die Philipper'
-    },
-    author: {
-      en: 'St. Polycarp',
-      fr: 'Saint Polycarpe',
-      es: 'San Policarpo',
-      de: 'Hl. Polykarp'
-    },
-    date: {
-      en: 'c. 110–140 AD',
-      fr: 'vers 110-140 apr. J.-C.',
-      es: 'c. 110-140 d.C.',
-      de: 'ca. 110-140 n. Chr.'
-    },
-    summary: {
-      en: 'Letter from direct disciple of St. John the Apostle. Affirms faith and works, cites deuterocanonical Scripture as authoritative.',
-      fr: 'Lettre d\'un disciple direct de saint Jean l\'Apôtre. Affirme la foi et les œuvres, cite l\'Écriture deutérocanonique comme faisant autorité.',
-      es: 'Carta de un discípulo directo de San Juan Apóstol. Afirma la fe y las obras, cita las Escrituras deuterocanónicas como autoritativas.',
-      de: 'Brief eines direkten Schülers des Hl. Johannes des Apostels. Bekräftigt Glaube und Werke, zitiert die deuterokanonische Schrift als maßgebend.'
-    },
-    primaryQuote: {
-      text: {
-        en: 'Stand fast, therefore, in these things... When you can do good, defer it not, because "alms delivers from death." Be all of you subject one to another, "having your conduct blameless among the Gentiles," that you may both receive praise for your good works, and the Lord may not be blasphemed through you.',
-        fr: 'Tenez-vous donc fermes dans ces choses... Quand vous pouvez faire le bien, ne le différez pas, car « l\'aumône délivre de la mort ». Soyez tous soumis les uns aux autres, « ayant une conduite irréprochable parmi les Gentils », afin que vous receviez des louanges pour vos bonnes œuvres et que le Seigneur ne soit pas blasphémé à cause de vous.',
-        es: 'Permanezcan firmes, por lo tanto, en estas cosas... Cuando puedan hacer el bien, no lo difieran, porque "la limosna libra de la muerte." Sean todos sujetos unos a otros, "teniendo su conducta intachable entre los gentiles," para que reciban alabanza por sus buenas obras y el Señor no sea blasfemado por ustedes.',
-        de: 'Stehet daher fest in diesen Dingen... Wenn ihr Gutes tun könnt, zögert nicht, denn „Almosen rettet vom Tod." Seid alle einander untertan, „führet euren Wandel untadelig unter den Heiden," damit ihr Lob für eure guten Werke empfanget und der Herr nicht euretwegen gelästert werde.'
-      },
-      reference: {
-        en: 'Epistle to the Philippians §10, citing Tobit 4:10, 12:9',
-        fr: 'Épître aux Philippiens §10, citant Tobie 4:10, 12:9',
-        es: 'Epístola a los Filipenses §10, citando Tobías 4:10, 12:9',
-        de: 'Brief an die Philipper §10, Zitat aus Tobit 4:10, 12:9'
-      },
-      theme: 'Deuterocanon'
-    },
-    pdfFile: 'Polycarp_Epistle_Philippians.pdf',
-    themes: ['Faith', 'Works', 'Deuterocanon']
-  },
-  {
-    title: {
-      en: 'Memoirs of Hegesippus',
-      fr: 'Mémoires d\'Hégésippe',
-      es: 'Memorias de Hegesipo',
-      de: 'Erinnerungen des Hegesippus'
-    },
-    author: {
-      en: 'St. Hegesippus',
-      fr: 'Saint Hégésippe',
-      es: 'San Hegesipo',
-      de: 'Hl. Hegesippus'
-    },
-    date: {
-      en: 'c. 130 AD',
-      fr: 'vers 130 apr. J.-C.',
-      es: 'c. 130 d.C.',
-      de: 'ca. 130 n. Chr.'
-    },
-    summary: {
-      en: 'Early Church historian who documented apostolic succession in Rome. His testimony establishes the continuity of papal succession.',
-      fr: 'Historien de l\'Église primitive qui a documenté la succession apostolique à Rome. Son témoignage établit la continuité de la succession papale.',
-      es: 'Historiador de la Iglesia primitiva que documentó la sucesión apostólica en Roma. Su testimonio establece la continuidad de la sucesión papal.',
-      de: 'Früher Kirchenhistoriker, der die apostolische Sukzession in Rom dokumentierte. Sein Zeugnis begründet die Kontinuität der päpstlichen Nachfolge.'
-    },
-    primaryQuote: {
-      text: {
-        en: 'And when I had come to Rome I remained there until Pope Anicetus, whose deacon was Eleutherus. And Anicetus was succeeded by Soter, and he by Eleutherus. In every succession, and in every city that is held which is preached by the law and the prophets and the Lord.',
-        fr: 'Et lorsque je suis arrivé à Rome, j\'y suis resté jusqu\'au Pape Anicet, dont le diacre était Éleuthère. Et Anicet a été succédé par Soter, et lui par Éleuthère. Dans chaque succession, et dans chaque ville est maintenu ce qui est prêché par la loi, les prophètes et le Seigneur.',
-        es: 'Y cuando llegué a Roma permanecí allí hasta el Papa Aniceto, cuyo diácono era Eleuterio. Y Aniceto fue sucedido por Sotero, y él por Eleuterio. En cada sucesión, y en cada ciudad se mantiene lo que es predicado por la ley, los profetas y el Señor.',
-        de: 'Und als ich nach Rom kam, blieb ich dort bis zu Papst Anicetus, dessen Diakon Eleutherus war. Und Anicetus wurde von Soter nachgefolgt, und er von Eleutherus. In jeder Nachfolge und in jeder Stadt wird das gehalten, was durch das Gesetz, die Propheten und den Herrn gepredigt wird.'
-      },
-      reference: {
-        en: 'Memoirs, quoted in Eusebius, Church History Book 4, Ch. 22, §3',
-        fr: 'Mémoires, cité dans Eusèbe, Histoire Ecclésiastique Livre 4, Ch. 22, §3',
-        es: 'Memorias, citado en Eusebio, Historia Eclesiástica Libro 4, Cap. 22, §3',
-        de: 'Erinnerungen, zitiert in Eusebius, Kirchengeschichte Buch 4, Kap. 22, §3'
-      },
-      theme: 'Succession'
-    },
-    pdfFile: 'Hegesippus_Memoirs.pdf',
-    themes: ['Succession', 'Primacy', 'Tradition']
-  },
-  {
-    title: {
-      en: 'Martyrdom of Polycarp',
-      fr: 'Martyre de Polycarpe',
-      es: 'Martirio de Policarpo',
-      de: 'Martyrium des Polykarp'
-    },
-    author: {
-      en: 'Eyewitness (Church of Smyrna)',
-      fr: 'Témoin oculaire (Église de Smyrne)',
-      es: 'Testigo ocular (Iglesia de Esmirna)',
-      de: 'Augenzeuge (Kirche von Smyrna)'
-    },
-    date: {
-      en: 'c. 155 AD',
-      fr: 'vers 155 apr. J.-C.',
-      es: 'c. 155 d.C.',
-      de: 'ca. 155 n. Chr.'
-    },
-    summary: {
-      en: 'Eyewitness account of St. Polycarp\'s martyrdom. Second use of term "Catholic Church" in Christian literature.',
-      fr: 'Récit de témoin oculaire du martyre de saint Polycarpe. Deuxième utilisation du terme « Église catholique » dans la littérature chrétienne.',
-      es: 'Relato de testigo ocular del martirio de San Policarpo. Segundo uso del término "Iglesia Católica" en la literatura cristiana.',
-      de: 'Augenzeugenberichte über das Martyrium des Hl. Polykarp. Zweite Verwendung des Begriffs „Katholische Kirche" in der christlichen Literatur.'
-    },
-    primaryQuote: {
-      text: {
-        en: 'This, then, is the account of the blessed Polycarp... He was not merely an illustrious teacher, but also a pre-eminent martyr... having through patience overcome the unjust governor, and thus acquired the crown of immortality, he now, with the apostles and all the righteous, rejoicingly glorifies God... and blesses our Lord Jesus Christ, the Savior of our souls, the Governor of our bodies, and the Shepherd of the Catholic Church throughout the world.',
-        fr: 'Voici donc le récit du bienheureux Polycarpe... Il n\'était pas seulement un enseignant illustre, mais aussi un martyr éminent... ayant par la patience vaincu le gouverneur injuste, et ainsi acquis la couronne d\'immortalité, il glorifie maintenant avec joie Dieu, avec les apôtres et tous les justes... et bénit notre Seigneur Jésus-Christ, le Sauveur de nos âmes, le Gouverneur de nos corps, et le Pasteur de l\'Église catholique dans le monde entier.',
-        es: 'Este, entonces, es el relato del bienaventurado Policarpo... No fue meramente un maestro ilustre, sino también un mártir preeminente... habiendo superado con paciencia al gobernador injusto, y así adquirido la corona de inmortalidad, ahora, con los apóstoles y todos los justos, glorifica gozosamente a Dios... y bendice a nuestro Señor Jesucristo, el Salvador de nuestras almas, el Gobernador de nuestros cuerpos, y el Pastor de la Iglesia Católica en todo el mundo.',
-        de: 'Dies ist nun der Bericht über den seligen Polykarp... Er war nicht nur ein herausragender Lehrer, sondern auch ein hervorragender Märtyrer... nachdem er durch Geduld den ungerechten Statthalter überwunden und so die Krone der Unsterblichkeit erlangt hatte, verherrlicht er nun freudig mit den Aposteln und allen Gerechten Gott... und segnet unseren Herrn Jesus Christus, den Retter unserer Seelen, den Lenker unserer Leiber und den Hirten der katholischen Kirche in der ganzen Welt.'
-      },
-      reference: {
-        en: 'Martyrdom of Polycarp §19',
-        fr: 'Martyre de Polycarpe §19',
-        es: 'Martirio de Policarpo §19',
-        de: 'Martyrium des Polykarp §19'
-      },
-      theme: 'Catholic Church'
-    },
-    additionalQuotes: [
-      {
-        text: {
-          en: 'Like a noble ram... he was ready to be offered as a whole burnt offering to God.',
-          fr: 'Comme un bélier noble... il était prêt à être offert comme holocauste entier à Dieu.',
-          es: 'Como un carnero noble... estaba listo para ser ofrecido como holocausto completo a Dios.',
-          de: 'Wie ein edler Widder... war er bereit, als ganzes Brandopfer Gott dargebracht zu werden.'
-        },
-        reference: {
-          en: 'Martyrdom §14',
-          fr: 'Martyre §14',
-          es: 'Martirio §14',
-          de: 'Martyrium §14'
-        },
-        theme: 'Martyrdom'
-      }
-    ],
-    pdfFile: 'Martyrdom_of_Polycarp.pdf',
-    themes: ['Martyrdom', 'Catholic Church', 'Witness']
-  },
-  {
-    title: {
-      en: 'First Apology & Dialogue with Trypho',
-      fr: 'Première Apologie & Dialogue avec Tryphon',
-      es: 'Primera Apología & Diálogo con Trifón',
-      de: 'Erste Apologie & Dialog mit Tryphon'
-    },
-    author: {
-      en: 'St. Justin Martyr',
-      fr: 'Saint Justin Martyr',
-      es: 'San Justino Mártir',
-      de: 'Hl. Justin der Märtyrer'
-    },
-    date: {
-      en: 'c. 155–165 AD',
-      fr: 'vers 155-165 apr. J.-C.',
-      es: 'c. 155-165 d.C.',
-      de: 'ca. 155-165 n. Chr.'
-    },
-    summary: {
-      en: 'Defense of Christianity to Roman Emperor. Explains Real Presence in Eucharist, references "Catholic faith," and develops Marian typology.',
-      fr: 'Défense du christianisme à l\'Empereur romain. Explique la Présence réelle dans l\'Eucharistie, fait référence à la « foi catholique » et développe la typologie mariale.',
-      es: 'Defensa del cristianismo al Emperador Romano. Explica la Presencia Real en la Eucaristía, hace referencia a la "fe católica" y desarrolla la tipología mariana.',
-      de: 'Verteidigung des Christentums vor dem römischen Kaiser. Erklärt die wirkliche Gegenwart in der Eucharistie, verweist auf den „katholischen Glauben" und entwickelt die marianische Typologie.'
-    },
-    primaryQuote: {
-      text: {
-        en: 'Not as common bread and common drink do we receive these; but... we have been taught that the food which is blessed by the prayer of His word, and from which our blood and flesh by transmutation are nourished, is the flesh and blood of that Jesus who was made flesh.',
-        fr: 'Nous ne recevons pas cela comme du pain ordinaire et une boisson ordinaire ; mais... on nous a enseigné que la nourriture bénie par la prière de Sa parole, et dont notre sang et notre chair sont nourris par transmutation, est la chair et le sang de ce Jésus qui s\'est fait chair.',
-        es: 'No recibimos esto como pan común y bebida común; pero... se nos ha enseñado que el alimento que es bendecido por la oración de Su palabra, y del cual nuestra sangre y carne son nutridas por transmutación, es la carne y sangre de ese Jesús que se hizo carne.',
-        de: 'Nicht als gewöhnliches Brot und gewöhnliches Getränk empfangen wir dies; sondern... uns wurde gelehrt, dass die Speise, die durch das Gebet Seines Wortes gesegnet ist und durch die unser Blut und Fleisch durch Verwandlung genährt werden, das Fleisch und Blut jenes Jesus ist, der Fleisch geworden ist.'
-      },
-      reference: {
-        en: 'First Apology §66',
-        fr: 'Première Apologie §66',
-        es: 'Primera Apología §66',
-        de: 'Erste Apologie §66'
-      },
-      theme: 'Eucharist'
-    },
-    additionalQuotes: [
-      {
-        text: {
-          en: 'For the men of former generations, who instituted private and public rites in honor of such as were more powerful, caused forgetfulness of the Catholic faith to take possession of their posterity.',
-          fr: 'Car les hommes des générations précédentes, qui ont institué des rites privés et publics en l\'honneur de ceux qui étaient plus puissants, ont causé l\'oubli de la foi catholique à s\'emparer de leur postérité.',
-          es: 'Porque los hombres de generaciones anteriores, que instituyeron ritos privados y públicos en honor de los más poderosos, causaron que el olvido de la fe católica se apoderara de su posteridad.',
-          de: 'Denn die Menschen früherer Generationen, die private und öffentliche Riten zu Ehren der Mächtigeren einführten, verursachten, dass die Vergessenheit des katholischen Glaubens von ihrer Nachkommenschaft Besitz ergriff.'
-        },
-        reference: {
-          en: 'On the Sole Government of God, Ch. 1',
-          fr: 'Sur le Gouvernement Unique de Dieu, Ch. 1',
-          es: 'Sobre el Gobierno Único de Dios, Cap. 1',
-          de: 'Über die alleinige Herrschaft Gottes, Kap. 1'
-        },
-        theme: 'Catholic Church'
-      },
-      {
-        text: {
-          en: '[Jesus] became man by the Virgin, in order that the disobedience which proceeded from the serpent might receive its destruction in the same manner in which it derived its origin. For Eve, who was a virgin and undefiled, having conceived the word of the serpent, brought forth disobedience and death. But the Virgin Mary received faith and joy... And by her has He been born... and by whom God destroys both the serpent and those angels and men who are like him.',
-          fr: '[Jésus] est devenu homme par la Vierge, afin que la désobéissance qui venait du serpent reçoive sa destruction de la même manière qu\'elle a eu son origine. Car Ève, qui était vierge et sans souillure, ayant conçu la parole du serpent, a enfanté la désobéissance et la mort. Mais la Vierge Marie a reçu la foi et la joie... Et par elle Il est né... et par qui Dieu détruit à la fois le serpent et ces anges et hommes qui lui ressemblent.',
-          es: '[Jesús] se hizo hombre por la Virgen, para que la desobediencia que procedió de la serpiente recibiera su destrucción de la misma manera en que tuvo su origen. Porque Eva, que era virgen e inmaculada, habiendo concebido la palabra de la serpiente, dio a luz desobediencia y muerte. Pero la Virgen María recibió fe y alegría... Y por ella Él ha nacido... y por quien Dios destruye tanto a la serpiente como a aquellos ángeles y hombres que son como él.',
-          de: '[Jesus] wurde durch die Jungfrau Mensch, damit der Ungehorsam, der von der Schlange ausging, auf dieselbe Weise seine Zerstörung empfange, wie er seinen Ursprung hatte. Denn Eva, die eine Jungfrau und unbefleckt war, empfing das Wort der Schlange und brachte Ungehorsam und Tod hervor. Aber die Jungfrau Maria empfing Glauben und Freude... Und durch sie wurde Er geboren... und durch den Gott sowohl die Schlange als auch jene Engel und Menschen vernichtet, die ihm gleichen.'
-        },
-        reference: {
-          en: 'Dialogue with Trypho §100',
-          fr: 'Dialogue avec Tryphon §100',
-          es: 'Diálogo con Trifón ��100',
-          de: 'Dialog mit Tryphon §100'
-        },
-        theme: 'Mary'
-      }
-    ],
-    pdfFile: 'Justin_martyr.pdf',
-    themes: ['Eucharist', 'Catholic Church', 'Mary', 'Apologetics']
-  },
-  {
-    title: {
-      en: 'Diatessaron',
-      fr: 'Diatessaron',
-      es: 'Diatessaron',
-      de: 'Diatessaron'
-    },
-    author: {
-      en: 'Tatian the Syrian',
-      fr: 'Tatien le Syrien',
-      es: 'Taciano el Sirio',
-      de: 'Tatian der Syrer'
-    },
-    date: {
-      en: 'c. 160–175 AD',
-      fr: 'vers 160-175 apr. J.-C.',
-      es: 'c. 160-175 d.C.',
-      de: 'ca. 160-175 n. Chr.'
-    },
-    summary: {
-      en: 'Gospel harmony demonstrating early recognition of Peter as the Rock upon which Christ built His Church.',
-      fr: 'Harmonie évangélique démontrant la reconnaissance précoce de Pierre comme le Roc sur lequel le Christ a bâti Son Église.',
-      es: 'Armonía evangélica que demuestra el reconocimiento temprano de Pedro como la Roca sobre la cual Cristo edificó Su Iglesia.',
-      de: 'Evangelienharmonie, die die frühe Anerkennung des Petrus als den Felsen zeigt, auf dem Christus Seine Kirche gebaut hat.'
-    },
-    primaryQuote: {
-      text: {
-        en: 'He said unto them, "And you, what say you that I am?" Simon Cephas answered and said, "Thou art the Messiah, the Son of the living God." Jesus answered and said unto him, "Blessed art thou, Simon son of Jonah... thou art Cephas, and on this rock will I build my church; and the gates of Hades shall not prevail against it."',
-        fr: 'Il leur dit : « Et vous, que dites-vous que je suis ? » Simon Céphas répondit et dit : « Tu es le Messie, le Fils du Dieu vivant. » Jésus répondit et lui dit : « Heureux es-tu, Simon fils de Jonas... tu es Céphas, et sur ce roc je bâtirai mon église ; et les portes de l\'Hadès ne prévaudront pas contre elle. »',
-        es: 'Él les dijo: "Y ustedes, ¿qué dicen que soy?" Simón Cefas respondió y dijo: "Tú eres el Mesías, el Hijo del Dios viviente." Jesús respondió y le dijo: "Bienaventurado eres, Simón hijo de Jonás... tú eres Cefas, y sobre esta roca edificaré mi iglesia; y las puertas del Hades no prevalecerán contra ella."',
-        de: 'Er sprach zu ihnen: „Und ihr, was sagt ihr, wer ich bin?" Simon Kephas antwortete und sprach: „Du bist der Messias, der Sohn des lebendigen Gottes." Jesus antwortete und sprach zu ihm: „Selig bist du, Simon, Sohn des Jona... du bist Kephas, und auf diesem Felsen werde ich meine Kirche bauen; und die Pforten der Hölle werden sie nicht überwältigen."'
-      },
-      reference: {
-        en: 'Diatessaron §23, citing Matthew 16:16-18',
-        fr: 'Diatessaron §23, citant Matthieu 16:16-18',
-        es: 'Diatessaron §23, citando Mateo 16:16-18',
-        de: 'Diatessaron §23, Zitat aus Matthäus 16:16-18'
-      },
-      theme: 'Primacy'
-    },
-    pdfFile: 'Tatian_Diatessaron.pdf',
-    themes: ['Primacy', 'Rock', 'Authority']
-  },
-  {
-    title: {
-      en: 'To Diognetus',
-      fr: 'À Diognète',
-      es: 'A Diogneto',
-      de: 'An Diognet'
-    },
-    author: {
-      en: 'Mathetes',
-      fr: 'Mathètes',
-      es: 'Matetes',
-      de: 'Mathetes'
-    },
-    date: {
-      en: 'c. 160 AD',
-      fr: 'vers 160 apr. J.-C.',
-      es: 'c. 160 d.C.',
-      de: 'ca. 160 n. Chr.'
-    },
-    summary: {
-      en: 'Anonymous letter defending Christianity. References preservation of apostolic tradition through the Church.',
-      fr: 'Lettre anonyme défendant le christianisme. Fait référence à la préservation de la tradition apostolique par l\'Église.',
-      es: 'Carta anónima defendiendo el cristianismo. Hace referencia a la preservación de la tradición apostólica a través de la Iglesia.',
-      de: 'Anonymer Brief zur Verteidigung des Christentums. Verweist auf die Bewahrung der apostolischen Tradition durch die Kirche.'
-    },
-    primaryQuote: {
-      text: {
-        en: 'This is He who, being from everlasting, is today called the Son; through whom the Church is enriched, and grace, widely spread, increases in the saints... Then the fear of the law is chanted, and the grace of the prophets is known, and the faith of the gospels is established, and the tradition of the Apostles is preserved, and the grace of the Church exults.',
-        fr: 'C\'est Lui qui, étant de toute éternité, est aujourd\'hui appelé le Fils ; par qui l\'Église est enrichie, et la grâce, largement répandue, augmente dans les saints... Alors la crainte de la loi est chantée, et la grâce des prophètes est connue, et la foi des évangiles est établie, et la tradition des Apôtres est préservée, et la grâce de l\'Église exulte.',
-        es: 'Este es Él quien, siendo desde siempre, hoy es llamado el Hijo; por quien la Iglesia es enriquecida, y la gracia, ampliamente difundida, aumenta en los santos... Entonces el temor de la ley es cantado, y la gracia de los profetas es conocida, y la fe de los evangelios es establecida, y la tradición de los Apóstoles es preservada, y la gracia de la Iglesia se regocija.',
-        de: 'Dies ist Er, der von Ewigkeit her ist und heute der Sohn genannt wird; durch den die Kirche bereichert wird, und die Gnade, weit verbreitet, in den Heiligen zunimmt... Dann wird die Furcht des Gesetzes besungen, und die Gnade der Propheten wird erkannt, und der Glaube der Evangelien wird begründet, und die Tradition der Apostel wird bewahrt, und die Gnade der Kirche jubelt.'
-      },
-      reference: {
-        en: 'To Diognetus §11',
-        fr: 'À Diognète §11',
-        es: 'A Diogneto §11',
-        de: 'An Diognet §11'
-      },
-      theme: 'Tradition'
-    },
-    pdfFile: 'To_Diognetus.pdf',
-    themes: ['Tradition', 'Church', 'Apostles']
-  },
-  {
-    title: {
-      en: 'Letter to Pope Soter',
-      fr: 'Lettre au Pape Soter',
-      es: 'Carta al Papa Sotero',
-      de: 'Brief an Papst Soter'
-    },
-    author: {
-      en: 'St. Dionysius of Corinth',
-      fr: 'Saint Denys de Corinthe',
-      es: 'San Dionisio de Corinto',
-      de: 'Hl. Dionysius von Korinth'
-    },
-    date: {
-      en: 'c. 170 AD',
-      fr: 'vers 170 apr. J.-C.',
-      es: 'c. 170 d.C.',
-      de: 'ca. 170 n. Chr.'
-    },
-    summary: {
-      en: 'Letter to Pope Soter affirming Peter and Paul\'s joint founding of Rome and Corinth, and Roman charitable primacy.',
-      fr: 'Lettre au Pape Soter affirmant la fondation conjointe de Rome et Corinthe par Pierre et Paul, et la primauté charitable romaine.',
-      es: 'Carta al Papa Sotero afirmando la fundación conjunta de Roma y Corinto por Pedro y Pablo, y la primacía caritativa romana.',
-      de: 'Brief an Papst Soter, der die gemeinsame Gründung Roms und Korinths durch Petrus und Paulus sowie den römischen karitativen Primat bestätigt.'
-    },
-    primaryQuote: {
-      text: {
-        en: 'You have thus by such an admonition bound together the planting of Peter and of Paul at Rome and Corinth. For both of them planted and likewise taught us in our Corinth. And they taught together in like manner in Italy, and suffered martyrdom at the same time.',
-        fr: 'Vous avez ainsi par une telle admonition lié ensemble la plantation de Pierre et de Paul à Rome et Corinthe. Car tous deux ont planté et également enseigné chez nous à Corinthe. Et ils ont enseigné ensemble de la même manière en Italie, et ont subi le martyre en même temps.',
-        es: 'Ustedes han así, por tal amonestación, unido la plantación de Pedro y Pablo en Roma y Corinto. Porque ambos plantaron y también nos enseñaron en nuestra Corinto. Y enseñaron juntos de la misma manera en Italia, y sufrieron el martirio al mismo tiempo.',
-        de: 'Ihr habt somit durch solche Ermahnung die Pflanzung von Petrus und Paulus in Rom und Korinth miteinander verbunden. Denn beide haben gepflanzt und uns auch in unserem Korinth gelehrt. Und sie lehrten zusammen in gleicher Weise in Italien und erlitten zur gleichen Zeit das Martyrium.'
-      },
-      reference: {
-        en: 'Letter to Pope Soter, quoted in Eusebius, Church History Book 2, Ch. 28, §8',
-        fr: 'Lettre au Pape Soter, cité dans Eusèbe, Histoire Ecclésiastique Livre 2, Ch. 28, §8',
-        es: 'Carta al Papa Sotero, citado en Eusebio, Historia Eclesiástica Libro 2, Cap. 28, §8',
-        de: 'Brief an Papst Soter, zitiert in Eusebius, Kirchengeschichte Buch 2, Kap. 28, §8'
-      },
-      theme: 'Primacy'
-    },
-    additionalQuotes: [
-      {
-        text: {
-          en: 'From the beginning it has been your practice to do good to all the brethren in various ways... Thus relieving the want of the needy... you Romans keep up the hereditary customs of the Romans, which your blessed bishop Soter has not only maintained, but also added to.',
-          fr: 'Depuis le début, il a été votre pratique de faire du bien à tous les frères de diverses manières... Soulageant ainsi le besoin des nécessiteux... vous Romains maintenez les coutumes héréditaires des Romains, que votre bienheureux évêque Soter a non seulement maintenues, mais aussi augmentées.',
-          es: 'Desde el principio ha sido su práctica hacer el bien a todos los hermanos de diversas maneras... Aliviando así la necesidad de los necesitados... ustedes romanos mantienen las costumbres hereditarias de los romanos, que su bendito obispo Sotero no solo ha mantenido, sino también aumentado.',
-          de: 'Von Anfang an war es eure Praxis, allen Brüdern auf verschiedene Weise Gutes zu tun... So lindert ihr die Not der Bedürftigen... ihr Römer bewahrt die ererbten Bräuche der Römer, die euer seliger Bischof Soter nicht nur beibehalten, sondern auch vermehrt hat.'
-        },
-        reference: {
-          en: 'Quoted in Eusebius, Church History Book 4, Ch. 23, §§9-11',
-          fr: 'Cité dans Eusèbe, Histoire Ecclésiastique Livre 4, Ch. 23, §§9-11',
-          es: 'Citado en Eusebio, Historia Eclesiástica Libro 4, Cap. 23, §§9-11',
-          de: 'Zitiert in Eusebius, Kirchengeschichte Buch 4, Kap. 23, §§9-11'
-        },
-        theme: 'Primacy'
-      },
-      {
-        text: {
-          en: 'To-day we have passed the Lord\'s holy day, in which we have read your epistle. From it, whenever we read it, we shall always be able to draw advice, as also from the former epistle, which was written to us through Clement.',
-          fr: 'Aujourd\'hui nous avons passé le jour saint du Seigneur, dans lequel nous avons lu votre épître. De celle-ci, chaque fois que nous la lirons, nous pourrons toujours tirer des conseils, comme aussi de l\'épître précédente, qui nous a été écrite par Clément.',
-          es: 'Hoy hemos pasado el día santo del Señor, en el cual hemos leído su epístola. De ella, siempre que la leamos, siempre podremos sacar consejo, como también de la epístola anterior, que nos fue escrita por Clemente.',
-          de: 'Heute haben wir den heiligen Tag des Herrn verbracht, an dem wir euren Brief gelesen haben. Daraus werden wir, wann immer wir ihn lesen, immer Rat schöpfen können, wie auch aus dem früheren Brief, der uns durch Klemens geschrieben wurde.'
-        },
-        reference: {
-          en: 'Quoted in Eusebius, Church History Book 4, Ch. 23, §11',
-          fr: 'Cité dans Eusèbe, Histoire Ecclésiastique Livre 4, Ch. 23, §11',
-          es: 'Citado en Eusebio, Historia Eclesiástica Libro 4, Cap. 23, §11',
-          de: 'Zitiert in Eusebius, Kirchengeschichte Buch 4, Kap. 23, §11'
-        },
-        theme: 'Tradition'
-      }
-    ],
-    pdfFile: 'Dionysius_of_Corinth.pdf',
-    themes: ['Primacy', 'Rome', 'Tradition']
-  },
-  {
-    title: {
-      en: 'Against Heresies',
-      fr: 'Contre les Hérésies',
-      es: 'Contra las Herejías',
-      de: 'Gegen die Häresien'
-    },
-    author: {
-      en: 'St. Irenaeus of Lyon',
-      fr: 'Saint Irénée de Lyon',
-      es: 'San Ireneo de Lyon',
-      de: 'Hl. Irenäus von Lyon'
-    },
-    date: {
-      en: 'c. 180 AD',
-      fr: 'vers 180 apr. J.-C.',
-      es: 'c. 180 d.C.',
-      de: 'ca. 180 n. Chr.'
-    },
-    summary: {
-      en: 'Monumental defense of orthodoxy against Gnosticism. Establishes apostolic succession, Roman primacy, Marian typology, deuterocanonical authority, and universal Catholic faith.',
-      fr: 'Défense monumentale de l\'orthodoxie contre le gnosticisme. Établit la succession apostolique, la primauté romaine, la typologie mariale, l\'autorité deutérocanonique et la foi catholique universelle.',
-      es: 'Defensa monumental de la ortodoxia contra el gnosticismo. Establece la sucesión apostólica, la primacía romana, la tipología mariana, la autoridad deuterocanónica y la fe católica universal.',
-      de: 'Monumentale Verteidigung der Orthodoxie gegen den Gnostizismus. Begründet die apostolische Sukzession, den römischen Primat, die marianische Typologie, die deuterokanonische Autorität und den universellen katholischen Glauben.'
-    },
-    primaryQuote: {
-      text: {
-        en: 'It is within the power of all, therefore, in every Church, who may wish to see the truth, to contemplate clearly the tradition of the apostles... Since, however, it would be very tedious to reckon up the successions of all the Churches, we do put to confusion all those who assemble in unauthorized meetings by indicating that tradition derived from the apostles, of the very great, the very ancient, and universally known Church founded and organized at Rome by the two most glorious apostles, Peter and Paul... For it is a matter of necessity that every Church should agree with this Church, on account of its pre-eminent authority.',
-        fr: 'Il est au pouvoir de tous, donc, dans chaque Église, qui souhaitent voir la vérité, de contempler clairement la tradition des apôtres... Cependant, puisqu\'il serait très fastidieux d\'énumérer les successions de toutes les Églises, nous confondons tous ceux qui s\'assemblent dans des réunions non autorisées en indiquant cette tradition dérivée des apôtres, de la très grande, très ancienne et universellement connue Église fondée et organisée à Rome par les deux apôtres les plus glorieux, Pierre et Paul... Car il est nécessaire que chaque Église soit d\'accord avec cette Église, en raison de son autorité prééminente.',
-        es: 'Está al alcance de todos, por lo tanto, en cada Iglesia, que deseen ver la verdad, contemplar claramente la tradición de los apóstoles... Sin embargo, dado que sería muy tedioso enumerar las sucesiones de todas las Iglesias, confundimos a todos aquellos que se reúnen en asambleas no autorizadas indicando esa tradición derivada de los apóstoles, de la muy grande, muy antigua y universalmente conocida Iglesia fundada y organizada en Roma por los dos apóstoles más gloriosos, Pedro y Pablo... Porque es necesario que cada Iglesia esté de acuerdo con esta Iglesia, debido a su autoridad preeminente.',
-        de: 'Es steht daher in der Macht aller, in jeder Kirche, die die Wahrheit sehen möchten, die Tradition der Apostel klar zu betrachten... Da es jedoch sehr mühsam wäre, die Nachfolgen aller Kirchen aufzuzählen, verwirren wir all jene, die sich in nicht autorisierten Versammlungen zusammenfinden, indem wir auf jene Tradition hinweisen, die von den Aposteln stammt, der sehr großen, sehr alten und allgemein bekannten Kirche, die in Rom von den beiden glorreichsten Aposteln, Petrus und Paulus, gegründet und organisiert wurde... Denn es ist notwendig, dass jede Kirche mit dieser Kirche übereinstimmt, aufgrund ihrer herausragenden Autorität.'
-      },
-      reference: {
-        en: 'Against Heresies Book 3, Ch. 3, §§1-2',
-        fr: 'Contre les Hérésies Livre 3, Ch. 3, §§1-2',
-        es: 'Contra las Herejías Libro 3, Cap. 3, §§1-2',
-        de: 'Gegen die Häresien Buch 3, Kap. 3, §§1-2'
-      },
-      theme: 'Primacy'
-    },
-    additionalQuotes: [
-      {
-        text: {
-          en: 'The Universal Church, moreover, through the whole world, has received this tradition from the apostles... But [the superior skill spoken of] is not found in this... while the Catholic Church possesses one and the same faith throughout the whole world, as we have already said.',
-          fr: 'L\'Église universelle, en outre, à travers le monde entier, a reçu cette tradition des apôtres... Mais [l\'habileté supérieure dont on parle] ne se trouve pas en cela... tandis que l\'Église catholique possède une seule et même foi dans le monde entier, comme nous l\'avons déjà dit.',
-          es: 'La Iglesia Universal, además, a través de todo el mundo, ha recibido esta tradición de los apóstoles... Pero [la habilidad superior de la que se habla] no se encuentra en esto... mientras que la Iglesia Católica posee una y la misma fe en todo el mundo, como ya hemos dicho.',
-          de: 'Die universelle Kirche hat überdies in der ganzen Welt diese Tradition von den Aposteln empfangen... Aber [die erwähnte überlegene Fähigkeit] findet sich nicht darin... während die katholische Kirche ein und denselben Glauben in der ganzen Welt besitzt, wie wir bereits gesagt haben.'
-        },
-        reference: {
-          en: 'Against Heresies Book 1, Ch. 10, §3; Book 2, Ch. 9, §1',
-          fr: 'Contre les Hérésies Livre 1, Ch. 10, §3 ; Livre 2, Ch. 9, §1',
-          es: 'Contra las Herejías Libro 1, Cap. 10, §3; Libro 2, Cap. 9, §1',
-          de: 'Gegen die Häresien Buch 1, Kap. 10, §3; Buch 2, Kap. 9, §1'
-        },
-        theme: 'Catholic Church'
-      },
-      {
-        text: {
-          en: 'The Church, having received this preaching and this faith, although scattered throughout the whole world, yet, as if occupying but one house, carefully preserves it... For the Churches which have been planted in Germany do not believe or hand down anything different, nor do those in Spain, nor those in Gaul, nor those in the East, nor those in Egypt, nor those in Libya... But as the sun, that creature of God, is one and the same throughout the whole world, so also the preaching of the truth shines everywhere.',
-          fr: 'L\'Église, ayant reçu cette prédication et cette foi, bien que dispersée dans le monde entier, les conserve soigneusement comme si elle n\'occupait qu\'une seule maison... Car les Églises qui ont été plantées en Allemagne ne croient ni ne transmettent rien de différent, ni celles d\'Espagne, ni celles de Gaule, ni celles d\'Orient, ni celles d\'Égypte, ni celles de Libye... Mais comme le soleil, cette créature de Dieu, est un et le même dans le monde entier, ainsi la prédication de la vérité brille partout.',
-          es: 'La Iglesia, habiendo recibido esta predicación y esta fe, aunque dispersa por todo el mundo, las conserva cuidadosamente como si ocupara una sola casa... Porque las Iglesias que han sido plantadas en Germania no creen ni transmiten nada diferente, ni las de España, ni las de Galia, ni las de Oriente, ni las de Egipto, ni las de Libia... Pero así como el sol, esa criatura de Dios, es uno y el mismo en todo el mundo, así también la predicación de la verdad brilla en todas partes.',
-          de: 'Die Kirche hat diese Verkündigung und diesen Glauben empfangen und bewahrt sie sorgfältig, obwohl sie über die ganze Welt verstreut ist, als ob sie nur ein Haus bewohnen würde... Denn die Kirchen, die in Germanien gepflanzt wurden, glauben oder überliefern nichts Anderes, noch die in Spanien, noch die in Gallien, noch die im Osten, noch die in Ägypten, noch die in Libyen... Aber wie die Sonne, jenes Geschöpf Gottes, in der ganzen Welt ein und dieselbe ist, so leuchtet auch die Verkündigung der Wahrheit überall.'
-        },
-        reference: {
-          en: 'Against Heresies Book 1, Ch. 10, §2',
-          fr: 'Contre les Hérésies Livre 1, Ch. 10, §2',
-          es: 'Contra las Herejías Libro 1, Cap. 10, §2',
-          de: 'Gegen die Häresien Buch 1, Kap. 10, §2'
-        },
-        theme: 'Catholic Church'
-      },
-      {
-        text: {
-          en: 'Matthew also issued a written Gospel among the Hebrews in their own dialect, while Peter and Paul were preaching at Rome, and laying the foundations of the Church.',
-          fr: 'Matthieu a également publié un Évangile écrit parmi les Hébreux dans leur propre dialecte, pendant que Pierre et Paul prêchaient à Rome et posaient les fondements de l\'Église.',
-          es: 'Mateo también publicó un Evangelio escrito entre los hebreos en su propio dialecto, mientras Pedro y Pablo predicaban en Roma y ponían los cimientos de la Iglesia.',
-          de: 'Matthäus gab auch ein schriftliches Evangelium unter den Hebräern in ihrer eigenen Mundart heraus, während Petrus und Paulus in Rom predigten und die Grundlagen der Kirche legten.'
-        },
-        reference: {
-          en: 'Against Heresies Book 3, Ch. 1, §1',
-          fr: 'Contre les Hérésies Livre 3, Ch. 1, §1',
-          es: 'Contra las Herejías Libro 3, Cap. 1, §1',
-          de: 'Gegen die Häresien Buch 3, Kap. 1, §1'
-        },
-        theme: 'Primacy'
-      },
-      {
-        text: {
-          en: 'The blessed apostles, then, having founded and built up the Church, committed into the hands of Linus the office of the episcopate... To this Clement there succeeded Evaristus. Alexander followed Evaristus; then, sixth from the apostles, Sixtus was appointed... Soter having succeeded Anicetus, Eleutherius does now, in the twelfth place from the apostles, hold the inheritance of the episcopate.',
-          fr: 'Les bienheureux apôtres, donc, ayant fondé et édifié l\'Église, ont confié entre les mains de Lin la charge de l\'épiscopat... À ce Clément succéda Évariste. Alexandre suivit Évariste ; puis, sixième depuis les apôtres, Sixte fut nommé... Soter ayant succédé à Anicet, Éleuthère tient maintenant, en douzième place depuis les apôtres, l\'héritage de l\'épiscopat.',
-          es: 'Los bienaventurados apóstoles, entonces, habiendo fundado y edificado la Iglesia, confiaron en manos de Lino el oficio del episcopado... A este Clemente le sucedió Evaristo. Alejandro siguió a Evaristo; luego, sexto desde los apóstoles, fue nombrado Sixto... Sotero habiendo sucedido a Aniceto, Eleuterio ahora, en el duodécimo lugar desde los apóstoles, tiene la herencia del episcopado.',
-          de: 'Die seligen Apostel haben dann, nachdem sie die Kirche gegründet und aufgebaut hatten, das Amt des Episkopats in die Hände von Linus gelegt... Diesem Klemens folgte Evaristus. Alexander folgte Evaristus; dann wurde Sixtus, der sechste von den Aposteln, ernannt... Nachdem Soter Anicetus nachgefolgt war, hält Eleutherius nun, an zwölfter Stelle von den Aposteln, das Erbe des Episkopats.'
-        },
-        reference: {
-          en: 'Against Heresies Book 3, Ch. 3, §3',
-          fr: 'Contre les Hérésies Livre 3, Ch. 3, §3',
-          es: 'Contra las Herejías Libro 3, Cap. 3, §3',
-          de: 'Gegen die Häresien Buch 3, Kap. 3, §3'
-        },
-        theme: 'Succession'
-      },
-      {
-        text: {
-          en: 'But Polycarp also was not only instructed by apostles, and conversed with many who had seen Christ, but was also, by apostles in Asia, appointed bishop of the Church in Smyrna... having always taught the things which he had learned from the apostles, and which the Church has handed down, and which alone are true.',
-          fr: 'Mais Polycarpe aussi a non seulement été instruit par les apôtres et a conversé avec beaucoup de ceux qui avaient vu le Christ, mais il a aussi été, par les apôtres en Asie, nommé évêque de l\'Église de Smyrne... ayant toujours enseigné les choses qu\'il avait apprises des apôtres, et que l\'Église a transmises, et qui seules sont vraies.',
-          es: 'Pero Policarpo también no solo fue instruido por los apóstoles y conversó con muchos que habían visto a Cristo, sino que también fue, por los apóstoles en Asia, nombrado obispo de la Iglesia en Esmirna... habiendo enseñado siempre las cosas que había aprendido de los apóstoles, y que la Iglesia ha transmitido, y que solo son verdaderas.',
-          de: 'Aber auch Polykarp wurde nicht nur von Aposteln unterwiesen und unterhielt sich mit vielen, die Christus gesehen hatten, sondern wurde auch von Aposteln in Asien zum Bischof der Kirche in Smyrna ernannt... wobei er immer die Dinge gelehrt hat, die er von den Aposteln gelernt hatte und die die Kirche überliefert hat und die allein wahr sind.'
-        },
-        reference: {
-          en: 'Against Heresies Book 3, Ch. 3, §4',
-          fr: 'Contre les Hérésies Livre 3, Ch. 3, §4',
-          es: 'Contra las Herejías Libro 3, Cap. 3, §4',
-          de: 'Gegen die Häresien Buch 3, Kap. 3, §4'
-        },
-        theme: 'Tradition'
-      },
-      {
-        text: {
-          en: 'Those, however, who are believed to be presbyters by many, but serve their own lusts... shall be convicted by the Word... and they shall hear those words, to be found in Daniel the prophet: "O you seed of Canaan, and not of Judah, beauty has deceived you, and lust perverted your heart. You that are waxen old in wicked days, now your sins which you have committed aforetime have come to light."',
-          fr: 'Ceux, cependant, qui sont crus être des presbytres par beaucoup, mais qui servent leurs propres convoitises... seront convaincus par la Parole... et ils entendront ces paroles, qui se trouvent dans le prophète Daniel : « Ô semence de Canaan, et non de Juda, la beauté t\'a trompé, et la convoitise a perverti ton cœur. Toi qui as vieilli dans les jours mauvais, maintenant tes péchés que tu as commis autrefois ont été révélés. »',
-          es: 'Aquellos, sin embargo, que son creídos ser presbíteros por muchos, pero sirven a sus propias concupiscencias... serán convencidos por la Palabra... y escucharán esas palabras, que se encuentran en el profeta Daniel: "Oh semilla de Canaán, y no de Judá, la belleza te ha engañado, y la lujuria ha pervertido tu corazón. Tú que has envejecido en días malvados, ahora tus pecados que cometiste anteriormente han salido a la luz."',
-          de: 'Diejenigen jedoch, die von vielen für Presbyter gehalten werden, aber ihren eigenen Begierden dienen... werden durch das Wort überführt werden... und sie werden jene Worte hören, die beim Propheten Daniel zu finden sind: „O Same Kanaans und nicht Judas, die Schönheit hat dich betört, und die Begierde hat dein Herz verdreht. Du, der du in bösen Tagen alt geworden bist, nun sind deine Sünden, die du zuvor begangen hast, ans Licht gekommen."'
-        },
-        reference: {
-          en: 'Against Heresies Book 4, Ch. 26, §3, citing Daniel 13:56 (Deuterocanon)',
-          fr: 'Contre les Hérésies Livre 4, Ch. 26, §3, citant Daniel 13:56 (Deutérocanonique)',
-          es: 'Contra las Herejías Libro 4, Cap. 26, §3, citando Daniel 13:56 (Deuterocanónico)',
-          de: 'Gegen die Häresien Buch 4, Kap. 26, §3, Zitat aus Daniel 13:56 (Deuterokanonisch)'
-        },
-        theme: 'Deuterocanon'
-      },
-      {
-        text: {
-          en: 'In accordance with this design, Mary the Virgin is found obedient, saying, "Behold the handmaid of the Lord; be it unto me according to your word." But Eve was disobedient... And even as she, having indeed a husband, Adam, but being nevertheless as yet a virgin... having become disobedient, was made the cause of death, both to herself and to the entire human race; so also did Mary... by yielding obedience, become the cause of salvation, both to herself and the whole human race.',
-          fr: 'Conformément à ce dessein, Marie la Vierge se trouve obéissante, disant : « Voici la servante du Seigneur ; qu\'il me soit fait selon ta parole. » Mais Ève était désobéissante... Et de même qu\'elle, ayant en effet un mari, Adam, mais étant néanmoins encore vierge... étant devenue désobéissante, a été la cause de la mort, tant pour elle-même que pour toute la race humaine ; de même Marie... en rendant obéissance, est devenue la cause du salut, tant pour elle-même que pour toute la race humaine.',
-          es: 'De acuerdo con este designio, María la Virgen se encuentra obediente, diciendo: "He aquí la sierva del Señor; hágase en mí según tu palabra." Pero Eva fue desobediente... Y así como ella, teniendo ciertamente un esposo, Adán, pero siendo sin embargo aún virgen... habiendo llegado a ser desobediente, se convirtió en causa de muerte, tanto para sí misma como para toda la raza humana; así también María... al rendirse en obediencia, se convirtió en causa de salvación, tanto para sí misma como para toda la raza humana.',
-          de: 'Gemäß diesem Plan wird die Jungfrau Maria gehorsam gefunden, indem sie sagt: „Siehe, die Magd des Herrn; mir geschehe nach deinem Wort." Aber Eva war ungehorsam... Und gerade wie sie, obwohl sie einen Mann hatte, Adam, aber dennoch noch Jungfrau war... ungehorsam wurde und zur Ursache des Todes wurde, sowohl für sich selbst als auch für das gesamte Menschengeschlecht; so wurde auch Maria... durch Gehorsam zur Ursache der Erlösung, sowohl für sich selbst als auch für das gesamte Menschengeschlecht.'
-        },
-        reference: {
-          en: 'Against Heresies Book 3, Ch. 22, §4',
-          fr: 'Contre les Hérésies Livre 3, Ch. 22, §4',
-          es: 'Contra las Herejías Libro 3, Cap. 22, §4',
-          de: 'Gegen die Häresien Buch 3, Kap. 22, §4'
-        },
-        theme: 'Mary'
-      },
-      {
-        text: {
-          en: 'That the Lord then was manifestly coming to His own things... through the obedience which was exhibited by Himself when He hung upon a tree, the effects also of that deception being done away with, by which that virgin Eve... was unhappily misled—was happily announced, through means of the truth spoken by the angel to the Virgin Mary... And thus, as the human race fell into bondage to death by means of a virgin, so is it rescued by a virgin; virginal disobedience having been balanced in the opposite scale by virginal obedience.',
-          fr: 'Que le Seigneur venait manifestement à Ses propres choses... par l\'obéissance qu\'Il a manifestée lorsqu\'Il était suspendu à un arbre, les effets aussi de cette tromperie étant abolis, par laquelle cette vierge Ève... a été malheureusement trompée—a été heureusement annoncé, par la vérité prononcée par l\'ange à la Vierge Marie... Et ainsi, comme la race humaine est tombée dans l\'esclavage de la mort par une vierge, elle est aussi sauvée par une vierge ; la désobéissance virginale ayant été équilibrée dans la balance opposée par l\'obéissance virginale.',
-          es: 'Que el Señor entonces venía manifiestamente a Sus propias cosas... a través de la obediencia que Él mismo exhibió cuando colgó de un árbol, los efectos también de ese engaño siendo abolidos, por el cual esa virgen Eva... fue desgraciadamente engañada—fue felizmente anunciado, por medio de la verdad hablada por el ángel a la Virgen María... Y así, como la raza humana cayó en esclavitud a la muerte por medio de una virgen, así es rescatada por una virgen; la desobediencia virginal habiendo sido equilibrada en la balanza opuesta por la obediencia virginal.',
-          de: 'Dass der Herr dann offenkundig zu Seinen eigenen Dingen kam... durch den Gehorsam, den Er selbst zeigte, als Er an einem Baum hing, wurden auch die Wirkungen jener Täuschung beseitigt, durch die jene Jungfrau Eva... unglücklich getäuscht wurde—wurde glücklich verkündet, durch die Wahrheit, die der Engel der Jungfrau Maria sprach... Und so, wie das Menschengeschlecht durch eine Jungfrau in die Knechtschaft des Todes fiel, so wird es durch eine Jungfrau gerettet; jungfräulicher Ungehorsam wurde auf der Gegenseite durch jungfräulichen Gehorsam aufgewogen.'
-        },
-        reference: {
-          en: 'Against Heresies Book 5, Ch. 19, §1',
-          fr: 'Contre les Hérésies Livre 5, Ch. 19, §1',
-          es: 'Contra las Herejías Libro 5, Cap. 19, §1',
-          de: 'Gegen die Häresien Buch 5, Kap. 19, §1'
-        },
-        theme: 'Mary'
-      }
-    ],
-    pdfFile: 'Irenaeu.pdf',
-    themes: ['Primacy', 'Succession', 'Catholic Church', 'Mary', 'Deuterocanon', 'Tradition']
-  },
-  {
-    title: {
-      en: 'The Stromata',
-      fr: 'Les Stromates',
-      es: 'Los Stromata',
-      de: 'Die Stromateis'
-    },
-    author: {
-      en: 'St. Clement of Alexandria',
-      fr: 'Saint Clément d\'Alexandrie',
-      es: 'San Clemente de Alejandría',
-      de: 'Hl. Klemens von Alexandria'
-    },
-    date: {
-      en: 'c. 190–200 AD',
-      fr: 'vers 190-200 apr. J.-C.',
-      es: 'c. 190-200 d.C.',
-      de: 'ca. 190-200 n. Chr.'
-    },
-    summary: {
-      en: 'Theological work affirming the antiquity and singularity of the Catholic Church as the true Church of Christ.',
-      fr: 'Œuvre théologique affirmant l\'antiquité et la singularité de l\'Église catholique comme la véritable Église du Christ.',
-      es: 'Obra teológica que afirma la antigüedad y singularidad de la Iglesia Católica como la verdadera Iglesia de Cristo.',
-      de: 'Theologisches Werk, das die Antike und Einzigartigkeit der katholischen Kirche als wahre Kirche Christi bekräftigt.'
-    },
-    primaryQuote: {
-      text: {
-        en: 'For that the human assemblies which they held were posterior to the Catholic Church requires not many words to show... For from the very reason that God is one, and the Lord one, that which is in the highest degree honorable is lauded in consequence of its singleness, being an imitation of the one first principle... Therefore in substance and idea, in origin, in pre-eminence, we say that the ancient and Catholic Church is alone.',
-        fr: 'Car que les assemblées humaines qu\'ils tenaient étaient postérieures à l\'Église catholique ne nécessite pas beaucoup de mots pour le montrer... Car pour la raison même que Dieu est un, et le Seigneur un, ce qui est au plus haut degré honorable est loué en raison de son unicité, étant une imitation du premier principe unique... Par conséquent, en substance et en idée, en origine, en prééminence, nous disons que l\'Église catholique ancienne est seule.',
-        es: 'Porque que las asambleas humanas que celebraban eran posteriores a la Iglesia Católica no requiere muchas palabras para demostrarlo... Porque por la misma razón de que Dios es uno, y el Señor uno, lo que es en el más alto grado honorable es alabado en consecuencia de su singularidad, siendo una imitación del primer principio único... Por lo tanto, en sustancia e idea, en origen, en preeminencia, decimos que la Iglesia Católica antigua está sola.',
-        de: 'Dass die menschlichen Versammlungen, die sie abhielten, der katholischen Kirche nachfolgten, erfordert nicht viele Worte, um es zu zeigen... Denn aus dem Grund, dass Gott einer ist und der Herr einer, wird das, was im höchsten Maße ehrenhaft ist, aufgrund seiner Einzigkeit gepriesen, als Nachahmung des einen ersten Prinzips... Daher sagen wir, dass die alte und katholische Kirche in Substanz und Idee, in Ursprung, in Vorrang allein ist.'
-      },
-      reference: {
-        en: 'The Stromata Book 7, Ch. 17',
-        fr: 'Les Stromates Livre 7, Ch. 17',
-        es: 'Los Stromata Libro 7, Cap. 17',
-        de: 'Die Stromateis Buch 7, Kap. 17'
-      },
-      theme: 'Catholic Church'
-    },
-    pdfFile: 'Clement_of_Alexandria_Stromata.pdf',
-    themes: ['Catholic Church', 'Unity', 'Authority']
-  }
 ];
