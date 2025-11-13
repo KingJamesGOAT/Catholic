@@ -446,10 +446,10 @@ export const scienceAndMiraclesTranslations = {
           de: "Er ist um unserer Missetat willen verwundet... und durch seine Wunden sind wir geheilt."
         },
         source: { 
-          en: "Isaiah 53:5",
-          fr: "Isaïe 53:5",
-          es: "Isaías 53:5",
-          de: "Jesaja 53:5"
+          en: "Isaiah 53:5 - Written 500 years before Christ",
+          fr: "Isaïe 53:5 - Écrit 500 ans avant Jésus-Christ",
+          es: "Isaías 53:5 - Geschrieben 500 Jahre vor Christus",
+          de: "Jesaja 53:5 - Escrito 500 años antes de Cristo."
         },
       },
     },

@@ -12,7 +12,12 @@ export interface EarlyChurchQuote {
 export interface EarlyChurchTopic {
   id: string;
   title: { en: string; fr: string; es: string; de: string };
-  shortTitle?: { en: string; fr: string; es: string; de: string }; // ADD THIS LINE
+  shortTitle?: {
+    en: string;
+    fr: string;
+    es: string;
+    de: string;
+  }; // ADD THIS LINE
   icon: string;
   quotes: EarlyChurchQuote[];
 }
@@ -31,10 +36,9 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
       en: "Faith & Church Fathers",
       fr: "Foi et Pères de l'Église",
       es: "Fe y Padres",
-      de: "Glaube und Kirchenväter"
+      de: "Glaube und Kirchenväter",
     },
 
-    
     icon: "Church",
     quotes: [
       {
@@ -373,7 +377,7 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
       en: "Canon of Scripture",
       fr: "Canon de l'Écriture",
       es: "Canon de Escrituras",
-      de: "Kanon der Schrift"
+      de: "Kanon der Schrift",
     },
     icon: "BookOpen",
     quotes: [
@@ -667,7 +671,7 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
       en: "Apostolic Tradition",
       fr: "Tradition Apostolique",
       es: "Tradición Apostólica",
-      de: "Apostol. Tradition"
+      de: "Apostol. Tradition",
     },
     icon: "ScrollText",
     quotes: [
@@ -939,7 +943,7 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
       en: "Apostolic Succession",
       fr: "Succession Apostolique",
       es: "Sucesión Apostólica",
-      de: "Apostol. Sukzession"
+      de: "Apostol. Sukzession",
     },
     icon: "Users",
     quotes: [
@@ -1346,10 +1350,10 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
       de: "Das Papsttum und die Unbesiegbarkeit der Kirche",
     },
     shortTitle: {
-      en: "The Papacy",
-      fr: "La Papauté",
-      es: "El Papado",
-      de: "Das Papsttum"
+      en: "Papacy",
+      fr: "Papauté",
+      es: "Papado",
+      de: "Papsttum",
     },
     icon: "Key",
     quotes: [
@@ -1632,656 +1636,1098 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
     ],
   },
 
-  
-
   {
     id: "mary-mother",
     title: {
       en: "Saint Mary, Mother of God",
       fr: "Sainte Marie, Mère de Dieu",
       es: "Santa María, Madre de Dios",
-      de: "Heilige Maria, Mutter Gottes"
+      de: "Heilige Maria, Mutter Gottes",
     },
     shortTitle: {
       en: "Saint Mary",
       fr: "Sainte Marie",
       es: "Santa María",
-      de: "Hl. Maria"
+      de: "Hl. Maria",
     },
     icon: "Sparkles",
     quotes: [
       {
         id: "justin-dialogue-100",
-        author: { en: "Saint Justin Martyr", fr: "Saint Justin Martyr", es: "San Justino Mártir", de: "Hl. Justin der Märtyrer" },
-        work: { en: "Dialogue with Trypho", fr: "Dialogue avec Tryphon", es: "Diálogo con Trifón", de: "Dialog mit Trypho" },
+        author: {
+          en: "Saint Justin Martyr",
+          fr: "Saint Justin Martyr",
+          es: "San Justino Mártir",
+          de: "Hl. Justin der Märtyrer",
+        },
+        work: {
+          en: "Dialogue with Trypho",
+          fr: "Dialogue avec Tryphon",
+          es: "Diálogo con Trifón",
+          de: "Dialog mit Trypho",
+        },
         date: "c. 155 AD",
         text: {
           en: "[Jesus] became man by the Virgin, in order that the disobedience which proceeded from the serpent might receive its destruction... For Eve... brought forth disobedience and death. But the Virgin Mary received faith and joy... and she replied, 'Be it unto me according to your word.' And by her has He been born... by whom God destroys both the serpent and those angels and men who are like him.",
           fr: "[Jésus] s'est fait homme par la Vierge, afin que la désobéissance qui venait du serpent reçoive sa destruction... Car Ève... enfanta la désobéissance et la mort. Mais la Vierge Marie reçut la foi et la joie... et elle répondit : 'Qu'il me soit fait selon ta parole.' Et par elle Il est né... par qui Dieu détruit à la fois le serpent et les anges et les hommes qui lui ressemblent.",
           es: "[Jesús] se hizo hombre por la Virgen, para que la desobediencia que procedía de la serpiente recibiera su destrucción... Porque Eva... dio a luz desobediencia y muerte. Pero la Virgen María recibió fe y alegría... y ella respondió: 'Hágase en mí según tu palabra.' Y por ella ha nacido Él... por quien Dios destruye tanto a la serpiente como a aquellos ángeles y hombres que son como él.",
-          de: "[Jesus] wurde Mensch durch die Jungfrau, damit der Ungehorsam, der von der Schlange ausging, seine Zerstörung empfange... Denn Eva... gebar Ungehorsam und Tod. Aber die Jungfrau Maria empfing Glauben und Freude... und sie antwortete: 'Mir geschehe nach deinem Wort.' Und durch sie ist Er geboren... durch den Gott sowohl die Schlange als auch jene Engel und Menschen vernichtet, die ihm gleich sind."
+          de: "[Jesus] wurde Mensch durch die Jungfrau, damit der Ungehorsam, der von der Schlange ausging, seine Zerstörung empfange... Denn Eva... gebar Ungehorsam und Tod. Aber die Jungfrau Maria empfing Glauben und Freude... und sie antwortete: 'Mir geschehe nach deinem Wort.' Und durch sie ist Er geboren... durch den Gott sowohl die Schlange als auch jene Engel und Menschen vernichtet, die ihm gleich sind.",
         },
-        sourceReference: "§100"
+        sourceReference: "§100",
       },
       {
         id: "irenaeus-heresies-3-22",
-        author: { en: "Saint Irenaeus of Lyon", fr: "Saint Irénée de Lyon", es: "San Ireneo de Lyon", de: "Hl. Irenäus von Lyon" },
-        work: { en: "Against Heresies", fr: "Contre les Hérésies", es: "Contra las Herejías", de: "Gegen die Häresien" },
+        author: {
+          en: "Saint Irenaeus of Lyon",
+          fr: "Saint Irénée de Lyon",
+          es: "San Ireneo de Lyon",
+          de: "Hl. Irenäus von Lyon",
+        },
+        work: {
+          en: "Against Heresies",
+          fr: "Contre les Hérésies",
+          es: "Contra las Herejías",
+          de: "Gegen die Häresien",
+        },
         date: "c. 180 AD",
         text: {
           en: "Mary the Virgin is found obedient... having become disobedient, [Eve] was made the cause of death, both to herself and to the entire human race; so also did Mary... by yielding obedience, become the cause of salvation, both to herself and the whole human race... And thus also it was that the knot of Eve’s disobedience was loosed by the obedience of Mary. For what the virgin Eve had bound fast through unbelief, this did the virgin Mary set free through faith.",
           fr: "Marie la Vierge se montre obéissante... étant devenue désobéissante, [Ève] devint la cause de la mort, et pour elle-même et pour tout le genre humain ; de même Marie... en obéissant, devint la cause du salut, et pour elle-même et pour tout le genre humain... Et c'est ainsi que le nœud de la désobéissance d'Ève fut dénoué par l'obéissance de Marie. Car ce que la vierge Ève avait lié fermement par l'incrédulité, la vierge Marie le délia par la foi.",
           es: "Se halla a María la Virgen obediente... habiéndose vuelto desobediente, [Eva] se convirtió en causa de muerte, tanto para sí misma como para todo el género humano; así también María... al obedecer, se convirtió en causa de salvación, tanto para sí misma como para todo el género humano... Y así fue también como el nudo de la desobediencia de Eva fue desatado por la obediencia de María. Pues lo que la virgen Eva había atado fuertemente por la incredulidad, esto lo desató la virgen María por la fe.",
-          de: "Maria die Jungfrau wird gehorsam befunden... da [Eva] ungehorsam geworden war, wurde sie die Ursache des Todes, sowohl für sich selbst als auch für das ganze Menschengeschlecht; so wurde auch Maria... indem sie Gehorsam leistete, die Ursache des Heils, sowohl für sich selbst als auch für das ganze Menschengeschlecht... Und so wurde auch der Knoten des Ungehorsams Evas durch den Gehorsam Marias gelöst. Denn was die Jungfrau Eva durch Unglauben fest gebunden hatte, das löste die Jungfrau Maria durch den Glauben."
+          de: "Maria die Jungfrau wird gehorsam befunden... da [Eva] ungehorsam geworden war, wurde sie die Ursache des Todes, sowohl für sich selbst als auch für das ganze Menschengeschlecht; so wurde auch Maria... indem sie Gehorsam leistete, die Ursache des Heils, sowohl für sich selbst als auch für das ganze Menschengeschlecht... Und so wurde auch der Knoten des Ungehorsams Evas durch den Gehorsam Marias gelöst. Denn was die Jungfrau Eva durch Unglauben fest gebunden hatte, das löste die Jungfrau Maria durch den Glauben.",
         },
-        sourceReference: "Book 3, Ch. 22, §4"
+        sourceReference: "Book 3, Ch. 22, §4",
       },
       {
         id: "irenaeus-heresies-5-19",
-        author: { en: "Saint Irenaeus of Lyon", fr: "Saint Irénée de Lyon", es: "San Ireneo de Lyon", de: "Hl. Irenäus von Lyon" },
-        work: { en: "Against Heresies", fr: "Contre les Hérésies", es: "Contra las Herejías", de: "Gegen die Häresien" },
+        author: {
+          en: "Saint Irenaeus of Lyon",
+          fr: "Saint Irénée de Lyon",
+          es: "San Ireneo de Lyon",
+          de: "Hl. Irenäus von Lyon",
+        },
+        work: {
+          en: "Against Heresies",
+          fr: "Contre les Hérésies",
+          es: "Contra las Herejías",
+          de: "Gegen die Häresien",
+        },
         date: "c. 180 AD",
         text: {
           en: "...so did the latter, by an angelic communication, receive the glad tidings that she should sustain [bear] God [Mother of God], being obedient to His word. And if the former did disobey God, yet the latter was persuaded to be obedient to God, in order that the Virgin Mary might become the patroness of the virgin Eve. And thus, as the human race fell into bondage to death by means of a virgin, so is it rescued by a virgin; virginal disobedience having been balanced in the opposite scale by virginal obedience.",
           fr: "...ainsi cette dernière, par une communication angélique, reçut la bonne nouvelle qu'elle soutiendrait [porterait] Dieu [Mère de Dieu], en obéissant à Sa parole. Et si la première désobéit à Dieu, la seconde fut persuadée d'obéir à Dieu, afin que la Vierge Marie devienne la patronne de la vierge Ève. Et ainsi, comme le genre humain tomba en servitude à la mort par le moyen d'une vierge, il est sauvé par une vierge ; la désobéissance virginale ayant été balancée dans le sens opposé par l'obéissance virginale.",
           es: "...así la segunda, por una comunicación angélica, recibió la buena nueva de que sostendría [llevaría] a Dios [Madre de Dios], siendo obediente a Su palabra. Y si la primera desobedeció a Dios, la segunda fue persuadida a obedecer a Dios, para que la Virgen María se convirtiera en la patrona de la virgen Eva. Y así, como el género humano cayó en la esclavitud de la muerte por medio de una virgen, así es rescatado por una virgen; la desobediencia virginal habiendo sido equilibrada en la balanza opuesta por la obediencia virginal.",
-          de: "...so empfing die letztere durch eine engelhafte Mitteilung die frohe Botschaft, dass sie Gott tragen [gebären] sollte [Mutter Gottes], indem sie Seinem Wort gehorsam war. Und wenn die erstere Gott ungehorsam war, so wurde die letztere überredet, Gott gehorsam zu sein, damit die Jungfrau Maria die Patronin der Jungfrau Eva werde. Und so, wie das Menschengeschlecht durch eine Jungfrau in die Knechtschaft des Todes fiel, so wird es durch eine Jungfrau gerettet; indem der jungfräuliche Ungehorsam durch jungfräulichen Gehorsam in der entgegengesetzten Waagschale aufgewogen wurde."
+          de: "...so empfing die letztere durch eine engelhafte Mitteilung die frohe Botschaft, dass sie Gott tragen [gebären] sollte [Mutter Gottes], indem sie Seinem Wort gehorsam war. Und wenn die erstere Gott ungehorsam war, so wurde die letztere überredet, Gott gehorsam zu sein, damit die Jungfrau Maria die Patronin der Jungfrau Eva werde. Und so, wie das Menschengeschlecht durch eine Jungfrau in die Knechtschaft des Todes fiel, so wird es durch eine Jungfrau gerettet; indem der jungfräuliche Ungehorsam durch jungfräulichen Gehorsam in der entgegengesetzten Waagschale aufgewogen wurde.",
         },
-        sourceReference: "Book 5, Ch. 19, §1"
+        sourceReference: "Book 5, Ch. 19, §1",
       },
       {
         id: "tertullian-flesh-of-christ",
-        author: { en: "Tertullian", fr: "Tertullien", es: "Tertuliano", de: "Tertullian" },
-        work: { en: "The Flesh of Christ", fr: "La Chair du Christ", es: "La Carne de Cristo", de: "Über das Fleisch Christi" },
+        author: {
+          en: "Tertullian",
+          fr: "Tertullien",
+          es: "Tertuliano",
+          de: "Tertullian",
+        },
+        work: {
+          en: "The Flesh of Christ",
+          fr: "La Chair du Christ",
+          es: "La Carne de Cristo",
+          de: "Über das Fleisch Christi",
+        },
         date: "c. 210 AD",
         text: {
           en: "For it was while Eve was yet a virgin, that the ensnaring word had crept into her ear... Into a virgin’s soul, in like manner, must be introduced that Word of God which was to raise the fabric of life... As Eve had believed the serpent, so Mary believed the angel. The delinquency which the one occasioned by believing, the other by believing effaced.",
           fr: "Car c'est tandis qu'Ève était encore vierge que la parole insidieuse s'était glissée à son oreille... De la même manière, dans l'âme d'une vierge devait être introduit ce Verbe de Dieu qui devait élever l'édifice de la vie... Comme Ève avait cru le serpent, de même Marie crut l'ange. L'offense que l'une occasionna en croyant, l'autre l'effaça en croyant.",
           es: "Pues fue mientras Eva era aún virgen, que la palabra engañosa se había deslizado en su oído... De igual modo, en el alma de una virgen debía introducirse aquella Palabra de Dios que levantaría el edificio de la vida... Así como Eva había creído a la serpiente, así María creyó al ángel. El delito que una ocasionó al creer, la otra lo borró al creer.",
-          de: "Denn während Eva noch Jungfrau war, war das verführerische Wort in ihr Ohr geschlichen... Auf die gleiche Weise musste in die Seele einer Jungfrau jenes Wort Gottes eingeführt werden, das das Gebäude des Lebens errichten sollte... Wie Eva der Schlange geglaubt hatte, so glaubte Maria dem Engel. Das Vergehen, das die eine durch den Glauben verursachte, tilgte die andere durch den Glauben."
+          de: "Denn während Eva noch Jungfrau war, war das verführerische Wort in ihr Ohr geschlichen... Auf die gleiche Weise musste in die Seele einer Jungfrau jenes Wort Gottes eingeführt werden, das das Gebäude des Lebens errichten sollte... Wie Eva der Schlange geglaubt hatte, so glaubte Maria dem Engel. Das Vergehen, das die eine durch den Glauben verursachte, tilgte die andere durch den Glauben.",
         },
-        sourceReference: "Ch. 17"
+        sourceReference: "Ch. 17",
       },
       {
         id: "hippolytus-beron",
-        author: { en: "Saint Hippolytus of Rome", fr: "Saint Hippolyte de Rome", es: "San Hipólito de Roma", de: "Hl. Hippolyt von Rom" },
-        work: { en: "Against Beron and Helix", fr: "Contre Béron et Hélix", es: "Contra Berón y Helice", de: "Gegen Beron und Helix" },
+        author: {
+          en: "Saint Hippolytus of Rome",
+          fr: "Saint Hippolyte de Rome",
+          es: "San Hipólito de Roma",
+          de: "Hl. Hippolyt von Rom",
+        },
+        work: {
+          en: "Against Beron and Helix",
+          fr: "Contre Béron et Hélix",
+          es: "Contra Berón y Helice",
+          de: "Gegen Beron und Helix",
+        },
         date: "c. 210 AD",
         text: {
           en: "...the Creator of all things incorporated with Himself a rational soul and a sensible body from the all-holy Mary, ever-virgin, by an undefiled conception...",
           fr: "...le Créateur de toutes choses s'incorpora une âme rationnelle et un corps sensible de la toute-sainte Marie, toujours vierge, par une conception immaculée...",
           es: "...el Creador de todas las cosas incorporó en Sí mismo un alma racional y un cuerpo sensible de la toda santa María, siempre virgen, por una concepción inmaculada...",
-          de: "...der Schöpfer aller Dinge vereinigte mit Sich eine vernünftige Seele und einen sinnlichen Leib aus der allheiligen Maria, immerdar Jungfrau, durch eine unbefleckte Empfängnis..."
+          de: "...der Schöpfer aller Dinge vereinigte mit Sich eine vernünftige Seele und einen sinnlichen Leib aus der allheiligen Maria, immerdar Jungfrau, durch eine unbefleckte Empfängnis...",
         },
-        sourceReference: "Fragment 8"
+        sourceReference: "Fragment 8",
       },
       {
         id: "ephrem-nisibene-hymn-27",
-        author: { en: "Saint Ephrem the Syrian", fr: "Saint Éphrem le Syrien", es: "San Efrén el Sirio", de: "Hl. Ephräm der Syrer" },
-        work: { en: "Nisibene Hymn 27", fr: "Hymne de Nisibe 27", es: "Himno Nisibeno 27", de: "Nisibenische Hymne 27" },
+        author: {
+          en: "Saint Ephrem the Syrian",
+          fr: "Saint Éphrem le Syrien",
+          es: "San Efrén el Sirio",
+          de: "Hl. Ephräm der Syrer",
+        },
+        work: {
+          en: "Nisibene Hymn 27",
+          fr: "Hymne de Nisibe 27",
+          es: "Himno Nisibeno 27",
+          de: "Nisibenische Hymne 27",
+        },
         date: "c. 370 AD",
         text: {
           en: "You alone and your Mother are more beautiful than any others, for there is no blemish in you nor any stains upon your Mother. Who of my children can compare in beauty to these?",
           fr: "Toi seul et ta Mère êtes plus beaux que tous les autres, car il n'y a pas de défaut en toi ni aucune tache sur ta Mère. Qui parmi mes enfants peut se comparer en beauté à ceux-ci ?",
           es: "Solo tú y tu Madre sois más hermosos que cualquier otro, pues no hay defecto en ti ni mancha alguna en tu Madre. ¿Quién de mis hijos puede compararse en belleza con estos?",
-          de: "Du allein und deine Mutter seid schöner als alle anderen, denn kein Makel ist an dir, noch irgendein Flecken an deiner Mutter. Wer von meinen Kindern kann sich an Schönheit mit diesen vergleichen?"
+          de: "Du allein und deine Mutter seid schöner als alle anderen, denn kein Makel ist an dir, noch irgendein Flecken an deiner Mutter. Wer von meinen Kindern kann sich an Schönheit mit diesen vergleichen?",
         },
-        sourceReference: "Ch. 8"
+        sourceReference: "Ch. 8",
       },
       {
         id: "ephrem-nativity-hymn-8",
-        author: { en: "Saint Ephrem the Syrian", fr: "Saint Éphrem le Syrien", es: "San Efrén el Sirio", de: "Hl. Ephräm der Syrer" },
-        work: { en: "Hymn 8 on the Nativity", fr: "Hymne 8 sur la Nativité", es: "Himno 8 sobre la Natividad", de: "Hymne 8 über die Geburt" },
+        author: {
+          en: "Saint Ephrem the Syrian",
+          fr: "Saint Éphrem le Syrien",
+          es: "San Efrén el Sirio",
+          de: "Hl. Ephräm der Syrer",
+        },
+        work: {
+          en: "Hymn 8 on the Nativity",
+          fr: "Hymne 8 sur la Nativité",
+          es: "Himno 8 sobre la Natividad",
+          de: "Hymne 8 über die Geburt",
+        },
         date: "c. 370 AD",
         text: {
           en: "A wonder is Thy Mother. The Lord entered her, and became a servant: the Word entered her, and became silent within her... The Belly of Thy Mother changed the order of things... The Mighty went in, and clad Himself with fear from the Belly.",
           fr: "Ta Mère est une merveille. Le Seigneur entra en elle, et devint serviteur : le Verbe entra en elle, et devint silencieux en elle... Le Sein de ta Mère changea l'ordre des choses... Le Puissant entra, et se vêtit de crainte depuis le Sein.",
           es: "Maravilla es tu Madre. El Señor entró en ella, y se hizo siervo: el Verbo entró en ella, y enmudeció en su interior... El Vientre de tu Madre cambió el orden de las cosas... El Fuerte entró, y se vistió de temor desde el Vientre.",
-          de: "Ein Wunder ist deine Mutter. Der Herr trat in sie ein und wurde ein Diener: das Wort trat in sie ein und wurde still in ihr... Der Schoß deiner Mutter veränderte die Ordnung der Dinge... Der Mächtige trat ein und kleidete sich mit Furcht aus dem Schoß."
+          de: "Ein Wunder ist deine Mutter. Der Herr trat in sie ein und wurde ein Diener: das Wort trat in sie ein und wurde still in ihr... Der Schoß deiner Mutter veränderte die Ordnung der Dinge... Der Mächtige trat ein und kleidete sich mit Furcht aus dem Schoß.",
         },
-        sourceReference: "Hymn 8"
+        sourceReference: "Hymn 8",
       },
       {
         id: "origen-matthew-10",
-        author: { en: "Origen", fr: "Origène", es: "Orígenes", de: "Origenes" },
-        work: { en: "Commentary on Matthew", fr: "Commentaire sur Matthieu", es: "Comentario sobre Mateo", de: "Matthäus-Kommentar" },
+        author: {
+          en: "Origen",
+          fr: "Origène",
+          es: "Orígenes",
+          de: "Origenes",
+        },
+        work: {
+          en: "Commentary on Matthew",
+          fr: "Commentaire sur Matthieu",
+          es: "Comentario sobre Mateo",
+          de: "Matthäus-Kommentar",
+        },
         date: "c. 249 AD",
         text: {
           en: "Those who say this wish to preserve the dignity of Mary in virginity until the end... And I think it is reasonable that Jesus became the first-fruits of male purity in chastity, and Mary of female, for it is not pious that the first-fruits of virginity be attributed to another besides her.",
           fr: "Ceux qui disent cela souhaitent préserver la dignité de Marie dans la virginité jusqu'à la fin... Et je pense qu'il est raisonnable que Jésus soit devenu les prémices de la pureté masculine dans la chasteté, et Marie de la féminine, car il n'est pas pieux d'attribuer les prémices de la virginité à une autre qu'elle.",
           es: "Quienes dicen esto desean preservar la dignidad de María en virginidad hasta el fin... Y creo que es razonable que Jesús se convirtiera en las primicias de la pureza masculina en castidad, y María de la femenina, pues no es piadoso que las primicias de la virginidad se atribuyan a otra fuera de ella.",
-          de: "Diejenigen, die dies sagen, möchten die Würde Marias in der Jungfräulichkeit bis zum Ende bewahren... Und ich denke, es ist vernünftig, dass Jesus die Erstlingsfrucht der männlichen Reinheit in Keuschheit wurde, und Maria der weiblichen, denn es ist nicht fromm, die Erstlingsfrucht der Jungfräulichkeit einer anderen als ihr zuzuschreiben."
+          de: "Diejenigen, die dies sagen, möchten die Würde Marias in der Jungfräulichkeit bis zum Ende bewahren... Und ich denke, es ist vernünftig, dass Jesus die Erstlingsfrucht der männlichen Reinheit in Keuschheit wurde, und Maria der weiblichen, denn es ist nicht fromm, die Erstlingsfrucht der Jungfräulichkeit einer anderen als ihr zuzuschreiben.",
         },
-        sourceReference: "Book 10, Ch. 17"
+        sourceReference: "Book 10, Ch. 17",
       },
       {
         id: "gregory-thaumaturgus-homily-1",
-        author: { en: "Saint Gregory Thaumaturgus", fr: "Saint Grégoire le Thaumaturge", es: "San Gregorio Taumaturgo", de: "Hl. Gregor der Wundertäter" },
-        work: { en: "Homily 1: On the Annunciation", fr: "Homélie 1 : Sur l'Annonciation", es: "Homilía 1: Sobre la Anunciación", de: "Homilie 1: Über die Verkündigung" },
+        author: {
+          en: "Saint Gregory Thaumaturgus",
+          fr: "Saint Grégoire le Thaumaturge",
+          es: "San Gregorio Taumaturgo",
+          de: "Hl. Gregor der Wundertäter",
+        },
+        work: {
+          en: "Homily 1: On the Annunciation",
+          fr: "Homélie 1 : Sur l'Annonciation",
+          es: "Homilía 1: Sobre la Anunciación",
+          de: "Homilie 1: Über die Verkündigung",
+        },
         date: "c. 256 AD",
         text: {
           en: "For Luke, in the inspired Gospel narratives, delivers a testimony not to Joseph only, but also to Mary the mother of God...",
           fr: "Car Luc, dans les récits inspirés de l'Évangile, rend témoignage non seulement à Joseph, mais aussi à Marie, la mère de Dieu...",
           es: "Pues Lucas, en las narraciones inspiradas del Evangelio, da testimonio no solo de José, sino también de María, la madre de Dios...",
-          de: "Denn Lukas liefert in den inspirierten Evangelienberichten ein Zeugnis nicht nur für Joseph, sondern auch für Maria, die Mutter Gottes..."
+          de: "Denn Lukas liefert in den inspirierten Evangelienberichten ein Zeugnis nicht nur für Joseph, sondern auch für Maria, die Mutter Gottes...",
         },
-        sourceReference: "Homily 1"
+        sourceReference: "Homily 1",
       },
       {
         id: "gregory-thaumaturgus-homily-2",
-        author: { en: "Saint Gregory Thaumaturgus", fr: "Saint Grégoire le Thaumaturge", es: "San Gregorio Taumaturgo", de: "Hl. Gregor der Wundertäter" },
-        work: { en: "Homily 2: On the Annunciation", fr: "Homélie 2 : Sur l'Annonciation", es: "Homilía 2: Sobre la Anunciación", de: "Homilie 2: Über die Verkündigung" },
+        author: {
+          en: "Saint Gregory Thaumaturgus",
+          fr: "Saint Grégoire le Thaumaturge",
+          es: "San Gregorio Taumaturgo",
+          de: "Hl. Gregor der Wundertäter",
+        },
+        work: {
+          en: "Homily 2: On the Annunciation",
+          fr: "Homélie 2 : Sur l'Annonciation",
+          es: "Homilía 2: Sobre la Anunciación",
+          de: "Homilie 2: Über die Verkündigung",
+        },
         date: "c. 256 AD",
         text: {
           en: "It is our duty to present to God... first of all, the annunciation to the holy mother of God...",
           fr: "Il est de notre devoir de présenter à Dieu... avant tout, l'annonciation à la sainte mère de Dieu...",
           es: "Es nuestro deber presentar a Dios... en primer lugar, la anunciación a la santa madre de Dios...",
-          de: "Es ist unsere Pflicht, Gott... zuallererst die Verkündigung an die heilige Mutter Gottes darzubringen..."
+          de: "Es ist unsere Pflicht, Gott... zuallererst die Verkündigung an die heilige Mutter Gottes darzubringen...",
         },
-        sourceReference: "Homily 2"
+        sourceReference: "Homily 2",
       },
       {
         id: "peter-alexandria-acts",
-        author: { en: "Saint Peter of Alexandria", fr: "Saint Pierre d'Alexandrie", es: "San Pedro de Alejandría", de: "Hl. Petrus von Alexandrien" },
-        work: { en: "The Genuine Acts of Peter", fr: "Les Actes Véritables de Pierre", es: "Las Actas Genuinas de Pedro", de: "Die Echten Akten des Petrus" },
+        author: {
+          en: "Saint Peter of Alexandria",
+          fr: "Saint Pierre d'Alexandrie",
+          es: "San Pedro de Alejandría",
+          de: "Hl. Petrus von Alexandrien",
+        },
+        work: {
+          en: "The Genuine Acts of Peter",
+          fr: "Les Actes Véritables de Pierre",
+          es: "Las Actas Genuinas de Pedro",
+          de: "Die Echten Akten des Petrus",
+        },
         date: "c. 306 AD",
         text: {
           en: "[T]hey came to the church of the most blessed mother of God, and Ever-Virgin Mary, which... he had constructed... for a cemetery of the martyrs.",
           fr: "[I]ls vinrent à l'église de la très bienheureuse mère de Dieu, et Toujours Vierge Marie, que... il avait construite... pour un cimetière des martyrs.",
           es: "[V]inieron a la iglesia de la santísima madre de Dios, y Siempre Virgen María, que... él había construido... para un cementerio de los mártires.",
-          de: "[S]ie kamen zur Kirche der hochseligsten Mutter Gottes und Immerwährenden Jungfrau Maria, die... er erbaut hatte... als einen Friedhof für die Märtyrer."
+          de: "[S]ie kamen zur Kirche der hochseligsten Mutter Gottes und Immerwährenden Jungfrau Maria, die... er erbaut hatte... als einen Friedhof für die Märtyrer.",
         },
-        sourceReference: "Genuine Acts"
+        sourceReference: "Genuine Acts",
       },
       {
         id: "methodius-oration-simeon",
-        author: { en: "Saint Methodius of Olympus", fr: "Saint Méthode d'Olympe", es: "San Metodio de Olimpo", de: "Hl. Methodius von Olympus" },
-        work: { en: "Oration on Simeon and Anna", fr: "Oraison sur Siméon et Anne", es: "Oración sobre Simeón y Ana", de: "Rede über Simeon und Anna" },
+        author: {
+          en: "Saint Methodius of Olympus",
+          fr: "Saint Méthode d'Olympe",
+          es: "San Metodio de Olimpo",
+          de: "Hl. Methodius von Olympus",
+        },
+        work: {
+          en: "Oration on Simeon and Anna",
+          fr: "Oraison sur Siméon et Anne",
+          es: "Oración sobre Simeón y Ana",
+          de: "Rede über Simeon und Anna",
+        },
         date: "c. 300 AD",
         text: {
           en: "...the holy mother of God now manifestly fulfilled... Hail to you forever, you virgin mother of God, our unceasing joy... O holy mother of God, remember us...",
           fr: "...la sainte mère de Dieu accomplit maintenant manifestement... Salut à toi pour toujours, vierge mère de Dieu, notre joie incessante... Ô sainte mère de Dieu, souviens-toi de nous...",
           es: "...la santa madre de Dios cumplió ahora manifiestamente... ¡Salve por siempre, virgen madre de Dios, nuestra incesante alegría... Oh santa madre de Dios, acuérdate de nosotros...",
-          de: "...erfüllte nun die heilige Mutter Gottes offenkundig... Sei gegrüßt auf ewig, du jungfräuliche Mutter Gottes, unsere unaufhörliche Freude... O heilige Mutter Gottes, gedenke unser..."
+          de: "...erfüllte nun die heilige Mutter Gottes offenkundig... Sei gegrüßt auf ewig, du jungfräuliche Mutter Gottes, unsere unaufhörliche Freude... O heilige Mutter Gottes, gedenke unser...",
         },
-        sourceReference: "§§7, 14"
+        sourceReference: "§§7, 14",
       },
       {
         id: "athanasius-discourse-2",
-        author: { en: "Saint Athanasius", fr: "Saint Athanase", es: "San Atanasio", de: "Hl. Athanasius" },
-        work: { en: "Four Discourses Against the Arians", fr: "Quatre Discours Contre les Ariens", es: "Cuatro Discursos Contra los Arrianos", de: "Vier Reden gegen die Arianer" },
+        author: {
+          en: "Saint Athanasius",
+          fr: "Saint Athanase",
+          es: "San Atanasio",
+          de: "Hl. Athanasius",
+        },
+        work: {
+          en: "Four Discourses Against the Arians",
+          fr: "Quatre Discours Contre les Ariens",
+          es: "Cuatro Discursos Contra los Arrianos",
+          de: "Vier Reden gegen die Arianer",
+        },
         date: "c. 356-360 AD",
         text: {
           en: "Therefore let those who deny that the Son is from the Father by nature... deny also that He took true human flesh of Mary Ever-Virgin...",
           fr: "Que ceux donc qui nient que le Fils est du Père par nature... nient aussi qu'Il a pris une vraie chair humaine de Marie Toujours Vierge...",
           es: "Por lo tanto, que aquellos que niegan que el Hijo es del Padre por naturaleza... nieguen también que Él tomó verdadera carne humana de María Siempre Virgen...",
-          de: "Deshalb sollen jene, die leugnen, dass der Sohn von Natur aus dem Vater ist... auch leugnen, dass Er wahres menschliches Fleisch von Maria, der Immerwährenden Jungfrau, angenommen hat..."
+          de: "Deshalb sollen jene, die leugnen, dass der Sohn von Natur aus dem Vater ist... auch leugnen, dass Er wahres menschliches Fleisch von Maria, der Immerwährenden Jungfrau, angenommen hat...",
         },
-        sourceReference: "Discourse 2, §70"
+        sourceReference: "Discourse 2, §70",
       },
       {
         id: "athanasius-incarnation",
-        author: { en: "Saint Athanasius", fr: "Saint Athanase", es: "San Atanasio", de: "Hl. Athanasius" },
-        work: { en: "On the Incarnation of the Word", fr: "Sur l'Incarnation du Verbe", es: "Sobre la Encarnación del Verbo", de: "Über die Menschwerdung des Wortes" },
+        author: {
+          en: "Saint Athanasius",
+          fr: "Saint Athanase",
+          es: "San Atanasio",
+          de: "Hl. Athanasius",
+        },
+        work: {
+          en: "On the Incarnation of the Word",
+          fr: "Sur l'Incarnation du Verbe",
+          es: "Sobre la Encarnación del Verbo",
+          de: "Über die Menschwerdung des Wortes",
+        },
         date: "c. 330 AD",
         text: {
           en: "But He takes a body of our kind, and not merely so, but from a spotless and stainless virgin, knowing not a man, a body clean and in very truth pure from intercourse of men.",
           fr: "Mais Il prend un corps de notre espèce, et non seulement cela, mais d'une vierge immaculée et sans tache, ne connaissant pas d'homme, un corps pur et en vérité pur de tout commerce avec les hommes.",
           es: "Pero Él toma un cuerpo de nuestra especie, y no solo eso, sino de una virgen inmaculada y sin mancha, que no conoce varón, un cuerpo limpio y en verdad puro de relaciones con hombres.",
-          de: "Aber Er nimmt einen Körper unserer Art an, und nicht nur das, sondern von einer fleckenlosen und unbefleckten Jungfrau, die keinen Mann kannte, einen reinen und wahrhaftig reinen Körper von der Gemeinschaft mit Männern."
+          de: "Aber Er nimmt einen Körper unserer Art an, und nicht nur das, sondern von einer fleckenlosen und unbefleckten Jungfrau, die keinen Mann kannte, einen reinen und wahrhaftig reinen Körper von der Gemeinschaft mit Männern.",
         },
-        sourceReference: "§8"
+        sourceReference: "§8",
       },
       {
         id: "athanasius-papyrus-turin",
-        author: { en: "Saint Athanasius", fr: "Saint Athanase", es: "San Atanasio", de: "Hl. Athanasius" },
-        work: { en: "Homily of the Papyrus of Turin", fr: "Homélie du Papyrus de Turin", es: "Homilía del Papiro de Turín", de: "Homilie des Papyrus von Turin" },
+        author: {
+          en: "Saint Athanasius",
+          fr: "Saint Athanase",
+          es: "San Atanasio",
+          de: "Hl. Athanasius",
+        },
+        work: {
+          en: "Homily of the Papyrus of Turin",
+          fr: "Homélie du Papyrus de Turin",
+          es: "Homilía del Papiro de Turín",
+          de: "Homilie des Papyrus von Turin",
+        },
         date: "c. 330-373 AD",
         text: {
           en: "O noble Virgin, truly you are greater than any other greatness. For who is your equal in greatness, O dwelling place of God the Word? ...O [Ark of the New] Covenant, clothed with purity instead of gold! You are the Ark in which is found the golden vessel containing the true manna, that is, the flesh in which divinity resides.",
           fr: "Ô noble Vierge, vraiment tu es plus grande que toute autre grandeur. Car qui est ton égal en grandeur, Ô demeure de Dieu le Verbe ? ...Ô [Arche de la Nouvelle] Alliance, vêtue de pureté au lieu d'or ! Tu es l'Arche dans laquelle se trouve le vase d'or contenant la vraie manne, c'est-à-dire la chair dans laquelle réside la divinité.",
           es: "Oh noble Virgen, verdaderamente tú eres más grande que cualquier otra grandeza. Pues, ¿quién es igual a ti en grandeza, oh morada de Dios el Verbo? ...¡Oh [Arca de la Nueva] Alianza, vestida de pureza en lugar de oro! Tú eres el Arca en la que se encuentra el vaso de oro que contiene el verdadero maná, es decir, la carne en la que reside la divinidad.",
-          de: "O edle Jungfrau, wahrlich, du bist größer als jede andere Größe. Denn wer ist dir gleich an Größe, o Wohnstätte Gottes, des Wortes? ...O [Arche des Neuen] Bundes, bekleidet mit Reinheit statt mit Gold! Du bist die Arche, in der sich das goldene Gefäß befindet, das das wahre Manna enthält, das heißt, das Fleisch, in dem die Gottheit wohnt."
+          de: "O edle Jungfrau, wahrlich, du bist größer als jede andere Größe. Denn wer ist dir gleich an Größe, o Wohnstätte Gottes, des Wortes? ...O [Arche des Neuen] Bundes, bekleidet mit Reinheit statt mit Gold! Du bist die Arche, in der sich das goldene Gefäß befindet, das das wahre Manna enthält, das heißt, das Fleisch, in dem die Gottheit wohnt.",
         },
-        sourceReference: "Homily"
+        sourceReference: "Homily",
       },
       {
         id: "hilary-matthew",
-        author: { en: "Saint Hilary of Poitiers", fr: "Saint Hilaire de Poitiers", es: "San Hilario de Poitiers", de: "Hl. Hilarius von Poitiers" },
-        work: { en: "Commentary on Matthew", fr: "Commentaire sur Matthieu", es: "Comentario sobre Mateo", de: "Matthäus-Kommentar" },
+        author: {
+          en: "Saint Hilary of Poitiers",
+          fr: "Saint Hilaire de Poitiers",
+          es: "San Hilario de Poitiers",
+          de: "Hl. Hilarius von Poitiers",
+        },
+        work: {
+          en: "Commentary on Matthew",
+          fr: "Commentaire sur Matthieu",
+          es: "Comentario sobre Mateo",
+          de: "Matthäus-Kommentar",
+        },
         date: "c. 355 AD",
         text: {
           en: "If there had been sons of Mary... Mary never would have been transferred to the apostle John as his mother at the time of the Passion...",
           fr: "S'il y avait eu des fils de Marie... Marie n'aurait jamais été transférée à l'apôtre Jean comme sa mère au moment de la Passion...",
           es: "Si hubiera habido hijos de María... María nunca habría sido transferida al apóstol Juan como su madre en el momento de la Pasión...",
-          de: "Wenn es Söhne Marias gegeben hätte... wäre Maria zur Zeit der Passion niemals dem Apostel Johannes als dessen Mutter übergeben worden..."
+          de: "Wenn es Söhne Marias gegeben hätte... wäre Maria zur Zeit der Passion niemals dem Apostel Johannes als dessen Mutter übergeben worden...",
         },
-        sourceReference: "Ch. 1, §4"
+        sourceReference: "Ch. 1, §4",
       },
       {
         id: "epiphanius-panarion",
-        author: { en: "Saint Epiphanius of Salamis", fr: "Saint Épiphane de Salamine", es: "San Epifanio de Salamina", de: "Hl. Epiphanius von Salamis" },
-        work: { en: "The Panarion", fr: "Le Panarion", es: "El Panarion", de: "Das Panarion" },
+        author: {
+          en: "Saint Epiphanius of Salamis",
+          fr: "Saint Épiphane de Salamine",
+          es: "San Epifanio de Salamina",
+          de: "Hl. Epiphanius von Salamis",
+        },
+        work: {
+          en: "The Panarion",
+          fr: "Le Panarion",
+          es: "El Panarion",
+          de: "Das Panarion",
+        },
         date: "c. 375 AD",
         text: {
           en: "Who, and in which generation, has ever dared to say St. Mary’s name and not add 'Virgin' at once when asked?... And St. Mary was given the title, 'Virgin,' and it will not be altered, for the holy woman remained undefiled.",
           fr: "Qui, et dans quelle génération, a jamais osé dire le nom de Sainte Marie sans ajouter aussitôt 'Vierge' lorsqu'on le lui demandait ?... Et Sainte Marie a reçu le titre de 'Vierge', et il ne sera pas modifié, car la sainte femme est restée sans souillure.",
           es: "¿Quién, y en qué generación, se ha atrevido jamás a decir el nombre de Santa María y no añadir 'Virgen' en seguida cuando se le pregunta?... Y a Santa María se le dio el título de 'Virgen', y no será alterado, pues la santa mujer permaneció sin mancha.",
-          de: "Wer, und in welcher Generation, hat es jemals gewagt, den Namen der heiligen Maria zu nennen und nicht sofort 'Jungfrau' hinzuzufügen, wenn er gefragt wurde?... Und der heiligen Maria wurde der Titel 'Jungfrau' gegeben, und er wird nicht geändert werden, denn die heilige Frau blieb unbefleckt."
+          de: "Wer, und in welcher Generation, hat es jemals gewagt, den Namen der heiligen Maria zu nennen und nicht sofort 'Jungfrau' hinzuzufügen, wenn er gefragt wurde?... Und der heiligen Maria wurde der Titel 'Jungfrau' gegeben, und er wird nicht geändert werden, denn die heilige Frau blieb unbefleckt.",
         },
-        sourceReference: "Book 2, Ch. 78, §§5-6"
+        sourceReference: "Book 2, Ch. 78, §§5-6",
       },
       {
         id: "cyril-jerusalem-lecture-10",
-        author: { en: "Saint Cyril of Jerusalem", fr: "Saint Cyrille de Jérusalem", es: "San Cirilo de Jerusalén", de: "Hl. Kyrill von Jerusalem" },
-        work: { en: "Catechetical Lecture 10", fr: "Catéchèse 10", es: "Catequesis 10", de: "Katechese 10" },
+        author: {
+          en: "Saint Cyril of Jerusalem",
+          fr: "Saint Cyrille de Jérusalem",
+          es: "San Cirilo de Jerusalén",
+          de: "Hl. Kyrill von Jerusalem",
+        },
+        work: {
+          en: "Catechetical Lecture 10",
+          fr: "Catéchèse 10",
+          es: "Catequesis 10",
+          de: "Katechese 10",
+        },
         date: "c. 350 AD",
         text: {
           en: "Many, my beloved, are the true testimonies concerning Christ. The Father bears witness... the Holy Ghost bears witness... the Archangel Gabriel bears witness... the Virgin Mother of God bears witness...",
           fr: "Nombreux, mes bien-aimés, sont les vrais témoignages concernant le Christ. Le Père rend témoignage... le Saint-Esprit rend témoignage... l'Archange Gabriel rend témoignage... la Vierge Mère de Dieu rend témoignage...",
           es: "Muchos, amados míos, son los verdaderos testimonios acerca de Cristo. El Padre da testimonio... el Espíritu Santo da testimonio... el Arcángel Gabriel da testimonio... la Virgen Madre de Dios da testimonio...",
-          de: "Viele, meine Geliebten, sind die wahren Zeugnisse über Christus. Der Vater legt Zeugnis ab... der Heilige Geist legt Zeugnis ab... der Erzengel Gabriel legt Zeugnis ab... die Jungfrau, die Mutter Gottes, legt Zeugnis ab..."
+          de: "Viele, meine Geliebten, sind die wahren Zeugnisse über Christus. Der Vater legt Zeugnis ab... der Heilige Geist legt Zeugnis ab... der Erzengel Gabriel legt Zeugnis ab... die Jungfrau, die Mutter Gottes, legt Zeugnis ab...",
         },
-        sourceReference: "§19"
-      }
-    ]
+        sourceReference: "§19",
+      },
+    ],
   },
 
-
-
-  
   {
     id: "mortal-sin",
     title: {
       en: "Mortal Sin: Christians Can Lose Their Salvation",
       fr: "Péché Mortel : Les Chrétiens Peuvent Perdre Leur Salut",
       es: "Pecado Mortal: Los Cristianos Pueden Perder Su Salvación",
-      de: "Todsünde: Christen Können Ihr Heil Verlieren"
+      de: "Todsünde: Christen Können Ihr Heil Verlieren",
     },
     shortTitle: {
       en: "Mortal Sin",
       fr: "Péché Mortel",
       es: "Pecado Mortal",
-      de: "Todsünde"
+      de: "Todsünde",
     },
     icon: "AlertCircle",
     quotes: [
       {
         id: "didache-16",
-        author: { en: "Didache", fr: "Didachè", es: "Didaché", de: "Didache" },
-        work: { en: "Didache", fr: "Didachè", es: "Didaché", de: "Didache" },
+        author: {
+          en: "Didache",
+          fr: "Didachè",
+          es: "Didaché",
+          de: "Didache",
+        },
+        work: {
+          en: "Didache",
+          fr: "Didachè",
+          es: "Didaché",
+          de: "Didache",
+        },
         date: "c. 50 AD",
         text: {
           en: "Come together frequently, and seek what pertains to your souls: for the whole time of your faith will not profit you, unless in the last hour you shall be found perfect.",
           fr: "Rassemblez-vous fréquemment, et recherchez ce qui appartient à vos âmes : car tout le temps de votre foi ne vous profitera pas, si à la dernière heure vous n'êtes pas trouvés parfaits.",
           es: "Reuníos con frecuencia, y buscad lo que atañe a vuestras almas: porque todo el tiempo de vuestra fe no os aprovechará, si en la última hora no sois hallados perfectos.",
-          de: "Kommt häufig zusammen und sucht, was euren Seelen zuträglich ist: denn die ganze Zeit eures Glaubens wird euch nichts nützen, wenn ihr nicht in der letzten Stunde vollkommen befunden werdet."
+          de: "Kommt häufig zusammen und sucht, was euren Seelen zuträglich ist: denn die ganze Zeit eures Glaubens wird euch nichts nützen, wenn ihr nicht in der letzten Stunde vollkommen befunden werdet.",
         },
-        sourceReference: "Ch. 16, §§1-2"
+        sourceReference: "Ch. 16, §§1-2",
       },
       {
         id: "hermas-similitude-8",
-        author: { en: "The Shepherd of Hermas", fr: "Le Pasteur d'Hermas", es: "El Pastor de Hermas", de: "Der Hirt des Hermas" },
-        work: { en: "The Shepherd of Hermas", fr: "Le Pasteur d'Hermas", es: "El Pastor de Hermas", de: "Der Hirt des Hermas" },
+        author: {
+          en: "The Shepherd of Hermas",
+          fr: "Le Pasteur d'Hermas",
+          es: "El Pastor de Hermas",
+          de: "Der Hirt des Hermas",
+        },
+        work: {
+          en: "The Shepherd of Hermas",
+          fr: "Le Pasteur d'Hermas",
+          es: "El Pastor de Hermas",
+          de: "Der Hirt des Hermas",
+        },
         date: "c. 80 AD",
         text: {
           en: "But if any one relapse into strife, he will be east out of the tower, and will lose his life. Life is the possession of all who keep the commandments of the Lord... but among the quarrelsome and transgressors, death.",
           fr: "Mais si quelqu'un retombe dans la querelle, il sera chassé de la tour et perdra la vie. La vie est la possession de tous ceux qui gardent les commandements du Seigneur... mais parmi les querelleurs et les transgresseurs, c'est la mort.",
           es: "Pero si alguno recae en la contienda, será echado de la torre y perderá la vida. La vida es posesión de todos los que guardan los mandamientos del Señor... pero entre los pendencieros y los transgresores, está la muerte.",
-          de: "Wenn aber jemand in Streit zurückfällt, wird er aus dem Turm geworfen werden und sein Leben verlieren. Das Leben ist der Besitz aller, die die Gebote des Herrn halten... aber unter den Streitlustigen und Übertretern ist der Tod."
+          de: "Wenn aber jemand in Streit zurückfällt, wird er aus dem Turm geworfen werden und sein Leben verlieren. Das Leben ist der Besitz aller, die die Gebote des Herrn halten... aber unter den Streitlustigen und Übertretern ist der Tod.",
         },
-        sourceReference: "Book 3, Similitude 8, Ch. 7"
+        sourceReference: "Book 3, Similitude 8, Ch. 7",
       },
       {
         id: "ignatius-ephesians-10",
-        author: { en: "Saint Ignatius of Antioch", fr: "Saint Ignace d'Antioche", es: "San Ignacio de Antioquía", de: "Hl. Ignatius von Antiochien" },
-        work: { en: "Letter to the Ephesians", fr: "Lettre aux Éphésiens", es: "Carta a los Efesios", de: "Brief an die Epheser" },
+        author: {
+          en: "Saint Ignatius of Antioch",
+          fr: "Saint Ignace d'Antioche",
+          es: "San Ignacio de Antioquía",
+          de: "Hl. Ignatius von Antiochien",
+        },
+        work: {
+          en: "Letter to the Ephesians",
+          fr: "Lettre aux Éphésiens",
+          es: "Carta a los Efesios",
+          de: "Brief an die Epheser",
+        },
         date: "c. 107 AD",
         text: {
           en: "And pray without ceasing on behalf of other men. For there is in them hope of repentance that they may attain to God.",
           fr: "Et priez sans cesse pour les autres hommes. Car il y a en eux l'espérance de la repentance afin qu'ils puissent atteindre Dieu.",
           es: "Y orad sin cesar por los demás hombres. Porque hay en ellos esperanza de arrepentimiento para que puedan alcanzar a Dios.",
-          de: "Und betet ohne Unterlass für die anderen Menschen. Denn es gibt in ihnen Hoffnung auf Umkehr, damit sie zu Gott gelangen können."
+          de: "Und betet ohne Unterlass für die anderen Menschen. Denn es gibt in ihnen Hoffnung auf Umkehr, damit sie zu Gott gelangen können.",
         },
-        sourceReference: "§10"
+        sourceReference: "§10",
       },
       {
         id: "justin-in-irenaeus-5-26",
-        author: { en: "Saint Justin Martyr (quoted by St. Irenaeus)", fr: "Saint Justin Martyr (cité par St Irénée)", es: "San Justino Mártir (citado por San Ireneo)", de: "Hl. Justin der Märtyrer (zitiert von Hl. Irenäus)" },
-        work: { en: "Against Heresies (quoting Justin)", fr: "Contre les Hérésies (citant Justin)", es: "Contra las Herejías (citando a Justino)", de: "Gegen die Häresien (zitiert Justin)" },
+        author: {
+          en: "Saint Justin Martyr (quoted by St. Irenaeus)",
+          fr: "Saint Justin Martyr (cité par St Irénée)",
+          es: "San Justino Mártir (citado por San Ireneo)",
+          de: "Hl. Justin der Märtyrer (zitiert von Hl. Irenäus)",
+        },
+        work: {
+          en: "Against Heresies (quoting Justin)",
+          fr: "Contre les Hérésies (citant Justin)",
+          es: "Contra las Herejías (citando a Justino)",
+          de: "Gegen die Häresien (zitiert Justin)",
+        },
         date: "c. 153 AD",
         text: {
           en: "...eternal fire has been prepared for him as he apostatized from God of his own free-will, and likewise for all who unrepentant continue in the apostasy...",
           fr: "...le feu éternel a été préparé pour lui, car il a apostasié de Dieu de sa propre volonté, et de même pour tous ceux qui, sans se repentir, persistent dans l'apostasie...",
           es: "...el fuego eterno ha sido preparado para él, ya que apostató de Dios por su propia voluntad, e igualmente para todos los que sin arrepentirse continúan en la apostasía...",
-          de: "...das ewige Feuer ist für ihn bereitet, da er aus eigenem freiem Willen von Gott abgefallen ist, und ebenso für alle, die unbußfertig in der Apostasie verharren..."
+          de: "...das ewige Feuer ist für ihn bereitet, da er aus eigenem freiem Willen von Gott abgefallen ist, und ebenso für alle, die unbußfertig in der Apostasie verharren...",
         },
-        sourceReference: "Book 5, Ch. 26, §2"
+        sourceReference: "Book 5, Ch. 26, §2",
       },
       {
         id: "irenaeus-heresies-1-10",
-        author: { en: "Saint Irenaeus of Lyon", fr: "Saint Irénée de Lyon", es: "San Ireneo de Lyon", de: "Hl. Irenäus von Lyon" },
-        work: { en: "Against Heresies", fr: "Contre les Hérésies", es: "Contra las Herejías", de: "Gegen die Häresien" },
+        author: {
+          en: "Saint Irenaeus of Lyon",
+          fr: "Saint Irénée de Lyon",
+          es: "San Ireneo de Lyon",
+          de: "Hl. Irenäus von Lyon",
+        },
+        work: {
+          en: "Against Heresies",
+          fr: "Contre les Hérésies",
+          es: "Contra las Herejías",
+          de: "Gegen die Häresien",
+        },
         date: "c. 180 AD",
         text: {
           en: "...that He may send... the angels who transgressed and became apostates, together with the ungodly... into everlasting fire; but may... confer immortality on the righteous... and others from [the date of] their repentance...",
           fr: "...qu'Il envoie... les anges qui ont transgressé et sont devenus apostats, ainsi que les impies... dans le feu éternel ; mais qu'Il puisse... conférer l'immortalité aux justes... et à d'autres depuis [la date de] leur repentance...",
           es: "...para que envíe... a los ángeles que transgredieron y se convirtieron en apóstatas, junto con los impíos... al fuego eterno; pero que... confiera la inmortalidad a los justos... y a otros desde [la fecha de] su arrepentimiento...",
-          de: "...dass Er... die Engel, die übertreten haben und Abtrünnige wurden, zusammen mit den Gottlosen... ins ewige Feuer sende; aber... den Gerechten... Unsterblichkeit verleihe... und anderen seit [dem Datum] ihrer Buße..."
+          de: "...dass Er... die Engel, die übertreten haben und Abtrünnige wurden, zusammen mit den Gottlosen... ins ewige Feuer sende; aber... den Gerechten... Unsterblichkeit verleihe... und anderen seit [dem Datum] ihrer Buße...",
         },
-        sourceReference: "Book 1, Ch. 10, §1"
+        sourceReference: "Book 1, Ch. 10, §1",
       },
       {
         id: "tertullian-repentance-10",
-        author: { en: "Tertullian", fr: "Tertullien", es: "Tertuliano", de: "Tertullian" },
-        work: { en: "Repentance", fr: "De la Pénitence", es: "Sobre la Penitencia", de: "Über die Buße" },
+        author: {
+          en: "Tertullian",
+          fr: "Tertullien",
+          es: "Tertuliano",
+          de: "Tertullian",
+        },
+        work: {
+          en: "Repentance",
+          fr: "De la Pénitence",
+          es: "Sobre la Penitencia",
+          de: "Über die Buße",
+        },
         date: "c. 203 AD",
         text: {
           en: "Is it better to be damned in secret than absolved in public? But you say, 'It is a miserable thing thus to come to exomologesis [penitential rite]'; yes, for evil does bring to misery; but where repentance is to be made, the misery ceases...",
           fr: "Vaut-il mieux être damné en secret qu'absorbé en public ? Mais vous dites : 'C'est une chose misérable que d'en venir ainsi à l'exomologèse [rite pénitentiel]' ; oui, car le mal mène à la misère ; mais là où la repentance doit être faite, la misère cesse...",
           es: "¿Es mejor ser condenado en secreto que absuelto en público? Pero dices: 'Es algo miserable llegar así a la exomologesis [rito penitencial]'; sí, pues el mal ciertamente lleva a la miseria; pero donde se ha de hacer penitencia, la miseria cesa...",
-          de: "Ist es besser, im Verborgenen verdammt zu werden als öffentlich freigesprochen? Aber du sagst: 'Es ist eine elende Sache, so zur Exomologese [Bußritus] zu kommen'; ja, denn das Böse führt ins Elend; aber wo Buße getan werden soll, hört das Elend auf..."
+          de: "Ist es besser, im Verborgenen verdammt zu werden als öffentlich freigesprochen? Aber du sagst: 'Es ist eine elende Sache, so zur Exomologese [Bußritus] zu kommen'; ja, denn das Böse führt ins Elend; aber wo Buße getan werden soll, hört das Elend auf...",
         },
-        sourceReference: "Ch. 10"
+        sourceReference: "Ch. 10",
       },
       {
         id: "tertullian-modesty-21",
-        author: { en: "Tertullian", fr: "Tertullien", es: "Tertuliano", de: "Tertullian" },
-        work: { en: "On Modesty", fr: "De la Pudeur", es: "Sobre la Modestia", de: "Über die Keuschheit" },
+        author: {
+          en: "Tertullian",
+          fr: "Tertullien",
+          es: "Tertuliano",
+          de: "Tertullian",
+        },
+        work: {
+          en: "On Modesty",
+          fr: "De la Pudeur",
+          es: "Sobre la Modestia",
+          de: "Über die Keuschheit",
+        },
         date: "c. 220 AD",
         text: {
           en: "Who, moreover, was able to forgive sins? This is his prerogative alone: for 'who remits sin but God alone?' And, of course, (who but he can remit) mortal sins, such as those committed against himself, and against his temple [the Church]?",
           fr: "Qui, de plus, pouvait pardonner les péchés ? C'est sa prérogative seule : car 'qui remet les péchés sinon Dieu seul ?' Et, bien sûr, (qui d'autre que lui peut remettre) les péchés mortels, tels que ceux commis contre lui-même, et contre son temple [l'Église] ?",
           es: "¿Quién, además, era capaz de perdonar los pecados? Esta es su prerrogativa única: pues '¿quién perdona el pecado sino solo Dios?' Y, por supuesto, (¿quién sino él puede perdonar) los pecados mortales, como los cometidos contra sí mismo, y contra su templo [la Iglesia]?",
-          de: "Wer war außerdem fähig, Sünden zu vergeben? Dies ist sein Vorrecht allein: denn 'wer erlässt Sünde außer Gott allein?' Und natürlich, (wer außer ihm kann) Todsünden erlassen, wie jene, die gegen ihn selbst und gegen seinen Tempel [die Kirche] begangen wurden?"
+          de: "Wer war außerdem fähig, Sünden zu vergeben? Dies ist sein Vorrecht allein: denn 'wer erlässt Sünde außer Gott allein?' Und natürlich, (wer außer ihm kann) Todsünden erlassen, wie jene, die gegen ihn selbst und gegen seinen Tempel [die Kirche] begangen wurden?",
         },
-        sourceReference: "Ch. 21"
+        sourceReference: "Ch. 21",
       },
       {
         id: "origen-matthew-14-10",
-        author: { en: "Origen", fr: "Origène", es: "Orígenes", de: "Origenes" },
-        work: { en: "Commentary on the Gospel of Matthew", fr: "Commentaire sur l'Évangile de Matthieu", es: "Comentario sobre el Evangelio de Mateo", de: "Kommentar zum Matthäusevangelium" },
+        author: {
+          en: "Origen",
+          fr: "Origène",
+          es: "Orígenes",
+          de: "Origenes",
+        },
+        work: {
+          en: "Commentary on the Gospel of Matthew",
+          fr: "Commentaire sur l'Évangile de Matthieu",
+          es: "Comentario sobre el Evangelio de Mateo",
+          de: "Kommentar zum Matthäusevangelium",
+        },
         date: "c. 249 AD",
         text: {
           en: "But observe here that every great sin is a loss of the talents of the master of the house, and such sins are committed by fornicators, adulterers, abusers of themselves with men, effeminate, idolaters, murderers…",
           fr: "Mais observez ici que tout grand péché est une perte des talents du maître de maison, et de tels péchés sont commis par les fornicateurs, les adultères, les sodomites, les efféminés, les idolâtres, les meurtriers...",
           es: "Pero observad aquí que todo gran pecado es una pérdida de los talentos del dueño de la casa, y tales pecados son cometidos por fornicarios, adúlteros, sodomitas, afeminados, idólatras, asesinos...",
-          de: "Aber beachte hier, dass jede große Sünde ein Verlust der Talente des Hausherrn ist, und solche Sünden werden von Unzüchtigen, Ebrechern, Knabenschändern, Weichlingen, Götzendienern, Mördern begangen..."
+          de: "Aber beachte hier, dass jede große Sünde ein Verlust der Talente des Hausherrn ist, und solche Sünden werden von Unzüchtigen, Ebrechern, Knabenschändern, Weichlingen, Götzendienern, Mördern begangen...",
         },
-        sourceReference: "Book 14, Ch. 10"
+        sourceReference: "Book 14, Ch. 10",
       },
       {
         id: "cyprian-letter-6",
-        author: { en: "Saint Cyprian of Carthage", fr: "Saint Cyprien de Carthage", es: "San Cipriano de Cartago", de: "Hl. Cyprian von Karthago" },
-        work: { en: "Letter 6", fr: "Lettre 6", es: "Carta 6", de: "Brief 6" },
+        author: {
+          en: "Saint Cyprian of Carthage",
+          fr: "Saint Cyprien de Carthage",
+          es: "San Cipriano de Cartago",
+          de: "Hl. Cyprian von Karthago",
+        },
+        work: {
+          en: "Letter 6",
+          fr: "Lettre 6",
+          es: "Carta 6",
+          de: "Brief 6",
+        },
         date: "250 AD",
         text: {
           en: "It is a slight thing to have been able to attain anything; it is more to be able to keep what you have attained... Solomon also, and Saul, and many others, so long as they walked in the Lord’s ways, were able to keep the grace given to them. When the discipline of the Lord was forsaken by them, grace also forsook them.",
           fr: "C'est peu de chose d'avoir pu atteindre quelque chose ; c'est plus de pouvoir garder ce que vous avez atteint... Salomon aussi, et Saül, et beaucoup d'autres, tant qu'ils marchaient dans les voies du Seigneur, purent garder la grâce qui leur avait été donnée. Lorsque la discipline du Seigneur fut abandonnée par eux, la grâce aussi les abandonna.",
           es: "Poca cosa es haber podido alcanzar algo; más es poder conservar lo que has alcanzado... También Salomón, y Saúl, y muchos otros, mientras anduvieron en los caminos del Señor, pudieron conservar la gracia que se les dio. Cuando la disciplina del Señor fue abandonada por ellos, la gracia también los abandonó.",
-          de: "Es ist eine geringe Sache, etwas erreicht haben zu können; es ist mehr, das Erreichte bewahren zu können... Auch Salomo und Saul und viele andere konnten, solange sie auf den Wegen des Herrn wandelten, die ihnen gegebene Gnade bewahren. Als aber die Zucht des Herrn von ihnen verlassen wurde, verließ sie auch die Gnade."
+          de: "Es ist eine geringe Sache, etwas erreicht haben zu können; es ist mehr, das Erreichte bewahren zu können... Auch Salomo und Saul und viele andere konnten, solange sie auf den Wegen des Herrn wandelten, die ihnen gegebene Gnade bewahren. Als aber die Zucht des Herrn von ihnen verlassen wurde, verließ sie auch die Gnade.",
         },
-        sourceReference: "§2"
+        sourceReference: "§2",
       },
       {
         id: "cyprian-treatise-3",
-        author: { en: "Saint Cyprian of Carthage", fr: "Saint Cyprien de Carthage", es: "San Cipriano de Cartago", de: "Hl. Cyprian von Karthago" },
-        work: { en: "Treatise 3: On the Lapsed", fr: "Traité 3 : Sur les Tombés", es: "Tratado 3: Sobre los Caídos", de: "Abhandlung 3: Über die Gefallenen" },
+        author: {
+          en: "Saint Cyprian of Carthage",
+          fr: "Saint Cyprien de Carthage",
+          es: "San Cipriano de Cartago",
+          de: "Hl. Cyprian von Karthago",
+        },
+        work: {
+          en: "Treatise 3: On the Lapsed",
+          fr: "Traité 3 : Sur les Tombés",
+          es: "Tratado 3: Sobre los Caídos",
+          de: "Abhandlung 3: Über die Gefallenen",
+        },
         date: "251 AD",
         text: {
           en: "I entreat you, beloved brethren, that each one should confess his own sin, while he who has sinned is still in this world, while his confession may be received, while the satisfaction and remission made by the priests are pleasing to the Lord.",
           fr: "Je vous en supplie, frères bien-aimés, que chacun confesse son propre péché, pendant que celui qui a péché est encore dans ce monde, pendant que sa confession peut être reçue, pendant que la satisfaction et la rémission faites par les prêtres sont agréables au Seigneur.",
           es: "Os ruego, amados hermanos, que cada uno confiese su propio pecado, mientras el que ha pecado está todavía en este mundo, mientras su confesión puede ser recibida, mientras la satisfacción y la remisión hechas por los sacerdotes son agradables al Señor.",
-          de: "Ich bitte euch, geliebte Brüder, dass ein jeder seine eigene Sünde bekenne, solange der, der gesündigt hat, noch in dieser Welt ist, solange sein Bekenntnis angenommen werden kann, solange die Genugtuung und Vergebung durch die Priester dem Herrn wohlgefällig sind."
+          de: "Ich bitte euch, geliebte Brüder, dass ein jeder seine eigene Sünde bekenne, solange der, der gesündigt hat, noch in dieser Welt ist, solange sein Bekenntnis angenommen werden kann, solange die Genugtuung und Vergebung durch die Priester dem Herrn wohlgefällig sind.",
         },
-        sourceReference: "§§28, 29"
+        sourceReference: "§§28, 29",
       },
       {
         id: "firmilian-letter-74",
-        author: { en: "Firmilian of Cappadocia", fr: "Firmilien de Césarée", es: "Firmiliano de Cesarea", de: "Firmilian von Cäsarea" },
-        work: { en: "Letter 74", fr: "Lettre 74", es: "Carta 74", de: "Brief 74" },
+        author: {
+          en: "Firmilian of Cappadocia",
+          fr: "Firmilien de Césarée",
+          es: "Firmiliano de Cesarea",
+          de: "Firmilian von Cäsarea",
+        },
+        work: {
+          en: "Letter 74",
+          fr: "Lettre 74",
+          es: "Carta 74",
+          de: "Brief 74",
+        },
         date: "256 AD",
         text: {
           en: "[B]y the sacrament of baptism, the filth of the old man is washed away by them, that they pardon the former mortal sins, that they make sons of God by heavenly regeneration...",
           fr: "[P]ar le sacrement du baptême, la souillure du vieil homme est lavée par eux, qu'ils pardonnent les péchés mortels antérieurs, qu'ils font des fils de Dieu par la régénération céleste...",
           es: "[P]or el sacramento del bautismo, la inmundicia del hombre viejo es lavada por ellos, que perdonan los pecados mortales anteriores, que hacen hijos de God por la regeneración celestial...",
-          de: "[D]urch das Sakrament der Taufe wird der Schmutz des alten Menschen von ihnen abgewaschen, dass sie die früheren Todsünden vergeben, dass sie Söhne Gottes machen durch himmlische Wiedergeburt..."
+          de: "[D]urch das Sakrament der Taufe wird der Schmutz des alten Menschen von ihnen abgewaschen, dass sie die früheren Todsünden vergeben, dass sie Söhne Gottes machen durch himmlische Wiedergeburt...",
         },
-        sourceReference: "§17"
+        sourceReference: "§17",
       },
       {
         id: "pacian-penitents-4",
-        author: { en: "Saint Pacian of Barcelona", fr: "Saint Pacien de Barcelone", es: "San Paciano de Barcelona", de: "Hl. Pacian von Barcelona" },
-        work: { en: "On Penitents", fr: "Sur les Pénitents", es: "Sobre los Penitentes", de: "Über die Büßer" },
+        author: {
+          en: "Saint Pacian of Barcelona",
+          fr: "Saint Pacien de Barcelone",
+          es: "San Paciano de Barcelona",
+          de: "Hl. Pacian von Barcelona",
+        },
+        work: {
+          en: "On Penitents",
+          fr: "Sur les Pénitents",
+          es: "Sobre los Penitentes",
+          de: "Über die Büßer",
+        },
         date: "c. 387 AD",
         text: {
           en: "These, my brethren, are capital sins; these are mortal sins... there is a sin that leads to death: I do not say that you should pray about that (1 John 5:16).",
           fr: "Ceux-ci, mes frères, sont des péchés capitaux ; ce sont des péchés mortels... il y a un péché qui mène à la mort : je ne dis pas que vous devriez prier pour cela (1 Jean 5:16).",
           es: "Estos, hermanos míos, son pecados capitales; estos son pecados mortales... hay un pecado que lleva a la muerte: no digo que debáis orar por eso (1 Juan 5:16).",
-          de: "Diese, meine Brüder, sind Hauptsünden; dies sind Todsünden... es gibt eine Sünde, die zum Tode führt: Ich sage nicht, dass ihr dafür beten sollt (1. Joh 5,16)."
+          de: "Diese, meine Brüder, sind Hauptsünden; dies sind Todsünden... es gibt eine Sünde, die zum Tode führt: Ich sage nicht, dass ihr dafür beten sollt (1. Joh 5,16).",
         },
-        sourceReference: "Ch. 4, §§2-3"
+        sourceReference: "Ch. 4, §§2-3",
       },
       {
         id: "basil-letter-199",
-        author: { en: "Saint Basil", fr: "Saint Basile", es: "San Basilio", de: "Hl. Basilius" },
-        work: { en: "Letter 199", fr: "Lettre 199", es: "Carta 199", de: "Brief 199" },
+        author: {
+          en: "Saint Basil",
+          fr: "Saint Basile",
+          es: "San Basilio",
+          de: "Hl. Basilius",
+        },
+        work: {
+          en: "Letter 199",
+          fr: "Lettre 199",
+          es: "Carta 199",
+          de: "Brief 199",
+        },
         date: "375 AD",
         text: {
           en: "Clerics who are guilty of the sin unto death [1 John 5:16] are degraded from their order, but not excluded from the communion of the laity…",
           fr: "Les clercs coupables du péché qui mène à la mort [1 Jean 5:16] sont dégradés de leur ordre, mais non exclus de la communion des laïcs...",
           es: "Los clérigos culpables del pecado que lleva a la muerte [1 Juan 5:16] son degradados de su orden, pero no excluidos de la comunión de los laicos...",
-          de: "Kleriker, die sich der Sünde zum Tode [1. Joh 5,16] schuldig gemacht haben, werden ihres Amtes enthoben, aber nicht von der Gemeinschaft der Laien ausgeschlossen..."
+          de: "Kleriker, die sich der Sünde zum Tode [1. Joh 5,16] schuldig gemacht haben, werden ihres Amtes enthoben, aber nicht von der Gemeinschaft der Laien ausgeschlossen...",
         },
-        sourceReference: "§31"
+        sourceReference: "§31",
       },
       {
         id: "jerome-jovinian-2-30",
-        author: { en: "Saint Jerome", fr: "Saint Jérôme", es: "San Jerónimo", de: "Hl. Hieronymus" },
-        work: { en: "Against Jovinian", fr: "Contre Jovinien", es: "Contra Joviniano", de: "Gegen Jovinian" },
+        author: {
+          en: "Saint Jerome",
+          fr: "Saint Jérôme",
+          es: "San Jerónimo",
+          de: "Hl. Hieronymus",
+        },
+        work: {
+          en: "Against Jovinian",
+          fr: "Contre Jovinien",
+          es: "Contra Joviniano",
+          de: "Gegen Jovinian",
+        },
         date: "c. 393 AD",
         text: {
           en: "Hear what the Apostle John says: 'He who knows that his brother sins a sin not unto death, let him ask, and he shall give him life... But he that has sinned unto death, who shall pray for him?' (1 John 5:16). You observe that if we entreat for smaller offenses, we obtain pardon: if for greater ones, it is difficult to obtain our request.",
           fr: "Écoutez ce que dit l'Apôtre Jean : 'Celui qui sait que son frère pèche d'un péché qui ne mène pas à la mort, qu'il demande, et il lui donnera la vie... Mais celui qui a péché d'un péché qui mène à la mort, qui priera pour lui ?' (1 Jean 5:16). Vous remarquez que si nous supplions pour des offenses moindres, nous obtenons le pardon : si c'est pour des plus grandes, il est difficile d'obtenir notre demande.",
           es: "Oíd lo que dice el Apóstol Juan: 'El que sabe que su hermano comete un pecado que no es de muerte, pida, y le dará vida... Pero el que ha pecado de muerte, ¿quién orará por él?' (1 Juan 5:16). Observáis que si suplicamos por ofensas menores, obtenemos perdón: si por mayores, es difícil obtener nuestra petición.",
-          de: "Hört, was der Apostel Johannes sagt: 'Wer weiß, dass sein Bruder eine Sünde begeht, die nicht zum Tode ist, der bitte, und er wird ihm das Leben geben... Aber wer eine Sünde zum Tode begangen hat, wer wird für den beten?' (1. Joh 5,16). Ihr seht, dass wir, wenn wir für geringere Vergehen bitten, Vergebung erlangen: wenn für größere, ist es schwierig, unsere Bitte zu erlangen."
+          de: "Hört, was der Apostel Johannes sagt: 'Wer weiß, dass sein Bruder eine Sünde begeht, die nicht zum Tode ist, der bitte, und er wird ihm das Leben geben... Aber wer eine Sünde zum Tode begangen hat, wer wird für den beten?' (1. Joh 5,16). Ihr seht, dass wir, wenn wir für geringere Vergehen bitten, Vergebung erlangen: wenn für größere, ist es schwierig, unsere Bitte zu erlangen.",
         },
-        sourceReference: "Book 2, §30"
+        sourceReference: "Book 2, §30",
       },
       {
         id: "augustine-faustus-22-96",
-        author: { en: "Saint Augustine", fr: "Saint Augustin", es: "San Agustín", de: "Hl. Augustinus" },
-        work: { en: "Reply to Faustus the Manichaean", fr: "Réponse à Fauste le Manichéen", es: "Respuesta a Fausto el Maniqueo", de: "Antwort an Faustus den Manichäer" },
+        author: {
+          en: "Saint Augustine",
+          fr: "Saint Augustin",
+          es: "San Agustín",
+          de: "Hl. Augustinus",
+        },
+        work: {
+          en: "Reply to Faustus the Manichaean",
+          fr: "Réponse à Fauste le Manichéen",
+          es: "Respuesta a Fausto el Maniqueo",
+          de: "Antwort an Faustus den Manichäer",
+        },
         date: "c. 400 AD",
         text: {
           en: "...it should also narrate cases where good men have gone back and fallen into evil... in order that the righteous may be not lifted up in the pride of security, nor the wicked hardened in despair of cure…",
           fr: "...il devrait aussi rapporter des cas où de bonnes personnes sont revenues en arrière et sont tombées dans le mal... afin que le juste ne s'élève pas dans l'orgueil de la sécurité, ni que le méchant ne s'endurcisse dans le désespoir de la guérison...",
           es: "...también debería narrar casos en que hombres buenos han retrocedido y caído en el mal... para que el justo no se ensoberbezca en la soberbia de la seguridad, ni el impío se endurezca en la desesperación de la cura...",
-          de: "...es sollte auch Fälle erzählen, in denen gute Menschen zurückgefallen und ins Böse gefallen sind... damit der Gerechte nicht im Stolz der Sicherheit überheblich wird, noch der Böse in der Verzweiflung an der Heilung verhärtet wird..."
+          de: "...es sollte auch Fälle erzählen, in denen gute Menschen zurückgefallen und ins Böse gefallen sind... damit der Gerechte nicht im Stolz der Sicherheit überheblich wird, noch der Böse in der Verzweiflung an der Heilung verhärtet wird...",
         },
-        sourceReference: "Book 22, §96"
+        sourceReference: "Book 22, §96",
       },
       {
         id: "augustine-rebuke-grace",
-        author: { en: "Saint Augustine", fr: "Saint Augustin", es: "San Agustín", de: "Hl. Augustinus" },
-        work: { en: "On Rebuke and Grace", fr: "De la Correction et de la Grâce", es: "Sobre la Corrección y la Gracia", de: "Über Zurechtweisung und Gnade" },
+        author: {
+          en: "Saint Augustine",
+          fr: "Saint Augustin",
+          es: "San Agustín",
+          de: "Hl. Augustinus",
+        },
+        work: {
+          en: "On Rebuke and Grace",
+          fr: "De la Correction et de la Grâce",
+          es: "Sobre la Corrección y la Gracia",
+          de: "Über Zurechtweisung und Gnade",
+        },
         date: "c. 426 AD",
         text: {
           en: "...they have of their own will been changed from a good to an evil life, and on that account are worthy of rebuke; and if... they should persevere in their ruined life until death, they are also worthy of divine condemnation forever.",
           fr: "...ils ont, de leur propre volonté, passé d'une bonne vie à une mauvaise, et à cause de cela sont dignes de réprimande ; et si... ils persévèrent dans leur vie de perdition jusqu'à la mort, ils sont aussi dignes de la condamnation divine pour toujours.",
           es: "...por su propia voluntad han cambiado de una vida buena a una mala, y por eso son dignos de reprensión; y si... perseveran en su vida arruinada hasta la muerte, son también dignos de condenación divina para siempre.",
-          de: "...sie haben sich aus eigenem Willen von einem guten zu einem bösen Leben verändert und sind deshalb des Tadels würdig; und wenn... sie in ihrem ruinierten Leben bis zum Tod verharren, sind sie auch der göttlichen Verdammnis für immer würdig."
+          de: "...sie haben sich aus eigenem Willen von einem guten zu einem bösen Leben verändert und sind deshalb des Tadels würdig; und wenn... sie in ihrem ruinierten Leben bis zum Tod verharren, sind sie auch der göttlichen Verdammnis für immer würdig.",
         },
-        sourceReference: "Ch. 11, 13"
+        sourceReference: "Ch. 11, 13",
       },
       {
         id: "augustine-predestination-2-21",
-        author: { en: "Saint Augustine", fr: "Saint Augustin", es: "San Agustín", de: "Hl. Augustinus" },
-        work: { en: "On the Predestination of the Saints", fr: "De la Prédestination des Saints", es: "Sobre la Predestinación de los Santos", de: "Über die Vorherbestimmung der Heiligen" },
+        author: {
+          en: "Saint Augustine",
+          fr: "Saint Augustin",
+          es: "San Agustín",
+          de: "Hl. Augustinus",
+        },
+        work: {
+          en: "On the Predestination of the Saints",
+          fr: "De la Prédestination des Saints",
+          es: "Sobre la Predestinación de los Santos",
+          de: "Über die Vorherbestimmung der Heiligen",
+        },
         date: "c. 428 AD",
         text: {
           en: "But of two pious men, why to the one should be given perseverance unto the end, and to the other it should not be given... 'For if they had been of us,' says one of the predestinated... 'certainly they would have continued with us' (1 John 2:19).",
           fr: "Mais de deux hommes pieux, pourquoi à l'un serait-il donné la persévérance jusqu'à la fin, et à l'autre ne le serait-il pas... 'Car s'ils avaient été des nôtres', dit l'un des prédestinés... 'ils seraient certainement demeurés avec nous' (1 Jean 2:19).",
           es: "Pero de dos hombres piadosos, ¿por qué a uno se le da la perseverancia hasta el fin, y al otro no se le da?... 'Porque si hubieran sido de los nuestros', dice uno de los predestinados... 'ciertamente habrían permanecido con nosotros' (1 Juan 2:19).",
-          de: "Aber von zwei frommen Männern, warum dem einen die Beharrlichkeit bis ans Ende gegeben wird und dem anderen nicht... 'Denn wenn sie von uns gewesen wären', sagt einer der Prädestinierten... 'wären sie gewiss bei uns geblieben' (1. Joh 2,19)."
+          de: "Aber von zwei frommen Männern, warum dem einen die Beharrlichkeit bis ans Ende gegeben wird und dem anderen nicht... 'Denn wenn sie von uns gewesen wären', sagt einer der Prädestinierten... 'wären sie gewiss bei uns geblieben' (1. Joh 2,19).",
         },
-        sourceReference: "Book 2, Ch. 21"
+        sourceReference: "Book 2, Ch. 21",
       },
       {
         id: "augustine-city-of-god-21-25",
-        author: { en: "Saint Augustine", fr: "Saint Augustin", es: "San Agustín", de: "Hl. Augustinus" },
-        work: { en: "City of God", fr: "La Cité de Dieu", es: "La Ciudad de Dios", de: "Vom Gottesstaat" },
+        author: {
+          en: "Saint Augustine",
+          fr: "Saint Augustin",
+          es: "San Agustín",
+          de: "Hl. Augustinus",
+        },
+        work: {
+          en: "City of God",
+          fr: "La Cité de Dieu",
+          es: "La Ciudad de Dios",
+          de: "Vom Gottesstaat",
+        },
         date: "c. 413-426 AD",
         text: {
           en: "...they who do such things shall not inherit the kingdom of God (Gal. 5:21). Consequently, they who do such things shall not exist anywhere but in eternal punishment... they cannot be said to abide in Christ to the end; for to abide in Him is to abide in the faith of Christ.",
           fr: "...ceux qui font de telles choses n'hériteront pas le royaume de Dieu (Gal. 5:21). Par conséquent, ceux qui font de telles choses n'existeront nulle part ailleurs que dans le châtiment éternel... on ne peut pas dire qu'ils demeurent en Christ jusqu'à la fin ; car demeurer en Lui, c'est demeurer dans la foi du Christ.",
           es: "...los que tales cosas hacen no heredarán el reino de Dios (Gál. 5:21). Por consiguiente, los que tales cosas hacen no existirán en ningún lugar sino en el castigo eterno... no se puede decir que permanecen en Cristo hasta el fin; porque permanecer en Él es permanecer en la fe de Cristo.",
-          de: "...die solches tun, werden das Reich Gottes nicht erben (Gal. 5,21). Folglich werden die, die solches tun, nirgendwo anders existieren als in ewiger Strafe... es kann nicht gesagt werden, dass sie bis ans Ende in Christus bleiben; denn in Ihm bleiben heißt, im Glauben Christi bleiben."
+          de: "...die solches tun, werden das Reich Gottes nicht erben (Gal. 5,21). Folglich werden die, die solches tun, nirgendwo anders existieren als in ewiger Strafe... es kann nicht gesagt werden, dass sie bis ans Ende in Christus bleiben; denn in Ihm bleiben heißt, im Glauben Christi bleiben.",
         },
-        sourceReference: "Book 21, Ch. 25"
+        sourceReference: "Book 21, Ch. 25",
       },
       {
         id: "caesarius-sermon-10",
-        author: { en: "Saint Caesarius of Arles", fr: "Saint Césaire d'Arles", es: "San Cesáreo de Arlés", de: "Hl. Caesarius von Arles" },
-        work: { en: "Sermon 10", fr: "Sermon 10", es: "Sermón 10", de: "Predigt 10" },
+        author: {
+          en: "Saint Caesarius of Arles",
+          fr: "Saint Césaire d'Arles",
+          es: "San Cesáreo de Arlés",
+          de: "Hl. Caesarius von Arles",
+        },
+        work: {
+          en: "Sermon 10",
+          fr: "Sermon 10",
+          es: "Sermón 10",
+          de: "Predigt 10",
+        },
         date: "c. 542 AD",
         text: {
           en: "If anyone has committed any of the aforementioned offenses, he should quickly amend his life, make his confession, perform true penance, and then his sins will be forgiven him. If you are willing to do what I have suggested... you will merit pardon for your sins and obtain eternal life...",
           fr: "Si quelqu'un a commis l'une des offenses susmentionnées, il doit rapidement amender sa vie, faire sa confession, accomplir une vraie pénitence, et alors ses péchés lui seront pardonnés. Si vous êtes disposés à faire ce que j'ai suggéré... vous mériterez le pardon de vos péchés et obtiendrez la vie éternelle...",
           es: "Si alguno ha cometido alguna de las ofensas mencionadas, debe enmendar rápidamente su vida, hacer su confesión, realizar verdadera penitencia, y entonces sus pecados le serán perdonados. Si estáis dispuestos a hacer lo que he sugerido... mereceréis el perdón de vuestros pecados y obtendréis la vida eterna...",
-          de: "Wenn jemand eine der vorgenannten Sünden begangen hat, sollte er schnell sein Leben bessern, seine Beichte ablegen, wahre Buße tun, und dann werden ihm seine Sünden vergeben werden. Wenn ihr bereit seid zu tun, was ich vorgeschlagen habe... werdet ihr Vergebung für eure Sünden verdienen und das ewige Leben erlangen..."
+          de: "Wenn jemand eine der vorgenannten Sünden begangen hat, sollte er schnell sein Leben bessern, seine Beichte ablegen, wahre Buße tun, und dann werden ihm seine Sünden vergeben werden. Wenn ihr bereit seid zu tun, was ich vorgeschlagen habe... werdet ihr Vergebung für eure Sünden verdienen und das ewige Leben erlangen...",
         },
-        sourceReference: "Sermon 10, §3"
+        sourceReference: "Sermon 10, §3",
       },
       {
         id: "caesarius-sermon-16",
-        author: { en: "Saint Caesarius of Arles", fr: "Saint Césaire d'Arles", es: "San Cesáreo de Arlés", de: "Hl. Caesarius von Arles" },
-        work: { en: "Sermon 16", fr: "Sermon 16", es: "Sermón 16", de: "Predigt 16" },
+        author: {
+          en: "Saint Caesarius of Arles",
+          fr: "Saint Césaire d'Arles",
+          es: "San Cesáreo de Arlés",
+          de: "Hl. Caesarius von Arles",
+        },
+        work: {
+          en: "Sermon 16",
+          fr: "Sermon 16",
+          es: "Sermón 16",
+          de: "Predigt 16",
+        },
         date: "c. 542 AD",
         text: {
           en: "May those, then, who are good... persevere... may those who do evil correct themselves at once before their souls depart from this life. If they die without repentance they do not enter into life, but are cast into death.",
           fr: "Que ceux donc qui sont bons... persévèrent... que ceux qui font le mal se corrigent sur-le-champ avant que leurs âmes ne quittent cette vie. S'ils meurent sans repentance, ils n'entrent pas dans la vie, mais sont jetés dans la mort.",
           es: "Que aquellos, pues, que son buenos... perseveren... que los que hacen el mal se corrijan de inmediato antes de que sus almas partan de esta vida. Si mueren sin arrepentimiento, no entran en la vida, sino que son arrojados a la muerte.",
-          de: "Mögen denn diejenigen, die gut sind... ausharren... mögen diejenigen, die Böses tun, sich sofort bessern, bevor ihre Seelen aus diesem Leben scheiden. Wenn sie ohne Buße sterben, treten sie nicht ins Leben ein, sondern werden in den Tod geworfen."
+          de: "Mögen denn diejenigen, die gut sind... ausharren... mögen diejenigen, die Böses tun, sich sofort bessern, bevor ihre Seelen aus diesem Leben scheiden. Wenn sie ohne Buße sterben, treten sie nicht ins Leben ein, sondern werden in den Tod geworfen.",
         },
-        sourceReference: "Sermon 16, §4"
-      }
-    ]
+        sourceReference: "Sermon 16, §4",
+      },
+    ],
   },
 
-
-  
   {
     id: "communion-saints",
     title: {
       en: "The Communion of Saints: Intercession and Relics",
       fr: "La Communion des Saints : Intercession et Reliques",
       es: "La Comunión de los Santos: Intercesión y Reliquias",
-      de: "Die Gemeinschaft der Heiligen: Fürbitte und Reliquien"
+      de: "Die Gemeinschaft der Heiligen: Fürbitte und Reliquien",
     },
     shortTitle: {
       en: "Communion of Saints",
       fr: "Communion des Saints",
       es: "Comunión de Santos",
-      de: "Gemeinschaft d. Heiligen"
+      de: "Gemeinschaft d. Heiligen",
     },
     icon: "Users",
     quotes: [
       {
         id: "clement-alex-stromata-7-12",
-        author: { en: "Saint Clement of Alexandria", fr: "Saint Clément d'Alexandrie", es: "San Clemente de Alejandría", de: "Hl. Klemens von Alexandria" },
-        work: { en: "The Stromata", fr: "Les Stromates", es: "Los Stromata", de: "Die Stromateis" },
+        author: {
+          en: "Saint Clement of Alexandria",
+          fr: "Saint Clément d'Alexandrie",
+          es: "San Clemente de Alejandría",
+          de: "Hl. Klemens von Alexandria",
+        },
+        work: {
+          en: "The Stromata",
+          fr: "Les Stromates",
+          es: "Los Stromata",
+          de: "Die Stromateis",
+        },
         date: "c. 207 AD",
         text: {
           en: "He also prays in the society of angels, as being already of angelic rank, and he is never out of their holy keeping; and though he pray alone, he has the choir of the saints standing with him…",
           fr: "Il prie aussi en la société des anges, comme étant déjà du rang angélique, et il n'est jamais hors de leur sainte garde ; et bien qu'il prie seul, il a le chœur des saints qui se tient avec lui...",
           es: "Él también ora en la sociedad de los ángeles, como siendo ya de rango angélico, y nunca está fuera de su santa custodia; y aunque ore solo, tiene el coro de los santos de pie con él...",
-          de: "Er betet auch in der Gesellschaft von Engeln, da er bereits von engelhaftem Rang ist, und er ist nie außerhalb ihrer heiligen Obhut; und obwohl er allein betet, hat er den Chor der Heiligen bei sich stehen..."
+          de: "Er betet auch in der Gesellschaft von Engeln, da er bereits von engelhaftem Rang ist, und er ist nie außerhalb ihrer heiligen Obhut; und obwohl er allein betet, hat er den Chor der Heiligen bei sich stehen...",
         },
-        sourceReference: "Book 7, Ch. 12"
+        sourceReference: "Book 7, Ch. 12",
       },
       {
         id: "origen-prayer-11-1",
-        author: { en: "Origen", fr: "Origène", es: "Orígenes", de: "Origenes" },
-        work: { en: "Prayer", fr: "De la Prière", es: "Sobre la Oración", de: "Über das Gebet" },
+        author: {
+          en: "Origen",
+          fr: "Origène",
+          es: "Orígenes",
+          de: "Origenes",
+        },
+        work: {
+          en: "Prayer",
+          fr: "De la Prière",
+          es: "Sobre la Oración",
+          de: "Über das Gebet",
+        },
         date: "233 AD",
         text: {
           en: "It is not only the High Priest who prays with those who truly pray, but also the angels... and also the souls of the saints who have passed away. This is clear from the case of Raphael... 'I am Raphael, one of the seven angels who bear up [the prayers of the saints] and enter before the glory of the holy one' (Tob. 12:15). ...[Onias] bore witness saying: 'This is he that prayeth much for the people and for all the holy city, Jeremias the prophet of God' (2 Mac. 15:14).",
           fr: "Ce n'est pas seulement le Souverain Prêtre qui prie avec ceux qui prient vraiment, mais aussi les anges... et aussi les âmes des saints qui sont décédés. Ceci est clair par le cas de Raphaël... 'Je suis Raphaël, l'un des sept anges qui portent [les prières des saints] et entrent devant la gloire du Saint' (Tob. 12:15). ...[Onias] rendit témoignage en disant : 'C'est lui qui prie beaucoup pour le peuple et pour toute la ville sainte, Jérémie le prophète de Dieu' (2 Mac. 15:14).",
           es: "No es solo el Sumo Sacerdote quien ora con los que oran de verdad, sino también los ángeles... y también las almas de los santos que han fallecido. Esto queda claro por el caso de Rafael... 'Soy Rafael, uno de los siete ángeles que llevan [las oraciones de los santos] y entran ante la gloria del Santo' (Tob. 12:15). ...[Onías] dio testimonio diciendo: 'Este es el que ora mucho por el pueblo y por toda la ciudad santa, Jeremías el profeta de Dios' (2 Mac. 15:14).",
-          de: "Es ist nicht nur der Hohepriester, der mit denen betet, die wahrhaft beten, sondern auch die Engel... und auch die Seelen der Heiligen, die hingeschieden sind. Dies wird deutlich am Fall Raphaels... 'Ich bin Raphael, einer der sieben Engel, die [die Gebete der Heiligen] emportragen und vor die Herrlichkeit des Heiligen treten' (Tob. 12:15). ...[Onias] bezeugte und sprach: 'Das ist der, der viel für das Volk und für die ganze heilige Stadt betet, Jeremia, der Prophet Gottes' (2 Makk. 15:14)."
+          de: "Es ist nicht nur der Hohepriester, der mit denen betet, die wahrhaft beten, sondern auch die Engel... und auch die Seelen der Heiligen, die hingeschieden sind. Dies wird deutlich am Fall Raphaels... 'Ich bin Raphael, einer der sieben Engel, die [die Gebete der Heiligen] emportragen und vor die Herrlichkeit des Heiligen treten' (Tob. 12:15). ...[Onias] bezeugte und sprach: 'Das ist der, der viel für das Volk und für die ganze heilige Stadt betet, Jeremia, der Prophet Gottes' (2 Makk. 15:14).",
         },
-        sourceReference: "Ch. 11, §1"
+        sourceReference: "Ch. 11, §1",
       },
       {
         id: "origen-prayer-11-2",
-        author: { en: "Origen", fr: "Origène", es: "Orígenes", de: "Origenes" },
-        work: { en: "Prayer", fr: "De la Prière", es: "Sobre la Oración", de: "Über das Gebet" },
+        author: {
+          en: "Origen",
+          fr: "Origène",
+          es: "Orígenes",
+          de: "Origenes",
+        },
+        work: {
+          en: "Prayer",
+          fr: "De la Prière",
+          es: "Sobre la Oración",
+          de: "Über das Gebet",
+        },
         date: "233 AD",
         text: {
           en: "We must believe that the saints who have died have this love in a far greater degree towards them that are engaged in the combat of life, than those who are still subject to human weakness... 'If one member suffer any thing, all the members suffer with it...' (1 Cor. 12:26), does not apply only to those who here on earth love their brethren.",
           fr: "Nous devons croire que les saints qui sont morts ont cet amour à un degré bien plus grand envers ceux qui sont engagés dans le combat de la vie, que ceux qui sont encore sujets à la faiblesse humaine... 'Si un membre souffre quelque chose, tous les membres souffrent avec lui...' (1 Cor. 12:26), ne s'applique pas seulement à ceux qui, ici sur terre, aiment leurs frères.",
           es: "Debemos creer que los santos que han muerto tienen este amor en un grado mucho mayor hacia aquellos que están comprometidos en el combate de la vida, que aquellos que todavía están sujetos a la debilidad humana... 'Si un miembro sufre algo, todos los miembros sufren con él...' (1 Cor. 12:26), no se aplica solo a aquellos que aquí en la tierra aman a sus hermanos.",
-          de: "Wir müssen glauben, dass die verstorbenen Heiligen diese Liebe in einem viel größeren Maße zu denen haben, die sich im Kampf des Lebens befinden, als jene, die noch menschlicher Schwachheit unterworfen sind... 'Wenn ein Glied etwas leidet, leiden alle Glieder mit...' (1 Kor. 12:26), gilt nicht nur für jene, die hier auf Erden ihre Brüder lieben."
+          de: "Wir müssen glauben, dass die verstorbenen Heiligen diese Liebe in einem viel größeren Maße zu denen haben, die sich im Kampf des Lebens befinden, als jene, die noch menschlicher Schwachheit unterworfen sind... 'Wenn ein Glied etwas leidet, leiden alle Glieder mit...' (1 Kor. 12:26), gilt nicht nur für jene, die hier auf Erden ihre Brüder lieben.",
         },
-        sourceReference: "Ch. 11, §2"
+        sourceReference: "Ch. 11, §2",
       },
       {
         id: "origen-prayer-11-5",
-        author: { en: "Origen", fr: "Origène", es: "Orígenes", de: "Origenes" },
-        work: { en: "Prayer", fr: "De la Prière", es: "Sobre la Oración", de: "Über das Gebet" },
+        author: {
+          en: "Origen",
+          fr: "Origène",
+          es: "Orígenes",
+          de: "Origenes",
+        },
+        work: {
+          en: "Prayer",
+          fr: "De la Prière",
+          es: "Sobre la Oración",
+          de: "Über das Gebet",
+        },
         date: "233 AD",
         text: {
           en: "In the same way we must suppose that the angels who are the overseers and ministers of God are present to one who is praying... The angel, indeed, of each one, even of the 'little ones' in the Church, always 'seeing the face of the Father who is in heaven' (Luke 18:10)... prays with us and cooperates with us, as far as is possible, in what we seek.",
           fr: "De la même manière, nous devons supposer que les anges qui sont les surveillants et les ministres de Dieu sont présents à celui qui prie... L'ange, en effet, de chacun, même des 'petits' dans l'Église, 'voyant toujours la face du Père qui est dans les cieux' (Luc 18:10)... prie avec nous et coopère avec nous, autant qu'il est possible, dans ce que nous cherchons.",
           es: "Del mismo modo debemos suponer que los ángeles que son los supervisores y ministros de Dios están presentes para quien está orando... El ángel, en verdad, de cada uno, incluso de los 'pequeños' en la Iglesia, que 'siempre ven el rostro del Padre que está en los cielos' (Lc 18:10)... ora con nosotros y coopera con nosotros, en la medida de lo posible, en lo que buscamos.",
-          de: "Auf dieselbe Weise müssen wir annehmen, dass die Engel, die Aufseher und Diener Gottes sind, bei demjenigen anwesend sind, der betet... Der Engel eines jeden, selbst der 'Kleinen' in der Kirche, der 'immer das Angesicht des Vaters im Himmel sieht' (Lk 18:10)... betet mit uns und wirkt mit uns, soweit es möglich ist, in dem, was wir suchen."
+          de: "Auf dieselbe Weise müssen wir annehmen, dass die Engel, die Aufseher und Diener Gottes sind, bei demjenigen anwesend sind, der betet... Der Engel eines jeden, selbst der 'Kleinen' in der Kirche, der 'immer das Angesicht des Vaters im Himmel sieht' (Lk 18:10)... betet mit uns und wirkt mit uns, soweit es möglich ist, in dem, was wir suchen.",
         },
-        sourceReference: "Ch. 11, §5"
+        sourceReference: "Ch. 11, §5",
       },
       {
         id: "origen-martyrdom-30",
-        author: { en: "Origen", fr: "Origène", es: "Orígenes", de: "Origenes" },
-        work: { en: "Exhortation to Martyrdom", fr: "Exhortation au Martyre", es: "Exhortación al Martirio", de: "Ermahnung zum Martyrium" },
+        author: {
+          en: "Origen",
+          fr: "Origène",
+          es: "Orígenes",
+          de: "Origenes",
+        },
+        work: {
+          en: "Exhortation to Martyrdom",
+          fr: "Exhortation au Martyre",
+          es: "Exhortación al Martirio",
+          de: "Ermahnung zum Martyrium",
+        },
         date: "c. 235 AD",
         text: {
           en: "Just as they who assisted at the altar... seemed to procure for the Jews remission for sins by the blood of goats and oxen, so the souls of believers that 'are beheaded for the testimony of Jesus' (Apoc. 20:4), do not assist in vain at the altar of heaven, but procure for them that pray the remission of sins.",
           fr: "De même que ceux qui assistaient à l'autel... semblaient procurer aux Juifs la rémission des péchés par le sang des boucs et des taureaux, de même les âmes des croyants qui 'sont décapités pour le témoignage de Jésus' (Apoc. 20:4), n'assistent pas en vain à l'autel du ciel, mais procurent à ceux qui prient la rémission des péchés.",
           es: "Así como aquellos que asistían al altar... parecían procurar a los judíos la remisión de los pecados por la sangre de machos cabríos y bueyes, así las almas de los creyentes que 'son decapitados por el testimonio de Jesús' (Apoc. 20:4), no asisten en vano al altar del cielo, sino que procuran para los que oran la remisión de los pecados.",
-          de: "So wie jene, die am Altar dienten... den Juden Vergebung für Sünden durch das Blut von Böcken und Ochsen zu verschaffen schienen, so dienen die Seelen der Gläubigen, die 'um des Zeugnisses Jesu willen enthauptet sind' (Offb 20,4), nicht vergeblich am Altar des Himmels, sondern verschaffen denen, die beten, die Vergebung der Sünden."
+          de: "So wie jene, die am Altar dienten... den Juden Vergebung für Sünden durch das Blut von Böcken und Ochsen zu verschaffen schienen, so dienen die Seelen der Gläubigen, die 'um des Zeugnisses Jesu willen enthauptet sind' (Offb 20,4), nicht vergeblich am Altar des Himmels, sondern verschaffen denen, die beten, die Vergebung der Sünden.",
         },
-        sourceReference: "§30"
+        sourceReference: "§30",
       },
       {
         id: "cyprian-letter-56",
-        author: { en: "Saint Cyprian of Carthage", fr: "Saint Cyprien de Carthage", es: "San Cipriano de Cartago", de: "Hl. Cyprian von Karthago" },
-        work: { en: "Letter 56: To St. Pope Cornelius", fr: "Lettre 56 : Au Pape Corneille", es: "Carta 56: Al Papa San Cornelio", de: "Brief 56: An den Hl. Papst Cornelius" },
+        author: {
+          en: "Saint Cyprian of Carthage",
+          fr: "Saint Cyprien de Carthage",
+          es: "San Cipriano de Cartago",
+          de: "Hl. Cyprian von Karthago",
+        },
+        work: {
+          en: "Letter 56: To St. Pope Cornelius",
+          fr: "Lettre 56 : Au Pape Corneille",
+          es: "Carta 56: Al Papa San Cornelio",
+          de: "Brief 56: An den Hl. Papst Cornelius",
+        },
         date: "252 AD",
         text: {
           en: "Let us remember one another in concord and unanimity. Let us on both sides always pray for one another... that if any one of us... shall go hence the first, our love may continue in the presence of the Lord, and our prayers for our brethren and sisters not cease in the presence of the Father’s mercy…",
           fr: "Souvenons-nous les uns des autres dans la concorde et l'unanimité. Prions toujours les uns pour les autres des deux côtés... afin que si l'un de nous... part d'ici le premier, notre amour puisse continuer en présence du Seigneur, et nos prières pour nos frères et sœurs ne cessent pas en présence de la miséricorde du Père...",
           es: "Recordémonos mutuamente en concordia y unanimidad. Oremos siempre los unos por los otros en ambos lados... para que si alguno de nosotros... parte primero de aquí, nuestro amor continúe en la presencia del Señor, y nuestras oraciones por nuestros hermanos y hermanas no cesen en la presencia de la misericordia del Padre...",
-          de: "Lasst uns in Eintracht und Einmütigkeit aneinander denken. Lasst uns auf beiden Seiten immer füreinander beten... dass, wenn einer von uns... als erster von hinnen geht, unsere Liebe in der Gegenwart des Herrn fortbestehe und unsere Gebete für unsere Brüder und Schwestern in der Gegenwart der Barmherzigkeit des Vaters nicht aufhören..."
+          de: "Lasst uns in Eintracht und Einmütigkeit aneinander denken. Lasst uns auf beiden Seiten immer füreinander beten... dass, wenn einer von uns... als erster von hinnen geht, unsere Liebe in der Gegenwart des Herrn fortbestehe und unsere Gebete für unsere Brüder und Schwestern in der Gegenwart der Barmherzigkeit des Vaters nicht aufhören...",
         },
-        sourceReference: "§5"
+        sourceReference: "§5",
       },
       {
         id: "methodius-oration-simeon-14",
-        author: { en: "Saint Methodius of Olympus", fr: "Saint Méthode d'Olympe", es: "San Metodio de Olimpo", de: "Hl. Methodius von Olympus" },
-        work: { en: "Oration Concerning Simeon and Anna", fr: "Oraison sur Siméon et Anne", es: "Oración sobre Simeón y Ana", de: "Rede über Simeon und Anna" },
+        author: {
+          en: "Saint Methodius of Olympus",
+          fr: "Saint Méthode d'Olympe",
+          es: "San Metodio de Olimpo",
+          de: "Hl. Methodius von Olympus",
+        },
+        work: {
+          en: "Oration Concerning Simeon and Anna",
+          fr: "Oraison sur Siméon et Anne",
+          es: "Oración sobre Simeón y Ana",
+          de: "Rede über Simeon und Anna",
+        },
         date: "c. 300 AD",
         text: {
           en: "Wherefore, we pray thee, the most excellent among women... that thou wouldest unceasingly keep us in remembrance. O holy mother of God, remember us... And do thou also, O honored and venerable Simeon... be our patron and advocate with that Savior God...",
           fr: "C'est pourquoi nous te prions, la plus excellente des femmes... de nous garder sans cesse en mémoire. Ô sainte mère de Dieu, souviens-toi de nous... Et toi aussi, Ô honoré et vénérable Siméon... sois notre patron et avocat auprès de ce Dieu Sauveur...",
           es: "Por lo cual, te rogamos, la más excelente entre las mujeres... que incesantemente nos tengas presentes. Oh santa madre de Dios, acuérdate de nosotros... Y tú también, oh honrado y venerable Simeón... sé nuestro patrón y abogado ante ese Dios Salvador...",
-          de: "Deshalb bitten wir dich, die hervorragendste unter den Frauen... dass du uns unablässig in Erinnerung behältst. O heilige Mutter Gottes, gedenke unser... Und auch du, o geehrter und ehrwürdiger Simeon... sei unser Schutzherr und Fürsprecher bei jenem Erlösergott..."
+          de: "Deshalb bitten wir dich, die hervorragendste unter den Frauen... dass du uns unablässig in Erinnerung behältst. O heilige Mutter Gottes, gedenke unser... Und auch du, o geehrter und ehrwürdiger Simeon... sei unser Schutzherr und Fürsprecher bei jenem Erlösergott...",
         },
-        sourceReference: "§14"
-      }
-    ]
+        sourceReference: "§14",
+      },
+    ],
   },
 
-  
   {
     id: "purgatory",
     title: {
@@ -2292,130 +2738,219 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
     },
     shortTitle: {
       en: "Purgatory",
-      fr: "Le Purgatoire",
-      es: "El Purgatorio",
-      de: "Fegefeuer"
+      fr: "Purgatoire",
+      es: "Purgatorio",
+      de: "Fegefeuer",
     },
     icon: "Flame",
     quotes: [
-
       {
         id: "perpetua-felicity-2",
-        author: { en: "Tertullian (Martyrdom of Perpetua)", fr: "Tertullien (Martyre de Perpétue)", es: "Tertuliano (Martirio de Perpetua)", de: "Tertullian (Martyrium von Perpetua)" },
-        work: { en: "The Martyrdom of Perpetua and Felicity", fr: "Le Martyre de Perpétue et Félicité", es: "El Martirio de Perpetua y Felicidad", de: "Das Martyrium von Perpetua und Felicitas" },
+        author: {
+          en: "Tertullian (Martyrdom of Perpetua)",
+          fr: "Tertullien (Martyre de Perpétue)",
+          es: "Tertuliano (Martirio de Perpetua)",
+          de: "Tertullian (Martyrium von Perpetua)",
+        },
+        work: {
+          en: "The Martyrdom of Perpetua and Felicity",
+          fr: "Le Martyre de Perpétue et Félicité",
+          es: "El Martirio de Perpetua y Felicidad",
+          de: "Das Martyrium von Perpetua und Felicitas",
+        },
         date: "c. 203 AD",
         text: {
           en: "I saw Dinocrates going out from a gloomy place... and I knew that my brother was in suffering. But I trusted that my prayer would bring help to his suffering... Then, on the day on which we remained in fetters, this was shown to me. I saw that that place... was now bright; and Dinocrates, with a clean body well clad, was finding refreshment... Then I understood that he was translated from the place of punishment.",
           fr: "Je vis Dinocrate sortir d'un lieu sombre... et je savais que mon frère souffrait. Mais j'avais confiance que ma prière apporterait de l'aide à sa souffrance... Puis, le jour où nous restâmes dans les fers, ceci me fut montré. Je vis que ce lieu... était maintenant lumineux ; et Dinocrate, le corps pur et bien vêtu, trouvait du rafraîchissement... Alors je compris qu'il avait été transféré du lieu de punition.",
           es: "Vi a Dinócrates salir de un lugar sombrío... y supe que mi hermano estaba sufriendo. Pero confiaba en que mi oración aliviaría su sufrimiento... Luego, el día en que permanecimos encadenados, se me mostró esto. Vi que aquel lugar... estaba ahora brillante; y Dinócrates, con un cuerpo limpio y bien vestido, encontraba alivio... Entonces comprendí que había sido trasladado del lugar del castigo.",
-          de: "Ich sah Dinokrates aus einem düsteren Ort herauskommen... und ich wusste, dass mein Bruder litt. Aber ich vertraute darauf, dass mein Gebet seinem Leiden helfen würde... Dann, an dem Tag, an dem wir in Fesseln blieben, wurde mir dies gezeigt. Ich sah, dass jener Ort... jetzt hell war; und Dinokrates, mit einem reinen Körper gut gekleidet, fand Erfrischung... Da verstand ich, dass er vom Ort der Strafe versetzt worden war."
+          de: "Ich sah Dinokrates aus einem düsteren Ort herauskommen... und ich wusste, dass mein Bruder litt. Aber ich vertraute darauf, dass mein Gebet seinem Leiden helfen würde... Dann, an dem Tag, an dem wir in Fesseln blieben, wurde mir dies gezeigt. Ich sah, dass jener Ort... jetzt hell war; und Dinokrates, mit einem reinen Körper gut gekleidet, fand Erfrischung... Da verstand ich, dass er vom Ort der Strafe versetzt worden war.",
         },
-        sourceReference: "Ch. 2, §§3-4"
+        sourceReference: "Ch. 2, §§3-4",
       },
       {
         id: "clement-stromata-6-14",
-        author: { en: "Saint Clement of Alexandria", fr: "Saint Clément d'Alexandrie", es: "San Clemente de Alejandría", de: "Hl. Klemens von Alexandria" },
-        work: { en: "The Stromata", fr: "Les Stromates", es: "Los Stromata", de: "Die Stromateis" },
+        author: {
+          en: "Saint Clement of Alexandria",
+          fr: "Saint Clément d'Alexandrie",
+          es: "San Clemente de Alejandría",
+          de: "Hl. Klemens von Alexandria",
+        },
+        work: {
+          en: "The Stromata",
+          fr: "Les Stromates",
+          es: "Los Stromata",
+          de: "Die Stromateis",
+        },
         date: "c. 207 AD",
         text: {
           en: "Accordingly the believer, through great discipline... passes to the mansion which is better than the former one, viz., to the greatest torment, taking with him the characteristic of repentance from the sins he has committed after baptism. He is tortured then still more... And though the punishments cease in the course of the completion of the expiation and purification of each one...",
           fr: "En conséquence, le croyant, par une grande discipline... passe à la demeure qui est meilleure que la précédente, c'est-à-dire au plus grand tourment, emportant avec lui la caractéristique de la repentance des péchés qu'il a commis après le baptême. Il est alors encore plus torturé... Et bien que les punitions cessent au cours de l'achèvement de l'expiation et de la purification de chacun...",
           es: "En consecuencia, el creyente, a través de una gran disciplina... pasa a la mansión que es mejor que la anterior, a saber, al mayor tormento, llevando consigo la característica del arrepentimiento de los pecados que ha cometido después del bautismo. Es torturado entonces aún más... Y aunque los castigos cesan en el transcurso de la finalización de la expiación y purificación de cada uno...",
-          de: "Dementsprechend geht der Gläubige durch große Disziplin... in die Wohnung ein, die besser ist als die frühere, nämlich zur größten Qual, indem er das Merkmal der Reue für die Sünden, die er nach der Taufe begangen hat, mit sich nimmt. Er wird dann noch mehr gefoltert... Und obwohl die Strafen im Laufe der Vollendung der Sühne und Reinigung eines jeden aufhören..."
+          de: "Dementsprechend geht der Gläubige durch große Disziplin... in die Wohnung ein, die besser ist als die frühere, nämlich zur größten Qual, indem er das Merkmal der Reue für die Sünden, die er nach der Taufe begangen hat, mit sich nimmt. Er wird dann noch mehr gefoltert... Und obwohl die Strafen im Laufe der Vollendung der Sühne und Reinigung eines jeden aufhören...",
         },
-        sourceReference: "Book 6, Ch. 14"
+        sourceReference: "Book 6, Ch. 14",
       },
       {
         id: "tertullian-soul-58",
-        author: { en: "Tertullian", fr: "Tertullien", es: "Tertuliano", de: "Tertullian" },
-        work: { en: "A Treatise on the Soul", fr: "Traité de l'Âme", es: "Un Tratado sobre el Alma", de: "Abhandlung über die Seele" },
+        author: {
+          en: "Tertullian",
+          fr: "Tertullien",
+          es: "Tertuliano",
+          de: "Tertullian",
+        },
+        work: {
+          en: "A Treatise on the Soul",
+          fr: "Traité de l'Âme",
+          es: "Un Tratado sobre el Alma",
+          de: "Abhandlung über die Seele",
+        },
         date: "c. 210 AD",
         text: {
           en: "...why, then, cannot you suppose that the soul undergoes punishment and consolation in Hades in the interval, while it awaits its alternative of judgment...? In short, inasmuch as we understand the prison pointed out in the Gospel to be Hades [Matt. 5:25], and as we also interpret the uttermost farthing to mean the very smallest offense which has to be recompensed there before the resurrection, no one will hesitate to believe that the soul undergoes in Hades some compensatory discipline, without prejudice to the full process of the resurrection...",
           fr: "...pourquoi, alors, ne pouvez-vous pas supposer que l'âme subit une punition et une consolation dans l'Hadès dans l'intervalle, pendant qu'elle attend son alternative de jugement...? Bref, dans la mesure où nous comprenons que la prison indiquée dans l'Évangile est l'Hadès [Matt. 5:25], et comme nous interprétons aussi le dernier quadrant comme signifiant la plus petite offense qui doit y être compensée avant la résurrection, personne n'hésitera à croire que l'âme subit dans l'Hadès une certaine discipline compensatoire, sans préjudice du processus complet de la résurrection...",
           es: "...¿por qué, entonces, no puedes suponer que el alma sufre castigo y consuelo en el Hades en el intervalo, mientras espera su alternativa de juicio...? En resumen, en la medida en que entendemos que la prisión señalada en el Evangelio es el Hades [Mat. 5:25], y como también interpretamos el último céntimo como la ofensa más pequeña que debe ser recompensada allí antes de la resurrección, nadie dudará en creer que el alma sufre en el Hades alguna disciplina compensatoria, sin perjuicio del proceso completo de la resurrección...",
-          de: "...warum kannst du also nicht annehmen, dass die Seele im Hades in der Zwischenzeit Strafe und Trost erfährt, während sie auf ihre Alternative des Gerichts wartet...? Kurz gesagt, da wir das im Evangelium gezeigte Gefängnis als Hades verstehen [Mt 5,25] und da wir auch den letzten Heller als das kleinste Vergehen deuten, das dort vor der Auferstehung ausgeglichen werden muss, wird niemand zögern zu glauben, dass die Seele im Hades eine gewisse ausgleichende Zucht erfährt, unbeschadet des vollen Prozesses der Auferstehung..."
+          de: "...warum kannst du also nicht annehmen, dass die Seele im Hades in der Zwischenzeit Strafe und Trost erfährt, während sie auf ihre Alternative des Gerichts wartet...? Kurz gesagt, da wir das im Evangelium gezeigte Gefängnis als Hades verstehen [Mt 5,25] und da wir auch den letzten Heller als das kleinste Vergehen deuten, das dort vor der Auferstehung ausgeglichen werden muss, wird niemand zögern zu glauben, dass die Seele im Hades eine gewisse ausgleichende Zucht erfährt, unbeschadet des vollen Prozesses der Auferstehung...",
         },
-        sourceReference: "Ch. 58"
+        sourceReference: "Ch. 58",
       },
       {
         id: "tertullian-chaplet-3",
-        author: { en: "Tertullian", fr: "Tertullien", es: "Tertuliano", de: "Tertullian" },
-        work: { en: "The Chaplet", fr: "La Couronne du Soldat", es: "La Corona", de: "Der Kranz" },
+        author: {
+          en: "Tertullian",
+          fr: "Tertullien",
+          es: "Tertuliano",
+          de: "Tertullian",
+        },
+        work: {
+          en: "The Chaplet",
+          fr: "La Couronne du Soldat",
+          es: "La Corona",
+          de: "Der Kranz",
+        },
         date: "211 AD",
         text: {
           en: "As often as the anniversary comes round, we make offerings for the dead as birthday honors…",
           fr: "Aussi souvent que l'anniversaire revient, nous faisons des offrandes pour les morts comme honneurs d'anniversaire...",
           es: "Tan a menudo como llega el aniversario, hacemos ofrendas por los muertos como honores de cumpleaños...",
-          de: "Sooft der Jahrestag wiederkehrt, bringen wir Opfer für die Verstorbenen als Geburtstags-Ehren dar..."
+          de: "Sooft der Jahrestag wiederkehrt, bringen wir Opfer für die Verstorbenen als Geburtstags-Ehren dar...",
         },
-        sourceReference: "Ch. 3"
+        sourceReference: "Ch. 3",
       },
       {
         id: "tertullian-monogamy-10",
-        author: { en: "Tertullian", fr: "Tertullien", es: "Tertuliano", de: "Tertullian" },
-        work: { en: "On Monogamy", fr: "Sur la Monogamie", es: "Sobre la Monogamia", de: "Über die Monogamie" },
+        author: {
+          en: "Tertullian",
+          fr: "Tertullien",
+          es: "Tertuliano",
+          de: "Tertullian",
+        },
+        work: {
+          en: "On Monogamy",
+          fr: "Sur la Monogamie",
+          es: "Sobre la Monogamia",
+          de: "Über die Monogamie",
+        },
         date: "c. 218 AD",
         text: {
           en: "Indeed, she [a widow] prays for his [her husband’s] soul, and requests refreshment for him meanwhile, and fellowship (with him) in the first resurrection; and she offers (her sacrifice) on the anniversaries of his falling asleep.",
           fr: "En effet, elle [une veuve] prie pour son âme [celle de son mari], et demande pour lui du rafraîchissement en attendant, et la communion (avec lui) à la première résurrection ; et elle offre (son sacrifice) aux anniversaires de son endormissement.",
           es: "En verdad, ella [una viuda] ora por el alma de él [su esposo], y pide refrigerio para él entretanto, y compañerismo (con él) en la primera resurrección; y ofrece (su sacrificio) en los aniversarios de su dormición.",
-          de: "In der Tat betet sie [eine Witwe] für seine [ihres Mannes] Seele und bittet um Erquickung für ihn einstweilen und Gemeinschaft (mit ihm) in der ersten Auferstehung; und sie opfert (ihr Opfer) an den Jahrestagen seines Entschlafens."
+          de: "In der Tat betet sie [eine Witwe] für seine [ihres Mannes] Seele und bittet um Erquickung für ihn einstweilen und Gemeinschaft (mit ihm) in der ersten Auferstehung; und sie opfert (ihr Opfer) an den Jahrestagen seines Entschlafens.",
         },
-        sourceReference: "Ch. 10"
+        sourceReference: "Ch. 10",
       },
       {
         id: "origen-celsus-4-13",
-        author: { en: "Origen", fr: "Origène", es: "Orígenes", de: "Origenes" },
-        work: { en: "Against Celsus", fr: "Contre Celse", es: "Contra Celso", de: "Gegen Celsus" },
+        author: {
+          en: "Origen",
+          fr: "Origène",
+          es: "Orígenes",
+          de: "Origenes",
+        },
+        work: {
+          en: "Against Celsus",
+          fr: "Contre Celse",
+          es: "Contra Celso",
+          de: "Gegen Celsus",
+        },
         date: "c. 248 AD",
         text: {
           en: "The divine word says that our God is 'a consuming fire' (Deut. 4:24)... 'The fire will try each man’s work of what sort it is... If any man’s work be burned, he shall suffer loss' (1 Cor. 3:13-15). But what work can be spoken of... as being 'burned,' save all that results from wickedness? Therefore our God is a 'consuming fire' in this sense; and thus He enters in as a 'refiner’s fire,' to refine the rational nature...",
           fr: "La parole divine dit que notre Dieu est 'un feu consumant' (Deut. 4:24)... 'Le feu éprouvera l'œuvre de chacun, ce qu'elle est... Si l'œuvre de quelqu'un est brûlée, il subira une perte' (1 Cor. 3:13-15). Mais de quelle œuvre peut-on parler... comme étant 'brûlée', sinon tout ce qui résulte de la méchanceté ? C'est pourquoi notre Dieu est un 'feu consumant' en ce sens ; et c'est ainsi qu'Il entre comme un 'feu d'affineur', pour affiner la nature rationnelle...",
           es: "La palabra divina dice que nuestro Dios es 'un fuego consumidor' (Deut. 4:24)... 'El fuego probará la obra de cada uno cuál sea... Si la obra de alguno se quema, sufrirá pérdida' (1 Cor. 3:13-15). Pero, ¿de qué obra se puede hablar... como 'quemada', sino de todo lo que resulta de la maldad? Por tanto, nuestro Dios es un 'fuego consumidor' en este sentido; y así entra Él como 'fuego de refinador', para refinar la naturaleza racional...",
-          de: "Das göttliche Wort sagt, dass unser Gott 'ein verzehrendes Feuer' ist (Dtn 4,24)... 'Das Feuer wird das Werk eines jeden prüfen, welcher Art es ist... Wenn jemandes Werk verbrennt, wird er Schaden erleiden' (1 Kor 3,13-15). Aber von welchem Werk kann man... sagen, dass es 'verbrannt' wird, außer allem, was aus der Bosheit resultiert? Deshalb ist unser Gott ein 'verzehrendes Feuer' in diesem Sinne; und so tritt Er ein als 'Feuer eines Läuterers', um die vernünftige Natur zu läutern..."
+          de: "Das göttliche Wort sagt, dass unser Gott 'ein verzehrendes Feuer' ist (Dtn 4,24)... 'Das Feuer wird das Werk eines jeden prüfen, welcher Art es ist... Wenn jemandes Werk verbrennt, wird er Schaden erleiden' (1 Kor 3,13-15). Aber von welchem Werk kann man... sagen, dass es 'verbrannt' wird, außer allem, was aus der Bosheit resultiert? Deshalb ist unser Gott ein 'verzehrendes Feuer' in diesem Sinne; und so tritt Er ein als 'Feuer eines Läuterers', um die vernünftige Natur zu läutern...",
         },
-        sourceReference: "Book 4, Ch. 13"
+        sourceReference: "Book 4, Ch. 13",
       },
       {
         id: "cyprian-letter-51-20",
-        author: { en: "Saint Cyprian of Carthage", fr: "Saint Cyprien de Carthage", es: "San Cipriano de Cartago", de: "Hl. Cyprian von Karthago" },
-        work: { en: "Letter 51", fr: "Lettre 51", es: "Carta 51", de: "Brief 51" },
+        author: {
+          en: "Saint Cyprian of Carthage",
+          fr: "Saint Cyprien de Carthage",
+          es: "San Cipriano de Cartago",
+          de: "Hl. Cyprian von Karthago",
+        },
+        work: {
+          en: "Letter 51",
+          fr: "Lettre 51",
+          es: "Carta 51",
+          de: "Brief 51",
+        },
         date: "252 AD",
         text: {
           en: "It is one thing to stand for pardon, another thing to attain to glory: it is one thing, when cast into prison, not to go out thence until one has paid the uttermost farthing; another thing at once to receive the wages of faith and courage. It is one thing, tortured by long suffering for sins, to be cleansed and long purged by fire; another to have purged all sins by suffering.",
           fr: "C'est une chose de se tenir pour le pardon, une autre d'atteindre la gloire : c'est une chose, jeté en prison, de ne pas en sortir avant d'avoir payé jusqu'au dernier quadrant ; une autre de recevoir aussitôt le salaire de la foi et du courage. C'est une chose, torturé par une longue souffrance pour les péchés, d'être purifié et longuement purgé par le feu ; une autre d'avoir purgé tous les péchés par la souffrance.",
           es: "Una cosa es estar en espera de perdón, otra cosa es alcanzar la gloria: una cosa es, arrojado en prisión, no salir de allí hasta haber pagado el último céntimo; otra cosa es recibir en seguida el salario de la fe y del valor. Una cosa es, torturado por un largo sufrimiento por los pecados, ser limpiado y largamente purgado por el fuego; otra cosa es haber purgado todos los pecados por el sufrimiento.",
-          de: "Es ist eine Sache, um Verzeihung dazustehen, eine andere, zur Herrlichkeit zu gelangen: Es ist eine Sache, ins Gefängnis geworfen, nicht von dort herauszukommen, bis man den letzten Heller bezahlt hat; eine andere, sogleich den Lohn des Glaubens und des Mutes zu empfangen. Es ist eine Sache, durch langes Leiden für Sünden gequält, gereinigt und lange durch Feuer geläutert zu werden; eine andere, alle Sünden durch Leiden gereinigt zu haben."
+          de: "Es ist eine Sache, um Verzeihung dazustehen, eine andere, zur Herrlichkeit zu gelangen: Es ist eine Sache, ins Gefängnis geworfen, nicht von dort herauszukommen, bis man den letzten Heller bezahlt hat; eine andere, sogleich den Lohn des Glaubens und des Mutes zu empfangen. Es ist eine Sache, durch langes Leiden für Sünden gequält, gereinigt und lange durch Feuer geläutert zu werden; eine andere, alle Sünden durch Leiden gereinigt zu haben.",
         },
-        sourceReference: "§20"
+        sourceReference: "§20",
       },
       {
         id: "lactantius-institutes-7-21",
-        author: { en: "Lactantius", fr: "Lactance", es: "Lactancio", de: "Laktanz" },
-        work: { en: "The Divine Institutes", fr: "Les Institutions Divines", es: "Las Instituciones Divinas", de: "Die Göttlichen Unterweisungen" },
+        author: {
+          en: "Lactantius",
+          fr: "Lactance",
+          es: "Lactancio",
+          de: "Laktanz",
+        },
+        work: {
+          en: "The Divine Institutes",
+          fr: "Les Institutions Divines",
+          es: "Las Instituciones Divinas",
+          de: "Die Göttlichen Unterweisungen",
+        },
         date: "c. 303-311 AD",
         text: {
           en: "But when He shall have judged the righteous, He will also try them with fire. Then they whose sins shall exceed either in weight or in number, shall be scorched by the fire and burnt: but they whom full justice and maturity of virtue has imbued will not perceive that fire...",
           fr: "Mais quand Il aura jugé les justes, Il les éprouvera aussi par le feu. Alors ceux dont les péchés dépasseront soit en poids soit en nombre, seront roussis par le feu et brûlés : mais ceux que la pleine justice et la maturité de la vertu ont imprégnés ne sentiront pas ce feu...",
           es: "Pero cuando haya juzgado a los justos, también los probará con fuego. Entonces aquellos cuyos pecados excedan en peso o en número, serán chamuscados por el fuego y quemados: pero aquellos a quienes la plena justicia y la madurez de la virtud han imbuido no percibirán ese fuego...",
-          de: "Aber wenn Er die Gerechten gerichtet haben wird, wird Er sie auch mit Feuer prüfen. Dann werden die, deren Sünden entweder an Gewicht oder an Zahl überwiegen, vom Feuer versengt und verbrannt werden: aber die, welche volle Gerechtigkeit und Reife der Tugend durchdrungen hat, werden jenes Feuer nicht wahrnehmen..."
+          de: "Aber wenn Er die Gerechten gerichtet haben wird, wird Er sie auch mit Feuer prüfen. Dann werden die, deren Sünden entweder an Gewicht oder an Zahl überwiegen, vom Feuer versengt und verbrannt werden: aber die, welche volle Gerechtigkeit und Reife der Tugend durchdrungen hat, werden jenes Feuer nicht wahrnehmen...",
         },
-        sourceReference: "Book 7, Ch. 21"
+        sourceReference: "Book 7, Ch. 21",
       },
       {
         id: "cyril-jerusalem-lecture-23",
-        author: { en: "Saint Cyril of Jerusalem", fr: "Saint Cyrille de Jérusalem", es: "San Cirilo de Jerusalén", de: "Hl. Kyrill von Jerusalem" },
-        work: { en: "Catechetical Lecture 23", fr: "Catéchèse 23", es: "Catequesis 23", de: "Katechese 23" },
+        author: {
+          en: "Saint Cyril of Jerusalem",
+          fr: "Saint Cyrille de Jérusalem",
+          es: "San Cirilo de Jerusalén",
+          de: "Hl. Kyrill von Jerusalem",
+        },
+        work: {
+          en: "Catechetical Lecture 23",
+          fr: "Catéchèse 23",
+          es: "Catequesis 23",
+          de: "Katechese 23",
+        },
         date: "c. 350 AD",
         text: {
           en: "Then [during the Eucharistic prayer] we commemorate also those who have fallen asleep before us, first Patriarchs, Prophets, Apostles, Martyrs... Then on behalf also of the Holy Fathers and Bishops who have fallen asleep before us, and in a word of all who in past years have fallen asleep among us, believing that it will be a very great benefit to the souls for whom the supplication is put up...",
           fr: "Ensuite [pendant la prière eucharistique] nous commémorons aussi ceux qui se sont endormis avant nous, d'abord les Patriarches, Prophètes, Apôtres, Martyrs... Puis aussi pour les Saints Pères et Évêques qui se sont endormis avant nous, et en un mot pour tous ceux qui, dans les années passées, se sont endormis parmi nous, croyant que ce sera un très grand bienfait pour les âmes pour lesquelles la supplication est offerte...",
           es: "Luego [durante la plegaria eucarística] conmemoramos también a los que se durmieron antes que nosotros, primero Patriarcas, Profetas, Apóstoles, Mártires... Luego también por los Santos Padres y Obispos que se durmieron antes que nosotros, y en una palabra por todos los que en años pasados se durmieron entre nosotros, creyendo que será un grandísimo beneficio para las almas por quienes se ofrece la súplica...",
-          de: "Dann [während des Eucharistiegebets] gedenken wir auch derer, die vor uns entschlafen sind, zuerst der Patriarchen, Propheten, Apostel, Märtyrer... Dann auch für die Heiligen Väter und Bischöfe, die vor uns entschlafen sind, und mit einem Wort für alle, die in vergangenen Jahren unter uns entschlafen sind, im Glauben, dass es ein sehr großer Nutzen für die Seelen sein wird, für die die Fürbitte dargebracht wird..."
+          de: "Dann [während des Eucharistiegebets] gedenken wir auch derer, die vor uns entschlafen sind, zuerst der Patriarchen, Propheten, Apostel, Märtyrer... Dann auch für die Heiligen Väter und Bischöfe, die vor uns entschlafen sind, und mit einem Wort für alle, die in vergangenen Jahren unter uns entschlafen sind, im Glauben, dass es ein sehr großer Nutzen für die Seelen sein wird, für die die Fürbitte dargebracht wird...",
         },
-        sourceReference: "§9"
-      }
+        sourceReference: "§9",
+      },
     ],
   },
 ];
