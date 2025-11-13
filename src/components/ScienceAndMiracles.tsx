@@ -529,6 +529,11 @@ const ShroudContent = () => {
         title={t(trans.sources.pdf1_name, language)}
       />
     </motion.section>
+
+
+
+
+    
   );
 };
 
@@ -858,6 +863,9 @@ const MarianContent = () => {
   );
 };
 
+
+
+
 const EucharisticContent = () => {
   const { language } = useLanguage();
   const trans = scienceAndMiraclesTranslations.eucharistic;
@@ -1115,10 +1123,11 @@ const EucharisticContent = () => {
       />
 
       <h4>{t(trans.lanciano.h4, language)}</h4>
-      <p>{t(trans.lanciano.p1, language)}</p>
+      <p>{t(trans.lanciano.findings.p1_intro, language)}</p>
 
       {/* Re-formatted 6 points */}
       <div className="space-y-4 mt-6">
+        {/* Point 1 */}
         <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-6">
           <div className="flex items-start gap-3">
             <CheckCircle
@@ -1127,25 +1136,21 @@ const EucharisticContent = () => {
             />
             <div>
               <h5 className="text-white font-semibold mb-1">
-                1. Presence of Human Blood Components
+                {t(trans.lanciano.findings.li1_title, language)}
               </h5>
               <p className="text-gray-400 mb-3">
-                The blood was confirmed to be genuine through
-                the presence of hemoglobin and alkaline hematin,
-                using layer chromatography:
+                {t(trans.lanciano.findings.li1_desc, language)}
               </p>
               <div className="bg-gray-800/50 border-l-4 border-blue-600 p-4 rounded-r-lg">
                 <p className="text-gray-300 italic text-sm">
-                  "The blood of the Eucharistic miracle of
-                  Lanciano was truly such based on the
-                  demonstration of hemoglobin [and] alkaline
-                  hematin within layer chromatography."
+                  "{t(trans.lanciano.findings.li1_quote, language)}"
                 </p>
               </div>
             </div>
           </div>
         </div>
 
+        {/* Point 2 */}
         <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-6">
           <div className="flex items-start gap-3">
             <CheckCircle
@@ -1154,26 +1159,21 @@ const EucharisticContent = () => {
             />
             <div>
               <h5 className="text-white font-semibold mb-1">
-                2. Identification of Myocardial Tissue (Human
-                Heart Muscle)
+                {t(trans.lanciano.findings.li2_title, language)}
               </h5>
               <p className="text-gray-400 mb-3">
-                The solid part (flesh) was determined to be
-                striated muscle tissue, specifically myocardium
-                (heart muscle), as proven by the syncytial
-                structure of the fibers:
+                {t(trans.lanciano.findings.li2_desc, language)}
               </p>
               <div className="bg-gray-800/50 border-l-4 border-blue-600 p-4 rounded-r-lg">
                 <p className="text-gray-300 italic text-sm">
-                  "The flesh was made up of striated muscle
-                  tissue which due to the syncytial union of the
-                  fibers proves to belong to the myocardium."
+                  "{t(trans.lanciano.findings.li2_quote, language)}"
                 </p>
               </div>
             </div>
           </div>
         </div>
 
+        {/* Point 3 */}
         <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-6">
           <div className="flex items-start gap-3">
             <CheckCircle
@@ -1182,23 +1182,21 @@ const EucharisticContent = () => {
             />
             <div>
               <h5 className="text-white font-semibold mb-1">
-                3. Confirmation of Human Origin
+                {t(trans.lanciano.findings.li3_title, language)}
               </h5>
               <p className="text-gray-400 mb-3">
-                Using immunological testing... both the flesh
-                and blood were confirmed to be of human origin:
+                {t(trans.lanciano.findings.li3_desc, language)}
               </p>
               <div className="bg-gray-800/50 border-l-4 border-blue-600 p-4 rounded-r-lg">
                 <p className="text-gray-300 italic text-sm">
-                  "Flesh and blood belong to the human species
-                  as ascertained based on the zonal
-                  precipitation reaction of Oudin-Hoeff."
+                  "{t(trans.lanciano.findings.li3_quote, language)}"
                 </p>
               </div>
             </div>
           </div>
         </div>
 
+        {/* Point 4 */}
         <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-6">
           <div className="flex items-start gap-3">
             <CheckCircle
@@ -1207,23 +1205,21 @@ const EucharisticContent = () => {
             />
             <div>
               <h5 className="text-white font-semibold mb-1">
-                4. AB Blood Type in Both Flesh and Blood
+                {t(trans.lanciano.findings.li4_title, language)}
               </h5>
               <p className="text-gray-400 mb-3">
-                The blood type was identified as AB, which is
-                the same in both the blood and the tissue:
+                {t(trans.lanciano.findings.li4_desc, language)}
               </p>
               <div className="bg-gray-800/50 border-l-4 border-blue-600 p-4 rounded-r-lg">
                 <p className="text-gray-300 italic text-sm">
-                  "The blood group determined by the
-                  absorption-elution method was identical — AB —
-                  in the flesh and blood."
+                  "{t(trans.lanciano.findings.li4_quote, language)}"
                 </p>
               </div>
             </div>
           </div>
         </div>
 
+        {/* Point 5 */}
         <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-6">
           <div className="flex items-start gap-3">
             <CheckCircle
@@ -1232,26 +1228,21 @@ const EucharisticContent = () => {
             />
             <div>
               <h5 className="text-white font-semibold mb-1">
-                5. Protein Profile Matches That of Normal Human
-                Blood
+                {t(trans.lanciano.findings.li5_title, language)}
               </h5>
               <p className="text-gray-400 mb-3">
-                The serum protein profile matched that of
-                freshly drawn human blood, including Albumin and
-                Globulins in normal ratios:
+                {t(trans.lanciano.findings.li5_desc, language)}
               </p>
               <div className="bg-gray-800/50 border-l-4 border-blue-600 p-4 rounded-r-lg">
                 <p className="text-gray-300 italic text-sm">
-                  "Proteins have been demonstrated in the blood
-                  elution liquid fractioned in the percentage
-                  ratios that occur in the serum protein
-                  framework of normal fresh blood."
+                  "{t(trans.lanciano.findings.li5_quote, language)}"
                 </p>
               </div>
             </div>
           </div>
         </div>
 
+        {/* Point 6 */}
         <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-6">
           <div className="flex items-start gap-3">
             <CheckCircle
@@ -1260,18 +1251,14 @@ const EucharisticContent = () => {
             />
             <div>
               <h5 className="text-white font-semibold mb-1">
-                6. Presence of Electrolytes and Elevated Calcium
+                {t(trans.lanciano.findings.li6_title, language)}
               </h5>
               <p className="text-gray-400 mb-3">
-                The blood samples contained Chlorides,
-                Phosphorus, Potassium, Sodium, and a
-                significantly elevated level of calcium:
+                {t(trans.lanciano.findings.li6_desc, language)}
               </p>
               <div className="bg-gray-800/50 border-l-4 border-blue-600 p-4 rounded-r-lg">
                 <p className="text-gray-300 italic text-sm">
-                  "Chlorides, phosphorus, potassium and sodium
-                  were found in the blood, while calcium was
-                  significantly increased."
+                  "{t(trans.lanciano.findings.li6_quote, language)}"
                 </p>
               </div>
             </div>
@@ -1282,102 +1269,90 @@ const EucharisticContent = () => {
       {/* Anomalous Freshness */}
       <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 my-6">
         <h5 className="text-white mb-3">
-          Anomalous Freshness of the Samples
+          {t(trans.lanciano.freshness.h5, language)}
         </h5>
         <p className="text-gray-300">
-          One of the most striking aspects of the analysis was
-          the observation that the blood appeared fresh, despite
-          being over 1,200 years old.
+          {t(trans.lanciano.freshness.p1, language)}
         </p>
         <div className="bg-gray-800/50 border-l-4 border-purple-600 p-4 rounded-r-lg mt-4">
           <p className="text-gray-300 italic text-sm">
-            "It was amazing how he stated that this appeared to
-            be normal fresh blood. How can 1200-year-old blood
-            appear to be fresh?"
+            "{t(trans.lanciano.freshness.quote, language)}"
           </p>
         </div>
         <p className="text-gray-400 mt-4">
-          This characteristic defies known principles of biology
-          and natural preservation and remains one of the key
-          scientific anomalies pointing to the miraculous nature
-          of the event.
+          {t(trans.lanciano.freshness.p2, language)}
         </p>
       </div>
 
       {/* Conclusion */}
       <div className="bg-green-900/10 border border-green-800 rounded-lg p-6 my-6">
-        <h5 className="text-white mb-3">Conclusion</h5>
+        <h5 className="text-white mb-3">{t(trans.lanciano.conclusion.h5, language)}</h5>
         <p className="text-gray-300 mb-4">
-          Dr. Linoli’s investigation employed modern medical and
-          scientific techniques, including:
+          {t(trans.lanciano.conclusion.p1_methods, language)}
         </p>
         <ul className="list-none space-y-2 pl-4 mb-4">
           <li className="flex items-start gap-3">
             <span className="text-green-400 mt-1">•</span>
             <span className="text-gray-300">
-              Histological analysis of muscle fibers
+              {t(trans.lanciano.conclusion.li_methods1, language)}
             </span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-green-400 mt-1">•</span>
             <span className="text-gray-300">
-              Immunological testing for species identification
+              {t(trans.lanciano.conclusion.li_methods2, language)}
             </span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-green-400 mt-1">•</span>
             <span className="text-gray-300">
-              Biochemical profiling of blood contents
+              {t(trans.lanciano.conclusion.li_methods3, language)}
             </span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-green-400 mt-1">•</span>
             <span className="text-gray-300">
-              Serological identification of blood group
+              {t(trans.lanciano.conclusion.li_methods4, language)}
             </span>
           </li>
         </ul>
         <p className="text-gray-300 mb-4">
-          These techniques revealed that the samples are:
+          {t(trans.lanciano.conclusion.p2_results, language)}
         </p>
         <ul className="list-none space-y-2 pl-4">
           <li className="flex items-start gap-3">
             <span className="text-green-400 mt-1">•</span>
             <span className="text-gray-300">
-              Human myocardial tissue
+              {t(trans.lanciano.conclusion.li_results1, language)}
             </span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-green-400 mt-1">•</span>
             <span className="text-gray-300">
-              Human AB blood
+              {t(trans.lanciano.conclusion.li_results2, language)}
             </span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-green-400 mt-1">•</span>
             <span className="text-gray-300">
-              Biochemically active with preserved protein
-              structure
+              {t(trans.lanciano.conclusion.li_results3, language)}
             </span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-green-400 mt-1">•</span>
             <span className="text-gray-300">
-              Physiologically similar to fresh samples, despite
-              originating in the 8th century
+              {t(trans.lanciano.conclusion.li_results4, language)}
             </span>
           </li>
         </ul>
         <p className="text-white font-semibold mt-4">
-          The inexplicable preservation and biological integrity
-          of the samples suggest that no natural explanation
-          suffices, reinforcing the traditional claim of a
-          Eucharistic miracle.
+          {t(trans.lanciano.conclusion.p3_final, language)}
         </p>
       </div>
 
       <Separator className="my-12 bg-gray-800" />
 
+      {/* Scientific Rebuttal Section */}
       <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-6">
         <h4 className="text-white mb-3">
           {t(trans.critique.h4, language)}
@@ -1509,28 +1484,22 @@ const EucharisticContent = () => {
 
           {/* Final Conclusion Block (Styled as a compelling summary) */}
           <div className="bg-green-900/10 border border-green-800 rounded-lg p-8 mt-6">
-            <div className="flex items-start gap-4">
-              <CheckCircle
-                className="text-green-400 flex-shrink-0 mt-1"
-                size={32}
-              />
-              <div>
-                <h3 className="text-white mb-2">
-                  Conclusion of Rebuttal
-                </h3>
-                <p
-                  className="text-gray-300 text-sm"
-                  dangerouslySetInnerHTML={{
-                    __html: t(trans.critique.p_conc, language),
-                  }}
-                />
-              </div>
-            </div>
+            <h3 className="text-white mb-4 flex items-center gap-3">
+              <CheckCircle className="text-green-400" size={24} />
+              {t(trans.critique.conclusionTitle, language)}
+            </h3>
+            <p
+              className="text-gray-300 text-sm leading-relaxed"
+              dangerouslySetInnerHTML={{
+                __html: t(trans.critique.p_conc, language),
+              }}
+            />
           </div>
         </div>
       </div>
 
-      <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-6">
+      {/* FAQ Section */}
+      <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-6 mt-6">
         <h4 className="text-white mb-3">
           {t(trans.critique.faq.h4, language)}
         </h4>
@@ -1538,10 +1507,9 @@ const EucharisticContent = () => {
           {/* FAQ list items rendering logic must remain here */}
           {trans.critique.faq.q1 &&
             Array.from({ length: 10 }).map((_, index) => {
-              const qKey =
-                `q${index + 1}` as keyof typeof trans.critique.faq;
-              const aKey =
-                `a${index + 1}` as keyof typeof trans.critique.faq;
+              // Type assertion to access dynamic keys safely
+              const qKey = `q${index + 1}` as keyof typeof trans.critique.faq;
+              const aKey = `a${index + 1}` as keyof typeof trans.critique.faq;
 
               // Ensure both Q and A keys exist before trying to render
               if (
@@ -1570,22 +1538,23 @@ const EucharisticContent = () => {
         </ul>
       </div>
 
-      {/* INSERTED: Plain Text Title for Semantics PDF */}
+      {/* Semantics PDF */}
       <p className="text-gray-300 font-semibold mb-3 mt-8">
-        {t(trans.critique.pdf_semantics_text, language)}
+        {t(trans.critique.pdf_semantics_name, language)}
       </p>
-
       <PdfEmbed
         src={t(trans.critique.pdf_semantics_url, language)}
         title={t(trans.critique.pdf_semantics_name, language)}
       />
 
+      {/* Demonic Question */}
       <h3>{t(trans.demonic.h3, language)}</h3>
       <YouTubeEmbed
         videoId="TpY0hIwqtUU"
         title={t(trans.demonic.vid, language)}
       />
 
+      {/* Books Section */}
       <h3>{t(trans.books.h3, language)}</h3>
       <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-6">
         <h4 className="text-white mb-2">
