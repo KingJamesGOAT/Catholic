@@ -10,12 +10,18 @@ import {
   Users,
   BookOpen,
   Award,
-  Sparkles,
+  CheckCircle,
 } from "lucide-react";
 import { useLanguage } from "../../lib/i18n/LanguageContext";
 import { translations, t } from "../../lib/i18n/translations";
+import { Button } from "../ui/button";
 
-export default function NoFilioque() {
+// Add props interface
+interface NoFilioqueProps {
+  onComplete?: () => void;
+}
+
+export default function NoFilioque({ onComplete }: NoFilioqueProps) {
   const { language } = useLanguage();
   const trans = translations.noFilioque;
 
@@ -537,7 +543,7 @@ export default function NoFilioque() {
 
       <Separator className="my-16 bg-gray-800" />
 
-      {/* Conclusion */}
+      {/* Conclusion - SPARKLES REMOVED FROM HERE */}
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -564,24 +570,17 @@ export default function NoFilioque() {
             />
           </div>
 
+          {/* Removed the Sparkles Icon and simplified the container */}
           <div className="bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-blue-800/50 rounded-lg p-8">
-            <div className="flex items-start gap-4">
-              <Sparkles
-                className="text-blue-400 flex-shrink-0 mt-1"
-                size={32}
-              />
-              <div>
-                <p
-                  className="text-white mb-4"
-                  dangerouslySetInnerHTML={{
-                    __html: t(
-                      trans.conclusion.callout.p1,
-                      language,
-                    ),
-                  }}
-                />
-              </div>
-            </div>
+            <p
+              className="text-white mb-0"
+              dangerouslySetInnerHTML={{
+                __html: t(
+                  trans.conclusion.callout.p1,
+                  language,
+                ),
+              }}
+            />
           </div>
         </div>
       </motion.section>
@@ -651,13 +650,13 @@ export default function NoFilioque() {
         viewport={{ once: true }}
         className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-800/50 rounded-lg p-8"
       >
-        <div className="flex items-start gap-4">
+        <div className="flex flex-col items-center text-center gap-6">
           <Award
-            className="text-purple-400 flex-shrink-0 mt-1"
-            size={32}
+            className="text-purple-400"
+            size={48}
           />
           <div>
-            <h3 className="text-white mb-4">
+            <h3 className="text-white text-2xl mb-4">
               {t(trans.bridge.h3, language)}
             </h3>
             <p
@@ -673,11 +672,23 @@ export default function NoFilioque() {
               }}
             />
             <p
-              className="text-white text-lg italic text-center mt-6"
+              className="text-white text-lg italic mt-6 mb-8"
               dangerouslySetInnerHTML={{
                 __html: t(trans.bridge.p3, language),
               }}
             />
+            
+            {/* COMPLETE JOURNEY BUTTON */}
+            {onComplete && (
+              <Button 
+                onClick={onComplete}
+                size="lg"
+                className="bg-green-600 hover:bg-green-700 text-white font-bold py-6 px-8 rounded-full text-lg shadow-lg hover:shadow-green-900/50 transition-all duration-300 transform hover:scale-105"
+              >
+                <CheckCircle className="mr-2 w-6 h-6" />
+                Complete Journey
+              </Button>
+            )}
           </div>
         </div>
       </motion.div>

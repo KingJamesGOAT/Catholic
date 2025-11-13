@@ -42,9 +42,11 @@ export default function EarlyChurch() {
   };
 
   return (
-    <div className="min-h-screen bg-black pt-16 md:pt-24 pb-20 px-4">
-      <div className="container mx-auto max-w-6xl">
-        
+    // Removed px-4 from main wrapper to allow full-width elements
+    <div className="min-h-screen bg-black pt-16 md:pt-24 pb-20">
+      
+      {/* Main Menu Container - Centered with padding */}
+      <div className="container mx-auto max-w-6xl px-4">
         {/* Header */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -62,8 +64,7 @@ export default function EarlyChurch() {
           </p>
         </motion.div>
 
-        {/* --- MODIFICATION HERE --- */}
-        {/* Navigation Grid: Changed to 2 columns on mobile (default) and 3 on medium screens and up */}
+        {/* Navigation Grid */}
         <motion.div 
           className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 mb-16"
           initial={{ opacity: 0 }}
@@ -89,24 +90,16 @@ export default function EarlyChurch() {
                     : 'bg-gray-900/40 border-gray-800 hover:bg-gray-900/60 hover:border-gray-600'
                 }`}
               >
-                {/* Icon container: Made slightly smaller on mobile */}
                 <div className={`p-2.5 md:p-3 rounded-lg shrink-0 ${
                   isSelected ? 'bg-blue-600 text-white' : 'bg-gray-800 text-gray-400 group-hover:bg-gray-700 group-hover:text-gray-200'
                 }`}>
                   <Icon size={20} className="md:w-6 md:h-6" />
                 </div>
                 <div>
-                  {/* Text: Made slightly smaller on mobile */}
-                  
-                  
                   <h3 className={`font-bold text-sm md:text-lg mb-1 leading-tight ${isSelected ? 'text-white' : 'text-gray-200 group-hover:text-white'}`}>
-                    {/* Show short title on mobile, full title on desktop */}
                     <span className="md:hidden">{t(topic.shortTitle || topic.title, language)}</span>
                     <span className="hidden md:inline">{t(topic.title, language)}</span>
                   </h3>
-
-
-                  
                   <p className="text-xs md:text-sm text-gray-500">
                     {topic.quotes.length > 0 
                       ? `${topic.quotes.length} ${t(earlyChurchUI.quoteCount, language)}`
@@ -118,34 +111,39 @@ export default function EarlyChurch() {
             );
           })}
         </motion.div>
-        {/* --- END OF MODIFICATION --- */}
+      </div>
 
-
-        {/* Selected Content Display */}
-        <AnimatePresence mode="wait">
-          {selectedTopic && (
-            <motion.div
-              ref={contentRef}
-              key={selectedTopic.id}
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 40 }}
-              transition={{ duration: 0.5 }}
-              className="max-w-4xl mx-auto"
-            >
-              <div className="flex items-center gap-4 mb-8 sticky top-16 bg-black/95 py-4 z-10 border-b border-gray-800 md:static md:bg-transparent md:py-0 md:border-0">
+      {/* Selected Content Display - Full Width Wrapper */}
+      <AnimatePresence mode="wait">
+        {selectedTopic && (
+          <motion.div
+            ref={contentRef}
+            key={selectedTopic.id}
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 40 }}
+            transition={{ duration: 0.5 }}
+            className="w-full" // Full width container
+          >
+            {/* Sticky Header Bar - Full Screen Width */}
+            {/* bg-black/95 ensures it covers content as you scroll */}
+            <div className="sticky top-16 md:top-20 z-30 bg-black/95 backdrop-blur-sm border-b border-gray-800 w-full">
+              <div className="container mx-auto max-w-6xl px-4 py-4 flex items-center gap-4">
                 <button 
                   onClick={() => setSelectedTopicId(null)}
                   className="p-2 rounded-full bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white transition-colors shrink-0"
                 >
                   <ArrowLeft size={20} />
                 </button>
-                <h2 className="text-2xl md:text-3xl font-bold text-blue-400 leading-tight">
+                <h2 className="text-xl md:text-3xl font-bold text-blue-400 leading-tight line-clamp-1">
                   {t(selectedTopic.title, language)}
                 </h2>
               </div>
+            </div>
 
-              <div className="relative border-l-2 border-gray-800 ml-4 md:ml-8 space-y-8 md:space-y-12 pb-20">
+            {/* Content Body - Centered */}
+            <div className="container mx-auto max-w-4xl px-4 pt-8 md:pt-12 pb-20">
+              <div className="relative border-l-2 border-gray-800 ml-4 md:ml-8 space-y-8 md:space-y-12">
                 {selectedTopic.quotes.map((quote) => (
                   <div key={quote.id} className="relative pl-6 md:pl-12">
                     {/* Timeline Dot */}
@@ -189,11 +187,10 @@ export default function EarlyChurch() {
                   </div>
                 )}
               </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-      </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

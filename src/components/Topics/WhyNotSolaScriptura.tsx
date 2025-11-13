@@ -129,30 +129,30 @@ export default function WhyNotSolaScriptura() {
     t(trans.arg3.scriptureSupports.b3, language),
   ];
 
-  const arg2Tradition = [
-    {
-      quote: t(trans.arg2.a.quote, language),
-      source: t(trans.arg2.a.source, language),
-      points: [
-        t(trans.arg2.a.b1, language),
-        t(trans.arg2.a.b2, language),
-        t(trans.arg2.a.b3, language),
-      ],
-    },
-    {
-      quote: t(trans.arg2.b.quote, language),
-      source: t(trans.arg2.b.source, language),
-      points: [
-        t(trans.arg2.b.p1, language),
-        t(trans.arg2.b.b1, language),
-        t(trans.arg2.b.b2, language),
-        t(trans.arg2.b.b3, language),
-        t(trans.arg2.b.p2, language),
-      ],
-    },
-  ];
+  // --- Arg 2 Data Definitions ---
+  const arg2A = {
+    quote: t(trans.arg2.a.quote, language),
+    source: t(trans.arg2.a.source, language),
+    points: [
+      t(trans.arg2.a.b1, language),
+      t(trans.arg2.a.b2, language),
+      t(trans.arg2.a.b3, language),
+    ],
+  };
 
-  const arg2Authority = [
+  const arg2B = {
+    quote: t(trans.arg2.b.quote, language),
+    source: t(trans.arg2.b.source, language),
+    p1: t(trans.arg2.b.p1, language),
+    points: [
+      t(trans.arg2.b.b1, language),
+      t(trans.arg2.b.b2, language),
+      t(trans.arg2.b.b3, language),
+    ],
+    p2: t(trans.arg2.b.p2, language),
+  };
+
+  const arg2C = [
     {
       quote: t(trans.arg2.c.quote, language),
       source: t(trans.arg2.c.source, language),
@@ -163,12 +163,13 @@ export default function WhyNotSolaScriptura() {
       source: t(trans.arg2.c.source2, language),
       p1: t(trans.arg2.c.b1, language),
     },
-    {
-      quote: t(trans.arg2.d.quote, language),
-      source: t(trans.arg2.d.source, language),
-      p1: t(trans.arg2.d.p1, language),
-    },
   ];
+
+  const arg2D = {
+    quote: t(trans.arg2.d.quote, language),
+    source: t(trans.arg2.d.source, language),
+    p1: t(trans.arg2.d.p1, language),
+  };
 
   const arg2Interpretation = [
     {
@@ -197,6 +198,7 @@ export default function WhyNotSolaScriptura() {
     },
   ];
 
+  // --- Arg 1 Data Definitions (Required for Argument 1) ---
   const arg1Arbitrary = [
     t(trans.arg1.arbitrary.b1, language),
     t(trans.arg1.arbitrary.b2, language),
@@ -366,8 +368,6 @@ export default function WhyNotSolaScriptura() {
                     }}
                   />
                 </li>
-
-                
               </ul>
 
               <p className="text-gray-400 mt-4 italic text-sm md:text-base text-center">
@@ -1352,49 +1352,80 @@ export default function WhyNotSolaScriptura() {
           />
           <p>{t(trans.arg2.p2, language)}</p>
 
+          {/* SECTION A - 2 Thess 2:15 */}
           <div className="bg-green-900/10 border border-green-800 rounded-lg p-6">
             <h3 className="text-white mb-4">
               {t(trans.arg2.a.heading, language)}
             </h3>
-            {arg2Tradition.map((item, index) => (
-              <React.Fragment key={index}>
-                <div className="bg-gray-900/50 border-l-4 border-green-600 p-4 rounded-r-lg">
-                  <p className="text-gray-300 italic">
-                    &quot;{item.quote}&quot;
-                  </p>
-                  <p className="text-gray-500 text-right mt-2">
-                    — {item.source}
-                  </p>
-                </div>
-                <ul className="space-y-2 my-3 pl-5">
-                  {item.points.map((point, pIndex) => (
-                    <li
-                      key={pIndex}
-                      className="flex items-start gap-3"
-                    >
-                      <CheckCircle
-                        className="text-green-400 flex-shrink-0 mt-1"
-                        size={20}
-                      />
-                      <span
-                        dangerouslySetInnerHTML={{
-                          __html: point,
-                        }}
-                      />
-                    </li>
-                  ))}
-                </ul>
-              </React.Fragment>
-            ))}
+            <div className="bg-gray-900/50 border-l-4 border-green-600 p-4 rounded-r-lg">
+              <p className="text-gray-300 italic">
+                &quot;{arg2A.quote}&quot;
+              </p>
+              <p className="text-gray-500 text-right mt-2">
+                — {arg2A.source}
+              </p>
+            </div>
+            <ul className="space-y-2 my-3 pl-5">
+              {arg2A.points.map((point, pIndex) => (
+                <li
+                  key={pIndex}
+                  className="flex items-start gap-3"
+                >
+                  <CheckCircle
+                    className="text-green-400 flex-shrink-0 mt-1"
+                    size={20}
+                  />
+                  <span
+                    dangerouslySetInnerHTML={{ __html: point }}
+                  />
+                </li>
+              ))}
+            </ul>
           </div>
 
+          {/* SECTION B - 2 Timothy 2:2 */}
+          <div className="bg-blue-900/10 border border-blue-800 rounded-lg p-6">
+            <h3 className="text-white mb-4">
+              {t(trans.arg2.b.heading, language)}
+            </h3>
+            <div className="bg-gray-900/50 border-l-4 border-blue-600 p-4 rounded-r-lg">
+              <p className="text-gray-300 italic">
+                &quot;{arg2B.quote}&quot;
+              </p>
+              <p className="text-gray-500 text-right mt-2">
+                — {arg2B.source}
+              </p>
+            </div>
+            <p className="my-3 font-semibold text-white">
+              {arg2B.p1}
+            </p>
+            <ul className="space-y-2 my-3 pl-5">
+              {arg2B.points.map((point, pIndex) => (
+                <li
+                  key={pIndex}
+                  className="flex items-start gap-3"
+                >
+                  <ArrowRight
+                    className="text-blue-400 flex-shrink-0 mt-1"
+                    size={20}
+                  />
+                  <span
+                    dangerouslySetInnerHTML={{ __html: point }}
+                  />
+                </li>
+              ))}
+            </ul>
+            <p className="italic text-gray-400">{arg2B.p2}</p>
+          </div>
+
+          {/* SECTION C - Luke 10:16 & 1 Thess 2:13 */}
           <div className="bg-green-900/10 border border-green-800 rounded-lg p-6">
             <h3 className="text-white mb-4">
               {t(trans.arg2.c.heading, language)}
             </h3>
-            {arg2Authority.map((item, index) => (
+            {arg2C.map((item, index) => (
               <React.Fragment key={index}>
-                <div className="bg-gray-900/50 border-l-4 border-green-600 p-4 rounded-r-lg">
+                <div className="bg-gray-900/50 border-l-4 border-green-600 p-4 rounded-r-lg mt-4 first:mt-0">
                   <p className="text-gray-300 italic">
                     &quot;{item.quote}&quot;
                   </p>
@@ -1410,6 +1441,26 @@ export default function WhyNotSolaScriptura() {
             ))}
           </div>
 
+          {/* SECTION D - 1 Timothy 3:15 */}
+          <div className="bg-purple-900/10 border border-purple-800 rounded-lg p-6">
+            <h3 className="text-white mb-4">
+              {t(trans.arg2.d.heading, language)}
+            </h3>
+            <div className="bg-gray-900/50 border-l-4 border-purple-600 p-4 rounded-r-lg">
+              <p className="text-gray-300 italic">
+                &quot;{arg2D.quote}&quot;
+              </p>
+              <p className="text-gray-500 text-right mt-2">
+                — {arg2D.source}
+              </p>
+            </div>
+            <p
+              className="mt-4 text-white"
+              dangerouslySetInnerHTML={{ __html: arg2D.p1 }}
+            />
+          </div>
+
+          {/* SECTION E - Matthew 16 & 18 */}
           <div className="bg-green-900/10 border border-green-800 rounded-lg p-6">
             <h3 className="text-white mb-4">
               {t(trans.arg2.e.heading, language)}
@@ -1434,13 +1485,14 @@ export default function WhyNotSolaScriptura() {
             />
           </div>
 
+          {/* SECTION F - 2 Peter 1 & 3 */}
           <div className="bg-red-900/10 border border-red-800 rounded-lg p-6">
             <h3 className="text-white mb-4">
               {t(trans.arg2.f.heading, language)}
             </h3>
             {arg2Interpretation.map((item, index) => (
               <React.Fragment key={index}>
-                <div className="bg-gray-900/50 border-l-4 border-red-600 p-4 rounded-r-lg">
+                <div className="bg-gray-900/50 border-l-4 border-red-600 p-4 rounded-r-lg mt-4 first:mt-0">
                   <p className="text-gray-300 italic">
                     &quot;{item.quote}&quot;
                   </p>
@@ -1470,6 +1522,7 @@ export default function WhyNotSolaScriptura() {
             ))}
           </div>
 
+          {/* SECTION G - John 20 & 21 */}
           <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-6">
             <h3 className="text-white mb-4">
               {t(trans.arg2.g.heading, language)}

@@ -9,9 +9,9 @@ interface ProgressTrackerProps {
   total: number;
   completedTopics: Set<number>;
   isVisible: boolean;
-  onNavigate: (index: number) => void; // ADD THIS
-  onHoverStart: () => void; // ADD THIS
-  onHoverEnd: () => void;   // ADD THIS
+  onNavigate: (index: number) => void;
+  onHoverStart: () => void;
+  onHoverEnd: () => void;
 }
 
 export default function ProgressTracker({
@@ -19,32 +19,48 @@ export default function ProgressTracker({
   total,
   completedTopics,
   isVisible,
-  onNavigate, // ADD THIS
-  onHoverStart, // ADD THIS
-  onHoverEnd    // ADD THIS
+  onNavigate,
+  onHoverStart,
+  onHoverEnd
 }: ProgressTrackerProps) {
-  const progress = ((currentIndex + 1) / total) * 100;
+  // If currentIndex is -1, progress is 0%
+  const progress = Math.max(0, ((currentIndex + 1) / total) * 100);
   const completedCount = completedTopics.size;
   const { language } = useLanguage();
   const trans = translations;
+
+  // Logic to render status text based on whether the journey has started
+  const renderTopicStatus = () => {
+    if (currentIndex === -1) {
+      return (
+        <span className="text-sm text-gray-400">
+          {completedCount} {t(trans.progress.completed, language)}
+        </span>
+      );
+    }
+    return (
+      <span className="text-sm text-gray-400">
+        {completedCount} {t(trans.progress.completed, language)} • {t(trans.progress.topicOf, language)} {currentIndex + 1} {t(trans.progress.of, language)} {total}
+      </span>
+    );
+  };
 
   return (
     <motion.div
       animate={{ y: isVisible ? 0 : "-100%" }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className="fixed top-20 left-0 right-0 z-40"
-      onHoverStart={onHoverStart} // ADD THIS
-      onHoverEnd={onHoverEnd}     // ADD THIS
+      // Positioned to clear the Navbar: top-16 (mobile) / top-20 (desktop)
+      className="fixed top-16 md:top-20 left-0 right-0 z-40"
+      onHoverStart={onHoverStart}
+      onHoverEnd={onHoverEnd}
     >
       <div className="bg-black/95 backdrop-blur-sm border-b border-gray-800">
         <div className="container mx-auto px-4 py-4 pb-6">
-          {/* Progress Bar */}
+          {/* Progress Bar Line (Overall Progress) */}
           <div className="mb-4">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm text-gray-400">{t(trans.progress.yourProgress, language)}</span>
-              <span className="text-sm text-gray-400">
-                {completedCount} {t(trans.progress.completed, language)} • {t(trans.progress.topicOf, language)} {currentIndex + 1} {t(trans.progress.of, language)} {total}
-              </span>
+              {renderTopicStatus()}
             </div>
             <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
               <motion.div
@@ -56,7 +72,7 @@ export default function ProgressTracker({
             </div>
           </div>
 
-          {/* Desktop: Step Indicators */}
+          {/* Desktop: Step Indicators (Circles) */}
           <div className="hidden lg:flex items-start justify-between gap-2">
             {topics.map((topic, index) => {
               const isCompleted = completedTopics.has(index);
@@ -64,18 +80,16 @@ export default function ProgressTracker({
               const isPast = index < currentIndex;
               
               return (
-                // CHANGE div to button for click functionality
                 <button
                   key={topic.id}
-                  onClick={() => onNavigate(index)} // ADD THIS
-                  // ADD styling to make button act like a div and be clickable
+                  onClick={() => onNavigate(index)}
                   className="flex-1 flex flex-col items-center min-w-0 text-left bg-transparent border-none p-0 cursor-pointer group"
                 >
                   <div className="relative flex items-center justify-center w-full mb-3">
                     {/* Connecting Line */}
                     {index < topics.length - 1 && (
                       <div className={`absolute left-1/2 top-1/2 w-full h-0.5 -translate-y-1/2 ${
-                        isPast || isCurrent ? 'bg-blue-600' : 'bg-gray-700'
+                        isPast || (isCurrent && currentIndex !== -1) ? 'bg-blue-600' : 'bg-gray-700'
                       }`} />
                     )}
                     
@@ -100,31 +114,52 @@ export default function ProgressTracker({
                     </motion.div>
                   </div>
                   
-                  {/* Label - ADD group-hover styling */}
+                  {/* Topic Label */}
                   <span className={`text-xs text-center leading-tight px-1 transition-all duration-300 line-clamp-2 min-h-[2.5rem] flex items-center justify-center ${
                     isCurrent 
                       ? 'text-white font-medium' 
                       : isPast || isCompleted
-                      ? 'text-gray-500 group-hover:text-gray-300' // Make it light up on hover
-                      : 'text-gray-600 group-hover:text-gray-400' // Make it light up on hover
+                      ? 'text-gray-500 group-hover:text-gray-300'
+                      : 'text-gray-600 group-hover:text-gray-400'
                   }`}>
                     {t(trans.topicTitles[topic.id as keyof typeof trans.topicTitles], language)}
                   </span>
-                </button> // CHANGE to button
+                </button>
               );
             })}
           </div>
 
-          {/* Mobile: Simplified Progress */}
-          <div className="lg:hidden flex items-center gap-2">
-            {topics.map((_, index) => (
-              <div
-                key={index}
-                className={`h-1 flex-1 rounded-full transition-all duration-300 ${
-                  index <= currentIndex ? 'bg-blue-600' : 'bg-gray-700'
-                }`}
-              />
-            ))}
+          {/* Mobile: Interactive Simplified Progress Segments */}
+          <div className="lg:hidden flex items-center gap-1.5">
+            {topics.map((_, index) => {
+              const isCompleted = completedTopics.has(index);
+              const isCurrent = index === currentIndex;
+              const isPast = index < currentIndex;
+
+              // Determine color based on state
+              let colorClass = 'bg-gray-700 group-hover:bg-gray-600'; // Default (Future)
+
+              if (isCurrent) {
+                colorClass = 'bg-blue-600 group-hover:bg-blue-500'; // Current (Active)
+              } else if (isCompleted) {
+                colorClass = 'bg-green-600 group-hover:bg-green-500'; // Completed (Green)
+              } else if (isPast) {
+                colorClass = 'bg-blue-900 group-hover:bg-blue-800'; // Past but not marked completed (Dark Blue)
+              }
+
+              return (
+                <button
+                  key={index}
+                  onClick={() => onNavigate(index)}
+                  className="flex-1 h-8 flex items-center justify-center group cursor-pointer outline-none"
+                  aria-label={`Go to topic ${index + 1}`}
+                >
+                  <div
+                    className={`h-1 w-full rounded-full transition-all duration-300 ${colorClass}`}
+                  />
+                </button>
+              );
+            })}
           </div>
         </div>
       </div>

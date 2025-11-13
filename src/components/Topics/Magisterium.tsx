@@ -10,7 +10,6 @@ import {
   CheckCircle,
   AlertCircle,
   Crown,
-  Sparkles,
   ScrollText,
   Award,
 } from "lucide-react";
@@ -521,7 +520,7 @@ export default function Magisterium() {
           </div>
         </div>
 
-        {/* 4. Divine Cooperation */}
+        {/* 4. Divine Cooperation - ICON REMOVED */}
         <div className="space-y-6 text-gray-300 leading-relaxed mb-12">
           <h3 className="text-white">
             {t(trans.scholastic.cooperation.h3, language)}
@@ -542,12 +541,7 @@ export default function Magisterium() {
                 }}
                 className="bg-gradient-to-b from-purple-900/30 to-purple-900/10 border border-purple-800 rounded-lg p-6"
               >
-                <div className="w-14 h-14 rounded-full bg-purple-900/50 flex items-center justify-center border border-purple-700 mb-4 mx-auto">
-                  <Sparkles
-                    className="text-purple-300"
-                    size={28}
-                  />
-                </div>
+                {/* Icon container removed here */}
                 <h4 className="text-white text-center mb-3">
                   {coop.title}
                 </h4>

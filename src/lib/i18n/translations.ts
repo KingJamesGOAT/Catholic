@@ -62,6 +62,42 @@ export const translations = {
       de: "Wählen Sie ein Thema zum Erkunden",
     },
   },
+  
+  // --- NEW HOME SECTION ---
+  home: {
+    title: {
+      en: "Begin Your Journey into the <span class='text-blue-500'>Catholic Faith</span>",
+      fr: "Commencez Votre Voyage dans la <span class='text-blue-500'>Foi Catholique</span>",
+      es: "Comienza Tu Viaje hacia la <span class='text-blue-500'>Fe Católica</span>",
+      de: "Beginnen Sie Ihre Reise in den <span class='text-blue-500'>Katholischen Glauben</span>",
+    },
+    quote: {
+      en: "You will know how people ought to conduct themselves in God’s household, which is the <span class='text-blue-400'>church</span> of the living God, <span class='text-blue-400'>the pillar and foundation of the truth.</span>",
+      fr: "Tu sauras comment il faut se conduire dans la maison de Dieu, qui est l'<span class='text-blue-400'>Église</span> du Dieu vivant, <span class='text-blue-400'>la colonne et l'appui de la vérité.</span>",
+      es: "Para que sepas cómo debes conducirte en la casa de Dios, que es la <span class='text-blue-400'>iglesia</span> del Dios viviente, <span class='text-blue-400'>columna y baluarte de la verdad.</span>",
+      de: "Damit du weißt, wie man sich verhalten soll im Hause Gottes, das ist die <span class='text-blue-400'>Gemeinde</span> des lebendigen Gottes, <span class='text-blue-400'>ein Pfeiler und eine Grundfeste der Wahrheit.</span>",
+    },
+    quoteSource: {
+      en: "1 Timothy 3:15",
+      fr: "1 Timothée 3:15",
+      es: "1 Timoteo 3:15",
+      de: "1. Timotheus 3:15",
+    },
+    description: {
+      en: "This apologetics website offers a clear and structured exploration of the fundamental arguments for the Catholic Church. While not exhaustive, it focuses on essential topics regarding authority, history, and Scripture. It is designed to help Christians examine the historical and theological case for Catholicism and reflect deeply on the fullness of the faith.",
+      fr: "Ce site d'apologétique offre une exploration claire et structurée des arguments fondamentaux en faveur de l'Église catholique. Bien que non exhaustive, elle se concentre sur des sujets essentiels concernant l'autorité, l'histoire et l'Écriture. Elle est conçue pour aider les chrétiens à examiner le cas historique et théologique du catholicisme et à réfléchir profondément à la plénitude de la foi.",
+      es: "Este sitio web de apologética ofrece una exploración clara y estructurada de los argumentos fundamentales a favor de la Iglesia Católica. Aunque no es exhaustiva, se centra en temas esenciales sobre autoridad, historia y Escritura. Está diseñada para ayudar a los cristianos a examinar el caso histórico y teológico del catolicismo y reflexionar profundamente sobre la plenitud de la fe.",
+      de: "Diese Apologetik-Website bietet eine klare und strukturierte Untersuchung der grundlegenden Argumente für die katholische Kirche. Obwohl nicht erschöpfend, konzentriert sie sich auf wesentliche Themen in Bezug auf Autorität, Geschichte und Schrift. Sie soll Christen helfen, den historischen und theologischen Fall für den Katholizismus zu prüfen und tief über die Fülle des Glaubens nachzudenken.",
+    },
+    startJourney: {
+      en: "Start the Journey",
+      fr: "Commencer le Voyage",
+      es: "Comenzar el Viaje",
+      de: "Die Reise Beginnen",
+    },
+  },
+  
+
 
   // Progress & Navigation
   progress: {
@@ -5199,10 +5235,10 @@ export const translations = {
     },
     visual: {
       h3: {
-        en: "The Magisterium: A Visual Summary",
-        fr: "Le Magistère : Un Résumé Visuel",
-        es: "El Magisterio: Un Resumen Visual",
-        de: "Das Lehramt: Eine Visuelle Zusammenfassung",
+        en: "The Magisterium Summary",
+        fr: "Résumé du Magistère",
+        es: "Resumen del Magisterio",
+        de: "Zusammenfassung des Lehramtes",
       },
       c1: {
         title: {

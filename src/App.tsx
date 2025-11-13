@@ -4,14 +4,14 @@ import Navigation from "./components/Journey/Navigation";
 import ProgressTracker from "./components/Journey/ProgressTracker";
 import TopicTransition from "./components/Journey/TopicTransition";
 import EarlyChurch from "./components/EarlyChurch";
+import Home from "./components/Home";
 import { Toaster } from "./components/ui/sonner";
 import {
   LanguageProvider,
   useLanguage,
 } from "./lib/i18n/LanguageContext";
 import { translations, t } from "./lib/i18n/translations";
-import LanguageSelector from "./components/LanguageSelector";
-import { cn } from "./components/ui/utils"; // ADDED cn import
+import { cn } from "./components/ui/utils";
 
 // Topic Components
 import ExistenceOfGod from "./components/Topics/ExistenceOfGod";
@@ -29,11 +29,16 @@ import Magisterium from "./components/Topics/Magisterium";
 import NoFilioque from "./components/Topics/NoFilioque";
 import ScienceAndMiracles from "./components/ScienceAndMiracles";
 
+// Define prop types for Topic Components to avoid TS errors
+type TopicComponentProps = {
+  onComplete?: () => void;
+};
+
 export interface Topic {
   id: string;
   title: string;
   shortTitle: string;
-  component: React.ComponentType;
+  component: React.ComponentType<TopicComponentProps>;
   transition?: string;
 }
 
@@ -146,24 +151,24 @@ export const topics: Topic[] = [
 function AppContent() {
   const [currentTopicIndex, setCurrentTopicIndex] = useState(0);
   const [showTransition, setShowTransition] = useState(false);
-  const [direction, setDirection] = useState<
-    "forward" | "backward"
-  >("forward");
-  const [completedTopics, setCompletedTopics] = useState<
-    Set<number>
-  >(new Set());
+  const [direction, setDirection] = useState<"forward" | "backward">("forward");
+  const [completedTopics, setCompletedTopics] = useState<Set<number>>(new Set());
+  
+  // State for Page Routing
+  const [showHome, setShowHome] = useState(true);
   const [showEarlyChurch, setShowEarlyChurch] = useState(false);
   const [showScience, setShowScience] = useState(false);
+  
   const { language } = useLanguage();
   const trans = translations;
 
-  const [showOnLoad, setShowOnLoad] = useState(true);
   const [isNavHovering, setIsNavHovering] = useState(false);
-  const [isProgressHovering, setIsProgressHovering] =
-    useState(false);
+  const [isProgressHovering, setIsProgressHovering] = useState(false);
 
-  // Progress tracker visibility is determined by the main journey state
-  const isProgressVisible = !(showEarlyChurch || showScience) && (showOnLoad || isNavHovering || isProgressHovering);
+  // Progress tracker visibility logic
+  const isProgressVisible = 
+    !(showEarlyChurch || showScience) && 
+    (showHome || isNavHovering || isProgressHovering);
 
   useEffect(() => {
     const saved = localStorage.getItem("journey-progress");
@@ -173,22 +178,6 @@ function AppContent() {
       setCompletedTopics(new Set(completed));
     }
   }, []);
-
-  useEffect(() => {
-    // Only show the welcome overlay when returning to the main journey
-    if (showEarlyChurch || showScience) {
-      setShowOnLoad(false);
-      return;
-    }
-
-    setShowOnLoad(true);
-
-    const timer = setTimeout(() => {
-      setShowOnLoad(false);
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, [currentTopicIndex, showTransition, showEarlyChurch, showScience]);
 
   useEffect(() => {
     localStorage.setItem(
@@ -201,35 +190,35 @@ function AppContent() {
   }, [currentTopicIndex, completedTopics]);
 
   const goToTopic = (index: number) => {
-    // Navigating back to journey from special page
+    setShowHome(false);
     setShowEarlyChurch(false);
     setShowScience(false);
     
-    if (index === currentTopicIndex) return;
+    if (index === currentTopicIndex) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+    }
 
-    setDirection(
-      index > currentTopicIndex ? "forward" : "backward",
-    );
+    setDirection(index > currentTopicIndex ? "forward" : "backward");
 
     if (index > currentTopicIndex) {
-      setCompletedTopics(
-        (prev) => new Set([...prev, currentTopicIndex]),
-      );
+      setCompletedTopics((prev) => new Set([...prev, currentTopicIndex]));
     }
 
     setCurrentTopicIndex(index);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const markCurrentTopicComplete = () => {
+    setCompletedTopics((prev) => new Set([...prev, currentTopicIndex]));
+  };
+
   const nextTopic = () => {
+    // Always mark current as complete when clicking Next/Complete
+    markCurrentTopicComplete();
+
     if (currentTopicIndex < topics.length - 1) {
-      const currentTopic = topics[currentTopicIndex];
-
-      setCompletedTopics(
-        (prev) => new Set([...prev, currentTopicIndex]),
-      );
-
-      if (currentTopic.transition) {
+      if (topics[currentTopicIndex].transition) {
         setShowTransition(true);
         setTimeout(() => {
           setShowTransition(false);
@@ -247,34 +236,39 @@ function AppContent() {
     }
   };
 
-  const CurrentTopicComponent =
-    topics[currentTopicIndex].component;
+  const CurrentTopicComponent = topics[currentTopicIndex].component;
 
-  // Click handler for Early Church
+  // Navigation Handlers
   const handleEarlyChurchClick = () => {
+    setShowHome(false);
     setShowScience(false);
     setShowEarlyChurch(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // Click handler for Science & Miracles
   const handleScienceClick = () => {
+    setShowHome(false);
     setShowEarlyChurch(false);
     setShowScience(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // Click handler to return to main journey (via logo or 'All Topics')
-  const handleBackToJourney = () => {
+  const handleBackToHome = () => {
     setShowEarlyChurch(false);
     setShowScience(false);
+    setShowHome(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const startJourney = () => {
+    setShowHome(false);
+    goToTopic(currentTopicIndex);
   };
 
   return (
     <div className="bg-black text-gray-100 min-h-screen">
       
-      {/* UNIFIED NAVIGATION BAR - ALWAYS RENDERED */}
+      {/* UNIFIED NAVIGATION BAR */}
       <Navigation
         currentTopicIndex={currentTopicIndex}
         onNavigate={goToTopic}
@@ -283,24 +277,33 @@ function AppContent() {
         onScienceClick={handleScienceClick}
         onHoverStart={() => setIsNavHovering(true)}
         onHoverEnd={() => setIsNavHovering(false)}
-        // NEW PROPS to tell Navigation the current view state
-        isSpecialPage={showEarlyChurch || showScience}
+        isSpecialPage={showEarlyChurch || showScience || showHome}
         showEarlyChurch={showEarlyChurch}
         showScience={showScience}
-        onLogoClick={handleBackToJourney} // Pass the default logo behavior
+        onLogoClick={handleBackToHome}
       />
       
-      {/* Content Area */}
-      {showEarlyChurch || showScience ? (
-        // Special Page View
+      {/* CONTENT ROUTER */}
+      {showHome ? (
+        <>
+          <ProgressTracker
+            currentIndex={-1} 
+            total={topics.length}
+            completedTopics={completedTopics}
+            isVisible={true} 
+            onNavigate={goToTopic}
+            onHoverStart={() => setIsProgressHovering(true)}
+            onHoverEnd={() => setIsProgressHovering(false)}
+          />
+          <Home onStart={startJourney} />
+        </>
+      ) : showEarlyChurch || showScience ? (
         <>
           {showEarlyChurch && <EarlyChurch />}
           {showScience && <ScienceAndMiracles />}
         </>
       ) : (
-        // Main Journey View
         <>
-          {/* Progress Tracker remains conditionally visible below the main navigation */}
           <ProgressTracker
             currentIndex={currentTopicIndex}
             total={topics.length}
@@ -328,9 +331,6 @@ function AppContent() {
                 }
               />
             ) : (
-
-
-          
               <motion.main
                 key={currentTopicIndex}
                 initial={{
@@ -340,9 +340,7 @@ function AppContent() {
                 animate={{
                   opacity: 1,
                   x: 0,
-                  paddingTop: isProgressVisible
-                    ? "256px"
-                    : "80px",
+                  paddingTop: isProgressVisible ? "200px" : "80px", 
                 }}
                 exit={{
                   opacity: 0,
@@ -357,13 +355,13 @@ function AppContent() {
                   },
                 }}
               >
-                <CurrentTopicComponent />
+                {/* PASS ONCOMPLETE PROP HERE */}
+                <CurrentTopicComponent onComplete={markCurrentTopicComplete} />
 
-                {/* Next/Previous Buttons - Optimized for Mobile */}
+                {/* Next/Previous Buttons */}
                 <div className="container mx-auto px-4 py-16 max-w-4xl">
                   <div className="flex flex-col md:flex-row items-center justify-between border-t border-gray-800 pt-8 gap-6 md:gap-4">
                     
-                    {/* Topic Counter (Mobile: Top, Desktop: Middle) */}
                     <div className="text-center text-gray-500 order-1 md:order-2 text-sm md:text-base">
                       {t(trans.progress.topicOf, language)}{" "}
                       {currentTopicIndex + 1}{" "}
@@ -371,9 +369,6 @@ function AppContent() {
                       {topics.length}
                     </div>
 
-                    {/* Buttons Wrapper (Mobile: Bottom Row, Desktop: Spread) */}
-                    {/* 'md:contents' allows children to be direct flex items of parent on desktop */}
-                    {/* justify-between pushes buttons to edges on mobile */}
                     <div className="flex w-full md:w-auto justify-between gap-4 order-2 md:contents">
                       <button
                         onClick={previousTopic}
@@ -389,14 +384,8 @@ function AppContent() {
 
                       <button
                         onClick={nextTopic}
-                        disabled={
-                          currentTopicIndex === topics.length - 1
-                        }
-                        className={`px-6 py-3 rounded-lg transition-all duration-300 md:order-3 ${
-                          currentTopicIndex === topics.length - 1
-                            ? "bg-gray-900 text-gray-600 cursor-not-allowed"
-                            : "bg-white text-black hover:bg-gray-200"
-                        }`}
+                        // Removed "disabled" check for last topic so it can still mark as complete
+                        className="px-6 py-3 rounded-lg transition-all duration-300 md:order-3 bg-white text-black hover:bg-gray-200"
                       >
                         {currentTopicIndex === topics.length - 1
                           ? t(trans.progress.complete, language)
@@ -406,9 +395,6 @@ function AppContent() {
                   </div>
                 </div>
               </motion.main>
-
-
-          
             )}
           </AnimatePresence>
         </>
