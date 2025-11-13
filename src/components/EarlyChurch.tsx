@@ -42,7 +42,7 @@ export default function EarlyChurch() {
   };
 
   return (
-    <div className="min-h-screen bg-black pt-20 md:pt-24 pb-20 px-4">
+    <div className="min-h-screen bg-black pt-16 md:pt-24 pb-20 px-4">
       <div className="container mx-auto max-w-6xl">
         
         {/* Header */}
@@ -62,9 +62,10 @@ export default function EarlyChurch() {
           </p>
         </motion.div>
 
-        {/* Navigation Grid */}
+        {/* --- MODIFICATION HERE --- */}
+        {/* Navigation Grid: Changed to 2 columns on mobile (default) and 3 on medium screens and up */}
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 mb-16"
+          className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 mb-16"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
@@ -82,21 +83,30 @@ export default function EarlyChurch() {
                 }}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className={`p-4 md:p-6 rounded-xl border text-left transition-all duration-300 group flex items-start gap-4 ${
+                className={`p-4 md:p-6 rounded-xl border text-left transition-all duration-300 group flex items-start gap-3 ${
                   isSelected 
                     ? 'bg-blue-900/30 border-blue-500 shadow-[0_0_30px_-10px_rgba(59,130,246,0.5)]' 
                     : 'bg-gray-900/40 border-gray-800 hover:bg-gray-900/60 hover:border-gray-600'
                 }`}
               >
-                <div className={`p-3 rounded-lg shrink-0 ${
+                {/* Icon container: Made slightly smaller on mobile */}
+                <div className={`p-2.5 md:p-3 rounded-lg shrink-0 ${
                   isSelected ? 'bg-blue-600 text-white' : 'bg-gray-800 text-gray-400 group-hover:bg-gray-700 group-hover:text-gray-200'
                 }`}>
-                  <Icon size={24} />
+                  <Icon size={20} className="md:w-6 md:h-6" />
                 </div>
                 <div>
-                  <h3 className={`font-bold text-base md:text-lg mb-1 leading-tight ${isSelected ? 'text-white' : 'text-gray-200 group-hover:text-white'}`}>
-                    {t(topic.title, language)}
+                  {/* Text: Made slightly smaller on mobile */}
+                  
+                  
+                  <h3 className={`font-bold text-sm md:text-lg mb-1 leading-tight ${isSelected ? 'text-white' : 'text-gray-200 group-hover:text-white'}`}>
+                    {/* Show short title on mobile, full title on desktop */}
+                    <span className="md:hidden">{t(topic.shortTitle || topic.title, language)}</span>
+                    <span className="hidden md:inline">{t(topic.title, language)}</span>
                   </h3>
+
+
+                  
                   <p className="text-xs md:text-sm text-gray-500">
                     {topic.quotes.length > 0 
                       ? `${topic.quotes.length} ${t(earlyChurchUI.quoteCount, language)}`
@@ -108,6 +118,8 @@ export default function EarlyChurch() {
             );
           })}
         </motion.div>
+        {/* --- END OF MODIFICATION --- */}
+
 
         {/* Selected Content Display */}
         <AnimatePresence mode="wait">
@@ -121,7 +133,7 @@ export default function EarlyChurch() {
               transition={{ duration: 0.5 }}
               className="max-w-4xl mx-auto"
             >
-              <div className="flex items-center gap-4 mb-8 sticky top-20 bg-black/95 py-4 z-10 border-b border-gray-800 md:static md:bg-transparent md:py-0 md:border-0">
+              <div className="flex items-center gap-4 mb-8 sticky top-16 bg-black/95 py-4 z-10 border-b border-gray-800 md:static md:bg-transparent md:py-0 md:border-0">
                 <button 
                   onClick={() => setSelectedTopicId(null)}
                   className="p-2 rounded-full bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white transition-colors shrink-0"

@@ -12,6 +12,7 @@ export interface EarlyChurchQuote {
 export interface EarlyChurchTopic {
   id: string;
   title: { en: string; fr: string; es: string; de: string };
+  shortTitle?: { en: string; fr: string; es: string; de: string }; // ADD THIS LINE
   icon: string;
   quotes: EarlyChurchQuote[];
 }
@@ -25,6 +26,15 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
       es: "La Iglesia Católica y la Fe en los Padres de la Iglesia",
       de: "Die Katholische Kirche und der Glaube bei den Kirchenvätern",
     },
+
+    shortTitle: {
+      en: "Faith & Church Fathers",
+      fr: "Foi et Pères de l'Église",
+      es: "Fe y Padres",
+      de: "Glaube und Kirchenväter"
+    },
+
+    
     icon: "Church",
     quotes: [
       {
@@ -359,6 +369,12 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
       es: "El Canon de las Escrituras",
       de: "Der Kanon der Heiligen Schrift",
     },
+    shortTitle: {
+      en: "Canon of Scripture",
+      fr: "Canon de l'Écriture",
+      es: "Canon de Escrituras",
+      de: "Kanon der Schrift"
+    },
     icon: "BookOpen",
     quotes: [
       {
@@ -647,6 +663,12 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
       es: "La Tradición Apostólica",
       de: "Apostolische Tradition",
     },
+    shortTitle: {
+      en: "Apostolic Tradition",
+      fr: "Tradition Apostolique",
+      es: "Tradición Apostólica",
+      de: "Apostol. Tradition"
+    },
     icon: "ScrollText",
     quotes: [
       {
@@ -912,6 +934,12 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
       fr: "La Succession Apostolique",
       es: "La Sucesión Apostólica",
       de: "Apostolische Sukzession",
+    },
+    shortTitle: {
+      en: "Apostolic Succession",
+      fr: "Succession Apostolique",
+      es: "Sucesión Apostólica",
+      de: "Apostol. Sukzession"
     },
     icon: "Users",
     quotes: [
@@ -1317,6 +1345,12 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
       es: "El Papado y la Invencibilidad de la Iglesia",
       de: "Das Papsttum und die Unbesiegbarkeit der Kirche",
     },
+    shortTitle: {
+      en: "The Papacy",
+      fr: "La Papauté",
+      es: "El Papado",
+      de: "Das Papsttum"
+    },
     icon: "Key",
     quotes: [
       {
@@ -1608,6 +1642,12 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
       es: "Santa María, Madre de Dios",
       de: "Heilige Maria, Mutter Gottes"
     },
+    shortTitle: {
+      en: "Saint Mary",
+      fr: "Sainte Marie",
+      es: "Santa María",
+      de: "Hl. Maria"
+    },
     icon: "Sparkles",
     quotes: [
       {
@@ -1857,6 +1897,12 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
       fr: "Péché Mortel : Les Chrétiens Peuvent Perdre Leur Salut",
       es: "Pecado Mortal: Los Cristianos Pueden Perder Su Salvación",
       de: "Todsünde: Christen Können Ihr Heil Verlieren"
+    },
+    shortTitle: {
+      en: "Mortal Sin",
+      fr: "Péché Mortel",
+      es: "Pecado Mortal",
+      de: "Todsünde"
     },
     icon: "AlertCircle",
     quotes: [
@@ -2133,6 +2179,12 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
       es: "La Comunión de los Santos: Intercesión y Reliquias",
       de: "Die Gemeinschaft der Heiligen: Fürbitte und Reliquien"
     },
+    shortTitle: {
+      en: "Communion of Saints",
+      fr: "Communion des Saints",
+      es: "Comunión de Santos",
+      de: "Gemeinschaft d. Heiligen"
+    },
     icon: "Users",
     quotes: [
       {
@@ -2237,6 +2289,12 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
       fr: "Le Purgatoire",
       es: "El Purgatorio",
       de: "Das Fegefeuer",
+    },
+    shortTitle: {
+      en: "Purgatory",
+      fr: "Le Purgatoire",
+      es: "El Purgatorio",
+      de: "Fegefeuer"
     },
     icon: "Flame",
     quotes: [
