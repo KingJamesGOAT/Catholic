@@ -962,9 +962,6 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
         },
         sourceReference: "Letter",
       },
-
-
-      
     ],
   },
   {
@@ -983,7 +980,6 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
     },
     icon: "BookOpen",
     quotes: [
-      
       {
         id: "didache-canon",
         author: {
@@ -1007,8 +1003,7 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
         },
         sourceReference: "Ch. 4, §5 (Sirach 4:31 & 4:5)",
       },
-      
-      
+
       {
         id: "barnabas-letter",
         author: {
@@ -2262,7 +2257,6 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
         sourceReference: "§21",
       },
 
-      
       {
         id: "tertullian-prescription-22",
         author: {
@@ -2747,7 +2741,7 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
         },
         sourceReference: "§17",
       },
-      
+
       {
         id: "cyprian-letter-75",
         author: {
@@ -2923,7 +2917,7 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
           es: "La Demostración Evangélica",
           de: "Der Beweis des Evangeliums",
         },
-        date: "after 314 AD",
+        date: "c. 314 AD",
         text: {
           en: "...or that Peter, the apostle and disciple who was chief of them all, denied Him thrice...",
           fr: "...ou que Pierre, l'apôtre et disciple qui était le chef de tous, L'a renié trois fois...",
@@ -2932,10 +2926,6 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
         },
         sourceReference: "Book 3, Ch. 5",
       },
-      
-
-
-      
     ],
   },
 
@@ -3802,7 +3792,6 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
         },
         sourceReference: "Book 21, Ch. 25",
       },
-      
     ],
   },
 
@@ -3822,8 +3811,6 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
     },
     icon: "Users",
     quotes: [
-      
-      
       {
         id: "hermas-angel-intercession",
         author: {
@@ -3847,7 +3834,7 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
         },
         sourceReference: "Book 3, Similitude 5, Ch. 4",
       },
-      
+
       {
         id: "clement-alex-stromata-7-12",
         author: {
@@ -4033,7 +4020,7 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
         },
         sourceReference: "Christian Inscriptions",
       },
-      
+
       {
         id: "cyprian-letter-56",
         author: {
@@ -4104,7 +4091,6 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
         },
         sourceReference: "Rylands Papyrus 470",
       },
-      
     ],
   },
 
@@ -4124,7 +4110,6 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
     },
     icon: "Flame",
     quotes: [
-      
       {
         id: "epitaph-agape",
         author: {
@@ -4194,8 +4179,7 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
         },
         sourceReference: "Inscription",
       },
-      
-      
+
       {
         id: "perpetua-felicity-2",
         author: {
