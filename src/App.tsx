@@ -12,6 +12,7 @@ import {
 } from "./lib/i18n/LanguageContext";
 import { translations, t } from "./lib/i18n/translations";
 import { cn } from "./components/ui/utils";
+import { useIsMobile } from "./components/ui/use-mobile"; // Added import
 
 // Topic Components
 import ExistenceOfGod from "./components/Topics/ExistenceOfGod";
@@ -161,14 +162,16 @@ function AppContent() {
   
   const { language } = useLanguage();
   const trans = translations;
+  const isMobile = useIsMobile(); // Detect mobile device
 
   const [isNavHovering, setIsNavHovering] = useState(false);
   const [isProgressHovering, setIsProgressHovering] = useState(false);
 
   // Progress tracker visibility logic
+  // MODIFIED: If isMobile is true, always show tracker (unless on EarlyChurch/Science pages)
   const isProgressVisible = 
     !(showEarlyChurch || showScience) && 
-    (showHome || isNavHovering || isProgressHovering);
+    (isMobile || showHome || isNavHovering || isProgressHovering);
 
   useEffect(() => {
     const saved = localStorage.getItem("journey-progress");
@@ -340,6 +343,7 @@ function AppContent() {
                 animate={{
                   opacity: 1,
                   x: 0,
+                  // Adjust padding based on whether the progress bar is visible to prevent overlap
                   paddingTop: isProgressVisible ? "200px" : "80px", 
                 }}
                 exit={{
@@ -384,7 +388,6 @@ function AppContent() {
 
                       <button
                         onClick={nextTopic}
-                        // Removed "disabled" check for last topic so it can still mark as complete
                         className="px-6 py-3 rounded-lg transition-all duration-300 md:order-3 bg-white text-black hover:bg-gray-200"
                       >
                         {currentTopicIndex === topics.length - 1

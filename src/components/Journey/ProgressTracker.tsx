@@ -56,8 +56,8 @@ export default function ProgressTracker({
     >
       <div className="bg-black/95 backdrop-blur-sm border-b border-gray-800">
         <div className="container mx-auto px-4 py-4 pb-6">
-          {/* Progress Bar Line (Overall Progress) */}
-          <div className="mb-4">
+          {/* Progress Bar Line (Overall Progress) - HIDDEN ON MOBILE */}
+          <div className="hidden md:block mb-4">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm text-gray-400">{t(trans.progress.yourProgress, language)}</span>
               {renderTopicStatus()}
@@ -72,7 +72,7 @@ export default function ProgressTracker({
             </div>
           </div>
 
-          {/* Desktop: Step Indicators (Circles) */}
+          {/* Desktop: Step Indicators (Circles) - Hidden on mobile */}
           <div className="hidden lg:flex items-start justify-between gap-2">
             {topics.map((topic, index) => {
               const isCompleted = completedTopics.has(index);
@@ -129,7 +129,7 @@ export default function ProgressTracker({
             })}
           </div>
 
-          {/* Mobile: Interactive Simplified Progress Segments */}
+          {/* Mobile: Interactive Simplified Progress Segments - Visible ONLY on mobile/tablet */}
           <div className="lg:hidden flex items-center gap-1.5">
             {topics.map((_, index) => {
               const isCompleted = completedTopics.has(index);

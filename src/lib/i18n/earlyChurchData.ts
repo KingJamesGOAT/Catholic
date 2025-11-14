@@ -26,17 +26,17 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
   {
     id: "faith-and-church",
     title: {
-      en: "The Catholic Church and Faith in the Church Fathers",
-      fr: "L'Église Catholique et la Foi chez les Pères de l'Église",
-      es: "La Iglesia Católica y la Fe en los Padres de la Iglesia",
-      de: "Die Katholische Kirche und der Glaube bei den Kirchenvätern",
+      en: "The Catholicity of the Church",
+      fr: "La Catholicité de l'Église",
+      es: "La Catolicidad de la Iglesia",
+      de: "Die Katholizität der Kirche",
     },
 
     shortTitle: {
-      en: "Faith & Church Fathers",
-      fr: "Foi et Pères de l'Église",
-      es: "Fe y Padres",
-      de: "Glaube und Kirchenväter",
+      en: "Catholicity",
+      fr: "Catholicité",
+      es: "Catolicidad",
+      de: "Katholizität",
     },
 
     icon: "Church",
@@ -248,6 +248,31 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
         },
         sourceReference: "Ch. 30",
       },
+
+      {
+        id: "caius-fragments",
+        author: {
+          en: "Caius the Presbyter",
+          fr: "Caius le Prêtre",
+          es: "Cayo el Presbítero",
+          de: "Caius der Presbyter",
+        },
+        work: {
+          en: "Fragments",
+          fr: "Fragments",
+          es: "Fragmentos",
+          de: "Fragmente",
+        },
+        date: "c. 200 AD",
+        text: {
+          en: "He wrote, besides these, one to Philemon, and one to Titus, and two to Timothy... yet these are hallowed in the esteem of the Catholic Church, and in the regulation of ecclesiastical discipline... and there are also several others which cannot be received into the Catholic Church, for it is not suitable for gall to be mingled with honey.",
+          fr: "Il a écrit, outre celles-ci, une à Philémon, une à Tite, et deux à Timothée... pourtant celles-ci sont sanctifiées dans l'estime de l'Église catholique, et dans la régulation de la discipline ecclésiastique... et il y en a aussi plusieurs autres qui ne peuvent être reçues dans l'Église catholique, car il ne convient pas que le fiel soit mêlé au miel.",
+          es: "Escribió, además de estas, una a Filemón, una a Tito y dos a Timoteo... sin embargo, estas son santificadas en la estima de la Iglesia Católica y en la regulación de la disciplina eclesiástica... y hay también varias otras que no pueden ser recibidas en la Iglesia Católica, pues no conviene que la hiel se mezcle con la miel.",
+          de: "Er schrieb außer diesen eine an Philemon und eine an Titus und zwei an Timotheus... doch diese sind in der Achtung der katholischen Kirche und in der Regelung der kirchlichen Disziplin geheiligt... und es gibt auch noch einige andere, die nicht in die katholische Kirche aufgenommen werden können, denn es ziemt sich nicht, Galle mit Honig zu vermischen.",
+        },
+        sourceReference: "§3",
+      },
+
       {
         id: "tertullian-marcion-3",
         author: {
@@ -387,29 +412,7 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
         },
         sourceReference: "Book 9, Ch. 7",
       },
-      {
-        id: "caius-fragments",
-        author: {
-          en: "Caius the Presbyter",
-          fr: "Caius le Prêtre",
-          es: "Cayo el Presbítero",
-          de: "Caius der Presbyter",
-        },
-        work: {
-          en: "Fragments",
-          fr: "Fragments",
-          es: "Fragmentos",
-          de: "Fragmente",
-        },
-        date: "c. 200 AD",
-        text: {
-          en: "He wrote, besides these, one to Philemon, and one to Titus, and two to Timothy... yet these are hallowed in the esteem of the Catholic Church, and in the regulation of ecclesiastical discipline... and there are also several others which cannot be received into the Catholic Church, for it is not suitable for gall to be mingled with honey.",
-          fr: "Il a écrit, outre celles-ci, une à Philémon, une à Tite, et deux à Timothée... pourtant celles-ci sont sanctifiées dans l'estime de l'Église catholique, et dans la régulation de la discipline ecclésiastique... et il y en a aussi plusieurs autres qui ne peuvent être reçues dans l'Église catholique, car il ne convient pas que le fiel soit mêlé au miel.",
-          es: "Escribió, además de estas, una a Filemón, una a Tito y dos a Timoteo... sin embargo, estas son santificadas en la estima de la Iglesia Católica y en la regulación de la disciplina eclesiástica... y hay también varias otras que no pueden ser recibidas en la Iglesia Católica, pues no conviene que la hiel se mezcle con la miel.",
-          de: "Er schrieb außer diesen eine an Philemon und eine an Titus und zwei an Timotheus... doch diese sind in der Achtung der katholischen Kirche und in der Regelung der kirchlichen Disziplin geheiligt... und es gibt auch noch einige andere, die nicht in die katholische Kirche aufgenommen werden können, denn es ziemt sich nicht, Galle mit Honig zu vermischen.",
-        },
-        sourceReference: "§3",
-      },
+
       {
         id: "asterius-urbanus",
         author: {
@@ -433,29 +436,7 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
         },
         sourceReference: "Ch. 2",
       },
-      {
-        id: "pope-cornelius-45",
-        author: {
-          en: "Saint Pope Cornelius",
-          fr: "Saint Pape Corneille",
-          es: "San Papa Cornelio",
-          de: "Hl. Papst Cornelius",
-        },
-        work: {
-          en: "Letter 45: To St. Cyprian",
-          fr: "Lettre 45 : À Saint Cyprien",
-          es: "Carta 45: A San Cipriano",
-          de: "Brief 45: An den Hl. Cyprian",
-        },
-        date: "251 AD",
-        text: {
-          en: "We know that Cornelius is bishop of the most holy Catholic Church elected by Almighty God, and by Christ our Lord... For we are not ignorant that there is one God... and that in the Catholic Church there ought to be one bishop.",
-          fr: "Nous savons que Corneille est évêque de la très sainte Église catholique élue par Dieu Tout-Puissant, et par le Christ notre Seigneur... Car nous n'ignorons pas qu'il y a un seul Dieu... et que dans l'Église catholique il doit y avoir un seul évêque.",
-          es: "Sabemos que Cornelio es obispo de la santísima Iglesia Católica elegida por Dios Todopoderoso y por Cristo nuestro Señor... Porque no ignoramos que hay un solo Dios... y que en la Iglesia Católica debe haber un solo obispo.",
-          de: "Wir wissen, dass Cornelius Bischof der heiligsten katholischen Kirche ist, erwählt von Gott dem Allmächtigen und von Christus unserem Herrn... Denn wir wissen wohl, dass es einen Gott gibt... und dass es in der katholischen Kirche einen Bischof geben muss.",
-        },
-        sourceReference: "§2",
-      },
+
       {
         id: "novatian-trinity",
         author: {
@@ -479,6 +460,31 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
         },
         sourceReference: "Ch. 30",
       },
+
+      {
+        id: "pope-cornelius-45",
+        author: {
+          en: "Saint Pope Cornelius",
+          fr: "Saint Pape Corneille",
+          es: "San Papa Cornelio",
+          de: "Hl. Papst Cornelius",
+        },
+        work: {
+          en: "Letter 45: To St. Cyprian",
+          fr: "Lettre 45 : À Saint Cyprien",
+          es: "Carta 45: A San Cipriano",
+          de: "Brief 45: An den Hl. Cyprian",
+        },
+        date: "251 AD",
+        text: {
+          en: "We know that Cornelius is bishop of the most holy Catholic Church elected by Almighty God, and by Christ our Lord... For we are not ignorant that there is one God... and that in the Catholic Church there ought to be one bishop.",
+          fr: "Nous savons que Corneille est évêque de la très sainte Église catholique élue par Dieu Tout-Puissant, et par le Christ notre Seigneur... Car nous n'ignorons pas qu'il y a un seul Dieu... et que dans l'Église catholique il doit y avoir un seul évêque.",
+          es: "Sabemos que Cornelio es obispo de la santísima Iglesia Católica elegida por Dios Todopoderoso y por Cristo nuestro Señor... Porque no ignoramos que hay un solo Dios... y que en la Iglesia Católica debe haber un solo obispo.",
+          de: "Wir wissen, dass Cornelius Bischof der heiligsten katholischen Kirche ist, erwählt von Gott dem Allmächtigen und von Christus unserem Herrn... Denn wir wissen wohl, dass es einen Gott gibt... und dass es in der katholischen Kirche einen Bischof geben muss.",
+        },
+        sourceReference: "§2",
+      },
+
       {
         id: "cyprian-unity-12",
         author: {
@@ -996,12 +1002,12 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
         },
         date: "c. 50 AD",
         text: {
-          en: "Do not hold your hands open for receiving and closed for giving... Do not turn away from the needy, but share all with your brother and do not claim that it is your own.",
-          fr: "Ne tiens pas tes mains ouvertes pour recevoir et fermées pour donner... Ne te détourne pas de l'indigent, mais partage tout avec ton frère et ne dis pas que c'est à toi.",
-          es: "No extiendas las manos para recibir y las cierres para dar... No te apartes del necesitado, sino comparte todo con tu hermano y no digas que es tuyo.",
-          de: "Halte deine Hände nicht offen zum Nehmen und geschlossen zum Geben... Wende dich nicht ab von dem Bedürftigen, sondern teile alles mit deinem Bruder und sage nicht, dass es dein eigen ist.",
+          en: "Do not hold your hands open for receiving and closed for giving... Do not turn away from the needy, but share all with your brother and do not claim that it is your own. (Sirach 4:31 & 4:5)",
+          fr: "Ne tiens pas tes mains ouvertes pour recevoir et fermées pour donner... Ne te détourne pas de l'indigent, mais partage tout avec ton frère et ne dis pas que c'est à toi. (Siracide 4:31 & 4:5)",
+          es: "No extiendas las manos para recibir y las cierres para dar... No te apartes del necesitado, sino comparte todo con tu hermano y no digas que es tuyo. (Sirácida 4:31 & 4:5)",
+          de: "Halte deine Hände nicht offen zum Nehmen und geschlossen zum Geben... Wende dich nicht ab von dem Bedürftigen, sondern teile alles mit deinem Bruder und sage nicht, dass es dein eigen ist. (Sirach 4:31 & 4:5)",
         },
-        sourceReference: "Ch. 4, §5 (Sirach 4:31 & 4:5)",
+        sourceReference: "Ch. 4, §5",
       },
 
       {
@@ -1165,29 +1171,7 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
         },
         sourceReference: "§6",
       },
-      {
-        id: "origen-john",
-        author: {
-          en: "Origen",
-          fr: "Origène",
-          es: "Orígenes",
-          de: "Origenes",
-        },
-        work: {
-          en: "Commentary on John",
-          fr: "Commentaire sur Jean",
-          es: "Comentario sobre Juan",
-          de: "Kommentar zu Johannes",
-        },
-        date: "c. 250 AD",
-        text: {
-          en: "Paul... did not even write to all the churches which he taught... And Peter... has left behind one letter which is accepted. Perhaps there is also a second, but it is doubted. Why must I speak of John... who has left one Gospel... He also wrote the Apocalypse... and an epistle of very few lines.",
-          fr: "Paul... n'a même pas écrit à toutes les églises qu'il a enseignées... Et Pierre... a laissé une lettre qui est acceptée. Peut-être y en a-t-il aussi une seconde, mais elle est mise en doute. Pourquoi dois-je parler de Jean... qui a laissé un Évangile... Il a aussi écrit l'Apocalypse... et une épître de très peu de lignes.",
-          es: "Pablo... ni siquiera escribió a todas las iglesias que enseñó... Y Pedro... ha dejado una carta que es aceptada. Quizás hay también una segunda, pero se duda de ella. ¿Por qué debo hablar de Juan... que ha dejado un Evangelio... También escribió el Apocalipsis... y una epístola de muy pocas líneas.",
-          de: "Paulus... schrieb nicht einmal an alle Kirchen, die er lehrte... Und Petrus... hat einen Brief hinterlassen, der anerkannt ist. Vielleicht gibt es auch einen zweiten, aber er wird angezweifelt. Warum muss ich von Johannes sprechen... der ein Evangelium hinterlassen hat... Er schrieb auch die Apokalypse... und einen Brief von sehr wenigen Zeilen.",
-        },
-        sourceReference: "Book 5, §3",
-      },
+
       {
         id: "cyprian-treatise-12",
         author: {
@@ -1211,6 +1195,31 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
         },
         sourceReference: "Book 3, §15",
       },
+
+      {
+        id: "origen-john",
+        author: {
+          en: "Origen",
+          fr: "Origène",
+          es: "Orígenes",
+          de: "Origenes",
+        },
+        work: {
+          en: "Commentary on John",
+          fr: "Commentaire sur Jean",
+          es: "Comentario sobre Juan",
+          de: "Kommentar zu Johannes",
+        },
+        date: "c. 250 AD",
+        text: {
+          en: "Paul... did not even write to all the churches which he taught... And Peter... has left behind one letter which is accepted. Perhaps there is also a second, but it is doubted. Why must I speak of John... who has left one Gospel... He also wrote the Apocalypse... and an epistle of very few lines.",
+          fr: "Paul... n'a même pas écrit à toutes les églises qu'il a enseignées... Et Pierre... a laissé une lettre qui est acceptée. Peut-être y en a-t-il aussi une seconde, mais elle est mise en doute. Pourquoi dois-je parler de Jean... qui a laissé un Évangile... Il a aussi écrit l'Apocalypse... et une épître de très peu de lignes.",
+          es: "Pablo... ni siquiera escribió a todas las iglesias que enseñó... Y Pedro... ha dejado una carta que es aceptada. Quizás hay también una segunda, pero se duda de ella. ¿Por qué debo hablar de Juan... que ha dejado un Evangelio... También escribió el Apocalipsis... y una epístola de muy pocas líneas.",
+          de: "Paulus... schrieb nicht einmal an alle Kirchen, die er lehrte... Und Petrus... hat einen Brief hinterlassen, der anerkannt ist. Vielleicht gibt es auch einen zweiten, aber er wird angezweifelt. Warum muss ich von Johannes sprechen... der ein Evangelium hinterlassen hat... Er schrieb auch die Apokalypse... und einen Brief von sehr wenigen Zeilen.",
+        },
+        sourceReference: "Book 5, §3",
+      },
+
       {
         id: "cyprian-letter-55",
         author: {
@@ -2327,6 +2336,29 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
         sourceReference: "Book 4, Ch. 5",
       },
       {
+        id: "caius-artemon",
+        author: {
+          en: "Caius the Presbyter",
+          fr: "Caius le Prêtre",
+          es: "Cayo el Presbítero",
+          de: "Caius der Presbyter",
+        },
+        work: {
+          en: "Against the Heresy of Artemon",
+          fr: "Contre l'Hérésie d'Artémon",
+          es: "Contra la Herejía de Artemón",
+          de: "Gegen die Häresie des Artemon",
+        },
+        date: "c. 210 AD",
+        text: {
+          en: "...the truth of Gospel preaching was preserved until the times of Victor, who was the thirteenth bishop in Rome from Peter...",
+          fr: "...la vérité de la prédication de l'Évangile a été préservée jusqu'au temps de Victor, qui était le treizième évêque à Rome depuis Pierre...",
+          es: "...la verdad de la predicación del Evangelio se conservó hasta los tiempos de Víctor, quien fue el decimotercer obispo en Roma desde Pedro...",
+          de: "...die Wahrheit der evangelischen Predigt wurde bewahrt bis zu den Zeiten Viktors, der der dreizehnte Bischof in Rom seit Petrus war...",
+        },
+        sourceReference: "Fragment 2",
+      },
+      {
         id: "tertullian-scorpiace-10",
         author: {
           en: "Tertullian",
@@ -2464,29 +2496,7 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
         },
         sourceReference: "Book 2, Ch. 25, §7",
       },
-      {
-        id: "caius-artemon",
-        author: {
-          en: "Caius the Presbyter",
-          fr: "Caius le Prêtre",
-          es: "Cayo el Presbítero",
-          de: "Caius der Presbyter",
-        },
-        work: {
-          en: "Against the Heresy of Artemon",
-          fr: "Contre l'Hérésie d'Artémon",
-          es: "Contra la Herejía de Artemón",
-          de: "Gegen die Häresie des Artemon",
-        },
-        date: "c. 210 AD",
-        text: {
-          en: "...the truth of Gospel preaching was preserved until the times of Victor, who was the thirteenth bishop in Rome from Peter...",
-          fr: "...la vérité de la prédication de l'Évangile a été préservée jusqu'au temps de Victor, qui était le treizième évêque à Rome depuis Pierre...",
-          es: "...la verdad de la predicación del Evangelio se conservó hasta los tiempos de Víctor, quien fue el decimotercer obispo en Roma desde Pedro...",
-          de: "...die Wahrheit der evangelischen Predigt wurde bewahrt bis zu den Zeiten Viktors, der der dreizehnte Bischof in Rom seit Petrus war...",
-        },
-        sourceReference: "Fragment 2",
-      },
+
       {
         id: "pope-cornelius-45",
         author: {
@@ -3060,52 +3070,7 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
         },
         sourceReference: "Fragment 8",
       },
-      {
-        id: "ephrem-nisibene-hymn-27",
-        author: {
-          en: "Saint Ephrem the Syrian",
-          fr: "Saint Éphrem le Syrien",
-          es: "San Efrén el Sirio",
-          de: "Hl. Ephräm der Syrer",
-        },
-        work: {
-          en: "Nisibene Hymn 27",
-          fr: "Hymne de Nisibe 27",
-          es: "Himno Nisibeno 27",
-          de: "Nisibenische Hymne 27",
-        },
-        date: "c. 370 AD",
-        text: {
-          en: "You alone and your Mother are more beautiful than any others, for there is no blemish in you nor any stains upon your Mother. Who of my children can compare in beauty to these?",
-          fr: "Toi seul et ta Mère êtes plus beaux que tous les autres, car il n'y a pas de défaut en toi ni aucune tache sur ta Mère. Qui parmi mes enfants peut se comparer en beauté à ceux-ci ?",
-          es: "Solo tú y tu Madre sois más hermosos que cualquier otro, pues no hay defecto en ti ni mancha alguna en tu Madre. ¿Quién de mis hijos puede compararse en belleza con estos?",
-          de: "Du allein und deine Mutter seid schöner als alle anderen, denn kein Makel ist an dir, noch irgendein Flecken an deiner Mutter. Wer von meinen Kindern kann sich an Schönheit mit diesen vergleichen?",
-        },
-        sourceReference: "Ch. 8",
-      },
-      {
-        id: "ephrem-nativity-hymn-8",
-        author: {
-          en: "Saint Ephrem the Syrian",
-          fr: "Saint Éphrem le Syrien",
-          es: "San Efrén el Sirio",
-          de: "Hl. Ephräm der Syrer",
-        },
-        work: {
-          en: "Hymn 8 on the Nativity",
-          fr: "Hymne 8 sur la Nativité",
-          es: "Himno 8 sobre la Natividad",
-          de: "Hymne 8 über die Geburt",
-        },
-        date: "c. 370 AD",
-        text: {
-          en: "A wonder is Thy Mother. The Lord entered her, and became a servant: the Word entered her, and became silent within her... The Belly of Thy Mother changed the order of things... The Mighty went in, and clad Himself with fear from the Belly.",
-          fr: "Ta Mère est une merveille. Le Seigneur entra en elle, et devint serviteur : le Verbe entra en elle, et devint silencieux en elle... Le Sein de ta Mère changea l'ordre des choses... Le Puissant entra, et se vêtit de crainte depuis le Sein.",
-          es: "Maravilla es tu Madre. El Señor entró en ella, y se hizo siervo: el Verbo entró en ella, y enmudeció en su interior... El Vientre de tu Madre cambió el orden de las cosas... El Fuerte entró, y se vistió de temor desde el Vientre.",
-          de: "Ein Wunder ist deine Mutter. Der Herr trat in sie ein und wurde ein Diener: das Wort trat in sie ein und wurde still in ihr... Der Schoß deiner Mutter veränderte die Ordnung der Dinge... Der Mächtige trat ein und kleidete sich mit Furcht aus dem Schoß.",
-        },
-        sourceReference: "Hymn 8",
-      },
+
       {
         id: "origen-matthew-10",
         author: {
@@ -3175,6 +3140,54 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
         },
         sourceReference: "Homily 2",
       },
+
+      {
+        id: "ephrem-nisibene-hymn-27",
+        author: {
+          en: "Saint Ephrem the Syrian",
+          fr: "Saint Éphrem le Syrien",
+          es: "San Efrén el Sirio",
+          de: "Hl. Ephräm der Syrer",
+        },
+        work: {
+          en: "Nisibene Hymn 27",
+          fr: "Hymne de Nisibe 27",
+          es: "Himno Nisibeno 27",
+          de: "Nisibenische Hymne 27",
+        },
+        date: "c. 370 AD",
+        text: {
+          en: "You alone and your Mother are more beautiful than any others, for there is no blemish in you nor any stains upon your Mother. Who of my children can compare in beauty to these?",
+          fr: "Toi seul et ta Mère êtes plus beaux que tous les autres, car il n'y a pas de défaut en toi ni aucune tache sur ta Mère. Qui parmi mes enfants peut se comparer en beauté à ceux-ci ?",
+          es: "Solo tú y tu Madre sois más hermosos que cualquier otro, pues no hay defecto en ti ni mancha alguna en tu Madre. ¿Quién de mis hijos puede compararse en belleza con estos?",
+          de: "Du allein und deine Mutter seid schöner als alle anderen, denn kein Makel ist an dir, noch irgendein Flecken an deiner Mutter. Wer von meinen Kindern kann sich an Schönheit mit diesen vergleichen?",
+        },
+        sourceReference: "Ch. 8",
+      },
+      {
+        id: "ephrem-nativity-hymn-8",
+        author: {
+          en: "Saint Ephrem the Syrian",
+          fr: "Saint Éphrem le Syrien",
+          es: "San Efrén el Sirio",
+          de: "Hl. Ephräm der Syrer",
+        },
+        work: {
+          en: "Hymn 8 on the Nativity",
+          fr: "Hymne 8 sur la Nativité",
+          es: "Himno 8 sobre la Natividad",
+          de: "Hymne 8 über die Geburt",
+        },
+        date: "c. 370 AD",
+        text: {
+          en: "A wonder is Thy Mother. The Lord entered her, and became a servant: the Word entered her, and became silent within her... The Belly of Thy Mother changed the order of things... The Mighty went in, and clad Himself with fear from the Belly.",
+          fr: "Ta Mère est une merveille. Le Seigneur entra en elle, et devint serviteur : le Verbe entra en elle, et devint silencieux en elle... Le Sein de ta Mère changea l'ordre des choses... Le Puissant entra, et se vêtit de crainte depuis le Sein.",
+          es: "Maravilla es tu Madre. El Señor entró en ella, y se hizo siervo: el Verbo entró en ella, y enmudeció en su interior... El Vientre de tu Madre cambió el orden de las cosas... El Fuerte entró, y se vistió de temor desde el Vientre.",
+          de: "Ein Wunder ist deine Mutter. Der Herr trat in sie ein und wurde ein Diener: das Wort trat in sie ein und wurde still in ihr... Der Schoß deiner Mutter veränderte die Ordnung der Dinge... Der Mächtige trat ein und kleidete sich mit Furcht aus dem Schoß.",
+        },
+        sourceReference: "Hymn 8",
+      },
+
       {
         id: "peter-alexandria-acts",
         author: {
@@ -3632,29 +3645,6 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
         sourceReference: "§17",
       },
       {
-        id: "pacian-penitents-4",
-        author: {
-          en: "Saint Pacian of Barcelona",
-          fr: "Saint Pacien de Barcelone",
-          es: "San Paciano de Barcelona",
-          de: "Hl. Pacian von Barcelona",
-        },
-        work: {
-          en: "On Penitents",
-          fr: "Sur les Pénitents",
-          es: "Sobre los Penitentes",
-          de: "Über die Büßer",
-        },
-        date: "c. 387 AD",
-        text: {
-          en: "These, my brethren, are capital sins; these are mortal sins... there is a sin that leads to death: I do not say that you should pray about that (1 John 5:16).",
-          fr: "Ceux-ci, mes frères, sont des péchés capitaux ; ce sont des péchés mortels... il y a un péché qui mène à la mort : je ne dis pas que vous devriez prier pour cela (1 Jean 5:16).",
-          es: "Estos, hermanos míos, son pecados capitales; estos son pecados mortales... hay un pecado que lleva a la muerte: no digo que debáis orar por eso (1 Juan 5:16).",
-          de: "Diese, meine Brüder, sind Hauptsünden; dies sind Todsünden... es gibt eine Sünde, die zum Tode führt: Ich sage nicht, dass ihr dafür beten sollt (1. Joh 5,16).",
-        },
-        sourceReference: "Ch. 4, §§2-3",
-      },
-      {
         id: "basil-letter-199",
         author: {
           en: "Saint Basil",
@@ -3677,6 +3667,30 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
         },
         sourceReference: "§31",
       },
+      {
+        id: "pacian-penitents-4",
+        author: {
+          en: "Saint Pacian of Barcelona",
+          fr: "Saint Pacien de Barcelone",
+          es: "San Paciano de Barcelona",
+          de: "Hl. Pacian von Barcelona",
+        },
+        work: {
+          en: "On Penitents",
+          fr: "Sur les Pénitents",
+          es: "Sobre los Penitentes",
+          de: "Über die Büßer",
+        },
+        date: "c. 387 AD",
+        text: {
+          en: "These, my brethren, are capital sins; these are mortal sins... there is a sin that leads to death: I do not say that you should pray about that (1 John 5:16).",
+          fr: "Ceux-ci, mes frères, sont des péchés capitaux ; ce sont des péchés mortels... il y a un péché qui mène à la mort : je ne dis pas que vous devriez prier pour cela (1 Jean 5:16).",
+          es: "Estos, hermanos míos, son pecados capitales; estos son pecados mortales... hay un pecado que lleva a la muerte: no digo que debáis orar por eso (1 Juan 5:16).",
+          de: "Diese, meine Brüder, sind Hauptsünden; dies sind Todsünden... es gibt eine Sünde, die zum Tode führt: Ich sage nicht, dass ihr dafür beten sollt (1. Joh 5,16).",
+        },
+        sourceReference: "Ch. 4, §§2-3",
+      },
+
       {
         id: "jerome-jovinian-2-30",
         author: {
