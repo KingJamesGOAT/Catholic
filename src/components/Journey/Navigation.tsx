@@ -194,6 +194,7 @@ export default function Navigation({
 
               <div className="grid md:grid-cols-2 gap-4 max-h-[70vh] overflow-y-auto pr-4 mb-8">
                 
+                {/* 1. EARLY CHURCH (SP1) */}
                 {onEarlyChurchClick && (
                   <motion.button
                     key="early-church-link"
@@ -218,6 +219,7 @@ export default function Navigation({
                   </motion.button>
                 )}
 
+                {/* 2. SCIENCE (SP2) */}
                 {onScienceClick && (
                   <motion.button
                     key="science-miracles-link"
@@ -242,31 +244,7 @@ export default function Navigation({
                   </motion.button>
                 )}
 
-                {onGlossaryClick && (
-                  <motion.button
-                    key="glossary-link"
-                    onClick={() => handleSpecialPageClick('glossary')}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="text-left p-6 rounded-lg border transition-all duration-300 bg-yellow-900/20 border-yellow-800 hover:bg-yellow-900/30 hover:border-yellow-700"
-                  >
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-yellow-600 border-2 border-yellow-400 flex items-center justify-center">
-                        <BookOpen size={20} className="text-white" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-1">
-                            <span className="text-xs text-gray-500">{t(trans.menu.topicLabel, language)} SP3</span> 
-                            <span className="text-xs text-yellow-400">• Glossary</span>
-                        </div>
-                        <h3 className="mb-2 text-white">{t(trans.glossary.title, language)}</h3>
-                        <p className="text-sm text-gray-500 line-clamp-2">{t(trans.glossary.subtitle, language)}</p>
-                      </div>
-                    </div>
-                  </motion.button>
-                )}
-
-                {/* NEW MOBILE MENU ITEM */}
+                {/* 3. SCRIPTURE & FATHERS (SP3) - Reordered here */}
                 {onDoctrineClick && (
                   <motion.button
                     key="doctrine-link"
@@ -281,11 +259,36 @@ export default function Navigation({
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
-                            <span className="text-xs text-gray-500">{t(trans.menu.topicLabel, language)} SP4</span> 
+                            <span className="text-xs text-gray-500">{t(trans.menu.topicLabel, language)} SP3</span> 
                             <span className="text-xs text-indigo-400">• {t(trans.nav.scriptureFathers, language)}</span>
                         </div>
                         <h3 className="mb-2 text-white">{t(trans.nav.scriptureFathers, language)}</h3>
                         <p className="text-sm text-gray-500 line-clamp-2">Scripture & Tradition</p>
+                      </div>
+                    </div>
+                  </motion.button>
+                )}
+
+                {/* 4. GLOSSARY (SP4) - Reordered here */}
+                {onGlossaryClick && (
+                  <motion.button
+                    key="glossary-link"
+                    onClick={() => handleSpecialPageClick('glossary')}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="text-left p-6 rounded-lg border transition-all duration-300 bg-yellow-900/20 border-yellow-800 hover:bg-yellow-900/30 hover:border-yellow-700"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-yellow-600 border-2 border-yellow-400 flex items-center justify-center">
+                        <BookOpen size={20} className="text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                            <span className="text-xs text-gray-500">{t(trans.menu.topicLabel, language)} SP4</span> 
+                            <span className="text-xs text-yellow-400">• Glossary</span>
+                        </div>
+                        <h3 className="mb-2 text-white">{t(trans.glossary.title, language)}</h3>
+                        <p className="text-sm text-gray-500 line-clamp-2">{t(trans.glossary.subtitle, language)}</p>
                       </div>
                     </div>
                   </motion.button>

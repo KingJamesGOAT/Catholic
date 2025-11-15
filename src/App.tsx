@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react"; // Added useRef
 import { motion, AnimatePresence } from "motion/react";
 import Navigation from "./components/Journey/Navigation";
 import ProgressTracker from "./components/Journey/ProgressTracker";
@@ -15,7 +15,7 @@ import { cn } from "./components/ui/utils";
 import { useIsMobile } from "./components/ui/use-mobile";
 import GlossarySearch from "./components/GlossarySearch"; 
 import GlossaryPage from "./components/GlossaryPage";      
-import DoctrineExplorer from "./components/DoctrineExplorer"; // NEW
+import DoctrineExplorer from "./components/DoctrineExplorer";
 
 // Topic Components
 import ExistenceOfGod from "./components/Topics/ExistenceOfGod";
@@ -161,7 +161,7 @@ function AppContent() {
   const [showEarlyChurch, setShowEarlyChurch] = useState(false);
   const [showScience, setShowScience] = useState(false);
   const [showGlossary, setShowGlossary] = useState(false); 
-  const [showDoctrine, setShowDoctrine] = useState(false); // NEW
+  const [showDoctrine, setShowDoctrine] = useState(false); 
   
   // Command Palette State
   const [isSearchOpen, setIsSearchOpen] = useState(false); 
@@ -170,19 +170,41 @@ function AppContent() {
   const trans = translations;
   const isMobile = useIsMobile();
 
-  const [isNavHovering, setIsNavHovering] = useState(false);
-  const [isProgressHovering, setIsProgressHovering] = useState(false);
+  // --- CHANGED: Unified hover state with delay logic ---
+  const [isHovering, setIsHovering] = useState(false);
+  const hoverTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleHoverStart = () => {
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+      hoverTimeoutRef.current = null;
+    }
+    setIsHovering(true);
+  };
+
+  const handleHoverEnd = () => {
+    hoverTimeoutRef.current = setTimeout(() => {
+      setIsHovering(false);
+    }, 2000); // 2 seconds delay before hiding
+  };
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
+    };
+  }, []);
 
   // Progress tracker visibility logic
+  // It remains visible if Mobile, Home, OR if the unified hovering state is true
   const isProgressVisible = 
     !(showEarlyChurch || showScience || showGlossary || showDoctrine) && 
-    (isMobile || showHome || isNavHovering || isProgressHovering);
+    (isMobile || showHome || isHovering);
 
   useEffect(() => {
     const saved = localStorage.getItem("journey-progress");
     if (saved) {
       const { index, completed } = JSON.parse(saved);
-      // If index is undefined or -1, we stay at -1 (Home state) until start is clicked
       if (index !== undefined && index !== -1) {
           setCurrentTopicIndex(index);
       }
@@ -250,7 +272,6 @@ function AppContent() {
     }
   };
 
-  // Fallback: If index is -1, render the first topic component (but don't display it if showHome is true)
   const CurrentTopicComponent = currentTopicIndex >= 0 ? topics[currentTopicIndex].component : topics[0].component;
 
   const handleEarlyChurchClick = () => {
@@ -300,7 +321,6 @@ function AppContent() {
 
   const startJourney = () => {
     setShowHome(false);
-    // Start at index 0 (God Exists)
     setCurrentTopicIndex(0);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -308,7 +328,6 @@ function AppContent() {
   return (
     <div className="bg-black text-gray-100 min-h-screen">
       
-      {/* GLOBAL SEARCH COMPONENT */}
       <GlossarySearch open={isSearchOpen} setOpen={setIsSearchOpen} />
 
       <Navigation
@@ -321,12 +340,12 @@ function AppContent() {
         onGlossaryClick={handleGlossaryClick} 
         onSearchClick={() => setIsSearchOpen(true)} 
         
-        // ADDED
         onDoctrineClick={handleDoctrineClick}
         showDoctrine={showDoctrine}
 
-        onHoverStart={() => setIsNavHovering(true)}
-        onHoverEnd={() => setIsNavHovering(false)}
+        // --- UPDATED PROPS ---
+        onHoverStart={handleHoverStart}
+        onHoverEnd={handleHoverEnd}
         
         isSpecialPage={showEarlyChurch || showScience || showHome || showGlossary || showDoctrine}
         showEarlyChurch={showEarlyChurch}
@@ -336,15 +355,15 @@ function AppContent() {
         onLogoClick={handleBackToHome}
       />
       
-      {/* Progress Tracker - Pass -1 if on Home so no topic highlights */}
       <ProgressTracker
         currentIndex={showHome ? -1 : currentTopicIndex} 
         total={topics.length}
         completedTopics={completedTopics}
         isVisible={isProgressVisible} 
         onNavigate={goToTopic}
-        onHoverStart={() => setIsProgressHovering(true)}
-        onHoverEnd={() => setIsProgressHovering(false)}
+        // --- UPDATED PROPS ---
+        onHoverStart={handleHoverStart}
+        onHoverEnd={handleHoverEnd}
       />
 
       {showHome ? (
@@ -403,10 +422,8 @@ function AppContent() {
               >
                 <div className="container mx-auto px-4 py-16 max-w-4xl">
                     
-                    {/* Topic Content - Moved inside main container structure from old app.tsx */}
                     <CurrentTopicComponent onComplete={markCurrentTopicComplete} />
 
-                    {/* Footer Navigation - Restored from old app.tsx logic */}
                     <div className="flex flex-col md:flex-row items-center justify-between border-t border-gray-800 pt-8 gap-6 md:gap-4 mt-16">
                     
                     <div className="text-center text-gray-500 order-1 md:order-2 text-sm md:text-base">

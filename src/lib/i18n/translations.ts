@@ -1,6 +1,101 @@
 import { Language } from "./LanguageContext";
 
 export const translations = {
+
+
+
+  // --- ADD THIS SECTION FOR DOCTRINE EXPLORER ---
+  doctrineExplorer: {
+    title: {
+      en: "One Faith, One Voice",
+      fr: "Une Foi, Une Voix",
+      es: "Una Fe, Una Voz",
+      de: "Ein Glaube, Eine Stimme",
+    },
+    subtitle: {
+      en: "Select a topic to see the unbroken continuity between the Bible and the Early Church.",
+      fr: "Sélectionnez un sujet pour voir la continuité ininterrompue entre la Bible et l'Église primitive.",
+      es: "Selecciona un tema para ver la continuidad ininterrumpida entre la Biblia y la Iglesia Primitiva.",
+      de: "Wählen Sie ein Thema, um die ungebrochene Kontinuität zwischen der Bibel und der frühen Kirche zu sehen.",
+    },
+    scriptureTitle: {
+      en: "Sacred Scripture",
+      fr: "Écriture Sainte",
+      es: "Sagrada Escritura",
+      de: "Heilige Schrift",
+    },
+    scriptureSubtitle: {
+      en: "The Written Word",
+      fr: "La Parole Écrite",
+      es: "La Palabra Escrita",
+      de: "Das geschriebene Wort",
+    },
+    traditionTitle: {
+      en: "Sacred Tradition",
+      fr: "Sainte Tradition",
+      es: "Sagrada Tradición",
+      de: "Heilige Tradition",
+    },
+    traditionSubtitle: {
+      en: "Fathers, Doctors & Theology",
+      fr: "Pères, Docteurs et Théologie",
+      es: "Padres, Doctores y Teología",
+      de: "Väter, Kirchenlehrer & Theologie",
+    },
+    pending: {
+      en: "Translation pending for this language.",
+      fr: "Traduction en attente pour cette langue.",
+      es: "Traducción pendiente para este idioma.",
+      de: "Übersetzung für diese Sprache ausstehend.",
+    },
+    noQuotes: {
+      en: "No quotes found for this topic.",
+      fr: "Aucune citation trouvée pour ce sujet.",
+      es: "No se encontraron citas para este tema.",
+      de: "Keine Zitate für dieses Thema gefunden.",
+    },
+    source: {
+      en: "Source",
+      fr: "Source",
+      es: "Fuente",
+      de: "Quelle",
+    },
+    types: {
+      father: {
+        en: "Church Father",
+        fr: "Père de l'Église",
+        es: "Padre de la Iglesia",
+        de: "Kirchenvater",
+      },
+      doctor: {
+        en: "Doctor of Church",
+        fr: "Docteur de l'Église",
+        es: "Doctor de la Iglesia",
+        de: "Kirchenlehrer",
+      },
+      theology: {
+        en: "Theology",
+        fr: "Théologie",
+        es: "Teología",
+        de: "Theologie",
+      },
+
+      // --- ENSURE THESE ARE PRESENT ---
+      council: {
+        en: "Ecumenical Council",
+        fr: "Concile Œcuménique",
+        es: "Concilio Ecuménico",
+        de: "Ökumenisches Konzil",
+      },
+      papal: {
+        en: "Papal Definition",
+        fr: "Définition Papale",
+        es: "Definición Papal",
+        de: "Päpstliche Definition",
+        },
+    },
+  },
+  
   // Navigation & Common
   nav: {
     title: {
@@ -30,10 +125,10 @@ export const translations = {
     
     // --- ADD THIS BLOCK ---
     scriptureFathers: {
-      en: "Scripture & Fathers",
-      fr: "Écriture & Pères",
-      es: "Escritura y Padres",
-      de: "Schrift & Väter",
+      en: "Scripture & Tradition", // Changed from "Scripture & Fathers"
+      fr: "Écriture & Tradition", // Changed from "Écriture & Pères"
+      es: "Escritura y Tradición", // Changed from "Escritura y Padres"
+      de: "Schrift & Tradition", // Changed from "Schrift & Väter"
     },
 
     // --- ADD THIS ---
