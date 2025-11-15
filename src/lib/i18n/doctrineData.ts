@@ -1731,7 +1731,8 @@ export const doctrineData: Doctrine[] = [
           es: "Si 'nada impuro entrará en el cielo' (Ap 21:27), y sin embargo morimos con apegos menores al pecado que no merecen el infierno, debe haber un estado de purificación final. El amor de Dios nos purifica para que podamos soportar Su santidad.", 
           de: "Wenn 'nichts Unreines in den Himmel kommen soll' (Offb 21,27), und wir dennoch mit geringfügigen Bindungen an die Sünde sterben, die nicht die Hölle verdienen, muss es einen Zustand der endgültigen Reinigung geben. Gottes Liebe reinigt uns, damit wir seine Heiligkeit ertragen können." 
         }
-      }
-    ]
-  }
+      },
+
+    ],
+  },
 ];

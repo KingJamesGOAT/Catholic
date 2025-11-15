@@ -27,8 +27,6 @@ export default function ProgressTracker({
   const trans = translations;
   const completedCount = completedTopics.size;
 
-  // FIXED: Removed "visualIndex" logic.
-  // If currentIndex is -1, progress is 0% and NO current topic is highlighted.
   const progressPercent = currentIndex === -1 ? 0 : ((currentIndex + 1) / total) * 100;
 
   const renderTopicStatus = () => {
@@ -60,7 +58,8 @@ export default function ProgressTracker({
       onHoverEnd={onHoverEnd}
     >
       <div className="bg-black/95 backdrop-blur-md border-b border-gray-800 shadow-2xl">
-        <div className="container mx-auto px-4 py-4 pb-6">
+        {/* FIXED: Reduced vertical padding on mobile (py-2) while keeping larger desktop padding (md:py-4 md:pb-6) */}
+        <div className="container mx-auto px-4 py-2 md:py-4 md:pb-6"> 
           
           {/* --- DESKTOP VIEW --- */}
           <div className="hidden md:block mb-4">

@@ -184,7 +184,7 @@ function AppContent() {
   const handleHoverEnd = () => {
     hoverTimeoutRef.current = setTimeout(() => {
       setIsHovering(false);
-    }, 2000);
+    }, 1000);
   };
 
   useEffect(() => {
@@ -201,8 +201,10 @@ function AppContent() {
     const saved = localStorage.getItem("journey-progress");
     if (saved) {
       const { index, completed } = JSON.parse(saved);
+      // Only set the index from storage if it's not -1 (meaning explicitly on home)
       if (index !== undefined && index !== -1) {
           setCurrentTopicIndex(index);
+          setShowHome(false); // Assume if index is set, we are not on the main Home page
       }
       if (completed) {
           setCompletedTopics(new Set(completed));
@@ -268,10 +270,10 @@ function AppContent() {
     }
   };
 
-  // 1. Define BlankTopic for a safe fallback
+  // Define BlankTopic for a safe fallback
   const BlankTopic: React.ComponentType<TopicComponentProps> = () => null;
-
-  // 2. Corrected CurrentTopicComponent to use BlankTopic as fallback
+  
+  // FIX 1: Use BlankTopic as the safe fallback to prevent rendering topics[0] accidentally.
   const CurrentTopicComponent = currentTopicIndex >= 0 
     ? topics[currentTopicIndex].component 
     : BlankTopic;
@@ -314,19 +316,21 @@ function AppContent() {
   };
 
   const handleBackToHome = () => {
+    // FIX 2: Immediately set index to -1 and home to true
+    setCurrentTopicIndex(-1);
+    setShowHome(true);
+    
     setShowEarlyChurch(false);
     setShowScience(false);
     setShowGlossary(false);
     setShowDoctrine(false);
-    setShowHome(true);
-    setCurrentTopicIndex(-1);
     
-    // 3. NEW FIX: Manually update localStorage to index -1 immediately
-    // This prevents any refresh or re-mount from reading stale data.
+    // FIX 3: Manually update localStorage immediately. This is the race condition killer.
+    // It ensures that even if a re-render or future reload happens, the index is safely -1.
     localStorage.setItem(
       "journey-progress",
       JSON.stringify({
-        index: -1,
+        index: -1, 
         completed: Array.from(completedTopics),
       }),
     );
@@ -391,7 +395,9 @@ function AppContent() {
           {showDoctrine && <DoctrineExplorer />}
         </>
       ) : (
-        <>
+        // FIX 4: Only render the topic block if an index is actually selected (currentTopicIndex >= 0).
+        // This is the last line of defense against race conditions forcing a topic load.
+        currentTopicIndex >= 0 && (
           <AnimatePresence mode="wait">
             {showTransition ? (
               <TopicTransition
@@ -475,7 +481,7 @@ function AppContent() {
               </motion.main>
             )}
           </AnimatePresence>
-        </>
+        )
       )}
 
       <Toaster />

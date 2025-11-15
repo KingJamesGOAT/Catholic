@@ -54,11 +54,10 @@ export default function Navigation({
     setMenuOpen(false);
   };
   
+  // FIXED: Removed the conditional logic that incorrectly forced navigation to topic 0.
+  // Now, clicking the logo only calls the external onLogoClick (which handles going to Home).
   const handleLogoClick = () => {
       onLogoClick();
-      if (currentTopicIndex !== 0) {
-          onNavigate(0);
-      }
   };
 
   const handleSpecialPageClick = (action: 'earlyChurch' | 'science' | 'glossary' | 'doctrine') => {
