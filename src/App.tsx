@@ -12,7 +12,9 @@ import {
 } from "./lib/i18n/LanguageContext";
 import { translations, t } from "./lib/i18n/translations";
 import { cn } from "./components/ui/utils";
-import { useIsMobile } from "./components/ui/use-mobile"; // Added import
+import { useIsMobile } from "./components/ui/use-mobile";
+import GlossarySearch from "./components/GlossarySearch"; // NEW
+import GlossaryPage from "./components/GlossaryPage";     // NEW
 
 // Topic Components
 import ExistenceOfGod from "./components/Topics/ExistenceOfGod";
@@ -30,7 +32,6 @@ import Magisterium from "./components/Topics/Magisterium";
 import NoFilioque from "./components/Topics/NoFilioque";
 import ScienceAndMiracles from "./components/ScienceAndMiracles";
 
-// Define prop types for Topic Components to avoid TS errors
 type TopicComponentProps = {
   onComplete?: () => void;
 };
@@ -43,7 +44,6 @@ export interface Topic {
   transition?: string;
 }
 
-// The 'topics' array is exported for use in Navigation.tsx
 export const topics: Topic[] = [
   {
     id: "existence-of-god",
@@ -159,18 +159,22 @@ function AppContent() {
   const [showHome, setShowHome] = useState(true);
   const [showEarlyChurch, setShowEarlyChurch] = useState(false);
   const [showScience, setShowScience] = useState(false);
+  const [showGlossary, setShowGlossary] = useState(false); // NEW
   
+  // Command Palette State
+  const [isSearchOpen, setIsSearchOpen] = useState(false); // NEW
+
   const { language } = useLanguage();
   const trans = translations;
-  const isMobile = useIsMobile(); // Detect mobile device
+  const isMobile = useIsMobile();
 
   const [isNavHovering, setIsNavHovering] = useState(false);
   const [isProgressHovering, setIsProgressHovering] = useState(false);
 
   // Progress tracker visibility logic
-  // MODIFIED: If isMobile is true, always show tracker (unless on EarlyChurch/Science pages)
+  // Ensure tracker doesn't overlap on new Glossary page
   const isProgressVisible = 
-    !(showEarlyChurch || showScience) && 
+    !(showEarlyChurch || showScience || showGlossary) && 
     (isMobile || showHome || isNavHovering || isProgressHovering);
 
   useEffect(() => {
@@ -196,6 +200,7 @@ function AppContent() {
     setShowHome(false);
     setShowEarlyChurch(false);
     setShowScience(false);
+    setShowGlossary(false); // Reset
     
     if (index === currentTopicIndex) {
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -217,7 +222,6 @@ function AppContent() {
   };
 
   const nextTopic = () => {
-    // Always mark current as complete when clicking Next/Complete
     markCurrentTopicComplete();
 
     if (currentTopicIndex < topics.length - 1) {
@@ -241,10 +245,10 @@ function AppContent() {
 
   const CurrentTopicComponent = topics[currentTopicIndex].component;
 
-  // Navigation Handlers
   const handleEarlyChurchClick = () => {
     setShowHome(false);
     setShowScience(false);
+    setShowGlossary(false);
     setShowEarlyChurch(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -252,13 +256,23 @@ function AppContent() {
   const handleScienceClick = () => {
     setShowHome(false);
     setShowEarlyChurch(false);
+    setShowGlossary(false);
     setShowScience(true);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleGlossaryClick = () => {
+    setShowHome(false);
+    setShowEarlyChurch(false);
+    setShowScience(false);
+    setShowGlossary(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handleBackToHome = () => {
     setShowEarlyChurch(false);
     setShowScience(false);
+    setShowGlossary(false);
     setShowHome(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -271,22 +285,30 @@ function AppContent() {
   return (
     <div className="bg-black text-gray-100 min-h-screen">
       
-      {/* UNIFIED NAVIGATION BAR */}
+      {/* GLOBAL SEARCH COMPONENT */}
+      <GlossarySearch open={isSearchOpen} setOpen={setIsSearchOpen} />
+
       <Navigation
         currentTopicIndex={currentTopicIndex}
         onNavigate={goToTopic}
         completedTopics={completedTopics}
+        
         onEarlyChurchClick={handleEarlyChurchClick}
         onScienceClick={handleScienceClick}
+        onGlossaryClick={handleGlossaryClick} // Pass handler
+        onSearchClick={() => setIsSearchOpen(true)} // Pass trigger
+        
         onHoverStart={() => setIsNavHovering(true)}
         onHoverEnd={() => setIsNavHovering(false)}
-        isSpecialPage={showEarlyChurch || showScience || showHome}
+        
+        isSpecialPage={showEarlyChurch || showScience || showHome || showGlossary}
         showEarlyChurch={showEarlyChurch}
         showScience={showScience}
+        showGlossary={showGlossary} // Pass state
+        
         onLogoClick={handleBackToHome}
       />
       
-      {/* CONTENT ROUTER */}
       {showHome ? (
         <>
           <ProgressTracker
@@ -300,10 +322,11 @@ function AppContent() {
           />
           <Home onStart={startJourney} />
         </>
-      ) : showEarlyChurch || showScience ? (
+      ) : showEarlyChurch || showScience || showGlossary ? (
         <>
           {showEarlyChurch && <EarlyChurch />}
           {showScience && <ScienceAndMiracles />}
+          {showGlossary && <GlossaryPage />}
         </>
       ) : (
         <>
@@ -343,7 +366,6 @@ function AppContent() {
                 animate={{
                   opacity: 1,
                   x: 0,
-                  // Adjust padding based on whether the progress bar is visible to prevent overlap
                   paddingTop: isProgressVisible ? "200px" : "80px", 
                 }}
                 exit={{
@@ -359,10 +381,8 @@ function AppContent() {
                   },
                 }}
               >
-                {/* PASS ONCOMPLETE PROP HERE */}
                 <CurrentTopicComponent onComplete={markCurrentTopicComplete} />
 
-                {/* Next/Previous Buttons */}
                 <div className="container mx-auto px-4 py-16 max-w-4xl">
                   <div className="flex flex-col md:flex-row items-center justify-between border-t border-gray-800 pt-8 gap-6 md:gap-4">
                     

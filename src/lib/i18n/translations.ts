@@ -62,6 +62,45 @@ export const translations = {
       de: "Wählen Sie ein Thema zum Erkunden",
     },
   },
+
+  glossary: {
+    title: {
+      en: "Catholic Glossary",
+      fr: "Glossaire Catholique",
+      es: "Glosario Católico",
+      de: "Katholisches Glossar",
+    },
+    subtitle: {
+      en: "Essential theological terms and definitions to help you navigate the richness of the faith.",
+      fr: "Termes théologiques essentiels et définitions pour vous aider à naviguer dans la richesse de la foi.",
+      es: "Términos teológicos esenciales y definiciones para ayudarte a navegar la riqueza de la fe.",
+      de: "Wesentliche theologische Begriffe und Definitionen, um Ihnen durch den Reichtum des Glaubens zu helfen.",
+    },
+    searchPlaceholder: {
+      en: "Search theological terms...",
+      fr: "Rechercher des termes théologiques...",
+      es: "Buscar términos teológicos...",
+      de: "Theologische Begriffe suchen...",
+    },
+    tip: {
+      en: "(Tip: Press Ctrl + K to search instantly from anywhere)",
+      fr: "(Astuce : Appuyez sur Ctrl + K pour rechercher instantanément)",
+      es: "(Consejo: Presiona Ctrl + K para buscar al instante)",
+      de: "(Tipp: Drücken Sie Strg + K, um sofort zu suchen)",
+    },
+    noResults: {
+      en: "No results found.",
+      fr: "Aucun résultat trouvé.",
+      es: "No se encontraron resultados.",
+      de: "Keine Ergebnisse gefunden.",
+    },
+    index: {
+      en: "Index",
+      fr: "Index",
+      es: "Índice",
+      de: "Index",
+    }
+  },
   
   // --- NEW HOME SECTION ---
   home: {
