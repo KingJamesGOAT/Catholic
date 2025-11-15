@@ -42,8 +42,8 @@ export default function EarlyChurch() {
   };
 
   return (
-    // Removed px-4 from main wrapper to allow full-width elements
-    <div className="min-h-screen bg-black pt-16 md:pt-24 pb-20">
+    // FIXED: Increased pt-16 to pt-32 on mobile to lower the title significantly
+    <div className="min-h-screen bg-black pt-32 md:pt-24 pb-20">
       
       {/* Main Menu Container - Centered with padding */}
       <div className="container mx-auto max-w-6xl px-4">

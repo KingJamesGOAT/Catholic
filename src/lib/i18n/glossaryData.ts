@@ -2172,12 +2172,13 @@ export const glossaryTerms: GlossaryTerm[] = [
       de: "Früchte des Heiligen Geistes",
     },
     definition: {
-      en: "Perfections that the Holy Spirit forms in us as the first fruits of eternal glory (e.g., charity, joy, peace, patience).",
-      fr: "Perfections que le Saint-Esprit forme en nous comme prémices de la gloire éternelle (par ex. charité, joie, paix, patience).",
-      es: "Perfecciones que el Espíritu Santo forma en nosotros como primicias de la gloria eterna (ej. caridad, gozo, paz, paciencia).",
-      de: "Vollkommenheiten, die der Heilige Geist in uns als erste Früchte der ewigen Herrlichkeit bildet (z.B. Liebe, Freude, Friede, Geduld).",
+      en: "Perfections that the Holy Spirit forms in us as the first fruits of eternal glory, commonly listed as: Charity, Joy, Peace, Patience, Kindness, Goodness, Faithfulness, Gentleness, and Self-control.",
+      fr: "Perfections que le Saint-Esprit forme en nous comme prémices de la gloire éternelle, couramment énumérées comme : Charité, Joie, Paix, Patience, Bonté, Bienveillance, Fidélité, Douceur et Maîtrise de soi.",
+      es: "Perfecciones que el Espíritu Santo forma en nosotros como primicias de la gloria eterna, comúnmente enumeradas como: Caridad, Gozo, Paz, Paciencia, Benignidad, Bondad, Fe, Mansedumbre y Dominio propio.",
+      de: "Vollkommenheiten, die der Heilige Geist in uns als erste Früchte der ewigen Herrlichkeit bildet, allgemein aufgeführt als: Liebe, Freude, Friede, Geduld, Freundlichkeit, Güte, Treue, Sanftmut und Selbstbeherrschung.",
     },
   },
+  ,
   {
     id: "gabriel",
     term: {
@@ -13981,5 +13982,291 @@ export const glossaryTerms: GlossaryTerm[] = [
       de: "Die erste in den Vereinigten Staaten geborene Bürgerin, die heiliggesprochen wurde (1774-1821); Gründerin der Barmherzigen Schwestern.",
     },
   },
-  
+
+  {
+    id: "deuterocanonical",
+    term: {
+      en: "Deuterocanonical Books",
+      fr: "Livres deutérocanoniques",
+      es: "Libros deuterocanónicos",
+      de: "Deuterokanonische Bücher",
+    },
+    definition: {
+      en: "Books of the Old Testament found in the Greek Septuagint but not the Hebrew Bible (e.g., Tobit, Maccabees), accepted by Catholics as inspired.",
+      fr: "Livres de l'Ancien Testament trouvés dans la Septante grecque mais pas dans la Bible hébraïque (ex. Tobie, Maccabées), acceptés par les catholiques comme inspirés.",
+      es: "Libros del Antiguo Testamento encontrados en la Septuaginta griega pero no en la Biblia hebrea (ej. Tobías, Macabeos), aceptados por los católicos como inspirados.",
+      de: "Bücher des Alten Testaments, die in der griechischen Septuaginta, aber nicht in der hebräischen Bibel zu finden sind (z. B. Tobit, Makkabäer) und von Katholiken als inspiriert anerkannt werden.",
+    },
+  },
+  {
+    id: "protocanonical",
+    term: {
+      en: "Protocanonical",
+      fr: "Protocanoniques",
+      es: "Protocanónicos",
+      de: "Protokanonisch",
+    },
+    definition: {
+      en: "Books of the Bible that have always been accepted by the universal Church without serious dispute (e.g., Genesis, Gospels).",
+      fr: "Livres de la Bible qui ont toujours été acceptés par l'Église universelle sans contestation sérieuse (ex. Genèse, Évangiles).",
+      es: "Libros de la Biblia que siempre han sido aceptados por la Iglesia universal sin disputa seria (ej. Génesis, Evangelios).",
+      de: "Bücher der Bibel, die von der Weltkirche immer ohne ernsthaften Streit anerkannt wurden (z. B. Genesis, Evangelien).",
+    },
+  },
+  {
+    id: "septuagint",
+    term: {
+      en: "Septuagint (LXX)",
+      fr: "Septante",
+      es: "Septuaginta",
+      de: "Septuaginta",
+    },
+    definition: {
+      en: "The ancient Greek translation of the Old Testament (c. 3rd century BC), quoted by the Apostles and adopted by the early Church.",
+      fr: "L'ancienne traduction grecque de l'Ancien Testament (v. 3e siècle av. J.-C.), citée par les Apôtres et adoptée par l'Église primitive.",
+      es: "La antigua traducción griega del Antiguo Testamento (c. siglo III a.C.), citada por los Apóstoles y adoptada por la Iglesia primitiva.",
+      de: "Die altgriechische Übersetzung des Alten Testaments (ca. 3. Jh. v. Chr.), die von den Aposteln zitiert und von der frühen Kirche übernommen wurde.",
+    },
+  },
+  {
+    id: "ascension",
+    term: {
+      en: "Ascension",
+      fr: "Ascension",
+      es: "Ascensión",
+      de: "Christi Himmelfahrt",
+    },
+    definition: {
+      en: "The entry of Jesus' humanity into divine glory forty days after his Resurrection.",
+      fr: "L'entrée de l'humanité de Jésus dans la gloire divine quarante jours après sa Résurrection.",
+      es: "La entrada de la humanidad de Jesús en la gloria divina cuarenta días después de su Resurrección.",
+      de: "Der Eintritt der Menschheit Jesu in die göttliche Herrlichkeit vierzig Tage nach seiner Auferstehung.",
+    },
+  },
+  {
+    id: "all-saints",
+    term: {
+      en: "All Saints' Day",
+      fr: "Toussaint",
+      es: "Día de Todos los Santos",
+      de: "Allerheiligen",
+    },
+    definition: {
+      en: "A solemnity celebrated on November 1st honoring all the saints, known and unknown, who are in Heaven.",
+      fr: "Une solennité célébrée le 1er novembre honorant tous les saints, connus et inconnus, qui sont au Ciel.",
+      es: "Una solemnidad celebrada el 1 de noviembre en honor a todos los santos, conocidos y desconocidos, que están en el Cielo.",
+      de: "Ein Hochfest, das am 1. November gefeiert wird, um alle Heiligen, bekannte und unbekannte, die im Himmel sind, zu ehren.",
+    },
+  },
+  {
+    id: "corporal",
+    term: {
+      en: "Corporal",
+      fr: "Corporal",
+      es: "Corporal",
+      de: "Korporale",
+    },
+    definition: {
+      en: "A square white linen cloth placed on the altar, upon which the chalice and paten are placed during Mass.",
+      fr: "Un linge de lin blanc carré placé sur l'autel, sur lequel le calice et la patène sont posés pendant la messe.",
+      es: "Un paño de lino blanco cuadrado colocado sobre el altar, sobre el cual se colocan el cáliz y la patena durante la Misa.",
+      de: "Ein quadratisches weißes Leinentuch, das auf den Altar gelegt wird und auf dem Kelch und Patene während der Messe stehen.",
+    },
+  },
+  {
+    id: "nihil-obstat",
+    term: {
+      en: "Nihil Obstat",
+      fr: "Nihil Obstat",
+      es: "Nihil Obstat",
+      de: "Nihil Obstat",
+    },
+    definition: {
+      en: "Latin for 'nothing stands in the way.' An official declaration by a censor that a book contains nothing contrary to faith or morals.",
+      fr: "Latin pour 'rien ne s'y oppose'. Une déclaration officielle d'un censeur selon laquelle un livre ne contient rien de contraire à la foi ou aux mœurs.",
+      es: "Latín para 'nada se interpone'. Una declaración oficial de un censor de que un libro no contiene nada contrario a la fe o la moral.",
+      de: "Lateinisch für 'nichts steht im Weg'. Eine offizielle Erklärung eines Zensors, dass ein Buch nichts enthält, was gegen Glauben oder Sitten verstößt.",
+    },
+  },
+  {
+    id: "motu-proprio",
+    term: {
+      en: "Motu Proprio",
+      fr: "Motu Proprio",
+      es: "Motu Proprio",
+      de: "Motu Proprio",
+    },
+    definition: {
+      en: "Latin for 'on his own impulse.' A document issued by the Pope on his own initiative, not in response to a request.",
+      fr: "Latin pour 'de son propre chef'. Un document publié par le Pape de sa propre initiative, et non en réponse à une demande.",
+      es: "Latín para 'por su propio impulso'. Un documento emitido por el Papa por su propia iniciativa, no en respuesta a una solicitud.",
+      de: "Lateinisch für 'aus eigenem Antrieb'. Ein Dokument, das der Papst aus eigener Initiative und nicht als Antwort auf eine Bitte erlässt.",
+    },
+  },
+  {
+    id: "servant-of-god",
+    term: {
+      en: "Servant of God",
+      fr: "Serviteur de Dieu",
+      es: "Siervo de Dios",
+      de: "Diener Gottes",
+    },
+    definition: {
+      en: "The title given to a candidate for sainthood whose cause for canonization has officially been opened by the Church.",
+      fr: "Le titre donné à un candidat à la sainteté dont la cause de canonisation a été officiellement ouverte par l'Église.",
+      es: "El título dado a un candidato a la santidad cuya causa de canonización ha sido abierta oficialmente por la Iglesia.",
+      de: "Der Titel, der einem Kandidaten für die Heiligkeit verliehen wird, dessen Kanonisationsprozess offiziell von der Kirche eröffnet wurde.",
+    },
+  },
+  {
+    id: "solidarity",
+    term: {
+      en: "Solidarity",
+      fr: "Solidarité",
+      es: "Solidaridad",
+      de: "Solidarität",
+    },
+    definition: {
+      en: "A firm and persevering determination to commit oneself to the common good; social charity and friendship.",
+      fr: "Une détermination ferme et persévérante à s'engager pour le bien commun ; charité sociale et amitié.",
+      es: "Una determinación firme y perseverante de comprometerse con el bien común; caridad social y amistad.",
+      de: "Eine feste und beharrliche Entschlossenheit, sich für das Gemeinwohl einzusetzen; soziale Nächstenliebe und Freundschaft.",
+    },
+  },
+
+  {
+    id: "fruit-love",
+    term: {
+      en: "Love (Charity)",
+      fr: "Amour (Charité)",
+      es: "Amor (Caridad)",
+      de: "Liebe (Agape)",
+    },
+    definition: {
+      en: "The ability to love God above all things for His own sake and our neighbor as ourselves for the love of God; the perfection of the virtue of charity.",
+      fr: "La capacité d'aimer Dieu par-dessus tout pour Lui-même et notre prochain comme nous-mêmes par amour de Dieu ; la perfection de la vertu de charité.",
+      es: "La capacidad de amar a Dios sobre todas las cosas por Él mismo y a nuestro prójimo como a nosotros mismos por amor a Dios.",
+      de: "Die Fähigkeit, Gott über alles um Seinetwillen zu lieben und unseren Nächsten wie uns selbst aus Liebe zu Gott; die Vollendung der Tugend der Nächstenliebe.",
+    },
+  },
+  {
+    id: "fruit-joy",
+    term: {
+      en: "Joy",
+      fr: "Joie",
+      es: "Gozo",
+      de: "Freude",
+    },
+    definition: {
+      en: "The supernatural happiness that rests in God, whose source is spiritual and independent of earthly circumstances.",
+      fr: "Le bonheur surnaturel qui repose en Dieu, dont la source est spirituelle et indépendante des circonstances terrestres.",
+      es: "La felicidad sobrenatural que descansa en Dios, cuya fuente es espiritual e independiente de las circunstancias terrenales.",
+      de: "Die übernatürliche Freude, die in Gott ruht und deren Quelle geistlich und unabhängig von irdischen Umständen ist.",
+    },
+  },
+  {
+    id: "fruit-peace",
+    term: {
+      en: "Peace",
+      fr: "Paix",
+      es: "Paz",
+      de: "Friede",
+    },
+    definition: {
+      en: "The tranquility of order; the serenity that results from submission to God's will and the harmony between mind, will, and desires.",
+      fr: "La tranquillité de l'ordre; la sérénité qui résulte de la soumission à la volonté de Dieu et de l'harmonie entre l'esprit, la volonté et les désirs.",
+      es: "La tranquilidad del orden; la serenidad que resulta de la sumisión a la voluntad de Dios y la armonía entre la mente, la voluntad y los deseos.",
+      de: "Die Ruhe der Ordnung; die Gelassenheit, die aus der Unterwerfung unter Gottes Willen und der Harmonie zwischen Verstand, Willen und Begierden resultiert.",
+    },
+  },
+  {
+    id: "fruit-patience",
+    term: {
+      en: "Patience",
+      fr: "Patience",
+      es: "Paciencia",
+      de: "Geduld",
+    },
+    definition: {
+      en: "The ability to endure suffering and adversity without giving in to sadness, discouragement, or complaint.",
+      fr: "La capacité d'endurer la souffrance et l'adversité sans céder à la tristesse, au découragement ou à la plainte.",
+      es: "La capacidad de soportar el sufrimiento y la adversidad sin caer en la tristeza, el desánimo o la queja.",
+      de: "Die Fähigkeit, Leid und Widrigkeiten zu ertragen, ohne Traurigkeit, Entmutigung oder Klage nachzugeben.",
+    },
+  },
+  {
+    id: "fruit-kindness",
+    term: {
+      en: "Kindness",
+      fr: "Bonté (Benignité)",
+      es: "Benignidad",
+      de: "Freundlichkeit",
+    },
+    definition: {
+      en: "A tender disposition towards others, demonstrating gentleness and sympathy in word and action.",
+      fr: "Une disposition tendre envers les autres, démontrant douceur et sympathie en paroles et en actes.",
+      es: "Una disposición tierna hacia los demás, demostrando dulzura y simpatía en palabras y acciones.",
+      de: "Eine zärtliche Haltung gegenüber anderen, die Sanftheit und Mitgefühl in Wort und Tat zeigt.",
+    },
+  },
+  {
+    id: "fruit-goodness",
+    term: {
+      en: "Goodness",
+      fr: "Bienveillance",
+      es: "Bondad",
+      de: "Güte",
+    },
+    definition: {
+      en: "The inclination to always seek the good and to be upright in character and conduct, reflecting God's own nature.",
+      fr: "L'inclination à toujours rechercher le bien et à être droit dans son caractère et sa conduite, reflétant la nature même de Dieu.",
+      es: "La inclinación a buscar siempre el bien y a ser recto en carácter y conducta, reflejando la propia naturaleza de Dios.",
+      de: "Die Neigung, stets das Gute zu suchen und in Charakter und Verhalten aufrichtig zu sein, was Gottes eigene Natur widerspiegelt.",
+    },
+  },
+  {
+    id: "fruit-faithfulness",
+    term: {
+      en: "Faithfulness",
+      fr: "Fidélité",
+      es: "Fe",
+      de: "Treue",
+    },
+    definition: {
+      en: "Steadfast devotion and loyalty to God, His promises, and the duties of one’s state in life.",
+      fr: "Une dévotion et une loyauté inébranlables envers Dieu, Ses promesses et les devoirs de son état de vie.",
+      es: "Devoción y lealtad inquebrantables a Dios, Sus promesas y los deberes del propio estado de vida.",
+      de: "Beständige Hingabe und Loyalität gegenüber Gott, Seinen Verheißungen und den Pflichten des eigenen Lebensstandes.",
+    },
+  },
+  {
+    id: "fruit-gentleness",
+    term: {
+      en: "Gentleness",
+      fr: "Douceur",
+      es: "Mansedumbre",
+      de: "Sanftmut",
+    },
+    definition: {
+      en: "The virtue that tempers wrath and avoids harshness, helping one respond calmly even when provoked or angered.",
+      fr: "La vertu qui modère la colère et évite la rudesse, aidant à répondre calmement même en cas de provocation ou de colère.",
+      es: "La virtud que modera la ira y evita la dureza, ayudando a responder con calma incluso cuando es provocado o enojado.",
+      de: "Die Tugend, die Zorn mäßigt und Härte vermeidet und hilft, auch bei Provokation oder Ärger gelassen zu reagieren.",
+    },
+  },
+  {
+    id: "fruit-self-control",
+    term: {
+      en: "Self-control (Continence)",
+      fr: "Maîtrise de soi (Continence)",
+      es: "Dominio Propio (Continencia)",
+      de: "Selbstbeherrschung (Enthaltsamkeit)",
+    },
+    definition: {
+      en: "The mastery over one's bodily desires and impulses, ensuring the passions are subject to reason and faith.",
+      fr: "La maîtrise de ses désirs et impulsions corporels, assurant que les passions sont soumises à la raison et à la foi.",
+      es: "El dominio sobre los deseos e impulsos corporales, asegurando que las pasiones estén sujetas a la razón y la fe.",
+      de: "Die Herrschaft über die eigenen körperlichen Begierden und Impulse, die gewährleistet, dass die Leidenschaften der Vernunft und dem Glauben unterliegen.",
+    },
+  },
 ];

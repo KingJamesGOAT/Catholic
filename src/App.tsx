@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react"; // Added useRef
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Navigation from "./components/Journey/Navigation";
 import ProgressTracker from "./components/Journey/ProgressTracker";
@@ -155,14 +155,14 @@ function AppContent() {
   const [showTransition, setShowTransition] = useState(false);
   const [direction, setDirection] = useState<"forward" | "backward">("forward");
   const [completedTopics, setCompletedTopics] = useState<Set<number>>(new Set());
-  
+    
   // State for Page Routing
   const [showHome, setShowHome] = useState(true);
   const [showEarlyChurch, setShowEarlyChurch] = useState(false);
   const [showScience, setShowScience] = useState(false);
   const [showGlossary, setShowGlossary] = useState(false); 
   const [showDoctrine, setShowDoctrine] = useState(false); 
-  
+    
   // Command Palette State
   const [isSearchOpen, setIsSearchOpen] = useState(false); 
 
@@ -170,7 +170,6 @@ function AppContent() {
   const trans = translations;
   const isMobile = useIsMobile();
 
-  // --- CHANGED: Unified hover state with delay logic ---
   const [isHovering, setIsHovering] = useState(false);
   const hoverTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -185,18 +184,15 @@ function AppContent() {
   const handleHoverEnd = () => {
     hoverTimeoutRef.current = setTimeout(() => {
       setIsHovering(false);
-    }, 2000); // 2 seconds delay before hiding
+    }, 2000);
   };
 
-  // Cleanup timeout on unmount
   useEffect(() => {
     return () => {
       if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
     };
   }, []);
 
-  // Progress tracker visibility logic
-  // It remains visible if Mobile, Home, OR if the unified hovering state is true
   const isProgressVisible = 
     !(showEarlyChurch || showScience || showGlossary || showDoctrine) && 
     (isMobile || showHome || isHovering);
@@ -272,7 +268,14 @@ function AppContent() {
     }
   };
 
-  const CurrentTopicComponent = currentTopicIndex >= 0 ? topics[currentTopicIndex].component : topics[0].component;
+  // 1. Define BlankTopic for a safe fallback
+  const BlankTopic: React.ComponentType<TopicComponentProps> = () => null;
+
+  // 2. Corrected CurrentTopicComponent to use BlankTopic as fallback
+  const CurrentTopicComponent = currentTopicIndex >= 0 
+    ? topics[currentTopicIndex].component 
+    : BlankTopic;
+
 
   const handleEarlyChurchClick = () => {
     setShowHome(false);
@@ -316,6 +319,18 @@ function AppContent() {
     setShowGlossary(false);
     setShowDoctrine(false);
     setShowHome(true);
+    setCurrentTopicIndex(-1);
+    
+    // 3. NEW FIX: Manually update localStorage to index -1 immediately
+    // This prevents any refresh or re-mount from reading stale data.
+    localStorage.setItem(
+      "journey-progress",
+      JSON.stringify({
+        index: -1,
+        completed: Array.from(completedTopics),
+      }),
+    );
+
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -343,7 +358,6 @@ function AppContent() {
         onDoctrineClick={handleDoctrineClick}
         showDoctrine={showDoctrine}
 
-        // --- UPDATED PROPS ---
         onHoverStart={handleHoverStart}
         onHoverEnd={handleHoverEnd}
         
@@ -361,7 +375,6 @@ function AppContent() {
         completedTopics={completedTopics}
         isVisible={isProgressVisible} 
         onNavigate={goToTopic}
-        // --- UPDATED PROPS ---
         onHoverStart={handleHoverStart}
         onHoverEnd={handleHoverEnd}
       />
@@ -405,7 +418,9 @@ function AppContent() {
                 animate={{
                   opacity: 1,
                   x: 0,
-                  paddingTop: isProgressVisible ? "200px" : "80px", 
+                  paddingTop: isProgressVisible 
+                    ? (isMobile ? "100px" : "200px") 
+                    : "80px", 
                 }}
                 exit={{
                   opacity: 0,

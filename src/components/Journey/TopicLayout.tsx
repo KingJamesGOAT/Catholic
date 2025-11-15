@@ -17,16 +17,16 @@ export default function TopicLayout({ children, title, subtitle, quote }: TopicL
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    // FIXED: Changed div to motion.div and added exit prop to prevent double ToC
-    // FIXED: Reduced pb-32 to pb-12 to remove large bottom gap
+    // FIXED: Changed pt-2 to pt-0 (mobile) to effectively remove the top gap completely
+    // Kept md:pt-12 for desktop spacing
     <motion.div 
-      className="min-h-screen pt-8 pb-12 px-4 bg-gradient-to-b from-black via-gray-900 to-black relative"
+      className="min-h-screen pt-0 md:pt-12 pb-12 px-4 bg-gradient-to-b from-black via-gray-900 to-black relative"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      {/* Table of Contents - Now inside motion.div so it fades out with the page */}
+      {/* Table of Contents */}
       <TableOfContents />
       
       <div className="container mx-auto max-w-4xl">
@@ -36,8 +36,9 @@ export default function TopicLayout({ children, title, subtitle, quote }: TopicL
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8 }}
         >
-          {/* Header */}
-          <div className="text-center mb-16">
+          {/* Header: Kept reduced mb-8 on mobile */}
+          <div className="text-center mb-8 md:mb-16 pt-4 md:pt-0">
+             {/* Added slight pt-4 only to the header container so text isn't cut off by status bars if pt-0 is too extreme */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -65,7 +66,7 @@ export default function TopicLayout({ children, title, subtitle, quote }: TopicL
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : { opacity: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
-              className="text-center mb-16 pb-8 border-b border-gray-800"
+              className="text-center mb-8 md:mb-16 pb-8 border-b border-gray-800"
             >
               <p className="text-gray-300 italic text-lg mb-2">"{quote.text}"</p>
               <p className="text-gray-500">— {quote.source}</p>
