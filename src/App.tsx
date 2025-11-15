@@ -13,8 +13,9 @@ import {
 import { translations, t } from "./lib/i18n/translations";
 import { cn } from "./components/ui/utils";
 import { useIsMobile } from "./components/ui/use-mobile";
-import GlossarySearch from "./components/GlossarySearch"; // NEW
-import GlossaryPage from "./components/GlossaryPage";     // NEW
+import GlossarySearch from "./components/GlossarySearch"; 
+import GlossaryPage from "./components/GlossaryPage";      
+import DoctrineExplorer from "./components/DoctrineExplorer"; // NEW
 
 // Topic Components
 import ExistenceOfGod from "./components/Topics/ExistenceOfGod";
@@ -150,7 +151,7 @@ export const topics: Topic[] = [
 ];
 
 function AppContent() {
-  const [currentTopicIndex, setCurrentTopicIndex] = useState(0);
+  const [currentTopicIndex, setCurrentTopicIndex] = useState(-1);
   const [showTransition, setShowTransition] = useState(false);
   const [direction, setDirection] = useState<"forward" | "backward">("forward");
   const [completedTopics, setCompletedTopics] = useState<Set<number>>(new Set());
@@ -159,10 +160,11 @@ function AppContent() {
   const [showHome, setShowHome] = useState(true);
   const [showEarlyChurch, setShowEarlyChurch] = useState(false);
   const [showScience, setShowScience] = useState(false);
-  const [showGlossary, setShowGlossary] = useState(false); // NEW
+  const [showGlossary, setShowGlossary] = useState(false); 
+  const [showDoctrine, setShowDoctrine] = useState(false); // NEW
   
   // Command Palette State
-  const [isSearchOpen, setIsSearchOpen] = useState(false); // NEW
+  const [isSearchOpen, setIsSearchOpen] = useState(false); 
 
   const { language } = useLanguage();
   const trans = translations;
@@ -172,17 +174,21 @@ function AppContent() {
   const [isProgressHovering, setIsProgressHovering] = useState(false);
 
   // Progress tracker visibility logic
-  // Ensure tracker doesn't overlap on new Glossary page
   const isProgressVisible = 
-    !(showEarlyChurch || showScience || showGlossary) && 
+    !(showEarlyChurch || showScience || showGlossary || showDoctrine) && 
     (isMobile || showHome || isNavHovering || isProgressHovering);
 
   useEffect(() => {
     const saved = localStorage.getItem("journey-progress");
     if (saved) {
       const { index, completed } = JSON.parse(saved);
-      setCurrentTopicIndex(index);
-      setCompletedTopics(new Set(completed));
+      // If index is undefined or -1, we stay at -1 (Home state) until start is clicked
+      if (index !== undefined && index !== -1) {
+          setCurrentTopicIndex(index);
+      }
+      if (completed) {
+          setCompletedTopics(new Set(completed));
+      }
     }
   }, []);
 
@@ -200,7 +206,8 @@ function AppContent() {
     setShowHome(false);
     setShowEarlyChurch(false);
     setShowScience(false);
-    setShowGlossary(false); // Reset
+    setShowGlossary(false); 
+    setShowDoctrine(false); 
     
     if (index === currentTopicIndex) {
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -243,12 +250,14 @@ function AppContent() {
     }
   };
 
-  const CurrentTopicComponent = topics[currentTopicIndex].component;
+  // Fallback: If index is -1, render the first topic component (but don't display it if showHome is true)
+  const CurrentTopicComponent = currentTopicIndex >= 0 ? topics[currentTopicIndex].component : topics[0].component;
 
   const handleEarlyChurchClick = () => {
     setShowHome(false);
     setShowScience(false);
     setShowGlossary(false);
+    setShowDoctrine(false);
     setShowEarlyChurch(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -257,6 +266,7 @@ function AppContent() {
     setShowHome(false);
     setShowEarlyChurch(false);
     setShowGlossary(false);
+    setShowDoctrine(false);
     setShowScience(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -265,7 +275,17 @@ function AppContent() {
     setShowHome(false);
     setShowEarlyChurch(false);
     setShowScience(false);
+    setShowDoctrine(false);
     setShowGlossary(true);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleDoctrineClick = () => {
+    setShowHome(false);
+    setShowEarlyChurch(false);
+    setShowScience(false);
+    setShowGlossary(false);
+    setShowDoctrine(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -273,13 +293,16 @@ function AppContent() {
     setShowEarlyChurch(false);
     setShowScience(false);
     setShowGlossary(false);
+    setShowDoctrine(false);
     setShowHome(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const startJourney = () => {
     setShowHome(false);
-    goToTopic(currentTopicIndex);
+    // Start at index 0 (God Exists)
+    setCurrentTopicIndex(0);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -295,51 +318,48 @@ function AppContent() {
         
         onEarlyChurchClick={handleEarlyChurchClick}
         onScienceClick={handleScienceClick}
-        onGlossaryClick={handleGlossaryClick} // Pass handler
-        onSearchClick={() => setIsSearchOpen(true)} // Pass trigger
+        onGlossaryClick={handleGlossaryClick} 
+        onSearchClick={() => setIsSearchOpen(true)} 
         
+        // ADDED
+        onDoctrineClick={handleDoctrineClick}
+        showDoctrine={showDoctrine}
+
         onHoverStart={() => setIsNavHovering(true)}
         onHoverEnd={() => setIsNavHovering(false)}
         
-        isSpecialPage={showEarlyChurch || showScience || showHome || showGlossary}
+        isSpecialPage={showEarlyChurch || showScience || showHome || showGlossary || showDoctrine}
         showEarlyChurch={showEarlyChurch}
         showScience={showScience}
-        showGlossary={showGlossary} // Pass state
+        showGlossary={showGlossary} 
         
         onLogoClick={handleBackToHome}
       />
       
+      {/* Progress Tracker - Pass -1 if on Home so no topic highlights */}
+      <ProgressTracker
+        currentIndex={showHome ? -1 : currentTopicIndex} 
+        total={topics.length}
+        completedTopics={completedTopics}
+        isVisible={isProgressVisible} 
+        onNavigate={goToTopic}
+        onHoverStart={() => setIsProgressHovering(true)}
+        onHoverEnd={() => setIsProgressHovering(false)}
+      />
+
       {showHome ? (
         <>
-          <ProgressTracker
-            currentIndex={-1} 
-            total={topics.length}
-            completedTopics={completedTopics}
-            isVisible={true} 
-            onNavigate={goToTopic}
-            onHoverStart={() => setIsProgressHovering(true)}
-            onHoverEnd={() => setIsProgressHovering(false)}
-          />
           <Home onStart={startJourney} />
         </>
-      ) : showEarlyChurch || showScience || showGlossary ? (
+      ) : showEarlyChurch || showScience || showGlossary || showDoctrine ? (
         <>
           {showEarlyChurch && <EarlyChurch />}
           {showScience && <ScienceAndMiracles />}
           {showGlossary && <GlossaryPage />}
+          {showDoctrine && <DoctrineExplorer />}
         </>
       ) : (
         <>
-          <ProgressTracker
-            currentIndex={currentTopicIndex}
-            total={topics.length}
-            completedTopics={completedTopics}
-            isVisible={isProgressVisible}
-            onNavigate={goToTopic}
-            onHoverStart={() => setIsProgressHovering(true)}
-            onHoverEnd={() => setIsProgressHovering(false)}
-          />
-
           <AnimatePresence mode="wait">
             {showTransition ? (
               <TopicTransition
@@ -381,41 +401,44 @@ function AppContent() {
                   },
                 }}
               >
-                <CurrentTopicComponent onComplete={markCurrentTopicComplete} />
-
                 <div className="container mx-auto px-4 py-16 max-w-4xl">
-                  <div className="flex flex-col md:flex-row items-center justify-between border-t border-gray-800 pt-8 gap-6 md:gap-4">
+                    
+                    {/* Topic Content - Moved inside main container structure from old app.tsx */}
+                    <CurrentTopicComponent onComplete={markCurrentTopicComplete} />
+
+                    {/* Footer Navigation - Restored from old app.tsx logic */}
+                    <div className="flex flex-col md:flex-row items-center justify-between border-t border-gray-800 pt-8 gap-6 md:gap-4 mt-16">
                     
                     <div className="text-center text-gray-500 order-1 md:order-2 text-sm md:text-base">
-                      {t(trans.progress.topicOf, language)}{" "}
-                      {currentTopicIndex + 1}{" "}
-                      {t(trans.progress.of, language)}{" "}
-                      {topics.length}
+                        {t(trans.progress.topicOf, language)}{" "}
+                        {currentTopicIndex + 1}{" "}
+                        {t(trans.progress.of, language)}{" "}
+                        {topics.length}
                     </div>
 
                     <div className="flex w-full md:w-auto justify-between gap-4 order-2 md:contents">
-                      <button
+                        <button
                         onClick={previousTopic}
                         disabled={currentTopicIndex === 0}
                         className={`px-6 py-3 rounded-lg transition-all duration-300 md:order-1 ${
-                          currentTopicIndex === 0
+                            currentTopicIndex === 0
                             ? "bg-gray-900 text-gray-600 cursor-not-allowed"
                             : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white"
                         }`}
-                      >
+                        >
                         ← {t(trans.progress.previous, language)}
-                      </button>
+                        </button>
 
-                      <button
+                        <button
                         onClick={nextTopic}
                         className="px-6 py-3 rounded-lg transition-all duration-300 md:order-3 bg-white text-black hover:bg-gray-200"
-                      >
+                        >
                         {currentTopicIndex === topics.length - 1
-                          ? t(trans.progress.complete, language)
-                          : `${t(trans.progress.next, language)} →`}
-                      </button>
+                            ? t(trans.progress.complete, language)
+                            : `${t(trans.progress.next, language)} →`}
+                        </button>
                     </div>
-                  </div>
+                    </div>
                 </div>
               </motion.main>
             )}

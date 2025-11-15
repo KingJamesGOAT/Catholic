@@ -130,12 +130,14 @@ export default function GlossarySearch({ open, setOpen }: GlossarySearchProps) {
               
               <div className="flex items-center px-6 py-4 border-b border-blue-900/30 shrink-0">
                 <Search className="text-blue-600 shrink-0 mr-4" size={24} />
+
+                
                 <CommandPrimitive.Input
-                  placeholder={t(trans.glossary.searchPlaceholder, language)}
-                  className="flex-1 h-10 bg-transparent text-lg text-white placeholder:text-gray-500 outline-none border-none ring-0"
-                  value={searchQuery}
-                  onValueChange={setSearchQuery}
-                />
+  placeholder={t(trans.glossary.searchPlaceholder, language)}
+  className="flex-1 h-10 bg-transparent text-lg text-white placeholder:text-gray-500 outline-none border-none ring-0"
+  value={searchQuery}
+  onValueChange={setSearchQuery}
+/>
               </div>
 
               <CommandList className="bg-gray-950 p-2 h-full overflow-y-auto custom-scrollbar">

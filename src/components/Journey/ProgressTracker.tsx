@@ -23,13 +23,14 @@ export default function ProgressTracker({
   onHoverStart,
   onHoverEnd
 }: ProgressTrackerProps) {
-  // If currentIndex is -1, progress is 0%
-  const progress = Math.max(0, ((currentIndex + 1) / total) * 100);
-  const completedCount = completedTopics.size;
   const { language } = useLanguage();
   const trans = translations;
+  const completedCount = completedTopics.size;
 
-  // Logic to render status text based on whether the journey has started
+  // FIXED: Removed "visualIndex" logic.
+  // If currentIndex is -1, progress is 0% and NO current topic is highlighted.
+  const progressPercent = currentIndex === -1 ? 0 : ((currentIndex + 1) / total) * 100;
+
   const renderTopicStatus = () => {
     if (currentIndex === -1) {
       return (
@@ -47,16 +48,21 @@ export default function ProgressTracker({
 
   return (
     <motion.div
-      animate={{ y: isVisible ? 0 : "-100%" }}
-      transition={{ duration: 0.3, ease: "easeInOut" }}
-      // Positioned to clear the Navbar: top-16 (mobile) / top-20 (desktop)
-      className="fixed top-16 md:top-20 left-0 right-0 z-40"
+      initial={{ y: "-100%", opacity: 0 }}
+      animate={{ 
+        y: isVisible ? 0 : "-100%", 
+        opacity: isVisible ? 1 : 0 
+      }}
+      exit={{ y: "-100%", opacity: 0 }}
+      transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+      className="fixed top-16 md:top-20 left-0 right-0 z-30"
       onHoverStart={onHoverStart}
       onHoverEnd={onHoverEnd}
     >
-      <div className="bg-black/95 backdrop-blur-sm border-b border-gray-800">
+      <div className="bg-black/95 backdrop-blur-md border-b border-gray-800 shadow-2xl">
         <div className="container mx-auto px-4 py-4 pb-6">
-          {/* Progress Bar Line (Overall Progress) - HIDDEN ON MOBILE */}
+          
+          {/* --- DESKTOP VIEW --- */}
           <div className="hidden md:block mb-4">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm text-gray-400">{t(trans.progress.yourProgress, language)}</span>
@@ -66,17 +72,16 @@ export default function ProgressTracker({
               <motion.div
                 className="h-full bg-gradient-to-r from-blue-600 to-purple-600"
                 initial={{ width: 0 }}
-                animate={{ width: `${progress}%` }}
+                animate={{ width: `${progressPercent}%` }}
                 transition={{ duration: 0.5 }}
               />
             </div>
           </div>
 
-          {/* Desktop: Step Indicators (Circles) - Hidden on mobile */}
           <div className="hidden lg:flex items-start justify-between gap-2">
             {topics.map((topic, index) => {
               const isCompleted = completedTopics.has(index);
-              const isCurrent = index === currentIndex;
+              const isCurrent = index === currentIndex; // False if currentIndex is -1
               const isPast = index < currentIndex;
               
               return (
@@ -89,7 +94,7 @@ export default function ProgressTracker({
                     {/* Connecting Line */}
                     {index < topics.length - 1 && (
                       <div className={`absolute left-1/2 top-1/2 w-full h-0.5 -translate-y-1/2 ${
-                        isPast || (isCurrent && currentIndex !== -1) ? 'bg-blue-600' : 'bg-gray-700'
+                        isPast ? 'bg-blue-600' : 'bg-gray-700'
                       }`} />
                     )}
                     
@@ -114,7 +119,6 @@ export default function ProgressTracker({
                     </motion.div>
                   </div>
                   
-                  {/* Topic Label */}
                   <span className={`text-xs text-center leading-tight px-1 transition-all duration-300 line-clamp-2 min-h-[2.5rem] flex items-center justify-center ${
                     isCurrent 
                       ? 'text-white font-medium' 
@@ -129,22 +133,21 @@ export default function ProgressTracker({
             })}
           </div>
 
-          {/* Mobile: Interactive Simplified Progress Segments - Visible ONLY on mobile/tablet */}
+          {/* --- MOBILE VIEW --- */}
           <div className="lg:hidden flex items-center gap-1.5">
             {topics.map((_, index) => {
               const isCompleted = completedTopics.has(index);
               const isCurrent = index === currentIndex;
               const isPast = index < currentIndex;
 
-              // Determine color based on state
-              let colorClass = 'bg-gray-700 group-hover:bg-gray-600'; // Default (Future)
+              let colorClass = 'bg-gray-700 group-hover:bg-gray-600'; 
 
               if (isCurrent) {
-                colorClass = 'bg-blue-600 group-hover:bg-blue-500'; // Current (Active)
+                colorClass = 'bg-blue-600 group-hover:bg-blue-500 shadow-[0_0_10px_rgba(37,99,235,0.5)]';
               } else if (isCompleted) {
-                colorClass = 'bg-green-600 group-hover:bg-green-500'; // Completed (Green)
+                colorClass = 'bg-green-600 group-hover:bg-green-500';
               } else if (isPast) {
-                colorClass = 'bg-blue-900 group-hover:bg-blue-800'; // Past but not marked completed (Dark Blue)
+                colorClass = 'bg-blue-900 group-hover:bg-blue-800';
               }
 
               return (
@@ -154,13 +157,12 @@ export default function ProgressTracker({
                   className="flex-1 h-8 flex items-center justify-center group cursor-pointer outline-none"
                   aria-label={`Go to topic ${index + 1}`}
                 >
-                  <div
-                    className={`h-1 w-full rounded-full transition-all duration-300 ${colorClass}`}
-                  />
+                  <div className={`h-1.5 w-full rounded-full transition-all duration-300 ${colorClass}`} />
                 </button>
               );
             })}
           </div>
+
         </div>
       </div>
     </motion.div>

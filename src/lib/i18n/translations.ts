@@ -27,6 +27,14 @@ export const translations = {
       es: "Iglesia Primitiva",
       de: "Frühe Kirche",
     },
+    
+    // --- ADD THIS BLOCK ---
+    scriptureFathers: {
+      en: "Scripture & Fathers",
+      fr: "Écriture & Pères",
+      es: "Escritura y Padres",
+      de: "Schrift & Väter",
+    },
 
     // --- ADD THIS ---
     scienceAndMiracles: {
@@ -77,10 +85,10 @@ export const translations = {
       de: "Wesentliche theologische Begriffe und Definitionen, um Ihnen durch den Reichtum des Glaubens zu helfen.",
     },
     searchPlaceholder: {
-      en: "Search theological terms...",
-      fr: "Rechercher des termes théologiques...",
-      es: "Buscar términos teológicos...",
-      de: "Theologische Begriffe suchen...",
+      en: "Search terms...",
+      fr: "Rechercher des termes...",
+      es: "Buscar términos...",
+      de: "Begriffe suchen...",
     },
     tip: {
       en: "(Tip: Press Ctrl + K to search instantly from anywhere)",
@@ -99,9 +107,9 @@ export const translations = {
       fr: "Index",
       es: "Índice",
       de: "Index",
-    }
+    },
   },
-  
+
   // --- NEW HOME SECTION ---
   home: {
     title: {
@@ -135,8 +143,6 @@ export const translations = {
       de: "Die Reise Beginnen",
     },
   },
-  
-
 
   // Progress & Navigation
   progress: {
@@ -599,10 +605,10 @@ export const translations = {
 
     // Introduction paragraphs
     intro1: {
-      en: 'In the 21st century, the resurgence of militant atheism—often called the "New Atheism"—has led to a cultural shift. Figures like Richard Dawkins, Sam Harris, Christopher Hitchens, and Daniel Dennett argue that belief in God is irrational, outdated, and even dangerous.',
-      fr: "Au 21e siècle, la résurgence de l'athéisme militant — souvent appelé le « Nouvel Athéisme » — a conduit à un changement culturel. Des figures comme Richard Dawkins, Sam Harris, Christopher Hitchens et Daniel Dennett soutiennent que la croyance en Dieu est irrationnelle, dépassée et même dangereuse.",
-      es: 'En el siglo XXI, el resurgimiento del ateísmo militante —a menudo llamado el "Nuevo Ateísmo"— ha llevado a un cambio cultural. Figuras como Richard Dawkins, Sam Harris, Christopher Hitchens y Daniel Dennett argumentan que la creencia en Dios es irracional, anticuada e incluso peligrosa.',
-      de: 'Im 21. Jahrhundert hat das Wiederaufleben des militanten Atheismus — oft als „Neuer Atheismus" bezeichnet — zu einem kulturellen Wandel geführt. Persönlichkeiten wie Richard Dawkins, Sam Harris, Christopher Hitchens und Daniel Dennett argumentieren, dass der Glaube an Gott irrational, veraltet und sogar gefährlich sei.',
+      en: 'In the 21st century, the resurgence of militant atheism, often called the "New Atheism", has led to a cultural shift. Figures like Richard Dawkins, Sam Harris, Christopher Hitchens, and Daniel Dennett argue that belief in God is irrational, outdated, and even dangerous.',
+      fr: "Au 21e siècle, la résurgence de l'athéisme militant, souvent appelé le « Nouvel Athéisme », a conduit à un changement culturel. Des figures comme Richard Dawkins, Sam Harris, Christopher Hitchens et Daniel Dennett soutiennent que la croyance en Dieu est irrationnelle, dépassée et même dangereuse.",
+      es: 'En el siglo XXI, el resurgimiento del ateísmo militante, a menudo llamado el "Nuevo Ateísmo", ha llevado a un cambio cultural. Figuras como Richard Dawkins, Sam Harris, Christopher Hitchens y Daniel Dennett argumentan que la creencia en Dios es irracional, anticuada e incluso peligrosa.',
+      de: 'Im 21. Jahrhundert hat das Wiederaufleben des militanten Atheismus, oft als „Neuer Atheismus" bezeichnet, zu einem kulturellen Wandel geführt. Persönlichkeiten wie Richard Dawkins, Sam Harris, Christopher Hitchens und Daniel Dennett argumentieren, dass der Glaube an Gott irrational, veraltet und sogar gefährlich sei.',
     },
     intro2: {
       en: "Christian apologetics seeks to counter such claims, offering a rational foundation for theism rooted in philosophy, science, and historical evidence.",
@@ -726,10 +732,10 @@ export const translations = {
         de: "Daher hat das Universum eine Ursache.",
       },
       explanation1: {
-        en: "This cause, Craig argues, must be spaceless, timeless, immaterial, and immensely powerful—characteristics that align with classical conceptions of God.",
-        fr: "Cette cause, argue Craig, doit être sans espace, intemporelle, immatérielle et immensément puissante — des caractéristiques qui s'alignent avec les conceptions classiques de Dieu.",
-        es: "Esta causa, argumenta Craig, debe ser sin espacio, atemporal, inmaterial e inmensamente poderosa—características que se alinean con las concepciones clásicas de Dios.",
-        de: "Diese Ursache, argumentiert Craig, muss raumlos, zeitlos, immateriell und immens mächtig sein — Eigenschaften, die mit klassischen Vorstellungen von Gott übereinstimmen.",
+        en: "This cause, Craig argues, must be spaceless, timeless, immaterial, and immensely powerful, characteristics that align with classical conceptions of God.",
+        fr: "Cette cause, argue Craig, doit être sans espace, intemporelle, immatérielle et immensément puissante, des caractéristiques qui s'alignent avec les conceptions classiques de Dieu.",
+        es: "Esta causa, argumenta Craig, debe ser sin espacio, atemporal, inmaterial e inmensamente poderosa, características que se alinean con las concepciones clásicas de Dios.",
+        de: "Diese Ursache, argumentiert Craig, muss raumlos, zeitlos, immateriell und immens mächtig sein, Eigenschaften, die mit klassischen Vorstellungen von Gott übereinstimmen.",
       },
       scientificSupport: {
         en: "Scientific support:",
@@ -1032,10 +1038,10 @@ export const translations = {
         de: "Schlussfolgerung",
       },
       para1: {
-        en: "Basic apologetics shows that belief in God is intellectually reasonable and supported by powerful philosophical arguments. The New Atheism's claims—though popular—are often superficial.",
-        fr: "L'apologétique de base montre que la croyance en Dieu est intellectuellement raisonnable et soutenue par de puissants arguments philosophiques. Les affirmations du Nouvel Athéisme — bien que populaires — sont souvent superficielles.",
-        es: "La apologética básica muestra que la creencia en Dios es intelectualmente razonable y está respaldada por poderosos argumentos filosóficos. Las afirmaciones del Nuevo Ateísmo—aunque populares—a menudo son superficiales.",
-        de: "Grundlegende Apologetik zeigt, dass der Glaube an Gott intellektuell vernünftig und durch kraftvolle philosophische Argumente gestützt ist. Die Behauptungen des Neuen Atheismus — obwohl populär — sind oft oberflächlich.",
+        en: "Basic apologetics shows that belief in God is intellectually reasonable and supported by powerful philosophical arguments. The New Atheism's claims, though popular, are often superficial.",
+        fr: "L'apologétique de base montre que la croyance en Dieu est intellectuellement raisonnable et soutenue par de puissants arguments philosophiques. Les affirmations du Nouvel Athéisme, bien que populaires, sont souvent superficielles.",
+        es: "La apologética básica muestra que la creencia en Dios es intelectualmente razonable y está respaldada por poderosos argumentos filosóficos. Las afirmaciones del Nuevo Ateísmo, aunque populares, a menudo son superficiales.",
+        de: "Grundlegende Apologetik zeigt, dass der Glaube an Gott intellektuell vernünftig und durch kraftvolle philosophische Argumente gestützt ist. Die Behauptungen des Neuen Atheismus, obwohl populär, sind oft oberflächlich.",
       },
       para2: {
         en: "Christians are called not only to believe but to be able to give a reason for the hope that is in them (1 Peter 3:15).",
@@ -1066,10 +1072,10 @@ export const translations = {
         de: "Diese Argumente präsentieren gemeinsam einen starken Fall, dass Gott existiert. Aber zu wissen, dass Gott existiert, wirft eine weitere Frage auf: Hat sich Gott uns offenbart? Hat Er in der Geschichte gehandelt?",
       },
       para2: {
-        en: "If God created the universe and cares about humanity, it makes sense that He would communicate with us. And indeed, billions of people claim He has—through Jesus Christ. But is there evidence for this claim? Let's explore the most pivotal event in history: the Resurrection.",
-        fr: "Si Dieu a créé l'univers et se soucie de l'humanité, il est logique qu'Il communique avec nous. Et en effet, des milliards de personnes affirment qu'Il l'a fait — par Jésus-Christ. Mais y a-t-il des preuves de cette affirmation ? Explorons l'événement le plus crucial de l'histoire : la Résurrection.",
-        es: "Si Dios creó el universo y se preocupa por la humanidad, tiene sentido que Él se comunique con nosotros. Y de hecho, miles de millones de personas afirman que lo ha hecho—a través de Jesucristo. Pero ¿hay evidencia de esta afirmación? Exploremos el evento más crucial de la historia: la Resurrección.",
-        de: "Wenn Gott das Universum geschaffen hat und sich um die Menschheit kümmert, macht es Sinn, dass Er mit uns kommuniziert. Und tatsächlich behaupten Milliarden von Menschen, dass Er es getan hat — durch Jesus Christus. Aber gibt es Beweise für diese Behauptung? Lassen Sie uns das entscheidendste Ereignis der Geschichte erkunden: die Auferstehung.",
+        en: "If God created the universe and cares about humanity, it makes sense that He would communicate with us. And indeed, billions of people claim He has, through Jesus Christ. But is there evidence for this claim? Let's explore the most pivotal event in history: the Resurrection.",
+        fr: "Si Dieu a créé l'univers et se soucie de l'humanité, il est logique qu'Il communique avec nous. Et en effet, des milliards de personnes affirment qu'Il l'a fait, par Jésus-Christ. Mais y a-t-il des preuves de cette affirmation ? Explorons l'événement le plus crucial de l'histoire : la Résurrection.",
+        es: "Si Dios creó el universo y se preocupa por la humanidad, tiene sentido que Él se comunique con nosotros. Y de hecho, miles de millones de personas afirman que lo ha hecho, a través de Jesucristo. Pero ¿hay evidencia de esta afirmación? Exploremos el evento más crucial de la historia: la Resurrección.",
+        de: "Wenn Gott das Universum geschaffen hat und sich um die Menschheit kümmert, macht es Sinn, dass Er mit uns kommuniziert. Und tatsächlich behaupten Milliarden von Menschen, dass Er es getan hat, durch Jesus Christus. Aber gibt es Beweise für diese Behauptung? Lassen Sie uns das entscheidendste Ereignis der Geschichte erkunden: die Auferstehung.",
       },
     },
   },
@@ -1109,10 +1115,10 @@ export const translations = {
       de: "Ist das Christentum in der Geschichte verwurzelt?",
     },
     introPara1: {
-      en: "The Christian faith is not founded on abstract ideas or moral ideals alone. It is grounded in historical events—real occurrences in space and time that can be investigated, analyzed, and compared with other events in ancient history.",
-      fr: "La foi chrétienne n'est pas fondée uniquement sur des idées abstraites ou des idéaux moraux. Elle est ancrée dans des événements historiques — des occurrences réelles dans l'espace et le temps qui peuvent être enquêtées, analysées et comparées avec d'autres événements de l'histoire ancienne.",
-      es: "La fe cristiana no se funda únicamente en ideas abstractas o ideales morales. Está arraigada en eventos históricos—ocurrencias reales en el espacio y el tiempo que pueden ser investigadas, analizadas y comparadas con otros eventos de la historia antigua.",
-      de: "Der christliche Glaube gründet sich nicht allein auf abstrakte Ideen oder moralische Ideale. Er ist in historischen Ereignissen verwurzelt — tatsächlichen Vorkommnissen in Raum und Zeit, die untersucht, analysiert und mit anderen Ereignissen der antiken Geschichte verglichen werden können.",
+      en: "The Christian faith is not founded on abstract ideas or moral ideals alone. It is grounded in historical events, real occurrences in space and time that can be investigated, analyzed, and compared with other events in ancient history.",
+      fr: "La foi chrétienne n'est pas fondée uniquement sur des idées abstraites ou des idéaux moraux. Elle est ancrée dans des événements historiques, des occurrences réelles dans l'espace et le temps qui peuvent être enquêtées, analysées et comparées avec d'autres événements de l'histoire ancienne.",
+      es: "La fe cristiana no se funda únicamente en ideas abstractas o ideales morales. Está arraigada en eventos históricos, ocurrencias reales en el espacio y el tiempo que pueden ser investigadas, analizadas y comparadas con otros eventos de la historia antigua.",
+      de: "Der christliche Glaube gründet sich nicht allein auf abstrakte Ideen oder moralische Ideale. Er ist in historischen Ereignissen verwurzelt, tatsächlichen Vorkommnissen in Raum und Zeit, die untersucht, analysiert und mit anderen Ereignissen der antiken Geschichte verglichen werden können.",
     },
     introPara2: {
       en: 'If these events are true, Christianity stands as the most rational worldview available. If not, as Paul wrote: "If Christ has not been raised, then our preaching is in vain and your faith is in vain." (1 Corinthians 15:14)',
@@ -1396,10 +1402,10 @@ export const translations = {
         de: "3. Wer War Jesus von Nazareth?",
       },
       intro: {
-        en: "Historians—both religious and secular—agree on key facts about Jesus:",
-        fr: "Les historiens — tant religieux que laïques — s'accordent sur des faits clés concernant Jésus :",
-        es: "Los historiadores—tanto religiosos como seculares—concuerdan en hechos clave sobre Jesús:",
-        de: "Historiker — sowohl religiöse als auch säkulare — stimmen in wichtigen Fakten über Jesus überein:",
+        en: "Historians, both religious and secular, agree on key facts about Jesus:",
+        fr: "Les historiens, tant religieux que laïques, s'accordent sur des faits clés concernant Jésus :",
+        es: "Los historiadores, tanto religiosos como seculares, concuerdan en hechos clave sobre Jesús:",
+        de: "Historiker, sowohl religiöse als auch säkulare, stimmen in wichtigen Fakten über Jesus überein:",
       },
       fact1: {
         en: "He was a Jew from Galilee, born between 7–5 B.C.",
@@ -1604,10 +1610,10 @@ export const translations = {
         de: "6. Rationalität der Auferstehung",
       },
       intro: {
-        en: "The resurrection of Jesus is not merely a religious belief—it is the best historical explanation of a collection of widely agreed-upon facts.",
-        fr: "La résurrection de Jésus n'est pas simplement une croyance religieuse — c'est la meilleure explication historique d'un ensemble de faits largement reconnus.",
-        es: "La resurrección de Jesús no es meramente una creencia religiosa—es la mejor explicación histórica de un conjunto de hechos ampliamente acordados.",
-        de: "Die Auferstehung Jesu ist nicht nur ein religiöser Glaube — sie ist die beste historische Erklärung für eine Sammlung weithin anerkannter Fakten.",
+        en: "The resurrection of Jesus is not merely a religious belief, it is the best historical explanation of a collection of widely agreed-upon facts.",
+        fr: "La résurrection de Jésus n'est pas simplement une croyance religieuse, c'est la meilleure explication historique d'un ensemble de faits largement reconnus.",
+        es: "La resurrección de Jesús no es meramente una creencia religiosa, es la mejor explicación histórica de un conjunto de hechos ampliamente acordados.",
+        de: "Die Auferstehung Jesu ist nicht nur ein religiöser Glaube, sie ist die beste historische Erklärung für eine Sammlung weithin anerkannter Fakten.",
       },
       hypothesisLabel: {
         en: "The hypothesis is:",
@@ -1668,10 +1674,10 @@ export const translations = {
         de: "7. Glaube Verwurzelt in der Geschichte",
       },
       para1: {
-        en: "Faith in Christ is not blind. It is a reasonable trust based on strong historical evidence. As early as the Book of Acts, Christians were defending their faith using historical arguments (see Acts 26). Christianity invites examination—and it passes the test.",
-        fr: "La foi en Christ n'est pas aveugle. C'est une confiance raisonnable basée sur de solides preuves historiques. Dès le Livre des Actes, les chrétiens défendaient leur foi en utilisant des arguments historiques (voir Actes 26). Le christianisme invite à l'examen — et il passe le test.",
-        es: "La fe en Cristo no es ciega. Es una confianza razonable basada en sólidas evidencias históricas. Ya en el Libro de los Hechos, los cristianos defendían su fe usando argumentos históricos (véase Hechos 26). El cristianismo invita al examen—y pasa la prueba.",
-        de: "Der Glaube an Christus ist nicht blind. Es ist ein vernünftiges Vertrauen, das auf starken historischen Beweisen basiert. Bereits im Buch der Apostelgeschichte verteidigten Christen ihren Glauben mit historischen Argumenten (siehe Apostelgeschichte 26). Das Christentum lädt zur Prüfung ein — und es besteht den Test.",
+        en: "Faith in Christ is not blind. It is a reasonable trust based on strong historical evidence. As early as the Book of Acts, Christians were defending their faith using historical arguments (see Acts 26). Christianity invites examination and it passes the test.",
+        fr: "La foi en Christ n'est pas aveugle. C'est une confiance raisonnable basée sur de solides preuves historiques. Dès le Livre des Actes, les chrétiens défendaient leur foi en utilisant des arguments historiques (voir Actes 26). Le christianisme invite à l'examen et il passe le test.",
+        es: "La fe en Cristo no es ciega. Es una confianza razonable basada en sólidas evidencias históricas. Ya en el Libro de los Hechos, los cristianos defendían su fe usando argumentos históricos (véase Hechos 26). El cristianismo invita al examen, y pasa la prueba.",
+        de: "Der Glaube an Christus ist nicht blind. Es ist ein vernünftiges Vertrauen, das auf starken historischen Beweisen basiert. Bereits im Buch der Apostelgeschichte verteidigten Christen ihren Glauben mit historischen Argumenten (siehe Apostelgeschichte 26). Das Christentum lädt zur Prüfung ein und es besteht den Test.",
       },
       para2: {
         en: "When we align our worldview with the historical reality of the life, death, and resurrection of Jesus, we are not merely embracing a religion. We are aligning ourselves with the truth about history itself.",

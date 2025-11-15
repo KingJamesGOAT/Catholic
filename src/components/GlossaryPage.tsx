@@ -1,29 +1,27 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { glossaryTerms } from '../lib/i18n/glossaryData';
-import { useLanguage } from '../lib/i18n/LanguageContext'; // Added
-import { translations, t } from '../lib/i18n/translations'; // Added
+import { useLanguage } from '../lib/i18n/LanguageContext';
+import { translations, t } from '../lib/i18n/translations';
 import { BookOpen, AlertCircle, List, ChevronRight } from 'lucide-react';
 
 export default function GlossaryPage() {
-  const { language } = useLanguage(); // Get current language
+  const { language } = useLanguage();
   const trans = translations;
 
   // Safety check
   const allTerms = glossaryTerms || [];
 
   // Helper to get translated content
-  // Returns an object with the term and definition in the CURRENT language
   const terms = allTerms.map(item => ({
     term: item.term[language as keyof typeof item.term] || item.term['en'],
     definition: item.definition[language as keyof typeof item.definition] || item.definition['en']
-  })).sort((a, b) => a.term.localeCompare(b.term)); // Sort alphabetically by the translated term
+  })).sort((a, b) => a.term.localeCompare(b.term));
 
   // Group terms by first letter
   const groupedTerms = terms.reduce((acc, item) => {
     if (!item.term) return acc;
     const letter = item.term.charAt(0).toUpperCase();
-    // Group accents together (e.g., É -> E)
     const normalizedLetter = letter.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     
     if (!acc[normalizedLetter]) acc[normalizedLetter] = [];
@@ -159,10 +157,11 @@ export default function GlossaryPage() {
         )}
       </AnimatePresence>
 
-      <div className="container mx-auto max-w-4xl px-4">
+      {/* Main Content Wrapper */}
+      <div>
         
-        {/* Header */}
-        <div className="text-center mb-16">
+        {/* Header Section */}
+        <div className="container mx-auto max-w-4xl px-4 text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -190,7 +189,8 @@ export default function GlossaryPage() {
           >
             {t(trans.glossary.subtitle, language)}
             <br />
-            <span className="text-sm text-gray-500 mt-2 block">
+            {/* Changed 'block' to 'hidden md:block' to hide on mobile */}
+            <span className="text-sm text-gray-500 mt-2 hidden md:block">
               {t(trans.glossary.tip, language)}
             </span>
           </motion.p>
@@ -198,9 +198,11 @@ export default function GlossaryPage() {
 
         {/* Glossary List */}
         {terms.length === 0 ? (
-          <div className="text-center py-12 bg-red-900/10 border border-red-900 rounded-lg">
-            <AlertCircle className="w-12 h-12 text-red-500 mx-auto mb-4" />
-            <h3 className="text-xl text-white font-bold mb-2">{t(trans.glossary.noResults, language)}</h3>
+          <div className="container mx-auto max-w-4xl px-4">
+            <div className="text-center py-12 bg-red-900/10 border border-red-900 rounded-lg">
+              <AlertCircle className="w-12 h-12 text-red-500 mx-auto mb-4" />
+              <h3 className="text-xl text-white font-bold mb-2">{t(trans.glossary.noResults, language)}</h3>
+            </div>
           </div>
         ) : (
           <div className="space-y-12">
@@ -213,25 +215,31 @@ export default function GlossaryPage() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
               >
-                <div className="flex items-center gap-4 mb-6 sticky top-20 bg-black/95 backdrop-blur-md py-4 z-10 border-b border-gray-800">
-                  <span className="text-3xl font-bold text-blue-500 font-mono">{letter}</span>
+                {/* Sticky Header - Full Width */}
+                <div className="sticky top-16 md:top-20 bg-black/95 backdrop-blur-md z-10 border-b border-gray-800 w-full">
+                  <div className="container mx-auto max-w-4xl px-4 py-4 flex items-center gap-4">
+                    <span className="text-3xl font-bold text-blue-500 font-mono">{letter}</span>
+                  </div>
                 </div>
                 
-                <div className="grid gap-4">
-                  {groupedTerms[letter].map((item, idx) => (
-                    <div 
-                      key={idx} 
-                      className="group relative bg-gray-900/30 border border-gray-800 rounded-xl p-6 hover:border-blue-500/30 hover:bg-gray-900/50 transition-all duration-300"
-                    >
-                      <div className="absolute top-0 left-0 w-1 h-full bg-blue-600 rounded-l-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      <h3 className="text-xl font-bold text-gray-100 mb-2 group-hover:text-blue-400 transition-colors">
-                        {item.term}
-                      </h3>
-                      <p className="text-gray-400 leading-relaxed text-base">
-                        {item.definition}
-                      </p>
-                    </div>
-                  ))}
+                {/* Content - Centered Container */}
+                <div className="container mx-auto max-w-4xl px-4 mt-6">
+                  <div className="grid gap-4">
+                    {groupedTerms[letter].map((item, idx) => (
+                      <div 
+                        key={idx} 
+                        className="group relative bg-gray-900/30 border border-gray-800 rounded-xl p-6 hover:border-blue-500/30 hover:bg-gray-900/50 transition-all duration-300"
+                      >
+                        <div className="absolute top-0 left-0 w-1 h-full bg-blue-600 rounded-l-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        <h3 className="text-xl font-bold text-gray-100 mb-2 group-hover:text-blue-400 transition-colors">
+                          {item.term}
+                        </h3>
+                        <p className="text-gray-400 leading-relaxed text-base">
+                          {item.definition}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </motion.div>
             ))}

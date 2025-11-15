@@ -21,6 +21,9 @@ interface NavigationProps {
   showEarlyChurch?: boolean;
   showScience?: boolean;
   showGlossary?: boolean;
+  // ADDED
+  onDoctrineClick?: () => void;
+  showDoctrine?: boolean;
   onLogoClick: () => void;
 }
 
@@ -37,6 +40,9 @@ export default function Navigation({
   showEarlyChurch = false,
   showScience = false,
   showGlossary = false,
+  // ADDED
+  onDoctrineClick,
+  showDoctrine = false,
   onLogoClick
 }: NavigationProps) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -55,7 +61,7 @@ export default function Navigation({
       }
   };
 
-  const handleSpecialPageClick = (action: 'earlyChurch' | 'science' | 'glossary') => {
+  const handleSpecialPageClick = (action: 'earlyChurch' | 'science' | 'glossary' | 'doctrine') => {
     setMenuOpen(false);
     if (action === 'earlyChurch' && onEarlyChurchClick) {
       onEarlyChurchClick();
@@ -63,6 +69,8 @@ export default function Navigation({
       onScienceClick();
     } else if (action === 'glossary' && onGlossaryClick) {
       onGlossaryClick();
+    } else if (action === 'doctrine' && onDoctrineClick) {
+      onDoctrineClick();
     }
   };
 
@@ -71,7 +79,7 @@ export default function Navigation({
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-gray-800"
+        className="fixed top-0 left-0 right-0 z-40 bg-black/95 backdrop-blur-sm border-b border-gray-800"
         onHoverStart={onHoverStart} 
         onHoverEnd={onHoverEnd}     
       >
@@ -120,6 +128,17 @@ export default function Navigation({
                   )}
                 >
                   {t(trans.nav.earlyChurch, language)}
+                </button>
+
+                {/* NEW BUTTON */}
+                <button
+                  onClick={() => handleSpecialPageClick('doctrine')}
+                  className={cn(
+                    "px-3 py-2 rounded-md text-sm transition-colors duration-200 whitespace-nowrap",
+                    showDoctrine ? "bg-indigo-600 text-white hover:bg-indigo-700" : "text-gray-400 hover:bg-gray-800/50 hover:text-white"
+                  )}
+                >
+                  {t(trans.nav.scriptureFathers, language)}
                 </button>
               </div>
               
@@ -223,7 +242,6 @@ export default function Navigation({
                   </motion.button>
                 )}
 
-                {/* --- MODIFIED GLOSSARY LINK (YELLOW) --- */}
                 {onGlossaryClick && (
                   <motion.button
                     key="glossary-link"
@@ -243,6 +261,31 @@ export default function Navigation({
                         </div>
                         <h3 className="mb-2 text-white">{t(trans.glossary.title, language)}</h3>
                         <p className="text-sm text-gray-500 line-clamp-2">{t(trans.glossary.subtitle, language)}</p>
+                      </div>
+                    </div>
+                  </motion.button>
+                )}
+
+                {/* NEW MOBILE MENU ITEM */}
+                {onDoctrineClick && (
+                  <motion.button
+                    key="doctrine-link"
+                    onClick={() => handleSpecialPageClick('doctrine')}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="text-left p-6 rounded-lg border transition-all duration-300 bg-indigo-900/20 border-indigo-800 hover:bg-indigo-900/30 hover:border-indigo-700"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-600 border-2 border-indigo-400 flex items-center justify-center">
+                        <BookOpen size={20} className="text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                            <span className="text-xs text-gray-500">{t(trans.menu.topicLabel, language)} SP4</span> 
+                            <span className="text-xs text-indigo-400">• {t(trans.nav.scriptureFathers, language)}</span>
+                        </div>
+                        <h3 className="mb-2 text-white">{t(trans.nav.scriptureFathers, language)}</h3>
+                        <p className="text-sm text-gray-500 line-clamp-2">Scripture & Tradition</p>
                       </div>
                     </div>
                   </motion.button>

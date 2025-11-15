@@ -1,9 +1,5 @@
-// kingjamesgoat/catholic/Catholic-9fa91d3b7a7dc54d4c122777284ed3a1f92c5303/src/components/Journey/TopicLayout.tsx
-
-import { ReactNode } from 'react';
-import { motion } from 'motion/react';
-import { useInView } from 'motion/react';
-import { useRef } from 'react';
+import { ReactNode, useRef } from 'react';
+import { motion, useInView } from 'motion/react';
 import TableOfContents from './TableOfContents';
 
 interface TopicLayoutProps {
@@ -21,8 +17,16 @@ export default function TopicLayout({ children, title, subtitle, quote }: TopicL
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <div className="min-h-screen pt-8 pb-32 px-4 bg-gradient-to-b from-black via-gray-900 to-black relative">
-      {/* Table of Contents - Fixed on right side */}
+    // FIXED: Changed div to motion.div and added exit prop to prevent double ToC
+    // FIXED: Reduced pb-32 to pb-12 to remove large bottom gap
+    <motion.div 
+      className="min-h-screen pt-8 pb-12 px-4 bg-gradient-to-b from-black via-gray-900 to-black relative"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      {/* Table of Contents - Now inside motion.div so it fades out with the page */}
       <TableOfContents />
       
       <div className="container mx-auto max-w-4xl">
@@ -38,7 +42,6 @@ export default function TopicLayout({ children, title, subtitle, quote }: TopicL
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              // MODIFIED: Increased font size and set to extra bold for all topics
               className="text-3xl md:text-5xl font-extrabold text-white mb-4"
             >
               {title}
@@ -69,7 +72,7 @@ export default function TopicLayout({ children, title, subtitle, quote }: TopicL
             </motion.div>
           )}
 
-          {/* Content - Wrapped in article for ToC */}
+          {/* Content */}
           <motion.article
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -79,6 +82,6 @@ export default function TopicLayout({ children, title, subtitle, quote }: TopicL
           </motion.article>
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }
