@@ -360,10 +360,21 @@ export default function ProofOfResurrection() {
             <p className="text-gray-300 italic">
               "{t(trans.whoWasJesus.john858, language)}"
             </p>
-            <p className="text-gray-500 mt-2">— John 8:58</p>
+            <p className="text-gray-500 mt-2">
+              {t(trans.whoWasJesus.john858Source, language)}
+            </p>
           </div>
 
-          <p>{t(trans.whoWasJesus.blasphemy, language)}</p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: t(trans.whoWasJesus.blasphemy, language),
+            }}
+          />
+          <p
+            dangerouslySetInnerHTML={{
+              __html: t(trans.whoWasJesus.blasphemyReason, language),
+            }}
+          />
         </div>
       </motion.section>
 
@@ -406,15 +417,28 @@ export default function ProofOfResurrection() {
                     </span>
                     <h4 className="text-white">{item.fact}</h4>
                   </div>
+                  {/* Explanatory Text Added */}
+                  {index === 2 && (
+                    <p className="text-gray-400 text-sm">
+                      {t(trans.fourMinimalFacts.fact3Detail, language)}
+                    </p>
+                  )}
+                  {index === 3 && (
+                    <p className="text-gray-400 text-sm">
+                      {t(trans.fourMinimalFacts.fact4Detail, language)}
+                    </p>
+                  )}
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
 
-        <p className="text-gray-300 mt-8">
-          {t(trans.fourMinimalFacts.support, language)}
-        </p>
+        <p className="text-gray-300 mt-8"
+          dangerouslySetInnerHTML={{
+            __html: t(trans.fourMinimalFacts.support, language),
+          }}
+        />
       </motion.section>
 
       <Separator className="my-16 bg-gray-800" />
@@ -483,6 +507,19 @@ export default function ProofOfResurrection() {
                 }}
               />
             </li>
+            <li className="flex items-start gap-3">
+              <span className="text-red-400 mt-1">•</span>
+              <span
+                className="text-gray-400"
+                dangerouslySetInnerHTML={{
+                  __html: t(
+                    trans.evaluatingExplanations
+                      .hallucinationPoint3,
+                    language,
+                  ),
+                }}
+              />
+            </li>
           </ul>
         </div>
 
@@ -517,19 +554,21 @@ export default function ProofOfResurrection() {
                   __html: t(
                     trans.evaluatingExplanations
                       .wrongTombPoint1,
-                      language,
+                    language,
                   ),
                 }}
               />
             </li>
             <li className="flex items-start gap-3">
               <span className="text-red-400 mt-1">•</span>
-              <span className="text-gray-400">
-                {t(
-                  trans.evaluatingExplanations.wrongTombPoint2,
-                  language,
-                )}
-              </span >
+              <span className="text-gray-400"
+                dangerouslySetInnerHTML={{
+                  __html: t(
+                    trans.evaluatingExplanations.wrongTombPoint2,
+                    language,
+                  ),
+                }}
+              />
             </li>
           </ul >
         </div >
@@ -565,7 +604,7 @@ export default function ProofOfResurrection() {
                   __html: t(
                     trans.evaluatingExplanations
                       .stolenBodyPoint1,
-                      language,
+                    language,
                   ),
                 }}
               />
@@ -611,13 +650,14 @@ export default function ProofOfResurrection() {
           <ul className="list-none space-y-2 pl-6">
             <li className="flex items-start gap-3">
               <span className="text-green-400 mt-1">•</span>
-              <span className="text-gray-400">
-                {t(
-                  trans.evaluatingExplanations
-                    .resurrectionPoint1,
-                  language,
-                )}
-              </span>
+              <span className="text-gray-400"
+                dangerouslySetInnerHTML={{
+                  __html: t(
+                    trans.evaluatingExplanations.resurrectionPoint1,
+                    language,
+                  ),
+                }}
+              />
             </li>
             <li className="flex items-start gap-3">
               <span className="text-green-400 mt-1">•</span>
@@ -635,6 +675,33 @@ export default function ProofOfResurrection() {
           </ul>
         </div>
       </motion.section>
+
+      {/* --- NEW VIDEO SECTION (MOVED) --- */}
+      <Separator className="my-16 bg-gray-800" />
+
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="mb-16"
+      >
+        <h2 className="text-white mb-6">
+          {t(trans.additionalVideo.heading, language)}
+        </h2>
+        <div className="aspect-video w-full rounded-lg overflow-hidden bg-gray-900 border border-gray-800">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/Z8lkuuhVkOI?start=127"
+            title="Additional Video on Resurrection Evidence"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full h-full"
+          ></iframe>
+        </div>
+      </motion.section>
+      {/* --- END OF NEW VIDEO SECTION --- */}
 
       <Separator className="my-16 bg-gray-800" />
 
@@ -666,8 +733,8 @@ export default function ProofOfResurrection() {
               <span>
                 <strong className="text-white">
                   {t(trans.rationality.plausible, language)}
-                </strong >{" "}
-                {t(trans.rationality.plausibleDetail, language)}
+                </strong >
+                <span dangerouslySetInnerHTML={{ __html: t(trans.rationality.plausibleDetail, language) }} />
               </span >
             </li >
             <li className="flex items-start gap-3">
@@ -675,8 +742,8 @@ export default function ProofOfResurrection() {
               <span>
                 <strong className="text-white">
                   {t(trans.rationality.powerful, language)}
-                </strong >{" "}
-                {t(trans.rationality.powerfulDetail, language)}
+                </strong >
+                <span dangerouslySetInnerHTML={{ __html: t(trans.rationality.powerfulDetail, language) }} />
               </span >
             </li >
             <li className="flex items-start gap-3">
@@ -684,23 +751,13 @@ export default function ProofOfResurrection() {
               <span>
                 <strong className="text-white">
                   {t(trans.rationality.consistent, language)}
-                </strong >{" "}
-                {t(
-                  trans.rationality.consistentDetail,
-                  language,
-                )}
+                </strong >
+                <span dangerouslySetInnerHTML={{ __html: t(trans.rationality.consistentDetail, language) }} />
               </span >
             </li >
           </ul >
 
-          <div className="bg-gray-900/50 border-l-4 border-blue-600 p-6 rounded-r-lg my-8">
-            <p className="text-gray-300 italic">
-              "{t(trans.rationality.craigQuote, language)}"
-            </p>
-            <p className="text-gray-500 mt-2">
-              — William Lane Craig
-            </p>
-          </div>
+          {/* Quote block removed */}
         </div >
       </motion.section >
 
@@ -723,6 +780,14 @@ export default function ProofOfResurrection() {
               __html: t(trans.conclusion.para1, language),
             }}
           />
+          
+          {/* New Quote Block */}
+          <div className="bg-gray-900/50 border-l-4 border-blue-600 p-6 rounded-r-lg my-6">
+            <p className="text-gray-300 italic">
+              "{t(trans.conclusion.conclusionQuote, language)}"
+            </p>
+          </div>
+
           <p
             className="text-lg"
             dangerouslySetInnerHTML={{
@@ -732,29 +797,7 @@ export default function ProofOfResurrection() {
         </div >
       </motion.section >
 
-      {/* --- ADDED SECTION --- */}
-      <Separator className="my-16 bg-gray-800" />
-
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="mb-16"
-      >
-        <div className="aspect-video w-full rounded-lg overflow-hidden bg-gray-900 border border-gray-800">
-          <iframe
-            width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/Z8lkuuhVkOI?start=127"
-            title="Additional Video on Resurrection"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="w-full h-full"
-          ></iframe>
-        </div>
-      </motion.section>
-      {/* --- END OF ADDED SECTION --- */}
+      {/* --- NEW VIDEO SECTION (MOVED) --- */}
 
       {/* Bridge to Next Topic */}
       <motion.div

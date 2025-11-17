@@ -45,6 +45,24 @@ export const glossaryTerms: GlossaryTerm[] = [
       de: "Ein Laie, der dem Priester oder Diakon bei liturgischen Feiern, insbesondere der Messe, assistiert.",
     },
   },
+
+  {
+  "id": "sedevacantism",
+  "term": {
+    "en": "Sedevacantism",
+    "fr": "Sédévacantisme",
+    "es": "Sedevacantismoa",
+    "de": "Sedisvakantismus"
+  },
+  "definition": {
+    "en": "The belief (Sedevacantism) or a person who holds the belief (Sedevacantist) that the See of Rome (the Papacy) is currently vacant. Adherents believe that recent Popes, typically since the Second Vatican Council (1962-1965), are heretics and have therefore lost or never validly obtained the papal office.",
+    "fr": "La croyance (Sédévacantisme) ou une personne qui tient la croyance (Sédévacantiste) que le Siège de Rome (la Papauté) est actuellement vacant. Les adhérents estiment que les Papes récents, généralement depuis le Concile Vatican II (1962-1965), sont des hérétiques et ont par conséquent perdu ou n'ont jamais validement obtenu la charge papale.",
+    "es": "La creencia (Sedevacantismo) o una persona que sostiene la creencia (Sedevacantista) de que la Sede de Roma (el Papado) está actualmente vacante. Los adherentes creen que los Papas recientes, generalmente desde el Concilio Vaticano II (1962-1965), son herejes y, por lo tanto, han perdido o nunca obtuvieron válidamente el oficio papal.",
+    "de": "Der Glaube (Sedisvakantismus) oder eine Person, die den Glauben vertritt (Sedisvakantist), dass der Stuhl von Rom (das Papsttum) derzeit vakant ist. Anhänger glauben, dass die jüngsten Päpste, typischerweise seit dem Zweiten Vatikanischen Konzil (1962-1965), Häretiker sind und daher das päpstliche Amt verloren oder nie gültig erlangt haben."
+  },
+},
+
+  
   {
     id: "adoration",
     term: {

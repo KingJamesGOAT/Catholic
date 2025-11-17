@@ -226,10 +226,10 @@ export const translations = {
       de: "1. Timotheus 3:15",
     },
     description: {
-      en: "This apologetics website offers a clear and structured exploration of the fundamental arguments for the Catholic Church. While not exhaustive, it focuses on essential topics regarding authority, history, and Scripture. It is designed to help Christians examine the historical and theological case for Catholicism and reflect deeply on the fullness of the faith.",
-      fr: "Ce site d'apologétique offre une exploration claire et structurée des arguments fondamentaux en faveur de l'Église catholique. Bien que non exhaustive, elle se concentre sur des sujets essentiels concernant l'autorité, l'histoire et l'Écriture. Elle est conçue pour aider les chrétiens à examiner le cas historique et théologique du catholicisme et à réfléchir profondément à la plénitude de la foi.",
-      es: "Este sitio web de apologética ofrece una exploración clara y estructurada de los argumentos fundamentales a favor de la Iglesia Católica. Aunque no es exhaustiva, se centra en temas esenciales sobre autoridad, historia y Escritura. Está diseñada para ayudar a los cristianos a examinar el caso histórico y teológico del catolicismo y reflexionar profundamente sobre la plenitud de la fe.",
-      de: "Diese Apologetik-Website bietet eine klare und strukturierte Untersuchung der grundlegenden Argumente für die katholische Kirche. Obwohl nicht erschöpfend, konzentriert sie sich auf wesentliche Themen in Bezug auf Autorität, Geschichte und Schrift. Sie soll Christen helfen, den historischen und theologischen Fall für den Katholizismus zu prüfen und tief über die Fülle des Glaubens nachzudenken.",
+      en: "This apologetics website offers a structured exploration of the fundamental arguments for the Catholic Church. While not exhaustive, it focuses on essential topics regarding authority, history, and Scripture. It is designed to help Christians examine the historical and theological case for Catholicism and reflect deeply on the fullness of the faith.",
+            fr: "Ce site d'apologétique propose une exploration structurée des arguments fondamentaux en faveur de l'Église catholique. Bien que non exhaustif, il se concentre sur des sujets essentiels concernant l'autorité, l'histoire et les Écritures. Il est conçu pour aider les chrétiens à examiner le dossier historique et théologique du catholicisme et à réfléchir profondément à la plénitude de la foi.",
+            es: "Este sitio web de apologética ofrece una exploración estructurada de los argumentos fundamentales de la Iglesia Católica. Aunque no es exhaustivo, se centra en temas esenciales relacionados con la autoridad, la historia y las Escrituras. Está diseñado para ayudar a los cristianos a examinar el caso histórico y teológico del catolicismo y reflexionar profundamente sobre la plenitud de la fe.",
+            de: "Diese Apologetik-Website bietet eine strukturierte Erkundung der grundlegenden Argumente für die katholische Kirche. Obwohl nicht erschöpfend, konzentriert sie sich auf wesentliche Themen wie Autorität, Geschichte und Heilige Schrift. Sie soll Christen dabei helfen, den historischen und theologischen Fall für den Katholizismus zu prüfen und tief über die Fülle des Glaubens nachzudenken.",
     },
     startJourney: {
       en: "Start the Journey",
@@ -1242,635 +1242,611 @@ de: "Der Unbewegte Beweger, die Unverursachte Ursache, das Notwendige Wesen, das
   },
 },
 
-  // Evidence for the Resurrection Topic
-  proofOfResurrection: {
-    title: {
-      en: "Evidence for the Resurrection",
-      fr: "Preuves de la Résurrection",
-      es: "Evidencia de la Resurrección",
-      de: "Beweise für die Auferstehung",
-    },
-    subtitle: {
-      en: "The Case for Christianity through Historical Evidence",
-      fr: "Le Cas pour le Christianisme à Travers les Preuves Historiques",
-      es: "El Caso del Cristianismo a Través de la Evidencia Histórica",
-      de: "Der Fall für das Christentum durch Historische Beweise",
-    },
-    quote: {
-      en: "If Christ has not been raised, then our preaching is in vain and your faith is in vain.",
-      fr: "Si Christ n'a pas été ressuscité, alors notre prédication est vaine et votre foi est vaine.",
-      es: "Si Cristo no ha resucitado, entonces nuestra predicación es en vano y vuestra fe es en vano.",
-      de: "Wenn Christus nicht auferstanden ist, dann ist unsere Predigt vergeblich und euer Glaube ist vergeblich.",
-    },
-    quoteSource: {
-      en: "1 Corinthians 15:14",
-      fr: "1 Corinthiens 15:14",
-      es: "1 Corintios 15:14",
-      de: "1 Korinther 15:14",
-    },
+ // Evidence for the Resurrection Topic
+proofOfResurrection: {
+  title: {
+    en: "Evidence for the Resurrection",
+    fr: "Preuves de la Résurrection",
+    es: "Evidencia de la Resurrección",
+    de: "Beweise für die Auferstehung",
+  },
+  subtitle: {
+    en: "The Case for Christianity through Historical Evidence",
+    fr: "Le Cas pour le Christianisme à Travers les Preuves Historiques",
+    es: "El Caso del Cristianismo a Través de la Evidencia Histórica",
+    de: "Der Fall für das Christentum durch Historische Beweise",
+  },
+  quote: {
+    en: "If Christ has not been raised, then our preaching is in vain and your faith is in vain.",
+    fr: "Si Christ n'a pas été ressuscité, alors notre prédication est vaine et votre foi est vaine.",
+    es: "Si Cristo no ha resucitado, entonces nuestra predicación es en vano y vuestra fe es en vano.",
+    de: "Wenn Christus nicht auferstanden ist, dann ist unsere Predigt vergeblich und euer Glaube ist vergeblich.",
+  },
+  quoteSource: {
+    en: "1 Corinthians 15:14",
+    fr: "1 Corinthiens 15:14",
+    es: "1 Corintios 15:14",
+    de: "1 Korinther 15:14",
+  },
 
-    // Introduction
-    introHeading: {
-      en: "Is Christianity Rooted in History?",
-      fr: "Le Christianisme Est-il Enraciné dans l'Histoire ?",
-      es: "¿Está el Cristianismo Arraigado en la Historia?",
-      de: "Ist das Christentum in der Geschichte verwurzelt?",
-    },
-    introPara1: {
-      en: "The Christian faith is not founded on abstract ideas or moral ideals alone. It is grounded in historical events, real occurrences in space and time that can be investigated, analyzed, and compared with other events in ancient history.",
-      fr: "La foi chrétienne n'est pas fondée uniquement sur des idées abstraites ou des idéaux moraux. Elle est ancrée dans des événements historiques, des occurrences réelles dans l'espace et le temps qui peuvent être enquêtées, analysées et comparées avec d'autres événements de l'histoire ancienne.",
-      es: "La fe cristiana no se funda únicamente en ideas abstractas o ideales morales. Está arraigada en eventos históricos, ocurrencias reales en el espacio y el tiempo que pueden ser investigadas, analizadas y comparadas con otros eventos de la historia antigua.",
-      de: "Der christliche Glaube gründet sich nicht allein auf abstrakte Ideen oder moralische Ideale. Er ist in historischen Ereignissen verwurzelt, tatsächlichen Vorkommnissen in Raum und Zeit, die untersucht, analysiert und mit anderen Ereignissen der antiken Geschichte verglichen werden können.",
-    },
-    introPara2: {
-      en: 'If these events are true, Christianity stands as the most rational worldview available. If not, as Paul wrote: "If Christ has not been raised, then our preaching is in vain and your faith is in vain." (1 Corinthians 15:14)',
-      fr: "Si ces événements sont vrais, le christianisme se présente comme la vision du monde la plus rationnelle disponible. Sinon, comme Paul l'a écrit : « Si Christ n'a pas été ressuscité, alors notre prédication est vaine et votre foi est vaine. » (1 Corinthiens 15:14)",
-      es: 'Si estos eventos son verdaderos, el cristianismo se presenta como la cosmovisión más racional disponible. Si no, como escribió Pablo: "Si Cristo no ha resucitado, entonces nuestra predicación es en vano y vuestra fe es en vano." (1 Corintios 15:14)',
-      de: 'Wenn diese Ereignisse wahr sind, steht das Christentum als die rationalste verfügbare Weltanschauung da. Wenn nicht, wie Paulus schrieb: „Wenn Christus nicht auferstanden ist, dann ist unsere Predigt vergeblich und euer Glaube ist vergeblich." (1 Korinther 15:14)',
-    },
+  // Introduction
+  introHeading: {
+    en: "Is Christianity Rooted in History?",
+    fr: "Le Christianisme Est-il Enraciné dans l'Histoire ?",
+    es: "¿Está el Cristianismo Arraigado en la Historia?",
+    de: "Ist das Christentum in der Geschichte verwurzelt?",
+  },
+  introPara1: {
+    en: "The Christian faith is not founded on abstract ideas or moral ideals alone. It is grounded in historical events, real occurrences in space and time that can be investigated, analyzed, and compared with other events in ancient history.",
+    fr: "La foi chrétienne n'est pas fondée uniquement sur des idées abstraites ou des idéaux moraux. Elle est ancrée dans des événements historiques, des occurrences réelles dans l'espace et le temps qui peuvent être enquêtées, analysées et comparées avec d'autres événements de l'histoire ancienne.",
+    es: "La fe cristiana no se funda únicamente en ideas abstractas o ideales morales. Está arraigada en eventos históricos, ocurrencias reales en el espacio y el tiempo que pueden ser investigadas, analizadas y comparadas con otros eventos de la historia antigua.",
+    de: "Der christliche Glaube gründet sich nicht allein auf abstrakte Ideen oder moralische Ideale. Er ist in historischen Ereignissen verwurzelt, tatsächlichen Vorkommnissen in Raum und Zeit, die untersucht, analysiert und mit anderen Ereignissen der antiken Geschichte verglichen werden können.",
+  },
+  introPara2: {
+    en: 'If these events are true, Christianity stands as the most rational worldview available. If not, as Paul wrote: "If Christ has not been raised, then our preaching is in vain and your faith is in vain." (1 Corinthians 15:14)',
+    fr: "Si ces événements sont vrais, le christianisme se présente comme la vision du monde la plus rationnelle disponible. Sinon, comme Paul l'a écrit : « Si Christ n'a pas été ressuscité, alors notre prédication est vaine et votre foi est vaine. » (1 Corinthiens 15:14)",
+    es: 'Si estos eventos son verdaderos, el cristianismo se presenta como la cosmovisión más racional disponible. Si no, como escribió Pablo: "Si Cristo no ha resucitado, entonces nuestra predicación es en vano y vuestra fe es en vano." (1 Corintios 15:14)',
+    de: 'Wenn diese Ereignisse wahr sind, steht das Christentum als die rationalste verfügbare Weltanschauung da. Wenn nicht, wie Paulus schrieb: „Wenn Christus nicht auferstanden ist, dann ist unsere Predigt vergeblich und euer Glaube ist vergeblich." (1 Korinther 15:14)',
+  },
 
-    // Section 1: Minimal Facts
-    minimalFacts: {
-      heading: {
-        en: '1. The "Minimal Facts" Approach',
-        fr: "1. L'Approche des « Faits Minimaux »",
-        es: '1. El Enfoque de los "Hechos Mínimos"',
-        de: '1. Der Ansatz der „Minimalen Fakten"',
-      },
-      intro: {
-        en: "Developed by scholars like Gary Habermas, the Minimal Facts Approach builds a case for the resurrection of Jesus based on a small set of historical data that meet two criteria:",
-        fr: "Développée par des chercheurs comme Gary Habermas, l'Approche des Faits Minimaux construit un cas pour la résurrection de Jésus basé sur un petit ensemble de données historiques qui répondent à deux critères :",
-        es: "Desarrollado por académicos como Gary Habermas, el Enfoque de los Hechos Mínimos construye un caso para la resurrección de Jesús basado en un pequeño conjunto de datos históricos que cumplen dos criterios:",
-        de: "Entwickelt von Gelehrten wie Gary Habermas, baut der Ansatz der Minimalen Fakten einen Fall für die Auferstehung Jesu auf, basierend auf einer kleinen Menge historischer Daten, die zwei Kriterien erfüllen:",
-      },
-      criterion1: {
-        en: "They are strongly evidenced by multiple, independent sources.",
-        fr: "Ils sont fortement attestés par de multiples sources indépendantes.",
-        es: "Están fuertemente evidenciados por múltiples fuentes independientes.",
-        de: "Sie sind durch mehrere unabhängige Quellen stark belegt.",
-      },
-      criterion2: {
-        en: "They are accepted by the vast majority of scholars in the field, including skeptical ones.",
-        fr: "Ils sont acceptés par la grande majorité des chercheurs du domaine, y compris les sceptiques.",
-        es: "Son aceptados por la gran mayoría de los académicos en el campo, incluidos los escépticos.",
-        de: "Sie werden von der überwiegenden Mehrheit der Wissenschaftler auf diesem Gebiet akzeptiert, einschließlich skeptischer.",
-      },
+  // Section 1: Minimal Facts
+  minimalFacts: {
+    heading: {
+      en: '1. The "Minimal Facts" Approach',
+      fr: "1. L'Approche des « Faits Minimaux »",
+      es: '1. El Enfoque de los "Hechos Mínimos"',
+      de: '1. Der Ansatz der „Minimalen Fakten"',
     },
-
-    // --- DÉBUT DE LA MODIFICATION ---
-    rankHistorical: {
-      en: "Historical Document #",
-      fr: "Document Historique n°",
-      es: "Documento Histórico n.º",
-      de: "Historisches Dokument Nr.",
+    intro: {
+      en: "Developed by scholars like Gary Habermas, the Minimal Facts Approach builds a case for the resurrection of Jesus based on a small set of historical data that meet two criteria:",
+      fr: "Développée par des chercheurs comme Gary Habermas, l'Approche des Faits Minimaux construit un cas pour la résurrection de Jésus basé sur un petit ensemble de données historiques qui répondent à deux critères :",
+      es: "Desarrollado por académicos como Gary Habermas, el Enfoque de los Hechos Mínimos construye un caso para la resurrección de Jesús basado en un pequeño conjunto de datos históricos que cumplen dos criterios:",
+      de: "Entwickelt von Gelehrten wie Gary Habermas, baut der Ansatz der Minimalen Fakten einen Fall für die Auferstehung Jesu auf, basierend auf einer kleinen Menge historischer Daten, die zwei Kriterien erfüllen:",
     },
-    rankUnmatched: {
-      en: "The Unmatched Standard",
-      fr: "Le Standard Inégalé",
-      es: "El Estándar Inigualable",
-      de: "Der Unübertroffene Standard",
+    criterion1: {
+      en: "<strong class='text-white'>Strong Evidence:</strong> They are strongly evidenced by multiple, independent sources.",
+      fr: "<strong class='text-white'>Preuves Solides :</strong> Ils sont fortement attestés par de multiples sources indépendantes.",
+      es: "<strong class='text-white'>Evidencia Sólida:</strong> Están fuertemente evidenciados por múltiples fuentes independientes.",
+      de: "<strong class='text-white'>Starke Beweise:</strong> Sie sind durch mehrere unabhängige Quellen stark belegt.",
     },
-    typeChristian: {
-      en: "The Christian Scriptures",
-      fr: "Les Écritures Chrétiennes",
-      es: "Las Escrituras Cristianas",
-      de: "Die Christlichen Schriften",
-    },
-    typeSecular: {
-      en: "Secular/Classical Text",
-      fr: "Texte Séculier/Classique",
-      es: "Texto Secular/Clásico",
-      de: "Säkularer/Klassischer Text",
-    },
-    labelManuscripts: {
-      en: "Manuscripts",
-      fr: "Manuscrits",
-      es: "Manuscritos",
-      de: "Manuskripte",
-    },
-    labelTimeGap: {
-      en: "Time Gap to Original Event:",
-      fr: "Écart Temporel à l'Événement Original:",
-      es: "Intervalo de Tiempo al Evento Original:",
-      de: "Zeitspanne zum Originalereignis:",
-    },
-    scaleCount: {
-      en: "The Overwhelming Count",
-      fr: "Le Compte Écrasant",
-      es: "El Recuento Abrumador",
-      de: "Die Überwältigende Zahl",
-    },
-    scaleMaxMs: {
-      en: "Scale: {0} max",
-      fr: "Échelle: {0} max",
-      es: "Escala: {0} máx",
-      de: "Skala: {0} max",
-    },
-    scaleTimeClose: {
-      en: "The Closest in Time",
-      fr: "Le Plus Proche dans le Temps",
-      es: "El Más Cercano en el Temps",
-      de: "Der Zeitlich Nächste",
-    },
-    scaleMaxGap: {
-      en: "Max Gap: {0} years",
-      fr: "Écart Max: {0} ans",
-      es: "Intervalo Máx: {0} años",
-      de: "Max. Zeitspanne: {0} Jahre",
-    },
-    scaleVisualNote: {
-      en: "(Visual length of bar indicates relative closeness to original document)",
-      fr: "(La longueur visuelle de la barre indique la proximité relative avec le document original)",
-      es: "(La longitud visual de la barre indique la proximidad relative au document original)",
-      de: "(Die visuelle Länge des Balkens gibt die relative Nähe zum Originaldokument an)",
-    },
-
-    // Section 2: Manuscript Evidence
-    manuscriptEvidence: {
-      heading: {
-        en: "2. Unmatched Manuscript Evidence for the New Testament",
-        fr: "2. Preuves Manuscrites Inégalées pour le Nouveau Testament",
-        es: "2. Evidencia Manuscrita Incomparable del Nuevo Testamento",
-        de: "2. Unübertroffene Manuskript-Beweise für das Neue Testament",
-      },
-      intro: {
-        en: "When comparing the New Testament with other ancient works, its textual support is overwhelming:",
-        fr: "Lorsqu'on compare le Nouveau Testament avec d'autres œuvres anciennes, son soutien textuel est écrasant :",
-        es: "Al comparar el Nuevo Testamento con otras obras antiguas, su respaldo textual es abrumador:",
-        de: "Beim Vergleich des Neuen Testaments mit anderen antiken Werken ist seine textliche Unterstützung überwältigend:",
-      },
-      tableAuthor: {
-        en: "Author",
-        fr: "Auteur",
-        es: "Autor",
-        de: "Autor",
-      },
-      tableTimeGap: {
-        en: "Time Gap (Event to Earliest Copy)",
-        fr: "Écart Temporel (Événement à la Première Copie)",
-        es: "Intervalo de Tiempo (Evento a la Primera Copia)",
-        de: "Zeitspanne (Ereignis zur frühesten Kopie)",
-      },
-      tableManuscripts: {
-        en: "Number of Manuscripts",
-        fr: "Nombre de Manuscrits",
-        es: "Número de Manuscritos",
-        de: "Anzahl der Manuskripte",
-      },
-      newTestament: {
-        en: "New Testament",
-        fr: "Nouveau Testament",
-        es: "Nuevo Testamento",
-        de: "Neues Testament",
-      },
-      timeGap25: {
-        en: "25 years",
-        fr: "25 ans",
-        es: "25 años",
-        de: "25 Jahre",
-      },
-      timeGap400: {
-        en: "400 years",
-        fr: "400 ans",
-        es: "400 años",
-        de: "400 Jahre",
-      },
-      timeGap1000: {
-        en: "1,000 years",
-        fr: "1 000 ans",
-        es: "1.000 años",
-        de: "1.000 Jahre",
-      },
-      timeGap1200: {
-        en: "1,200 years",
-        fr: "1 200 ans",
-        es: "1.200 años",
-        de: "1.200 Jahre",
-      },
-      timeGap1400: {
-        en: "1,400 years",
-        fr: "1 400 ans",
-        es: "1.400 años",
-        de: "1.400 Jahre",
-      },
-      conclusion: {
-        en: "No other ancient document comes close in terms of early attestation and manuscript quantity. This makes the New Testament the most historically reliable document of antiquity.",
-        fr: "Aucun autre document ancien n'approche en termes d'attestation précoce et de quantité de manuscrits. Cela fait du Nouveau Testament le document le plus historiquement fiable de l'antiquité.",
-        es: "Ningún otro documento antiguo se acerca en términos de atestación temprana y cantidad de manuscritos. Esto hace del Nuevo Testamento el documento más históricamente confiable de la antigüedad.",
-        de: "Kein anderes antikes Dokument kommt in Bezug auf frühe Bezeugung und Manuskriptmenge nahe. Dies macht das Neue Testament zum historisch zuverlässigsten Dokument der Antike.",
-      },
-      timeGap750: {
-        en: "750 years",
-        fr: "750 ans",
-        es: "750 años",
-        de: "750 Jahre",
-      },
-    },
-
-    // Author Name Translations
-    authorHomer: {
-      en: "Homer",
-      fr: "Homère",
-      es: "Homero",
-      de: "Homer",
-    },
-    authorDemosthenes: {
-      en: "Demosthenes",
-      fr: "Démosthène",
-      es: "Demóstenes",
-      de: "Demosthenes",
-    },
-    authorHerodotus: {
-      en: "Herodotus",
-      fr: "Hérodote",
-      es: "Heródoto",
-      de: "Herodot",
-    },
-    authorPlato: {
-      en: "Plato",
-      fr: "Platon",
-      es: "Platón",
-      de: "Plato",
-    },
-    authorTacitus: {
-      en: "Tacitus",
-      fr: "Tacite",
-      es: "Tácito",
-      de: "Tacitus",
-    },
-    authorCaesar: {
-      en: "Caesar",
-      fr: "César",
-      es: "César",
-      de: "Cäsar",
-    },
-    authorPliny: {
-      en: "Pliny",
-      fr: "Pline",
-      es: "Plinio",
-      de: "Plinius",
-    },
-
-    // Visualization and Scale Keys
-    rankHistorical: {
-      en: "Historical Document #",
-      fr: "Document Historique n°",
-      es: "Documento Histórico n.º",
-      de: "Historisches Dokument Nr.",
-    },
-    rankUnmatched: {
-      en: "The Unmatched Standard",
-      fr: "Le Standard Inégalé",
-      es: "El Estándar Inigualable",
-      de: "Der Unübertroffene Standard",
-    },
-    scaleCount: {
-      en: "The Overwhelming Count",
-      fr: "Le Compte Écrasant",
-      es: "El Recuento Abrumador",
-      de: "Die Überwältigende Zahl",
-    },
-    scaleMaxMs: {
-      en: "Scale: {0} max",
-      fr: "Échelle: {0} max",
-      es: "Escala: {0} máx",
-      de: "Skala: {0} max",
-    },
-    scaleTimeClose: {
-      en: "The Closest in Time",
-      fr: "Le Plus Proche dans le Temps",
-      es: "El Más Cercano en el Temps",
-      de: "Der Zeitlich Nächste",
-    },
-    scaleMaxGap: {
-      en: "Max Gap: {0} years",
-      fr: "Écart Max: {0} ans",
-      es: "Intervalo Máx: {0} años",
-      de: "Max. Zeitspanne: {0} Jahre",
-    },
-    scaleVisualNote: {
-      en: "(Visual length of bar indicates relative closeness to original document)",
-      fr: "(La longueur visuelle de la barre indique la proximité relative avec le document original)",
-      es: "(La longitud visual de la barre indique la proximité relative au document original)",
-      de: "(Die visuelle Länge des Balkens gibt die relative Nähe zum Originaldokument an)",
-    },
-
-    // Section 3: Who Was Jesus
-    whoWasJesus: {
-      heading: {
-        en: "3. Who Was Jesus of Nazareth?",
-        fr: "3. Qui Était Jésus de Nazareth ?",
-        es: "3. ¿Quién Era Jesús de Nazaret?",
-        de: "3. Wer War Jesus von Nazareth?",
-      },
-      intro: {
-        en: "Historians, both religious and secular, agree on key facts about Jesus:",
-        fr: "Les historiens, tant religieux que laïques, s'accordent sur des faits clés concernant Jésus :",
-        es: "Los historiadores, tanto religiosos como seculares, concuerdan en hechos clave sobre Jesús:",
-        de: "Historiker, sowohl religiöse als auch säkulare, stimmen in wichtigen Fakten über Jesus überein:",
-      },
-      fact1: {
-        en: "He was a Jew from Galilee, born between 7–5 B.C.",
-        fr: "Il était un Juif de Galilée, né entre 7 et 5 av. J.-C.",
-        es: "Era un judío de Galilea, nacido entre el 7 y el 5 a.C.",
-        de: "Er war ein Jude aus Galiläa, geboren zwischen 7–5 v. Chr.",
-      },
-      fact2: {
-        en: "He was crucified under Pontius Pilate.",
-        fr: "Il a été crucifié sous Ponce Pilate.",
-        es: "Fue crucificado bajo Poncio Pilato.",
-        de: "Er wurde unter Pontius Pilatus gekreuzigt.",
-      },
-      fact3: {
-        en: "His followers came to believe He rose from the dead and began proclaiming this in Jerusalem just weeks later.",
-        fr: "Ses disciples en sont venus à croire qu'Il était ressuscité des morts et ont commencé à le proclamer à Jérusalem quelques semaines plus tard.",
-        es: "Sus seguidores llegaron a creer que Él resucitó de entre los muertos y comenzaron a proclamar esto en Jerusalén apenas semanas después.",
-        de: "Seine Anhänger kamen zu dem Glauben, dass Er von den Toten auferstanden war, und begannen, dies nur wenige Wochen später in Jerusalem zu verkünden.",
-      },
-      divineClaimIntro: {
-        en: "The claim that Jesus believed Himself to be God is attested in the Gospels. In John 8:58, Jesus said:",
-        fr: "L'affirmation selon laquelle Jésus croyait être Dieu est attestée dans les Évangiles. Dans Jean 8:58, Jésus a dit :",
-        es: "La afirmación de que Jesús creía ser Dios está atestiguada en los Evangelios. En Juan 8:58, Jesús dijo:",
-        de: "Die Behauptung, dass Jesus glaubte, Gott zu sein, ist in den Evangelien bezeugt. In Johannes 8:58 sagte Jesus:",
-      },
-      john858: {
-        en: "Before Abraham was, I AM.",
-        fr: "Avant qu'Abraham fût, je suis.",
-        es: "Antes de que Abraham fuera, YO SOY.",
-        de: "Ehe Abraham war, bin ICH.",
-      },
-      blasphemy: {
-        en: "This divine claim led to accusations of blasphemy and ultimately to His execution.",
-        fr: "Cette affirmation divine a conduit à des accusations de blasphème et finalement à Son exécution.",
-        es: "Esta afirmación divina llevó a acusaciones de blasfemia y finalmente a Su ejecución.",
-        de: "Diese göttliche Behauptung führte zu Blasphemievorwürfen und letztlich zu Seiner Hinrichtung.",
-      },
-    },
-
-    // Section 4: Four Minimal Facts
-    fourMinimalFacts: {
-      heading: {
-        en: "4. The Four Minimal Facts Accepted by Nearly All Scholars",
-        fr: "4. Les Quatre Faits Minimaux Acceptés par Presque Tous les Chercheurs",
-        es: "4. Los Cuatro Hechos Mínimos Aceptados por Casi Todos los Académicos",
-        de: "4. Die Vier Minimalen Fakten, die von Fast Allen Gelehrten Akzeptiert Werden",
-      },
-      fact1: {
-        en: "Jesus died by crucifixion",
-        fr: "Jésus est mort par crucifixion",
-        es: "Jesús murió por crucifixión",
-        de: "Jesus starb durch Kreuzigung",
-      },
-      fact2: {
-        en: "His tomb was found empty",
-        fr: "Son tombeau a été trouvé vide",
-        es: "Su tumba fue encontrada vacía",
-        de: "Sein Grab wurde leer vorgefunden",
-      },
-      fact3: {
-        en: "His disciples sincerely believed He rose and appeared to them",
-        fr: "Ses disciples croyaient sincèrement qu'Il était ressuscité et leur était apparu",
-        es: "Sus discípulos creyeron sinceramente que Él resucitó y se les apareció",
-        de: "Seine Jünger glaubten aufrichtig, dass Er auferstanden war und ihnen erschien",
-      },
-      fact4: {
-        en: "Paul and James both converted based on post-resurrection appearances",
-        fr: "Paul et Jacques se sont tous deux convertis sur la base d'apparitions post-résurrection",
-        es: "Pablo y Santiago se convirtieron basándose en apariciones post-resurrección",
-        de: "Paulus und Jakobus bekehrten sich beide aufgrund von Erscheinungen nach der Auferstehung",
-      },
-      support: {
-        en: "These facts are supported by early creeds, independent Gospel sources, and external historical writings (Josephus, Tacitus, etc.).",
-        fr: "Ces faits sont soutenus par des crédos anciens, des sources évangéliques indépendantes et des écrits historiques externes (Josèphe, Tacite, etc.).",
-        es: "Estos hechos están respaldados por credos tempranos, fuentes evangélicas independientes y escritos históricos externos (Josefo, Tácito, etc.).",
-        de: "Diese Fakten werden durch frühe Glaubensbekenntnisse, unabhängige Evangelienquellen und externe historische Schriften (Josephus, Tacitus usw.) gestützt.",
-      },
-    },
-
-    // Section 5: Evaluating Explanations
-    evaluatingExplanations: {
-      heading: {
-        en: "5. Evaluating the Explanations",
-        fr: "5. Évaluation des Explications",
-        es: "5. Evaluando las Explicaciones",
-        de: "5. Bewertung der Erklärungen",
-      },
-      intro: {
-        en: "Historians and skeptics have proposed various explanations for these facts. Each alternative theory fails under scrutiny:",
-        fr: "Les historiens et les sceptiques ont proposé diverses explications pour ces faits. Chaque théorie alternative échoue à l'examen :",
-        es: "Los historiadores y escépticos han propuesto varias explicaciones para estos hechos. Cada teoría alternativa falla bajo escrutinio:",
-        de: "Historiker und Skeptiker haben verschiedene Erklärungen für diese Fakten vorgeschlagen. Jede alternative Theorie versagt bei genauerer Prüfung:",
-      },
-
-      hallucinationTitle: {
-        en: "A. Hallucination Hypothesis",
-        fr: "A. Hypothèse de l'Hallucination",
-        es: "A. Hipótesis de la Alucinación",
-        de: "A. Halluzinations-Hypothese",
-      },
-      hallucinationIntro: {
-        en: "This theory fails because:",
-        fr: "Cette théorie échoue parce que :",
-        es: "Esta teoría falla porque:",
-        de: "Diese Theorie scheitert, weil:",
-      },
-      hallucinationPoint1: {
-        en: "Hallucinations are private experiences, yet the resurrection appearances were group events (e.g., 1 Corinthians 15:6).",
-        fr: "Les hallucinations sont des expériences privées, pourtant les apparitions de la résurrection étaient des événements de groupe (par ex., 1 Corinthiens 15:6).",
-        es: "Las alucinaciones son experiencias privadas, sin embargo, las apariciones de la resurrección fueron eventos grupales (p. ej., 1 Corintios 15:6).",
-        de: "Halluzinationen sind private Erfahrungen, dennoch waren die Auferstehungserscheinungen Gruppenereignisse (z. B. 1 Korinther 15:6).",
-      },
-      hallucinationPoint2: {
-        en: "It cannot explain the empty tomb.",
-        fr: "Elle ne peut pas expliquer le tombeau vide.",
-        es: "No puede explicar la tumba vacía.",
-        de: "Sie kann das leere Grab nicht erklären.",
-      },
-
-      wrongTombTitle: {
-        en: "B. Wrong Tomb Hypothesis",
-        fr: "B. Hypothèse du Mauvais Tombeau",
-        es: "B. Hipótesis de la Tumba Equivocada",
-        de: "B. Falsch-Grab-Hypothese",
-      },
-      wrongTombIntro: {
-        en: "This fails because:",
-        fr: "Cela échoue parce que :",
-        es: "Esto falla porque:",
-        de: "Dies scheitert, weil:",
-      },
-      wrongTombPoint1: {
-        en: "The tomb belonged to Joseph of Arimathea, a member of the Sanhedrin. It was a known, public location.",
-        fr: "Le tombeau appartenait à Joseph d'Arimathie, membre du Sanhédrin. C'était un lieu connu et public.",
-        es: "La tumba pertenecía a José de Arimatea, miembro del Sanedrín. Era una ubicación conocida y pública.",
-        de: "Das Grab gehörte Josef von Arimathäa, einem Mitglied des Sanhedrins. Es war ein bekannter, öffentlicher Ort.",
-      },
-      wrongTombPoint2: {
-        en: "The Jewish authorities could have produced the body to stop the Christian movement.",
-        fr: "Les autorités juives auraient pu produire le corps pour arrêter le mouvement chrétien.",
-        es: "Las autoridades judías podrían haber producido el cuerpo para detener el movimiento cristiano.",
-        de: "Die jüdischen Behörden hätten den Leichnam vorlegen können, um die christliche Bewegung zu stoppen.",
-      },
-
-      stolenBodyTitle: {
-        en: "C. Stolen Body Theory",
-        fr: "C. Théorie du Corps Volé",
-        es: "C. Teoría del Cuerpo Robado",
-        de: "C. Gestohlener-Körper-Theorie",
-      },
-      stolenBodyIntro: {
-        en: "This fails because:",
-        fr: "Cela échoue parce que :",
-        es: "Esto falla porque:",
-        de: "Dies scheitert, weil:",
-      },
-      stolenBodyPoint1: {
-        en: "The disciples were not expecting a resurrection and had no motive to lie and face martyrdom.",
-        fr: "Les disciples ne s'attendaient pas à une résurrection et n'avaient aucun motif de mentir et d'affronter le martyre.",
-        es: "Los discípulos no esperaban una resurrección y no tenían motivo para mentir y enfrentar el martirio.",
-        de: "Die Jünger erwarteten keine Auferstehung und hatten kein Motiv zu lügen und das Martyrium zu erleiden.",
-      },
-      stolenBodyPoint2: {
-        en: "It cannot explain the post-mortem appearances and the transformation of the disciples.",
-        fr: "Elle ne peut pas expliquer les apparitions post-mortem et la transformation des disciples.",
-        es: "No puede explicar las apariciones post-mortem y la transformación de los discípulos.",
-        de: "Sie kann die Erscheinungen nach dem Tod und die Verwandlung der Jünger nicht erklären.",
-      },
-
-      resurrectionTitle: {
-        en: "D. Resurrection Hypothesis",
-        fr: "D. Hypothèse de la Résurrection",
-        es: "D. Hipótesis de la Resurrección",
-        de: "D. Auferstehungs-Hypothese",
-      },
-      resurrectionIntro: {
-        en: "This best fits all the facts:",
-        fr: "Cela correspond le mieux à tous les faits :",
-        es: "Esto se ajusta mejor a todos los hechos:",
-        de: "Dies passt am besten zu allen Fakten:",
-      },
-      resurrectionPoint1: {
-        en: "Explains the empty tomb, appearances, conversions, and explosion of early Christianity.",
-        fr: "Explique le tombeau vide, les apparitions, les conversions et l'explosion du christianisme primitif.",
-        es: "Explica la tumba vacía, las apariciones, las conversiones y la explosión del cristianismo primitivo.",
-        de: "Erklärt das leere Grab, die Erscheinungen, Bekehrungen und die Explosion des frühen Christentums.",
-      },
-      resurrectionPoint2: {
-        en: "It is coherent, explanatorily powerful, and less ad hoc than other hypotheses.",
-        fr: "Elle est cohérente, explicativement puissante et moins ad hoc que d'autres hypothèses.",
-        es: "Es coherente, explicativamente poderosa y menos ad hoc que otras hipótesis.",
-        de: "Sie ist kohärent, erklärungskräftig und weniger ad hoc als andere Hypothesen.",
-      },
-    },
-
-    // Section 6: Rationality
-    rationality: {
-      heading: {
-        en: "6. Rationality of the Resurrection",
-        fr: "6. Rationalité de la Résurrection",
-        es: "6. Racionalidad de la Resurrección",
-        de: "6. Rationalität der Auferstehung",
-      },
-      intro: {
-        en: "The resurrection of Jesus is not merely a religious belief, it is the best historical explanation of a collection of widely agreed-upon facts.",
-        fr: "La résurrection de Jésus n'est pas simplement une croyance religieuse, c'est la meilleure explication historique d'un ensemble de faits largement reconnus.",
-        es: "La resurrección de Jesús no es meramente una creencia religiosa, es la mejor explicación histórica de un conjunto de hechos ampliamente acordados.",
-        de: "Die Auferstehung Jesu ist nicht nur ein religiöser Glaube, sie ist die beste historische Erklärung für eine Sammlung weithin anerkannter Fakten.",
-      },
-      hypothesisLabel: {
-        en: "The hypothesis is:",
-        fr: "L'hypothèse est :",
-        es: "La hipótesis es:",
-        de: "Die Hypothese ist:",
-      },
-      plausible: {
-        en: "Plausible:",
-        fr: "Plausible :",
-        es: "Plausible:",
-        de: "Plausibel:",
-      },
-      plausibleDetail: {
-        en: "Fits the historical and cultural context of first-century Judea.",
-        fr: "Correspond au contexte historique et culturel de la Judée du premier siècle.",
-        es: "Se ajusta al contexto histórico y cultural de Judea del primer siglo.",
-        de: "Passt zum historischen und kulturellen Kontext des ersten Jahrhunderts in Judäa.",
-      },
-      powerful: {
-        en: "Powerful:",
-        fr: "Puissante :",
-        es: "Poderosa:",
-        de: "Kraftvoll:",
-      },
-      powerfulDetail: {
-        en: "Explains all the known data.",
-        fr: "Explique toutes les données connues.",
-        es: "Explica todos los datos conocidos.",
-        de: "Erklärt alle bekannten Daten.",
-      },
-      consistent: {
-        en: "Consistent:",
-        fr: "Cohérente :",
-        es: "Consistente:",
-        de: "Konsistent:",
-      },
-      consistentDetail: {
-        en: "Aligns with early Christian writings and external testimony.",
-        fr: "S'aligne avec les écrits chrétiens primitifs et les témoignages externes.",
-        es: "Se alinea con los escritos cristianos tempranos y el testimonio externo.",
-        de: "Stimmt mit frühen christlichen Schriften und externen Zeugnissen überein.",
-      },
-      craigQuote: {
-        en: "Belief in the resurrection is not a leap into the dark, but a step into the light.",
-        fr: "La croyance en la résurrection n'est pas un saut dans l'obscurité, mais un pas vers la lumière.",
-        es: "La creencia en la resurrección no es un salto en la oscuridad, sino un paso hacia la luz.",
-        de: "Der Glaube an die Auferstehung ist kein Sprung ins Dunkle, sondern ein Schritt ins Licht.",
-      },
-    },
-
-    // Conclusion
-    conclusion: {
-      heading: {
-        en: "7. Faith Rooted in History",
-        fr: "7. Foi Enracinée dans l'Histoire",
-        es: "7. Fe Arraigada en la Historia",
-        de: "7. Glaube Verwurzelt in der Geschichte",
-      },
-      para1: {
-        en: "Faith in Christ is not blind. It is a reasonable trust based on strong historical evidence. As early as the Book of Acts, Christians were defending their faith using historical arguments (see Acts 26). Christianity invites examination and it passes the test.",
-        fr: "La foi en Christ n'est pas aveugle. C'est une confiance raisonnable basée sur de solides preuves historiques. Dès le Livre des Actes, les chrétiens défendaient leur foi en utilisant des arguments historiques (voir Actes 26). Le christianisme invite à l'examen et il passe le test.",
-        es: "La fe en Cristo no es ciega. Es una confianza razonable basada en sólidas evidencias históricas. Ya en el Libro de los Hechos, los cristianos defendían su fe usando argumentos históricos (véase Hechos 26). El cristianismo invita al examen, y pasa la prueba.",
-        de: "Der Glaube an Christus ist nicht blind. Es ist ein vernünftiges Vertrauen, das auf starken historischen Beweisen basiert. Bereits im Buch der Apostelgeschichte verteidigten Christen ihren Glauben mit historischen Argumenten (siehe Apostelgeschichte 26). Das Christentum lädt zur Prüfung ein und es besteht den Test.",
-      },
-      para2: {
-        en: "When we align our worldview with the historical reality of the life, death, and resurrection of Jesus, we are not merely embracing a religion. We are aligning ourselves with the truth about history itself.",
-        fr: "Lorsque nous alignons notre vision du monde avec la réalité historique de la vie, de la mort et de la résurrection de Jésus, nous n'embrassons pas simplement une religion. Nous nous alignons avec la vérité sur l'histoire elle-même.",
-        es: "Cuando alineamos nuestra cosmovisión con la realidad histórica de la vida, muerte y resurrección de Jesús, no estamos meramente abrazando una religión. Nos estamos alineando con la verdad sobre la historia misma.",
-        de: "Wenn wir unsere Weltanschauung mit der historischen Realität von Leben, Tod und Auferstehung Jesu in Einklang bringen, nehmen wir nicht nur eine Religion an. Wir richten uns nach der Wahrheit über die Geschichte selbst.",
-      },
-    },
-
-    // Bridge to Next Topic
-    bridge: {
-      heading: {
-        en: "Moving Forward",
-        fr: "Aller de l'Avant",
-        es: "Avanzando",
-        de: "Weitergehen",
-      },
-      para1: {
-        en: "If Jesus rose from the dead, His claims about Himself are validated. He is who He said He was. But this raises a new question: Which Christian tradition most faithfully preserves His teachings?",
-        fr: "Si Jésus est ressuscité des morts, Ses affirmations sur Lui-même sont validées. Il est qui Il a dit être. Mais cela soulève une nouvelle question : Quelle tradition chrétienne préserve le plus fidèlement Ses enseignements ?",
-        es: "Si Jesús resucitó de entre los muertos, Sus afirmaciones sobre Sí mismo están validadas. Él es quien dijo ser. Pero esto plantea una nueva pregunta: ¿Qué tradición cristiana preserva más fielmente Sus enseñanzas?",
-        de: "Wenn Jesus von den Toten auferstanden ist, werden Seine Behauptungen über Sich selbst bestätigt. Er ist, wer Er sagte zu sein. Aber dies wirft eine neue Frage auf: Welche christliche Tradition bewahrt Seine Lehren am treuesten?",
-      },
-      para2: {
-        en: "With God's existence established and Christ's resurrection confirmed, we can now ask: Why be Catholic specifically, rather than simply \"Christian\"? Let's explore what makes Catholicism unique.",
-        fr: "Avec l'existence de Dieu établie et la résurrection du Christ confirmée, nous pouvons maintenant demander : Pourquoi être catholique spécifiquement, plutôt que simplement « chrétien » ? Explorons ce qui rend le catholicisme unique.",
-        es: 'Con la existencia de Dios establecida y la resurrección de Cristo confirmada, ahora podemos preguntar: ¿Por qué ser católico específicamente, en lugar de simplemente "cristiano"? Exploremos qué hace único al catolicismo.',
-        de: 'Mit der festgestellten Existenz Gottes und der bestätigten Auferstehung Christi können wir nun fragen: Warum speziell katholisch sein, anstatt einfach „christlich"? Lassen Sie uns erkunden, was den Katholizismus einzigartig macht.',
-      },
+    criterion2: {
+      en: "<strong class='text-white'>Scholarly Consensus:</strong> They are accepted by the vast majority of scholars in the field, including skeptical ones.",
+      fr: "<strong class='text-white'>Consensus Académique :</strong> Ils sont acceptés par la grande majorité des chercheurs du domaine, y compris les sceptiques.",
+      es: "<strong class='text-white'>Consenso Académico:</strong> Son aceptados por la gran mayoría de los académicos en el campo, incluidos los escépticos.",
+      de: "<strong class='text-white'>Wissenschaftlicher Konsens:</strong> Sie werden von der überwiegenden Mehrheit der Wissenschaftler auf diesem Gebiet akzeptiert, einschließlich skeptischer.",
     },
   },
+
+  // Section 2: Manuscript Evidence
+  manuscriptEvidence: {
+    heading: {
+      en: "2. Unmatched Manuscript Evidence for the New Testament",
+      fr: "2. Preuves Manuscrites Inégalées pour le Nouveau Testament",
+      es: "2. Evidencia Manuscrita Incomparable del Nuevo Testamento",
+      de: "2. Unübertroffene Manuskript-Beweise für das Neue Testament",
+    },
+    intro: {
+      en: "When comparing the New Testament with other ancient works, its textual support is overwhelming:",
+      fr: "Lorsqu'on compare le Nouveau Testament avec d'autres œuvres anciennes, son soutien textuel est écrasant :",
+      es: "Al comparar el Nuevo Testamento con otras obras antiguas, su respaldo textual es abrumador:",
+      de: "Beim Vergleich des Neuen Testaments mit anderen antiken Werken ist seine textliche Unterstützung überwältigend:",
+    },
+    tableAuthor: {
+      en: "Author",
+      fr: "Auteur",
+      es: "Autor",
+      de: "Autor",
+    },
+    tableTimeGap: {
+      en: "Time Gap (Event to Earliest Copy)",
+      fr: "Écart Temporel (Événement à la Première Copie)",
+      es: "Intervalo de Tiempo (Evento a la Primera Copia)",
+      de: "Zeitspanne (Ereignis zur frühesten Kopie)",
+    },
+    tableManuscripts: {
+      en: "Number of Manuscripts",
+      fr: "Nombre de Manuscrits",
+      es: "Número de Manuscritos",
+      de: "Anzahl der Manuskripte",
+    },
+    newTestament: {
+      en: "New Testament",
+      fr: "Nouveau Testament",
+      es: "Nuevo Testamento",
+      de: "Neues Testament",
+    },
+    timeGap25: {
+      en: "25 years",
+      fr: "25 ans",
+      es: "25 años",
+      de: "25 Jahre",
+    },
+    timeGap400: {
+      en: "400 years",
+      fr: "400 ans",
+      es: "400 años",
+      de: "400 Jahre",
+    },
+    timeGap1000: {
+      en: "1,000 years",
+      fr: "1 000 ans",
+      es: "1.000 años",
+      de: "1.000 Jahre",
+    },
+    timeGap1200: {
+      en: "1,200 years",
+      fr: "1 200 ans",
+      es: "1.200 años",
+      de: "1.200 Jahre",
+    },
+    timeGap1400: {
+      en: "1,400 years",
+      fr: "1 400 ans",
+      es: "1.400 años",
+      de: "1.400 Jahre",
+    },
+    conclusion: {
+      en: "No other ancient document comes close in terms of early attestation and manuscript quantity. This makes the New Testament the most historically reliable document of antiquity.",
+      fr: "Aucun autre document ancien n'approche en termes d'attestation précoce et de quantité de manuscrits. Cela fait du Nouveau Testament le document le plus historiquement fiable de l'antiquité.",
+      es: "Ningún otro documento antiguo se acerca en términos de atestación temprana y cantidad de manuscritos. Esto hace del Nuevo Testamento el documento más históricamente confiable de la antigüedad.",
+      de: "Kein anderes antikes Dokument kommt in Bezug auf frühe Bezeugung und Manuskriptmenge nahe. Dies macht das Neue Testament zum historisch zuverlässigsten Dokument der Antike.",
+    },
+    timeGap750: {
+      en: "750 years",
+      fr: "750 ans",
+      es: "750 años",
+      de: "750 Jahre",
+    },
+  },
+
+  // Author Name Translations
+  authorHomer: {
+    en: "Homer",
+    fr: "Homère",
+    es: "Homero",
+    de: "Homer",
+  },
+  authorDemosthenes: {
+    en: "Demosthenes",
+    fr: "Démosthène",
+    es: "Demóstenes",
+    de: "Demosthenes",
+  },
+  authorHerodotus: {
+    en: "Herodotus",
+    fr: "Hérodote",
+    es: "Heródoto",
+    de: "Herodot",
+  },
+  authorPlato: {
+    en: "Plato",
+    fr: "Platon",
+    es: "Platón",
+    de: "Plato",
+  },
+  authorTacitus: {
+    en: "Tacitus",
+    fr: "Tacite",
+    es: "Tácito",
+    de: "Tacitus",
+  },
+  authorCaesar: {
+    en: "Caesar",
+    fr: "César",
+    es: "César",
+    de: "Cäsar",
+  },
+  authorPliny: {
+    en: "Pliny",
+    fr: "Pline",
+    es: "Plinio",
+    de: "Plinius",
+  },
+
+  // Visualization and Scale Keys
+  rankHistorical: {
+    en: "Historical Document #",
+    fr: "Document Historique n°",
+    es: "Documento Histórico n.º",
+    de: "Historisches Dokument Nr.",
+  },
+  rankUnmatched: {
+    en: "The Unmatched Standard",
+    fr: "Le Standard Inégalé",
+    es: "El Estándar Inigualable",
+    de: "Der Unübertroffene Standard",
+  },
+  scaleCount: {
+    en: "The Overwhelming Count",
+    fr: "Le Compte Écrasant",
+    es: "El Recuento Abrumador",
+    de: "Die Überwältigende Zahl",
+  },
+  scaleMaxMs: {
+    en: "Scale: {0} max",
+    fr: "Échelle: {0} max",
+    es: "Escala: {0} máx",
+    de: "Skala: {0} max",
+  },
+  scaleTimeClose: {
+    en: "The Closest in Time",
+    fr: "Le Plus Proche dans le Temps",
+    es: "El Más Cercano en el Temps",
+    de: "Der Zeitlich Nächste",
+  },
+  scaleMaxGap: {
+    en: "Max Gap: {0} years",
+    fr: "Écart Max: {0} ans",
+    es: "Intervalo Máx: {0} años",
+    de: "Max. Zeitspanne: {0} Jahre",
+  },
+  scaleVisualNote: {
+    en: "(Visual length of bar indicates relative closeness to original document)",
+    fr: "(La longueur visuelle de la barre indique la proximité relative avec le document original)",
+    es: "(La longitud visual de la barre indique la proximité relative au document original)",
+    de: "(Die visuelle Länge des Balkens gibt die relative Nähe zum Originaldokument an)",
+  },
+
+  // Section 3: Who Was Jesus (EXPANDED)
+  whoWasJesus: {
+    heading: {
+      en: "3. Who Was Jesus of Nazareth?",
+      fr: "3. Qui Était Jésus de Nazareth ?",
+      es: "3. ¿Quién Era Jesús de Nazaret?",
+      de: "3. Wer War Jesus von Nazareth?",
+    },
+    intro: {
+      en: "Before examining the resurrection, we must know who the man was. Historians, both religious and secular, agree on key facts about Jesus:",
+      fr: "Avant d'examiner la résurrection, nous devons savoir qui était l'homme. Les historiens, tant religieux que laïques, s'accordent sur des faits clés concernant Jésus :",
+      es: "Antes de examinar la resurrección, debemos saber quién fue el hombre. Los historiadores, tanto religiosos como seculares, concuerdan en hechos clave sobre Jesús:",
+      de: "Bevor wir die Auferstehung untersuchen, müssen wir wissen, wer dieser Mann war. Historiker, sowohl religiöse als auch säkulare, stimmen in wichtigen Fakten über Jesus überein:",
+    },
+    fact1: {
+      en: "He was a first-century Jew from Galilee.",
+      fr: "Il était un Juif de Galilée du premier siècle.",
+      es: "Era un judío de Galilea del primer siglo.",
+      de: "Er war ein Jude aus Galiläa im ersten Jahrhundert.",
+    },
+    fact2: {
+      en: "He was an itinerant preacher known for his wisdom and claims of authority.",
+      fr: "Il était un prédicateur itinérant connu pour sa sagesse et ses prétentions à l'autorité.",
+      es: "Fue un predicador itinerante conocido por su sabiduría y sus afirmaciones de autoridad.",
+      de: "Er war ein Wanderprediger, der für seine Weisheit und seine Autoritätsansprüche bekannt war.",
+    },
+    fact3: {
+      en: "He was crucified in Jerusalem under Pontius Pilate.",
+      fr: "Il a été crucifié à Jérusalem sous Ponce Pilate.",
+      es: "Fue crucificado en Jerusalén bajo Poncio Pilato.",
+      de: "Er wurde in Jerusalem unter Pontius Pilatus gekreuzigt.",
+    },
+    divineClaimIntro: {
+      en: "Crucially, the claim that Jesus understood himself to be divine is strongly attested in the Gospels. He did this not by walking around saying 'I am God,' but in ways a first-century Jew would have understood as a divine claim, such as forgiving sins and using the divine name. In John 8:58, Jesus said:",
+      fr: "De manière cruciale, l'affirmation selon laquelle Jésus se considérait comme divin est fortement attestée dans les Évangiles. Il ne le faisait pas en se promenant et en disant 'Je suis Dieu', mais d'une manière qu'un Juif du premier siècle aurait comprise comme une revendication divine, comme pardonner les péchés et utiliser le nom divin. Dans Jean 8:58, Jésus a dit :",
+      es: "Crucialmente, la afirmación de que Jesús se entendía a sí mismo como divino está fuertemente atestiguada en los Evangelios. No lo hizo andando por ahí diciendo 'Soy Dios', sino de maneras que un judío del primer siglo habría entendido como una afirmación divina, como perdonar pecados y usar el nombre divino. En Juan 8:58, Jesús dijo:",
+      de: "Entscheidend ist, dass die Behauptung, Jesus habe sich selbst als göttlich verstanden, in den Evangelien stark bezeugt ist. Er tat dies nicht, indem er herumlief und sagte 'Ich bin Gott', sondern auf eine Weise, die ein Jude des ersten Jahrhunderts als göttlichen Anspruch verstanden hätte, wie zum Beispiel die Vergebung von Sünden und die Verwendung des göttlichen Namens. In Johannes 8:58 sagte Jesus:",
+    },
+    john858: {
+      en: "Before Abraham was, I AM.",
+      fr: "Avant qu'Abraham fût, je suis.",
+      es: "Antes de que Abraham fuera, YO SOY.",
+      de: "Ehe Abraham war, bin ICH.",
+    },
+    john858Source: {
+      en: "John 8:58",
+      fr: "Jean 8:58",
+      es: "Juan 8:58",
+      de: "Johannes 8:58",
+    },
+    blasphemy: {
+      en: "This was a direct claim to the divine name God revealed to Moses in the burning bush. The reaction of his audience, who immediately picked up stones to kill him for blasphemy, shows exactly how this claim was understood.",
+      fr: "C'était une revendication directe du nom divin que Dieu a révélé à Moïse dans le buisson ardent. La réaction de son auditoire, qui a immédiatement ramassé des pierres pour le tuer pour blasphème, montre exactement comment cette affirmation a été comprise.",
+      es: "Esta fue una afirmación directa del nombre divino que Dios reveló a Moisés en la zarza ardiente. La reacción de su audiencia, que inmediatamente recogió piedras para matarlo por blasfemia, muestra exactamente cómo se entendió esta afirmación.",
+      de: "Dies war ein direkter Anspruch auf den göttlichen Namen, den Gott Mose im brennenden Dornbusch offenbarte. Die Reaktion seiner Zuhörer, die sofort Steine aufhoben, um ihn wegen Blasphemie zu töten, zeigt genau, wie dieser Anspruch verstanden wurde.",
+    },
+    blasphemyReason: {
+      en: "It was these radical personal claims to divine authority, seen as blasphemy by the Jewish leadership, that led directly to his execution. The resurrection, therefore, is not just a miracle; it is God's divine vindication of the very claims that got Jesus killed.",
+      fr: "Ce sont ces revendications personnelles radicales d'autorité divine, considérées comme un blasphème par les dirigeants juifs, qui ont conduit directement à son exécution. La résurrection n'est donc pas seulement un miracle ; c'est la justification divine des affirmations mêmes qui ont valu à Jésus d'être tué.",
+      es: "Fueron estas afirmaciones personales radicales de autoridad divina, vistas como blasfemia por los líderes judíos, las que llevaron directamente a su ejecución. La resurrección, por lo tanto, no es solo un milagro; es la vindicación divina de las mismas afirmaciones por las que mataron a Jesús.",
+      de: "Es waren diese radikalen persönlichen Ansprüche auf göttliche Autorität, die von der jüdischen Führung als Blasphemie angesehen wurden, die direkt zu seiner Hinrichtung führten. Die Auferstehung ist daher nicht nur ein Wunder; sie ist Gottes göttliche Bestätigung genau der Ansprüche, für die Jesus getötet wurde.",
+    },
+  },
+
+  // Section 4: Four Minimal Facts (EXPANDED)
+  fourMinimalFacts: {
+    heading: {
+      en: "4. The Four Minimal Facts Accepted by Nearly All Scholars",
+      fr: "4. Les Quatre Faits Minimaux Acceptés par Presque Tous les Chercheurs",
+      es: "4. Los Cuatro Hechos Mínimos Aceptados por Casi Todos los Académicos",
+      de: "4. Die Vier Minimalen Fakten, die von Fast Allen Gelehrten Akzeptiert Werden",
+    },
+    fact1: {
+      en: "Jesus died by crucifixion",
+      fr: "Jésus est mort par crucifixion",
+      es: "Jesús murió por crucifixión",
+      de: "Jesus starb durch Kreuzigung",
+    },
+    fact2: {
+      en: "His tomb was found empty",
+      fr: "Son tombeau a été trouvé vide",
+      es: "Su tumba fue encontrada vacía",
+      de: "Sein Grab wurde leer vorgefunden",
+    },
+    fact3: {
+      en: "His disciples had experiences they believed were appearances of the Risen Jesus",
+      fr: "Ses disciples ont eu des expériences qu'ils croyaient être des apparitions de Jésus ressuscité",
+      es: "Sus discípulos tuvieron experiencias que creyeron que eran apariciones de Jesús resucitado",
+      de: "Seine Jünger hatten Erfahrungen, von denen sie glaubten, es seien Erscheinungen des auferstandenen Jesus",
+    },
+    fact3Detail: {
+      en: "These were not vague feelings, but group events and physical interactions.",
+      fr: "Ce n'étaient pas des sentiments vagues, mais des événements de groupe et des interactions physiques.",
+      es: "No fueron sentimientos vagos, sino eventos grupales e interacciones físicas.",
+      de: "Dies waren keine vagen Gefühle, sondern Gruppenerlebnisse und körperliche Interaktionen.",
+    },
+    fact4: {
+      en: "Key skeptics (Paul & James) converted after similar experiences",
+      fr: "Des sceptiques clés (Paul & Jacques) se sont convertis après des expériences similaires",
+      es: "Escépticos clave (Pablo & Santiago) se convirtieron después de experiencias similares",
+      de: "Wichtige Skeptiker (Paulus & Jakobus) bekehrten sich nach ähnlichen Erfahrungen",
+    },
+    fact4Detail: {
+      en: "Paul was a persecutor, and James was Jesus's skeptical brother.",
+      fr: "Paul était un persécuteur, et Jacques était le frère sceptique de Jésus.",
+      es: "Pablo era un perseguidor, y Santiago era el hermano escéptico de Jesús.",
+      de: "Paulus war ein Verfolger, und Jakobus war der skeptische Bruder Jesu.",
+    },
+    support: {
+      en: "These facts are supported by such strong historical data that most scholars accept them, regardless of their religious beliefs. The evidence includes <strong class='text-white'>multiple, independent sources</strong> (e.g., Mark's passion narrative, the 1 Cor. 15 creed, John, Luke, Josephus, Tacitus) and the <strong class='text-white'>early creed in 1 Corinthians 15</strong>, which scholars date to within 3-5 years of the crucifixion. This creed lists the key events and eyewitnesses, proving the belief in the resurrection was not a late-developing legend.",
+      fr: "Ces faits sont étayés par des données historiques si solides que la plupart des chercheurs les acceptent, quelles que soient leurs croyances religieuses. Les preuves incluent de <strong class='text-white'>multiples sources indépendantes</strong> (par exemple, le récit de la passion de Marc, le credo de 1 Cor. 15, Jean, Luc, Josèphe, Tacite) et le <strong class='text-white'>credo ancien de 1 Corinthiens 15</strong>, que les chercheurs datent de 3 à 5 ans après la crucifixion. Ce credo énumère les événements clés et les témoins oculaires, prouvant que la croyance en la résurrection n'était pas une légende tardive.",
+      es: "Estos hechos están respaldados por datos históricos tan sólidos que la mayoría de los académicos los aceptan, independientemente de sus creencias religiosas. La evidencia incluye <strong class='text-white'>múltiples fuentes independientes</strong> (p. ej., la narrativa de la pasión de Marcos, el credo de 1 Cor. 15, Juan, Lucas, Josefo, Tácito) y el <strong class='text-white'>credo temprano en 1 Corintios 15</strong>, que los académicos fechan entre 3 y 5 años después de la crucifixión. Este credo enumera los eventos clave y los testigos presenciales, lo que demuestra que la creencia en la resurrección no fue una leyenda que se desarrolló tardíamente.",
+      de: "Diese Fakten werden durch so starke historische Daten gestützt, dass die meisten Gelehrten sie unabhängig von ihren religiösen Überzeugungen akzeptieren. Die Beweise umfassen <strong class='text-white'>mehrere unabhängige Quellen</strong> (z. B. Markus' Passionsgeschichte, das Glaubensbekenntnis in 1. Kor. 15, Johannes, Lukas, Josephus, Tacitus) und das <strong class='text-white'>frühe Glaubensbekenntnis in 1. Korinther 15</strong>, das Gelehrte auf 3-5 Jahre nach der Kreuzigung datieren. Dieses Glaubensbekenntnis listet die Schlüsselereignisse und Augenzeugen auf und beweist, dass der Glaube an die Auferstehung keine spät entwickelte Legende war.",
+    },
+  },
+
+  // Section 5: Evaluating Explanations (EXPANDED)
+  evaluatingExplanations: {
+    heading: {
+      en: "5. Evaluating the Explanations",
+      fr: "5. Évaluation des Explications",
+      es: "5. Evaluando las Explicaciones",
+      de: "5. Bewertung der Erklärungen",
+    },
+    intro: {
+      en: "Historians and skeptics have proposed various explanations for these four facts. Any valid theory must explain all four facts, not just one or two. Each alternative theory fails under scrutiny:",
+      fr: "Les historiens et les sceptiques ont proposé diverses explications pour ces quatre faits. Toute théorie valide doit expliquer les quatre faits, pas seulement un ou deux. Chaque théorie alternative échoue à l'examen :",
+      es: "Los historiadores y escépticos han propuesto varias explicaciones para estos cuatro hechos. Cualquier teoría válida debe explicar los cuatro hechos, no solo uno o dos. Cada teoría alternativa falla bajo escrutinio:",
+      de: "Historiker und Skeptiker haben verschiedene Erklärungen für diese vier Fakten vorgeschlagen. Jede gültige Theorie muss alle vier Fakten erklären, nicht nur ein oder zwei. Jede alternative Theorie versagt bei genauerer Prüfung:",
+    },
+
+    hallucinationTitle: {
+      en: "A. Hallucination Hypothesis",
+      fr: "A. Hypothèse de l'Hallucination",
+      es: "A. Hipótesis de la Alucinación",
+      de: "A. Halluzinations-Hypothese",
+    },
+    hallucinationIntro: {
+      en: "This theory suggests the disciples were grieving and merely hallucinated the appearances. This fails because:",
+      fr: "Cette théorie suggère que les disciples étaient en deuil et ont simplement halluciné les apparitions. Cela échoue parce que :",
+      es: "Esta teoría sugiere que los discípulos estaban de luto y simplemente alucinaron las apariciones. Esto falla porque:",
+      de: "Diese Theorie besagt, dass die Jünger trauerten und die Erscheinungen nur halluzinierten. Dies scheitert, weil:",
+    },
+    hallucinationPoint1: {
+      en: "<strong class='text-white'>It cannot explain group events.</strong> Hallucinations are private, individual experiences, like a dream. They do not happen to groups of people simultaneously, let alone groups of 500 (1 Corinthians 15:6).",
+      fr: "<strong class='text-white'>Elle ne peut expliquer les événements de groupe.</strong> Les hallucinations sont des expériences privées et individuelles, comme un rêve. Elles n'arrivent pas à des groupes de personnes simultanément, encore moins à des groupes de 500 (1 Corinthiens 15:6).",
+      es: "<strong class='text-white'>No puede explicar eventos grupales.</strong> Las alucinaciones son experiencias privadas e individuales, como un sueño. No le suceden a grupos de personas simultáneamente, y mucho menos a grupos de 500 (1 Corintios 15:6).",
+      de: "<strong class='text-white'>Sie kann keine Gruppenereignisse erklären.</strong> Halluzinationen sind private, individuelle Erfahrungen, wie ein Traum. Sie geschehen nicht Gruppen von Menschen gleichzeitig, geschweige denn Gruppen von 500 (1. Korinther 15:6).",
+    },
+    hallucinationPoint2: {
+      en: "<strong class='text-white'>It cannot explain the empty tomb.</strong> Even if the disciples hallucinated, Jesus's body would still be in the tomb. The authorities could have easily produced the body and stopped Christianity.",
+      fr: "<strong class='text-white'>Elle ne peut expliquer le tombeau vide.</strong> Même si les disciples avaient halluciné, le corps de Jésus serait toujours dans le tombeau. Les autorités auraient pu facilement produire le corps et arrêter le christianisme.",
+      es: "<strong class='text-white'>No puede explicar la tumba vacía.</strong> Incluso si los discípulos hubieran alucinado, el cuerpo de Jesús seguiría en la tumba. Las autoridades podrían haber presentado fácilmente el cuerpo y detenido el cristianismo.",
+      de: "<strong class='text-white'>Sie kann das leere Grab nicht erklären.</strong> Selbst wenn die Jünger halluziniert hätten, wäre Jesu Körper immer noch im Grab gewesen. Die Behörden hätten den Körper leicht vorzeigen und das Christentum stoppen können.",
+    },
+    hallucinationPoint3: {
+      en: "<strong class='text-white'>It cannot explain the conversion of skeptics.</strong> Paul was a hostile persecutor, not a grieving follower. His psychology was predisposed *against* seeing Jesus, not for it.",
+      fr: "<strong class='text-white'>Elle ne peut expliquer la conversion des sceptiques.</strong> Paul était un persécuteur hostile, pas un disciple en deuil. Sa psychologie était prédisposée *contre* le fait de voir Jésus, pas en sa faveur.",
+      es: "<strong class='text-white'>No puede explicar la conversión de los escépticos.</strong> Pablo era un perseguidor hostil, no un seguidor afligido. Su psicología estaba predispuesta *en contra* de ver a Jesús, no a favor.",
+      de: "<strong class='text-white'>Sie kann die Bekehrung von Skeptikern nicht erklären.</strong> Paulus war ein feindseliger Verfolger, kein trauernder Anhänger. Seine Psychologie war *gegen* die Erscheinung Jesu voreingenommen, nicht dafür.",
+    },
+
+    wrongTombTitle: {
+      en: "B. Wrong Tomb Hypothesis",
+      fr: "B. Hypothèse du Mauvais Tombeau",
+      es: "B. Hipótesis de la Tumba Equivocada",
+      de: "B. Falsch-Grab-Hypothese",
+    },
+    wrongTombIntro: {
+      en: "This theory suggests the women and disciples simply went to the wrong tomb. This fails because:",
+      fr: "Cette théorie suggère que les femmes et les disciples se sont simplement trompés de tombeau. Cela échoue parce que :",
+      es: "Esta teoría sugiere que las mujeres y los discípulos simplemente fueron a la tumba equivocada. Esto falla porque:",
+      de: "Diese Theorie besagt, dass die Frauen und Jünger einfach zum falschen Grab gingen. Dies scheitert, weil:",
+    },
+    wrongTombPoint1: {
+      en: "<strong class='text-white'>The tomb was known to the authorities.</strong> The tomb belonged to Joseph of Arimathea, a member of the Jewish Sanhedrin. It was a known, private tomb, not an unmarked public grave.",
+      fr: "<strong class='text-white'>Le tombeau était connu des autorités.</strong> Le tombeau appartenait à Joseph d'Arimathie, membre du Sanhédrin juif. C'était un tombeau privé et connu, pas une fosse commune anonyme.",
+      es: "<strong class='text-white'>La tumba era conocida por las autoridades.</strong> La tumba pertenecía a José de Arimatea, un miembro del Sanedrín judío. Era una tumba privada y conocida, no una fosa pública sin marcar.",
+      de: "<strong class='text-white'>Das Grab war den Behörden bekannt.</strong> Das Grab gehörte Joseph von Arimathäa, einem Mitglied des jüdischen Sanhedrins. Es war ein bekanntes Privatgrab, kein unbezeichnetes öffentliches Grab.",
+    },
+    wrongTombPoint2: {
+      en: "<strong class='text-white'>The authorities would have produced the body.</strong> If the disciples were preaching the resurrection while Jesus was in a known tomb, the Jewish or Roman authorities would have immediately gone to the correct tomb, produced the body, and paraded it through Jerusalem, ending Christianity on the spot.",
+      fr: "<strong class='text-white'>Les autorités auraient produit le corps.</strong> Si les disciples prêchaient la résurrection alors que Jésus était dans un tombeau connu, les autorités juives ou romaines seraient immédiatement allées au bon tombeau, auraient produit le corps et l'auraient paradé à travers Jérusalem, mettant fin au christianisme sur-le-champ.",
+      es: "<strong class='text-white'>Las autoridades habrían presentado el cuerpo.</strong> Si los discípulos estuvieran predicando la resurrección mientras Jesús estaba en una tumba conocida, las autoridades judías ou romanas habrían ido inmediatamente a la tumba correcta, habrían presentado el cuerpo y lo habrían paseado por Jerusalén, acabando con el cristianismo en el acto.",
+      de: "<strong class='text-white'>Die Behörden hätten den Körper vorgezeigt.</strong> Wenn die Jünger die Auferstehung gepredigt hätten, während Jesus in einem bekannten Grab lag, wären die jüdischen oder römischen Behörden sofort zum richtigen Grab gegangen, hätten den Körper geholt und ihn durch Jerusalem getragen, was das Christentum auf der Stelle beendet hätte.",
+    },
+
+    stolenBodyTitle: {
+      en: "C. Stolen Body Theory",
+      fr: "C. Théorie du Corps Volé",
+      es: "C. Teoría del Cuerpo Robado",
+      de: "C. Gestohlener-Körper-Theorie",
+    },
+    stolenBodyIntro: {
+      en: "This theory suggests the disciples stole the body and lied. This is the earliest polemic, mentioned in Matthew 28, but it fails because:",
+      fr: "Cette théorie suggère que les disciples ont volé le corps et ont menti. C'est la plus ancienne polémique, mentionnée dans Matthieu 28, mais elle échoue parce que :",
+      es: "Esta teoría sugiere que los discípulos robaron el cuerpo y mintieron. Esta es la polémica más temprana, mencionada en Mateo 28, pero falla porque:",
+      de: "Diese Theorie besagt, dass die Jünger den Körper stahlen und logen. Dies ist die früheste Polemik, die in Matthäus 28 erwähnt wird, aber sie scheitert, weil:",
+    },
+    stolenBodyPoint1: {
+      en: "<strong class='text-white'>It fails psychologically.</strong> The disciples were defeated, terrified, and hiding. They had no motive to invent a lie that would only bring them persecution, torture, and martyrdom. People will die for what they believe is true, but not for what they know is a lie.",
+      fr: "<strong class='text-white'>Elle échoue psychologiquement.</strong> Les disciples étaient vaincus, terrifiés et se cachaient. Ils n'avaient aucun motif d'inventer un mensonge qui ne leur apporterait que persécution, torture et martyre. Les gens meurent pour ce qu'ils croient être vrai, mais pas pour ce qu'ils savent être un mensonge.",
+      es: "<strong class='text-white'>Falla psicológicamente.</strong> Los discípulos estaban derrotados, aterrorizados y escondidos. No tenían ningún motivo para inventar una mentira que solo les traería persecución, tortura y martirio. La gente muere por lo que cree que es verdad, pero no por lo que sabe que es una mentira.",
+      de: "<strong class='text-white'>Sie versagt psychologisch.</strong> Die Jünger waren besiegt, verängstigt und versteckten sich. Sie hatten kein Motiv, eine Lüge zu erfinden, die ihnen nur Verfolgung, Folter und Martyrium einbringen würde. Menschen sterben für das, was sie für wahr halten, aber nicht für das, was sie als Lüge kennen.",
+    },
+    stolenBodyPoint2: {
+      en: "<strong class='text-white'>It cannot explain the appearances or conversions.</strong> This theory cannot account for the disciples' sincere belief that they saw Jesus alive, nor can it explain the conversions of the skeptics James and Paul.",
+      fr: "<strong class='text-white'>Elle ne peut expliquer les apparitions ni les conversions.</strong> Cette théorie ne peut pas expliquer la croyance sincère des disciples qu'ils ont vu Jésus vivant, ni les conversions des sceptiques Jacques et Paul.",
+      es: "<strong class='text-white'>No puede explicar las apariciones ni las conversiones.</strong> Esta teoría no puede explicar la creencia sincera de los discípulos de que vieron a Jesús vivo, ni puede explicar las conversiones de los escépticos Santiago y Pablo.",
+      de: "<strong class='text-white'>Sie kann die Erscheinungen oder Bekehrungen nicht erklären.</strong> Diese Theorie kann weder den aufrichtigen Glauben der Jünger erklären, dass sie Jesus lebend sahen, noch die Bekehrungen der Skeptiker Jakobus und Paulus.",
+    },
+
+    resurrectionTitle: {
+      en: "D. Resurrection Hypothesis",
+      fr: "D. Hypothèse de la Résurrection",
+      es: "D. Hipótesis de la Resurrección",
+      de: "D. Auferstehungs-Hypothese",
+    },
+    resurrectionIntro: {
+      en: "This is the only theory that fits all four facts:",
+      fr: "C'est la seule théorie qui correspond aux quatre faits :",
+      es: "Esta es la única teoría que se ajusta a los cuatro hechos:",
+      de: "Dies ist die einzige Theorie, die zu allen vier Fakten passt:",
+    },
+    resurrectionPoint1: {
+      en: "It explains the empty tomb (He rose), the appearances (He showed Himself), the disciples' belief (they saw Him), and the conversions of skeptics (they also saw Him).",
+      fr: "Elle explique le tombeau vide (Il est ressuscité), les apparitions (Il s'est montré), la croyance des disciples (ils L'ont vu), et les conversions des sceptiques (ils L'ont vu aussi).",
+      es: "Explica la tumba vacía (resucitó), las apariciones (se mostró), la creencia de los discípulos (lo vieron), y las conversiones de los escépticos (también lo vieron).",
+      de: "Sie erklärt das leere Grab (Er ist auferstanden), die Erscheinungen (Er zeigte sich), den Glauben der Jünger (sie sahen Ihn), und die Bekehrungen der Skeptiker (sie sahen Ihn auch).",
+    },
+    resurrectionPoint2: {
+      en: "It is coherent, has immense explanatory power, and is the simplest explanation that accounts for all the data without exception.",
+      fr: "Elle est cohérente, possède un immense pouvoir explicatif et constitue l'explication la plus simple qui rend compte de toutes les données sans exception.",
+      es: "Es coherente, tiene un inmenso poder explicativo y es la explicación más simple que da cuenta de todos los datos sin excepción.",
+      de: "Sie ist kohärent, hat eine immense Erklärungskraft und ist die einfachste Erklärung, die alle Daten ausnahmslos berücksichtigt.",
+    },
+  },
+
+  // NEW: Additional Video Section
+  additionalVideo: {
+    heading: {
+      en: "An Additional Perspective on the Evidence",
+      fr: "Une Perspective Supplémentaire sur les Preuves",
+      es: "Una Perspectiva Adicional sobre la Evidencia",
+      de: "Eine Zusätzliche Perspektive auf die Beweise",
+    },
+  },
+
+  // Section 6: Rationality (EXPANDED & QUOTE REMOVED)
+  rationality: {
+    heading: {
+      en: "6. Rationality of the Resurrection",
+      fr: "6. Rationalité de la Résurrection",
+      es: "6. Racionalidad de la Resurrección",
+      de: "6. Rationalität der Auferstehung",
+    },
+    intro: {
+      en: "The resurrection of Jesus is not merely a religious belief. It is the best historical explanation for the collection of agreed-upon facts. When historians evaluate theories, they look for specific criteria:",
+      fr: "La résurrection de Jésus n'est pas simplement une croyance religieuse. C'est la meilleure explication historique pour l'ensemble des faits reconnus. Lorsque les historiens évaluent les théories, ils recherchent des critères spécifiques :",
+      es: "La resurrección de Jesús no es meramente una creencia religiosa. Es la mejor explicación histórica para el conjunto de hechos acordados. Cuando los historiadores evalúan las teorías, buscan criterios específicos:",
+      de: "Die Auferstehung Jesu ist nicht nur ein religiöser Glaube. Sie ist die beste historische Erklärung für die Sammlung anerkannter Fakten. Wenn Historiker Theorien bewerten, suchen sie nach bestimmten Kriterien:",
+    },
+    hypothesisLabel: {
+      en: "The Resurrection hypothesis meets these criteria perfectly:",
+      fr: "L'hypothèse de la Résurrection répond parfaitement à ces critères :",
+      es: "La hipótesis de la Resurrección cumple perfectamente estos criterios:",
+      de: "Die Auferstehungshypothese erfüllt diese Kriterien perfekt:",
+    },
+    plausible: {
+      en: "Plausible:",
+      fr: "Plausible :",
+      es: "Plausible:",
+      de: "Plausibel:",
+    },
+    plausibleDetail: {
+      en: " It fits the historical and cultural context of Jesus's own unparalleled life and his radical, blasphemous claims to divine authority.",
+      fr: " Elle s'inscrit dans le contexte historique et culturel de la vie sans pareille de Jésus et de ses prétentions radicales et blasphématoires à l'autorité divine.",
+      es: " Se ajusta al contexto histórico y cultural de la vida incomparable de Jesús y sus afirmaciones radicales y blasfemas de autoridad divina.",
+      de: " Sie passt in den historischen und kulturellen Kontext des unvergleichlichen Lebens Jesu und seiner radikalen, blasphemischen Ansprüche auf göttliche Autorität.",
+    },
+    powerful: {
+      en: "Powerful:",
+      fr: "Puissante :",
+      es: "Poderosa:",
+      de: "Kraftvoll:",
+    },
+    powerfulDetail: {
+      en: " It explains all the known data, including the empty tomb, the group appearances, and the sudden, inexplicable transformation of skeptics and cowards into martyrs.",
+      fr: " Elle explique toutes les données connues, y compris le tombeau vide, les apparitions de groupe et la transformation soudaine et inexplicable de sceptiques et de lâches en martyrs.",
+      es: " Explica todos los datos conocidos, incluida la tumba vacía, las apariciones grupales y la transformación repentina e inexplicable de escépticos y cobardes en mártires.",
+      de: " Sie erklärt alle bekannten Daten, einschließlich des leeren Grabs, der Gruppenerscheinungen und der plötzlichen, unerklärlichen Verwandlung von Skeptikern und Feiglingen in Märtyrer.",
+    },
+    consistent: {
+      en: "Consistent:",
+      fr: "Cohérente :",
+      es: "Consistente:",
+      de: "Konsistent:",
+    },
+    consistentDetail: {
+      en: " It aligns with the earliest Christian creeds and external testimony. It is not an <em>ad hoc</em> or contrived theory, as it simply accepts the explanation given by the eyewitnesses themselves.",
+      fr: " Elle s'aligne sur les plus anciens crédos chrétiens et les témoignages externes. Ce n'est pas une théorie <em>ad hoc</em> ou artificielle, car elle accepte simplement l'explication donnée par les témoins oculaires eux-mêmes.",
+      es: " Se alinea con los credos cristianos más antiguos y el testimonio externo. No es una teoría <em>ad hoc</em> o artificial, ya que simplemente acepta la explicación dada por los propios testigos oculares.",
+      de: " Sie stimmt mit den frühesten christlichen Glaubensbekenntnissen und externen Zeugnissen überein. Sie ist keine <em>ad hoc</em> oder erfundene Theorie, da sie einfach die Erklärung der Augenzeugen selbst akzeptiert.",
+    },
+    // craigQuote key removed
+  },
+
+  
+  // Conclusion (UPDATED)
+  conclusion: {
+    heading: {
+      en: "7. Faith Rooted in History",
+      fr: "7. Une Foi Enracinée dans l'Histoire",
+      es: "7. Una Fe Arraigada en la Historia",
+      de: "7. Glaube, Verwurzelt in der Geschichte",
+    },
+    para1: {
+      en: "Faith in Christ is a reasonable trust based on powerful historical evidence. Christianity, from its very inception, has invited examination and staked its entire claim on the reality of this one event. The resurrection is God's divine seal of approval on Jesus, validating his claims to be the unique, authoritative Son of God.",
+      fr: "La foi en Christ est une confiance raisonnable basée sur de solides preuves historiques. Le christianisme, depuis sa création, a invité à l'examen et a fondé toute sa revendication sur la réalité de cet unique événement. La résurrection est le sceau divin d'approbation de Dieu sur Jésus, validant ses prétentions à être le Fils de Dieu unique et faisant autorité.",
+      es: "La fe en Cristo es una confianza razonable basada en una poderosa evidencia histórica. El cristianismo, desde sus inicios, ha invitado al examen y ha apostado todo a la realidad de este único evento. La resurrección es el sello divino de aprobación de Dios sobre Jesús, validando sus afirmaciones de ser el Hijo de Dios único y autoritativo.",
+      de: "Der Glaube an Christus ist ein vernünftiges Vertrauen, das auf starken historischen Beweisen basiert. Das Christentum hat von Anfang an zur Prüfung eingeladen und seinen gesamten Anspruch auf die Realität dieses einen Ereignisses gesetzt. Die Auferstehung ist Gottes göttliches Gütesiegel für Jesus, das seine Ansprüche bestätigt, der einzigartige, autoritative Sohn Gottes zu sein.",
+    },
+    // New key for the quote
+    conclusionQuote: {
+      en: "Belief in the resurrection is not a leap into the dark, but a step into the light.",
+      fr: "Croire en la résurrection n'est pas un saut dans l'obscurité, mais un pas vers la lumière.",
+      es: "Creer en la resurrección no es un salto en la oscuridad, sino un paso hacia la luz.",
+      de: "Der Glaube an die Auferstehung ist kein Sprung ins Dunkle, sondern ein Schritt ins Licht.",
+    },
+    // Modified para2, with the quote text and <strong> tags removed
+    para2: {
+      en: "When we align our worldview with the historical reality of the life, death, and resurrection of Jesus, we are not merely embracing a religion. We are aligning ourselves with the truth about history itself.",
+      fr: "Lorsque nous alignons notre vision du monde avec la réalité historique de la vie, de la mort et de la résurrection de Jésus, nous n'embrassons pas simplement une religion. Nous nous alignons avec la vérité sur l'histoire elle-même.",
+      es: "Cuando alineamos nuestra cosmovisión con la realidad histórica de la vida, muerte y resurrección de Jesús, no estamos meramente abrazando una religión. Nos estamos alineando con la verdad sobre la historia misma.",
+      de: "Wenn wir unsere Weltanschauung mit der historischen Realität von Leben, Tod und Auferstehung Jesu in Einklang bringen, nehmen wir nicht nur eine Religion an. Wir richten uns nach der Wahrheit über die Geschichte selbst.",
+    },
+  },
+
+  // Bridge to Next Topic
+  bridge: {
+    heading: {
+      en: "Moving Forward",
+      fr: "Aller de l'Avant",
+      es: "Avanzando",
+      de: "Weitergehen",
+    },
+    para1: {
+      en: "If Jesus rose from the dead, His claims about Himself are validated. He is who He said He was. But this raises a new question: Which Christian tradition most faithfully preserves His teachings?",
+      fr: "Si Jésus est ressuscité des morts, Ses affirmations sur Lui-même sont validées. Il est qui Il a dit être. Mais cela soulève une nouvelle question : Quelle tradition chrétienne préserve le plus fidèlement Ses enseignements ?",
+      es: "Si Jesús resucitó de entre los muertos, Sus afirmaciones sobre Sí mismo están validadas. Él es quien dijo ser. Pero esto plantea una nueva pregunta: ¿Qué tradición cristiana preserva más fielmente Sus enseñanzas?",
+      de: "Wenn Jesus von den Toten auferstanden ist, werden Seine Behauptungen über Sich selbst bestätigt. Er ist, wer Er sagte zu sein. Aber dies wirft eine neue Frage auf: Welche christliche Tradition bewahrt Seine Lehren am treuesten?",
+    },
+    para2: {
+      en: "With God's existence established and Christ's resurrection confirmed, we can now ask: Why be Catholic specifically, rather than simply \"Christian\"? Let's explore what makes Catholicism unique.",
+      fr: "Avec l'existence de Dieu établie et la résurrection du Christ confirmée, nous pouvons maintenant demander : Pourquoi être catholique spécifiquement, plutôt que simplement « chrétien » ? Explorons ce qui rend le catholicisme unique.",
+      es: 'Con la existencia de Dios establecida y la resurrección de Cristo confirmada, ahora podemos preguntar: ¿Por qué ser católico específicamente, en lugar de simplemente "cristiano"? Exploremos qué hace único al catolicismo.',
+      de: 'Mit der festgestellten Existenz Gottes und der bestätigten Auferstehung Christi können wir nun fragen: Warum speziell katholisch sein, anstatt einfach „christlich"? Lassen Sie uns erkunden, was den Katholizismus einzigartig macht.',
+    },
+  },
+},
 
   // Why Be Catholic Topic
   whyBeCatholic: {
