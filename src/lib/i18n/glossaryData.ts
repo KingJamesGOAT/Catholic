@@ -46,19 +46,51 @@ export const glossaryTerms: GlossaryTerm[] = [
     },
   },
 
-  {
-  "id": "sedevacantism",
-  "term": {
-    "en": "Sedevacantism",
-    "fr": "Sédévacantisme",
-    "es": "Sedevacantismoa",
-    "de": "Sedisvakantismus"
+    {
+  id: "sedevacantism",
+  term: {
+    en: "Sedevacantism",
+    fr: "Sédévacantisme",
+    es: "Sedevacantismoa",
+    de: "Sedisvakantismus",
   },
-  "definition": {
-    "en": "The belief (Sedevacantism) or a person who holds the belief (Sedevacantist) that the See of Rome (the Papacy) is currently vacant. Adherents believe that recent Popes, typically since the Second Vatican Council (1962-1965), are heretics and have therefore lost or never validly obtained the papal office.",
-    "fr": "La croyance (Sédévacantisme) ou une personne qui tient la croyance (Sédévacantiste) que le Siège de Rome (la Papauté) est actuellement vacant. Les adhérents estiment que les Papes récents, généralement depuis le Concile Vatican II (1962-1965), sont des hérétiques et ont par conséquent perdu ou n'ont jamais validement obtenu la charge papale.",
-    "es": "La creencia (Sedevacantismo) o una persona que sostiene la creencia (Sedevacantista) de que la Sede de Roma (el Papado) está actualmente vacante. Los adherentes creen que los Papas recientes, generalmente desde el Concilio Vaticano II (1962-1965), son herejes y, por lo tanto, han perdido o nunca obtuvieron válidamente el oficio papal.",
-    "de": "Der Glaube (Sedisvakantismus) oder eine Person, die den Glauben vertritt (Sedisvakantist), dass der Stuhl von Rom (das Papsttum) derzeit vakant ist. Anhänger glauben, dass die jüngsten Päpste, typischerweise seit dem Zweiten Vatikanischen Konzil (1962-1965), Häretiker sind und daher das päpstliche Amt verloren oder nie gültig erlangt haben."
+  definition: {
+    en: "The belief (Sedevacantism) or a person who holds the belief (Sedevacantist) that the See of Rome (the Papacy) is currently vacant. Adherents believe that recent Popes, typically since the Second Vatican Council (1962-1965), are heretics and have therefore lost or never validly obtained the papal office.",
+    fr: "La croyance (Sédévacantisme) ou une personne qui tient la croyance (Sédévacantiste) que le Siège de Rome (la Papauté) est actuellement vacant. Les adhérents estiment que les Papes récents, généralement depuis le Concile Vatican II (1962-1965), sont des hérétiques et ont par conséquent perdu ou n'ont jamais validement obtenu la charge papale.",
+    es: "La creencia (Sedevacantismo) o una persona que sostiene la creencia (Sedevacantista) de que la Sede de Roma (el Papado) está actualmente vacante. Los adherentes creen que los Papas recientes, generalmente desde el Concilio Vaticano II (1962-1965), son herejes y, por lo tanto, han perdido o nunca obtuvieron válidamente el oficio papal.",
+    de: "Der Glaube (Sedisvakantismus) oder eine Person, die den Glauben vertritt (Sedisvakantist), dass der Stuhl von Rom (das Papsttum) derzeit vakant ist. Anhänger glauben, dass die jüngsten Päpste, typischerweise seit dem Zweiten Vatikanischen Konzil (1962-1965), Häretiker sind und daher das päpstliche Amt verloren oder nie gültig erlangt haben.",
+  },
+},
+
+  {
+  id: "agape",
+  term: {
+    en: "Agape",
+    fr: "Agapè",
+    es: "Ágape",
+    de: "Agape",
+  },
+  definition: {
+    en: "A Greek word for selfless, sacrificial, and unconditional love, representing the divine love of God for humanity and the love Christians are called to have for one another.",
+    fr: "Un mot grec désignant l'amour désintéressé, sacrificiel et inconditionnel, représentant l'amour divin de Dieu pour l'humanité et l'amour que les chrétiens sont appelés à avoir les uns pour les autres.",
+    es: "Una palabra griega para el amor desinteresado, sacrificial e incondicional, que representa el amor divino de Dios por la humanidad y el amor que los cristianos están llamados a tenerse unos a otros.",
+    de: "Ein griechisches Wort für selbstlose, opferbereite und bedingungslose Liebe, das die göttliche Liebe Gottes zur Menschheit und die Liebe darstellt, zu der Christen untereinander berufen sind.",
+  },
+},
+
+  {
+  id: "novus-ordo",
+  term: {
+    en: "Novus Ordo",
+    fr: "Novus Ordo",
+    es: "Novus Ordo",
+    de: "Novus Ordo",
+  },
+  definition: {
+    en: "A common name for the Mass of Paul VI (Missa Pauli VI), the revision of the Roman Rite Mass promulgated by Pope Paul VI in 1969, after the Second Vatican Council. It is now the Ordinary Form of the Roman Rite.",
+    fr: "Nom courant pour la Messe de Paul VI (Missa Pauli VI), la révision du rite romain de la messe promulguée par le pape Paul VI en 1969, après le Concile Vatican II. C'est maintenant la Forme Ordinaire du rite romain.",
+    es: "Nombre común para la Misa de Pablo VI (Missa Pauli VI), la revisión del rito romano de la Misa promulgada por el Papa Pablo VI en 1969, después del Concilio Vaticano II. Actualmente es la Forma Ordinaria del rito romano.",
+    de: "Ein gebräuchlicher Name für die Messe Pauls VI. (Missa Pauli VI), die 1969 von Papst Paul VI. nach dem Zweiten Vatikanischen Konzil promulgierte Neufassung der Messe im Römischen Ritus. Sie ist heute die Ordentliche Form des Römischen Ritus.",
   },
 },
 
@@ -78,6 +110,24 @@ export const glossaryTerms: GlossaryTerm[] = [
       de: "Die höchste Form der Anbetung, des Lobes und der Ehre, die Gott allein gebührt. Dies unterscheidet sich von der Verehrung (Dulia), die den Heiligen zuteilwird.",
     },
   },
+
+
+  {
+  id: "latin-mass",
+  term: {
+    en: "Latin Mass",
+    fr: "Messe Latine",
+    es: "Misa Latina",
+    de: "Lateinische Messe",
+  },
+  definition: {
+    en: "The traditional form of the Roman Rite Mass, celebrated in Latin, as codified in the Roman Missal of 1962. Also known as the Tridentine Mass or the Extraordinary Form.",
+    fr: "La forme traditionnelle du rite romain de la messe, célébrée en latin, telle que codifiée dans le Missel romain de 1962. Également connue sous le nom de Messe tridentine ou Forme extraordinaire.",
+    es: "La forma tradicional del rito romano de la Misa, celebrada en latín, codificada en el Misal Romano de 1962. También conocida como la Misa Tridentina o la Forma Extraordinaria.",
+    de: "Die traditionelle Form der Messe im Römischen Ritus, die auf Latein gefeiert wird, wie sie im Römischen Messbuch von 1962 kodifiziert ist. Auch bekannt als Tridentinische Messe oder außerordentliche Form.",
+  },
+},
+  
   {
     id: "advent",
     term: {

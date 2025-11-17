@@ -13,11 +13,11 @@ export const translations = {
       de: "Ein Glaube, Eine Stimme",
     },
     subtitle: {
-      en: "Select a topic to see the unbroken continuity between the Bible and the Early Church.",
-      fr: "Sélectionnez un sujet pour voir la continuité ininterrompue entre la Bible et l'Église primitive.",
-      es: "Selecciona un tema para ver la continuidad ininterrumpida entre la Biblia y la Iglesia Primitiva.",
-      de: "Wählen Sie ein Thema, um die ungebrochene Kontinuität zwischen der Bibel und der frühen Kirche zu sehen.",
-    },
+  en: "Select a topic to view Sacred Scripture beside relevant comments from the Early Church Fathers and Doctors of the Church.",
+  fr: "Sélectionnez un sujet pour voir l'Écriture Sainte à côté des commentaires pertinents des Pères de l'Église et des Docteurs de l'Église.",
+  es: "Selecciona un tema para ver la Sagrada Escritura junto a comentarios relevantes de los Padres de la Iglesia y Doctores de la Iglesia.",
+  de: "Wählen Sie ein Thema, um die Heilige Schrift neben relevanten Kommentaren der frühen Kirchenväter und Kirchenlehrer anzuzeigen.",
+},
     scriptureTitle: {
       en: "Sacred Scripture",
       fr: "Écriture Sainte",
@@ -4083,11 +4083,11 @@ proofOfResurrection: {
     },
     quote: {
       text: {
-        en: "When the Advocate comes, whom I will send to you from the Father—the Spirit of truth who goes out from the Father—he will testify about me.",
-        fr: "Quand sera venu le Consolateur, que je vous enverrai de la part du Père, l'Esprit de vérité, qui procède du Père, il rendra témoignage de moi.",
-        es: "Pero cuando venga el Consolador, a quien yo os enviaré del Padre, el Espíritu de verdad, el cual procede del Padre, él dará testimonio acerca de mí.",
-        de: "Wenn aber der Tröster kommen wird, den ich euch senden werde vom Vater, der Geist der Wahrheit, der vom Vater ausgeht, der wird Zeugnis geben von mir.",
-      },
+  en: "When the Advocate comes, whom I will send to you from the Father, the Spirit of truth who goes out from the Father, he will testify about me.",
+  fr: "Quand sera venu le Consolateur, que je vous enverrai de la part du Père, l'Esprit de vérité, qui procède du Père, il rendra témoignage de moi.",
+  es: "Pero cuando venga el Consolador, a quien yo os enviaré del Padre, el Espíritu de verdad, el cual procede del Padre, él dará testimonio acerca de mí.",
+  de: "Wenn aber der Tröster kommen wird, den ich euch senden werde vom Vater, der Geist der Wahrheit, der vom Vater ausgeht, der wird Zeugnis geben von mir.",
+},
       source: {
         en: "John 15:26",
         fr: "Jean 15:26",
@@ -4138,12 +4138,7 @@ proofOfResurrection: {
         es: "Joseph Scheeben y la Teología Católica del Siglo XIX",
         de: "Joseph Scheeben und die Katholische Theologie des 19. Jahrhunderts",
       },
-      p1: {
-        en: "Joseph Scheeben (1835–1888) stands out as one of the greatest Catholic dogmatic theologians of the 19th century. Contrary to the common narrative that pre-Vatican II theology ignored the Church Fathers and focused solely on abstract reasoning, Scheeben and his colleagues at the Collegio Romano were renowned for integrating both scholastic precision and patristic depth.",
-        fr: "Joseph Scheeben (1835–1888) se distingue comme l'un des plus grands théologiens dogmatiques catholiques du XIXe siècle. Contrairement au récit courant selon lequel la théologie pré-Vatican II ignorait les Pères de l'Église et se concentrait uniquement sur le raisonnement abstrait, Scheeben et ses collègues du Collegio Romano étaient réputés pour intégrer à la fois la précision scolastique et la profondeur patristique.",
-        es: "Joseph Scheeben (1835–1888) se destaca como uno de los más grandes teólogos dogmáticos católicos del siglo XIX. Contrariamente a la narrativa común de que la teología anterior al Vaticano II ignoraba a los Padres de la Iglesia y se centraba únicamente en el razonamiento abstracto, Scheeben y sus colegas del Collegio Romano eran famosos por integrar tanto la precisión escolástica como la profundidad patrística.",
-        de: "Joseph Scheeben (1835–1888) ragt als einer der größten katholischen Dogmatiker des 19. Jahrhunderts heraus. Entgegen der gängigen Darstellung, dass die Theologie vor dem Zweiten Vatikanischen Konzil die Kirchenväter ignorierte und sich ausschließlich auf abstraktes Denken konzentrierte, waren Scheeben und seine Kollegen am Collegio Romano dafür bekannt, sowohl scholastische Präzision als auch patristische Tiefe zu integrieren.",
-      },
+      
       callout: {
         p1: {
           en: "His magnum opus, the <em>Handbook of Dogmatic Theology</em>, offers one of the most compelling accounts of the <em>Filioque</em> and its necessity for a coherent Trinitarian theology.",
@@ -4574,31 +4569,25 @@ proofOfResurrection: {
       },
     },
     bridge: {
-      h3: {
-        en: "Congratulations on Completing Your Journey!",
-        fr: "Félicitations pour avoir Terminé Votre Parcours !",
-        es: "¡Felicidades por Completar Tu Viaje!",
-        de: "Herzlichen Glückwunsch zum Abschluss Ihrer Reise!",
-      },
-      p1: {
-        en: "You've explored the foundations of Catholic faith—from God's existence to the finest points of Trinitarian theology. You've seen how Scripture, Tradition, and the Magisterium work together to preserve truth across two millennia.",
-        fr: "Vous avez exploré les fondements de la foi catholique — de l'existence de Dieu aux points les plus fins de la théologie trinitaire. Vous avez vu comment l'Écriture, la Tradition et le Magistère œuvrent ensemble pour préserver la vérité à travers deux millénaires.",
-        es: "Has explorado los fundamentos de la fe católica—desde la existencia de Dios hasta los puntos más finos de la teología trinitaria. Has visto cómo la Escritura, la Tradición y el Magisterio trabajan juntos para preservar la verdad a lo largo de dos milenios.",
-        de: "Sie haben die Grundlagen des katholischen Glaubens erkundet—von der Existenz Gottes bis zu den feinsten Punkten der Trinitätstheologie. Sie haben gesehen, wie Schrift, Tradition und Lehramt zusammenwirken, um die Wahrheit über zwei Jahrtausende zu bewahren.",
-      },
-      p2: {
-        en: "This journey is just the beginning. The Catholic faith is deep, rich, and endlessly rewarding to explore. Whether you're considering becoming Catholic, defending the faith, or deepening your own understanding, you now have a solid foundation.",
-        fr: "Ce parcours n'est qu'un début. La foi catholique est profonde, riche et infiniment enrichissante à explorer. Que vous envisagiez de devenir catholique, de défendre la foi ou d'approfondir votre propre compréhension, vous avez maintenant une base solide.",
-        es: "Este viaje es solo el comienzo. La fe católica es profunda, rica e infinitamente gratificante de explorar. Ya sea que estés considerando convertirte al catolicismo, defender la fe o profundizar tu propia comprensión, ahora tienes una base sólida.",
-        de: "Diese Reise ist erst der Anfang. Der katholische Glaube ist tief, reich und unendlich lohnend zu erkunden. Ob Sie erwägen, katholisch zu werden, den Glauben zu verteidigen oder Ihr eigenes Verständnis zu vertiefen, Sie haben jetzt eine solide Grundlage.",
-      },
-      p3: {
-        en: "May the Lord guide you as you continue to seek truth. Ad Majorem Dei Gloriam—for the greater glory of God.",
-        fr: "Que le Seigneur vous guide alors que vous continuez à chercher la vérité. Ad Majorem Dei Gloriam — pour la plus grande gloire de Dieu.",
-        es: "Que el Señor te guíe mientras continúas buscando la verdad. Ad Majorem Dei Gloriam—para la mayor gloria de Dios.",
-        de: "Möge der Herr Sie leiten, während Sie weiterhin nach der Wahrheit suchen. Ad Majorem Dei Gloriam—zur größeren Ehre Gottes.",
-      },
-    },
+  h3: {
+    en: "Congratulations on completing this journey!",
+    fr: "Félicitations, vous avez terminé ce parcours !",
+    es: "¡Felicidades por completar este viaje!",
+    de: "Glückwunsch zum Abschluss dieser Reise!",
+  },
+  p1: {
+    en: "You've explored the foundations of Catholic faith, from God's existence to the specifics of Trinitarian theology. You've seen how Scripture, Tradition, and the Magisterium work together to preserve truth for two millennia.",
+    fr: "Vous avez exploré les fondements de la foi catholique, de l'existence de Dieu jusqu'aux détails de la théologie trinitaire. Vous avez vu comment l'Écriture, la Tradition et le Magistère collaborent pour préserver la vérité depuis deux millénaires.",
+    es: "Has explorado los fundamentos de la fe católica, desde la existencia de Dios hasta los detalles de la teología trinitaria. Has visto cómo la Escritura, la Tradición y el Magisterio trabajan juntos para preservar la verdad durante dos milenios.",
+    de: "Sie haben die Grundlagen des katholischen Glaubens erkundet, von der Existenz Gottes bis zu den Details der Trinitätstheologie. Sie haben gesehen, wie Schrift, Tradition und Lehramt zusammenwirken, um die Wahrheit seit zwei Jahrtausenden zu bewahren.",
+  },
+  p2: {
+    en: "May the Lord guide you in your continued search for truth. Ad Majorem Dei Gloriam - for the greater glory of God.",
+    fr: "Que le Seigneur vous guide dans votre recherche continue de la vérité. Ad Majorem Dei Gloriam - pour la plus grande gloire de Dieu.",
+    es: "Que el Señor te guíe en tu continua búsqueda de la verdad. Ad Majorem Dei Gloriam - para la mayor gloria de Dios.",
+    de: "Möge der Herr Sie auf Ihrer weiteren Suche nach der Wahrheit leiten. Ad Majorem Dei Gloriam - zur größeren Ehre Gottes.",
+  },
+},
   },
 
   magisterium: {

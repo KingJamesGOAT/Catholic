@@ -8,11 +8,11 @@ export const earlyChurchUI = {
     de: "Die frühen Kirchenväter"
   },
   pageSubtitle: {
-    en: "Explore the original documents and testimonies of the first Christians.",
-    fr: "Explorez les documents originaux et les témoignages des premiers chrétiens.",
-    es: "Explora los documentos originales y testimonios de los primeros cristianos.",
-    de: "Erkunden Sie die Originaldokumente und Zeugnisse der ersten Christen."
-  },
+  en: "Explore pre-Nicaea (before 325) quotes from the early Church Fathers that reveal the Catholic nature of their faith.",
+  fr: "Explorez les écrits des Pères de l'Église d'avant Nicée (avant 325) qui témoignent de la foi catholique des premiers chrétiens.",
+  es: "Explore citas de los Padres de la Iglesia, anteriores a Nicea (antes del 325), que demuestran la fe católica de los primeros cristianos.",
+  de: "Erkunden Sie Zitate der Kirchenväter vor Nicäa (vor 325), die den katholischen Glauben der frühen Christen bezeugen."
+},
   selectPrompt: {
     en: "Select a theme below to see what the Church has believed from the beginning.",
     fr: "Sélectionnez un thème ci-dessous pour voir ce que l'Église a cru depuis le commencement.",

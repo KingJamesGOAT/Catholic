@@ -177,7 +177,7 @@ export default function ExistenceOfGod() {
               </li>
             </ul>
             {/* Video Embed for 1st Way */}
-            <div className="aspect-video w-full rounded-md overflow-hidden bg-gray-900 border border-gray-800 mt-4 pt-4 border-t">
+            <div className="aspect-video w-full rounded-md overflow-hidden bg-gray-900 border border-gray-800 mt-4 border-t">
               <iframe
                 width="100%"
                 height="100%"
@@ -217,7 +217,7 @@ export default function ExistenceOfGod() {
               </li>
             </ul>
             {/* Video Embed for 2nd Way */}
-            <div className="aspect-video w-full rounded-md overflow-hidden bg-gray-900 border border-gray-800 mt-4 pt-4 border-t">
+            <div className="aspect-video w-full rounded-md overflow-hidden bg-gray-900 border border-gray-800 mt-4 border-t">
               <iframe
                 width="100%"
                 height="100%"
@@ -260,7 +260,7 @@ export default function ExistenceOfGod() {
               <strong className="text-white">{t(trans.cause.way3.uniqueNote, language)}</strong>
             </p>
             {/* Video Embed for 3rd Way */}
-            <div className="aspect-video w-full rounded-md overflow-hidden bg-gray-900 border border-gray-800 mt-4 pt-4 border-t">
+            <div className="aspect-video w-full rounded-md overflow-hidden bg-gray-900 border border-gray-800 mt-4 border-t">
               <iframe
                 width="100%"
                 height="100%"
@@ -338,7 +338,7 @@ export default function ExistenceOfGod() {
               </li>
             </ul>
             {/* Video Embed for 4th Way */}
-            <div className="aspect-video w-full rounded-md overflow-hidden bg-gray-900 border border-gray-800 mt-4 pt-4 border-t">
+            <div className="aspect-video w-full rounded-md overflow-hidden bg-gray-900 border border-gray-800 mt-4 border-t">
               <iframe
                 width="100%"
                 height="100%"
@@ -410,7 +410,7 @@ export default function ExistenceOfGod() {
               </li>
             </ul>
             {/* Video Embed for 5th Way */}
-            <div className="aspect-video w-full rounded-md overflow-hidden bg-gray-900 border border-gray-800 mt-4 pt-4 border-t">
+            <div className="aspect-video w-full rounded-md overflow-hidden bg-gray-900 border border-gray-800 mt-4 border-t">
               <iframe
                 width="100%"
                 height="100%"
