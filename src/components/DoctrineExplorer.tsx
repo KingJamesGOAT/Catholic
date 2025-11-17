@@ -22,11 +22,11 @@ const getTopicIcon = (id: string) => {
 
 export default function DoctrineExplorer() {
   const { language } = useLanguage();
-  // Ensure we have data before rendering to prevent crashes
-  const firstTopicId = doctrineData.length > 0 ? doctrineData[0].id : '';
-  const [selectedId, setSelectedId] = useState(firstTopicId);
+  // Initialize with no topic selected
+  const [selectedId, setSelectedId] = useState<string | null>(null);
 
-  const currentDoctrine = doctrineData.find(d => d.id === selectedId) || doctrineData[0];
+  // Find the current doctrine, will be undefined if nothing is selected
+  const currentDoctrine = doctrineData.find(d => d.id === selectedId);
   
   // Get Bible Verses
   const bibleVerses = currentDoctrine?.verses?.[language as keyof typeof currentDoctrine.verses] || currentDoctrine?.verses?.['en'] || [];
@@ -37,7 +37,7 @@ export default function DoctrineExplorer() {
   const trans = translations.doctrineExplorer;
 
   // Safety check if translations aren't loaded yet
-  if (!trans || !currentDoctrine) {
+  if (!trans) {
     return null;
   }
 
@@ -103,134 +103,136 @@ export default function DoctrineExplorer() {
           </div>
         </div>
 
-        {/* --- Split View --- */}
-        <div className="grid lg:grid-cols-2 gap-8 items-start">
-          
-          {/* Left Column: Sacred Scripture */}
-          <motion.div 
-            key={`scripture-${selectedId}`}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4 }}
-            className="bg-gradient-to-b from-indigo-900/10 to-transparent rounded-3xl p-6 md:p-8 border border-indigo-900/30"
-          >
-            <div className="flex items-center gap-4 mb-8 border-b border-indigo-900/30 pb-4">
-              <div className="p-3 bg-indigo-600/20 rounded-xl border border-indigo-600/50">
-                <Book className="text-indigo-500" size={28} />
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-white">{t(trans.scriptureTitle, language)}</h3>
-                <p className="text-indigo-500/60 text-sm font-medium uppercase tracking-wide">{t(trans.scriptureSubtitle, language)}</p>
-              </div>
-            </div>
-
-            <div className="space-y-8">
-              {bibleVerses.map((verse, idx) => (
-                <div key={idx} className="relative group">
-                  <div className="absolute -left-3 top-0 bottom-0 w-1 bg-indigo-800/50 rounded-full group-hover:bg-indigo-500 transition-colors" />
-                  <div className="pl-6">
-                    <p className="text-gray-200 text-lg md:text-xl leading-relaxed font-serif italic">
-                      "{verse.text}"
-                    </p>
-                    <div className="mt-3 flex items-center gap-2">
-                      <div className="h-px flex-1 bg-indigo-900/30" />
-                      <span className="text-indigo-400 font-bold font-mono text-sm tracking-wide bg-indigo-950/50 px-2 py-1 rounded border border-indigo-900/50">
-                        {verse.book} {verse.chapter}:{verse.verse}
-                      </span>
-                    </div>
-                  </div>
+        {/* --- Split View (conditionally rendered) --- */}
+        {currentDoctrine && (
+          <div className="grid lg:grid-cols-2 gap-8 items-start">
+            
+            {/* Left Column: Sacred Scripture */}
+            <motion.div 
+              key={`scripture-${selectedId}`}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4 }}
+              className="bg-gradient-to-b from-indigo-900/10 to-transparent rounded-3xl p-6 md:p-8 border border-indigo-900/30"
+            >
+              <div className="flex items-center gap-4 mb-8 border-b border-indigo-900/30 pb-4">
+                <div className="p-3 bg-indigo-600/20 rounded-xl border border-indigo-600/50">
+                  <Book className="text-indigo-500" size={28} />
                 </div>
-              ))}
-              {bibleVerses.length === 0 && (
-                <p className="text-gray-500 text-center italic py-8">{t(trans.pending, language)}</p>
-              )}
-            </div>
-          </motion.div>
-
-          {/* Right Column: Tradition & Theology */}
-          <motion.div 
-            key={`fathers-${selectedId}`}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4, delay: 0.1 }}
-            className="bg-gradient-to-b from-blue-900/10 to-transparent rounded-3xl p-6 md:p-8 border border-blue-900/30"
-          >
-            <div className="flex items-center gap-4 mb-8 border-b border-blue-900/30 pb-4">
-              <div className="p-3 bg-blue-600/20 rounded-xl border border-blue-600/50">
-                <Users className="text-blue-500" size={28} />
+                <div>
+                  <h3 className="text-2xl font-bold text-white">{t(trans.scriptureTitle, language)}</h3>
+                  <p className="text-indigo-500/60 text-sm font-medium uppercase tracking-wide">{t(trans.scriptureSubtitle, language)}</p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-2xl font-bold text-white">{t(trans.traditionTitle, language)}</h3>
-                <p className="text-blue-500/60 text-sm font-medium uppercase tracking-wide">{t(trans.traditionSubtitle, language)}</p>
-              </div>
-            </div>
 
-            {/* SCROLL BEHAVIOR: Mobile expands fully (no scroll), Desktop has scroll */}
-            <div className="space-y-6 md:max-h-[800px] md:overflow-y-auto md:custom-scrollbar md:pr-2">
-              {traditionQuotes.length > 0 ? (
-                traditionQuotes.map((entry) => (
-                  <div key={entry.id} className="bg-gray-900/60 border border-gray-800 rounded-2xl p-6 hover:border-blue-800 hover:bg-gray-900 transition-all duration-300 relative overflow-hidden group">
-                    
-                    {/* Background decoration - HIDDEN ON MOBILE */}
-                    <div className="hidden md:block absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-                      {entry.type === 'theology' ? <Book size={64} /> : <Quote size={64} />}
-                    </div>
-
-                    <div className="flex gap-4 mb-4 relative z-10">
-                      <div className={`shrink-0 w-12 h-12 rounded-full flex items-center justify-center border-2 text-xl font-bold
-                        ${entry.type === 'theology' 
-                          ? 'bg-purple-900/30 border-purple-500/30 text-purple-400' 
-                          : 'bg-blue-900/30 border-blue-500/30 text-blue-400'
-                        }`}>
-                         {/* Initials */}
-                         {t(entry.author, language).charAt(0)}
-                      </div>
-                      <div>
-                        <h4 className="text-white font-bold text-lg leading-tight">{t(entry.author, language)}</h4>
-                        <div className="flex flex-wrap gap-2 mt-1">
-                          {entry.date && (
-                            <span className="text-[10px] uppercase tracking-wider text-gray-500 bg-gray-800 px-2 py-0.5 rounded">
-                              {entry.date}
-                            </span>
-                          )}
-                          {/* HIDE BADGE IF COUNCIL */}
-                          {entry.type !== 'council' && (
-                            <span className={`text-[10px] uppercase tracking-wider px-2 py-0.5 rounded border
-                              ${entry.type === 'father' ? 'text-blue-400 border-blue-900/50 bg-blue-950/30' : 
-                                entry.type === 'doctor' ? 'text-orange-400 border-orange-900/50 bg-orange-950/30' : 
-                                entry.type === 'papal' ? 'text-red-400 border-red-900/50 bg-red-950/30' :
-                                'text-purple-400 border-purple-900/50 bg-purple-950/30'}`}>
-                              {t(trans.types[entry.type], language)}
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="relative z-10">
-                      <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                        {t(entry.text, language)}
+              <div className="space-y-8">
+                {bibleVerses.map((verse, idx) => (
+                  <div key={idx} className="relative group">
+                    <div className="absolute -left-3 top-0 bottom-0 w-1 bg-indigo-800/50 rounded-full group-hover:bg-indigo-500 transition-colors" />
+                    <div className="pl-6">
+                      <p className="text-gray-200 text-lg md:text-xl leading-relaxed font-serif italic">
+                        "{verse.text}"
                       </p>
-                    </div>
-                    
-                    {entry.source && (
-                      <div className="mt-4 pt-4 border-t border-gray-800 relative z-10">
-                        <span className="text-xs text-gray-500 uppercase tracking-widest flex items-center gap-1">
-                          <ScrollText size={12} /> {t(trans.source, language)}: {entry.source}
+                      <div className="mt-3 flex items-center gap-2">
+                        <div className="h-px flex-1 bg-indigo-900/30" />
+                        <span className="text-indigo-400 font-bold font-mono text-sm tracking-wide bg-indigo-950/50 px-2 py-1 rounded border border-indigo-900/50">
+                          {verse.book} {verse.chapter}:{verse.verse}
                         </span>
                       </div>
-                    )}
+                    </div>
                   </div>
-                ))
-              ) : (
-                <div className="text-center py-12 bg-gray-900/30 border border-gray-800 rounded-xl">
-                  <p className="text-gray-400 mb-2">{t(trans.noQuotes, language)}</p>
-                </div>
-              )}
-            </div>
-          </motion.div>
+                ))}
+                {bibleVerses.length === 0 && (
+                  <p className="text-gray-500 text-center italic py-8">{t(trans.pending, language)}</p>
+                )}
+              </div>
+            </motion.div>
 
-        </div>
+            {/* Right Column: Tradition & Theology */}
+            <motion.div 
+              key={`fathers-${selectedId}`}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
+              className="bg-gradient-to-b from-blue-900/10 to-transparent rounded-3xl p-6 md:p-8 border border-blue-900/30"
+            >
+              <div className="flex items-center gap-4 mb-8 border-b border-blue-900/30 pb-4">
+                <div className="p-3 bg-blue-600/20 rounded-xl border border-blue-600/50">
+                  <Users className="text-blue-500" size={28} />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white">{t(trans.traditionTitle, language)}</h3>
+                  <p className="text-blue-500/60 text-sm font-medium uppercase tracking-wide">{t(trans.traditionSubtitle, language)}</p>
+                </div>
+              </div>
+
+              {/* SCROLL BEHAVIOR: Mobile expands fully (no scroll), Desktop has scroll */}
+              <div className="space-y-6 md:max-h-[800px] md:overflow-y-auto md:custom-scrollbar md:pr-2">
+                {traditionQuotes.length > 0 ? (
+                  traditionQuotes.map((entry) => (
+                    <div key={entry.id} className="bg-gray-900/60 border border-gray-800 rounded-2xl p-6 hover:border-blue-800 hover:bg-gray-900 transition-all duration-300 relative overflow-hidden group">
+                      
+                      {/* Background decoration - HIDDEN ON MOBILE */}
+                      <div className="hidden md:block absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                        {entry.type === 'theology' ? <Book size={64} /> : <Quote size={64} />}
+                      </div>
+
+                      <div className="flex gap-4 mb-4 relative z-10">
+                        <div className={`shrink-0 w-12 h-12 rounded-full flex items-center justify-center border-2 text-xl font-bold
+                          ${entry.type === 'theology' 
+                            ? 'bg-purple-900/30 border-purple-500/30 text-purple-400' 
+                            : 'bg-blue-900/30 border-blue-500/30 text-blue-400'
+                          }`}>
+                            {/* Initials */}
+                            {t(entry.author, language).charAt(0)}
+                        </div>
+                        <div>
+                          <h4 className="text-white font-bold text-lg leading-tight">{t(entry.author, language)}</h4>
+                          <div className="flex flex-wrap gap-2 mt-1">
+                            {entry.date && (
+                              <span className="text-[10px] uppercase tracking-wider text-gray-500 bg-gray-800 px-2 py-0.5 rounded">
+                                {entry.date}
+                              </span>
+                            )}
+                            {/* HIDE BADGE IF COUNCIL */}
+                            {entry.type !== 'council' && (
+                              <span className={`text-[10px] uppercase tracking-wider px-2 py-0.5 rounded border
+                                ${entry.type === 'father' ? 'text-blue-400 border-blue-900/50 bg-blue-950/30' : 
+                                  entry.type === 'doctor' ? 'text-orange-400 border-orange-900/50 bg-orange-950/30' : 
+                                  entry.type === 'papal' ? 'text-red-400 border-red-900/50 bg-red-950/30' :
+                                  'text-purple-400 border-purple-900/50 bg-purple-950/30'}`}>
+                                {t(trans.types[entry.type], language)}
+                              </span>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="relative z-10">
+                        <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+                          {t(entry.text, language)}
+                        </p>
+                      </div>
+                      
+                      {entry.source && (
+                        <div className="mt-4 pt-4 border-t border-gray-800 relative z-10">
+                          <span className="text-xs text-gray-500 uppercase tracking-widest flex items-center gap-1">
+                            <ScrollText size={12} /> {t(trans.source, language)}: {entry.source}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  ))
+                ) : (
+                  <div className="text-center py-12 bg-gray-900/30 border border-gray-800 rounded-xl">
+                    <p className="text-gray-400 mb-2">{t(trans.noQuotes, language)}</p>
+                  </div>
+                )}
+              </div>
+            </motion.div>
+
+          </div>
+        )}
       </div>
     </section>
   );
