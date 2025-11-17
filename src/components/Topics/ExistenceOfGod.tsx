@@ -476,6 +476,13 @@ export default function ExistenceOfGod() {
         {/* End Moral Argument Video */}
 
         <div className="space-y-4 text-gray-300 leading-relaxed">
+          {/* NEW INTRO PARAGRAPH */}
+          <p
+            dangerouslySetInnerHTML={{
+              __html: t(trans.moral.intro, language),
+            }}
+          />
+
           <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
             <p className="mb-3">
               <strong className="text-white">
@@ -508,12 +515,10 @@ export default function ExistenceOfGod() {
             }}
           />
 
+          {/* Quote without attribution */}
           <div className="bg-gray-900/50 border-l-4 border-blue-600 p-6 rounded-r-lg my-6">
             <p className="text-gray-300 italic">
               "{t(trans.moral.quote, language)}"
-            </p>
-            <p className="text-gray-500 mt-2">
-              — William Lane Craig
             </p>
           </div>
         </div>
@@ -665,14 +670,7 @@ export default function ExistenceOfGod() {
           </div>
         </div>
 
-        <div className="bg-gray-900/50 border-l-4 border-purple-600 p-6 rounded-r-lg my-8">
-          <p className="text-gray-300 italic">
-            "{t(trans.objections.craigQuote, language)}"
-          </p>
-          <p className="text-gray-500 mt-2">
-            — William Lane Craig
-          </p>
-        </div>
+        {/* Craig Quote Block Removed */}
       </motion.section>
       
       {/* Vidéo avant la Conclusion */}

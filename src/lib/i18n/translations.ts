@@ -674,608 +674,573 @@ export const translations = {
 
 // Existence of God Topic
 existenceOfGod: {
-    title: {
-      en: "The Existence of God: St. Thomas Aquinas' Five Ways and Other Arguments",
-      fr: "L'Existence de Dieu : Les Cinq Voies de Saint Thomas d'Aquin et Autres Arguments",
-      es: "La Existencia de Dios: Las Cinco Vías de Santo Tomás de Aquino y Otros Argumentos",
-      de: "Die Existenz Gottes: Die Fünf Wege des Hl. Thomas von Aquin und Weitere Argumente",
-    },
-    subtitle: {
-      en: "Rational foundations for belief in God based on philosophy and history.",
-      fr: "Fondements rationnels de la croyance en Dieu basés sur la philosophie et l'histoire.",
-      es: "Fundamentos racionales para la creencia en Dios basados en la filosofía y la historia.",
-      de: "Rationale Grundlagen für den Glauben an Gott basierend auf Philosophie und Geschichte.",
-    },
-    quote: {
-      en: "The existence of God can be proved in five ways.",
-      fr: "L'existence de Dieu peut être prouvée de cinq manières.",
-      es: "La existencia de Dios puede ser probada de cinco maneras.",
-      de: "Die Existenz Gottes kann auf fünf Wegen bewiesen werden.",
-    },
-    quoteSource: {
-      en: "St. Thomas Aquinas, Summa Theologiae I, q.2, a.3",
-      fr: "Saint Thomas d'Aquin, Somme Théologique I, q.2, a.3",
-      es: "Santo Tomás de Aquino, Summa Theologiae I, q.2, a.3",
-      de: "Hl. Thomas von Aquin, Summa Theologiae I, q.2, a.3",
-    },
+  title: {
+    en: "The Existence of God: Rational Arguments for Belief",
+    fr: "L'Existence de Dieu : Arguments Rationnels pour la Croyance",
+    es: "La Existencia de Dios: Argumentos Racionales para la Creencia",
+    de: "Die Existenz Gottes: Rationale Argumente für den Glauben",
+  },
+  subtitle: {
+    en: "Rational foundations for belief in God based on philosophy and history.",
+    fr: "Fondements rationnels de la croyance en Dieu basés sur la philosophie et l'histoire.",
+    es: "Fundamentos racionales para la creencia en Dios basados en la filosofía y la historia.",
+    de: "Rationale Grundlagen für den Glauben an Gott basierend auf Philosophie und Geschichte.",
+  },
+  quote: {
+    en: "The existence of God can be proved in five ways.",
+    fr: "L'existence de Dieu peut être prouvée de cinq manières.",
+    es: "La existencia de Dios puede ser probada de cinco maneras.",
+    de: "Die Existenz Gottes kann auf fünf Wegen bewiesen werden.",
+  },
+  quoteSource: {
+    en: "St. Thomas Aquinas, Summa Theologiae I, q.2, a.3",
+    fr: "Saint Thomas d'Aquin, Somme Théologique I, q.2, a.3",
+    es: "Santo Tomás de Aquino, Summa Theologiae I, q.2, a.3",
+    de: "Hl. Thomas von Aquin, Summa Theologiae I, q.2, a.3",
+  },
 
-    // Argument Overview Titles (Nouvelle Structure)
-    arg1Title: {
-      en: "Arguments from Cause",
-      fr: "Arguments de la Cause",
-      es: "Argumentos de la Causa",
-      de: "Argumente der Ursache",
-    },
-    arg1Subtitle: {
-      en: "From Motion, Efficient Cause, and Contingency (1st, 2nd, 3rd Way)",
-      fr: "Du Mouvement, de la Cause Efficiente et de la Contingence (1ère, 2e, 3e Voie)",
-      es: "Del Movimiento, Causa Eficiente y Contingencia (1ª, 2ª, 3ª Vía)",
-      de: "Aus Bewegung, Wirkursache und Kontingenz (1., 2., 3. Weg)",
-    },
-    arg2Title: {
-      en: "Argument from Perfection",
-      fr: "Argument de la Perfection",
-      es: "Argumento de la Perfección",
-      de: "Argument der Vollkommenheit",
-    },
-    arg2Subtitle: {
-      en: "From Degrees of Goodness and Reality (4th Way)",
-      fr: "Des Degrés de Bonté et de Réalité (4e Voie)",
-      es: "De los Grados de Bondad y Realidad (4ª Vía)",
-      de: "Aus Graden von Güte und Realität (4. Weg)",
-    },
-    arg3Title: {
-      en: "Argument from Purpose",
-      fr: "Argument de la Finalité",
-      es: "Argumento del Propósito",
-      de: "Argument des Zweckes",
-    },
-    arg3Subtitle: {
-      en: "From the Teleological Order of the Universe (5th Way)",
-      fr: "De l'Ordre Téléologique de l'Univers (5e Voie)",
-      es: "Del Orden Teleológico del Universo (5ª Vía)",
-      de: "Aus der teleologischen Ordnung des Universums (5. Weg)",
-    },
-    arg4Title: {
-      en: "Moral Argument",
-      fr: "Argument Moral",
-      es: "Argumento Moral",
-      de: "Moralisches Argument",
-    },
-    arg4Subtitle: {
-      en: "Objective Values",
-      fr: "Valeurs Objectives",
-      es: "Valores Objetivos",
-      de: "Objektive Werte",
-    },
-    arg5Title: {
-      en: "Resurrection Argument",
-      fr: "Argument de la Résurrection",
-      es: "Argumento de la Resurrección",
-      de: "Auferstehungsargument",
-    },
-    arg5Subtitle: {
-      en: "Historical Evidence",
-      fr: "Preuves Historiques",
-      es: "Evidencia Histórica",
-      de: "Historische Beweise",
-    },
+  // Argument Overview Titles
+  arg1Title: {
+    en: "Arguments from Cause",
+    fr: "Arguments de la Cause",
+    es: "Argumentos de la Causa",
+    de: "Argumente der Ursache",
+  },
+  arg1Subtitle: {
+    en: "From Motion, Efficient Cause, and Contingency (1st, 2nd, 3rd Way)",
+    fr: "Du Mouvement, de la Cause Efficiente et de la Contingence (1ère, 2e, 3e Voie)",
+    es: "Del Movimiento, Causa Eficiente y Contingencia (1ª, 2ª, 3ª Vía)",
+    de: "Aus Bewegung, Wirkursache und Kontingenz (1., 2., 3. Weg)",
+  },
+  arg2Title: {
+    en: "Argument from Perfection",
+    fr: "Argument de la Perfection",
+    es: "Argumento de la Perfección",
+    de: "Argument der Vollkommenheit",
+  },
+  arg2Subtitle: {
+    en: "From Degrees of Goodness and Reality (4th Way)",
+    fr: "Des Degrés de Bonté et de Réalité (4e Voie)",
+    es: "De los Grados de Bondad y Realidad (4ª Vía)",
+    de: "Aus Graden von Güte und Realität (4. Weg)",
+  },
+  arg3Title: {
+    en: "Argument from Purpose",
+    fr: "Argument de la Finalité",
+    es: "Argumento del Propósito",
+    de: "Argument des Zweckes",
+  },
+  arg3Subtitle: {
+    en: "From the Teleological Order of the Universe (5th Way)",
+    fr: "De l'Ordre Téléologique de l'Univers (5e Voie)",
+    es: "Del Orden Teleológico del Universo (5ª Vía)",
+    de: "Aus der teleologischen Ordnung des Universums (5. Weg)",
+  },
+  arg4Title: {
+    en: "Moral Argument",
+    fr: "Argument Moral",
+    es: "Argumento Moral",
+    de: "Moralisches Argument",
+  },
+  arg4Subtitle: {
+    en: "Objective Values",
+    fr: "Valeurs Objectives",
+    es: "Valores Objetivos",
+    de: "Objektive Werte",
+  },
+  arg5Title: {
+    en: "Resurrection Argument",
+    fr: "Argument de la Résurrection",
+    es: "Argumento de la Resurrección",
+    de: "Auferstehungsargument",
+  },
+  arg5Subtitle: {
+    en: "Historical Evidence",
+    fr: "Preuves Historiques",
+    es: "Evidencia Histórica",
+    de: "Historische Beweise",
+  },
 
-    // Introduction (Mis à jour pour St. Thomas d'Aquin)
-    intro1: {
-      en: "The Catholic Church teaches that man can, by the natural light of human reason, know with certainty the one true God. The arguments from reason do not prove God's existence like a mathematical equation, but demonstrate that belief in God is the most rational and coherent explanation for the reality we observe.",
-      fr: "L'Église Catholique enseigne que l'homme peut, par la lumière naturelle de la raison humaine, connaître avec certitude l'unique vrai Dieu. Les arguments de la raison ne prouvent pas l'existence de Dieu comme une équation mathématique, mais démontrent que la croyance en Dieu est l'explication la plus rationnelle et cohérente de la réalité que nous observons.",
-      es: "La Iglesia Católica enseña que el hombre puede, por la luz natural de la razón humana, conocer con certeza al único Dios verdadero. Los argumentos de la razón no prueban la existencia de Dios como una ecuación matemática, sino que demuestran que la creencia en Dios es la explicación más racional y coherente para la realidad que observamos.",
-      de: "Die katholische Kirche lehrt, dass der Mensch durch das natürliche Licht der menschlichen Vernunft mit Gewissheit den einen wahren Gott erkennen kann. Die Argumente der Vernunft beweisen die Existenz Gottes nicht wie eine mathematische Gleichung, sondern zeigen, dass der Glaube an Gott die rationalste und kohärenteste Erklärung für die Realität ist, die wir beobachten.",
-    },
-    intro2: {
-      en: "St. Thomas Aquinas organized five famous arguments, often called the 'Five Ways' (Quinque Viae), which reason from effects in the world back to a First Cause—God. These are categorized into three main types of reasoning:",
-      fr: "Saint Thomas d'Aquin a organisé cinq arguments célèbres, souvent appelés les 'Cinq Voies' (Quinque Viae), qui raisonnent à partir des effets dans le monde pour remonter à une Première Cause—Dieu. Ceux-ci sont catégorisés en trois principaux types de raisonnement :",
-      es: "Santo Tomás de Aquino organizó cinco argumentos famosos, a menudo llamados las 'Cinco Vías' (Quinque Viae), que razonan a partir de los efectos en el mundo hasta una Primera Causa—Dios. Estos se categorizan en tres tipos principales de razonamiento:",
-      de: "Der Heilige Thomas von Aquin ordnete fünf berühmte Argumente, oft als die 'Fünf Wege' (Quinque Viae) bezeichnet, die von den Auswirkungen in der Welt auf eine Erste Ursache—Gott—zurückschließen. Diese werden in drei Hauptkategorien von Argumentationen eingeteilt:",
-    },
-    intro3: {
-      en: `
-        <ul class="list-disc list-inside space-y-2">
-          <li><strong>Arguments from Cause:</strong> The 1st, 2nd, and 3rd Ways, based on motion, efficient causality, and contingency.</li>
-          <li><strong>Argument from Perfection:</strong> The 4th Way, based on degrees of being and participation.</li>
-          <li><strong>Argument from Purpose:</strong> The 5th Way, based on final causality and order in nature.</li>
-        </ul>
-        <p class="mt-4">The introductory video covers these five ways in detail.</p>
-      `,
-      fr: `
-        <ul class="list-disc list-inside space-y-2">
-          <li><strong>Arguments de la Cause :</strong> Les 1ère, 2e et 3e Voies, basées sur le mouvement, la causalité efficiente et la contingence.</li>
-          <li><strong>Argument de la Perfection :</strong> La 4e Voie, basée sur les degrés d'être et la participation.</li>
-          <li><strong>Argument de la Finalité :</strong> La 5e Voie, basée sur la causalité finale et l'ordre dans la nature.</li>
-        </ul>
-        <p class="mt-4">La vidéo d'introduction couvre ces cinq voies en détail.</p>
-      `,
-      es: `
-        <ul class="list-disc list-inside space-y-2">
-          <li><strong>Argumentos de la Causa:</strong> La 1ª, 2ª y 3ª Vías, basadas en el movimiento, la causalidad eficiente y la contingencia.</li>
-          <li><strong>Argumento de la Perfección:</strong> La 4ª Vía, basada en grados de ser y participación.</li>
-          <li><strong>Argumento del Propósito:</strong> La 5ª Vía, basada en la causalidad final y el orden en la naturaleza.</li>
-        </ul>
-        <p class="mt-4">El video introductorio cubre estas cinco vías en detalle.</p>
-      `,
-      de: `
-        <ul class="list-disc list-inside space-y-2">
-          <li><strong>Argumente der Ursache:</strong> Der 1., 2. und 3. Weg, basierend auf Bewegung, Wirkursache und Kontingenz.</li>
-          <li><strong>Argument der Vollkommenheit:</strong> Der 4. Weg, basierend auf Seinsgraden und Teilhabe.</li>
-          <li><strong>Argument des Zweckes:</strong> Der 5. Weg, basierend auf Endursache und Ordnung in der Natur.</li>
-        </ul>
-        <p class="mt-4">Das Einführungsvideo behandelt diese fünf Wege im Detail.</p>
-      `,
-    },
+  // Introduction (UPDATED)
+  intro1: {
+    en: "The Catholic Church teaches that man can, by the natural light of human reason, know with certainty the one true God. The arguments from reason do not prove God's existence like a mathematical equation, but demonstrate that belief in God is the most rational and coherent explanation for the reality we observe. In this section, we will explore several of these rational foundations.",
+    fr: "L'Église Catholique enseigne que l'homme peut, par la lumière naturelle de la raison humaine, connaître avec certitude l'unique vrai Dieu. Les arguments de la raison ne prouvent pas l'existence de Dieu comme une équation mathématique, mais démontrent que la croyance en Dieu est l'explication la plus rationnelle et cohérente de la réalité que nous observons. Dans cette section, nous explorerons plusieurs de ces fondements rationnels.",
+    es: "La Iglesia Católica enseña que el hombre puede, por la luz natural de la razón humana, conocer con certeza al único Dios verdadero. Los argumentos de la razón no prueban la existencia de Dios como una ecuación matemática, sino que demuestran que la creencia en Dios es la explicación más racional y coherente para la realidad que observamos. En esta sección, exploraremos varios de estos fundamentos racionales.",
+    de: "Die katholische Kirche lehrt, dass der Mensch durch das natürliche Licht der menschlichen Vernunft mit Gewissheit den einen wahren Gott erkennen kann. Die Argumente der Vernunft beweisen die Existenz Gottes nicht wie eine mathematische Gleichung, sondern zeigen, dass der Glaube an Gott die rationalste und kohärenteste Erklärung für die Realität ist, die wir beobachten. In diesem Abschnitt werden wir mehrere dieser rationalen Grundlagen untersuchen.",
+  },
+  intro2: {
+    en: "We will begin with the 'Five Ways' (Quinque Viae) organized by St. Thomas Aquinas, which reason from effects in the world back to a First Cause, God. We will then examine two other powerful arguments: the <strong class='text-white'>Moral Argument</strong>, based on objective values, and the <strong class='text-white'>Resurrection Argument</strong>, based on historical evidence.",
+    fr: "Nous commencerons par les 'Cinq Voies' (Quinque Viae) organisées par Saint Thomas d'Aquin, qui raisonnent à partir des effets dans le monde pour remonter à une Première Cause, Dieu. Nous examinerons ensuite deux autres arguments puissants : l'<strong class='text-white'>Argument Moral</strong>, basé sur les valeurs objectives, et l'<strong class='text-white'>Argument de la Résurrection</strong>, basé sur les preuves historiques.",
+    es: "Comenzaremos con las 'Cinco Vías' (Quinque Viae) organizadas por Santo Tomás de Aquino, que razonan a partir de los efectos en el mundo hasta una Primera Causa, Dios. Luego examinaremos otros dos poderosos argumentos: el <strong class='text-white'>Argumento Moral</strong>, basado en valores objetivos, y el <strong class='text-white'>Argumento de la Resurrección</strong>, basado en evidencia histórica.",
+    de: "Wir beginnen mit den 'Fünf Wegen' (Quinque Viae), die vom Heiligen Thomas von Aquin geordnet wurden und von den Auswirkungen in der Welt auf eine Erste Ursache, Gott, zurückschließen. Anschließend werden wir zwei weitere starke Argumente untersuchen: das <strong class='text-white'>Moralische Argument</strong>, das auf objektiven Werten basiert, und das <strong class='text-white'>Auferstehungsargument</strong>, das auf historischen Beweisen basiert.",
+  },
+  intro3: {
+    en: "The introductory video below provides a detailed overview of the Five Ways of St. Thomas Aquinas.",
+    fr: "La vidéo d'introduction ci-dessous offre un aperçu détaillé des Cinq Voies de Saint Thomas d'Aquin.",
+    es: "El video introductorio a continuación ofrece una descripción detallada de las Cinco Vías de Santo Tomás de Aquino.",
+    de: "Das Einführungsvideo unten bietet einen detaillierten Überblick über die Fünf Wege des Heiligen Thomas von Aquin.",
+  },
 
-    fiveArgumentsHeading: {
-      en: "The Five Ways of St. Thomas Aquinas and Additional Proofs",
-      fr: "Les Cinq Voies de Saint Thomas d'Aquin et Preuves Supplémentaires",
-      es: "Las Cinco Vías de Santo Tomás de Aquino y Pruebas Adicionales",
-      de: "Die Fünf Wege des Hl. Thomas von Aquin und Zusätzliche Beweise",
+  fiveArgumentsHeading: {
+    en: "The Five Ways of St. Thomas Aquinas and Additional Proofs",
+    fr: "Les Cinq Voies de Saint Thomas d'Aquin et Preuves Supplémentaires",
+    es: "Las Cinco Vías de Santo Tomás de Aquino y Pruebas Adicionais",
+    de: "Die Fünf Wege des Hl. Thomas von Aquin und Zusätzliche Beweise",
+  },
+  
+  // --- ARGUMENT SECTIONS (St. Thomas Aquinas' Five Ways) ---
+  cause: {
+    heading: {
+      en: "Arguments from Cause (The 1st, 2nd, and 3rd Ways)",
+      fr: "Arguments de la Cause (Les 1ère, 2e et 3e Voies)",
+      es: "Argumentos de la Causa (La 1ª, 2ª y 3ª Vías)",
+      de: "Argumente der Ursache (Der 1., 2. und 3. Weg)",
+    },
+    tagline: {
+      en: "The three ways that reason from the chain of becoming and being to a First Cause.",
+      fr: "Les trois voies qui raisonnent de la chaîne du devenir et de l'être à une Première Cause.",
+      es: "Las tres vías que razonan desde la cadena del devenir y del ser hasta una Primera Causa.",
+      de: "Die drei Wege, die von der Kette des Werdens und Seins auf eine Erste Ursache schließen.",
+    },
+    intro: {
+      en: "These three arguments observe the necessity of cause-and-effect in the world, that things change, are made, and come into and out of existence. They argue that the chains of cause cannot be infinitely traced backwards; they must terminate in an uncaused, first being, which is God.",
+      fr: "Ces trois arguments observent la nécessité de la cause à effet dans le monde, que les choses changent, sont produites et entrent et sortent de l'existence. Ils soutiennent que les chaînes de causes ne peuvent pas être remontées à l'infini ; elles doivent se terminer par un être premier, sans cause, qui est Dieu.",
+      es: "Estos tres argumentos observan la necesidad de causa y efecto en el mundo, que las cosas cambian, se hacen y entran y salen de la existencia. Argumentan que las cadenas de causa no pueden rastrearse infinitamente hacia atrás; deben terminar en un ser primero, incausado, que es Dios.",
+      de: "Diese drei Argumente beobachten die Notwendigkeit von Ursache und Wirkung in der Welt, dass sich Dinge verändern, hergestellt werden und ins Dasein treten und vergehen. Sie argumentieren, dass die Kausalketten nicht unendlich zurückverfolgt werden können; sie müssen in einem unverursachten, ersten Wesen enden, das Gott ist.",
+    },
+    quote1: {
+      en: "Now to take away the cause is to take away the effect. Therefore, if there be no first cause among efficient causes, there will be no ultimate, nor any intermediate cause.",
+      fr: "Or ôter la cause, c'est ôter l'effet. Par conséquent, s'il n'y a pas de première cause parmi les causes efficientes, il n'y aura ni cause dernière, ni cause intermédiaire.",
+      es: "Ahora bien, quitar la causa es quitar el efecto. Por lo tanto, si no hay una primera causa entre las causas eficientes, no habrá causa última ni ninguna causa intermedia.",
+      de: "Nun, die Ursache wegzunehmen bedeutet, die Wirkung wegzunehmen. Daher wird es, wenn es keine erste Ursache unter den Wirkursachen gibt, auch keine letzte noch irgendeine Zwischenursache geben.",
     },
     
-    // --- ARGUMENT SECTIONS (St. Thomas Aquinas' Five Ways) ---
-    cause: {
-      heading: {
-        en: "Arguments from Cause (The 1st, 2nd, and 3rd Ways)",
-        fr: "Arguments de la Cause (Les 1ère, 2e et 3e Voies)",
-        es: "Argumentos de la Causa (La 1ª, 2ª y 3ª Vías)",
-        de: "Argumente der Ursache (Der 1., 2. und 3. Weg)",
-      },
-      tagline: {
-        en: "The three ways that reason from the chain of becoming and being to a First Cause.",
-        fr: "Les trois voies qui raisonnent de la chaîne du devenir et de l'être à une Première Cause.",
-        es: "Las tres vías que razonan desde la cadena del devenir y del ser hasta una Primera Causa.",
-        de: "Die drei Wege, die von der Kette des Werdens und Seins auf eine Erste Ursache schließen.",
-      },
-      intro: {
-        en: "These three arguments observe the necessity of cause-and-effect in the world—that things change, are made, and come into and out of existence—and argue that the chains of cause cannot be infinitely traced backwards; they must terminate in an uncaused, first being, which is God.",
-        fr: "Ces trois arguments observent la nécessité de la cause à effet dans le monde—que les choses changent, sont produites et entrent et sortent de l'existence—et soutiennent que les chaînes de causes ne peuvent pas être remontées à l'infini ; elles doivent se terminer par un être premier, sans cause, qui est Dieu.",
-        es: "Estos tres argumentos observan la necesidad de causa-y-efecto en el mundo—que las cosas cambian, se hacen y entran y salen de la existencia—y argumentan que las cadenas de causa no pueden rastrearse infinitamente hacia atrás; deben terminar en un ser primero, incausado, que es Dios.",
-        de: "Diese drei Argumente beobachten die Notwendigkeit von Ursache und Wirkung in der Welt—dass sich Dinge verändern, hergestellt werden und ins Dasein treten und vergehen—und argumentieren, dass die Kausalketten nicht unendlich zurückverfolgt werden können; sie müssen in einem unverursachten, ersten Wesen enden, das Gott ist.",
-      },
-      quote1: {
-        en: "Now to take away the cause is to take away the effect. Therefore, if there be no first cause among efficient causes, there will be no ultimate, nor any intermediate cause.",
-        fr: "Or ôter la cause, c'est ôter l'effet. Par conséquent, s'il n'y a pas de première cause parmi les causes efficientes, il n'y aura ni cause dernière, ni cause intermédiaire.",
-        es: "Ahora bien, quitar la causa es quitar el efecto. Por lo tanto, si no hay una primera causa entre las causas eficientes, no habrá causa última ni ninguna causa intermedia.",
-        de: "Nun, die Ursache wegzunehmen bedeutet, die Wirkung wegzunehmen. Daher wird es, wenn es keine erste Ursache unter den Wirkursachen gibt, auch keine letzte noch irgendeine Zwischenursache geben.",
-      },
-      
-      way1: {
-        title: {
-          en: "The First Way: From Motion (or Change)",
-          fr: "La Première Voie : Du Mouvement (ou du Changement)",
-          es: "La Primera Vía: Del Movimiento (o Cambio)",
-          de: "Der Erste Weg: Aus der Bewegung (oder Veränderung)",
-        },
-        premise1: {
-          en: "Whatever is moved is moved by another (change is the reduction of potentiality to actuality).",
-          fr: "Tout ce qui est mû est mû par autre chose (le changement est la réduction de la potentialité à l'actualité).",
-          es: "Todo lo que es movido es movido por otro (el cambio es la reducción de la potencialidad a la actualidad).",
-          de: "Alles, was bewegt wird, wird von einem anderen bewegt (Veränderung ist die Reduktion von Potentialität zu Aktualität).",
-        },
-        premise2: {
-          en: "This series of movers cannot regress infinitely; therefore, a First Unmoved Mover exists.",
-          fr: "Cette série de moteurs ne peut pas régresser à l'infini ; par conséquent, un Premier Moteur Immuable existe.",
-          es: "Esta serie de motores no puede retroceder infinitamente; por lo tanto, existe un Primer Motor Inmóvil.",
-          de: "Diese Reihe von Bewegern kann nicht unendlich zurückgehen; daher existiert ein Erster Unbewegter Beweger.",
-        },
-        conclusion: {
-          en: "Therefore, there must be a First Unmoved Mover, and this all men understand to be God.",
-          fr: "Par conséquent, il doit y avoir un Premier Moteur Immuable, et tous les hommes comprennent que c'est Dieu.",
-          es: "Por lo tanto, debe haber un Primer Motor Inmóvil, y todos los hombres entienden que este es Dios.",
-          de: "Daher muss es einen Ersten Unbewegten Beweger geben, und dies verstehen alle Menschen als Gott.",
-        },
-        // 'video' property removed, embed added to JSX
-      },
-      way2: {
-        title: {
-          en: "The Second Way: From Efficient Causes",
-          fr: "La Deuxième Voie : Des Causes Efficientes",
-          es: "La Segunda Vía: De las Causas Eficientes",
-          de: "Der Zweite Weg: Aus den Wirkursachen",
-        },
-        premise1: {
-          en: "Every effect has an efficient (producing) cause, and nothing can be the cause of itself.",
-          fr: "Tout effet a une cause efficiente (productrice), et rien ne peut être la cause de soi-même.",
-          es: "Todo efecto tiene una causa eficiente (productora), y nada puede ser la causa de sí mismo.",
-          de: "Jede Wirkung hat eine Wirkursache (produzierende Ursache), und nichts kann die Ursache seiner selbst sein.",
-        },
-        premise2: {
-          en: "A hierarchical causal series cannot be infinite; there must be a First Efficient Cause.",
-          fr: "Une série causale hiérarchique ne peut pas être infinie ; il doit y avoir une Première Cause Efficiente.",
-          es: "Una serie causal jerárquica no puede ser infinita; debe haber una Primera Causa Eficiente.",
-          de: "Eine hierarchische Kausalkette kann nicht unendlich sein; es muss eine Erste Wirkursache geben.",
-        },
-        conclusion: {
-          en: "Therefore, it is necessary to admit a First Efficient Cause, to which everyone gives the name of God.",
-          fr: "Par conséquent, il est nécessaire d'admettre une Première Cause Efficiente, à laquelle tout le monde donne le nom de Dieu.",
-          es: "Por lo tanto, es necesario admitir una Primera Causa Eficiente, a la que todos dan el nombre de Dios.",
-          de: "Daher ist es notwendig, eine Erste Wirkursache anzuerkennen, der alle den Namen Gott geben.",
-        },
-        // 'video' property removed, embed added to JSX
-      },
-      way3: {
-        title: {
-          en: "The Third Way: From Contingency and Necessity",
-          fr: "La Troisième Voie : De la Contingence et de la Nécessité",
-          es: "La Tercera Vía: De la Contingencia y la Necesidad",
-          de: "Der Dritte Weg: Aus Kontingenz und Notwendigkeit",
-        },
-        premise1: {
-          en: "Contingent beings (beings that can fail to exist) cannot explain themselves; they are existentially dependent.",
-          fr: "Les êtres contingents (les êtres qui peuvent ne pas exister) ne peuvent pas s'expliquer eux-mêmes ; ils sont existentiellement dépendants.",
-          es: "Los seres contingentes (seres que pueden no existir) no pueden explicarse a sí mismos; son existencialmente dependientes.",
-          de: "Kontingente Wesen (Wesen, die nicht existieren können) können sich nicht selbst erklären; sie sind existentiell abhängig.",
-        },
-        premise2: {
-          en: "If all things were merely contingent, then at some point nothing would have existed, and nothing would exist now.",
-          fr: "Si toutes les choses n'étaient que contingentes, alors à un moment donné rien n'aurait existé, et rien n'existerait maintenant.",
-          es: "Si todas las cosas fueran merementes contingentes, entonces en algún momento nada habría existido, y nada existiría ahora.",
-          de: "Wenn alle Dinge nur kontingent wären, dann hätte irgendwann nichts existiert, und nichts würde jetzt existieren.",
-        },
-        conclusion: {
-          en: "Therefore, there must exist a Necessary Being whose essence is existence, and this we call God.",
-          fr: "Par conséquent, il doit exister un Être Nécessaire dont l'essence est l'existence, et c'est ce que nous appelons Dieu.",
-          es: "Por lo tanto, debe existir un Ser Necesario cuya esencia es la existencia, y a este llamamos Dios.",
-          de: "Daher muss ein Notwendiges Wesen existieren, dessen Essenz die Existenz ist, und dies nennen wir Gott.",
-        },
-        uniqueNote: {
-          en: "This Way is unique because it argues not from change or causes, but from the reason things exist rather than not exist, leading directly to the divine attribute of necessary existence.",
-          fr: "Cette Voie est unique car elle ne raisonne pas à partir du changement ou des causes, mais à partir de la raison pour laquelle les choses existent plutôt que de ne pas exister, menant directement à l'attribut divin de l'existence nécessaire.",
-          es: "Esta Vía es única porque no argumenta a partir del cambio o las causas, sino de la razón por la cual las cosas existen en lugar de no existir, llevando directamente al atributo divino de la existencia necesaria.",
-          de: "Dieser Weg ist einzigartig, weil er nicht von Veränderung oder Ursachen argumentiert, sondern vom Grund, warum Dinge existieren anstatt nicht zu existieren, was direkt zum göttlichen Attribut der notwendigen Existenz führt.",
-        },
-        // 'video' property removed, embed added to JSX
-      },
-    },
-
-    perfection: {
-      heading: {
-        en: "Argument from Perfection (The 4th Way)",
-        fr: "Argument de la Perfection (La 4e Voie)",
-        es: "Argumento de la Perfección (La 4ª Vía)",
-        de: "Argument der Vollkommenheit (Der 4. Weg)",
-      },
-      tagline: {
-        en: "The argument from the gradations of being and participation.",
-        fr: "L'argument des gradations de l'être et de la participation.",
-        es: "El argumento de las gradaciones del ser y la participación.",
-        de: "Das Argument aus den Abstufungen des Seins und der Teilhabe.",
-      },
-      intro: {
-        en: "This way, rooted in Platonic-Augustinian philosophy, argues from the objective observation that things in the world possess degrees of perfections—such as goodness, truth, and nobility—in greater or lesser measure.",
-        fr: "Cette voie, enracinée dans la philosophie platonicienne-augustinienne, argumente à partir de l'observation objective que les choses dans le monde possèdent des degrés de perfections—telles que la bonté, la vérité et la noblesse—dans une mesure plus ou moins grande.",
-        es: "Esta vía, enraizada en la filosofía platónico-agustiniana, argumenta a partir de la observación objetiva de que las cosas en el mundo poseen grados de perfecciones—tales como bondad, verdad y nobleza—en mayor o menor medida.",
-        de: "Dieser Weg, der in der platonisch-augustinischen Philosophie verwurzelt ist, argumentiert aus der objektiven Beobachtung, dass Dinge in der Welt Grade von Vollkommenheiten—wie Güte, Wahrheit und Adel—in größerem oder geringerem Maße besitzen.",
-      },
-      summaryLabel: {
-        en: "Summary of the Argument (The 4th Way):",
-        fr: "Résumé de l'Argument (La 4e Voie) :",
-        es: "Resumen del Argumento (La 4ª Vía):",
-        de: "Zusammenfassung des Arguments (Der 4. Weg):",
+    way1: {
+      title: {
+        en: "The First Way: From Motion (or Change)",
+        fr: "La Première Voie : Du Mouvement (ou du Changement)",
+        es: "La Primera Vía: Del Movimiento (o Cambio)",
+        de: "Der Erste Weg: Aus der Bewegung (oder Veränderung)",
       },
       premise1: {
-        en: "We observe degrees of goodness, truth, and nobility in the world.",
-        fr: "Nous observons des degrés de bonté, de vérité et de noblesse dans le monde.",
-        es: "Observamos grados de bondad, verdad y nobleza en el mundo.",
-        de: "Wir beobachten Grade von Güte, Wahrheit und Adel in der Welt.",
+        en: "Whatever is moved is moved by another (change is the reduction of potentiality to actuality).",
+        fr: "Tout ce qui est mû est mû par autre chose (le changement est la réduction de la potentialité à l'actualité).",
+        es: "Todo lo que es movido es movido por otro (el cambio es la reducción de la potentialité à la actualidad).",
+        de: "Alles, was bewegt wird, wird von einem anderen bewegt (Veränderung ist die Reduktion von Potentialität zu Aktualität).",
       },
       premise2: {
-        en: "Degrees of perfection presuppose a maximum which is the cause of all perfection.",
-        fr: "Les degrés de perfection présupposent un maximum qui est la cause de toute perfection.",
-        es: "Los grados de perfección presuponen un máximo que es la causa de toda perfección.",
-        de: "Grade der Vollkommenheit setzen ein Maximum voraus, das die Ursache aller Vollkommenheit ist.",
+        en: "This series of movers cannot regress infinitely; therefore, a First Unmoved Mover exists.",
+        fr: "Cette série de moteurs ne peut pas régresser à l'infini ; par conséquent, un Premier Moteur Immuable existe.",
+        es: "Esta serie de motores no puede retroceder infinitamente; por lo tanto, existe un Primer Motor Inmóvil.",
+        de: "Diese Reihe von Bewegern kann nicht unendlich zurückgehen; daher existiert ein Erster Unbewegter Beweger.",
       },
       conclusion: {
-        en: "Therefore, there must be a First Perfect Being which is the cause of all being, goodness, and every perfection, and this we call God.",
-        fr: "Par conséquent, il doit y avoir un Premier Être Parfait qui est la cause de tout être, de toute bonté et de toute perfection, et c'est ce que nous appelons Dieu.",
-        es: "Por lo tanto, debe haber un Primer Ser Perfecto que es la causa de todo ser, bondad y toda perfección, y a este llamamos Dios.",
-        de: "Daher muss es ein Erstes Vollkommenes Wesen geben, das die Ursache allen Seins, aller Güte und jeder Vollkommenheit ist, und dies nennen wir Gott.",
+        en: "Therefore, there must be a First Unmoved Mover, and this all men understand to be God.",
+        fr: "Par conséquent, il doit y avoir un Premier Moteur Immuable, et tous les hommes comprennent que c'est Dieu.",
+        es: "Por lo tanto, debe haber un Primer Motor Inmóvil, y todos los hombres entienden que este es Dios.",
+        de: "Daher muss es einen Ersten Unbewegten Beweger geben, und dies verstehen alle Menschen als Gott.",
       },
-      explanation: {
-        en: "The existence of imperfect instances of a quality (like a partially good action) implies the existence of a perfect, absolute standard against which these instances are measured. This maximum reality is God, the source of all perfection.",
-        fr: "L'existence d'instances imparfaites d'une qualité (comme une action partiellement bonne) implique l'existence d'un standard absolu et parfait par rapport auquel ces instances sont mesurées. Cette réalité maximale est Dieu, la source de toute perfection.",
-        es: "La existencia de instancias imperfectas de una cualidad (como una acción parcialmente buena) implica la existencia de un estándar perfecto y absoluto contra el cual se miden estas instancias. Esta realidad máxima es Dios, la fuente de toda perfección.",
-        de: "Die Existenz unvollkommener Instanzen einer Eigenschaft (wie einer teilweise guten Handlung) impliziert die Existenz eines perfekten, absoluten Standards, an dem diese Instanzen gemessen werden. Diese maximale Realität ist Gott, die Quelle aller Vollkommenheit.",
-      },
-      // 'video' property removed, embed added to JSX
     },
-    
-    purpose: {
-      heading: {
-        en: "Argument from Purpose (The 5th Way)",
-        fr: "Argument de la Finalité (La 5e Voie)",
-        es: "Argumento del Propósito (La 5ª Vía)",
-        de: "Argument des Zweckes (Der 5. Weg)",
-      },
-      tagline: {
-        en: "The argument from the order and governance of the world (Teleological Argument).",
-        fr: "L'argument de l'ordre et de la gouvernance du monde (Argument Téléologique).",
-        es: "El argumento del orden y la gobernanza del mundo (Argumento Teleológico).",
-        de: "Das Argument aus der Ordnung und Regierung der Welt (Teleologisches Argument).",
-      },
-      intro: {
-        en: "We observe that non-rational things act regularly and consistently for an end (a final cause). This regularity and directedness must presuppose an ordering intellect.",
-        fr: "Nous observons que les choses non rationnelles agissent régulièrement et constamment dans un but (une cause finale). Cette régularité et cette direction doivent présupposer un intellect ordonnateur.",
-        es: "Observamos que las cosas no racionales actúan regular y consistentemente para un fin (una causa final). Esta regularidad y direccionalidad deben presuponer un intelecto ordenador.",
-        de: "Wir beobachten, dass nicht-rationale Dinge regelmäßig und konsequent auf ein Ziel hin handeln (eine Endursache). Diese Regelmäßigkeit und Zielgerichtetheit muss einen ordnenden Intellekt voraussetzen.",
-      },
-      summaryLabel: {
-        en: "Summary of the Argument (The 5th Way):",
-        fr: "Résumé de l'Argument (La 5e Voie) :",
-        es: "Resumen del Argumento (La 5ª Vía):",
-        de: "Zusammenfassung des Arguments (Der 5. Weg):",
+    way2: {
+      title: {
+        en: "The Second Way: From Efficient Causes",
+        fr: "La Deuxième Voie : Des Causes Efficientes",
+        es: "La Segunda Vía: De las Causas Eficientes",
+        de: "Der Zweite Weg: Aus den Wirkursachen",
       },
       premise1: {
-        en: "We see things that lack intelligence (e.g., natural bodies) act for an end.",
-        fr: "Nous voyons des choses qui manquent d'intelligence (par exemple, des corps naturels) agir pour une fin.",
-        es: "Vemos que las cosas que carecen de inteligencia (por ejemplo, cuerpos naturales) actúan para un fin.",
-        de: "Wir sehen, dass Dinge, denen Intelligenz fehlt (z.B. natürliche Körper), auf ein Ziel hin handeln.",
+        en: "Every effect has an efficient (producing) cause, and nothing can be the cause of itself.",
+        fr: "Tout effet a une cause efficiente (productrice), et rien ne peut être la cause de soi-même.",
+        es: "Todo efecto tiene una causa eficiente (productora), y nada puede ser la causa de sí mismo.",
+        de: "Jede Wirkung hat eine Wirkursache (produzierende Ursache), und nichts kann die Ursache seiner selbst sein.",
       },
       premise2: {
-        en: "Whatever acts for an end must be directed by some being endowed with knowledge and intelligence (like an arrow by an archer).",
-        fr: "Tout ce qui agit pour une fin doit être dirigé par un être doué de connaissance et d'intelligence (comme une flèche par un archer).",
-        es: "Todo lo que actúa para un fin debe ser dirigido por algún ser dotado de conocimiento e inteligencia (como una flecha por un arquero).",
-        de: "Alles, was auf ein Ziel hin handelt, muss von einem Wesen geleitet werden, das mit Wissen und Intelligenz ausgestattet ist (wie ein Pfeil von einem Bogenschützen).",
+        en: "A hierarchical causal series cannot be infinite; there must be a First Efficient Cause.",
+        fr: "Une série causale hiérarchique ne peut pas être infinie ; il doit y avoir une Première Cause Efficiente.",
+        es: "Una serie causal jerárquica no puede ser infinita; debe haber una Primera Causa Eficiente.",
+        de: "Eine hierarchische Kausalkette kann nicht unendlich sein; es muss eine Erste Wirkursache geben.",
       },
       conclusion: {
-        en: "Therefore, there must be an Intelligent Governor who directs all natural things to their end; and this being we call God.",
-        fr: "Par conséquent, il doit y avoir un Gouverneur Intelligent qui dirige toutes les choses naturelles vers leur fin ; et c'est cet être que nous appelons Dieu.",
-        es: "Por lo tanto, debe haber un Gobernador Inteligente que dirija todas las cosas naturales a su fin; y a este ser llamamos Dios.",
-        de: "Daher muss es einen Intelligenten Regierer geben, der alle natürlichen Dinge auf ihr Ziel hin lenkt; und dieses Wesen nennen wir Gott.",
+        en: "Therefore, it is necessary to admit a First Efficient Cause, to which everyone gives the name of God.",
+        fr: "Par conséquent, il est nécessaire d'admettre une Première Cause Efficiente, à laquelle tout le monde donne le nom de Dieu.",
+        es: "Por lo tanto, es necesario admitir una Primera Causa Eficiente, a la que todos dan el nombre de Dios.",
+        de: "Daher ist es notwendig, eine Erste Wirkursache anzuerkennen, der alle den Namen Gott geben.",
       },
-      explanation: {
-        en: "This is the only Way grounded entirely in final causality, or *telos* (end/purpose). The intricate, ordered governance of the world, from cosmology to biology, points to an intelligent designer who guides all things to their proper ends.",
-        fr: "C'est la seule Voie entièrement fondée sur la causalité finale, ou *telos* (fin/but). La gouvernance complexe et ordonnée du monde, de la cosmologie à la biologie, pointe vers un concepteur intelligent qui guide toutes les choses vers leurs fins appropriées.",
-        es: "Esta es la única Vía fundamentada completamente en la causalidad final, o *telos* (fin/propósito). La intrincada y ordenada gobernanza del mundo, desde la cosmología hasta la biología, apunta a un diseñador inteligente que guía todas las cosas hacia sus fines apropiados.",
-        de: "Dies ist der einzige Weg, der vollständig in der Endursache, oder *Telos* (Ziel/Zweck), begründet ist. Die komplizierte, geordnete Regierung der Welt, von der Kosmologie bis zur Biologie, deutet auf einen intelligenten Designer hin, der alle Dinge zu ihren richtigen Zielen führt.",
-      },
-      quote: {
-        en: "Therefore some intelligent being exists by whom all natural things are directed to their end; and this being we call God.",
-        fr: "Par conséquent, il existe un être intelligent par lequel toutes les choses naturelles sont dirigées vers leur fin ; et cet être, nous l'appelons Dieu.",
-        es: "Por lo tanto, existe algún ser inteligente por quien todas las cosas naturales son dirigidas a su fin; y a este ser llamamos Dios.",
-        de: "Daher existiert irgendein intelligentes Wesen, durch das alle natürlichen Dinge auf ihr Ziel hin gelenkt werden; und dieses Wesen nennen wir Gott.",
-      },
-      // 'video' property removed, embed added to JSX
     },
-    // --- END OF NEW ARGUMENT SECTIONS ---
-
-    // Argument 4: Moral (Contenu mis à jour)
-    moral: {
-      heading: {
-        en: "The Moral Argument",
-        fr: "L'Argument Moral",
-        es: "El Argumento Moral",
-        de: "Das Moralische Argument",
-      },
-      tagline: {
-        en: "Objective morality requires a moral lawgiver",
-        fr: "La moralité objective nécessite un législateur moral",
-        es: "La moralidad objetiva requiere un legislador moral",
-        de: "Objektive Moral erfordert einen moralischen Gesetzgeber",
-      },
-      summaryLabel: {
-        en: "Summary of the Argument:",
-        fr: "Résumé de l'Argument :",
-        es: "Resumen del Argumento:",
-        de: "Argumentzusammenfassung:",
+    way3: {
+      title: {
+        en: "The Third Way: From Contingency and Necessity",
+        fr: "La Troisième Voie : De la Contingence et de la Nécessité",
+        es: "La Tercera Vía: De la Contingencia y la Necesidad",
+        de: "Der Dritte Weg: Aus Kontingenz und Notwendigkeit",
       },
       premise1: {
-        en: "If God does not exist, objective moral values and duties do not exist.",
-        fr: "Si Dieu n'existe pas, les valeurs et devoirs moraux objectifs n'existent pas.",
-        es: "Si Dios no existe, los valores y deberes morales objetivos no existen.",
-        de: "Wenn Gott nicht existiert, existieren keine objektiven moralischen Werte und Pflichten.",
+        en: "Contingent beings (beings that can fail to exist) cannot explain themselves; they are existentially dependent.",
+        fr: "Les êtres contingents (les êtres qui peuvent ne pas exister) ne peuvent pas s'expliquer eux-mêmes ; ils sont existentiellement dépendants.",
+        es: "Los seres contingentes (seres que pueden no existir) no pueden explicarse a sí mismos; son existencialmente dependientes.",
+        de: "Kontingente Wesen (Wesen, die nicht existieren können) können sich nicht selbst erklären; sie sind existentiell abhängig.",
       },
       premise2: {
-        en: "Objective moral values and duties do exist.",
-        fr: "Les valeurs et devoirs moraux objectifs existent.",
-        es: "Los valores y deberes morales objectifs existent.",
-        de: "Objektive moralische Werte und Pflichten existieren.",
+        en: "If all things were merely contingent, then at some point nothing would have existed, and nothing would exist now.",
+        fr: "Si toutes les choses n'étaient que contingentes, alors à un moment donné rien n'aurait existé, et rien n'existerait maintenant.",
+        es: "Si todas las cosas fueran merementes contingentes, entonces en algún momento nada habría existido, y nada existiría ahora.",
+        de: "Wenn alle Dinge nur kontingent wären, dann hätte irgendwann nichts existiert, und nichts würde jetzt existieren.",
       },
       conclusion: {
-        en: "Therefore, God exists.",
-        fr: "Par conséquent, Dieu existe.",
-        es: "Por lo tanto, Dios existe.",
-        de: "Daher existiert Gott.",
+        en: "Therefore, there must exist a Necessary Being whose essence is existence, and this we call God.",
+        fr: "Par conséquent, il doit exister un Être Nécessaire dont l'essence est l'existence, et c'est ce que nous appelons Dieu.",
+        es: "Por lo tanto, debe existir un Ser Necesario cuya esencia es la existencia, y a este llamamos Dios.",
+        de: "Daher muss ein Notwendiges Wesen existieren, dessen Essenz die Existenz ist, und dies nennen wir Gott.",
       },
-      explanation: {
-        en: "Atheistic naturalism struggles to ground moral obligations. Under materialism, humans are merely biological machines. Yet we know intuitively that certain actions (like torturing babies for fun) are objectively wrong. This points to a transcendent moral lawgiver.",
-        fr: "Le naturalisme athée a du mal à fonder les obligations morales. Sous le matérialisme, les humains ne sont que des machines biologiques. Pourtant, nous savons intuitivement que certaines actions (comme torturer des bébés pour le plaisir) sont objectivement mauvaises. Cela pointe vers un législateur moral transcendant.",
-        es: "El naturalismo ateo lucha por fundamentar las obligaciones morales. Bajo el materialismo, los humanos son meramente máquinas biológicas. Sin embargo, sabemos intuitivamente que ciertas acciones (como torturar bebés por diversión) son objetivamente incorrectas. Esto apunta a un legislador moral trascendente.",
-        de: "Der atheistische Naturalismus hat Schwierigkeiten, moralische Verpflichtungen zu begründen. Unter dem Materialismus sind Menschen lediglich biologische Maschinen. Dennoch wissen wir intuitiv, dass bestimmte Handlungen (wie Babys zum Spaß zu foltern) objektiv falsch sind. Dies weist auf einen transzendenten moralischen Gesetzgeber hin.",
-      },
-      quote: {
-        en: "Objective values are rooted in the character of a holy and loving God.",
-        fr: "Les valeurs objectives sont enracinées dans le caractère d'un Dieu saint et aimant.",
-        es: "Los valores objetivos están arraigados en el carácter de un Dios santo y amoroso.",
-        de: "Objektive Werte sind im Charakter eines heiligen und liebenden Gottes verwurzelt.",
-      },
-    },
-
-    // Argument 5: Resurrection (Note de transition ajoutée)
-    resurrection: {
-      heading: {
-        en: "The Argument from Jesus' Resurrection",
-        fr: "L'Argument de la Résurrection de Jésus",
-        es: "El Argumento de la Resurrección de Jesús",
-        de: "Das Argument aus der Auferstehung Jesu",
-      },
-      tagline: {
-        en: "Historical evidence for divine intervention",
-        fr: "Preuves historiques d'intervention divine",
-        es: "Evidencia histórica de intervención divina",
-        de: "Historische Beweise für göttliches Eingreifen",
-      },
-      intro: {
-        en: "Craig affirms that the historical evidence for Jesus's resurrection is compelling. He outlines three key facts agreed upon by the majority of New Testament scholars:",
-        fr: "Craig affirme que les preuves historiques de la résurrection de Jésus sont convaincantes. Il décrit trois faits clés reconnus par la majorité des spécialistes du Nouveau Testament :",
-        es: "Craig afirma que la evidencia histórica de la resurrección de Jesús es convincente. Describe tres hechos clave acordados por la mayoría de los eruditos del Nuevo Testamento:",
-        de: "Craig bekräftigt, dass die historischen Beweise für Jesu Auferstehung überzeugend sind. Er umreißt drei Schlüsselfakten, die von der Mehrheit der neutestamentlichen Gelehrten anerkannt werden:",
-      },
-      fact1: {
-        en: "Jesus was buried in a known tomb.",
-        fr: "Jésus a été enterré dans un tombeau connu.",
-        es: "Jesús fue enterrado en una tumba conocida.",
-        de: "Jesus wurde in einem bekannten Grab beigesetzt.",
-      },
-      fact2: {
-        en: "His tomb was found empty",
-        fr: "Son tombeau a été trouvé vide",
-        es: "Su tumba fue encontrada vacía",
-        de: "Sein Grab wurde leer vorgefunden",
-      },
-      fact2Detail: {
-        en: "by a group of women followers.",
-        fr: "par un groupe de femmes disciples.",
-        es: "por un grupo de mujeres seguidoras.",
-        de: "von einer Gruppe von Frauen, die ihm nachfolgten.",
-      },
-      fact3: {
-        en: "Multiple individuals and groups experienced appearances",
-        fr: "Plusieurs individus et groupes ont vécu des apparitions",
-        es: "Múltiples individuos y grupos experimentaron apariciones",
-        de: "Mehrere Individuen und Gruppen erlebten Erscheinungen",
-      },
-      fact3Detail: {
-        en: "of Jesus alive after His death.",
-        fr: "de Jésus vivant après Sa mort.",
-        es: "de Jesús vivo después de Su muerte.",
-        de: "von Jesus lebendig nach Seinem Tod.",
-      },
-      explanation: {
-        en: "Naturalistic explanations (like hallucinations, theft, or myth development) fail to account for all the data. The resurrection is the best explanation, implying divine confirmation of Jesus's claims.",
-        fr: "Les explications naturalistes (comme les hallucinations, le vol ou le développement du mythe) ne parviennent pas à expliquer toutes les données. La résurrection est la meilleure explication, impliquant une confirmation divine des affirmations de Jésus.",
-        es: "Las explicaciones naturalistas (como alucinaciones, robo o desarrollo de mitos) no logran explicar todos los datos. La resurrección es la mejor explicación, lo que implica una confirmación divina de las afirmaciones de Jesús.",
-        de: "Naturalistische Erklärungen (wie Halluzinationen, Diebstahl oder Mythenbildung) können nicht alle Daten erklären. Die Auferstehung ist die beste Erklärung, was eine göttliche Bestätigung von Jesu Ansprüchen impliziert.",
-      },
-      nextTopicNote: {
-        en: "The historical evidence for the Resurrection is a complex topic and is explored in detail in the next topic: 'Proof of Resurrection.'",
-        fr: "Les preuves historiques de la Résurrection sont un sujet complexe et sont explorées en détail dans le sujet suivant : « Preuve de la Résurrection. »",
-        es: "La evidencia histórica de la Resurrección es un tema complejo y se explora en detalle en el siguiente tema: 'Prueba de la Resurrección.'",
-        de: "Die historischen Beweise für die Auferstehung sind ein komplexes Thema und werden im nächsten Thema: 'Beweis der Auferstehung' detailliert untersucht.",
-      },
-    },
-
-    // cosmological, fineTuning, ontological - RETIRÉES
-
-    objections: {
-      heading: {
-        en: "Answering New Atheist Objections",
-        fr: "Répondre aux Objections des Nouveaux Athées",
-        es: "Respondiendo a las Objeciones de los Nuevos Ateos",
-        de: "Antwort auf Einwände der Neuen Atheisten",
-      },
-      intro: {
-        en: "The New Atheism is not primarily philosophical but rhetorical and emotional. It often relies on strawman versions of religion, confusing fundamentalist literalism with historic Christianity.",
-        fr: "Le Nouvel Athéisme n'est pas principalement philosophique mais rhétorique et émotionnel. Il s'appuie souvent sur des versions caricaturales de la religion, confondant le littéralisme fondamentaliste avec le christianisme historique.",
-        es: "El Nuevo Ateísmo no es principalmente filosófico sino retórico y emocional. A menudo se basa en versiones caricaturescas de la religión, confundiendo el literalismo fundamentalista con el cristianismo histórico.",
-        de: "Der Neue Atheismus ist im Allgemeinen nicht primär philosophisch, sondern rhetorisch und emotional. Er stützt sich oft auf Strohmann-Versionen der Religion und verwechselt fundamentalistischen Literalismus mit historischem Christentum.",
-      },
-      obj1Title: {
-        en: '"Faith is irrational."',
-        fr: "« La foi est irrationnelle. »",
-        es: '"La fe es irracional."',
-        de: '„Glaube ist irrational."',
-      },
-      obj1Response: {
-        en: "→ Christian faith is not blind but supported by reason and evidence.",
-        fr: "→ La foi chrétienne n'est pas aveugle mais soutenue par la raison et les preuves.",
-        es: "→ La fe cristiana no es ciega sino respaldada por la razón y la evidencia.",
-        de: "→ Der christliche Glaube nicht blind ist, sondern durch Vernunft und Beweise gestützt wird.",
-      },
-      obj2Title: {
-        en: '"Religion causes violence."',
-        fr: "« La religion cause la violence. »",
-        es: '"La religión causa violencia."',
-        de: '„Religion verursacht Gewalt."',
-      },
-      obj2Response: {
-        en: "→ While misused religion has caused harm, so have secular ideologies (Nazism, Communism). The problem is not religion per se but human sin.",
-        fr: "→ Bien que la religion mal utilisée ait causé du tort, les idéologies séculaires (nazisme, communisme) l'ont également fait. Le problème n'est pas la religion per se mais le péché humain.",
-        es: "→ Si bien la religión mal utilizada ha causado daño, también lo han hecho las ideologías seculares (nazismo, comunismo). El problema no es la religión per se sino el pecado humano.",
-        de: "→ Während missbrauchte Religion Schaden angerichtet hat, haben dies auch säkulare Ideologien (Nazismus, Kommunismus) getan. Das Problem ist nicht die Religion an sich, sondern die menschliche Sünde.",
-      },
-      obj3Title: {
-        en: '"Science explains everything."',
-        fr: "« La science explique tout. »",
-        es: '"La ciencia lo explica todo."',
-        de: '„Wissenschaft erklärt alles."',
-      },
-      obj3Response: {
-        en: "→ Science explains the how, not the why. Science presupposes logic, mathematics, and the uniformity of nature—all of which require philosophical justification.",
-        fr: "→ La science explique le comment, pas le pourquoi. La science présuppose la logique, les mathématiques et l'uniformité de la nature — tout cela nécessite une justification philosophique.",
-        es: "→ La ciencia explica el cómo, no el por qué. La ciencia presupone lógica, matemáticas y la uniformidad de la naturaleza—todo lo cual requiere justificación filosófica.",
-        de: "→ Wissenschaft erklärt das Wie, nicht das Warum. Wissenschaft setzt Logik, Mathematik und die Einheitlichkeit der Natur voraus — all dies erfordert philosophische Rechtfertigung.",
-      },
-      craigQuote: {
-        en: "The New Atheists are generally not trained in philosophy or theology. Their attacks often miss their mark because they don't understand what they're attacking.",
-        fr: "Les Nouveaux Athées ne sont généralement pas formés en philosophie ou en théologie. Leurs attaques manquent souvent leur cible parce qu'ils ne comprennent pas ce qu'ils attaquent.",
-        es: "Los Nuevos Ateos generalmente no están capacitados en filosofía o teología. Sus ataques a menudo fallan porque no entienden lo que están atacando.",
-        de: "Die Neuen Atheisten sind im Allgemeinen nicht in Philosophie oder Theologie ausgebildet. Ihre Angriffe verfehlen oft ihr Ziel, weil sie nicht verstehen, was sie angreifen.",
-      },
-    },
-
-    additionalVideo: {
-      heading: {
-        en: "Additional Perspective: Faith and Reason",
-        fr: "Perspective Supplémentaire : Foi et Raison",
-        es: "Perspectiva Adicional: Fe y Razón",
-        de: "Zusätzliche Perspektive: Glaube und Vernunft",
-      },
-    },
-
-    // Conclusion (Nouveau contenu)
-    conclusion: {
-      heading: {
-        en: "Conclusion: A Consistent Worldview",
-        fr: "Conclusion : Une Vision du Monde Cohérente",
-        es: "Conclusión: Una Visión del Mundo Consistente",
-        de: "Schlussfolgerung: Eine Konsistente Weltanschauung",
-      },
-      para1: {
-        en: "The convergence of the philosophical (the Five Ways) and the historical (the Resurrection) arguments presents a powerful case for the existence of God. The Five Ways show that the universe is *intelligible* and requires a necessary, uncaused, perfect, and intelligent first cause to account for its most fundamental realities: **change, existence, perfection, and purpose.**",
-        fr: "La convergence des arguments philosophiques (les Cinq Voies) et historiques (la Résurrection) présente un argument puissant pour l'existence de Dieu. Les Cinq Voies montrent que l'univers est *intelligible* et nécessite une première cause nécessaire, incausée, parfaite et intelligente pour expliquer ses réalités les plus fondamentales : **le changement, l'existence, la perfection et la finalité.**",
-        es: "La convergencia de los argumentos filosóficos (las Cinco Vías) e históricos (la Resurrección) presenta un caso poderoso para la existencia de Dios. Las Cinco Vías muestran que el universo es *inteligible* y requiere una primera causa necesaria, incausada, perfecta e inteligente para dar cuenta de sus realités más fundamentales: **cambio, existencia, perfección y propósito.**",
-        de: "Die Konvergenz der philosophischen (die Fünf Wege) und der historischen (die Auferstehung) Argumente liefert einen überzeugenden Fall für die Existenz Gottes. Die Fünf Wege zeigen, dass das Universum *verständlich* ist und eine notwendige, unverursachte, vollkommene und intelligente erste Ursache benötigt, um seine grundlegendsten Realitäten zu erklären: **Veränderung, Existenz, Vollkommenheit und Zweck.**",
-      },
-      para2: {
-        en: "These reasoned arguments demonstrate that belief in a transcendent being is rational and provides the most coherent and complete worldview. They do not force belief but open the door for faith, showing that <strong class='text-white'>reason and faith are harmonious paths</strong> toward the same truth.",
-        fr: "Ces arguments raisonnés démontrent que la croyance en un être transcendant est rationnelle et offre la vision du monde la plus cohérente et complète. Ils n'imposent pas la croyance, mais ouvrent la voie à la foi, montrant que <strong class='text-white'>la raison et la foi sont des chemins harmonieux</strong> vers la même vérité.",
-        es: "Estos argumentos razonados demuestran que la creencia en un ser trascendente es racional y proporciona la visión del mundo más coherente y completa. No fuerzan la creencia, sino que abren la puerta a la fe, mostrando que <strong class='text-white'>la razón y la fe son caminos armoniosos</strong> hacia la misma verdad.",
-        de: "Diese begründeten Argumente zeigen, dass der Glaube an ein transzendentes Wesen rational ist und die kohärenteste und vollständigste Weltanschauung bietet. Sie erzwingen keinen Glauben, sondern öffnen die Tür zum Glauben und zeigen, dass <strong class='text-white'>Vernunft und Glaube harmonische Wege</strong> zur selben Wahrheit sind.",
-      },
-      para3: {
-        en: "The Unmoved Mover, the Uncaused Cause, the Necessary Being, the Perfect Good, and the Intelligent Governor are all different names for the same ultimate reality: God.",
-        fr: "Le Moteur Immuable, la Cause Incréée, l'Être Nécessaire, le Bien Parfait et le Gouverneur Intelligent sont tous des noms différents pour la même réalité ultime : Dieu.",
-        es: "El Motor Inmóvil, la Causa Incualificada, el Ser Necesario, el Bien Perfecto y el Gobernador Inteligente son todos nombres diferentes para la misma realidad última: Dios.",
-        de: "Der Unbewegte Beweger, die Unverursachte Ursache, das Notwendige Wesen, das Perfekte Gut und der Intelligente Regierer sind alle verschiedene Namen für dieselbe ultimative Realität: Gott.",
-      },
-    },
-
-    bridge: { // En-tête mis à jour
-      heading: {
-        en: "Next Step: The Historical Proof",
-        fr: "Étape Suivante : La Preuve Historique",
-        es: "Siguiente Paso: La Prueba Histórica",
-        de: "Nächster Schritt: Der Historische Beweis",
-      },
-      para1: {
-        en: "With a rational basis for the existence of God established through philosophy, we can now examine the most specific and historically verifiable claim in Christianity: the Resurrection of Jesus Christ.",
-        fr: "Avec une base rationnelle pour l'existence de Dieu établie par la philosophie, nous pouvons maintenant examiner l'affirmation la plus spécifique et historiquement vérifiable du Christianisme : la Résurrection de Jésus-Christ.",
-        es: "Con una base racional para la existencia de Dios establecida a través de la filosofía, ahora podemos examinar la afirmación más específica e históricamente verificable en el Cristianismo: la Resurrección de Jesucristo.",
-        de: "Mit einer durch Philosophie etablierten rationalen Grundlage für die Existenz Gottes können wir nun die spezifischste und historisch überprüfbarste Behauptung im Christentum untersuchen: die Auferstehung Jesu Christi.",
-      },
-      para2: {
-        en: "The historical evidence that the Resurrection actually happened is a decisive, compelling reason to accept the truth of the Christian God and the unique claims of the Catholic faith.",
-        fr: "La preuve historique que la Résurrection s'est réellement produite est une raison décisive et convaincante d'accepter la vérité du Dieu Chrétien et les affirmations uniques de la foi Catholique.",
-        es: "La evidencia histórica de que la Resurrección realmente sucedió es una razón decisiva e convincente para aceptar la verdad del Dios Cristiano y las afirmaciones únicas de la fe Católica.",
-        de: "Der historische Beweis, dass die Auferstehung tatsächlich stattgefunden hat, ist ein entscheidender, zwingender Grund, die Wahrheit des christlichen Gottes und die einzigartigen Ansprüche des katholischen Glaubens anzunehmen.",
+      uniqueNote: {
+        en: "This Way is unique because it argues not from change or causes, but from the reason things exist rather than not exist, leading directly to the divine attribute of necessary existence.",
+        fr: "Cette Voie est unique car elle ne raisonne pas à partir du changement ou des causes, mais à partir de la raison pour laquelle les choses existent plutôt que de ne pas exister, menant directement à l'attribut divin de l'existence nécessaire.",
+        es: "Esta Vía es única porque no argumenta a partir del cambio o las causas, sino de la razón por la cual las cosas existen en lugar de no existir, llevando directamente al atributo divino de la existencia necesaria.",
+        de: "Dieser Weg ist einzigartig, weil er nicht von Veränderung oder Ursachen argumentiert, sondern vom Grund, warum Dinge existieren anstatt nicht zu existieren, was direkt zum göttlichen Attribut der notwendigen Existenz führt.",
       },
     },
   },
+
+  perfection: {
+    heading: {
+      en: "Argument from Perfection (The 4th Way)",
+      fr: "Argument de la Perfection (La 4e Voie)",
+      es: "Argumento de la Perfección (La 4ª Vía)",
+      de: "Argument der Vollkommenheit (Der 4. Weg)",
+    },
+    tagline: {
+      en: "The argument from the gradations of being and participation.",
+      fr: "L'argument des gradations de l'être et de la participation.",
+      es: "El argumento de las gradaciones del ser y la participación.",
+      de: "Das Argument aus den Abstufungen des Seins und der Teilhabe.",
+    },
+    intro: {
+      en: "This way, rooted in Platonic-Augustinian philosophy, argues from the objective observation that things in the world possess degrees of perfections, such as goodness, truth, and nobility, in greater or lesser measure.",
+      fr: "Cette voie, enracinée dans la philosophie platonicienne-augustinienne, argumente à partir de l'observation objective que les choses dans le monde possèdent des degrés de perfections, telles que la bonté, la vérité et la noblesse, dans une mesure plus ou moins grande.",
+      es: "Esta vía, enraizada en la filosofía platónico-agustiniana, argumenta a partir de la observación objetiva de que las cosas en el mundo poseen grados de perfecciones, tales como bondad, verdad y nobleza, en mayor o menor medida.",
+      de: "Dieser Weg, der in der platonisch-augustinischen Philosophie verwurzelt ist, argumentiert aus der objektiven Beobachtung, dass Dinge in der Welt Grade von Vollkommenheiten, wie Güte, Wahrheit und Adel, in größerem oder geringerem Maße besitzen.",
+    },
+    summaryLabel: {
+      en: "Summary of the Argument (The 4th Way):",
+      fr: "Résumé de l'Argument (La 4e Voie) :",
+      es: "Resumen del Argumento (La 4ª Vía):",
+      de: "Zusammenfassung des Arguments (Der 4. Weg):",
+    },
+    premise1: {
+      en: "We observe degrees of goodness, truth, and nobility in the world.",
+      fr: "Nous observons des degrés de bonté, de vérité et de noblesse dans le monde.",
+      es: "Observamos grados de bondad, verdad y nobleza en el mundo.",
+      de: "Wir beobachten Grade von Güte, Wahrheit und Adel in der Welt.",
+    },
+    premise2: {
+      en: "Degrees of perfection presuppose a maximum which is the cause of all perfection.",
+      fr: "Les degrés de perfection présupposent un maximum qui est la cause de toute perfection.",
+      es: "Los grados de perfección presuponen un máximo que es la causa de toda perfection.",
+      de: "Grade der Vollkommenheit setzen ein Maximum voraus, das die Ursache aller Vollkommenheit ist.",
+    },
+    conclusion: {
+      en: "Therefore, there must be a First Perfect Being which is the cause of all being, goodness, and every perfection, and this we call God.",
+      fr: "Par conséquent, il doit y avoir un Premier Être Parfait qui est la cause de tout être, de toute bonté et de toute perfection, et c'est ce que nous appelons Dieu.",
+      es: "Por lo tanto, debe haber un Primer Ser Perfecto que es la causa de todo ser, bondad y toda perfección, y a este llamamos Dios.",
+      de: "Daher muss es ein Erstes Vollkommenes Wesen geben, das die Ursache allen Seins, aller Güte und jeder Vollkommenheit ist, und dies nennen wir Gott.",
+    },
+    explanation: {
+      en: "The existence of imperfect instances of a quality (like a partially good action) implies the existence of a perfect, absolute standard against which these instances are measured. This maximum reality is God, the source of all perfection.",
+      fr: "L'existence d'instances imparfaites d'une qualité (comme une action partiellement bonne) implique l'existence d'un standard absolu et parfait par rapport auquel ces instances sont mesurées. Cette réalité maximale est Dieu, la source de toute perfection.",
+      es: "La existencia de instancias imperfectas de una cualidad (como una acción parcialmente buena) implica la existencia de un estándar perfecto y absoluto contra el cual se miden estas instancias. Esta realidad máxima es Dios, la fuente de toda perfección.",
+      de: "Die Existenz unvollkommener Instanzen einer Eigenschaft (wie einer teilweise guten Handlung) impliziert die Existenz eines perfekten, absoluten Standards, an dem diese Instanzen gemessen werden. Diese maximale Realität ist Gott, die Quelle aller Vollkommenheit.",
+    },
+  },
+  
+  purpose: {
+    heading: {
+      en: "Argument from Purpose (The 5th Way)",
+      fr: "Argument de la Finalité (La 5e Voie)",
+      es: "Argumento del Propósito (La 5ª Vía)",
+      de: "Argument des Zweckes (Der 5. Weg)",
+    },
+    tagline: {
+      en: "The argument from the order and governance of the world (Teleological Argument).",
+      fr: "L'argument de l'ordre et de la gouvernance du monde (Argument Téléologique).",
+      es: "El argumento del orden y la gobernanza del mundo (Argumento Teleológico).",
+      de: "Das Argument aus der Ordnung und Regierung der Welt (Teleologisches Argument).",
+    },
+    intro: {
+      en: "We observe that non-rational things act regularly and consistently for an end (a final cause). This regularity and directedness must presuppose an ordering intellect.",
+      fr: "Nous observons que les choses non rationnelles agissent régulièrement et constamment dans un but (une cause finale). Cette régularité et cette direction doivent présupposer un intellect ordonnateur.",
+      es: "Observamos que las cosas no racionales actúan regular y consistentemente para un fin (una causa final). Esta regularidad y direccionalidad deben presuponer un intelecto ordenador.",
+      de: "Wir beobachten, dass nicht-rationale Dinge regelmäßig und konsequent auf ein Ziel hin handeln (eine Endursache). Diese Regelmäßigkeit und Zielgerichtetheit muss einen ordnenden Intellekt voraussetzen.",
+    },
+    summaryLabel: {
+      en: "Summary of the Argument (The 5th Way):",
+      fr: "Résumé de l'Argument (La 5e Voie) :",
+      es: "Resumen del Argumento (La 5ª Vía):",
+      de: "Zusammenfassung des Arguments (Der 5. Weg):",
+    },
+    premise1: {
+      en: "We see things that lack intelligence (e.g., natural bodies) act for an end.",
+      fr: "Nous voyons des choses qui manquent d'intelligence (par exemple, des corps naturels) agir pour une fin.",
+      es: "Vemos que las cosas que carecen de inteligencia (por ejemplo, cuerpos naturales) actúan para un fin.",
+      de: "Wir sehen, dass Dinge, denen Intelligenz fehlt (z.B. natürliche Körper), auf ein Ziel hin handeln.",
+    },
+    premise2: {
+      en: "Whatever acts for an end must be directed by some being endowed with knowledge and intelligence (like an arrow by an archer).",
+      fr: "Tout ce qui agit pour une fin doit être dirigé par un être doué de connaissance et d'intelligence (comme une flèche par un archer).",
+      es: "Todo lo que actúa para un fin debe ser dirigido por algún ser dotado de conocimiento e inteligencia (como una flecha por un arquero).",
+      de: "Alles, was auf ein Ziel hin handelt, muss von einem Wesen geleitet werden, das mit Wissen und Intelligenz ausgestattet ist (wie ein Pfeil von einem Bogenschützen).",
+    },
+    conclusion: {
+      en: "Therefore, there must be an Intelligent Governor who directs all natural things to their end; and this being we call God.",
+      fr: "Par conséquent, il doit y avoir un Gouverneur Intelligent qui dirige toutes les choses naturelles vers leur fin ; et c'est cet être que nous appelons Dieu.",
+      es: "Por lo tanto, debe haber un Gobernador Inteligente que dirija todas las cosas naturales a su fin; y a este ser llamamos Dios.",
+      de: "Daher muss es einen Intelligenten Regierer geben, der alle natürlichen Dinge auf ihr Ziel hin lenkt; und dieses Wesen nennen wir Gott.",
+    },
+    explanation: {
+      en: "This is the only Way grounded entirely in final causality, or <em>telos</em> (end/purpose). The intricate, ordered governance of the world, from cosmology to biology, points to an intelligent designer who guides all things to their proper ends.",
+      fr: "C'est la seule Voie entièrement fondée sur la causalité finale, ou <em>telos</em> (fin/but). La gouvernance complexe et ordonnée du monde, de la cosmologie à la biologie, pointe vers un concepteur intelligent qui guide toutes les choses vers leurs fins appropriées.",
+      es: "Esta es la única Vía fundamentada completamente en la causalidad final, o <em>telos</em> (fin/propósito). La intrincada y ordenada gobernanza del mundo, desde la cosmología hasta la biología, apunta a un diseñador inteligente que guía todas las cosas hacia sus fines apropiados.",
+      de: "Dies ist der einzige Weg, der vollständig in der Endursache, oder <em>Telos</em> (Ziel/Zweck), begründet ist. Die komplizierte, geordnete Regierung der Welt, von der Kosmologie bis zur Biologie, deutet auf einen intelligenten Designer hin, der alle Dinge zu ihren richtigen Zielen führt.",
+    },
+    quote: {
+      en: "Therefore some intelligent being exists by whom all natural things are directed to their end; and this being we call God.",
+      fr: "Par conséquent, il existe un être intelligent par lequel toutes les choses naturelles sont dirigées vers leur fin ; et cet être, nous l'appelons Dieu.",
+      es: "Por lo tanto, existe algún ser inteligente por quien todas las cosas naturales son dirigidas a su fin; y a este ser llamamos Dios.",
+      de: "Daher existiert irgendein intelligentes Wesen, durch das alle natürlichen Dinge auf ihr Ziel hin gelenkt werden; und dieses Wesen nennen wir Gott.",
+    },
+  },
+
+  // Argument 4: Moral
+  moral: {
+    heading: {
+      en: "The Moral Argument",
+      fr: "L'Argument Moral",
+      es: "El Argumento Moral",
+      de: "Das Moralische Argument",
+    },
+    tagline: {
+      en: "Objective morality requires a moral lawgiver",
+      fr: "La moralité objective nécessite un législateur moral",
+      es: "La moralidad objetiva requiere un legislador moral",
+      de: "Objektive Moral erfordert einen moralischen Gesetzgeber",
+    },
+    intro: {
+    en: "Beyond the Five Ways of Aquinas, which argue from the observation of the cosmos, the Moral Argument reasons from the inner reality of our own conscience. It posits that the existence of objective moral values, the universal sense that some things are truly right and others are truly wrong, is strong evidence for the existence of God.",
+    fr: "Au-delà des Cinq Voies d'Aquin, qui partent de l'observation du cosmos, l'Argument Moral raisonne à partir de la réalité intérieure de notre propre conscience. Il postule que l'existence de valeurs morales objectives, le sens universel que certaines choses sont vraiment justes et d'autres vraiment mauvaises, est une preuve solide de l'existence de Dieu.",
+    es: "Más allá de las Cinco Vías de Aquino, que argumentan desde la observación del cosmos, el Argumento Moral razona desde la realidad interna de nuestra propia conciencia. Postula que la existencia de valores morales objetivos, el sentido universal de que algunas cosas son verdaderamente correctas y otras verdaderamente incorrectas, es una fuerte evidencia de la existencia de Dios.",
+    de: "Über die Fünf Wege von Aquin hinaus, die von der Beobachtung des Kosmos ausgehen, argumentiert das Moralische Argument aus der inneren Realität unseres eigenen Gewissens. Es postuliert, dass die Existenz objektiver moralischer Werte, das universelle Gefühl, dass einige Dinge wirklich richtig und andere wirklich falsch sind, ein starker Beweis für die Existenz Gottes ist.",
+  },
+    summaryLabel: {
+      en: "Summary of the Argument:",
+      fr: "Résumé de l'Argument :",
+      es: "Resumen del Argumento:",
+      de: "Argumentzusammenfassung:",
+    },
+    premise1: {
+      en: "If God does not exist, objective moral values and duties do not exist.",
+      fr: "Si Dieu n'existe pas, les valeurs et devoirs moraux objectifs n'existent pas.",
+      es: "Si Dios no existe, los valores y deberes morales objetivos no existen.",
+      de: "Wenn Gott nicht existiert, existieren keine objektiven moralischen Werte und Pflichten.",
+    },
+    premise2: {
+      en: "Objective moral values and duties do exist.",
+      fr: "Les valeurs et devoirs moraux objectifs existent.",
+      es: "Los valores y deberes morales objectifs existent.",
+      de: "Objektive moralische Werte und Pflichten existieren.",
+    },
+    conclusion: {
+      en: "Therefore, God exists.",
+      fr: "Par conséquent, Dieu existe.",
+      es: "Por lo tanto, Dios existe.",
+      de: "Daher existiert Gott.",
+    },
+    explanation: {
+      en: "The argument's first premise is that if God does not exist, objective moral values do not exist. In a purely materialistic worldview, humans are simply advanced biological organisms. 'Morality' would be a subjective description of behaviors that aided survival, a social convention, or a personal preference. There would be no <em>objective</em> basis to call one action 'evil' and another 'good'.<br/><br/>The second premise is that objective moral values <em>do</em> exist. We intuitively know this. For example, we understand that torturing a child for pleasure is not just 'socially unhelpful' or 'personally distasteful,' it is objectively, intrinsically evil. Catholic thought, following Aquinas, explains that some acts are wrong by their very 'object', regardless of a good 'intention' or difficult 'circumstances'. This universal moral law, or 'right reason', that we all feel accountable to, points to a transcendent source. It implies a 'Lawgiver' whose very nature is the standard for goodness and against whom all our actions are ultimately measured.",
+      fr: "La première prémisse de l'argument est que si Dieu n'existe pas, les valeurs morales objectives n'existent pas. Dans une vision du monde purement matérialiste, les humains sont simplement des organismes biologiques avancés. La 'moralité' ne serait qu'une description subjective des comportements qui ont favorisé la survie, une convention sociale ou une préférence personnelle. Il n'y aurait aucune base <em>objective</em> pour qualifier une action de 'mauvaise' et une autre de 'bonne'.<br/><br/>La deuxième prémisse est que les valeurs morales objectives <em>existent</em>. Nous le savons intuitivement. Par exemple, nous comprenons que torturer un enfant pour le plaisir n'est pas seulement 'socialement inutile' ou 'personnellement désagréable', c'est objectivement, intrinsèquement mauvais. La pensée catholique, à la suite d'Aquin, explique que certains actes sont mauvais de par leur 'objet' même, indépendamment d'une bonne 'intention' ou de 'circonstances' difficiles. Cette loi morale universelle, ou 'droite raison', à laquelle nous nous sentons tous redevables, pointe vers une source transcendante. Elle implique un 'Législateur' dont la nature même est l'étalon du bien et à l'aune duquel toutes nos actions sont finalement mesurées.",
+      es: "La primera premisa del argumento es que si Dios no existe, los valores morales objetivos no existen. En una cosmovisión puramente materialista, los humanos son simplemente organismos biológicos avanzados. La 'moralidad' sería una descripción subjetiva de comportamientos que ayudaron a la supervivencia, una convención social o una preferencia personal. No habría base <em>objetiva</em> para llamar a una acción 'mala' y a otra 'buena'.<br/><br/>La segunda premisa es que los valores morales objetivos <em>sí</em> existen. Lo sabemos intuitivamente. Por ejemplo, entendemos que torturar a un niño por placer no es solo 'socialmente inútil' o 'personalmente desagradable', es objetiva e intrínsecamente malo. El pensamiento católico, siguiendo a Aquino, explica que algunos actos son malos por su 'objeto' mismo, independientemente de una buena 'intención' o 'circunstancias' difíciles. Esta ley moral universal, o 'recta razón', a la que todos nos sentimos responsables, apunta a una fuente trascendente. Implica un 'Legislador' cuya naturaleza misma es el estándar del bien y contra el cual se miden finalmente todas nuestras acciones.",
+      de: "Die erste Prämisse des Arguments lautet, dass objektive moralische Werte nicht existieren, wenn Gott nicht existiert. In einer rein materialistischen Weltanschauung sind Menschen lediglich fortgeschrittene biologische Organismen. 'Moral' wäre eine subjektive Beschreibung von Verhaltensweisen, die dem Überleben dienten, eine soziale Konvention oder eine persönliche Vorliebe. Es gäbe keine <em>objektive</em> Grundlage, eine Handlung als 'böse' und eine andere als 'gut' zu bezeichnen.<br/><br/>Die zweite Prämisse lautet, dass objektive moralische Werte <em>existieren</em>. Wir wissen dies intuitiv. Zum Beispiel verstehen wir, dass das Foltern eines Kindes zum Vergnügen nicht nur 'sozial nicht hilfreich' oder 'persönlich unangenehm' ist, es ist objektiv, intrinsisch böse. Das katholische Denken, Thomas von Aquin folgend, erklärt, dass einige Handlungen aufgrund ihres 'Objekts' an sich schlecht sind, unabhängig von einer guten 'Absicht' oder schwierigen 'Umständen'. Dieses universelle Moralgesetz, oder 'rechte Vernunft', dem wir uns alle verpflichtet fühlen, weist auf eine transzendente Quelle hin. Es impliziert einen 'Gesetzgeber', dessen Wesen selbst der Maßstab für das Gute ist und an dem all unsere Handlungen letztlich gemessen werden.",
+    },
+    quote: {
+      en: "Objective values are rooted in the character of a holy and loving God.",
+      fr: "Les valeurs objectives sont enracinées dans le caractère d'un Dieu saint et aimant.",
+      es: "Los valores objetivos están arraigados en el carácter de un Dios santo y amoroso.",
+      de: "Objektive Werte sind im Charakter eines heiligen und liebenden Gottes verwurzelt.",
+    },
+  },
+
+  // Argument 5: Resurrection
+  resurrection: {
+    heading: {
+      en: "The Argument from Jesus' Resurrection",
+      fr: "L'Argument de la Résurrection de Jésus",
+      es: "El Argumento de la Resurrección de Jesús",
+      de: "Das Argument aus der Auferstehung Jesu",
+    },
+    tagline: {
+      en: "Historical evidence for divine intervention",
+      fr: "Preuves historiques d'intervention divine",
+      es: "Evidencia histórica de intervención divina",
+      de: "Historische Beweise für göttliches Eingreifen",
+    },
+    intro: {
+      en: "The historical evidence for Jesus's resurrection is compelling. It rests on three key facts agreed upon by the majority of New Testament scholars:",
+      fr: "Les preuves historiques de la résurrection de Jésus sont convaincantes. Elles reposent sur trois faits clés reconnus par la majorité des spécialistes du Nouveau Testament :",
+      es: "La evidencia histórica de la resurrección de Jesús es convincente. Se basa en tres hechos clave acordados por la mayoría de los eruditos del Nuevo Testamento:",
+      de: "Die historischen Beweise für Jesu Auferstehung sind überzeugend. Sie stützen sich auf drei Schlüsselfakten, die von der Mehrheit der neutestamentlichen Gelehrten anerkannt werden:",
+    },
+    fact1: {
+      en: "Jesus was buried in a known tomb.",
+      fr: "Jésus a été enterré dans un tombeau connu.",
+      es: "Jesús fue enterrado en una tumba conocida.",
+      de: "Jesus wurde in einem bekannten Grab beigesetzt.",
+    },
+    fact2: {
+      en: "His tomb was found empty",
+      fr: "Son tombeau a été trouvé vide",
+      es: "Su tumba fue encontrada vacía",
+      de: "Sein Grab wurde leer vorgefunden",
+    },
+    fact2Detail: {
+      en: "by a group of women followers.",
+      fr: "par un groupe de femmes disciples.",
+      es: "por un grupo de mujeres seguidoras.",
+      de: "von einer Gruppe von Frauen, die ihm nachfolgten.",
+    },
+    fact3: {
+      en: "Multiple individuals and groups experienced appearances",
+      fr: "Plusieurs individus et groupes ont vécu des apparitions",
+      es: "Múltiples individuos y grupos experimentaron apariciones",
+      de: "Mehrere Individuen und Gruppen erlebten Erscheinungen",
+    },
+    fact3Detail: {
+      en: "of Jesus alive after His death.",
+      fr: "de Jésus vivant après Sa mort.",
+      es: "de Jesús vivo después de Su muerte.",
+      de: "von Jesus lebendig nach Seinem Tod.",
+    },
+    explanation: {
+      en: "Naturalistic explanations (like hallucinations, theft, or myth development) fail to account for all the data. The resurrection is the best explanation, implying divine confirmation of Jesus's claims.",
+      fr: "Les explications naturalistes (comme les hallucinations, le vol ou le développement du mythe) ne parviennent pas à expliquer toutes les données. La résurrection est la meilleure explication, impliquant une confirmation divine des affirmations de Jésus.",
+      es: "Las explicaciones naturalistas (como alucinaciones, robo o desarrollo de mitos) no logran explicar todos los datos. La resurrección es la mejor explicación, lo que implica una confirmación divina de las afirmaciones de Jesús.",
+      de: "Naturalistische Erklärungen (wie Halluzinationen, Diebstahl oder Mythenbildung) können nicht alle Daten erklären. Die Auferstehung ist die beste Erklärung, was eine göttliche Bestätigung von Jesu Ansprüchen impliziert.",
+    },
+    nextTopicNote: {
+      en: "The historical evidence for the Resurrection is a complex topic and is explored in detail in the next topic: 'Proof of Resurrection.'",
+      fr: "Les preuves historiques de la Résurrection sont un sujet complexe et sont explorées en détail dans le sujet suivant : « Preuve de la Résurrection. »",
+      es: "La evidencia histórica de la Resurrección es un tema complejo y se explora en detalle en el siguiente tema: 'Prueba de la Resurrección.'",
+      de: "Die historischen Beweise für die Auferstehung sind ein komplexes Thema und werden im nächsten Thema: 'Beweis der Auferstehung' detailliert untersucht.",
+    },
+  },
+
+  objections: {
+    heading: {
+      en: "Answering New Atheist Objections",
+      fr: "Répondre aux Objections des Nouveaux Athées",
+      es: "Respondiendo a las Objeciones de los Nuevos Ateos",
+      de: "Antwort auf Einwände der Neuen Atheisten",
+    },
+    intro: {
+      en: "The New Atheism is not primarily philosophical but rhetorical and emotional. It often relies on strawman versions of religion, confusing fundamentalist literalism with historic Christianity.",
+      fr: "Le Nouvel Athéisme n'est pas principalement philosophique mais rhétorique et émotionnel. Il s'appuie souvent sur des versions caricaturales de la religion, confondant le littéralisme fondamentaliste avec le christianisme historique.",
+      es: "El Nuevo Ateísmo no es principalmente filosófico sino retórico y emocional. A menudo se basa en versiones caricaturescas de la religión, confundiendo el literalismo fundamentalista con el cristianismo histórico.",
+      de: "Der Neue Atheismus ist im Allgemeinen nicht primär philosophisch, sondern rhetorisch und emotional. Er stützt sich oft auf Strohmann-Versionen der Religion und verwechselt fundamentalistischen Literalismus mit historischem Christentum.",
+    },
+    obj1Title: {
+      en: '"Faith is irrational."',
+      fr: "« La foi est irrationnelle. »",
+      es: '"La fe es irracional."',
+      de: '„Glaube ist irrational."',
+    },
+    obj1Response: {
+      en: "Christian faith is not blind but supported by reason and evidence.",
+      fr: "La foi chrétienne n'est pas avele mais soutenue par la raison et les preuves.",
+      es: "La fe cristiana no es ciega sino respaldada por la razón y la evidencia.",
+      de: "Der christliche Glaube ist nicht blind, sondern wird durch Vernunft und Beweise gestützt.",
+    },
+    obj2Title: {
+      en: '"Religion causes violence."',
+      fr: "« La religion cause la violence. »",
+      es: '"La religión causa violencia."',
+      de: '„Religion verursacht Gewalt."',
+    },
+    obj2Response: {
+      en: "While misused religion has caused harm, so have secular ideologies (Nazism, Communism). The problem is not religion per se but human sin.",
+      fr: "Bien que la religion mal utilisée ait causé du tort, les idéologies séculaires (nazisme, communisme) l'ont également fait. Le problème n'est pas la religion en soi mais le péché humain.",
+      es: "Si bien la religión mal utilizada ha causado daño, también lo han hecho las ideologías seculares (nazismo, comunismo). El problema no es la religión per se sino el pecado humano.",
+      de: "Während missbrauchte Religion Schaden angerichtet hat, haben dies auch säkulare Ideologien (Nazismus, Kommunismus) getan. Das Problem ist nicht die Religion an sich, sondern die menschliche Sünde.",
+    },
+    obj3Title: {
+      en: '"Science explains everything."',
+      fr: "« La science explique tout. »",
+      es: '"La ciencia lo explica todo."',
+      de: '„Wissenschaft erklärt alles."',
+    },
+    obj3Response: {
+      en: "Science explains the how, not the why. Science presupposes logic, mathematics, and the uniformity of nature, all of which require philosophical justification.",
+      fr: "La science explique le comment, pas le pourquoi. La science présuppose la logique, les mathématiques et l'uniformité de la nature, qui nécessitent toutes une justification philosophique.",
+      es: "La ciencia explica el cómo, no el por qué. La ciencia presupone lógica, matemáticas y la uniformidad de la naturaleza, todo lo cual requiere justificación filosófica.",
+      de: "Wissenschaft erklärt das Wie, nicht das Warum. Wissenschaft setzt Logik, Mathematik und die Einheitlichkeit der Natur voraus, die alle eine philosophische Rechtfertigung erfordern.",
+    },
+    // craigQuote object removed
+  },
+
+  additionalVideo: {
+    heading: {
+      en: "Additional Perspective: Faith and Reason",
+      fr: "Perspective Supplémentaire : Foi et Raison",
+      es: "Perspectiva Adicional: Fe y Razón",
+      de: "Zusätzliche Perspektive: Glaube und Vernunft",
+    },
+  },
+
+  // Conclusion
+  conclusion: {
+    heading: {
+      en: "Conclusion: A Consistent Worldview",
+      fr: "Conclusion : Une Vision du Monde Cohérente",
+      es: "Conclusión: Una Visión del Mundo Consistente",
+      de: "Schlussfolgerung: Eine Konsistente Weltanschauung",
+    },
+    para1: {
+      en: "The convergence of the philosophical (the Five Ways) and the historical (the Resurrection) arguments presents a powerful case for the existence of God. The Five Ways show that the universe is <em>intelligible</em> and requires a necessary, uncaused, perfect, and intelligent first cause to account for its most fundamental realities: <strong class='text-white'>change, existence, perfection, and purpose.</strong>",
+      fr: "La convergence des arguments philosophiques (les Cinq Voies) et historiques (la Résurrection) présente un argument puissant pour l'existence de Dieu. Les Cinq Voies montrent que l'univers est <em>intelligible</em> et nécessite une première cause nécessaire, incausée, parfaite et intelligente pour expliquer ses réalités les plus fondamentales : <strong class='text-white'>le changement, l'existence, la perfection et la finalité.</strong>",
+      es: "La convergencia de los argumentos filosóficos (las Cinco Vías) e históricos (la Resurrección) presenta un caso poderoso para la existencia de Dios. Las Cinco Vías muestran que el universo es <em>inteligible</em> y requiere una primera cause necesaria, incausada, perfecta e inteligente para dar cuenta de sus realidades más fundamentales: <strong class='text-white'>cambio, existencia, perfección y propósito.</strong>",
+      de: "Die Konvergenz der philosophischen (die Fünf Wege) und der historischen (die Auferstehung) Argumente liefert einen überzeugenden Fall für die Existenz Gottes. Die Fünf Wege zeigen, dass das Universum <em>verständlich</em> ist und eine notwendige, unverursachte, vollkommene und intelligente erste Ursache benötigt, um seine grundlegendsten Realitäten zu erklären: <strong class='text-white'>Veränderung, Existenz, Vollkommenheit und Zweck.</strong>",
+    },
+    para2: {
+      en: "These reasoned arguments demonstrate that belief in a transcendent being is rational and provides the most coherent and complete worldview. They do not force belief but open the door for faith, showing that <strong class='text-white'>reason and faith are harmonious paths</strong> toward the same truth.",
+      fr: "Ces arguments raisonnés démontrent que la croyance en un être transcendant est rationnelle et offre la vision du monde la plus cohérente et complète. Ils n'imposent pas la croyance, mais ouvrent la voie à la foi, montrant que <strong class='text-white'>la raison et la foi sont des chemins harmonieux</strong> vers la même vérité.",
+      es: "Estos argumentos razonados demuestran que la creencia en un ser trascendente es racional y proporciona la visión del mundo más coherente y completa. No fuerzan la creencia, sino que abren la puerta a la fe, mostrando que <strong class='text-white'>la razón y la fe son caminos armoniosos</strong> hacia la misma verdad.",
+      de: "Diese begründeten Argumente zeigen, dass der Glaube an ein transzendes Wesen rational ist und die kohärenteste und vollständigste Weltanschauung bietet. Sie erzwingen keinen Glauben, sondern öffnen die Tür zum Glauben und zeigen, dass <strong class='text-white'>Vernunft und Glaube harmonische Wege</strong> zur selben Wahrheit sind.",
+    },
+    para3: {
+      en: "The Unmoved Mover, the Uncaused Cause, the Necessary Being, the Perfect Good, and the Intelligent Governor are all different names for the same ultimate reality: God.",
+      fr: "Le Moteur Immuable, la Cause Incréée, l'Être Nécessaire, le Bien Parfait et le Gouverneur Intelligent sont tous des noms différents pour la même réalité ultime : Dieu.",
+      es: "El Motor Inmóvil, la Causa Incualificada, el Ser Necesario, el Bien Perfecto y el Gobernador Inteligente son todos nombres diferentes para la misma realidad última: Dios.",
+de: "Der Unbewegte Beweger, die Unverursachte Ursache, das Notwendige Wesen, das Perfekte Gut und der Intelligente Regierer sind alle verschiedene Namen für dieselbe ultimative Realität: Gott.",
+    },
+  },
+
+  bridge: {
+    heading: {
+      en: "Next Step: The Historical Proof",
+      fr: "Étape Suivante : La Preuve Historique",
+      es: "Siguiente Paso: La Prueba Histórica",
+      de: "Nächster Schritt: Der Historische Beweis",
+    },
+    para1: {
+      en: "With a rational basis for the existence of God established through philosophy, we can now examine the most specific and historically verifiable claim in Christianity: the Resurrection of Jesus Christ.",
+      fr: "Avec une base rationnelle pour l'existence de Dieu établie par la philosophie, nous pouvons maintenant examiner l'affirmation la plus spécifique et historiquement vérifiable du Christianisme : la Résurrection de Jésus-Christ.",
+      es: "Con una base racional para la existencia de Dios establecida a través de la filosofía, ahora podemos examinar la afirmación más específica e históricamente verificable en el Cristianismo: la Resurrección de Jesucristo.",
+      de: "Mit einer durch Philosophie etablierten rationalen Grundlage für die Existenz Gottes können wir nun die spezifischste und historisch überprüfbarste Behauptung im Christentum untersuchen: die Auferstehung Jesu Christi.",
+    },
+    para2: {
+      en: "The historical evidence that the Resurrection actually happened is a decisive, compelling reason to accept the truth of the Christian God and the unique claims of the Catholic faith.",
+      fr: "La preuve historique que la Résurrection s'est réellement produite est une raison décisive et convaincante d'accepter la vérité du Dieu Chrétien et les affirmations uniques de la foi Catholique.",
+      es: "La evidencia histórica de que la Resurrección realmente sucedió es una razón decisiva e convincente para aceptar la verdad del Dios Cristiano y las afirmaciones únicas de la fe Católica.",
+      de: "Der historische Beweis, dass die Auferstehung tatsächlich stattgefunden hat, ist ein entscheidender, zwingender Grund, die Wahrheit des christlichen Gottes und die einzigartigen Ansprüche des katholischen Glaubens anzunehmen.",
+    },
+  },
+},
 
   // Evidence for the Resurrection Topic
   proofOfResurrection: {
