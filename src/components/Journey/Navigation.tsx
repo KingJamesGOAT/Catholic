@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, Check, Circle, BookOpen, Sparkles, Search } from 'lucide-react';
+import { Menu, X, Check, Circle, BookOpen, Sparkles, Search, MoreVertical } from 'lucide-react'; 
 import { topics } from '../../App';
 import LanguageSelector from '../LanguageSelector';
 import { useLanguage } from '../../lib/i18n/LanguageContext';
@@ -21,7 +21,6 @@ interface NavigationProps {
   showEarlyChurch?: boolean;
   showScience?: boolean;
   showGlossary?: boolean;
-  // ADDED
   onDoctrineClick?: () => void;
   showDoctrine?: boolean;
   onLogoClick: () => void;
@@ -40,33 +39,52 @@ export default function Navigation({
   showEarlyChurch = false,
   showScience = false,
   showGlossary = false,
-  // ADDED
   onDoctrineClick,
   showDoctrine = false,
   onLogoClick
 }: NavigationProps) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [kebabMenuOpen, setKebabMenuOpen] = useState(false); 
   const { language } = useLanguage();
   const trans = translations;
+
+  useEffect(() => {
+    if (menuOpen || kebabMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [menuOpen, kebabMenuOpen]);
+
+  useEffect(() => {
+    if (menuOpen) setKebabMenuOpen(false);
+  }, [menuOpen]);
+  
+  useEffect(() => {
+    if (kebabMenuOpen) setMenuOpen(false);
+  }, [kebabMenuOpen]);
+
 
   const navigateToTopic = (index: number) => {
     onNavigate(index);
     setMenuOpen(false);
   };
-  
-  // FIXED: Removed the conditional logic that incorrectly forced navigation to topic 0.
-  // Now, clicking the logo only calls the external onLogoClick (which handles going to Home).
+ 
   const handleLogoClick = () => {
       onLogoClick();
   };
 
   const handleSpecialPageClick = (action: 'earlyChurch' | 'science' | 'glossary' | 'doctrine') => {
     setMenuOpen(false);
+    setKebabMenuOpen(false); 
     if (action === 'earlyChurch' && onEarlyChurchClick) {
       onEarlyChurchClick();
     } else if (action === 'science' && onScienceClick) {
       onScienceClick();
-    } else if (action === 'glossary' && onGlossaryClick) {
+    } else if (action === 'glossary' && onGlossaryClick) { 
       onGlossaryClick();
     } else if (action === 'doctrine' && onDoctrineClick) {
       onDoctrineClick();
@@ -95,7 +113,6 @@ export default function Navigation({
 
             <div className="flex items-center gap-4">
               
-              {/* SEARCH BUTTON */}
               <button
                 onClick={onSearchClick}
                 className="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-400 hover:bg-gray-800/50 hover:text-white transition-all"
@@ -107,7 +124,6 @@ export default function Navigation({
 
               <div className="w-px h-6 bg-gray-800 hidden md:block" />
 
-              {/* Special Pages Button Block */}
               <div className="hidden md:flex rounded-lg border border-gray-700 bg-gray-900/50 p-1">
                 <button
                   onClick={() => handleSpecialPageClick('science')}
@@ -118,7 +134,6 @@ export default function Navigation({
                 >
                   {t(trans.nav.scienceAndMiracles, language)}
                 </button>
-
                 <button
                   onClick={() => handleSpecialPageClick('earlyChurch')}
                   className={cn(
@@ -128,8 +143,6 @@ export default function Navigation({
                 >
                   {t(trans.nav.earlyChurch, language)}
                 </button>
-
-                {/* NEW BUTTON */}
                 <button
                   onClick={() => handleSpecialPageClick('doctrine')}
                   className={cn(
@@ -153,7 +166,16 @@ export default function Navigation({
 
               <button
                 className="text-gray-400 hover:text-white transition-colors md:hidden"
+                onClick={() => setKebabMenuOpen(!kebabMenuOpen)}
+                aria-label="More pages"
+              >
+                <MoreVertical size={24} />
+              </button>
+
+              <button
+                className="text-gray-400 hover:text-white transition-colors md:hidden"
                 onClick={() => setMenuOpen(!menuOpen)}
+                aria-label="All topics"
               >
                 {menuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
@@ -175,7 +197,9 @@ export default function Navigation({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
-              className="container mx-auto px-4 py-24 max-w-5xl"
+              // FIX 1: Changed pt-20 (5rem) to pt-8 (2rem) for mobile
+              // This brings the content much higher, just under the status bar.
+              className="container mx-auto px-4 pt-8 md:pt-24 pb-12 max-w-5xl"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center justify-between mb-12">
@@ -191,108 +215,10 @@ export default function Navigation({
                 </button>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-4 max-h-[70vh] overflow-y-auto pr-4 mb-8">
+              {/* FIX 2: Added pb-32 (8rem) to the bottom of the scrollable list.
+                  This pushes the last item up so it is not hidden by the browser's UI bar. */}
+              <div className="grid md:grid-cols-2 gap-4 max-h-[70vh] overflow-y-auto pr-4 mb-8 pb-32">
                 
-                {/* 1. EARLY CHURCH (SP1) */}
-                {onEarlyChurchClick && (
-                  <motion.button
-                    key="early-church-link"
-                    onClick={() => handleSpecialPageClick('earlyChurch')}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="text-left p-6 rounded-lg border transition-all duration-300 bg-blue-900/20 border-blue-800 hover:bg-blue-900/30 hover:border-blue-700"
-                  >
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600 border-2 border-blue-400 flex items-center justify-center">
-                        <BookOpen size={20} className="text-white" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-1">
-                            <span className="text-xs text-gray-500">{t(trans.menu.topicLabel, language)} SP1</span> 
-                            <span className="text-xs text-blue-400">• {t(trans.nav.earlyChurch, language)}</span>
-                        </div>
-                        <h3 className="text-white mb-2">{t(trans.earlyChurch.title, language)}</h3>
-                        <p className="text-sm text-gray-500 line-clamp-2">{t(trans.earlyChurch.subtitle, language)}</p>
-                      </div>
-                    </div>
-                  </motion.button>
-                )}
-
-                {/* 2. SCIENCE (SP2) */}
-                {onScienceClick && (
-                  <motion.button
-                    key="science-miracles-link"
-                    onClick={() => handleSpecialPageClick('science')}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="text-left p-6 rounded-lg border transition-all duration-300 bg-purple-900/20 border-purple-800 hover:bg-purple-900/30 hover:border-purple-700"
-                  >
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-purple-600 border-2 border-purple-400 flex items-center justify-center">
-                        <Sparkles size={20} className="text-white" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-1">
-                            <span className="text-xs text-gray-500">{t(trans.menu.topicLabel, language)} SP2</span> 
-                            <span className="text-xs text-purple-400">• {t(trans.nav.scienceAndMiracles, language)}</span>
-                        </div>
-                        <h3 className="mb-2 text-white">{t(trans.topicFullTitles['science-and-miracles' as keyof typeof trans.topicFullTitles], language)}</h3>
-                        <p className="text-sm text-gray-500 line-clamp-2">{t(trans.nav.scienceAndMiraclesDescription, language)}</p>
-                      </div>
-                    </div>
-                  </motion.button>
-                )}
-
-                {/* 3. SCRIPTURE & FATHERS (SP3) - Reordered here */}
-                {onDoctrineClick && (
-                  <motion.button
-                    key="doctrine-link"
-                    onClick={() => handleSpecialPageClick('doctrine')}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="text-left p-6 rounded-lg border transition-all duration-300 bg-indigo-900/20 border-indigo-800 hover:bg-indigo-900/30 hover:border-indigo-700"
-                  >
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-600 border-2 border-indigo-400 flex items-center justify-center">
-                        <BookOpen size={20} className="text-white" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-1">
-                            <span className="text-xs text-gray-500">{t(trans.menu.topicLabel, language)} SP3</span> 
-                            <span className="text-xs text-indigo-400">• {t(trans.nav.scriptureFathers, language)}</span>
-                        </div>
-                        <h3 className="mb-2 text-white">{t(trans.nav.scriptureFathers, language)}</h3>
-                        <p className="text-sm text-gray-500 line-clamp-2">Scripture & Tradition</p>
-                      </div>
-                    </div>
-                  </motion.button>
-                )}
-
-                {/* 4. GLOSSARY (SP4) - Reordered here */}
-                {onGlossaryClick && (
-                  <motion.button
-                    key="glossary-link"
-                    onClick={() => handleSpecialPageClick('glossary')}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="text-left p-6 rounded-lg border transition-all duration-300 bg-yellow-900/20 border-yellow-800 hover:bg-yellow-900/30 hover:border-yellow-700"
-                  >
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-yellow-600 border-2 border-yellow-400 flex items-center justify-center">
-                        <BookOpen size={20} className="text-white" />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-1">
-                            <span className="text-xs text-gray-500">{t(trans.menu.topicLabel, language)} SP4</span> 
-                            <span className="text-xs text-yellow-400">• Glossary</span>
-                        </div>
-                        <h3 className="mb-2 text-white">{t(trans.glossary.title, language)}</h3>
-                        <p className="text-sm text-gray-500 line-clamp-2">{t(trans.glossary.subtitle, language)}</p>
-                      </div>
-                    </div>
-                  </motion.button>
-                )}
-
                 {topics.map((topic, index) => {
                   const isCompleted = completedTopics.has(index);
                   const isCurrent = index === currentTopicIndex;
@@ -327,7 +253,6 @@ export default function Navigation({
                             <span className="text-gray-400">{index + 1}</span>
                           )}
                         </div>
-                        
                         <div className="flex-1">
                           <div className="flex items-center gap-2 mb-1">
                             <span className="text-xs text-gray-500">{t(trans.menu.topicLabel, language)} {index + 1}</span>
@@ -353,6 +278,31 @@ export default function Navigation({
                     </motion.button>
                   );
                 })}
+
+                {onGlossaryClick && (
+                  <motion.button
+                    key="glossary-link"
+                    onClick={() => handleSpecialPageClick('glossary')}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="text-left p-6 rounded-lg border transition-all duration-300 bg-yellow-900/20 border-yellow-800 hover:bg-yellow-900/30 hover:border-yellow-700 hidden md:block"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-yellow-600 border-2 border-yellow-400 flex items-center justify-center">
+                        <BookOpen size={20} className="text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-xs text-gray-500">{t(trans.menu.topicLabel, language)} SP4</span> 
+                          <span className="text-xs text-yellow-400">• Glossary</span>
+                        </div>
+                        <h3 className="mb-2 text-white">{t(trans.glossary.title, language)}</h3>
+                        <p className="text-sm text-gray-500 line-clamp-2">{t(trans.glossary.subtitle, language)}</p>
+                      </div>
+                    </div>
+                  </motion.button>
+                )}
+
               </div>
 
               <div className="mt-8 text-center">
@@ -362,6 +312,58 @@ export default function Navigation({
               </div>
             </motion.div>
           </motion.div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {kebabMenuOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm"
+              onClick={() => setKebabMenuOpen(false)}
+            />
+            
+            <motion.div
+              initial={{ opacity: 0, y: -10, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -10, scale: 0.95 }}
+              transition={{ duration: 0.15, ease: "easeOut" }}
+              className="fixed top-20 right-4 z-50 w-64 bg-gray-900 border border-gray-700 rounded-lg shadow-xl p-2"
+            >
+              <button
+                onClick={() => handleSpecialPageClick('science')}
+                className="flex items-center gap-3 w-full text-left px-3 py-3 rounded-md text-gray-300 hover:bg-blue-600 hover:text-white transition-colors"
+              >
+                <Sparkles size={18} />
+                <span>{t(trans.nav.scienceAndMiracles, language)}</span>
+              </button>
+              <button
+                onClick={() => handleSpecialPageClick('earlyChurch')}
+                className="flex items-center gap-3 w-full text-left px-3 py-3 rounded-md text-gray-300 hover:bg-blue-600 hover:text-white transition-colors"
+              >
+                <BookOpen size={18} />
+                <span>{t(trans.nav.earlyChurch, language)}</span>
+              </button>
+              <button
+                onClick={() => handleSpecialPageClick('doctrine')}
+                className="flex items-center gap-3 w-full text-left px-3 py-3 rounded-md text-gray-300 hover:bg-indigo-600 hover:text-white transition-colors"
+              >
+                <BookOpen size={18} />
+                <span>{t(trans.nav.scriptureFathers, language)}</span>
+              </button>
+              <div className="h-px bg-gray-700 my-1" />
+              <button
+                onClick={() => handleSpecialPageClick('glossary')}
+                className="flex items-center gap-3 w-full text-left px-3 py-3 rounded-md text-gray-300 hover:bg-yellow-600 hover:text-black transition-colors"
+              >
+                <BookOpen size={18} />
+                <span>{t(trans.glossary.title, language)}</span>
+              </button>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </>
