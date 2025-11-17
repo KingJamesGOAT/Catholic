@@ -1612,7 +1612,354 @@ export const doctrineData: Doctrine[] = [
     ]
   },
 
-  // 7. PURGATORY
+
+  // 7. INTERCESSION OF THE SAINTS
+  {
+    id: "saints",
+    title: {
+      en: "Intercession of the Saints",
+      fr: "Intercession des Saints",
+      es: "Intercesión de los Santos",
+      de: "Fürsprache der Heiligen",
+    },
+    subtitle: {
+      en: "The bond of love uniting Heaven and Earth",
+      fr: "Le lien d'amour unissant le Ciel et la Terre",
+      es: "El vínculo de amor que une el Cielo y la Tierra",
+      de: "Das Band der Liebe, das Himmel und Erde vereint",
+    },
+    verses: {
+      en: [
+        // Theological Foundation: The Righteous are Alive
+        {
+          book: "Luke",
+          chapter: "20",
+          verse: "38",
+          text: "He is not the God of the dead, but of the living, for all live to him."
+        },
+        // General Principle: Efficacy of Righteous Prayer
+        {
+          book: "James",
+          chapter: "5",
+          verse: "16",
+          text: "The prayer of a righteous person has great power as it is working."
+        },
+        // Old Covenant Example: Intercession from the Departed
+        {
+          book: "Jeremiah",
+          chapter: "15",
+          verse: "1",
+          text: "Then the Lord said to me, 'Even if Moses and Samuel stood before me, my heart would not turn toward this people.'"
+        },
+        {
+          book: "2 Maccabees",
+          chapter: "15",
+          verse: "14",
+          text: "Onias, who was high priest, a good and excellent man... stretching out his hands and praying for the whole body of the Jews. After this, there appeared also another man, eminent for age and glory."
+        },
+        // New Covenant Unity: The Cloud of Witnesses
+        {
+          book: "Hebrews",
+          chapter: "12",
+          verse: "1",
+          text: "Since we are surrounded by so great a cloud of witnesses, let us run with perseverance the race that is set before us."
+        },
+        // Heavenly Action: Saints Interceding (Symbolic)
+        {
+          book: "Revelation",
+          chapter: "5",
+          verse: "8",
+          text: "The twenty four elders fell down before the Lamb, each holding golden bowls full of incense, which are the prayers of the saints."
+        },
+        // Heavenly Action: Angelic Mediation (Mechanism)
+        {
+          book: "Revelation",
+          chapter: "8",
+          verse: "3-4",
+          text: "Another angel came and stood at the altar with a golden censer... and the smoke of the incense with the prayers of the saints rose before God."
+        }
+      ],
+      fr: [
+        {
+          book: "Luc",
+          chapter: "20",
+          verse: "38",
+          text: "Or il n'est pas le Dieu des morts, mais des vivants ; car pour lui, tous sont vivants."
+        },
+        {
+          book: "Jacques",
+          chapter: "5",
+          verse: "16",
+          text: "La prière fervente du juste a une grande efficacité."
+        },
+        {
+          book: "Jérémie",
+          chapter: "15",
+          verse: "1",
+          text: "L'Éternel me dit : « Quand Moïse et Samuel se tiendraient devant moi, je n'aurais pas de bienveillance pour ce peuple. »"
+        },
+        {
+          book: "2 Maccabées",
+          chapter: "15",
+          verse: "14",
+          text: "Onias, qui avait été souverain sacrificateur, homme bon et excellent... il étendait les mains et priait pour tout le corps des Juifs. Après cela, apparut un autre homme, remarquable par son âge et sa gloire."
+        },
+        {
+          book: "Hébreux",
+          chapter: "12",
+          verse: "1",
+          text: "Puisque nous sommes entourés d'une si grande nuée de témoins, courons avec persévérance l'épreuve qui nous est proposée."
+        },
+        {
+          book: "Apocalypse",
+          chapter: "5",
+          verse: "8",
+          text: "Les vingt quatre vieillards se prosternèrent devant l'Agneau, tenant des coupes d'or pleines d'encens, qui sont les prières des saints."
+        },
+        {
+          book: "Apocalypse",
+          chapter: "8",
+          verse: "3-4",
+          text: "Un autre ange vint se placer près de l'autel, tenant un encensoir d'or... et la fumée de l'encens mêlée aux prières des saints monta devant Dieu."
+        }
+      ],
+      es: [
+        {
+          book: "Lucas",
+          chapter: "20",
+          verse: "38",
+          text: "Él no es Dios de muertos, sino de vivos, pues para él todos viven."
+        },
+        {
+          book: "Santiago",
+          chapter: "5",
+          verse: "16",
+          text: "La oración eficaz del justo puede mucho."
+        },
+        {
+          book: "Jeremías",
+          chapter: "15",
+          verse: "1",
+          text: "El Señor me dijo: « Aunque Moisés y Samuel se pusieran delante de mí, mi corazón no se inclinaría hacia este pueblo. »"
+        },
+        {
+          book: "2 Macabeos",
+          chapter: "15",
+          verse: "14",
+          text: "Onías, que había sido sumo sacerdote, varón bueno y excelente... extendiendo las manos y orando por todo el cuerpo de los judíos. Después de esto, apareció también otro hombre, eminente por su edad y gloria."
+        },
+        {
+          book: "Hebreos",
+          chapter: "12",
+          verse: "1",
+          text: "Estando rodeados de una tan grande nube de testigos, corramos con perseverancia la carrera que tenemos por delante."
+        },
+        {
+          book: "Apocalipsis",
+          chapter: "5",
+          verse: "8",
+          text: "Los veinticuatro ancianos se postraron ante el Cordero con copas de oro llenas de incienso, que son las oraciones de los santos."
+        },
+        {
+          book: "Apocalipsis",
+          chapter: "8",
+          verse: "3-4",
+          text: "Otro ángel vino y se puso junto al altar con un incensario de oro... y el humo del incienso, con las oraciones de los santos, subió delante de Dios."
+        }
+      ],
+      de: [
+        {
+          book: "Lukas",
+          chapter: "20",
+          verse: "38",
+          text: "Er ist aber nicht ein Gott der Toten, sondern der Lebendigen; denn sie leben ihm alle."
+        },
+        {
+          book: "Jakobus",
+          chapter: "5",
+          verse: "16",
+          text: "Des Gerechten Gebet vermag viel, wenn es ernstlich ist."
+        },
+        {
+          book: "Jeremia",
+          chapter: "15",
+          verse: "1",
+          text: "Der Herr sprach zu mir: « Und wenn Mose und Samuel vor mir stünden, so hätte meine Seele kein Wohlgefallen an diesem Volk. »"
+        },
+        {
+          book: "2 Makkabäer",
+          chapter: "15",
+          verse: "14",
+          text: "Onias, der Hohepriester gewesen war, ein guter und ausgezeichneter Mann... streckte seine Hände aus und betete für das ganze jüdische Volk. Danach erschien auch noch ein anderer Mann, ausgezeichnet an Alter und Würde."
+        },
+        {
+          book: "Hebräer",
+          chapter: "12",
+          verse: "1",
+          text: "Da wir von einer so großen Wolke von Zeugen umgeben sind, wollen wir mit Ausdauer den Wettlauf laufen, der vor uns liegt."
+        },
+        {
+          book: "Offenbarung",
+          chapter: "5",
+          verse: "8",
+          text: "Die vierundzwanzig Ältesten fielen vor dem Lamm nieder und hielten goldene Schalen voll Weihrauch, das sind die Gebete der Heiligen."
+        },
+        {
+          book: "Offenbarung",
+          chapter: "8",
+          verse: "3-4",
+          text: "Ein anderer Engel kam und stellte sich an den Altar mit einem goldenen Räucherfass... und der Rauch des Weihrauchs mit den Gebeten der Heiligen stieg vor Gott auf."
+        }
+      ]
+    },
+    tradition: [
+      {
+        id: "origen-intercession",
+        type: "father",
+        author: {
+          en: "Origen of Alexandria",
+          fr: "Origène d'Alexandrie",
+          es: "Orígenes de Alejandría",
+          de: "Origenes von Alexandrien",
+        },
+        source: "On Prayer, 11",
+        date: "c. 248 AD",
+        text: {
+          en: "Not the High Priest alone prays for those who are governed by him, but also the angels and the souls of the departed just.",
+          fr: "Non seulement le Souverain Sacrificateur prie pour ceux qui sont gouvernés par lui, mais aussi les anges et les âmes des justes défunts.",
+          es: "No solo el Sumo Sacerdote ora por aquellos que son gobernados por él, sino también los ángeles y las almas de los justos difuntos.",
+          de: "Nicht nur der Hohepriester allein betet für diejenigen, die von ihm regiert werden, sondern auch die Engel und die Seelen der entschlafenen Gerechten.",
+        },
+      },
+      {
+        id: "cyril-commemoration",
+        type: "father",
+        author: {
+          en: "St. Cyril of Jerusalem",
+          fr: "St Cyrille de Jérusalem",
+          es: "San Cirilo de Jerusalén",
+          de: "Hl. Kyrill von Jerusalem",
+        },
+        source: "Catechetical Lectures 23:9",
+        date: "c. 350 AD",
+        text: {
+          en: "We mention also those who have already fallen asleep, first patriarchs, prophets, apostles, martyrs, that through their prayers and supplications God would receive our petition.",
+          fr: "Nous faisons aussi mémoire de ceux qui se sont endormis avant nous : patriarches, prophètes, apôtres, martyrs, afin que par leurs prières et leurs supplications Dieu accueille notre demande.",
+          es: "Recordamos también a los que ya se han dormido : patriarcas, profetas, apóstoles, mártires, para que por sus oraciones y súplicas Dios reciba nuestra petición.",
+          de: "Wir gedenken auch derer, die schon entschlafen sind : Patriarchen, Propheten, Apostel, Märtyrer, damit Gott durch ihre Gebete und Bitten unser Anliegen annehme.",
+        },
+      },
+      {
+        id: "jerome-vigilantius",
+        type: "father",
+        author: {
+          en: "St. Jerome",
+          fr: "St Jérôme",
+          es: "San Jerónimo",
+          de: "Hl. Hieronymus",
+        },
+        source: "Against Vigilantius 6",
+        date: "c. 406 AD",
+        text: {
+          en: "If the Apostles and martyrs while still in the body can pray for others, how much more after they have triumphed and received crowns! At their tombs we say : we entreat you to intercede for us.",
+          fr: "Si les Apôtres et les martyrs, tant qu'ils étaient encore dans la chair, pouvaient prier pour les autres, combien plus maintenant qu'ils ont triomphé et reçu la couronne ! À leurs tombeaux nous disons : intercédez pour nous.",
+          es: "Si los Apóstoles y mártires, mientras estaban aún en el cuerpo, podían orar por otros, ¡cuánto más ahora que han triunfado y recibido la corona! En sus tumbas decimos : rogad e interceded por nosotros.",
+          de: "Wenn die Apostel und Märtyrer, solange sie noch im Leib waren, für andere beten konnten, wieviel mehr jetzt, da sie gesiegt und die Krone empfangen haben! An ihren Gräbern sagen wir : bittet für uns.",
+        },
+      },
+      {
+        id: "augustine-martyrs",
+        type: "doctor",
+        author: {
+          en: "St. Augustine",
+          fr: "St Augustin",
+          es: "San Agustín",
+          de: "Hl. Augustinus",
+        },
+        source: "City of God 22:9-10",
+        date: "c. 426 AD",
+        text: {
+          en: "At the memorials of the martyrs many are healed and delivered, and these benefits are granted through the merits and prayers of the saints who reign with Christ.",
+          fr: "Aux mémoriaux des martyrs beaucoup sont guéris et délivrés, et ces bienfaits sont accordés par les mérites et les prières des saints qui règnent avec le Christ.",
+          es: "En los santuarios de los mártires muchos son sanados y liberados, y estos beneficios se conceden por los méritos y oraciones de los santos que reinan con Cristo.",
+          de: "An den Gedächtnisstätten der Märtyrer werden viele geheilt und befreit, und diese Wohltaten werden durch die Verdienste und Gebete der Heiligen gewährt, die mit Christus herrschen.",
+        },
+      },
+      {
+        id: "aquinas-mediation",
+        type: "doctor",
+        author: {
+          en: "St. Thomas Aquinas",
+          fr: "St Thomas d'Aquin",
+          es: "Sto. Tomás de Aquino",
+          de: "Hl. Thomas von Aquin",
+        },
+        source: "Summa Theologiae, II II, Q. 83, A. 11",
+        date: "c. 1270 AD",
+        text: {
+          en: "Christ is the one Mediator of redemption; yet there is nothing to prevent others from being called mediators of petition, whose prayers bring us salvation. The saints do this by their own prayers.",
+          fr: "Le Christ est l'unique Médiateur de la rédemption ; pourtant rien n'empêche que d'autres soient appelés médiateurs de prière, dont les prières nous obtiennent le salut. Les saints le font par leurs propres prières.",
+          es: "Cristo es el único Mediador de la redención; sin embargo, nada impide que otros sean llamados mediadores de petición, cuyas oraciones nos alcanzan la salvación. Los santos hacen esto por sus propias oraciones.",
+          de: "Christus ist der eine Mittler der Erlösung; dennoch hindert nichts daran, dass andere Mittler der Fürbitte genannt werden, deren Gebete uns das Heil erlangen. Die Heiligen tun dies durch ihre eigenen Gebete.",
+        },
+      },
+      {
+        id: "trent-invocation",
+        type: "council",
+        author: {
+          en: "Council of Trent",
+          fr: "Concile de Trente",
+          es: "Concilio de Trento",
+          de: "Konzil von Trient",
+        },
+        source: "Session 25",
+        date: "1563 AD",
+        text: {
+          en: "The saints who reign together with Christ offer their prayers to God for us; it is good and useful suppliantly to invoke them, and to have recourse to their prayers and help.",
+          fr: "Les saints qui règnent avec le Christ présentent leurs prières à Dieu pour nous ; il est bon et utile de les invoquer humblement et de recourir à leurs prières et à leur secours.",
+          es: "Los santos que reinan con Cristo presentan sus oraciones a Dios por nosotros; es bueno y provechoso invocarlos suplicantemente y recurrir a sus oraciones y ayuda.",
+          de: "Die Heiligen, die mit Christus herrschen, bringen ihre Gebete für uns vor Gott; es ist gut und nützlich, sie demütig anzurufen und auf ihre Gebete und Hilfe zurückzugreifen.",
+        },
+      },
+      {
+        id: "piusXII-mediation",
+        type: "papal",
+        author: {
+          en: "Pope Pius XII",
+          fr: "Pape Pie XII",
+          es: "Papa Pío XII",
+          de: "Papst Pius XII.",
+        },
+        source: "Mystici Corporis Christi",
+        date: "1943 AD",
+        text: {
+          en: "Christ alone is the Head and Founder of the Church, but the members of the Body aid one another by their mutual cooperation and by their prayers. In this sense, the saints aid us by their merits and prayers.",
+          fr: "Le Christ seul est la Tête et le Fondateur de l'Église, mais les membres du Corps s'aident mutuellement par leur coopération et par leurs prières. En ce sens, les saints nous aident par leurs mérites et leurs prières.",
+          es: "Cristo solo es la Cabeza y Fundador de la Iglesia, pero los miembros del Cuerpo se ayudan mutuamente por su cooperación y por sus oraciones. En este sentido, los santos nos ayudan por sus méritos y oraciones.",
+          de: "Christus allein ist Haupt und Gründer der Kirche, doch die Glieder des Leibes helfen einander durch ihre gegenseitige Mitarbeit und durch ihre Gebete. In diesem Sinne helfen uns die Heiligen durch ihre Verdienste und Gebete.",
+        },
+      },
+      {
+        id: "theology-communion",
+        type: "theology",
+        author: {
+          en: "Theological Insight",
+          fr: "Perspective Théologique",
+          es: "Perspectiva Teológica",
+          de: "Theologische Einsicht",
+        },
+        text: {
+          en: "The communion of saints is a truth rooted in charity and the unity of Christ's Mystical Body. Since the Church is one family that transcends death, asking a saint to pray is simply asking a powerful family member in heaven for help.",
+          fr: "La communion des saints est une vérité enracinée dans la charité et l'unité du Corps Mystique du Christ. Puisque l'Église est une seule famille qui transcende la mort, demander à un saint de prier est simplement demander de l'aide à un membre puissant de la famille au ciel.",
+          es: "La comunión de los santos es una verdad arraigada en la caridad y la unidad del Cuerpo Místico de Cristo. Dado que la Iglesia es una sola familia que trasciende la muerte, pedir a un santo que ore es simplemente pedir ayuda a un miembro poderoso de la familia en el cielo.",
+          de: "Die Gemeinschaft der Heiligen ist eine Wahrheit, die in der Liebe und der Einheit des mystischen Leibes Christi wurzelt. Da die Kirche eine einzige Familie ist, die den Tod übersteigt, ist einen Heiligen um Gebet zu bitten lediglich, ein mächtiges Familienmitglied im Himmel um Hilfe zu bitten.",
+        },
+      }
+    ]
+  },
+  
+
+  // 8. PURGATORY
   {
     id: "purgatory",
     title: { en: "Purgatory", fr: "Purgatoire", es: "Purgatorio", de: "Fegefeuer" },

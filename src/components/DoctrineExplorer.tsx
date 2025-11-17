@@ -14,6 +14,7 @@ const getTopicIcon = (id: string) => {
     case 'baptism': return <Droplets size={20} />;
     case 'confession': return <MessageCircle size={20} />;
     case 'mary': return <Heart size={20} />;
+    case 'saints': return <Users size={20} />;
     case 'purgatory': return <Flame size={20} />;
     default: return <Book size={20} />;
   }

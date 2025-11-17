@@ -441,42 +441,48 @@ function AppContent() {
                   },
                 }}
               >
-                <div className="container mx-auto px-4 py-16 max-w-4xl">
-                    
-                    <CurrentTopicComponent onComplete={markCurrentTopicComplete} />
 
-                    <div className="flex flex-col md:flex-row items-center justify-between border-t border-gray-800 pt-8 gap-6 md:gap-4 mt-16">
+                
+                
+                <CurrentTopicComponent onComplete={markCurrentTopicComplete} />
+
                     
+                <div className="container mx-auto px-4 pb-16 max-w-4xl">
+                  <div className="flex flex-col md:flex-row items-center justify-between border-t border-gray-800 pt-8 gap-6 md:gap-4 mt-16">
                     <div className="text-center text-gray-500 order-1 md:order-2 text-sm md:text-base">
-                        {t(trans.progress.topicOf, language)}{" "}
-                        {currentTopicIndex + 1}{" "}
-                        {t(trans.progress.of, language)}{" "}
-                        {topics.length}
+                      {t(trans.progress.topicOf, language)}{" "}
+                      {currentTopicIndex + 1}{" "}
+                      {t(trans.progress.of, language)}{" "}
+                      {topics.length}
                     </div>
 
                     <div className="flex w-full md:w-auto justify-between gap-4 order-2 md:contents">
-                        <button
+                    
+                      <button
                         onClick={previousTopic}
                         disabled={currentTopicIndex === 0}
                         className={`px-6 py-3 rounded-lg transition-all duration-300 md:order-1 ${
-                            currentTopicIndex === 0
+                          currentTopicIndex === 0
                             ? "bg-gray-900 text-gray-600 cursor-not-allowed"
                             : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white"
                         }`}
-                        >
+                      >
                         ← {t(trans.progress.previous, language)}
-                        </button>
+                      
+                      </button>
 
-                        <button
+                      <button
                         onClick={nextTopic}
                         className="px-6 py-3 rounded-lg transition-all duration-300 md:order-3 bg-white text-black hover:bg-gray-200"
-                        >
+                    
+                      >
                         {currentTopicIndex === topics.length - 1
-                            ? t(trans.progress.complete, language)
-                            : `${t(trans.progress.next, language)} →`}
-                        </button>
+              
+                          ? t(trans.progress.complete, language)
+                          : `${t(trans.progress.next, language)} →`}
+                      </button>
                     </div>
-                    </div>
+                  </div>
                 </div>
               </motion.main>
             )}

@@ -2072,6 +2072,38 @@ export const glossaryTerms: GlossaryTerm[] = [
       de: "Eine Gabe des Heiligen Geistes; ein tiefer Respekt und Ehrfurcht vor Gottes Majestät und die Furcht, Ihn zu beleidigen.",
     },
   },
+
+  {
+      "id": "sacrament",
+      "term": {
+        "en": "Sacrament",
+        "fr": "Sacrement",
+        "es": "Sacramento",
+        "de": "Sakrament"
+      },
+      "definition": {
+        "en": "An efficacious sign of grace, instituted by Christ and entrusted to the Church, by which divine life is dispensed to us. They are seven in number: Baptism, Confirmation, Eucharist, Penance, Anointing of the Sick, Holy Orders, and Matrimony.",
+        "fr": "Un signe efficace de la grâce, institué par le Christ et confié à l'Église, par lequel la vie divine nous est distribuée. Ils sont au nombre de sept : Baptême, Confirmation, Eucharistie, Pénitence, Onction des malades, Ordre et Mariage.",
+        "es": "Un signo eficaz de la gracia, instituido por Cristo y confiado a la Iglesia, por el cual se nos dispensa la vida divina. Son siete en total: Bautismo, Confirmación, Eucaristía, Penitencia, Unción de los enfermos, Orden Sacerdotal y Matrimonio.",
+        "de": "Ein wirksames Zeichen der Gnade, von Christus eingesetzt und der Kirche anvertraut, durch das uns das göttliche Leben gespendet wird. Sie sind sieben an der Zahl: Taufe, Firmung, Eucharistie, Buße, Krankensalbung, Weihe und Ehe."
+      },
+    },
+    {
+      "id": "second-council-constantinople",
+      "term": {
+        "en": "Second Council of Constantinople",
+        "fr": "Deuxième Concile de Constantinople",
+        "es": "Segundo Concilio de Constantinopla",
+        "de": "Zweites Konzil von Konstantinopel"
+      },
+      "definition": {
+        "en": "The fifth Ecumenical Council, held in 553 AD, which condemned the Three Chapters to clarify and defend the teaching of the Council of Chalcedon. Its main purpose was to insist further upon the unity of the Person of Christ in his two natures, divine and human, against Nestorianism.",
+        "fr": "Le cinquième Concile œcuménique, tenu en 553 après J.C., qui a condamné les Trois Chapitres pour clarifier et défendre l'enseignement du Concile de Chalcédoine. Son but principal était d'insister davantage sur l'unité de la Personne du Christ dans ses deux natures, divine et humaine, contre le nestorianisme.",
+        "es": "El quinto Concilio Ecuménico, celebrado en 553 d.C., que condenó los Tres Capítulos para clarificar y defender la enseñanza del Concilio de Calcedonia. Su propósito principal fue insistir aún más en la unidad de la Persona de Cristo en sus dos naturalezas, divina y humana, contra el nestorianismo.",
+        "de": "Das fünfte Ökumenische Konzil, abgehalten 553 n. Chr., das die Drei Kapitel verurteilte, um die Lehre des Konzils von Chalkedon zu klären und zu verteidigen. Sein Hauptzweck war es, weiter auf der Einheit der Person Christi in seinen zwei Naturen, göttlich und menschlich, gegen den Nestorianismus zu bestehen."
+      },
+    },
+  
   {
     id: "filioque",
     term: {
