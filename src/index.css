@@ -1154,6 +1154,14 @@
     scroll-padding-block: calc(var(--spacing) * 1);
   }
 
+  .list-inside {
+    list-style-position: inside;
+  }
+
+  .list-disc {
+    list-style-type: disc;
+  }
+
   .list-none {
     list-style-type: none;
   }
@@ -1708,6 +1716,10 @@
 
   .border-yellow-400 {
     border-color: var(--color-yellow-400);
+  }
+
+  .border-yellow-600 {
+    border-color: var(--color-yellow-600);
   }
 
   .border-yellow-800 {

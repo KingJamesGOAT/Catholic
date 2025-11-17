@@ -6,7 +6,7 @@ import {
   Gauge,
   Scale,
   Cross,
-  Brain,
+  Move, // Ajout de 'Move' pour les Arguments de la Cause
 } from "lucide-react";
 import { useLanguage } from "../../lib/i18n/LanguageContext";
 import { translations, t } from "../../lib/i18n/translations";
@@ -17,34 +17,34 @@ export default function ExistenceOfGod() {
 
   const fiveArguments = [
     {
-      icon: Sparkles,
+      icon: Move, // Arguments from Cause (1st, 2nd, 3rd Way)
       title: t(trans.arg1Title, language),
       subtitle: t(trans.arg1Subtitle, language),
-      key: "cosmological",
+      key: "cause",
     },
     {
-      icon: Gauge,
+      icon: Scale, // Argument from Perfection (4th Way)
       title: t(trans.arg2Title, language),
       subtitle: t(trans.arg2Subtitle, language),
-      key: "finetuning",
+      key: "perfection",
     },
     {
-      icon: Scale,
+      icon: Gauge, // Argument from Purpose (5th Way)
       title: t(trans.arg3Title, language),
       subtitle: t(trans.arg3Subtitle, language),
+      key: "purpose",
+    },
+    {
+      icon: Scale, // Moral Argument (Kept)
+      title: t(trans.arg4Title, language),
+      subtitle: t(trans.arg4Subtitle, language),
       key: "moral",
     },
     {
-      icon: Cross,
-      title: t(trans.arg4Title, language),
-      subtitle: t(trans.arg4Subtitle, language),
-      key: "resurrection",
-    },
-    {
-      icon: Brain,
+      icon: Cross, // Resurrection Argument (Kept)
       title: t(trans.arg5Title, language),
       subtitle: t(trans.arg5Subtitle, language),
-      key: "ontological",
+      key: "resurrection",
     },
   ];
 
@@ -57,14 +57,14 @@ export default function ExistenceOfGod() {
         source: t(trans.quoteSource, language),
       }}
     >
-      {/* Video Section */}
+      {/* Video Section: St. Thomas Aquinas' Five Ways Introduction */}
       <div className="mb-16">
         <div className="aspect-video w-full rounded-lg overflow-hidden bg-gray-900 border border-gray-800">
           <iframe
             width="100%"
             height="100%"
-            src="https://www.youtube.com/embed/TtSXyrEzXs4?start=97"
-            title="Five Reasons Why You Can Believe God Exists"
+            src="https://www.youtube.com/embed/42Eg6UUBqqo"
+            title="The Five Ways of St. Thomas Aquinas: An Introduction"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -73,7 +73,7 @@ export default function ExistenceOfGod() {
         </div>
       </div>
 
-      {/* Introduction */}
+      {/* Introduction (Updated content in translations) */}
       <div className="space-y-6 text-gray-300 leading-relaxed mb-16">
         <p
           className="text-lg"
@@ -123,7 +123,7 @@ export default function ExistenceOfGod() {
         </h2>
       </div>
 
-      {/* Argument 1: Cosmological */}
+      {/* Argument 1: Arguments from Cause (1st, 2nd, and 3rd Ways) */}
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -132,80 +132,232 @@ export default function ExistenceOfGod() {
       >
         <div className="flex items-start gap-4 mb-6">
           <div className="w-12 h-12 rounded-lg bg-blue-900/30 flex items-center justify-center border border-blue-800 flex-shrink-0">
-            <Sparkles className="text-blue-400" size={24} />
+            <Move className="text-blue-400" size={24} />
           </div>
           <div>
             <h3 className="text-white mb-2">
-              {t(trans.cosmological.heading, language)}
+              {t(trans.cause.heading, language)}
             </h3>
             <p className="text-blue-400 italic">
-              {t(trans.cosmological.tagline, language)}
+              {t(trans.cause.tagline, language)}
             </p>
           </div>
         </div>
 
         <div className="space-y-4 text-gray-300 leading-relaxed">
+          <p
+            dangerouslySetInnerHTML={{
+              __html: t(trans.cause.intro, language),
+            }}
+          />
+
+          {/* Way 1: From Motion */}
           <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
             <p className="mb-3">
               <strong className="text-white">
-                {t(trans.cosmological.summaryLabel, language)}
+                {t(trans.cause.way1.title, language)}
               </strong>
             </p>
-            <ul className="list-none space-y-2 pl-4">
+            <ul className="list-none space-y-2 pl-4 mb-4">
               <li className="flex items-start gap-3">
                 <span className="text-blue-400 mt-1">1.</span>
-                <span>
-                  {t(trans.cosmological.premise1, language)}
-                </span>
+                <span>{t(trans.cause.way1.premise1, language)}</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-blue-400 mt-1">2.</span>
-                <span>
-                  {t(trans.cosmological.premise2, language)}
-                </span>
+                <span>{t(trans.cause.way1.premise2, language)}</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-blue-400 mt-1">3.</span>
                 <span>
                   <strong className="text-white">
-                    {t(trans.cosmological.conclusion, language)}
+                    {t(trans.cause.way1.conclusion, language)}
                   </strong>
                 </span>
               </li>
             </ul>
+            {/* Video Embed for 1st Way */}
+            <div className="aspect-video w-full rounded-md overflow-hidden bg-gray-900 border border-gray-800 mt-4 pt-4 border-t">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/34ygkWYlTfU"
+                title="The 1st Way: Argument from Motion"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            </div>
+          </div>
+          
+          {/* Way 2: From Efficient Causes */}
+          <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
+            <p className="mb-3">
+              <strong className="text-white">
+                {t(trans.cause.way2.title, language)}
+              </strong>
+            </p>
+            <ul className="list-none space-y-2 pl-4 mb-4">
+              <li className="flex items-start gap-3">
+                <span className="text-blue-400 mt-1">1.</span>
+                <span>{t(trans.cause.way2.premise1, language)}</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-blue-400 mt-1">2.</span>
+                <span>{t(trans.cause.way2.premise2, language)}</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-blue-400 mt-1">3.</span>
+                <span>
+                  <strong className="text-white">
+                    {t(trans.cause.way2.conclusion, language)}
+                  </strong>
+                </span>
+              </li>
+            </ul>
+            {/* Video Embed for 2nd Way */}
+            <div className="aspect-video w-full rounded-md overflow-hidden bg-gray-900 border border-gray-800 mt-4 pt-4 border-t">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/_yi-gwrItDM"
+                title="The 2nd Way: Argument from Efficient Causes"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            </div>
           </div>
 
-          <p
-            dangerouslySetInnerHTML={{
-              __html: t(
-                trans.cosmological.explanation1,
-                language,
-              ),
-            }}
-          />
-
-          <p>
-            <strong className="text-white">
-              {t(
-                trans.cosmological.scientificSupport,
-                language,
-              )}
-            </strong>{" "}
-            {t(trans.cosmological.explanation2, language)}
-          </p>
+          {/* Way 3: From Contingency and Necessity */}
+          <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
+            <p className="mb-3">
+              <strong className="text-white">
+                {t(trans.cause.way3.title, language)}
+              </strong>
+            </p>
+            <ul className="list-none space-y-2 pl-4 mb-4">
+              <li className="flex items-start gap-3">
+                <span className="text-blue-400 mt-1">1.</span>
+                <span>{t(trans.cause.way3.premise1, language)}</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-blue-400 mt-1">2.</span>
+                <span>{t(trans.cause.way3.premise2, language)}</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-blue-400 mt-1">3.</span>
+                <span>
+                  <strong className="text-white">
+                    {t(trans.cause.way3.conclusion, language)}
+                  </strong>
+                </span>
+              </li>
+            </ul>
+            <p className="text-sm pt-2 border-t border-gray-800">
+              <strong className="text-white">{t(trans.cause.way3.uniqueNote, language)}</strong>
+            </p>
+            {/* Video Embed for 3rd Way */}
+            <div className="aspect-video w-full rounded-md overflow-hidden bg-gray-900 border border-gray-800 mt-4 pt-4 border-t">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/dUfkFewZzGg"
+                title="The 3rd Way: Argument from Contingency"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            </div>
+          </div>
 
           <div className="bg-gray-900/50 border-l-4 border-blue-600 p-6 rounded-r-lg my-6">
             <p className="text-gray-300 italic">
-              "{t(trans.cosmological.quote1, language)}"
+              "{t(trans.cause.quote1, language)}"
             </p>
             <p className="text-gray-500 mt-2">
-              — William Lane Craig
+              — St. Thomas Aquinas (The Summa Theologiae)
             </p>
           </div>
         </div>
       </motion.section>
 
-      {/* Argument 2: Fine-Tuning */}
+      {/* Argument 2: Argument from Perfection (4th Way) */}
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="mb-16"
+      >
+        <div className="flex items-start gap-4 mb-6">
+          <div className="w-12 h-12 rounded-lg bg-blue-900/30 flex items-center justify-center border border-blue-800 flex-shrink-0">
+            <Scale className="text-blue-400" size={24} />
+          </div>
+          <div>
+            <h3 className="text-white mb-2">
+              {t(trans.perfection.heading, language)}
+            </h3>
+            <p className="text-blue-400 italic">
+              {t(trans.perfection.tagline, language)}
+            </p>
+          </div>
+        </div>
+
+        <div className="space-y-4 text-gray-300 leading-relaxed">
+          <p
+            dangerouslySetInnerHTML={{
+              __html: t(trans.perfection.intro, language),
+            }}
+          />
+          
+          <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
+            <p className="mb-3">
+              <strong className="text-white">
+                {t(trans.perfection.summaryLabel, language)}
+              </strong>
+            </p>
+            <ul className="list-none space-y-2 pl-4 mb-4">
+              <li className="flex items-start gap-3">
+                <span className="text-blue-400 mt-1">1.</span>
+                <span>{t(trans.perfection.premise1, language)}</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-blue-400 mt-1">2.</span>
+                <span>{t(trans.perfection.premise2, language)}</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-blue-400 mt-1">3.</span>
+                <span>
+                  <strong className="text-white">
+                    {t(trans.perfection.conclusion, language)}
+                  </strong>
+                </span>
+              </li>
+            </ul>
+            {/* Video Embed for 4th Way */}
+            <div className="aspect-video w-full rounded-md overflow-hidden bg-gray-900 border border-gray-800 mt-4 pt-4 border-t">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/ufmYWfGTLus"
+                title="The 4th Way: Argument from Perfection"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            </div>
+          </div>
+          
+          <p>{t(trans.perfection.explanation, language)}</p>
+
+        </div>
+      </motion.section>
+
+      {/* Argument 3: Argument from Purpose (5th Way) */}
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -218,65 +370,74 @@ export default function ExistenceOfGod() {
           </div>
           <div>
             <h3 className="text-white mb-2">
-              {t(trans.fineTuning.heading, language)}
+              {t(trans.purpose.heading, language)}
             </h3>
             <p className="text-blue-400 italic">
-              {t(trans.fineTuning.tagline, language)}
+              {t(trans.purpose.tagline, language)}
             </p>
           </div>
         </div>
 
         <div className="space-y-4 text-gray-300 leading-relaxed">
+          <p
+            dangerouslySetInnerHTML={{
+              __html: t(trans.purpose.intro, language),
+            }}
+          />
+
           <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
             <p className="mb-3">
               <strong className="text-white">
-                {t(trans.cosmological.summaryLabel, language)}
+                {t(trans.purpose.summaryLabel, language)}
               </strong>
             </p>
-            <ul className="list-none space-y-2 pl-4">
+            <ul className="list-none space-y-2 pl-4 mb-4">
               <li className="flex items-start gap-3">
                 <span className="text-blue-400 mt-1">1.</span>
-                <span>
-                  {t(trans.fineTuning.premise1, language)}
-                </span>
+                <span>{t(trans.purpose.premise1, language)}</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-blue-400 mt-1">2.</span>
-                <span>
-                  {t(trans.fineTuning.premise2, language)}
-                </span>
+                <span>{t(trans.purpose.premise2, language)}</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-blue-400 mt-1">3.</span>
                 <span>
-                  {t(trans.fineTuning.premise3, language)}
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-blue-400 mt-1">4.</span>
-                <span>
                   <strong className="text-white">
-                    {t(trans.fineTuning.conclusion, language)}
+                    {t(trans.purpose.conclusion, language)}
                   </strong>
                 </span>
               </li>
             </ul>
+            {/* Video Embed for 5th Way */}
+            <div className="aspect-video w-full rounded-md overflow-hidden bg-gray-900 border border-gray-800 mt-4 pt-4 border-t">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/wEvU808lwEA"
+                title="The 5th Way: Argument from Purpose"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            </div>
           </div>
-
-          <p>{t(trans.fineTuning.explanation, language)}</p>
-
+          
+          <p>{t(trans.purpose.explanation, language)}</p>
+          
           <div className="bg-gray-900/50 border-l-4 border-blue-600 p-6 rounded-r-lg my-6">
             <p className="text-gray-300 italic">
-              "{t(trans.fineTuning.quote, language)}"
+              "{t(trans.purpose.quote, language)}"
             </p>
             <p className="text-gray-500 mt-2">
-              — William Lane Craig
+              — St. Thomas Aquinas (The Summa Theologiae)
             </p>
           </div>
         </div>
       </motion.section>
 
-      {/* Argument 3: Moral */}
+      {/* Argument 4: Moral (Existing Video Embed Kept) */}
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -296,12 +457,29 @@ export default function ExistenceOfGod() {
             </p>
           </div>
         </div>
+        
+        {/* Moral Argument Video Added */}
+        <div className="mb-8">
+          <div className="aspect-video w-full rounded-lg overflow-hidden bg-gray-900 border border-gray-800">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/wlsY5jdLIJ8"
+              title="Moral Argument for God's Existence"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            ></iframe>
+          </div>
+        </div>
+        {/* End Moral Argument Video */}
 
         <div className="space-y-4 text-gray-300 leading-relaxed">
           <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
             <p className="mb-3">
               <strong className="text-white">
-                {t(trans.cosmological.summaryLabel, language)}
+                {t(trans.moral.summaryLabel, language)}
               </strong>
             </p>
             <ul className="list-none space-y-2 pl-4">
@@ -341,7 +519,7 @@ export default function ExistenceOfGod() {
         </div>
       </motion.section>
 
-      {/* Argument 4: Resurrection */}
+      {/* Argument 5: Resurrection */}
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -408,81 +586,20 @@ export default function ExistenceOfGod() {
               ),
             }}
           />
-        </div>
-      </motion.section>
-
-      {/* Argument 5: Ontological */}
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="mb-16"
-      >
-        <div className="flex items-start gap-4 mb-6">
-          <div className="w-12 h-12 rounded-lg bg-blue-900/30 flex items-center justify-center border border-blue-800 flex-shrink-0">
-            <Brain className="text-blue-400" size={24} />
-          </div>
-          <div>
-            <h3 className="text-white mb-2">
-              {t(trans.ontological.heading, language)}
-            </h3>
-            <p className="text-blue-400 italic">
-              {t(trans.ontological.tagline, language)}
+          
+          {/* Note sur le prochain sujet */}
+          <div className="bg-gray-900/50 border-l-4 border-yellow-600 p-6 rounded-r-lg my-6">
+            <p className="text-gray-300">
+              {t(trans.resurrection.nextTopicNote, language)}
             </p>
           </div>
-        </div>
-
-        <div className="space-y-4 text-gray-300 leading-relaxed">
-          <p
-            dangerouslySetInnerHTML={{
-              __html: t(trans.ontological.intro, language),
-            }}
-          />
-
-          <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
-            <ul className="list-none space-y-2 pl-4">
-              <li className="flex items-start gap-3">
-                <span className="text-blue-400 mt-1">1.</span>
-                <span>
-                  {t(trans.ontological.premise1, language)}
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-blue-400 mt-1">2.</span>
-                <span>
-                  {t(trans.ontological.premise2, language)}
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-blue-400 mt-1">3.</span>
-                <span>
-                  {t(trans.ontological.premise3, language)}
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-blue-400 mt-1">4.</span>
-                <span>
-                  {t(trans.ontological.premise4, language)}
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-blue-400 mt-1">5.</span>
-                <span>
-                  <strong className="text-white">
-                    {t(trans.ontological.conclusion, language)}
-                  </strong>
-                </span>
-              </li>
-            </ul>
-          </div>
-
-          <p>{t(trans.ontological.explanation, language)}</p>
+          
         </div>
       </motion.section>
 
       <Separator className="my-16 bg-gray-800" />
 
-      {/* Answering Objections */}
+      {/* Answering Objections - Conservé */}
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -557,8 +674,34 @@ export default function ExistenceOfGod() {
           </p>
         </div>
       </motion.section>
+      
+      {/* Vidéo avant la Conclusion */}
+      <Separator className="my-16 bg-gray-800" />
 
-      {/* Conclusion */}
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="mb-16"
+      >
+        <h2 className="text-white mb-6">
+          {t(trans.additionalVideo.heading, language)}
+        </h2>
+        <div className="aspect-video w-full rounded-lg overflow-hidden bg-gray-900 border border-gray-800">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/otrqzITuSqE"
+            title="Additional Video on Existence of God"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full h-full"
+          ></iframe>
+        </div>
+      </motion.section>
+
+      {/* Conclusion (Contenu mis à jour dans translations) */}
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -588,31 +731,9 @@ export default function ExistenceOfGod() {
         </div>
       </motion.section>
 
-      {/* --- ADDED SECTION --- */}
       <Separator className="my-16 bg-gray-800" />
-
-      <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="mb-16"
-      >
-        <div className="aspect-video w-full rounded-lg overflow-hidden bg-gray-900 border border-gray-800">
-          <iframe
-            width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/otrqzITuSqE"
-            title="Additional Video on Existence of God"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="w-full h-full"
-          ></iframe>
-        </div>
-      </motion.section>
-      {/* --- END OF ADDED SECTION --- */}
-
-      {/* Bridge to Next Topic */}
+      
+      {/* Bridge to Next Topic - Conservé */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
