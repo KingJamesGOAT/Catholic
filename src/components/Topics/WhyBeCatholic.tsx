@@ -462,6 +462,24 @@ export default function WhyBeCatholic() {
 
       <Separator className="my-16 bg-gray-800" />
 
+
+      {/* Second Video */}
+      <div className="mb-16">
+        <div className="aspect-video w-full rounded-lg overflow-hidden bg-gray-900 border border-gray-800">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/_9Q9on_IYAw"
+            title="Why Be Catholic - Additional Resource"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full h-full"
+          ></iframe>
+        </div>
+      </div>
+      
+
       {/* Conclusion */}
       <motion.section
         initial={{ opacity: 0, y: 30 }}
@@ -508,21 +526,7 @@ export default function WhyBeCatholic() {
         </div>
       </motion.section>
 
-      {/* Second Video */}
-      <div className="mb-16">
-        <div className="aspect-video w-full rounded-lg overflow-hidden bg-gray-900 border border-gray-800">
-          <iframe
-            width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/_9Q9on_IYAw"
-            title="Why Be Catholic - Additional Resource"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="w-full h-full"
-          ></iframe>
-        </div>
-      </div>
+      
 
       {/* Bridge to Next Topic */}
       <motion.div

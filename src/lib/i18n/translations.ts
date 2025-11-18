@@ -1,9 +1,6 @@
 import { Language } from "./LanguageContext";
 
 export const translations = {
-
-
-
   // --- ADD THIS SECTION FOR DOCTRINE EXPLORER ---
   doctrineExplorer: {
     title: {
@@ -13,11 +10,11 @@ export const translations = {
       de: "Ein Glaube, Eine Stimme",
     },
     subtitle: {
-  en: "Select a topic to view Sacred Scripture beside relevant comments from the Early Church Fathers and Doctors of the Church.",
-  fr: "Sélectionnez un sujet pour voir l'Écriture Sainte à côté des commentaires pertinents des Pères de l'Église et des Docteurs de l'Église.",
-  es: "Selecciona un tema para ver la Sagrada Escritura junto a comentarios relevantes de los Padres de la Iglesia y Doctores de la Iglesia.",
-  de: "Wählen Sie ein Thema, um die Heilige Schrift neben relevanten Kommentaren der frühen Kirchenväter und Kirchenlehrer anzuzeigen.",
-},
+      en: "Select a topic to view Sacred Scripture beside relevant comments from the Early Church Fathers and Doctors of the Church.",
+      fr: "Sélectionnez un sujet pour voir l'Écriture Sainte à côté des commentaires pertinents des Pères de l'Église et des Docteurs de l'Église.",
+      es: "Selecciona un tema para ver la Sagrada Escritura junto a comentarios relevantes de los Padres de la Iglesia y Doctores de la Iglesia.",
+      de: "Wählen Sie ein Thema, um die Heilige Schrift neben relevanten Kommentaren der frühen Kirchenväter und Kirchenlehrer anzuzeigen.",
+    },
     scriptureTitle: {
       en: "Sacred Scripture",
       fr: "Écriture Sainte",
@@ -92,10 +89,10 @@ export const translations = {
         fr: "Définition Papale",
         es: "Definición Papal",
         de: "Päpstliche Definition",
-        },
+      },
     },
   },
-  
+
   // Navigation & Common
   nav: {
     title: {
@@ -122,7 +119,7 @@ export const translations = {
       es: "Iglesia Primitiva",
       de: "Frühe Kirche",
     },
-    
+
     // --- ADD THIS BLOCK ---
     scriptureFathers: {
       en: "Scripture & Tradition", // Changed from "Scripture & Fathers"
@@ -227,9 +224,9 @@ export const translations = {
     },
     description: {
       en: "This apologetics website offers a structured exploration of the fundamental arguments for the Catholic Church. While not exhaustive, it focuses on essential topics regarding authority, history, and Scripture. It is designed to help Christians examine the historical and theological case for Catholicism and reflect deeply on the fullness of the faith.",
-            fr: "Ce site d'apologétique propose une exploration structurée des arguments fondamentaux en faveur de l'Église catholique. Bien que non exhaustif, il se concentre sur des sujets essentiels concernant l'autorité, l'histoire et les Écritures. Il est conçu pour aider les chrétiens à examiner le dossier historique et théologique du catholicisme et à réfléchir profondément à la plénitude de la foi.",
-            es: "Este sitio web de apologética ofrece una exploración estructurada de los argumentos fundamentales de la Iglesia Católica. Aunque no es exhaustivo, se centra en temas esenciales relacionados con la autoridad, la historia y las Escrituras. Está diseñado para ayudar a los cristianos a examinar el caso histórico y teológico del catolicismo y reflexionar profundamente sobre la plenitud de la fe.",
-            de: "Diese Apologetik-Website bietet eine strukturierte Erkundung der grundlegenden Argumente für die katholische Kirche. Obwohl nicht erschöpfend, konzentriert sie sich auf wesentliche Themen wie Autorität, Geschichte und Heilige Schrift. Sie soll Christen dabei helfen, den historischen und theologischen Fall für den Katholizismus zu prüfen und tief über die Fülle des Glaubens nachzudenken.",
+      fr: "Ce site d'apologétique propose une exploration structurée des arguments fondamentaux en faveur de l'Église catholique. Bien que non exhaustif, il se concentre sur des sujets essentiels concernant l'autorité, l'histoire et les Écritures. Il est conçu pour aider les chrétiens à examiner le dossier historique et théologique du catholicisme et à réfléchir profondément à la plénitude de la foi.",
+      es: "Este sitio web de apologética ofrece una exploración estructurada de los argumentos fundamentales de la Iglesia Católica. Aunque no es exhaustivo, se centra en temas esenciales relacionados con la autoridad, la historia y las Escrituras. Está diseñado para ayudar a los cristianos a examinar el caso histórico y teológico del catolicismo y reflexionar profundamente sobre la plenitud de la fe.",
+      de: "Diese Apologetik-Website bietet eine strukturierte Erkundung der grundlegenden Argumente für die katholische Kirche. Obwohl nicht erschöpfend, konzentriert sie sich auf wesentliche Themen wie Autorität, Geschichte und Heilige Schrift. Sie soll Christen dabei helfen, den historischen und theologischen Fall für den Katholizismus zu prüfen und tief über die Fülle des Glaubens nachzudenken.",
     },
     startJourney: {
       en: "Start the Journey",
@@ -671,1182 +668,1234 @@ export const translations = {
     },
   },
 
-
-// Existence of God Topic
-existenceOfGod: {
-  title: {
-    en: "The Existence of God: Rational Arguments for Belief",
-    fr: "L'Existence de Dieu : Arguments Rationnels pour la Croyance",
-    es: "La Existencia de Dios: Argumentos Racionales para la Creencia",
-    de: "Die Existenz Gottes: Rationale Argumente für den Glauben",
-  },
-  subtitle: {
-    en: "Rational foundations for belief in God based on philosophy and history.",
-    fr: "Fondements rationnels de la croyance en Dieu basés sur la philosophie et l'histoire.",
-    es: "Fundamentos racionales para la creencia en Dios basados en la filosofía y la historia.",
-    de: "Rationale Grundlagen für den Glauben an Gott basierend auf Philosophie und Geschichte.",
-  },
-  quote: {
-    en: "The existence of God can be proved in five ways.",
-    fr: "L'existence de Dieu peut être prouvée de cinq manières.",
-    es: "La existencia de Dios puede ser probada de cinco maneras.",
-    de: "Die Existenz Gottes kann auf fünf Wegen bewiesen werden.",
-  },
-  quoteSource: {
-    en: "St. Thomas Aquinas, Summa Theologiae I, q.2, a.3",
-    fr: "Saint Thomas d'Aquin, Somme Théologique I, q.2, a.3",
-    es: "Santo Tomás de Aquino, Summa Theologiae I, q.2, a.3",
-    de: "Hl. Thomas von Aquin, Summa Theologiae I, q.2, a.3",
-  },
-
-  // Argument Overview Titles
-  arg1Title: {
-    en: "Arguments from Cause",
-    fr: "Arguments de la Cause",
-    es: "Argumentos de la Causa",
-    de: "Argumente der Ursache",
-  },
-  arg1Subtitle: {
-    en: "From Motion, Efficient Cause, and Contingency (1st, 2nd, 3rd Way)",
-    fr: "Du Mouvement, de la Cause Efficiente et de la Contingence (1ère, 2e, 3e Voie)",
-    es: "Del Movimiento, Causa Eficiente y Contingencia (1ª, 2ª, 3ª Vía)",
-    de: "Aus Bewegung, Wirkursache und Kontingenz (1., 2., 3. Weg)",
-  },
-  arg2Title: {
-    en: "Argument from Perfection",
-    fr: "Argument de la Perfection",
-    es: "Argumento de la Perfección",
-    de: "Argument der Vollkommenheit",
-  },
-  arg2Subtitle: {
-    en: "From Degrees of Goodness and Reality (4th Way)",
-    fr: "Des Degrés de Bonté et de Réalité (4e Voie)",
-    es: "De los Grados de Bondad y Realidad (4ª Vía)",
-    de: "Aus Graden von Güte und Realität (4. Weg)",
-  },
-  arg3Title: {
-    en: "Argument from Purpose",
-    fr: "Argument de la Finalité",
-    es: "Argumento del Propósito",
-    de: "Argument des Zweckes",
-  },
-  arg3Subtitle: {
-    en: "From the Teleological Order of the Universe (5th Way)",
-    fr: "De l'Ordre Téléologique de l'Univers (5e Voie)",
-    es: "Del Orden Teleológico del Universo (5ª Vía)",
-    de: "Aus der teleologischen Ordnung des Universums (5. Weg)",
-  },
-  arg4Title: {
-    en: "Moral Argument",
-    fr: "Argument Moral",
-    es: "Argumento Moral",
-    de: "Moralisches Argument",
-  },
-  arg4Subtitle: {
-    en: "Objective Values",
-    fr: "Valeurs Objectives",
-    es: "Valores Objetivos",
-    de: "Objektive Werte",
-  },
-  arg5Title: {
-    en: "Resurrection Argument",
-    fr: "Argument de la Résurrection",
-    es: "Argumento de la Resurrección",
-    de: "Auferstehungsargument",
-  },
-  arg5Subtitle: {
-    en: "Historical Evidence",
-    fr: "Preuves Historiques",
-    es: "Evidencia Histórica",
-    de: "Historische Beweise",
-  },
-
-  // Introduction (UPDATED)
-  intro1: {
-    en: "The Catholic Church teaches that man can, by the natural light of human reason, know with certainty the one true God. The arguments from reason do not prove God's existence like a mathematical equation, but demonstrate that belief in God is the most rational and coherent explanation for the reality we observe. In this section, we will explore several of these rational foundations.",
-    fr: "L'Église Catholique enseigne que l'homme peut, par la lumière naturelle de la raison humaine, connaître avec certitude l'unique vrai Dieu. Les arguments de la raison ne prouvent pas l'existence de Dieu comme une équation mathématique, mais démontrent que la croyance en Dieu est l'explication la plus rationnelle et cohérente de la réalité que nous observons. Dans cette section, nous explorerons plusieurs de ces fondements rationnels.",
-    es: "La Iglesia Católica enseña que el hombre puede, por la luz natural de la razón humana, conocer con certeza al único Dios verdadero. Los argumentos de la razón no prueban la existencia de Dios como una ecuación matemática, sino que demuestran que la creencia en Dios es la explicación más racional y coherente para la realidad que observamos. En esta sección, exploraremos varios de estos fundamentos racionales.",
-    de: "Die katholische Kirche lehrt, dass der Mensch durch das natürliche Licht der menschlichen Vernunft mit Gewissheit den einen wahren Gott erkennen kann. Die Argumente der Vernunft beweisen die Existenz Gottes nicht wie eine mathematische Gleichung, sondern zeigen, dass der Glaube an Gott die rationalste und kohärenteste Erklärung für die Realität ist, die wir beobachten. In diesem Abschnitt werden wir mehrere dieser rationalen Grundlagen untersuchen.",
-  },
-  intro2: {
-    en: "We will begin with the 'Five Ways' (Quinque Viae) organized by St. Thomas Aquinas, which reason from effects in the world back to a First Cause, God. We will then examine two other powerful arguments: the <strong class='text-white'>Moral Argument</strong>, based on objective values, and the <strong class='text-white'>Resurrection Argument</strong>, based on historical evidence.",
-    fr: "Nous commencerons par les 'Cinq Voies' (Quinque Viae) organisées par Saint Thomas d'Aquin, qui raisonnent à partir des effets dans le monde pour remonter à une Première Cause, Dieu. Nous examinerons ensuite deux autres arguments puissants : l'<strong class='text-white'>Argument Moral</strong>, basé sur les valeurs objectives, et l'<strong class='text-white'>Argument de la Résurrection</strong>, basé sur les preuves historiques.",
-    es: "Comenzaremos con las 'Cinco Vías' (Quinque Viae) organizadas por Santo Tomás de Aquino, que razonan a partir de los efectos en el mundo hasta una Primera Causa, Dios. Luego examinaremos otros dos poderosos argumentos: el <strong class='text-white'>Argumento Moral</strong>, basado en valores objetivos, y el <strong class='text-white'>Argumento de la Resurrección</strong>, basado en evidencia histórica.",
-    de: "Wir beginnen mit den 'Fünf Wegen' (Quinque Viae), die vom Heiligen Thomas von Aquin geordnet wurden und von den Auswirkungen in der Welt auf eine Erste Ursache, Gott, zurückschließen. Anschließend werden wir zwei weitere starke Argumente untersuchen: das <strong class='text-white'>Moralische Argument</strong>, das auf objektiven Werten basiert, und das <strong class='text-white'>Auferstehungsargument</strong>, das auf historischen Beweisen basiert.",
-  },
-  intro3: {
-    en: "The introductory video below provides a detailed overview of the Five Ways of St. Thomas Aquinas.",
-    fr: "La vidéo d'introduction ci-dessous offre un aperçu détaillé des Cinq Voies de Saint Thomas d'Aquin.",
-    es: "El video introductorio a continuación ofrece una descripción detallada de las Cinco Vías de Santo Tomás de Aquino.",
-    de: "Das Einführungsvideo unten bietet einen detaillierten Überblick über die Fünf Wege des Heiligen Thomas von Aquin.",
-  },
-
-  fiveArgumentsHeading: {
-    en: "The Five Ways of St. Thomas Aquinas and Additional Proofs",
-    fr: "Les Cinq Voies de Saint Thomas d'Aquin et Preuves Supplémentaires",
-    es: "Las Cinco Vías de Santo Tomás de Aquino y Pruebas Adicionais",
-    de: "Die Fünf Wege des Hl. Thomas von Aquin und Zusätzliche Beweise",
-  },
-  
-  // --- ARGUMENT SECTIONS (St. Thomas Aquinas' Five Ways) ---
-  cause: {
-    heading: {
-      en: "Arguments from Cause (The 1st, 2nd, and 3rd Ways)",
-      fr: "Arguments de la Cause (Les 1ère, 2e et 3e Voies)",
-      es: "Argumentos de la Causa (La 1ª, 2ª y 3ª Vías)",
-      de: "Argumente der Ursache (Der 1., 2. und 3. Weg)",
+  // Existence of God Topic
+  existenceOfGod: {
+    title: {
+      en: "The Existence of God: Rational Arguments for Belief",
+      fr: "L'Existence de Dieu : Arguments Rationnels pour la Croyance",
+      es: "La Existencia de Dios: Argumentos Racionales para la Creencia",
+      de: "Die Existenz Gottes: Rationale Argumente für den Glauben",
     },
-    tagline: {
-      en: "The three ways that reason from the chain of becoming and being to a First Cause.",
-      fr: "Les trois voies qui raisonnent de la chaîne du devenir et de l'être à une Première Cause.",
-      es: "Las tres vías que razonan desde la cadena del devenir y del ser hasta una Primera Causa.",
-      de: "Die drei Wege, die von der Kette des Werdens und Seins auf eine Erste Ursache schließen.",
-    },
-    intro: {
-      en: "These three arguments observe the necessity of cause-and-effect in the world, that things change, are made, and come into and out of existence. They argue that the chains of cause cannot be infinitely traced backwards; they must terminate in an uncaused, first being, which is God.",
-      fr: "Ces trois arguments observent la nécessité de la cause à effet dans le monde, que les choses changent, sont produites et entrent et sortent de l'existence. Ils soutiennent que les chaînes de causes ne peuvent pas être remontées à l'infini ; elles doivent se terminer par un être premier, sans cause, qui est Dieu.",
-      es: "Estos tres argumentos observan la necesidad de causa y efecto en el mundo, que las cosas cambian, se hacen y entran y salen de la existencia. Argumentan que las cadenas de causa no pueden rastrearse infinitamente hacia atrás; deben terminar en un ser primero, incausado, que es Dios.",
-      de: "Diese drei Argumente beobachten die Notwendigkeit von Ursache und Wirkung in der Welt, dass sich Dinge verändern, hergestellt werden und ins Dasein treten und vergehen. Sie argumentieren, dass die Kausalketten nicht unendlich zurückverfolgt werden können; sie müssen in einem unverursachten, ersten Wesen enden, das Gott ist.",
-    },
-    quote1: {
-      en: "Now to take away the cause is to take away the effect. Therefore, if there be no first cause among efficient causes, there will be no ultimate, nor any intermediate cause.",
-      fr: "Or ôter la cause, c'est ôter l'effet. Par conséquent, s'il n'y a pas de première cause parmi les causes efficientes, il n'y aura ni cause dernière, ni cause intermédiaire.",
-      es: "Ahora bien, quitar la causa es quitar el efecto. Por lo tanto, si no hay una primera causa entre las causas eficientes, no habrá causa última ni ninguna causa intermedia.",
-      de: "Nun, die Ursache wegzunehmen bedeutet, die Wirkung wegzunehmen. Daher wird es, wenn es keine erste Ursache unter den Wirkursachen gibt, auch keine letzte noch irgendeine Zwischenursache geben.",
-    },
-    
-    way1: {
-      title: {
-        en: "The First Way: From Motion (or Change)",
-        fr: "La Première Voie : Du Mouvement (ou du Changement)",
-        es: "La Primera Vía: Del Movimiento (o Cambio)",
-        de: "Der Erste Weg: Aus der Bewegung (oder Veränderung)",
-      },
-      premise1: {
-        en: "Whatever is moved is moved by another (change is the reduction of potentiality to actuality).",
-        fr: "Tout ce qui est mû est mû par autre chose (le changement est la réduction de la potentialité à l'actualité).",
-        es: "Todo lo que es movido es movido por otro (el cambio es la reducción de la potentialité à la actualidad).",
-        de: "Alles, was bewegt wird, wird von einem anderen bewegt (Veränderung ist die Reduktion von Potentialität zu Aktualität).",
-      },
-      premise2: {
-        en: "This series of movers cannot regress infinitely; therefore, a First Unmoved Mover exists.",
-        fr: "Cette série de moteurs ne peut pas régresser à l'infini ; par conséquent, un Premier Moteur Immuable existe.",
-        es: "Esta serie de motores no puede retroceder infinitamente; por lo tanto, existe un Primer Motor Inmóvil.",
-        de: "Diese Reihe von Bewegern kann nicht unendlich zurückgehen; daher existiert ein Erster Unbewegter Beweger.",
-      },
-      conclusion: {
-        en: "Therefore, there must be a First Unmoved Mover, and this all men understand to be God.",
-        fr: "Par conséquent, il doit y avoir un Premier Moteur Immuable, et tous les hommes comprennent que c'est Dieu.",
-        es: "Por lo tanto, debe haber un Primer Motor Inmóvil, y todos los hombres entienden que este es Dios.",
-        de: "Daher muss es einen Ersten Unbewegten Beweger geben, und dies verstehen alle Menschen als Gott.",
-      },
-    },
-    way2: {
-      title: {
-        en: "The Second Way: From Efficient Causes",
-        fr: "La Deuxième Voie : Des Causes Efficientes",
-        es: "La Segunda Vía: De las Causas Eficientes",
-        de: "Der Zweite Weg: Aus den Wirkursachen",
-      },
-      premise1: {
-        en: "Every effect has an efficient (producing) cause, and nothing can be the cause of itself.",
-        fr: "Tout effet a une cause efficiente (productrice), et rien ne peut être la cause de soi-même.",
-        es: "Todo efecto tiene una causa eficiente (productora), y nada puede ser la causa de sí mismo.",
-        de: "Jede Wirkung hat eine Wirkursache (produzierende Ursache), und nichts kann die Ursache seiner selbst sein.",
-      },
-      premise2: {
-        en: "A hierarchical causal series cannot be infinite; there must be a First Efficient Cause.",
-        fr: "Une série causale hiérarchique ne peut pas être infinie ; il doit y avoir une Première Cause Efficiente.",
-        es: "Una serie causal jerárquica no puede ser infinita; debe haber una Primera Causa Eficiente.",
-        de: "Eine hierarchische Kausalkette kann nicht unendlich sein; es muss eine Erste Wirkursache geben.",
-      },
-      conclusion: {
-        en: "Therefore, it is necessary to admit a First Efficient Cause, to which everyone gives the name of God.",
-        fr: "Par conséquent, il est nécessaire d'admettre une Première Cause Efficiente, à laquelle tout le monde donne le nom de Dieu.",
-        es: "Por lo tanto, es necesario admitir una Primera Causa Eficiente, a la que todos dan el nombre de Dios.",
-        de: "Daher ist es notwendig, eine Erste Wirkursache anzuerkennen, der alle den Namen Gott geben.",
-      },
-    },
-    way3: {
-      title: {
-        en: "The Third Way: From Contingency and Necessity",
-        fr: "La Troisième Voie : De la Contingence et de la Nécessité",
-        es: "La Tercera Vía: De la Contingencia y la Necesidad",
-        de: "Der Dritte Weg: Aus Kontingenz und Notwendigkeit",
-      },
-      premise1: {
-        en: "Contingent beings (beings that can fail to exist) cannot explain themselves; they are existentially dependent.",
-        fr: "Les êtres contingents (les êtres qui peuvent ne pas exister) ne peuvent pas s'expliquer eux-mêmes ; ils sont existentiellement dépendants.",
-        es: "Los seres contingentes (seres que pueden no existir) no pueden explicarse a sí mismos; son existencialmente dependientes.",
-        de: "Kontingente Wesen (Wesen, die nicht existieren können) können sich nicht selbst erklären; sie sind existentiell abhängig.",
-      },
-      premise2: {
-        en: "If all things were merely contingent, then at some point nothing would have existed, and nothing would exist now.",
-        fr: "Si toutes les choses n'étaient que contingentes, alors à un moment donné rien n'aurait existé, et rien n'existerait maintenant.",
-        es: "Si todas las cosas fueran merementes contingentes, entonces en algún momento nada habría existido, y nada existiría ahora.",
-        de: "Wenn alle Dinge nur kontingent wären, dann hätte irgendwann nichts existiert, und nichts würde jetzt existieren.",
-      },
-      conclusion: {
-        en: "Therefore, there must exist a Necessary Being whose essence is existence, and this we call God.",
-        fr: "Par conséquent, il doit exister un Être Nécessaire dont l'essence est l'existence, et c'est ce que nous appelons Dieu.",
-        es: "Por lo tanto, debe existir un Ser Necesario cuya esencia es la existencia, y a este llamamos Dios.",
-        de: "Daher muss ein Notwendiges Wesen existieren, dessen Essenz die Existenz ist, und dies nennen wir Gott.",
-      },
-      uniqueNote: {
-        en: "This Way is unique because it argues not from change or causes, but from the reason things exist rather than not exist, leading directly to the divine attribute of necessary existence.",
-        fr: "Cette Voie est unique car elle ne raisonne pas à partir du changement ou des causes, mais à partir de la raison pour laquelle les choses existent plutôt que de ne pas exister, menant directement à l'attribut divin de l'existence nécessaire.",
-        es: "Esta Vía es única porque no argumenta a partir del cambio o las causas, sino de la razón por la cual las cosas existen en lugar de no existir, llevando directamente al atributo divino de la existencia necesaria.",
-        de: "Dieser Weg ist einzigartig, weil er nicht von Veränderung oder Ursachen argumentiert, sondern vom Grund, warum Dinge existieren anstatt nicht zu existieren, was direkt zum göttlichen Attribut der notwendigen Existenz führt.",
-      },
-    },
-  },
-
-  perfection: {
-    heading: {
-      en: "Argument from Perfection (The 4th Way)",
-      fr: "Argument de la Perfection (La 4e Voie)",
-      es: "Argumento de la Perfección (La 4ª Vía)",
-      de: "Argument der Vollkommenheit (Der 4. Weg)",
-    },
-    tagline: {
-      en: "The argument from the gradations of being and participation.",
-      fr: "L'argument des gradations de l'être et de la participation.",
-      es: "El argumento de las gradaciones del ser y la participación.",
-      de: "Das Argument aus den Abstufungen des Seins und der Teilhabe.",
-    },
-    intro: {
-      en: "This way, rooted in Platonic-Augustinian philosophy, argues from the objective observation that things in the world possess degrees of perfections, such as goodness, truth, and nobility, in greater or lesser measure.",
-      fr: "Cette voie, enracinée dans la philosophie platonicienne-augustinienne, argumente à partir de l'observation objective que les choses dans le monde possèdent des degrés de perfections, telles que la bonté, la vérité et la noblesse, dans une mesure plus ou moins grande.",
-      es: "Esta vía, enraizada en la filosofía platónico-agustiniana, argumenta a partir de la observación objetiva de que las cosas en el mundo poseen grados de perfecciones, tales como bondad, verdad y nobleza, en mayor o menor medida.",
-      de: "Dieser Weg, der in der platonisch-augustinischen Philosophie verwurzelt ist, argumentiert aus der objektiven Beobachtung, dass Dinge in der Welt Grade von Vollkommenheiten, wie Güte, Wahrheit und Adel, in größerem oder geringerem Maße besitzen.",
-    },
-    summaryLabel: {
-      en: "Summary of the Argument (The 4th Way):",
-      fr: "Résumé de l'Argument (La 4e Voie) :",
-      es: "Resumen del Argumento (La 4ª Vía):",
-      de: "Zusammenfassung des Arguments (Der 4. Weg):",
-    },
-    premise1: {
-      en: "We observe degrees of goodness, truth, and nobility in the world.",
-      fr: "Nous observons des degrés de bonté, de vérité et de noblesse dans le monde.",
-      es: "Observamos grados de bondad, verdad y nobleza en el mundo.",
-      de: "Wir beobachten Grade von Güte, Wahrheit und Adel in der Welt.",
-    },
-    premise2: {
-      en: "Degrees of perfection presuppose a maximum which is the cause of all perfection.",
-      fr: "Les degrés de perfection présupposent un maximum qui est la cause de toute perfection.",
-      es: "Los grados de perfección presuponen un máximo que es la causa de toda perfection.",
-      de: "Grade der Vollkommenheit setzen ein Maximum voraus, das die Ursache aller Vollkommenheit ist.",
-    },
-    conclusion: {
-      en: "Therefore, there must be a First Perfect Being which is the cause of all being, goodness, and every perfection, and this we call God.",
-      fr: "Par conséquent, il doit y avoir un Premier Être Parfait qui est la cause de tout être, de toute bonté et de toute perfection, et c'est ce que nous appelons Dieu.",
-      es: "Por lo tanto, debe haber un Primer Ser Perfecto que es la causa de todo ser, bondad y toda perfección, y a este llamamos Dios.",
-      de: "Daher muss es ein Erstes Vollkommenes Wesen geben, das die Ursache allen Seins, aller Güte und jeder Vollkommenheit ist, und dies nennen wir Gott.",
-    },
-    explanation: {
-      en: "The existence of imperfect instances of a quality (like a partially good action) implies the existence of a perfect, absolute standard against which these instances are measured. This maximum reality is God, the source of all perfection.",
-      fr: "L'existence d'instances imparfaites d'une qualité (comme une action partiellement bonne) implique l'existence d'un standard absolu et parfait par rapport auquel ces instances sont mesurées. Cette réalité maximale est Dieu, la source de toute perfection.",
-      es: "La existencia de instancias imperfectas de una cualidad (como una acción parcialmente buena) implica la existencia de un estándar perfecto y absoluto contra el cual se miden estas instancias. Esta realidad máxima es Dios, la fuente de toda perfección.",
-      de: "Die Existenz unvollkommener Instanzen einer Eigenschaft (wie einer teilweise guten Handlung) impliziert die Existenz eines perfekten, absoluten Standards, an dem diese Instanzen gemessen werden. Diese maximale Realität ist Gott, die Quelle aller Vollkommenheit.",
-    },
-  },
-  
-  purpose: {
-    heading: {
-      en: "Argument from Purpose (The 5th Way)",
-      fr: "Argument de la Finalité (La 5e Voie)",
-      es: "Argumento del Propósito (La 5ª Vía)",
-      de: "Argument des Zweckes (Der 5. Weg)",
-    },
-    tagline: {
-      en: "The argument from the order and governance of the world (Teleological Argument).",
-      fr: "L'argument de l'ordre et de la gouvernance du monde (Argument Téléologique).",
-      es: "El argumento del orden y la gobernanza del mundo (Argumento Teleológico).",
-      de: "Das Argument aus der Ordnung und Regierung der Welt (Teleologisches Argument).",
-    },
-    intro: {
-      en: "We observe that non-rational things act regularly and consistently for an end (a final cause). This regularity and directedness must presuppose an ordering intellect.",
-      fr: "Nous observons que les choses non rationnelles agissent régulièrement et constamment dans un but (une cause finale). Cette régularité et cette direction doivent présupposer un intellect ordonnateur.",
-      es: "Observamos que las cosas no racionales actúan regular y consistentemente para un fin (una causa final). Esta regularidad y direccionalidad deben presuponer un intelecto ordenador.",
-      de: "Wir beobachten, dass nicht-rationale Dinge regelmäßig und konsequent auf ein Ziel hin handeln (eine Endursache). Diese Regelmäßigkeit und Zielgerichtetheit muss einen ordnenden Intellekt voraussetzen.",
-    },
-    summaryLabel: {
-      en: "Summary of the Argument (The 5th Way):",
-      fr: "Résumé de l'Argument (La 5e Voie) :",
-      es: "Resumen del Argumento (La 5ª Vía):",
-      de: "Zusammenfassung des Arguments (Der 5. Weg):",
-    },
-    premise1: {
-      en: "We see things that lack intelligence (e.g., natural bodies) act for an end.",
-      fr: "Nous voyons des choses qui manquent d'intelligence (par exemple, des corps naturels) agir pour une fin.",
-      es: "Vemos que las cosas que carecen de inteligencia (por ejemplo, cuerpos naturales) actúan para un fin.",
-      de: "Wir sehen, dass Dinge, denen Intelligenz fehlt (z.B. natürliche Körper), auf ein Ziel hin handeln.",
-    },
-    premise2: {
-      en: "Whatever acts for an end must be directed by some being endowed with knowledge and intelligence (like an arrow by an archer).",
-      fr: "Tout ce qui agit pour une fin doit être dirigé par un être doué de connaissance et d'intelligence (comme une flèche par un archer).",
-      es: "Todo lo que actúa para un fin debe ser dirigido por algún ser dotado de conocimiento e inteligencia (como una flecha por un arquero).",
-      de: "Alles, was auf ein Ziel hin handelt, muss von einem Wesen geleitet werden, das mit Wissen und Intelligenz ausgestattet ist (wie ein Pfeil von einem Bogenschützen).",
-    },
-    conclusion: {
-      en: "Therefore, there must be an Intelligent Governor who directs all natural things to their end; and this being we call God.",
-      fr: "Par conséquent, il doit y avoir un Gouverneur Intelligent qui dirige toutes les choses naturelles vers leur fin ; et c'est cet être que nous appelons Dieu.",
-      es: "Por lo tanto, debe haber un Gobernador Inteligente que dirija todas las cosas naturales a su fin; y a este ser llamamos Dios.",
-      de: "Daher muss es einen Intelligenten Regierer geben, der alle natürlichen Dinge auf ihr Ziel hin lenkt; und dieses Wesen nennen wir Gott.",
-    },
-    explanation: {
-      en: "This is the only Way grounded entirely in final causality, or <em>telos</em> (end/purpose). The intricate, ordered governance of the world, from cosmology to biology, points to an intelligent designer who guides all things to their proper ends.",
-      fr: "C'est la seule Voie entièrement fondée sur la causalité finale, ou <em>telos</em> (fin/but). La gouvernance complexe et ordonnée du monde, de la cosmologie à la biologie, pointe vers un concepteur intelligent qui guide toutes les choses vers leurs fins appropriées.",
-      es: "Esta es la única Vía fundamentada completamente en la causalidad final, o <em>telos</em> (fin/propósito). La intrincada y ordenada gobernanza del mundo, desde la cosmología hasta la biología, apunta a un diseñador inteligente que guía todas las cosas hacia sus fines apropiados.",
-      de: "Dies ist der einzige Weg, der vollständig in der Endursache, oder <em>Telos</em> (Ziel/Zweck), begründet ist. Die komplizierte, geordnete Regierung der Welt, von der Kosmologie bis zur Biologie, deutet auf einen intelligenten Designer hin, der alle Dinge zu ihren richtigen Zielen führt.",
+    subtitle: {
+      en: "Rational foundations for belief in God based on philosophy and history.",
+      fr: "Fondements rationnels de la croyance en Dieu basés sur la philosophie et l'histoire.",
+      es: "Fundamentos racionales para la creencia en Dios basados en la filosofía y la historia.",
+      de: "Rationale Grundlagen für den Glauben an Gott basierend auf Philosophie und Geschichte.",
     },
     quote: {
-      en: "Therefore some intelligent being exists by whom all natural things are directed to their end; and this being we call God.",
-      fr: "Par conséquent, il existe un être intelligent par lequel toutes les choses naturelles sont dirigées vers leur fin ; et cet être, nous l'appelons Dieu.",
-      es: "Por lo tanto, existe algún ser inteligente por quien todas las cosas naturales son dirigidas a su fin; y a este ser llamamos Dios.",
-      de: "Daher existiert irgendein intelligentes Wesen, durch das alle natürlichen Dinge auf ihr Ziel hin gelenkt werden; und dieses Wesen nennen wir Gott.",
+      en: "The existence of God can be proved in five ways.",
+      fr: "L'existence de Dieu peut être prouvée de cinq manières.",
+      es: "La existencia de Dios puede ser probada de cinco maneras.",
+      de: "Die Existenz Gottes kann auf fünf Wegen bewiesen werden.",
     },
-  },
+    quoteSource: {
+      en: "St. Thomas Aquinas, Summa Theologiae I, q.2, a.3",
+      fr: "Saint Thomas d'Aquin, Somme Théologique I, q.2, a.3",
+      es: "Santo Tomás de Aquino, Summa Theologiae I, q.2, a.3",
+      de: "Hl. Thomas von Aquin, Summa Theologiae I, q.2, a.3",
+    },
 
-  // Argument 4: Moral
-  moral: {
-    heading: {
-      en: "The Moral Argument",
-      fr: "L'Argument Moral",
-      es: "El Argumento Moral",
-      de: "Das Moralische Argument",
+    // Argument Overview Titles
+    arg1Title: {
+      en: "Arguments from Cause",
+      fr: "Arguments de la Cause",
+      es: "Argumentos de la Causa",
+      de: "Argumente der Ursache",
     },
-    tagline: {
-      en: "Objective morality requires a moral lawgiver",
-      fr: "La moralité objective nécessite un législateur moral",
-      es: "La moralidad objetiva requiere un legislador moral",
-      de: "Objektive Moral erfordert einen moralischen Gesetzgeber",
+    arg1Subtitle: {
+      en: "From Motion, Efficient Cause, and Contingency (1st, 2nd, 3rd Way)",
+      fr: "Du Mouvement, de la Cause Efficiente et de la Contingence (1ère, 2e, 3e Voie)",
+      es: "Del Movimiento, Causa Eficiente y Contingencia (1ª, 2ª, 3ª Vía)",
+      de: "Aus Bewegung, Wirkursache und Kontingenz (1., 2., 3. Weg)",
     },
-    intro: {
-    en: "Beyond the Five Ways of Aquinas, which argue from the observation of the cosmos, the Moral Argument reasons from the inner reality of our own conscience. It posits that the existence of objective moral values, the universal sense that some things are truly right and others are truly wrong, is strong evidence for the existence of God.",
-    fr: "Au-delà des Cinq Voies d'Aquin, qui partent de l'observation du cosmos, l'Argument Moral raisonne à partir de la réalité intérieure de notre propre conscience. Il postule que l'existence de valeurs morales objectives, le sens universel que certaines choses sont vraiment justes et d'autres vraiment mauvaises, est une preuve solide de l'existence de Dieu.",
-    es: "Más allá de las Cinco Vías de Aquino, que argumentan desde la observación del cosmos, el Argumento Moral razona desde la realidad interna de nuestra propia conciencia. Postula que la existencia de valores morales objetivos, el sentido universal de que algunas cosas son verdaderamente correctas y otras verdaderamente incorrectas, es una fuerte evidencia de la existencia de Dios.",
-    de: "Über die Fünf Wege von Aquin hinaus, die von der Beobachtung des Kosmos ausgehen, argumentiert das Moralische Argument aus der inneren Realität unseres eigenen Gewissens. Es postuliert, dass die Existenz objektiver moralischer Werte, das universelle Gefühl, dass einige Dinge wirklich richtig und andere wirklich falsch sind, ein starker Beweis für die Existenz Gottes ist.",
-  },
-    summaryLabel: {
-      en: "Summary of the Argument:",
-      fr: "Résumé de l'Argument :",
-      es: "Resumen del Argumento:",
-      de: "Argumentzusammenfassung:",
+    arg2Title: {
+      en: "Argument from Perfection",
+      fr: "Argument de la Perfection",
+      es: "Argumento de la Perfección",
+      de: "Argument der Vollkommenheit",
     },
-    premise1: {
-      en: "If God does not exist, objective moral values and duties do not exist.",
-      fr: "Si Dieu n'existe pas, les valeurs et devoirs moraux objectifs n'existent pas.",
-      es: "Si Dios no existe, los valores y deberes morales objetivos no existen.",
-      de: "Wenn Gott nicht existiert, existieren keine objektiven moralischen Werte und Pflichten.",
+    arg2Subtitle: {
+      en: "From Degrees of Goodness and Reality (4th Way)",
+      fr: "Des Degrés de Bonté et de Réalité (4e Voie)",
+      es: "De los Grados de Bondad y Realidad (4ª Vía)",
+      de: "Aus Graden von Güte und Realität (4. Weg)",
     },
-    premise2: {
-      en: "Objective moral values and duties do exist.",
-      fr: "Les valeurs et devoirs moraux objectifs existent.",
-      es: "Los valores y deberes morales objectifs existent.",
-      de: "Objektive moralische Werte und Pflichten existieren.",
+    arg3Title: {
+      en: "Argument from Purpose",
+      fr: "Argument de la Finalité",
+      es: "Argumento del Propósito",
+      de: "Argument des Zweckes",
     },
+    arg3Subtitle: {
+      en: "From the Teleological Order of the Universe (5th Way)",
+      fr: "De l'Ordre Téléologique de l'Univers (5e Voie)",
+      es: "Del Orden Teleológico del Universo (5ª Vía)",
+      de: "Aus der teleologischen Ordnung des Universums (5. Weg)",
+    },
+    arg4Title: {
+      en: "Moral Argument",
+      fr: "Argument Moral",
+      es: "Argumento Moral",
+      de: "Moralisches Argument",
+    },
+    arg4Subtitle: {
+      en: "Objective Values",
+      fr: "Valeurs Objectives",
+      es: "Valores Objetivos",
+      de: "Objektive Werte",
+    },
+    arg5Title: {
+      en: "Resurrection Argument",
+      fr: "Argument de la Résurrection",
+      es: "Argumento de la Resurrección",
+      de: "Auferstehungsargument",
+    },
+    arg5Subtitle: {
+      en: "Historical Evidence",
+      fr: "Preuves Historiques",
+      es: "Evidencia Histórica",
+      de: "Historische Beweise",
+    },
+
+    // Introduction (UPDATED)
+    intro1: {
+      en: "The Catholic Church teaches that man can, by the natural light of human reason, know with certainty the one true God. The arguments from reason do not prove God's existence like a mathematical equation, but demonstrate that belief in God is the most rational and coherent explanation for the reality we observe. In this section, we will explore several of these rational foundations.",
+      fr: "L'Église Catholique enseigne que l'homme peut, par la lumière naturelle de la raison humaine, connaître avec certitude l'unique vrai Dieu. Les arguments de la raison ne prouvent pas l'existence de Dieu comme une équation mathématique, mais démontrent que la croyance en Dieu est l'explication la plus rationnelle et cohérente de la réalité que nous observons. Dans cette section, nous explorerons plusieurs de ces fondements rationnels.",
+      es: "La Iglesia Católica enseña que el hombre puede, por la luz natural de la razón humana, conocer con certeza al único Dios verdadero. Los argumentos de la razón no prueban la existencia de Dios como una ecuación matemática, sino que demuestran que la creencia en Dios es la explicación más racional y coherente para la realidad que observamos. En esta sección, exploraremos varios de estos fundamentos racionales.",
+      de: "Die katholische Kirche lehrt, dass der Mensch durch das natürliche Licht der menschlichen Vernunft mit Gewissheit den einen wahren Gott erkennen kann. Die Argumente der Vernunft beweisen die Existenz Gottes nicht wie eine mathematische Gleichung, sondern zeigen, dass der Glaube an Gott die rationalste und kohärenteste Erklärung für die Realität ist, die wir beobachten. In diesem Abschnitt werden wir mehrere dieser rationalen Grundlagen untersuchen.",
+    },
+    intro2: {
+      en: "We will begin with the 'Five Ways' (Quinque Viae) organized by St. Thomas Aquinas, which reason from effects in the world back to a First Cause, God. We will then examine two other powerful arguments: the <strong class='text-white'>Moral Argument</strong>, based on objective values, and the <strong class='text-white'>Resurrection Argument</strong>, based on historical evidence.",
+      fr: "Nous commencerons par les 'Cinq Voies' (Quinque Viae) organisées par Saint Thomas d'Aquin, qui raisonnent à partir des effets dans le monde pour remonter à une Première Cause, Dieu. Nous examinerons ensuite deux autres arguments puissants : l'<strong class='text-white'>Argument Moral</strong>, basé sur les valeurs objectives, et l'<strong class='text-white'>Argument de la Résurrection</strong>, basé sur les preuves historiques.",
+      es: "Comenzaremos con las 'Cinco Vías' (Quinque Viae) organizadas por Santo Tomás de Aquino, que razonan a partir de los efectos en el mundo hasta una Primera Causa, Dios. Luego examinaremos otros dos poderosos argumentos: el <strong class='text-white'>Argumento Moral</strong>, basado en valores objetivos, y el <strong class='text-white'>Argumento de la Resurrección</strong>, basado en evidencia histórica.",
+      de: "Wir beginnen mit den 'Fünf Wegen' (Quinque Viae), die vom Heiligen Thomas von Aquin geordnet wurden und von den Auswirkungen in der Welt auf eine Erste Ursache, Gott, zurückschließen. Anschließend werden wir zwei weitere starke Argumente untersuchen: das <strong class='text-white'>Moralische Argument</strong>, das auf objektiven Werten basiert, und das <strong class='text-white'>Auferstehungsargument</strong>, das auf historischen Beweisen basiert.",
+    },
+    intro3: {
+      en: "The introductory video below provides a detailed overview of the Five Ways of St. Thomas Aquinas.",
+      fr: "La vidéo d'introduction ci-dessous offre un aperçu détaillé des Cinq Voies de Saint Thomas d'Aquin.",
+      es: "El video introductorio a continuación ofrece una descripción detallada de las Cinco Vías de Santo Tomás de Aquino.",
+      de: "Das Einführungsvideo unten bietet einen detaillierten Überblick über die Fünf Wege des Heiligen Thomas von Aquin.",
+    },
+
+    fiveArgumentsHeading: {
+      en: "The Five Ways of St. Thomas Aquinas and Additional Proofs",
+      fr: "Les Cinq Voies de Saint Thomas d'Aquin et Preuves Supplémentaires",
+      es: "Las Cinco Vías de Santo Tomás de Aquino y Pruebas Adicionais",
+      de: "Die Fünf Wege des Hl. Thomas von Aquin und Zusätzliche Beweise",
+    },
+
+    // --- ARGUMENT SECTIONS (St. Thomas Aquinas' Five Ways) ---
+    cause: {
+      heading: {
+        en: "Arguments from Cause (The 1st, 2nd, and 3rd Ways)",
+        fr: "Arguments de la Cause (Les 1ère, 2e et 3e Voies)",
+        es: "Argumentos de la Causa (La 1ª, 2ª y 3ª Vías)",
+        de: "Argumente der Ursache (Der 1., 2. und 3. Weg)",
+      },
+      tagline: {
+        en: "The three ways that reason from the chain of becoming and being to a First Cause.",
+        fr: "Les trois voies qui raisonnent de la chaîne du devenir et de l'être à une Première Cause.",
+        es: "Las tres vías que razonan desde la cadena del devenir y del ser hasta una Primera Causa.",
+        de: "Die drei Wege, die von der Kette des Werdens und Seins auf eine Erste Ursache schließen.",
+      },
+      intro: {
+        en: "These three arguments observe the necessity of cause-and-effect in the world, that things change, are made, and come into and out of existence. They argue that the chains of cause cannot be infinitely traced backwards; they must terminate in an uncaused, first being, which is God.",
+        fr: "Ces trois arguments observent la nécessité de la cause à effet dans le monde, que les choses changent, sont produites et entrent et sortent de l'existence. Ils soutiennent que les chaînes de causes ne peuvent pas être remontées à l'infini ; elles doivent se terminer par un être premier, sans cause, qui est Dieu.",
+        es: "Estos tres argumentos observan la necesidad de causa y efecto en el mundo, que las cosas cambian, se hacen y entran y salen de la existencia. Argumentan que las cadenas de causa no pueden rastrearse infinitamente hacia atrás; deben terminar en un ser primero, incausado, que es Dios.",
+        de: "Diese drei Argumente beobachten die Notwendigkeit von Ursache und Wirkung in der Welt, dass sich Dinge verändern, hergestellt werden und ins Dasein treten und vergehen. Sie argumentieren, dass die Kausalketten nicht unendlich zurückverfolgt werden können; sie müssen in einem unverursachten, ersten Wesen enden, das Gott ist.",
+      },
+      quote1: {
+        en: "Now to take away the cause is to take away the effect. Therefore, if there be no first cause among efficient causes, there will be no ultimate, nor any intermediate cause.",
+        fr: "Or ôter la cause, c'est ôter l'effet. Par conséquent, s'il n'y a pas de première cause parmi les causes efficientes, il n'y aura ni cause dernière, ni cause intermédiaire.",
+        es: "Ahora bien, quitar la causa es quitar el efecto. Por lo tanto, si no hay una primera causa entre las causas eficientes, no habrá causa última ni ninguna causa intermedia.",
+        de: "Nun, die Ursache wegzunehmen bedeutet, die Wirkung wegzunehmen. Daher wird es, wenn es keine erste Ursache unter den Wirkursachen gibt, auch keine letzte noch irgendeine Zwischenursache geben.",
+      },
+
+      way1: {
+        title: {
+          en: "The First Way: From Motion (or Change)",
+          fr: "La Première Voie : Du Mouvement (ou du Changement)",
+          es: "La Primera Vía: Del Movimiento (o Cambio)",
+          de: "Der Erste Weg: Aus der Bewegung (oder Veränderung)",
+        },
+        premise1: {
+          en: "Whatever is moved is moved by another (change is the reduction of potentiality to actuality).",
+          fr: "Tout ce qui est mû est mû par autre chose (le changement est la réduction de la potentialité à l'actualité).",
+          es: "Todo lo que es movido es movido por otro (el cambio es la reducción de la potentialité à la actualidad).",
+          de: "Alles, was bewegt wird, wird von einem anderen bewegt (Veränderung ist die Reduktion von Potentialität zu Aktualität).",
+        },
+        premise2: {
+          en: "This series of movers cannot regress infinitely; therefore, a First Unmoved Mover exists.",
+          fr: "Cette série de moteurs ne peut pas régresser à l'infini ; par conséquent, un Premier Moteur Immuable existe.",
+          es: "Esta serie de motores no puede retroceder infinitamente; por lo tanto, existe un Primer Motor Inmóvil.",
+          de: "Diese Reihe von Bewegern kann nicht unendlich zurückgehen; daher existiert ein Erster Unbewegter Beweger.",
+        },
+        conclusion: {
+          en: "Therefore, there must be a First Unmoved Mover, and this all men understand to be God.",
+          fr: "Par conséquent, il doit y avoir un Premier Moteur Immuable, et tous les hommes comprennent que c'est Dieu.",
+          es: "Por lo tanto, debe haber un Primer Motor Inmóvil, y todos los hombres entienden que este es Dios.",
+          de: "Daher muss es einen Ersten Unbewegten Beweger geben, und dies verstehen alle Menschen als Gott.",
+        },
+      },
+      way2: {
+        title: {
+          en: "The Second Way: From Efficient Causes",
+          fr: "La Deuxième Voie : Des Causes Efficientes",
+          es: "La Segunda Vía: De las Causas Eficientes",
+          de: "Der Zweite Weg: Aus den Wirkursachen",
+        },
+        premise1: {
+          en: "Every effect has an efficient (producing) cause, and nothing can be the cause of itself.",
+          fr: "Tout effet a une cause efficiente (productrice), et rien ne peut être la cause de soi-même.",
+          es: "Todo efecto tiene una causa eficiente (productora), y nada puede ser la causa de sí mismo.",
+          de: "Jede Wirkung hat eine Wirkursache (produzierende Ursache), und nichts kann die Ursache seiner selbst sein.",
+        },
+        premise2: {
+          en: "A hierarchical causal series cannot be infinite; there must be a First Efficient Cause.",
+          fr: "Une série causale hiérarchique ne peut pas être infinie ; il doit y avoir une Première Cause Efficiente.",
+          es: "Una serie causal jerárquica no puede ser infinita; debe haber una Primera Causa Eficiente.",
+          de: "Eine hierarchische Kausalkette kann nicht unendlich sein; es muss eine Erste Wirkursache geben.",
+        },
+        conclusion: {
+          en: "Therefore, it is necessary to admit a First Efficient Cause, to which everyone gives the name of God.",
+          fr: "Par conséquent, il est nécessaire d'admettre une Première Cause Efficiente, à laquelle tout le monde donne le nom de Dieu.",
+          es: "Por lo tanto, es necesario admitir una Primera Causa Eficiente, a la que todos dan el nombre de Dios.",
+          de: "Daher ist es notwendig, eine Erste Wirkursache anzuerkennen, der alle den Namen Gott geben.",
+        },
+      },
+      way3: {
+        title: {
+          en: "The Third Way: From Contingency and Necessity",
+          fr: "La Troisième Voie : De la Contingence et de la Nécessité",
+          es: "La Tercera Vía: De la Contingencia y la Necesidad",
+          de: "Der Dritte Weg: Aus Kontingenz und Notwendigkeit",
+        },
+        premise1: {
+          en: "Contingent beings (beings that can fail to exist) cannot explain themselves; they are existentially dependent.",
+          fr: "Les êtres contingents (les êtres qui peuvent ne pas exister) ne peuvent pas s'expliquer eux-mêmes ; ils sont existentiellement dépendants.",
+          es: "Los seres contingentes (seres que pueden no existir) no pueden explicarse a sí mismos; son existencialmente dependientes.",
+          de: "Kontingente Wesen (Wesen, die nicht existieren können) können sich nicht selbst erklären; sie sind existentiell abhängig.",
+        },
+        premise2: {
+          en: "If all things were merely contingent, then at some point nothing would have existed, and nothing would exist now.",
+          fr: "Si toutes les choses n'étaient que contingentes, alors à un moment donné rien n'aurait existé, et rien n'existerait maintenant.",
+          es: "Si todas las cosas fueran merementes contingentes, entonces en algún momento nada habría existido, y nada existiría ahora.",
+          de: "Wenn alle Dinge nur kontingent wären, dann hätte irgendwann nichts existiert, und nichts würde jetzt existieren.",
+        },
+        conclusion: {
+          en: "Therefore, there must exist a Necessary Being whose essence is existence, and this we call God.",
+          fr: "Par conséquent, il doit exister un Être Nécessaire dont l'essence est l'existence, et c'est ce que nous appelons Dieu.",
+          es: "Por lo tanto, debe existir un Ser Necesario cuya esencia es la existencia, y a este llamamos Dios.",
+          de: "Daher muss ein Notwendiges Wesen existieren, dessen Essenz die Existenz ist, und dies nennen wir Gott.",
+        },
+        uniqueNote: {
+          en: "This Way is unique because it argues not from change or causes, but from the reason things exist rather than not exist, leading directly to the divine attribute of necessary existence.",
+          fr: "Cette Voie est unique car elle ne raisonne pas à partir du changement ou des causes, mais à partir de la raison pour laquelle les choses existent plutôt que de ne pas exister, menant directement à l'attribut divin de l'existence nécessaire.",
+          es: "Esta Vía es única porque no argumenta a partir del cambio o las causas, sino de la razón por la cual las cosas existen en lugar de no existir, llevando directamente al atributo divino de la existencia necesaria.",
+          de: "Dieser Weg ist einzigartig, weil er nicht von Veränderung oder Ursachen argumentiert, sondern vom Grund, warum Dinge existieren anstatt nicht zu existieren, was direkt zum göttlichen Attribut der notwendigen Existenz führt.",
+        },
+      },
+    },
+
+    perfection: {
+      heading: {
+        en: "Argument from Perfection (The 4th Way)",
+        fr: "Argument de la Perfection (La 4e Voie)",
+        es: "Argumento de la Perfección (La 4ª Vía)",
+        de: "Argument der Vollkommenheit (Der 4. Weg)",
+      },
+      tagline: {
+        en: "The argument from the gradations of being and participation.",
+        fr: "L'argument des gradations de l'être et de la participation.",
+        es: "El argumento de las gradaciones del ser y la participación.",
+        de: "Das Argument aus den Abstufungen des Seins und der Teilhabe.",
+      },
+      intro: {
+        en: "This way, rooted in Platonic-Augustinian philosophy, argues from the objective observation that things in the world possess degrees of perfections, such as goodness, truth, and nobility, in greater or lesser measure.",
+        fr: "Cette voie, enracinée dans la philosophie platonicienne-augustinienne, argumente à partir de l'observation objective que les choses dans le monde possèdent des degrés de perfections, telles que la bonté, la vérité et la noblesse, dans une mesure plus ou moins grande.",
+        es: "Esta vía, enraizada en la filosofía platónico-agustiniana, argumenta a partir de la observación objetiva de que las cosas en el mundo poseen grados de perfecciones, tales como bondad, verdad y nobleza, en mayor o menor medida.",
+        de: "Dieser Weg, der in der platonisch-augustinischen Philosophie verwurzelt ist, argumentiert aus der objektiven Beobachtung, dass Dinge in der Welt Grade von Vollkommenheiten, wie Güte, Wahrheit und Adel, in größerem oder geringerem Maße besitzen.",
+      },
+      summaryLabel: {
+        en: "Summary of the Argument (The 4th Way):",
+        fr: "Résumé de l'Argument (La 4e Voie) :",
+        es: "Resumen del Argumento (La 4ª Vía):",
+        de: "Zusammenfassung des Arguments (Der 4. Weg):",
+      },
+      premise1: {
+        en: "We observe degrees of goodness, truth, and nobility in the world.",
+        fr: "Nous observons des degrés de bonté, de vérité et de noblesse dans le monde.",
+        es: "Observamos grados de bondad, verdad y nobleza en el mundo.",
+        de: "Wir beobachten Grade von Güte, Wahrheit und Adel in der Welt.",
+      },
+      premise2: {
+        en: "Degrees of perfection presuppose a maximum which is the cause of all perfection.",
+        fr: "Les degrés de perfection présupposent un maximum qui est la cause de toute perfection.",
+        es: "Los grados de perfección presuponen un máximo que es la causa de toda perfection.",
+        de: "Grade der Vollkommenheit setzen ein Maximum voraus, das die Ursache aller Vollkommenheit ist.",
+      },
+      conclusion: {
+        en: "Therefore, there must be a First Perfect Being which is the cause of all being, goodness, and every perfection, and this we call God.",
+        fr: "Par conséquent, il doit y avoir un Premier Être Parfait qui est la cause de tout être, de toute bonté et de toute perfection, et c'est ce que nous appelons Dieu.",
+        es: "Por lo tanto, debe haber un Primer Ser Perfecto que es la causa de todo ser, bondad y toda perfección, y a este llamamos Dios.",
+        de: "Daher muss es ein Erstes Vollkommenes Wesen geben, das die Ursache allen Seins, aller Güte und jeder Vollkommenheit ist, und dies nennen wir Gott.",
+      },
+      explanation: {
+        en: "The existence of imperfect instances of a quality (like a partially good action) implies the existence of a perfect, absolute standard against which these instances are measured. This maximum reality is God, the source of all perfection.",
+        fr: "L'existence d'instances imparfaites d'une qualité (comme une action partiellement bonne) implique l'existence d'un standard absolu et parfait par rapport auquel ces instances sont mesurées. Cette réalité maximale est Dieu, la source de toute perfection.",
+        es: "La existencia de instancias imperfectas de una cualidad (como una acción parcialmente buena) implica la existencia de un estándar perfecto y absoluto contra el cual se miden estas instancias. Esta realidad máxima es Dios, la fuente de toda perfección.",
+        de: "Die Existenz unvollkommener Instanzen einer Eigenschaft (wie einer teilweise guten Handlung) impliziert die Existenz eines perfekten, absoluten Standards, an dem diese Instanzen gemessen werden. Diese maximale Realität ist Gott, die Quelle aller Vollkommenheit.",
+      },
+    },
+
+    purpose: {
+      heading: {
+        en: "Argument from Purpose (The 5th Way)",
+        fr: "Argument de la Finalité (La 5e Voie)",
+        es: "Argumento del Propósito (La 5ª Vía)",
+        de: "Argument des Zweckes (Der 5. Weg)",
+      },
+      tagline: {
+        en: "The argument from the order and governance of the world (Teleological Argument).",
+        fr: "L'argument de l'ordre et de la gouvernance du monde (Argument Téléologique).",
+        es: "El argumento del orden y la gobernanza del mundo (Argumento Teleológico).",
+        de: "Das Argument aus der Ordnung und Regierung der Welt (Teleologisches Argument).",
+      },
+      intro: {
+        en: "We observe that non-rational things act regularly and consistently for an end (a final cause). This regularity and directedness must presuppose an ordering intellect.",
+        fr: "Nous observons que les choses non rationnelles agissent régulièrement et constamment dans un but (une cause finale). Cette régularité et cette direction doivent présupposer un intellect ordonnateur.",
+        es: "Observamos que las cosas no racionales actúan regular y consistentemente para un fin (una causa final). Esta regularidad y direccionalidad deben presuponer un intelecto ordenador.",
+        de: "Wir beobachten, dass nicht-rationale Dinge regelmäßig und konsequent auf ein Ziel hin handeln (eine Endursache). Diese Regelmäßigkeit und Zielgerichtetheit muss einen ordnenden Intellekt voraussetzen.",
+      },
+      summaryLabel: {
+        en: "Summary of the Argument (The 5th Way):",
+        fr: "Résumé de l'Argument (La 5e Voie) :",
+        es: "Resumen del Argumento (La 5ª Vía):",
+        de: "Zusammenfassung des Arguments (Der 5. Weg):",
+      },
+      premise1: {
+        en: "We see things that lack intelligence (e.g., natural bodies) act for an end.",
+        fr: "Nous voyons des choses qui manquent d'intelligence (par exemple, des corps naturels) agir pour une fin.",
+        es: "Vemos que las cosas que carecen de inteligencia (por ejemplo, cuerpos naturales) actúan para un fin.",
+        de: "Wir sehen, dass Dinge, denen Intelligenz fehlt (z.B. natürliche Körper), auf ein Ziel hin handeln.",
+      },
+      premise2: {
+        en: "Whatever acts for an end must be directed by some being endowed with knowledge and intelligence (like an arrow by an archer).",
+        fr: "Tout ce qui agit pour une fin doit être dirigé par un être doué de connaissance et d'intelligence (comme une flèche par un archer).",
+        es: "Todo lo que actúa para un fin debe ser dirigido por algún ser dotado de conocimiento e inteligencia (como una flecha por un arquero).",
+        de: "Alles, was auf ein Ziel hin handelt, muss von einem Wesen geleitet werden, das mit Wissen und Intelligenz ausgestattet ist (wie ein Pfeil von einem Bogenschützen).",
+      },
+      conclusion: {
+        en: "Therefore, there must be an Intelligent Governor who directs all natural things to their end; and this being we call God.",
+        fr: "Par conséquent, il doit y avoir un Gouverneur Intelligent qui dirige toutes les choses naturelles vers leur fin ; et c'est cet être que nous appelons Dieu.",
+        es: "Por lo tanto, debe haber un Gobernador Inteligente que dirija todas las cosas naturales a su fin; y a este ser llamamos Dios.",
+        de: "Daher muss es einen Intelligenten Regierer geben, der alle natürlichen Dinge auf ihr Ziel hin lenkt; und dieses Wesen nennen wir Gott.",
+      },
+      explanation: {
+        en: "This is the only Way grounded entirely in final causality, or telos (end/purpose). The intricate, ordered governance of the world, from cosmology to biology, points to an intelligent designer who guides all things to their proper ends.",
+        fr: "C'est la seule Voie entièrement fondée sur la causalité finale, ou telos (fin/but). La gouvernance complexe et ordonnée du monde, de la cosmologie à la biologie, pointe vers un concepteur intelligent qui guide toutes les choses vers leurs fins appropriées.",
+        es: "Esta es la única Vía fundamentada completamente en la causalidad final, o telos (fin/propósito). La intrincada y ordenada gobernanza del mundo, desde la cosmología hasta la biología, apunta a un diseñador inteligente que guía todas las cosas hacia sus fines apropiados.",
+        de: "Dies ist der einzige Weg, der vollständig in der Endursache, oder Telos (Ziel/Zweck), begründet ist. Die komplizierte, geordnete Regierung der Welt, von der Kosmologie bis zur Biologie, deutet auf einen intelligenten Designer hin, der alle Dinge zu ihren richtigen Zielen führt.",
+      },
+      quote: {
+        en: "Therefore some intelligent being exists by whom all natural things are directed to their end; and this being we call God.",
+        fr: "Par conséquent, il existe un être intelligent par lequel toutes les choses naturelles sont dirigées vers leur fin ; et cet être, nous l'appelons Dieu.",
+        es: "Por lo tanto, existe algún ser inteligente por quien todas las cosas naturales son dirigidas a su fin; y a este ser llamamos Dios.",
+        de: "Daher existiert irgendein intelligentes Wesen, durch das alle natürlichen Dinge auf ihr Ziel hin gelenkt werden; und dieses Wesen nennen wir Gott.",
+      },
+    },
+
+    // Argument 4: Moral
+    moral: {
+      heading: {
+        en: "The Moral Argument",
+        fr: "L'Argument Moral",
+        es: "El Argumento Moral",
+        de: "Das Moralische Argument",
+      },
+      tagline: {
+        en: "Objective morality requires a moral lawgiver",
+        fr: "La moralité objective nécessite un législateur moral",
+        es: "La moralidad objetiva requiere un legislador moral",
+        de: "Objektive Moral erfordert einen moralischen Gesetzgeber",
+      },
+      intro: {
+        en: "Beyond the Five Ways of Aquinas, which argue from the observation of the cosmos, the Moral Argument reasons from the inner reality of our own conscience. It posits that the existence of objective moral values, the universal sense that some things are truly right and others are truly wrong, is strong evidence for the existence of God.",
+        fr: "Au-delà des Cinq Voies d'Aquin, qui partent de l'observation du cosmos, l'Argument Moral raisonne à partir de la réalité intérieure de notre propre conscience. Il postule que l'existence de valeurs morales objectives, le sens universel que certaines choses sont vraiment justes et d'autres vraiment mauvaises, est une preuve solide de l'existence de Dieu.",
+        es: "Más allá de las Cinco Vías de Aquino, que argumentan desde la observación del cosmos, el Argumento Moral razona desde la realidad interna de nuestra propia conciencia. Postula que la existencia de valores morales objetivos, el sentido universal de que algunas cosas son verdaderamente correctas y otras verdaderamente incorrectas, es una fuerte evidencia de la existencia de Dios.",
+        de: "Über die Fünf Wege von Aquin hinaus, die von der Beobachtung des Kosmos ausgehen, argumentiert das Moralische Argument aus der inneren Realität unseres eigenen Gewissens. Es postuliert, dass die Existenz objektiver moralischer Werte, das universelle Gefühl, dass einige Dinge wirklich richtig und andere wirklich falsch sind, ein starker Beweis für die Existenz Gottes ist.",
+      },
+      summaryLabel: {
+        en: "Summary of the Argument:",
+        fr: "Résumé de l'Argument :",
+        es: "Resumen del Argumento:",
+        de: "Argumentzusammenfassung:",
+      },
+      premise1: {
+        en: "If God does not exist, objective moral values and duties do not exist.",
+        fr: "Si Dieu n'existe pas, les valeurs et devoirs moraux objectifs n'existent pas.",
+        es: "Si Dios no existe, los valores y deberes morales objetivos no existen.",
+        de: "Wenn Gott nicht existiert, existieren keine objektiven moralischen Werte und Pflichten.",
+      },
+      premise2: {
+        en: "Objective moral values and duties do exist.",
+        fr: "Les valeurs et devoirs moraux objectifs existent.",
+        es: "Los valores y deberes morales objectifs existent.",
+        de: "Objektive moralische Werte und Pflichten existieren.",
+      },
+      conclusion: {
+        en: "Therefore, God exists.",
+        fr: "Par conséquent, Dieu existe.",
+        es: "Por lo tanto, Dios existe.",
+        de: "Daher existiert Gott.",
+      },
+      explanation: {
+        en: "The argument's first premise is that if God does not exist, objective moral values do not exist. In a purely materialistic worldview, humans are simply advanced biological organisms. 'Morality' would be a subjective description of behaviors that aided survival, a social convention, or a personal preference. There would be no <em>objective</em> basis to call one action 'evil' and another 'good'.<br/><br/>The second premise is that objective moral values <em>do</em> exist. We intuitively know this. For example, we understand that torturing a child for pleasure is not just 'socially unhelpful' or 'personally distasteful,' it is objectively, intrinsically evil. Catholic thought, following Aquinas, explains that some acts are wrong by their very 'object', regardless of a good 'intention' or difficult 'circumstances'. This universal moral law, or 'right reason', that we all feel accountable to, points to a transcendent source. It implies a 'Lawgiver' whose very nature is the standard for goodness and against whom all our actions are ultimately measured.",
+        fr: "La première prémisse de l'argument est que si Dieu n'existe pas, les valeurs morales objectives n'existent pas. Dans une vision du monde purement matérialiste, les humains sont simplement des organismes biologiques avancés. La 'moralité' ne serait qu'une description subjective des comportements qui ont favorisé la survie, une convention sociale ou une préférence personnelle. Il n'y aurait aucune base <em>objective</em> pour qualifier une action de 'mauvaise' et une autre de 'bonne'.<br/><br/>La deuxième prémisse est que les valeurs morales objectives <em>existent</em>. Nous le savons intuitivement. Par exemple, nous comprenons que torturer un enfant pour le plaisir n'est pas seulement 'socialement inutile' ou 'personnellement désagréable', c'est objectivement, intrinsèquement mauvais. La pensée catholique, à la suite d'Aquin, explique que certains actes sont mauvais de par leur 'objet' même, indépendamment d'une bonne 'intention' ou de 'circonstances' difficiles. Cette loi morale universelle, ou 'droite raison', à laquelle nous nous sentons tous redevables, pointe vers une source transcendante. Elle implique un 'Législateur' dont la nature même est l'étalon du bien et à l'aune duquel toutes nos actions sont finalement mesurées.",
+        es: "La primera premisa del argumento es que si Dios no existe, los valores morales objetivos no existen. En una cosmovisión puramente materialista, los humanos son simplemente organismos biológicos avanzados. La 'moralidad' sería una descripción subjetiva de comportamientos que ayudaron a la supervivencia, una convención social o una preferencia personal. No habría base <em>objetiva</em> para llamar a una acción 'mala' y a otra 'buena'.<br/><br/>La segunda premisa es que los valores morales objetivos <em>sí</em> existen. Lo sabemos intuitivamente. Por ejemplo, entendemos que torturar a un niño por placer no es solo 'socialmente inútil' o 'personalmente desagradable', es objetiva e intrínsecamente malo. El pensamiento católico, siguiendo a Aquino, explica que algunos actos son malos por su 'objeto' mismo, independientemente de una buena 'intención' o 'circunstancias' difíciles. Esta ley moral universal, o 'recta razón', a la que todos nos sentimos responsables, apunta a una fuente trascendente. Implica un 'Legislador' cuya naturaleza misma es el estándar del bien y contra el cual se miden finalmente todas nuestras acciones.",
+        de: "Die erste Prämisse des Arguments lautet, dass objektive moralische Werte nicht existieren, wenn Gott nicht existiert. In einer rein materialistischen Weltanschauung sind Menschen lediglich fortgeschrittene biologische Organismen. 'Moral' wäre eine subjektive Beschreibung von Verhaltensweisen, die dem Überleben dienten, eine soziale Konvention oder eine persönliche Vorliebe. Es gäbe keine <em>objektive</em> Grundlage, eine Handlung als 'böse' und eine andere als 'gut' zu bezeichnen.<br/><br/>Die zweite Prämisse lautet, dass objektive moralische Werte <em>existieren</em>. Wir wissen dies intuitiv. Zum Beispiel verstehen wir, dass das Foltern eines Kindes zum Vergnügen nicht nur 'sozial nicht hilfreich' oder 'persönlich unangenehm' ist, es ist objektiv, intrinsisch böse. Das katholische Denken, Thomas von Aquin folgend, erklärt, dass einige Handlungen aufgrund ihres 'Objekts' an sich schlecht sind, unabhängig von einer guten 'Absicht' oder schwierigen 'Umständen'. Dieses universelle Moralgesetz, oder 'rechte Vernunft', dem wir uns alle verpflichtet fühlen, weist auf eine transzendente Quelle hin. Es impliziert einen 'Gesetzgeber', dessen Wesen selbst der Maßstab für das Gute ist und an dem all unsere Handlungen letztlich gemessen werden.",
+      },
+      quote: {
+        en: "Objective values are rooted in the character of a holy and loving God.",
+        fr: "Les valeurs objectives sont enracinées dans le caractère d'un Dieu saint et aimant.",
+        es: "Los valores objetivos están arraigados en el carácter de un Dios santo y amoroso.",
+        de: "Objektive Werte sind im Charakter eines heiligen und liebenden Gottes verwurzelt.",
+      },
+    },
+
+    // Argument 5: Resurrection
+    resurrection: {
+      heading: {
+        en: "The Argument from Jesus' Resurrection",
+        fr: "L'Argument de la Résurrection de Jésus",
+        es: "El Argumento de la Resurrección de Jesús",
+        de: "Das Argument aus der Auferstehung Jesu",
+      },
+      tagline: {
+        en: "Historical evidence for divine intervention",
+        fr: "Preuves historiques d'intervention divine",
+        es: "Evidencia histórica de intervención divina",
+        de: "Historische Beweise für göttliches Eingreifen",
+      },
+      intro: {
+        en: "The historical evidence for Jesus's resurrection is compelling. It rests on three key facts agreed upon by the majority of New Testament scholars:",
+        fr: "Les preuves historiques de la résurrection de Jésus sont convaincantes. Elles reposent sur trois faits clés reconnus par la majorité des spécialistes du Nouveau Testament :",
+        es: "La evidencia histórica de la resurrección de Jesús es convincente. Se basa en tres hechos clave acordados por la mayoría de los eruditos del Nuevo Testamento:",
+        de: "Die historischen Beweise für Jesu Auferstehung sind überzeugend. Sie stützen sich auf drei Schlüsselfakten, die von der Mehrheit der neutestamentlichen Gelehrten anerkannt werden:",
+      },
+      fact1: {
+        en: "Jesus was buried in a known tomb.",
+        fr: "Jésus a été enterré dans un tombeau connu.",
+        es: "Jesús fue enterrado en una tumba conocida.",
+        de: "Jesus wurde in einem bekannten Grab beigesetzt.",
+      },
+      fact2: {
+        en: "His tomb was found empty",
+        fr: "Son tombeau a été trouvé vide",
+        es: "Su tumba fue encontrada vacía",
+        de: "Sein Grab wurde leer vorgefunden",
+      },
+      fact2Detail: {
+        en: "by a group of women followers.",
+        fr: "par un groupe de femmes disciples.",
+        es: "por un grupo de mujeres seguidoras.",
+        de: "von einer Gruppe von Frauen, die ihm nachfolgten.",
+      },
+      fact3: {
+        en: "Multiple individuals and groups experienced appearances",
+        fr: "Plusieurs individus et groupes ont vécu des apparitions",
+        es: "Múltiples individuos y grupos experimentaron apariciones",
+        de: "Mehrere Individuen und Gruppen erlebten Erscheinungen",
+      },
+      fact3Detail: {
+        en: "of Jesus alive after His death.",
+        fr: "de Jésus vivant après Sa mort.",
+        es: "de Jesús vivo después de Su muerte.",
+        de: "von Jesus lebendig nach Seinem Tod.",
+      },
+      explanation: {
+        en: "Naturalistic explanations (like hallucinations, theft, or myth development) fail to account for all the data. The resurrection is the best explanation, implying divine confirmation of Jesus's claims.",
+        fr: "Les explications naturalistes (comme les hallucinations, le vol ou le développement du mythe) ne parviennent pas à expliquer toutes les données. La résurrection est la meilleure explication, impliquant une confirmation divine des affirmations de Jésus.",
+        es: "Las explicaciones naturalistas (como alucinaciones, robo o desarrollo de mitos) no logran explicar todos los datos. La resurrección es la mejor explicación, lo que implica una confirmación divina de las afirmaciones de Jesús.",
+        de: "Naturalistische Erklärungen (wie Halluzinationen, Diebstahl oder Mythenbildung) können nicht alle Daten erklären. Die Auferstehung ist die beste Erklärung, was eine göttliche Bestätigung von Jesu Ansprüchen impliziert.",
+      },
+      nextTopicNote: {
+        en: "The historical evidence for the Resurrection is a complex topic and is explored in detail in the next topic: 'Proof of Resurrection.'",
+        fr: "Les preuves historiques de la Résurrection sont un sujet complexe et sont explorées en détail dans le sujet suivant : « Preuve de la Résurrection. »",
+        es: "La evidencia histórica de la Resurrección es un tema complejo y se explora en detalle en el siguiente tema: 'Prueba de la Resurrección.'",
+        de: "Die historischen Beweise für die Auferstehung sind ein komplexes Thema und werden im nächsten Thema: 'Beweis der Auferstehung' detailliert untersucht.",
+      },
+    },
+
+    objections: {
+      heading: {
+        en: "Answering New Atheist Objections",
+        fr: "Répondre aux Objections des Nouveaux Athées",
+        es: "Respondiendo a las Objeciones de los Nuevos Ateos",
+        de: "Antwort auf Einwände der Neuen Atheisten",
+      },
+      intro: {
+        en: "The New Atheism is not primarily philosophical but rhetorical and emotional. It often relies on strawman versions of religion, confusing fundamentalist literalism with historic Christianity.",
+        fr: "Le Nouvel Athéisme n'est pas principalement philosophique mais rhétorique et émotionnel. Il s'appuie souvent sur des versions caricaturales de la religion, confondant le littéralisme fondamentaliste avec le christianisme historique.",
+        es: "El Nuevo Ateísmo no es principalmente filosófico sino retórico y emocional. A menudo se basa en versiones caricaturescas de la religión, confundiendo el literalismo fundamentalista con el cristianismo histórico.",
+        de: "Der Neue Atheismus ist im Allgemeinen nicht primär philosophisch, sondern rhetorisch und emotional. Er stützt sich oft auf Strohmann-Versionen der Religion und verwechselt fundamentalistischen Literalismus mit historischem Christentum.",
+      },
+      obj1Title: {
+        en: '"Faith is irrational."',
+        fr: "« La foi est irrationnelle. »",
+        es: '"La fe es irracional."',
+        de: '„Glaube ist irrational."',
+      },
+      obj1Response: {
+        en: "Christian faith is not blind but supported by reason and evidence.",
+        fr: "La foi chrétienne n'est pas avele mais soutenue par la raison et les preuves.",
+        es: "La fe cristiana no es ciega sino respaldada por la razón y la evidencia.",
+        de: "Der christliche Glaube ist nicht blind, sondern wird durch Vernunft und Beweise gestützt.",
+      },
+      obj2Title: {
+        en: '"Religion causes violence."',
+        fr: "« La religion cause la violence. »",
+        es: '"La religión causa violencia."',
+        de: '„Religion verursacht Gewalt."',
+      },
+      obj2Response: {
+        en: "While misused religion has caused harm, so have secular ideologies (Nazism, Communism). The problem is not religion per se but human sin.",
+        fr: "Bien que la religion mal utilisée ait causé du tort, les idéologies séculaires (nazisme, communisme) l'ont également fait. Le problème n'est pas la religion en soi mais le péché humain.",
+        es: "Si bien la religión mal utilizada ha causado daño, también lo han hecho las ideologías seculares (nazismo, comunismo). El problema no es la religión per se sino el pecado humano.",
+        de: "Während missbrauchte Religion Schaden angerichtet hat, haben dies auch säkulare Ideologien (Nazismus, Kommunismus) getan. Das Problem ist nicht die Religion an sich, sondern die menschliche Sünde.",
+      },
+      obj3Title: {
+        en: '"Science explains everything."',
+        fr: "« La science explique tout. »",
+        es: '"La ciencia lo explica todo."',
+        de: '„Wissenschaft erklärt alles."',
+      },
+      obj3Response: {
+        en: "Science explains the how, not the why. Science presupposes logic, mathematics, and the uniformity of nature, all of which require philosophical justification.",
+        fr: "La science explique le comment, pas le pourquoi. La science présuppose la logique, les mathématiques et l'uniformité de la nature, qui nécessitent toutes une justification philosophique.",
+        es: "La ciencia explica el cómo, no el por qué. La ciencia presupone lógica, matemáticas y la uniformidad de la naturaleza, todo lo cual requiere justificación filosófica.",
+        de: "Wissenschaft erklärt das Wie, nicht das Warum. Wissenschaft setzt Logik, Mathematik und die Einheitlichkeit der Natur voraus, die alle eine philosophische Rechtfertigung erfordern.",
+      },
+      // craigQuote object removed
+    },
+
+    additionalVideo: {
+      heading: {
+        en: "Additional Perspective: Faith and Reason",
+        fr: "Perspective Supplémentaire : Foi et Raison",
+        es: "Perspectiva Adicional: Fe y Razón",
+        de: "Zusätzliche Perspektive: Glaube und Vernunft",
+      },
+    },
+
+    // Conclusion
     conclusion: {
-      en: "Therefore, God exists.",
-      fr: "Par conséquent, Dieu existe.",
-      es: "Por lo tanto, Dios existe.",
-      de: "Daher existiert Gott.",
-    },
-    explanation: {
-      en: "The argument's first premise is that if God does not exist, objective moral values do not exist. In a purely materialistic worldview, humans are simply advanced biological organisms. 'Morality' would be a subjective description of behaviors that aided survival, a social convention, or a personal preference. There would be no <em>objective</em> basis to call one action 'evil' and another 'good'.<br/><br/>The second premise is that objective moral values <em>do</em> exist. We intuitively know this. For example, we understand that torturing a child for pleasure is not just 'socially unhelpful' or 'personally distasteful,' it is objectively, intrinsically evil. Catholic thought, following Aquinas, explains that some acts are wrong by their very 'object', regardless of a good 'intention' or difficult 'circumstances'. This universal moral law, or 'right reason', that we all feel accountable to, points to a transcendent source. It implies a 'Lawgiver' whose very nature is the standard for goodness and against whom all our actions are ultimately measured.",
-      fr: "La première prémisse de l'argument est que si Dieu n'existe pas, les valeurs morales objectives n'existent pas. Dans une vision du monde purement matérialiste, les humains sont simplement des organismes biologiques avancés. La 'moralité' ne serait qu'une description subjective des comportements qui ont favorisé la survie, une convention sociale ou une préférence personnelle. Il n'y aurait aucune base <em>objective</em> pour qualifier une action de 'mauvaise' et une autre de 'bonne'.<br/><br/>La deuxième prémisse est que les valeurs morales objectives <em>existent</em>. Nous le savons intuitivement. Par exemple, nous comprenons que torturer un enfant pour le plaisir n'est pas seulement 'socialement inutile' ou 'personnellement désagréable', c'est objectivement, intrinsèquement mauvais. La pensée catholique, à la suite d'Aquin, explique que certains actes sont mauvais de par leur 'objet' même, indépendamment d'une bonne 'intention' ou de 'circonstances' difficiles. Cette loi morale universelle, ou 'droite raison', à laquelle nous nous sentons tous redevables, pointe vers une source transcendante. Elle implique un 'Législateur' dont la nature même est l'étalon du bien et à l'aune duquel toutes nos actions sont finalement mesurées.",
-      es: "La primera premisa del argumento es que si Dios no existe, los valores morales objetivos no existen. En una cosmovisión puramente materialista, los humanos son simplemente organismos biológicos avanzados. La 'moralidad' sería una descripción subjetiva de comportamientos que ayudaron a la supervivencia, una convención social o una preferencia personal. No habría base <em>objetiva</em> para llamar a una acción 'mala' y a otra 'buena'.<br/><br/>La segunda premisa es que los valores morales objetivos <em>sí</em> existen. Lo sabemos intuitivamente. Por ejemplo, entendemos que torturar a un niño por placer no es solo 'socialmente inútil' o 'personalmente desagradable', es objetiva e intrínsecamente malo. El pensamiento católico, siguiendo a Aquino, explica que algunos actos son malos por su 'objeto' mismo, independientemente de una buena 'intención' o 'circunstancias' difíciles. Esta ley moral universal, o 'recta razón', a la que todos nos sentimos responsables, apunta a una fuente trascendente. Implica un 'Legislador' cuya naturaleza misma es el estándar del bien y contra el cual se miden finalmente todas nuestras acciones.",
-      de: "Die erste Prämisse des Arguments lautet, dass objektive moralische Werte nicht existieren, wenn Gott nicht existiert. In einer rein materialistischen Weltanschauung sind Menschen lediglich fortgeschrittene biologische Organismen. 'Moral' wäre eine subjektive Beschreibung von Verhaltensweisen, die dem Überleben dienten, eine soziale Konvention oder eine persönliche Vorliebe. Es gäbe keine <em>objektive</em> Grundlage, eine Handlung als 'böse' und eine andere als 'gut' zu bezeichnen.<br/><br/>Die zweite Prämisse lautet, dass objektive moralische Werte <em>existieren</em>. Wir wissen dies intuitiv. Zum Beispiel verstehen wir, dass das Foltern eines Kindes zum Vergnügen nicht nur 'sozial nicht hilfreich' oder 'persönlich unangenehm' ist, es ist objektiv, intrinsisch böse. Das katholische Denken, Thomas von Aquin folgend, erklärt, dass einige Handlungen aufgrund ihres 'Objekts' an sich schlecht sind, unabhängig von einer guten 'Absicht' oder schwierigen 'Umständen'. Dieses universelle Moralgesetz, oder 'rechte Vernunft', dem wir uns alle verpflichtet fühlen, weist auf eine transzendente Quelle hin. Es impliziert einen 'Gesetzgeber', dessen Wesen selbst der Maßstab für das Gute ist und an dem all unsere Handlungen letztlich gemessen werden.",
-    },
-    quote: {
-      en: "Objective values are rooted in the character of a holy and loving God.",
-      fr: "Les valeurs objectives sont enracinées dans le caractère d'un Dieu saint et aimant.",
-      es: "Los valores objetivos están arraigados en el carácter de un Dios santo y amoroso.",
-      de: "Objektive Werte sind im Charakter eines heiligen und liebenden Gottes verwurzelt.",
-    },
-  },
-
-  // Argument 5: Resurrection
-  resurrection: {
-    heading: {
-      en: "The Argument from Jesus' Resurrection",
-      fr: "L'Argument de la Résurrection de Jésus",
-      es: "El Argumento de la Resurrección de Jesús",
-      de: "Das Argument aus der Auferstehung Jesu",
-    },
-    tagline: {
-      en: "Historical evidence for divine intervention",
-      fr: "Preuves historiques d'intervention divine",
-      es: "Evidencia histórica de intervención divina",
-      de: "Historische Beweise für göttliches Eingreifen",
-    },
-    intro: {
-      en: "The historical evidence for Jesus's resurrection is compelling. It rests on three key facts agreed upon by the majority of New Testament scholars:",
-      fr: "Les preuves historiques de la résurrection de Jésus sont convaincantes. Elles reposent sur trois faits clés reconnus par la majorité des spécialistes du Nouveau Testament :",
-      es: "La evidencia histórica de la resurrección de Jesús es convincente. Se basa en tres hechos clave acordados por la mayoría de los eruditos del Nuevo Testamento:",
-      de: "Die historischen Beweise für Jesu Auferstehung sind überzeugend. Sie stützen sich auf drei Schlüsselfakten, die von der Mehrheit der neutestamentlichen Gelehrten anerkannt werden:",
-    },
-    fact1: {
-      en: "Jesus was buried in a known tomb.",
-      fr: "Jésus a été enterré dans un tombeau connu.",
-      es: "Jesús fue enterrado en una tumba conocida.",
-      de: "Jesus wurde in einem bekannten Grab beigesetzt.",
-    },
-    fact2: {
-      en: "His tomb was found empty",
-      fr: "Son tombeau a été trouvé vide",
-      es: "Su tumba fue encontrada vacía",
-      de: "Sein Grab wurde leer vorgefunden",
-    },
-    fact2Detail: {
-      en: "by a group of women followers.",
-      fr: "par un groupe de femmes disciples.",
-      es: "por un grupo de mujeres seguidoras.",
-      de: "von einer Gruppe von Frauen, die ihm nachfolgten.",
-    },
-    fact3: {
-      en: "Multiple individuals and groups experienced appearances",
-      fr: "Plusieurs individus et groupes ont vécu des apparitions",
-      es: "Múltiples individuos y grupos experimentaron apariciones",
-      de: "Mehrere Individuen und Gruppen erlebten Erscheinungen",
-    },
-    fact3Detail: {
-      en: "of Jesus alive after His death.",
-      fr: "de Jésus vivant après Sa mort.",
-      es: "de Jesús vivo después de Su muerte.",
-      de: "von Jesus lebendig nach Seinem Tod.",
-    },
-    explanation: {
-      en: "Naturalistic explanations (like hallucinations, theft, or myth development) fail to account for all the data. The resurrection is the best explanation, implying divine confirmation of Jesus's claims.",
-      fr: "Les explications naturalistes (comme les hallucinations, le vol ou le développement du mythe) ne parviennent pas à expliquer toutes les données. La résurrection est la meilleure explication, impliquant une confirmation divine des affirmations de Jésus.",
-      es: "Las explicaciones naturalistas (como alucinaciones, robo o desarrollo de mitos) no logran explicar todos los datos. La resurrección es la mejor explicación, lo que implica una confirmación divina de las afirmaciones de Jesús.",
-      de: "Naturalistische Erklärungen (wie Halluzinationen, Diebstahl oder Mythenbildung) können nicht alle Daten erklären. Die Auferstehung ist die beste Erklärung, was eine göttliche Bestätigung von Jesu Ansprüchen impliziert.",
-    },
-    nextTopicNote: {
-      en: "The historical evidence for the Resurrection is a complex topic and is explored in detail in the next topic: 'Proof of Resurrection.'",
-      fr: "Les preuves historiques de la Résurrection sont un sujet complexe et sont explorées en détail dans le sujet suivant : « Preuve de la Résurrection. »",
-      es: "La evidencia histórica de la Resurrección es un tema complejo y se explora en detalle en el siguiente tema: 'Prueba de la Resurrección.'",
-      de: "Die historischen Beweise für die Auferstehung sind ein komplexes Thema und werden im nächsten Thema: 'Beweis der Auferstehung' detailliert untersucht.",
-    },
-  },
-
-  objections: {
-    heading: {
-      en: "Answering New Atheist Objections",
-      fr: "Répondre aux Objections des Nouveaux Athées",
-      es: "Respondiendo a las Objeciones de los Nuevos Ateos",
-      de: "Antwort auf Einwände der Neuen Atheisten",
-    },
-    intro: {
-      en: "The New Atheism is not primarily philosophical but rhetorical and emotional. It often relies on strawman versions of religion, confusing fundamentalist literalism with historic Christianity.",
-      fr: "Le Nouvel Athéisme n'est pas principalement philosophique mais rhétorique et émotionnel. Il s'appuie souvent sur des versions caricaturales de la religion, confondant le littéralisme fondamentaliste avec le christianisme historique.",
-      es: "El Nuevo Ateísmo no es principalmente filosófico sino retórico y emocional. A menudo se basa en versiones caricaturescas de la religión, confundiendo el literalismo fundamentalista con el cristianismo histórico.",
-      de: "Der Neue Atheismus ist im Allgemeinen nicht primär philosophisch, sondern rhetorisch und emotional. Er stützt sich oft auf Strohmann-Versionen der Religion und verwechselt fundamentalistischen Literalismus mit historischem Christentum.",
-    },
-    obj1Title: {
-      en: '"Faith is irrational."',
-      fr: "« La foi est irrationnelle. »",
-      es: '"La fe es irracional."',
-      de: '„Glaube ist irrational."',
-    },
-    obj1Response: {
-      en: "Christian faith is not blind but supported by reason and evidence.",
-      fr: "La foi chrétienne n'est pas avele mais soutenue par la raison et les preuves.",
-      es: "La fe cristiana no es ciega sino respaldada por la razón y la evidencia.",
-      de: "Der christliche Glaube ist nicht blind, sondern wird durch Vernunft und Beweise gestützt.",
-    },
-    obj2Title: {
-      en: '"Religion causes violence."',
-      fr: "« La religion cause la violence. »",
-      es: '"La religión causa violencia."',
-      de: '„Religion verursacht Gewalt."',
-    },
-    obj2Response: {
-      en: "While misused religion has caused harm, so have secular ideologies (Nazism, Communism). The problem is not religion per se but human sin.",
-      fr: "Bien que la religion mal utilisée ait causé du tort, les idéologies séculaires (nazisme, communisme) l'ont également fait. Le problème n'est pas la religion en soi mais le péché humain.",
-      es: "Si bien la religión mal utilizada ha causado daño, también lo han hecho las ideologías seculares (nazismo, comunismo). El problema no es la religión per se sino el pecado humano.",
-      de: "Während missbrauchte Religion Schaden angerichtet hat, haben dies auch säkulare Ideologien (Nazismus, Kommunismus) getan. Das Problem ist nicht die Religion an sich, sondern die menschliche Sünde.",
-    },
-    obj3Title: {
-      en: '"Science explains everything."',
-      fr: "« La science explique tout. »",
-      es: '"La ciencia lo explica todo."',
-      de: '„Wissenschaft erklärt alles."',
-    },
-    obj3Response: {
-      en: "Science explains the how, not the why. Science presupposes logic, mathematics, and the uniformity of nature, all of which require philosophical justification.",
-      fr: "La science explique le comment, pas le pourquoi. La science présuppose la logique, les mathématiques et l'uniformité de la nature, qui nécessitent toutes une justification philosophique.",
-      es: "La ciencia explica el cómo, no el por qué. La ciencia presupone lógica, matemáticas y la uniformidad de la naturaleza, todo lo cual requiere justificación filosófica.",
-      de: "Wissenschaft erklärt das Wie, nicht das Warum. Wissenschaft setzt Logik, Mathematik und die Einheitlichkeit der Natur voraus, die alle eine philosophische Rechtfertigung erfordern.",
-    },
-    // craigQuote object removed
-  },
-
-  additionalVideo: {
-    heading: {
-      en: "Additional Perspective: Faith and Reason",
-      fr: "Perspective Supplémentaire : Foi et Raison",
-      es: "Perspectiva Adicional: Fe y Razón",
-      de: "Zusätzliche Perspektive: Glaube und Vernunft",
-    },
-  },
-
-  // Conclusion
-  conclusion: {
-    heading: {
-      en: "Conclusion: A Consistent Worldview",
-      fr: "Conclusion : Une Vision du Monde Cohérente",
-      es: "Conclusión: Una Visión del Mundo Consistente",
-      de: "Schlussfolgerung: Eine Konsistente Weltanschauung",
-    },
-    para1: {
-      en: "The convergence of the philosophical (the Five Ways) and the historical (the Resurrection) arguments presents a powerful case for the existence of God. The Five Ways show that the universe is <em>intelligible</em> and requires a necessary, uncaused, perfect, and intelligent first cause to account for its most fundamental realities: <strong class='text-white'>change, existence, perfection, and purpose.</strong>",
-      fr: "La convergence des arguments philosophiques (les Cinq Voies) et historiques (la Résurrection) présente un argument puissant pour l'existence de Dieu. Les Cinq Voies montrent que l'univers est <em>intelligible</em> et nécessite une première cause nécessaire, incausée, parfaite et intelligente pour expliquer ses réalités les plus fondamentales : <strong class='text-white'>le changement, l'existence, la perfection et la finalité.</strong>",
-      es: "La convergencia de los argumentos filosóficos (las Cinco Vías) e históricos (la Resurrección) presenta un caso poderoso para la existencia de Dios. Las Cinco Vías muestran que el universo es <em>inteligible</em> y requiere una primera cause necesaria, incausada, perfecta e inteligente para dar cuenta de sus realidades más fundamentales: <strong class='text-white'>cambio, existencia, perfección y propósito.</strong>",
-      de: "Die Konvergenz der philosophischen (die Fünf Wege) und der historischen (die Auferstehung) Argumente liefert einen überzeugenden Fall für die Existenz Gottes. Die Fünf Wege zeigen, dass das Universum <em>verständlich</em> ist und eine notwendige, unverursachte, vollkommene und intelligente erste Ursache benötigt, um seine grundlegendsten Realitäten zu erklären: <strong class='text-white'>Veränderung, Existenz, Vollkommenheit und Zweck.</strong>",
-    },
-    para2: {
-      en: "These reasoned arguments demonstrate that belief in a transcendent being is rational and provides the most coherent and complete worldview. They do not force belief but open the door for faith, showing that <strong class='text-white'>reason and faith are harmonious paths</strong> toward the same truth.",
-      fr: "Ces arguments raisonnés démontrent que la croyance en un être transcendant est rationnelle et offre la vision du monde la plus cohérente et complète. Ils n'imposent pas la croyance, mais ouvrent la voie à la foi, montrant que <strong class='text-white'>la raison et la foi sont des chemins harmonieux</strong> vers la même vérité.",
-      es: "Estos argumentos razonados demuestran que la creencia en un ser trascendente es racional y proporciona la visión del mundo más coherente y completa. No fuerzan la creencia, sino que abren la puerta a la fe, mostrando que <strong class='text-white'>la razón y la fe son caminos armoniosos</strong> hacia la misma verdad.",
-      de: "Diese begründeten Argumente zeigen, dass der Glaube an ein transzendes Wesen rational ist und die kohärenteste und vollständigste Weltanschauung bietet. Sie erzwingen keinen Glauben, sondern öffnen die Tür zum Glauben und zeigen, dass <strong class='text-white'>Vernunft und Glaube harmonische Wege</strong> zur selben Wahrheit sind.",
-    },
-    para3: {
-      en: "The Unmoved Mover, the Uncaused Cause, the Necessary Being, the Perfect Good, and the Intelligent Governor are all different names for the same ultimate reality: God.",
-      fr: "Le Moteur Immuable, la Cause Incréée, l'Être Nécessaire, le Bien Parfait et le Gouverneur Intelligent sont tous des noms différents pour la même réalité ultime : Dieu.",
-      es: "El Motor Inmóvil, la Causa Incualificada, el Ser Necesario, el Bien Perfecto y el Gobernador Inteligente son todos nombres diferentes para la misma realidad última: Dios.",
-de: "Der Unbewegte Beweger, die Unverursachte Ursache, das Notwendige Wesen, das Perfekte Gut und der Intelligente Regierer sind alle verschiedene Namen für dieselbe ultimative Realität: Gott.",
-    },
-  },
-
-  bridge: {
-    heading: {
-      en: "Next Step: The Historical Proof",
-      fr: "Étape Suivante : La Preuve Historique",
-      es: "Siguiente Paso: La Prueba Histórica",
-      de: "Nächster Schritt: Der Historische Beweis",
-    },
-    para1: {
-      en: "With a rational basis for the existence of God established through philosophy, we can now examine the most specific and historically verifiable claim in Christianity: the Resurrection of Jesus Christ.",
-      fr: "Avec une base rationnelle pour l'existence de Dieu établie par la philosophie, nous pouvons maintenant examiner l'affirmation la plus spécifique et historiquement vérifiable du Christianisme : la Résurrection de Jésus-Christ.",
-      es: "Con una base racional para la existencia de Dios establecida a través de la filosofía, ahora podemos examinar la afirmación más específica e históricamente verificable en el Cristianismo: la Resurrección de Jesucristo.",
-      de: "Mit einer durch Philosophie etablierten rationalen Grundlage für die Existenz Gottes können wir nun die spezifischste und historisch überprüfbarste Behauptung im Christentum untersuchen: die Auferstehung Jesu Christi.",
-    },
-    para2: {
-      en: "The historical evidence that the Resurrection actually happened is a decisive, compelling reason to accept the truth of the Christian God and the unique claims of the Catholic faith.",
-      fr: "La preuve historique que la Résurrection s'est réellement produite est une raison décisive et convaincante d'accepter la vérité du Dieu Chrétien et les affirmations uniques de la foi Catholique.",
-      es: "La evidencia histórica de que la Resurrección realmente sucedió es una razón decisiva e convincente para aceptar la verdad del Dios Cristiano y las afirmaciones únicas de la fe Católica.",
-      de: "Der historische Beweis, dass die Auferstehung tatsächlich stattgefunden hat, ist ein entscheidender, zwingender Grund, die Wahrheit des christlichen Gottes und die einzigartigen Ansprüche des katholischen Glaubens anzunehmen.",
-    },
-  },
-},
-
- // Evidence for the Resurrection Topic
-proofOfResurrection: {
-  title: {
-    en: "Evidence for the Resurrection",
-    fr: "Preuves de la Résurrection",
-    es: "Evidencia de la Resurrección",
-    de: "Beweise für die Auferstehung",
-  },
-  subtitle: {
-    en: "The Case for Christianity through Historical Evidence",
-    fr: "Le Cas pour le Christianisme à Travers les Preuves Historiques",
-    es: "El Caso del Cristianismo a Través de la Evidencia Histórica",
-    de: "Der Fall für das Christentum durch Historische Beweise",
-  },
-  quote: {
-    en: "If Christ has not been raised, then our preaching is in vain and your faith is in vain.",
-    fr: "Si Christ n'a pas été ressuscité, alors notre prédication est vaine et votre foi est vaine.",
-    es: "Si Cristo no ha resucitado, entonces nuestra predicación es en vano y vuestra fe es en vano.",
-    de: "Wenn Christus nicht auferstanden ist, dann ist unsere Predigt vergeblich und euer Glaube ist vergeblich.",
-  },
-  quoteSource: {
-    en: "1 Corinthians 15:14",
-    fr: "1 Corinthiens 15:14",
-    es: "1 Corintios 15:14",
-    de: "1 Korinther 15:14",
-  },
-
-  // Introduction
-  introHeading: {
-    en: "Is Christianity Rooted in History?",
-    fr: "Le Christianisme Est-il Enraciné dans l'Histoire ?",
-    es: "¿Está el Cristianismo Arraigado en la Historia?",
-    de: "Ist das Christentum in der Geschichte verwurzelt?",
-  },
-  introPara1: {
-    en: "The Christian faith is not founded on abstract ideas or moral ideals alone. It is grounded in historical events, real occurrences in space and time that can be investigated, analyzed, and compared with other events in ancient history.",
-    fr: "La foi chrétienne n'est pas fondée uniquement sur des idées abstraites ou des idéaux moraux. Elle est ancrée dans des événements historiques, des occurrences réelles dans l'espace et le temps qui peuvent être enquêtées, analysées et comparées avec d'autres événements de l'histoire ancienne.",
-    es: "La fe cristiana no se funda únicamente en ideas abstractas o ideales morales. Está arraigada en eventos históricos, ocurrencias reales en el espacio y el tiempo que pueden ser investigadas, analizadas y comparadas con otros eventos de la historia antigua.",
-    de: "Der christliche Glaube gründet sich nicht allein auf abstrakte Ideen oder moralische Ideale. Er ist in historischen Ereignissen verwurzelt, tatsächlichen Vorkommnissen in Raum und Zeit, die untersucht, analysiert und mit anderen Ereignissen der antiken Geschichte verglichen werden können.",
-  },
-  introPara2: {
-    en: 'If these events are true, Christianity stands as the most rational worldview available. If not, as Paul wrote: "If Christ has not been raised, then our preaching is in vain and your faith is in vain." (1 Corinthians 15:14)',
-    fr: "Si ces événements sont vrais, le christianisme se présente comme la vision du monde la plus rationnelle disponible. Sinon, comme Paul l'a écrit : « Si Christ n'a pas été ressuscité, alors notre prédication est vaine et votre foi est vaine. » (1 Corinthiens 15:14)",
-    es: 'Si estos eventos son verdaderos, el cristianismo se presenta como la cosmovisión más racional disponible. Si no, como escribió Pablo: "Si Cristo no ha resucitado, entonces nuestra predicación es en vano y vuestra fe es en vano." (1 Corintios 15:14)',
-    de: 'Wenn diese Ereignisse wahr sind, steht das Christentum als die rationalste verfügbare Weltanschauung da. Wenn nicht, wie Paulus schrieb: „Wenn Christus nicht auferstanden ist, dann ist unsere Predigt vergeblich und euer Glaube ist vergeblich." (1 Korinther 15:14)',
-  },
-
-  // Section 1: Minimal Facts
-  minimalFacts: {
-    heading: {
-      en: '1. The "Minimal Facts" Approach',
-      fr: "1. L'Approche des « Faits Minimaux »",
-      es: '1. El Enfoque de los "Hechos Mínimos"',
-      de: '1. Der Ansatz der „Minimalen Fakten"',
-    },
-    intro: {
-      en: "Developed by scholars like Gary Habermas, the Minimal Facts Approach builds a case for the resurrection of Jesus based on a small set of historical data that meet two criteria:",
-      fr: "Développée par des chercheurs comme Gary Habermas, l'Approche des Faits Minimaux construit un cas pour la résurrection de Jésus basé sur un petit ensemble de données historiques qui répondent à deux critères :",
-      es: "Desarrollado por académicos como Gary Habermas, el Enfoque de los Hechos Mínimos construye un caso para la resurrección de Jesús basado en un pequeño conjunto de datos históricos que cumplen dos criterios:",
-      de: "Entwickelt von Gelehrten wie Gary Habermas, baut der Ansatz der Minimalen Fakten einen Fall für die Auferstehung Jesu auf, basierend auf einer kleinen Menge historischer Daten, die zwei Kriterien erfüllen:",
-    },
-    criterion1: {
-      en: "<strong class='text-white'>Strong Evidence:</strong> They are strongly evidenced by multiple, independent sources.",
-      fr: "<strong class='text-white'>Preuves Solides :</strong> Ils sont fortement attestés par de multiples sources indépendantes.",
-      es: "<strong class='text-white'>Evidencia Sólida:</strong> Están fuertemente evidenciados por múltiples fuentes independientes.",
-      de: "<strong class='text-white'>Starke Beweise:</strong> Sie sind durch mehrere unabhängige Quellen stark belegt.",
-    },
-    criterion2: {
-      en: "<strong class='text-white'>Scholarly Consensus:</strong> They are accepted by the vast majority of scholars in the field, including skeptical ones.",
-      fr: "<strong class='text-white'>Consensus Académique :</strong> Ils sont acceptés par la grande majorité des chercheurs du domaine, y compris les sceptiques.",
-      es: "<strong class='text-white'>Consenso Académico:</strong> Son aceptados por la gran mayoría de los académicos en el campo, incluidos los escépticos.",
-      de: "<strong class='text-white'>Wissenschaftlicher Konsens:</strong> Sie werden von der überwiegenden Mehrheit der Wissenschaftler auf diesem Gebiet akzeptiert, einschließlich skeptischer.",
-    },
-  },
-
-  // Section 2: Manuscript Evidence
-  manuscriptEvidence: {
-    heading: {
-      en: "2. Unmatched Manuscript Evidence for the New Testament",
-      fr: "2. Preuves Manuscrites Inégalées pour le Nouveau Testament",
-      es: "2. Evidencia Manuscrita Incomparable del Nuevo Testamento",
-      de: "2. Unübertroffene Manuskript-Beweise für das Neue Testament",
-    },
-    intro: {
-      en: "When comparing the New Testament with other ancient works, its textual support is overwhelming:",
-      fr: "Lorsqu'on compare le Nouveau Testament avec d'autres œuvres anciennes, son soutien textuel est écrasant :",
-      es: "Al comparar el Nuevo Testamento con otras obras antiguas, su respaldo textual es abrumador:",
-      de: "Beim Vergleich des Neuen Testaments mit anderen antiken Werken ist seine textliche Unterstützung überwältigend:",
-    },
-    tableAuthor: {
-      en: "Author",
-      fr: "Auteur",
-      es: "Autor",
-      de: "Autor",
-    },
-    tableTimeGap: {
-      en: "Time Gap (Event to Earliest Copy)",
-      fr: "Écart Temporel (Événement à la Première Copie)",
-      es: "Intervalo de Tiempo (Evento a la Primera Copia)",
-      de: "Zeitspanne (Ereignis zur frühesten Kopie)",
-    },
-    tableManuscripts: {
-      en: "Number of Manuscripts",
-      fr: "Nombre de Manuscrits",
-      es: "Número de Manuscritos",
-      de: "Anzahl der Manuskripte",
-    },
-    newTestament: {
-      en: "New Testament",
-      fr: "Nouveau Testament",
-      es: "Nuevo Testamento",
-      de: "Neues Testament",
-    },
-    timeGap25: {
-      en: "25 years",
-      fr: "25 ans",
-      es: "25 años",
-      de: "25 Jahre",
-    },
-    timeGap400: {
-      en: "400 years",
-      fr: "400 ans",
-      es: "400 años",
-      de: "400 Jahre",
-    },
-    timeGap1000: {
-      en: "1,000 years",
-      fr: "1 000 ans",
-      es: "1.000 años",
-      de: "1.000 Jahre",
-    },
-    timeGap1200: {
-      en: "1,200 years",
-      fr: "1 200 ans",
-      es: "1.200 años",
-      de: "1.200 Jahre",
-    },
-    timeGap1400: {
-      en: "1,400 years",
-      fr: "1 400 ans",
-      es: "1.400 años",
-      de: "1.400 Jahre",
-    },
-    conclusion: {
-      en: "No other ancient document comes close in terms of early attestation and manuscript quantity. This makes the New Testament the most historically reliable document of antiquity.",
-      fr: "Aucun autre document ancien n'approche en termes d'attestation précoce et de quantité de manuscrits. Cela fait du Nouveau Testament le document le plus historiquement fiable de l'antiquité.",
-      es: "Ningún otro documento antiguo se acerca en términos de atestación temprana y cantidad de manuscritos. Esto hace del Nuevo Testamento el documento más históricamente confiable de la antigüedad.",
-      de: "Kein anderes antikes Dokument kommt in Bezug auf frühe Bezeugung und Manuskriptmenge nahe. Dies macht das Neue Testament zum historisch zuverlässigsten Dokument der Antike.",
-    },
-    timeGap750: {
-      en: "750 years",
-      fr: "750 ans",
-      es: "750 años",
-      de: "750 Jahre",
-    },
-  },
-
-  // Author Name Translations
-  authorHomer: {
-    en: "Homer",
-    fr: "Homère",
-    es: "Homero",
-    de: "Homer",
-  },
-  authorDemosthenes: {
-    en: "Demosthenes",
-    fr: "Démosthène",
-    es: "Demóstenes",
-    de: "Demosthenes",
-  },
-  authorHerodotus: {
-    en: "Herodotus",
-    fr: "Hérodote",
-    es: "Heródoto",
-    de: "Herodot",
-  },
-  authorPlato: {
-    en: "Plato",
-    fr: "Platon",
-    es: "Platón",
-    de: "Plato",
-  },
-  authorTacitus: {
-    en: "Tacitus",
-    fr: "Tacite",
-    es: "Tácito",
-    de: "Tacitus",
-  },
-  authorCaesar: {
-    en: "Caesar",
-    fr: "César",
-    es: "César",
-    de: "Cäsar",
-  },
-  authorPliny: {
-    en: "Pliny",
-    fr: "Pline",
-    es: "Plinio",
-    de: "Plinius",
-  },
-
-  // Visualization and Scale Keys
-  rankHistorical: {
-    en: "Historical Document #",
-    fr: "Document Historique n°",
-    es: "Documento Histórico n.º",
-    de: "Historisches Dokument Nr.",
-  },
-  rankUnmatched: {
-    en: "The Unmatched Standard",
-    fr: "Le Standard Inégalé",
-    es: "El Estándar Inigualable",
-    de: "Der Unübertroffene Standard",
-  },
-  scaleCount: {
-    en: "The Overwhelming Count",
-    fr: "Le Compte Écrasant",
-    es: "El Recuento Abrumador",
-    de: "Die Überwältigende Zahl",
-  },
-  scaleMaxMs: {
-    en: "Scale: {0} max",
-    fr: "Échelle: {0} max",
-    es: "Escala: {0} máx",
-    de: "Skala: {0} max",
-  },
-  scaleTimeClose: {
-    en: "The Closest in Time",
-    fr: "Le Plus Proche dans le Temps",
-    es: "El Más Cercano en el Temps",
-    de: "Der Zeitlich Nächste",
-  },
-  scaleMaxGap: {
-    en: "Max Gap: {0} years",
-    fr: "Écart Max: {0} ans",
-    es: "Intervalo Máx: {0} años",
-    de: "Max. Zeitspanne: {0} Jahre",
-  },
-  scaleVisualNote: {
-    en: "(Visual length of bar indicates relative closeness to original document)",
-    fr: "(La longueur visuelle de la barre indique la proximité relative avec le document original)",
-    es: "(La longitud visual de la barre indique la proximité relative au document original)",
-    de: "(Die visuelle Länge des Balkens gibt die relative Nähe zum Originaldokument an)",
-  },
-
-  // Section 3: Who Was Jesus (EXPANDED)
-  whoWasJesus: {
-    heading: {
-      en: "3. Who Was Jesus of Nazareth?",
-      fr: "3. Qui Était Jésus de Nazareth ?",
-      es: "3. ¿Quién Era Jesús de Nazaret?",
-      de: "3. Wer War Jesus von Nazareth?",
-    },
-    intro: {
-      en: "Before examining the resurrection, we must know who the man was. Historians, both religious and secular, agree on key facts about Jesus:",
-      fr: "Avant d'examiner la résurrection, nous devons savoir qui était l'homme. Les historiens, tant religieux que laïques, s'accordent sur des faits clés concernant Jésus :",
-      es: "Antes de examinar la resurrección, debemos saber quién fue el hombre. Los historiadores, tanto religiosos como seculares, concuerdan en hechos clave sobre Jesús:",
-      de: "Bevor wir die Auferstehung untersuchen, müssen wir wissen, wer dieser Mann war. Historiker, sowohl religiöse als auch säkulare, stimmen in wichtigen Fakten über Jesus überein:",
-    },
-    fact1: {
-      en: "He was a first-century Jew from Galilee.",
-      fr: "Il était un Juif de Galilée du premier siècle.",
-      es: "Era un judío de Galilea del primer siglo.",
-      de: "Er war ein Jude aus Galiläa im ersten Jahrhundert.",
-    },
-    fact2: {
-      en: "He was an itinerant preacher known for his wisdom and claims of authority.",
-      fr: "Il était un prédicateur itinérant connu pour sa sagesse et ses prétentions à l'autorité.",
-      es: "Fue un predicador itinerante conocido por su sabiduría y sus afirmaciones de autoridad.",
-      de: "Er war ein Wanderprediger, der für seine Weisheit und seine Autoritätsansprüche bekannt war.",
-    },
-    fact3: {
-      en: "He was crucified in Jerusalem under Pontius Pilate.",
-      fr: "Il a été crucifié à Jérusalem sous Ponce Pilate.",
-      es: "Fue crucificado en Jerusalén bajo Poncio Pilato.",
-      de: "Er wurde in Jerusalem unter Pontius Pilatus gekreuzigt.",
-    },
-    divineClaimIntro: {
-      en: "Crucially, the claim that Jesus understood himself to be divine is strongly attested in the Gospels. He did this not by walking around saying 'I am God,' but in ways a first-century Jew would have understood as a divine claim, such as forgiving sins and using the divine name. In John 8:58, Jesus said:",
-      fr: "De manière cruciale, l'affirmation selon laquelle Jésus se considérait comme divin est fortement attestée dans les Évangiles. Il ne le faisait pas en se promenant et en disant 'Je suis Dieu', mais d'une manière qu'un Juif du premier siècle aurait comprise comme une revendication divine, comme pardonner les péchés et utiliser le nom divin. Dans Jean 8:58, Jésus a dit :",
-      es: "Crucialmente, la afirmación de que Jesús se entendía a sí mismo como divino está fuertemente atestiguada en los Evangelios. No lo hizo andando por ahí diciendo 'Soy Dios', sino de maneras que un judío del primer siglo habría entendido como una afirmación divina, como perdonar pecados y usar el nombre divino. En Juan 8:58, Jesús dijo:",
-      de: "Entscheidend ist, dass die Behauptung, Jesus habe sich selbst als göttlich verstanden, in den Evangelien stark bezeugt ist. Er tat dies nicht, indem er herumlief und sagte 'Ich bin Gott', sondern auf eine Weise, die ein Jude des ersten Jahrhunderts als göttlichen Anspruch verstanden hätte, wie zum Beispiel die Vergebung von Sünden und die Verwendung des göttlichen Namens. In Johannes 8:58 sagte Jesus:",
-    },
-    john858: {
-      en: "Before Abraham was, I AM.",
-      fr: "Avant qu'Abraham fût, je suis.",
-      es: "Antes de que Abraham fuera, YO SOY.",
-      de: "Ehe Abraham war, bin ICH.",
-    },
-    john858Source: {
-      en: "John 8:58",
-      fr: "Jean 8:58",
-      es: "Juan 8:58",
-      de: "Johannes 8:58",
-    },
-    blasphemy: {
-      en: "This was a direct claim to the divine name God revealed to Moses in the burning bush. The reaction of his audience, who immediately picked up stones to kill him for blasphemy, shows exactly how this claim was understood.",
-      fr: "C'était une revendication directe du nom divin que Dieu a révélé à Moïse dans le buisson ardent. La réaction de son auditoire, qui a immédiatement ramassé des pierres pour le tuer pour blasphème, montre exactement comment cette affirmation a été comprise.",
-      es: "Esta fue una afirmación directa del nombre divino que Dios reveló a Moisés en la zarza ardiente. La reacción de su audiencia, que inmediatamente recogió piedras para matarlo por blasfemia, muestra exactamente cómo se entendió esta afirmación.",
-      de: "Dies war ein direkter Anspruch auf den göttlichen Namen, den Gott Mose im brennenden Dornbusch offenbarte. Die Reaktion seiner Zuhörer, die sofort Steine aufhoben, um ihn wegen Blasphemie zu töten, zeigt genau, wie dieser Anspruch verstanden wurde.",
-    },
-    blasphemyReason: {
-      en: "It was these radical personal claims to divine authority, seen as blasphemy by the Jewish leadership, that led directly to his execution. The resurrection, therefore, is not just a miracle; it is God's divine vindication of the very claims that got Jesus killed.",
-      fr: "Ce sont ces revendications personnelles radicales d'autorité divine, considérées comme un blasphème par les dirigeants juifs, qui ont conduit directement à son exécution. La résurrection n'est donc pas seulement un miracle ; c'est la justification divine des affirmations mêmes qui ont valu à Jésus d'être tué.",
-      es: "Fueron estas afirmaciones personales radicales de autoridad divina, vistas como blasfemia por los líderes judíos, las que llevaron directamente a su ejecución. La resurrección, por lo tanto, no es solo un milagro; es la vindicación divina de las mismas afirmaciones por las que mataron a Jesús.",
-      de: "Es waren diese radikalen persönlichen Ansprüche auf göttliche Autorität, die von der jüdischen Führung als Blasphemie angesehen wurden, die direkt zu seiner Hinrichtung führten. Die Auferstehung ist daher nicht nur ein Wunder; sie ist Gottes göttliche Bestätigung genau der Ansprüche, für die Jesus getötet wurde.",
-    },
-  },
-
-  // Section 4: Four Minimal Facts (EXPANDED)
-  fourMinimalFacts: {
-    heading: {
-      en: "4. The Four Minimal Facts Accepted by Nearly All Scholars",
-      fr: "4. Les Quatre Faits Minimaux Acceptés par Presque Tous les Chercheurs",
-      es: "4. Los Cuatro Hechos Mínimos Aceptados por Casi Todos los Académicos",
-      de: "4. Die Vier Minimalen Fakten, die von Fast Allen Gelehrten Akzeptiert Werden",
-    },
-    fact1: {
-      en: "Jesus died by crucifixion",
-      fr: "Jésus est mort par crucifixion",
-      es: "Jesús murió por crucifixión",
-      de: "Jesus starb durch Kreuzigung",
-    },
-    fact2: {
-      en: "His tomb was found empty",
-      fr: "Son tombeau a été trouvé vide",
-      es: "Su tumba fue encontrada vacía",
-      de: "Sein Grab wurde leer vorgefunden",
-    },
-    fact3: {
-      en: "His disciples had experiences they believed were appearances of the Risen Jesus",
-      fr: "Ses disciples ont eu des expériences qu'ils croyaient être des apparitions de Jésus ressuscité",
-      es: "Sus discípulos tuvieron experiencias que creyeron que eran apariciones de Jesús resucitado",
-      de: "Seine Jünger hatten Erfahrungen, von denen sie glaubten, es seien Erscheinungen des auferstandenen Jesus",
-    },
-    fact3Detail: {
-      en: "These were not vague feelings, but group events and physical interactions.",
-      fr: "Ce n'étaient pas des sentiments vagues, mais des événements de groupe et des interactions physiques.",
-      es: "No fueron sentimientos vagos, sino eventos grupales e interacciones físicas.",
-      de: "Dies waren keine vagen Gefühle, sondern Gruppenerlebnisse und körperliche Interaktionen.",
-    },
-    fact4: {
-      en: "Key skeptics (Paul & James) converted after similar experiences",
-      fr: "Des sceptiques clés (Paul & Jacques) se sont convertis après des expériences similaires",
-      es: "Escépticos clave (Pablo & Santiago) se convirtieron después de experiencias similares",
-      de: "Wichtige Skeptiker (Paulus & Jakobus) bekehrten sich nach ähnlichen Erfahrungen",
-    },
-    fact4Detail: {
-      en: "Paul was a persecutor, and James was Jesus's skeptical brother.",
-      fr: "Paul était un persécuteur, et Jacques était le frère sceptique de Jésus.",
-      es: "Pablo era un perseguidor, y Santiago era el hermano escéptico de Jesús.",
-      de: "Paulus war ein Verfolger, und Jakobus war der skeptische Bruder Jesu.",
-    },
-    support: {
-      en: "These facts are supported by such strong historical data that most scholars accept them, regardless of their religious beliefs. The evidence includes <strong class='text-white'>multiple, independent sources</strong> (e.g., Mark's passion narrative, the 1 Cor. 15 creed, John, Luke, Josephus, Tacitus) and the <strong class='text-white'>early creed in 1 Corinthians 15</strong>, which scholars date to within 3-5 years of the crucifixion. This creed lists the key events and eyewitnesses, proving the belief in the resurrection was not a late-developing legend.",
-      fr: "Ces faits sont étayés par des données historiques si solides que la plupart des chercheurs les acceptent, quelles que soient leurs croyances religieuses. Les preuves incluent de <strong class='text-white'>multiples sources indépendantes</strong> (par exemple, le récit de la passion de Marc, le credo de 1 Cor. 15, Jean, Luc, Josèphe, Tacite) et le <strong class='text-white'>credo ancien de 1 Corinthiens 15</strong>, que les chercheurs datent de 3 à 5 ans après la crucifixion. Ce credo énumère les événements clés et les témoins oculaires, prouvant que la croyance en la résurrection n'était pas une légende tardive.",
-      es: "Estos hechos están respaldados por datos históricos tan sólidos que la mayoría de los académicos los aceptan, independientemente de sus creencias religiosas. La evidencia incluye <strong class='text-white'>múltiples fuentes independientes</strong> (p. ej., la narrativa de la pasión de Marcos, el credo de 1 Cor. 15, Juan, Lucas, Josefo, Tácito) y el <strong class='text-white'>credo temprano en 1 Corintios 15</strong>, que los académicos fechan entre 3 y 5 años después de la crucifixión. Este credo enumera los eventos clave y los testigos presenciales, lo que demuestra que la creencia en la resurrección no fue una leyenda que se desarrolló tardíamente.",
-      de: "Diese Fakten werden durch so starke historische Daten gestützt, dass die meisten Gelehrten sie unabhängig von ihren religiösen Überzeugungen akzeptieren. Die Beweise umfassen <strong class='text-white'>mehrere unabhängige Quellen</strong> (z. B. Markus' Passionsgeschichte, das Glaubensbekenntnis in 1. Kor. 15, Johannes, Lukas, Josephus, Tacitus) und das <strong class='text-white'>frühe Glaubensbekenntnis in 1. Korinther 15</strong>, das Gelehrte auf 3-5 Jahre nach der Kreuzigung datieren. Dieses Glaubensbekenntnis listet die Schlüsselereignisse und Augenzeugen auf und beweist, dass der Glaube an die Auferstehung keine spät entwickelte Legende war.",
-    },
-  },
-
-  // Section 5: Evaluating Explanations (EXPANDED)
-  evaluatingExplanations: {
-    heading: {
-      en: "5. Evaluating the Explanations",
-      fr: "5. Évaluation des Explications",
-      es: "5. Evaluando las Explicaciones",
-      de: "5. Bewertung der Erklärungen",
-    },
-    intro: {
-      en: "Historians and skeptics have proposed various explanations for these four facts. Any valid theory must explain all four facts, not just one or two. Each alternative theory fails under scrutiny:",
-      fr: "Les historiens et les sceptiques ont proposé diverses explications pour ces quatre faits. Toute théorie valide doit expliquer les quatre faits, pas seulement un ou deux. Chaque théorie alternative échoue à l'examen :",
-      es: "Los historiadores y escépticos han propuesto varias explicaciones para estos cuatro hechos. Cualquier teoría válida debe explicar los cuatro hechos, no solo uno o dos. Cada teoría alternativa falla bajo escrutinio:",
-      de: "Historiker und Skeptiker haben verschiedene Erklärungen für diese vier Fakten vorgeschlagen. Jede gültige Theorie muss alle vier Fakten erklären, nicht nur ein oder zwei. Jede alternative Theorie versagt bei genauerer Prüfung:",
+      heading: {
+        en: "Conclusion: A Consistent Worldview",
+        fr: "Conclusion : Une Vision du Monde Cohérente",
+        es: "Conclusión: Una Visión del Mundo Consistente",
+        de: "Schlussfolgerung: Eine Konsistente Weltanschauung",
+      },
+      para1: {
+        en: "The convergence of the philosophical (the Five Ways) and the historical (the Resurrection) arguments presents a powerful case for the existence of God. The Five Ways show that the universe is <em>intelligible</em> and requires a necessary, uncaused, perfect, and intelligent first cause to account for its most fundamental realities: <strong class='text-white'>change, existence, perfection, and purpose.</strong>",
+        fr: "La convergence des arguments philosophiques (les Cinq Voies) et historiques (la Résurrection) présente un argument puissant pour l'existence de Dieu. Les Cinq Voies montrent que l'univers est <em>intelligible</em> et nécessite une première cause nécessaire, incausée, parfaite et intelligente pour expliquer ses réalités les plus fondamentales : <strong class='text-white'>le changement, l'existence, la perfection et la finalité.</strong>",
+        es: "La convergencia de los argumentos filosóficos (las Cinco Vías) e históricos (la Resurrección) presenta un caso poderoso para la existencia de Dios. Las Cinco Vías muestran que el universo es <em>inteligible</em> y requiere una primera cause necesaria, incausada, perfecta e inteligente para dar cuenta de sus realidades más fundamentales: <strong class='text-white'>cambio, existencia, perfección y propósito.</strong>",
+        de: "Die Konvergenz der philosophischen (die Fünf Wege) und der historischen (die Auferstehung) Argumente liefert einen überzeugenden Fall für die Existenz Gottes. Die Fünf Wege zeigen, dass das Universum <em>verständlich</em> ist und eine notwendige, unverursachte, vollkommene und intelligente erste Ursache benötigt, um seine grundlegendsten Realitäten zu erklären: <strong class='text-white'>Veränderung, Existenz, Vollkommenheit und Zweck.</strong>",
+      },
+      para2: {
+        en: "These reasoned arguments demonstrate that belief in a transcendent being is rational and provides the most coherent and complete worldview. They do not force belief but open the door for faith, showing that <strong class='text-white'>reason and faith are harmonious paths</strong> toward the same truth.",
+        fr: "Ces arguments raisonnés démontrent que la croyance en un être transcendant est rationnelle et offre la vision du monde la plus cohérente et complète. Ils n'imposent pas la croyance, mais ouvrent la voie à la foi, montrant que <strong class='text-white'>la raison et la foi sont des chemins harmonieux</strong> vers la même vérité.",
+        es: "Estos argumentos razonados demuestran que la creencia en un ser trascendente es racional y proporciona la visión del mundo más coherente y completa. No fuerzan la creencia, sino que abren la puerta a la fe, mostrando que <strong class='text-white'>la razón y la fe son caminos armoniosos</strong> hacia la misma verdad.",
+        de: "Diese begründeten Argumente zeigen, dass der Glaube an ein transzendes Wesen rational ist und die kohärenteste und vollständigste Weltanschauung bietet. Sie erzwingen keinen Glauben, sondern öffnen die Tür zum Glauben und zeigen, dass <strong class='text-white'>Vernunft und Glaube harmonische Wege</strong> zur selben Wahrheit sind.",
+      },
+      para3: {
+        en: "The Unmoved Mover, the Uncaused Cause, the Necessary Being, the Perfect Good, and the Intelligent Governor are all different names for the same ultimate reality: God.",
+        fr: "Le Moteur Immuable, la Cause Incréée, l'Être Nécessaire, le Bien Parfait et le Gouverneur Intelligent sont tous des noms différents pour la même réalité ultime : Dieu.",
+        es: "El Motor Inmóvil, la Causa Incualificada, el Ser Necesario, el Bien Perfecto y el Gobernador Inteligente son todos nombres diferentes para la misma realidad última: Dios.",
+        de: "Der Unbewegte Beweger, die Unverursachte Ursache, das Notwendige Wesen, das Perfekte Gut und der Intelligente Regierer sind alle verschiedene Namen für dieselbe ultimative Realität: Gott.",
+      },
     },
 
-    hallucinationTitle: {
-      en: "A. Hallucination Hypothesis",
-      fr: "A. Hypothèse de l'Hallucination",
-      es: "A. Hipótesis de la Alucinación",
-      de: "A. Halluzinations-Hypothese",
-    },
-    hallucinationIntro: {
-      en: "This theory suggests the disciples were grieving and merely hallucinated the appearances. This fails because:",
-      fr: "Cette théorie suggère que les disciples étaient en deuil et ont simplement halluciné les apparitions. Cela échoue parce que :",
-      es: "Esta teoría sugiere que los discípulos estaban de luto y simplemente alucinaron las apariciones. Esto falla porque:",
-      de: "Diese Theorie besagt, dass die Jünger trauerten und die Erscheinungen nur halluzinierten. Dies scheitert, weil:",
-    },
-    hallucinationPoint1: {
-      en: "<strong class='text-white'>It cannot explain group events.</strong> Hallucinations are private, individual experiences, like a dream. They do not happen to groups of people simultaneously, let alone groups of 500 (1 Corinthians 15:6).",
-      fr: "<strong class='text-white'>Elle ne peut expliquer les événements de groupe.</strong> Les hallucinations sont des expériences privées et individuelles, comme un rêve. Elles n'arrivent pas à des groupes de personnes simultanément, encore moins à des groupes de 500 (1 Corinthiens 15:6).",
-      es: "<strong class='text-white'>No puede explicar eventos grupales.</strong> Las alucinaciones son experiencias privadas e individuales, como un sueño. No le suceden a grupos de personas simultáneamente, y mucho menos a grupos de 500 (1 Corintios 15:6).",
-      de: "<strong class='text-white'>Sie kann keine Gruppenereignisse erklären.</strong> Halluzinationen sind private, individuelle Erfahrungen, wie ein Traum. Sie geschehen nicht Gruppen von Menschen gleichzeitig, geschweige denn Gruppen von 500 (1. Korinther 15:6).",
-    },
-    hallucinationPoint2: {
-      en: "<strong class='text-white'>It cannot explain the empty tomb.</strong> Even if the disciples hallucinated, Jesus's body would still be in the tomb. The authorities could have easily produced the body and stopped Christianity.",
-      fr: "<strong class='text-white'>Elle ne peut expliquer le tombeau vide.</strong> Même si les disciples avaient halluciné, le corps de Jésus serait toujours dans le tombeau. Les autorités auraient pu facilement produire le corps et arrêter le christianisme.",
-      es: "<strong class='text-white'>No puede explicar la tumba vacía.</strong> Incluso si los discípulos hubieran alucinado, el cuerpo de Jesús seguiría en la tumba. Las autoridades podrían haber presentado fácilmente el cuerpo y detenido el cristianismo.",
-      de: "<strong class='text-white'>Sie kann das leere Grab nicht erklären.</strong> Selbst wenn die Jünger halluziniert hätten, wäre Jesu Körper immer noch im Grab gewesen. Die Behörden hätten den Körper leicht vorzeigen und das Christentum stoppen können.",
-    },
-    hallucinationPoint3: {
-      en: "<strong class='text-white'>It cannot explain the conversion of skeptics.</strong> Paul was a hostile persecutor, not a grieving follower. His psychology was predisposed *against* seeing Jesus, not for it.",
-      fr: "<strong class='text-white'>Elle ne peut expliquer la conversion des sceptiques.</strong> Paul était un persécuteur hostile, pas un disciple en deuil. Sa psychologie était prédisposée *contre* le fait de voir Jésus, pas en sa faveur.",
-      es: "<strong class='text-white'>No puede explicar la conversión de los escépticos.</strong> Pablo era un perseguidor hostil, no un seguidor afligido. Su psicología estaba predispuesta *en contra* de ver a Jesús, no a favor.",
-      de: "<strong class='text-white'>Sie kann die Bekehrung von Skeptikern nicht erklären.</strong> Paulus war ein feindseliger Verfolger, kein trauernder Anhänger. Seine Psychologie war *gegen* die Erscheinung Jesu voreingenommen, nicht dafür.",
-    },
-
-    wrongTombTitle: {
-      en: "B. Wrong Tomb Hypothesis",
-      fr: "B. Hypothèse du Mauvais Tombeau",
-      es: "B. Hipótesis de la Tumba Equivocada",
-      de: "B. Falsch-Grab-Hypothese",
-    },
-    wrongTombIntro: {
-      en: "This theory suggests the women and disciples simply went to the wrong tomb. This fails because:",
-      fr: "Cette théorie suggère que les femmes et les disciples se sont simplement trompés de tombeau. Cela échoue parce que :",
-      es: "Esta teoría sugiere que las mujeres y los discípulos simplemente fueron a la tumba equivocada. Esto falla porque:",
-      de: "Diese Theorie besagt, dass die Frauen und Jünger einfach zum falschen Grab gingen. Dies scheitert, weil:",
-    },
-    wrongTombPoint1: {
-      en: "<strong class='text-white'>The tomb was known to the authorities.</strong> The tomb belonged to Joseph of Arimathea, a member of the Jewish Sanhedrin. It was a known, private tomb, not an unmarked public grave.",
-      fr: "<strong class='text-white'>Le tombeau était connu des autorités.</strong> Le tombeau appartenait à Joseph d'Arimathie, membre du Sanhédrin juif. C'était un tombeau privé et connu, pas une fosse commune anonyme.",
-      es: "<strong class='text-white'>La tumba era conocida por las autoridades.</strong> La tumba pertenecía a José de Arimatea, un miembro del Sanedrín judío. Era una tumba privada y conocida, no una fosa pública sin marcar.",
-      de: "<strong class='text-white'>Das Grab war den Behörden bekannt.</strong> Das Grab gehörte Joseph von Arimathäa, einem Mitglied des jüdischen Sanhedrins. Es war ein bekanntes Privatgrab, kein unbezeichnetes öffentliches Grab.",
-    },
-    wrongTombPoint2: {
-      en: "<strong class='text-white'>The authorities would have produced the body.</strong> If the disciples were preaching the resurrection while Jesus was in a known tomb, the Jewish or Roman authorities would have immediately gone to the correct tomb, produced the body, and paraded it through Jerusalem, ending Christianity on the spot.",
-      fr: "<strong class='text-white'>Les autorités auraient produit le corps.</strong> Si les disciples prêchaient la résurrection alors que Jésus était dans un tombeau connu, les autorités juives ou romaines seraient immédiatement allées au bon tombeau, auraient produit le corps et l'auraient paradé à travers Jérusalem, mettant fin au christianisme sur-le-champ.",
-      es: "<strong class='text-white'>Las autoridades habrían presentado el cuerpo.</strong> Si los discípulos estuvieran predicando la resurrección mientras Jesús estaba en una tumba conocida, las autoridades judías ou romanas habrían ido inmediatamente a la tumba correcta, habrían presentado el cuerpo y lo habrían paseado por Jerusalén, acabando con el cristianismo en el acto.",
-      de: "<strong class='text-white'>Die Behörden hätten den Körper vorgezeigt.</strong> Wenn die Jünger die Auferstehung gepredigt hätten, während Jesus in einem bekannten Grab lag, wären die jüdischen oder römischen Behörden sofort zum richtigen Grab gegangen, hätten den Körper geholt und ihn durch Jerusalem getragen, was das Christentum auf der Stelle beendet hätte.",
-    },
-
-    stolenBodyTitle: {
-      en: "C. Stolen Body Theory",
-      fr: "C. Théorie du Corps Volé",
-      es: "C. Teoría del Cuerpo Robado",
-      de: "C. Gestohlener-Körper-Theorie",
-    },
-    stolenBodyIntro: {
-      en: "This theory suggests the disciples stole the body and lied. This is the earliest polemic, mentioned in Matthew 28, but it fails because:",
-      fr: "Cette théorie suggère que les disciples ont volé le corps et ont menti. C'est la plus ancienne polémique, mentionnée dans Matthieu 28, mais elle échoue parce que :",
-      es: "Esta teoría sugiere que los discípulos robaron el cuerpo y mintieron. Esta es la polémica más temprana, mencionada en Mateo 28, pero falla porque:",
-      de: "Diese Theorie besagt, dass die Jünger den Körper stahlen und logen. Dies ist die früheste Polemik, die in Matthäus 28 erwähnt wird, aber sie scheitert, weil:",
-    },
-    stolenBodyPoint1: {
-      en: "<strong class='text-white'>It fails psychologically.</strong> The disciples were defeated, terrified, and hiding. They had no motive to invent a lie that would only bring them persecution, torture, and martyrdom. People will die for what they believe is true, but not for what they know is a lie.",
-      fr: "<strong class='text-white'>Elle échoue psychologiquement.</strong> Les disciples étaient vaincus, terrifiés et se cachaient. Ils n'avaient aucun motif d'inventer un mensonge qui ne leur apporterait que persécution, torture et martyre. Les gens meurent pour ce qu'ils croient être vrai, mais pas pour ce qu'ils savent être un mensonge.",
-      es: "<strong class='text-white'>Falla psicológicamente.</strong> Los discípulos estaban derrotados, aterrorizados y escondidos. No tenían ningún motivo para inventar una mentira que solo les traería persecución, tortura y martirio. La gente muere por lo que cree que es verdad, pero no por lo que sabe que es una mentira.",
-      de: "<strong class='text-white'>Sie versagt psychologisch.</strong> Die Jünger waren besiegt, verängstigt und versteckten sich. Sie hatten kein Motiv, eine Lüge zu erfinden, die ihnen nur Verfolgung, Folter und Martyrium einbringen würde. Menschen sterben für das, was sie für wahr halten, aber nicht für das, was sie als Lüge kennen.",
-    },
-    stolenBodyPoint2: {
-      en: "<strong class='text-white'>It cannot explain the appearances or conversions.</strong> This theory cannot account for the disciples' sincere belief that they saw Jesus alive, nor can it explain the conversions of the skeptics James and Paul.",
-      fr: "<strong class='text-white'>Elle ne peut expliquer les apparitions ni les conversions.</strong> Cette théorie ne peut pas expliquer la croyance sincère des disciples qu'ils ont vu Jésus vivant, ni les conversions des sceptiques Jacques et Paul.",
-      es: "<strong class='text-white'>No puede explicar las apariciones ni las conversiones.</strong> Esta teoría no puede explicar la creencia sincera de los discípulos de que vieron a Jesús vivo, ni puede explicar las conversiones de los escépticos Santiago y Pablo.",
-      de: "<strong class='text-white'>Sie kann die Erscheinungen oder Bekehrungen nicht erklären.</strong> Diese Theorie kann weder den aufrichtigen Glauben der Jünger erklären, dass sie Jesus lebend sahen, noch die Bekehrungen der Skeptiker Jakobus und Paulus.",
-    },
-
-    resurrectionTitle: {
-      en: "D. Resurrection Hypothesis",
-      fr: "D. Hypothèse de la Résurrection",
-      es: "D. Hipótesis de la Resurrección",
-      de: "D. Auferstehungs-Hypothese",
-    },
-    resurrectionIntro: {
-      en: "This is the only theory that fits all four facts:",
-      fr: "C'est la seule théorie qui correspond aux quatre faits :",
-      es: "Esta es la única teoría que se ajusta a los cuatro hechos:",
-      de: "Dies ist die einzige Theorie, die zu allen vier Fakten passt:",
-    },
-    resurrectionPoint1: {
-      en: "It explains the empty tomb (He rose), the appearances (He showed Himself), the disciples' belief (they saw Him), and the conversions of skeptics (they also saw Him).",
-      fr: "Elle explique le tombeau vide (Il est ressuscité), les apparitions (Il s'est montré), la croyance des disciples (ils L'ont vu), et les conversions des sceptiques (ils L'ont vu aussi).",
-      es: "Explica la tumba vacía (resucitó), las apariciones (se mostró), la creencia de los discípulos (lo vieron), y las conversiones de los escépticos (también lo vieron).",
-      de: "Sie erklärt das leere Grab (Er ist auferstanden), die Erscheinungen (Er zeigte sich), den Glauben der Jünger (sie sahen Ihn), und die Bekehrungen der Skeptiker (sie sahen Ihn auch).",
-    },
-    resurrectionPoint2: {
-      en: "It is coherent, has immense explanatory power, and is the simplest explanation that accounts for all the data without exception.",
-      fr: "Elle est cohérente, possède un immense pouvoir explicatif et constitue l'explication la plus simple qui rend compte de toutes les données sans exception.",
-      es: "Es coherente, tiene un inmenso poder explicativo y es la explicación más simple que da cuenta de todos los datos sin excepción.",
-      de: "Sie ist kohärent, hat eine immense Erklärungskraft und ist die einfachste Erklärung, die alle Daten ausnahmslos berücksichtigt.",
+    bridge: {
+      heading: {
+        en: "Next Step: The Historical Proof",
+        fr: "Étape Suivante : La Preuve Historique",
+        es: "Siguiente Paso: La Prueba Histórica",
+        de: "Nächster Schritt: Der Historische Beweis",
+      },
+      para1: {
+        en: "With a rational basis for the existence of God established through philosophy, we can now examine the most specific and historically verifiable claim in Christianity: the Resurrection of Jesus Christ.",
+        fr: "Avec une base rationnelle pour l'existence de Dieu établie par la philosophie, nous pouvons maintenant examiner l'affirmation la plus spécifique et historiquement vérifiable du Christianisme : la Résurrection de Jésus-Christ.",
+        es: "Con una base racional para la existencia de Dios establecida a través de la filosofía, ahora podemos examinar la afirmación más específica e históricamente verificable en el Cristianismo: la Resurrección de Jesucristo.",
+        de: "Mit einer durch Philosophie etablierten rationalen Grundlage für die Existenz Gottes können wir nun die spezifischste und historisch überprüfbarste Behauptung im Christentum untersuchen: die Auferstehung Jesu Christi.",
+      },
+      para2: {
+        en: "The historical evidence that the Resurrection actually happened is a decisive, compelling reason to accept the truth of the Christian God and the unique claims of the Catholic faith.",
+        fr: "La preuve historique que la Résurrection s'est réellement produite est une raison décisive et convaincante d'accepter la vérité du Dieu Chrétien et les affirmations uniques de la foi Catholique.",
+        es: "La evidencia histórica de que la Resurrección realmente sucedió es una razón decisiva e convincente para aceptar la verdad del Dios Cristiano y las afirmaciones únicas de la fe Católica.",
+        de: "Der historische Beweis, dass die Auferstehung tatsächlich stattgefunden hat, ist ein entscheidender, zwingender Grund, die Wahrheit des christlichen Gottes und die einzigartigen Ansprüche des katholischen Glaubens anzunehmen.",
+      },
     },
   },
+  proofOfResurrection: {
+      title: {
+        en: "Evidence for the Resurrection",
+        fr: "Preuves de la Résurrection",
+        es: "Evidencia de la Resurrección",
+        de: "Beweise für die Auferstehung",
+      },
+      subtitle: {
+        en: "The Historical Case for Easter",
+        fr: "Le Cas Historique pour Pâques",
+        es: "El Caso Histórico para la Pascua",
+        de: "Der Historische Fall für Ostern",
+      },
+      quote: {
+        en: '"If Christ has not been raised, then our preaching is in vain and your faith is in vain."',
+        fr: '"Si Christ n\'a pas été ressuscité, alors notre prédication est vaine et votre foi est vaine."',
+        es: '"Si Cristo no ha resucitado, entonces nuestra predicación es en vano y vuestra fe es en vano."',
+        de: '"Wenn Christus nicht auferstanden ist, dann ist unsere Predigt vergeblich und euer Glaube ist vergeblich."',
+      },
+      quoteSource: {
+        en: "1 Corinthians 15:14",
+        fr: "1 Corinthiens 15:14",
+        es: "1 Corintios 15:14",
+        de: "1. Korinther 15,14",
+      },
 
-  // NEW: Additional Video Section
-  additionalVideo: {
-    heading: {
-      en: "An Additional Perspective on the Evidence",
-      fr: "Une Perspective Supplémentaire sur les Preuves",
-      es: "Una Perspectiva Adicional sobre la Evidencia",
-      de: "Eine Zusätzliche Perspektive auf die Beweise",
-    },
-  },
+      // --- Introduction ---
+      introHeading: {
+        en: "Is Christianity Rooted in History?",
+        fr: "Le Christianisme Est-il Enraciné dans l'Histoire ?",
+        es: "¿Está el Cristianismo Arraigado en la Historia?",
+        de: "Ist das Christentum in der Geschichte verwurzelt?",
+      },
+      introPara1: {
+        en: "The Christian faith is not founded on abstract ideas or moral ideals alone. It is grounded in historical events, real occurrences in space and time that can be investigated, analyzed, and compared with other events in ancient history.",
+        fr: "La foi chrétienne n'est pas fondée uniquement sur des idées abstraites ou des idéaux moraux. Elle est ancrée dans des événements historiques, des occurrences réelles dans l'espace et le temps qui peuvent être enquêtées, analysées et comparées avec d'autres événements de l'histoire ancienne.",
+        es: "La fe cristiana no se funda únicamente en ideas abstractas o ideales morales. Está arraigada en eventos históricos, ocurrencias reales en el espacio y el tiempo que pueden ser investigadas, analizadas y comparadas con otros eventos de la historia antigua.",
+        de: "Der christliche Glaube gründet sich nicht allein auf abstrakte Ideen oder moralische Ideale. Er ist in historischen Ereignissen verwurzelt, tatsächlichen Vorkommnissen in Raum und Zeit, die untersucht, analysiert und mit anderen Ereignissen der antiken Geschichte verglichen werden können.",
+      },
+      introPara2: {
+        en: 'If these events are true, Christianity stands as the most rational worldview available. If not, as Paul wrote: "If Christ has not been raised, then our preaching is in vain and your faith is in vain." (1 Corinthians 15:14)',
+        fr: 'Si ces événements sont vrais, le christianisme se présente comme la vision du monde la plus rationnelle disponible. Sinon, comme Paul l\'a écrit : « Si Christ n\'a pas été ressuscité, alors notre prédication est vaine et votre foi est vaine. » (1 Corinthiens 15:14)',
+        es: 'Si estos eventos son verdaderos, el cristianismo se presenta como la cosmovisión más racional disponible. Si no, como escribió Pablo: "Si Cristo no ha resucitado, entonces nuestra predicación es en vano y vuestra fe es en vano." (1 Corintios 15:14)',
+        de: 'Wenn diese Ereignisse wahr sind, steht das Christentum als die rationalste verfügbare Weltanschauung da. Wenn nicht, wie Paulus schrieb: „Wenn Christus nicht auferstanden ist, dann ist unsere Predigt vergeblich und euer Glaube ist vergeblich." (1. Korinther 15,14)',
+      },
 
-  // Section 6: Rationality (EXPANDED & QUOTE REMOVED)
-  rationality: {
-    heading: {
-      en: "6. Rationality of the Resurrection",
-      fr: "6. Rationalité de la Résurrection",
-      es: "6. Racionalidad de la Resurrección",
-      de: "6. Rationalität der Auferstehung",
-    },
-    intro: {
-      en: "The resurrection of Jesus is not merely a religious belief. It is the best historical explanation for the collection of agreed-upon facts. When historians evaluate theories, they look for specific criteria:",
-      fr: "La résurrection de Jésus n'est pas simplement une croyance religieuse. C'est la meilleure explication historique pour l'ensemble des faits reconnus. Lorsque les historiens évaluent les théories, ils recherchent des critères spécifiques :",
-      es: "La resurrección de Jesús no es meramente una creencia religiosa. Es la mejor explicación histórica para el conjunto de hechos acordados. Cuando los historiadores evalúan las teorías, buscan criterios específicos:",
-      de: "Die Auferstehung Jesu ist nicht nur ein religiöser Glaube. Sie ist die beste historische Erklärung für die Sammlung anerkannter Fakten. Wenn Historiker Theorien bewerten, suchen sie nach bestimmten Kriterien:",
-    },
-    hypothesisLabel: {
-      en: "The Resurrection hypothesis meets these criteria perfectly:",
-      fr: "L'hypothèse de la Résurrection répond parfaitement à ces critères :",
-      es: "La hipótesis de la Resurrección cumple perfectamente estos criterios:",
-      de: "Die Auferstehungshypothese erfüllt diese Kriterien perfekt:",
-    },
-    plausible: {
-      en: "Plausible:",
-      fr: "Plausible :",
-      es: "Plausible:",
-      de: "Plausibel:",
-    },
-    plausibleDetail: {
-      en: " It fits the historical and cultural context of Jesus's own unparalleled life and his radical, blasphemous claims to divine authority.",
-      fr: " Elle s'inscrit dans le contexte historique et culturel de la vie sans pareille de Jésus et de ses prétentions radicales et blasphématoires à l'autorité divine.",
-      es: " Se ajusta al contexto histórico y cultural de la vida incomparable de Jesús y sus afirmaciones radicales y blasfemas de autoridad divina.",
-      de: " Sie passt in den historischen und kulturellen Kontext des unvergleichlichen Lebens Jesu und seiner radikalen, blasphemischen Ansprüche auf göttliche Autorität.",
-    },
-    powerful: {
-      en: "Powerful:",
-      fr: "Puissante :",
-      es: "Poderosa:",
-      de: "Kraftvoll:",
-    },
-    powerfulDetail: {
-      en: " It explains all the known data, including the empty tomb, the group appearances, and the sudden, inexplicable transformation of skeptics and cowards into martyrs.",
-      fr: " Elle explique toutes les données connues, y compris le tombeau vide, les apparitions de groupe et la transformation soudaine et inexplicable de sceptiques et de lâches en martyrs.",
-      es: " Explica todos los datos conocidos, incluida la tumba vacía, las apariciones grupales y la transformación repentina e inexplicable de escépticos y cobardes en mártires.",
-      de: " Sie erklärt alle bekannten Daten, einschließlich des leeren Grabs, der Gruppenerscheinungen und der plötzlichen, unerklärlichen Verwandlung von Skeptikern und Feiglingen in Märtyrer.",
-    },
-    consistent: {
-      en: "Consistent:",
-      fr: "Cohérente :",
-      es: "Consistente:",
-      de: "Konsistent:",
-    },
-    consistentDetail: {
-      en: " It aligns with the earliest Christian creeds and external testimony. It is not an <em>ad hoc</em> or contrived theory, as it simply accepts the explanation given by the eyewitnesses themselves.",
-      fr: " Elle s'aligne sur les plus anciens crédos chrétiens et les témoignages externes. Ce n'est pas une théorie <em>ad hoc</em> ou artificielle, car elle accepte simplement l'explication donnée par les témoins oculaires eux-mêmes.",
-      es: " Se alinea con los credos cristianos más antiguos y el testimonio externo. No es una teoría <em>ad hoc</em> o artificial, ya que simplemente acepta la explicación dada por los propios testigos oculares.",
-      de: " Sie stimmt mit den frühesten christlichen Glaubensbekenntnissen und externen Zeugnissen überein. Sie ist keine <em>ad hoc</em> oder erfundene Theorie, da sie einfach die Erklärung der Augenzeugen selbst akzeptiert.",
-    },
-    // craigQuote key removed
-  },
+      // --- Minimal Facts Section ---
+      minimalFacts: {
+        heading: {
+        en: 'The "Minimal Facts" Approach',
+        fr: 'L\'Approche des « Faits Minimaux »',
+        es: 'El Enfoque de los "Hechos Mínimos"',
+        de: 'Der Ansatz der „Minimalen Fakten"',
+      },
+      intro: {
+        en: "Developed by scholars like Gary Habermas, the Minimal Facts Approach builds a case for the resurrection of Jesus based on a small set of historical data that meet two criteria:",
+        fr: "Développée par des chercheurs comme Gary Habermas, l'Approche des Faits Minimaux construit un cas pour la résurrection de Jésus basé sur un petit ensemble de données historiques qui répondent à deux critères :",
+        es: "Desarrollado por académicos como Gary Habermas, el Enfoque de los Hechos Mínimos construye un caso para la resurrección de Jesús basado en un pequeño conjunto de datos históricos que cumplen dos criterios:",
+        de: "Entwickelt von Gelehrten wie Gary Habermas, baut der Ansatz der Minimalen Fakten einen Fall für die Auferstehung Jesu auf, basierend auf einer kleinen Menge historischer Daten, die zwei Kriterien erfüllen:",
+      },
+      criterion1: {
+        en: "<strong class='text-white'>Strong Evidence:</strong> They are strongly evidenced by multiple, independent sources.",
+        fr: "<strong class='text-white'>Preuves Solides :</strong> Ils sont fortement attestés par de multiples sources indépendantes.",
+        es: "<strong class='text-white'>Evidencia Sólida:</strong> Están fuertemente evidenciados por múltiples fuentes independientes.",
+        de: "<strong class='text-white'>Starke Beweise:</strong> Sie sind durch mehrere unabhängige Quellen stark belegt.",
+      },
+      criterion2: {
+        en: "<strong class='text-white'>Scholarly Consensus:</strong> They are accepted by the vast majority of scholars in the field, including skeptical ones.",
+        fr: "<strong class='text-white'>Consensus Académique :</strong> Ils sont acceptés par la grande majorité des chercheurs du domaine, y compris les sceptiques.",
+        es: "<strong class='text-white'>Consenso Académico:</strong> Son aceptados por la gran mayoría de los académicos en el campo, incluidos los escépticos.",
+        de: "<strong class='text-white'>Wissenschaftlicher Konsens:</strong> Sie werden von der überwiegenden Mehrheit der Wissenschaftler auf diesem Gebiet akzeptiert, einschließlich skeptischer.",
+      },
+      
+      support: {
+        en: "These facts are supported by such strong historical data that most scholars accept them, regardless of their religious beliefs. The evidence includes <strong class='text-white'>multiple, independent sources</strong> and the <strong class='text-white'>early creed in 1 Corinthians 15</strong>, dating to within 3-5 years of the crucifixion.",
+        fr: "Ces faits sont étayés par des données historiques si solides que la plupart des chercheurs les acceptent. Les preuves incluent de <strong class='text-white'>multiples sources indépendantes</strong> et le <strong class='text-white'>credo ancien de 1 Corinthiens 15</strong>, datant de 3 à 5 ans après la crucifixion.",
+        es: "Estos hechos están respaldados por datos históricos tan sólidos que la mayoría de los académicos los aceptan. La evidencia incluye <strong class='text-white'>múltiples fuentes independientes</strong> y el <strong class='text-white'>credo temprano en 1 Corintios 15</strong>.",
+        de: "Diese Fakten werden durch so starke historische Daten gestützt, dass die meisten Gelehrten sie akzeptieren. Die Beweise umfassen <strong class='text-white'>mehrere unabhängige Quellen</strong> und das <strong class='text-white'>frühe Glaubensbekenntnis in 1. Korinther 15</strong>.",
+      },
 
-  
-  // Conclusion (UPDATED)
-  conclusion: {
-    heading: {
-      en: "7. Faith Rooted in History",
-      fr: "7. Une Foi Enracinée dans l'Histoire",
-      es: "7. Una Fe Arraigada en la Historia",
-      de: "7. Glaube, Verwurzelt in der Geschichte",
-    },
-    para1: {
-      en: "Faith in Christ is a reasonable trust based on powerful historical evidence. Christianity, from its very inception, has invited examination and staked its entire claim on the reality of this one event. The resurrection is God's divine seal of approval on Jesus, validating his claims to be the unique, authoritative Son of God.",
-      fr: "La foi en Christ est une confiance raisonnable basée sur de solides preuves historiques. Le christianisme, depuis sa création, a invité à l'examen et a fondé toute sa revendication sur la réalité de cet unique événement. La résurrection est le sceau divin d'approbation de Dieu sur Jésus, validant ses prétentions à être le Fils de Dieu unique et faisant autorité.",
-      es: "La fe en Cristo es una confianza razonable basada en una poderosa evidencia histórica. El cristianismo, desde sus inicios, ha invitado al examen y ha apostado todo a la realidad de este único evento. La resurrección es el sello divino de aprobación de Dios sobre Jesús, validando sus afirmaciones de ser el Hijo de Dios único y autoritativo.",
-      de: "Der Glaube an Christus ist ein vernünftiges Vertrauen, das auf starken historischen Beweisen basiert. Das Christentum hat von Anfang an zur Prüfung eingeladen und seinen gesamten Anspruch auf die Realität dieses einen Ereignisses gesetzt. Die Auferstehung ist Gottes göttliches Gütesiegel für Jesus, das seine Ansprüche bestätigt, der einzigartige, autoritative Sohn Gottes zu sein.",
-    },
-    // New key for the quote
-    conclusionQuote: {
-      en: "Belief in the resurrection is not a leap into the dark, but a step into the light.",
-      fr: "Croire en la résurrection n'est pas un saut dans l'obscurité, mais un pas vers la lumière.",
-      es: "Creer en la resurrección no es un salto en la oscuridad, sino un paso hacia la luz.",
-      de: "Der Glaube an die Auferstehung ist kein Sprung ins Dunkle, sondern ein Schritt ins Licht.",
-    },
-    // Modified para2, with the quote text and <strong> tags removed
-    para2: {
-      en: "When we align our worldview with the historical reality of the life, death, and resurrection of Jesus, we are not merely embracing a religion. We are aligning ourselves with the truth about history itself.",
-      fr: "Lorsque nous alignons notre vision du monde avec la réalité historique de la vie, de la mort et de la résurrection de Jésus, nous n'embrassons pas simplement une religion. Nous nous alignons avec la vérité sur l'histoire elle-même.",
-      es: "Cuando alineamos nuestra cosmovisión con la realidad histórica de la vida, muerte y resurrección de Jesús, no estamos meramente abrazando una religión. Nos estamos alineando con la verdad sobre la historia misma.",
-      de: "Wenn wir unsere Weltanschauung mit der historischen Realität von Leben, Tod und Auferstehung Jesu in Einklang bringen, nehmen wir nicht nur eine Religion an. Wir richten uns nach der Wahrheit über die Geschichte selbst.",
-    },
-  },
+      // --- Expanded Fact Content ---
+      fact1: {
+        title: { 
+          en: "1. Jesus died by crucifixion", 
+          fr: "1. Jésus est mort par crucifixion", 
+          es: "1. Jesús murió por crucifixión", 
+          de: "1. Jesus starb durch Kreuzigung" 
+        },
+        summary: { 
+          en: "Supported by both Christian and non-Christian sources.", 
+          fr: "Soutenu par des sources chrétiennes et non chrétiennes.", 
+          es: "Respaldado por fuentes cristianas y no cristianas.", 
+          de: "Unterstützt durch christliche und nicht-christliche Quellen." 
+        },
+        content: {
+          en: `
+            <div class="space-y-4 text-gray-300">
+              <p>Jesus' death by crucifixion is one of the most secure facts of history. It is recorded not only in the New Testament but also by secular historians of the era.</p>
+              <h4 class="text-white font-semibold mt-4">Historical Evidence:</h4>
+              <ul class="list-disc pl-5 space-y-2">
+                <li><strong class="text-red-400">Josephus (Jewish Historian):</strong> Explicitly reports that Pilate condemned Jesus to be crucified upon the accusation of high-ranking men.</li>
+                <li><strong class="text-red-400">Tacitus (Roman Historian):</strong> Confirms that Christ "suffered the extreme penalty" (a Roman euphemism for crucifixion) during the reign of Tiberius.</li>
+                <li><strong class="text-red-400">The Jewish Talmud:</strong> Reports that "Yeshu was hanged" on the eve of Passover. Being "hanged on a tree" was the common Jewish description for crucifixion.</li>
+              </ul>
+              <div class="bg-gray-800/50 p-4 rounded-lg border-l-4 border-red-500 mt-4">
+                <p class="italic">"That he was crucified is as sure as anything historical can ever be." <br/><span class="text-sm text-gray-400">- John Dominic Crossan (Co-founder of the Jesus Seminar)</span></p>
+              </div>
+            </div>`,
+          fr: `
+    <div class="space-y-4 text-gray-300">
+      <p>La mort de Jésus par crucifixion est l’un des faits les plus certains de l’histoire. Elle est attestée non seulement dans le Nouveau Testament mais aussi par des historiens laïques de l’époque.</p>
 
-  // Bridge to Next Topic
-  bridge: {
-    heading: {
-      en: "Moving Forward",
-      fr: "Aller de l'Avant",
-      es: "Avanzando",
-      de: "Weitergehen",
+      <h4 class="text-white font-semibold mt-4">Preuves historiques :</h4>
+      <ul class="list-disc pl-5 space-y-2">
+        <li><strong class="text-red-400">Josèphe (Historien juif) :</strong> Rapporte explicitement que Pilate a condamné Jésus à être crucifié sur l’accusation d’hommes de haut rang.</li>
+        <li><strong class="text-red-400">Tacite (Historien romain) :</strong> Confirme que le Christ « a subi la peine extrême » (euphémisme romain pour la crucifixion) sous le règne de Tibère.</li>
+        <li><strong class="text-red-400">Le Talmud juif :</strong> Affirme que « Yeshu a été pendu » la veille de la Pâque. Être « pendu à un arbre » était la manière juive de désigner la crucifixion.</li>
+      </ul>
+
+      <div class="bg-gray-800/50 p-4 rounded-lg border-l-4 border-red-500 mt-4">
+        <p class="italic">« Qu’il ait été crucifié est aussi certain que n’importe quel fait historique peut l’être. »<br/>
+        <span class="text-sm text-gray-400">- John Dominic Crossan (Cofondateur du Jesus Seminar)</span></p>
+      </div>
+    </div>`,
+
+  es: `
+    <div class="space-y-4 text-gray-300">
+      <p>La muerte de Jesús por crucifixión es uno de los hechos más seguros de la historia. Está registrada no solo en el Nuevo Testamento sino también por historiadores seculares de la época.</p>
+
+      <h4 class="text-white font-semibold mt-4">Evidencia histórica:</h4>
+      <ul class="list-disc pl-5 space-y-2">
+        <li><strong class="text-red-400">Josefo (Historiador judío):</strong> Informa explícitamente que Pilato condenó a Jesús a ser crucificado a petición de hombres influyentes.</li>
+        <li><strong class="text-red-400">Tácito (Historiador romano):</strong> Confirma que Cristo « sufrió la pena extrema » (eufemismo romano para crucifixión) durante el reinado de Tiberio.</li>
+        <li><strong class="text-red-400">El Talmud judío:</strong> Afirma que « Yeshu fue colgado » en la víspera de la Pascua. « Colgado en un árbol » era la expresión judía común para la crucifixión.</li>
+      </ul>
+
+      <div class="bg-gray-800/50 p-4 rounded-lg border-l-4 border-red-500 mt-4">
+        <p class="italic">« Que fue crucificado es tan seguro como cualquier hecho histórico puede serlo. »<br/>
+        <span class="text-sm text-gray-400">- John Dominic Crossan (Cofundador del Jesus Seminar)</span></p>
+      </div>
+    </div>`,
+
+  de: `
+    <div class="space-y-4 text-gray-300">
+      <p>Der Tod Jesu durch Kreuzigung ist eine der sichersten Tatsachen der Geschichte. Er wird nicht nur im Neuen Testament, sondern auch von säkularen Historikern der Zeit bezeugt.</p>
+
+      <h4 class="text-white font-semibold mt-4">Historische Belege:</h4>
+      <ul class="list-disc pl-5 space-y-2">
+        <li><strong class="text-red-400">Josephus (Jüdischer Historiker):</strong> Berichtet ausdrücklich, dass Pilatus Jesus auf Anklage hochrangiger Männer zur Kreuzigung verurteilte.</li>
+        <li><strong class="text-red-400">Tacitus (Römischer Historiker):</strong> Bestätigt, dass Christus unter Tiberius « die äußerste Strafe erlitt » (römisches Euphemismus für Kreuzigung).</li>
+        <li><strong class="text-red-400">Der jüdische Talmud:</strong> Berichtet, dass « Yeshu am Vorabend des Passahfestes gehängt wurde ». « An einen Baum gehängt » war die übliche jüdische Ausdrucksweise für Kreuzigung.</li>
+      </ul>
+
+      <div class="bg-gray-800/50 p-4 rounded-lg border-l-4 border-red-500 mt-4">
+        <p class="italic">« Dass er gekreuzigt wurde, ist so sicher wie irgendeine historische Tatsache nur sein kann. »<br/>
+        <span class="text-sm text-gray-400">- John Dominic Crossan (Mitbegründer des Jesus Seminar)</span></p>
+      </div>
+    </div>`
+}
+      },
+      fact2: {
+        title: { 
+          en: "2. Disciples' Beliefs", 
+          fr: "2. Croyances des Disciples", 
+          es: "2. Creencias de los Discípulos", 
+          de: "2. Glauben der Jünger" 
+        },
+        summary: { 
+          en: "They sincerely believed they saw the risen Jesus.", 
+          fr: "Ils croyaient sincèrement avoir vu Jésus ressuscité.", 
+          es: "Creían sinceramente haber visto a Jesús resucitado.", 
+          de: "Sie glaubten aufrichtig, den auferstandenen Jesus gesehen zu haben." 
+        },
+        content: {
+          en: `
+            <div class="space-y-4 text-gray-300">
+              <p>After the crucifixion, the disciples were devastated, fearful, and hiding. Yet, mere weeks later, they were boldly proclaiming his resurrection in the very city where he was killed.</p>
+              <h4 class="text-white font-semibold mt-4">Why this matters:</h4>
+              <ul class="list-disc pl-5 space-y-2">
+                <li><strong>Transformation:</strong> They went from cowering in fear to fearless proclaimers willing to face torture. Something dramatic happened to cause this change.</li>
+                <li><strong>Willingness to Die:</strong> Liars make poor martyrs. While people will die for what they believe is true, nobody willingly dies for what they <em>know</em> is a lie. The disciples were in a unique position to know the truth.</li>
+                <li><strong>Group Experiences:</strong> The creed in 1 Corinthians 15:3-7 (dated to within 3-5 years of the event) lists appearances to groups, such as the Twelve and 500 brethren at once. Hallucinations are individual, not shared group events.</li>
+              </ul>
+            </div>`,
+          fr: `<div class="space-y-4 text-gray-300">
+              <p>Après la crucifixion, les disciples étaient dévastés, effrayés et se cachaient. Pourtant, quelques semaines plus tard à peine, ils proclamaient avec audace sa résurrection dans la ville même où il avait été tué.</p>
+              <h4 class="text-white font-semibold mt-4">Pourquoi cela compte :</h4>
+              <ul class="list-disc pl-5 space-y-2">
+                <li><strong>Transformation :</strong> Ils sont passés de la peur panique à des proclamateurs intrépides prêts à affronter la torture. Quelque chose de dramatique s'est produit pour causer ce changement.</li>
+                <li><strong>Volonté de Mourir :</strong> Les menteurs font de mauvais martyrs. Alors que les gens meurent pour ce qu'ils croient être vrai, personne ne meurt volontiers pour ce qu'il <em>sait</em> être un mensonge. Les disciples étaient dans une position unique pour connaître la vérité.</li>
+                <li><strong>Expériences de Groupe :</strong> Le credo de 1 Corinthiens 15:3-7 (daté de 3 à 5 ans après l'événement) énumère des apparitions à des groupes, tels que les Douze et 500 frères à la fois. Les hallucinations sont individuelles, pas des événements de groupe partagés.</li>
+              </ul>
+            </div>`,
+          es: `<div class="space-y-4 text-gray-300">
+              <p>Después de la crucifixión, los discípulos estaban devastados, temerosos y escondidos. Sin embargo, apenas unas semanas después, proclamaban audazmente su resurrección en la misma ciudad donde fue asesinado.</p>
+              <h4 class="text-white font-semibold mt-4">Por qué esto importa:</h4>
+              <ul class="list-disc pl-5 space-y-2">
+                <li><strong>Transformación:</strong> Pasaron de encogerse de miedo a ser proclamadores intrépidos dispuestos a enfrentar la tortura. Algo dramático sucedió para causar este cambio.</li>
+                <li><strong>Disposición a Morir:</strong> Los mentirosos son malos mártires. Mientras que la gente muere por lo que cree que es verdad, nadie muere voluntariamente por lo que <em>sabe</em> que es una mentira. Los discípulos estaban en una posición única para conocer la verdad.</li>
+                <li><strong>Experiencias Grupales:</strong> El credo en 1 Corintios 15:3-7 (fechado entre 3 y 5 años del evento) enumera apariciones a grupos, como los Doce y 500 hermanos a la vez. Las alucinaciones son individuales, no eventos grupales compartidos.</li>
+              </ul>
+            </div>`,
+          de: `<div class="space-y-4 text-gray-300">
+              <p>Nach der Kreuzigung waren die Jünger am Boden zerstört, ängstlich und versteckten sich. Doch nur wenige Wochen später verkündeten sie kühn seine Auferstehung in genau der Stadt, in der er getötet wurde.</p>
+              <h4 class="text-white font-semibold mt-4">Warum dies wichtig ist:</h4>
+              <ul class="list-disc pl-5 space-y-2">
+                <li><strong>Transformation:</strong> Sie wandelten sich von ängstlichem Kauern zu furchtlosen Verkündigern, die bereit waren, Folter zu ertragen. Etwas Dramatisches geschah, um diese Veränderung zu bewirken.</li>
+                <li><strong>Bereitschaft zu Sterben:</strong> Lügner sind schlechte Märtyrer. Während Menschen für das sterben, was sie für wahr halten, stirbt niemand freiwillig für das, von dem er <em>weiß</em>, dass es eine Lüge ist. Die Jünger waren in einer einzigartigen Position, um die Wahrheit zu kennen.</li>
+                <li><strong>Gruppenerlebnisse:</strong> Das Glaubensbekenntnis in 1. Korinther 15,3-7 (datiert auf 3-5 Jahre nach dem Ereignis) listet Erscheinungen vor Gruppen auf, wie den Zwölf und 500 Brüdern auf einmal. Halluzinationen sind individuell, keine geteilten Gruppenereignisse.</li>
+              </ul>
+            </div>`,
+        }
+      },
+      fact3: {
+        title: { 
+          en: "3. Conversion of Paul", 
+          fr: "3. Conversion de Paul", 
+          es: "3. Conversión de Pablo", 
+          de: "3. Bekehrung von Paulus" 
+        },
+        summary: { 
+          en: "A hostile persecutor of the church suddenly converted based on an appearance.", 
+          fr: "Un persécuteur hostile converti suite à une apparition.", 
+          es: "Un perseguidor hostil convertido tras una aparición.", 
+          de: "Ein feindseliger Verfolger bekehrte sich aufgrund einer Erscheinung." 
+        },
+        content: {
+          en: `
+            <div class="space-y-4 text-gray-300">
+              <p>Paul (Saul of Tarsus) was not a follower of Jesus; he was a sworn enemy. He hunted Christians, presided over their executions, and viewed Jesus as a false messiah cursed by God.</p>
+              <p><strong>The Radical Change:</strong> Suddenly, he stopped persecuting the church and began preaching that Jesus is the Son of God. He voluntarily suffered beatings, imprisonment, and execution for this new belief.</p>
+              <p><strong>The Reason:</strong> Paul claimed it was because the risen Jesus appeared to him personally. His bias was strongly <em>against</em> Christianity, making his testimony incredibly powerful. He had nothing to gain socially or politically, and everything to lose.</p>
+            </div>`,
+          fr: `<div class="space-y-4 text-gray-300">
+              <p>Paul (Saul de Tarse) n'était pas un disciple de Jésus ; c'était un ennemi juré. Il traquait les chrétiens, présidait à leurs exécutions et considérait Jésus comme un faux messie maudit par Dieu.</p>
+              <p><strong>Le Changement Radical :</strong> Soudainement, il a cessé de persécuter l'Église et a commencé à prêcher que Jésus est le Fils de Dieu. Il a volontairement subi des coups, l'emprisonnement et l'exécution pour cette nouvelle croyance.</p>
+              <p><strong>La Raison :</strong> Paul a affirmé que c'était parce que Jésus ressuscité lui était apparu personnellement. Son parti pris était fortement <em>contre</em> le christianisme, ce qui rend son témoignage incroyablement puissant. Il n'avait rien à gagner socialement ou politiquement, et tout à perdre.</p>
+            </div>`,
+          es: `<div class="space-y-4 text-gray-300">
+              <p>Pablo (Saulo de Tarso) no era un seguidor de Jesús; era un enemigo jurado. Perseguía a los cristianos, presidía sus ejecuciones y veía a Jesús como un falso mesías maldito por Dios.</p>
+              <p><strong>El Cambio Radical:</strong> De repente, dejó de perseguir a la iglesia y comenzó a predicar que Jesús es el Hijo de Dios. Sufrió voluntariamente palizas, encarcelamiento y ejecución por esta nueva creencia.</p>
+              <p><strong>La Razón:</strong> Pablo afirmó que fue porque Jesús resucitado se le apareció personalmente. Su sesgo estaba fuertemente <em>en contra</em> del cristianismo, lo que hace que su testimonio sea increíblemente poderoso. No tenía nada que ganar social ni políticamente, y todo que perder.</p>
+            </div>`,
+          de: `<div class="space-y-4 text-gray-300">
+              <p>Paulus (Saulus von Tarsus) war kein Anhänger Jesu; er war ein geschworener Feind. Er jagte Christen, leitete ihre Hinrichtungen und sah Jesus als falschen Messias an, der von Gott verflucht war.</p>
+              <p><strong>Die Radikale Veränderung:</strong> Plötzlich hörte er auf, die Kirche zu verfolgen, und begann zu predigen, dass Jesus der Sohn Gottes ist. Er nahm freiwillig Schläge, Gefängnis und Hinrichtung für diesen neuen Glauben in Kauf.</p>
+              <p><strong>Der Grund:</strong> Paulus behauptete, es sei, weil der auferstandene Jesus ihm persönlich erschienen war. Sein Vorurteil war stark <em>gegen</em> das Christentum, was sein Zeugnis unglaublich kraftvoll macht. Er hatte gesellschaftlich oder politisch nichts zu gewinnen und alles zu verlieren.</p>
+            </div>`,
+        }
+      },
+      fact4: {
+        title: { 
+          en: "4. Conversion of James", 
+          fr: "4. Conversion de Jacques", 
+          es: "4. Conversión de Santiago", 
+          de: "4. Bekehrung von Jakobus" 
+        },
+        summary: { 
+          en: "The skeptical brother of Jesus did not believe until he saw the risen Lord.", 
+          fr: "Le frère sceptique de Jésus a cru après L'avoir vu.", 
+          es: "El hermano escéptico de Jesús creyó después de verlo.", 
+          de: "Der skeptische Bruder Jesu glaubte, nachdem er Ihn gesehen hatte." 
+        },
+        content: {
+          en: `
+            <div class="space-y-4 text-gray-300">
+              <p>During Jesus' ministry, his own brothers (including James) did not believe in him (John 7:5). They likely thought he was deluded or bringing shame to the family.</p>
+              <p><strong>The Change:</strong> Later, James is identified as a leader of the Jerusalem church and a "pillar" alongside Peter. He was eventually martyred for his faith (reported by the historian Josephus).</p>
+              <p><strong>The Cause:</strong> 1 Corinthians 15:7 specifically mentions an appearance to James. Only a tangible, real event could convince a skeptical brother that his own sibling was the Lord of the Universe.</p>
+            </div>`,
+          fr: `<div class="space-y-4 text-gray-300">
+              <p>Durant le ministère de Jésus, ses propres frères (y compris Jacques) ne croyaient pas en lui (Jean 7:5). Ils pensaient probablement qu'il délirait ou qu'il faisait honte à la famille.</p>
+              <p><strong>Le Changement :</strong> Plus tard, Jacques est identifié comme un leader de l'église de Jérusalem et un « pilier » aux côtés de Pierre. Il a finalement été martyrisé pour sa foi (rapporté par l'historien Josèphe).</p>
+              <p><strong>La Cause :</strong> 1 Corinthiens 15:7 mentionne spécifiquement une apparition à Jacques. Seul un événement tangible et réel pouvait convaincre un frère sceptique que son propre frère était le Seigneur de l'Univers.</p>
+            </div>`,
+          es: `<div class="space-y-4 text-gray-300">
+              <p>Durante el ministerio de Jesús, sus propios hermanos (incluido Santiago) no creían en él (Juan 7:5). Probablemente pensaban que estaba delirando o trayendo vergüenza a la familia.</p>
+              <p><strong>El Cambio:</strong> Más tarde, Santiago es identificado como un líder de la iglesia de Jerusalén y un "pilar" junto a Pedro. Finalmente fue martirizado por su fe (informado por el historiador Josefo).</p>
+              <p><strong>La Causa:</strong> 1 Corintios 15:7 menciona específicamente una aparición a Santiago. Solo un evento tangible y real podría convencer a un hermano escéptico de que su propio hermano era el Señor del Universo.</p>
+            </div>`,
+          de: `<div class="space-y-4 text-gray-300">
+              <p>Während des Dienstes Jesu glaubten seine eigenen Brüder (einschließlich Jakobus) nicht an ihn (Johannes 7,5). Sie dachten wahrscheinlich, er sei verblendet oder bringe Schande über die Familie.</p>
+              <p><strong>Die Veränderung:</strong> Später wird Jakobus als Führer der Jerusalemer Gemeinde und als „Säule“ neben Petrus identifiziert. Er starb schließlich als Märtyrer für seinen Glauben (berichtet vom Historiker Josephus).</p>
+              <p><strong>Die Ursache:</strong> 1. Korinther 15,7 erwähnt ausdrücklich eine Erscheinung vor Jakobus. Nur ein greifbares, reales Ereignis konnte einen skeptischen Bruder davon überzeugen, dass sein eigenes Geschwisterteil der Herr des Universums war.</p>
+            </div>`,
+        }
+      },
+      fact5: {
+        title: { 
+          en: "5. The Empty Tomb", 
+          fr: "5. Le Tombeau Vide", 
+          es: "5. La Tumba Vacía", 
+          de: "5. Das Leere Grab" 
+        },
+        summary: { 
+          en: "Acknowledged by friends and foes alike. The body was simply gone.", 
+          fr: "Reconnu par les amis comme par les ennemis. Le corps avait disparu.", 
+          es: "Reconocido por amigos y enemigos por igual. El cuerpo simplemente no estaba.", 
+          de: "Von Freunden und Feinden gleichermaßen anerkannt. Der Körper war einfach weg." 
+        },
+        content: {
+          en: `
+            <div class="space-y-4 text-gray-300">
+              <p>While the appearances are the strongest proof, the empty tomb is a crucial piece of data accepted by the majority of scholars.</p>
+              <h4 class="text-white font-semibold mt-4">Three Key Evidences:</h4>
+              <ul class="list-disc pl-5 space-y-2">
+                <li><strong>The Jerusalem Factor:</strong> It would have been impossible to preach the resurrection in Jerusalem - the very place Jesus was buried - if the tomb were occupied. Authorities could have simply produced the body to crush the movement instantly.</li>
+                <li><strong>Enemy Attestation:</strong> The earliest Jewish polemic against Christians was that "the disciples stole the body" (Matt 28:11-15). This is an admission that the tomb <em>was</em> empty. They didn't say "He's still in the grave"; they tried to explain <em>why</em> it was empty.</li>
+                <li><strong>Testimony of Women:</strong> In 1st-century Judea, a woman's testimony was considered invalid in court. If the story were invented, the writers would have used male disciples as the primary discoverers. Citing women suggests they were reporting historical facts, even though it was culturally embarrassing.</li>
+              </ul>
+            </div>`,
+          fr: `<div class="space-y-4 text-gray-300">
+              <p>Bien que les apparitions soient la preuve la plus forte, le tombeau vide est une donnée cruciale acceptée par la majorité des chercheurs.</p>
+              <h4 class="text-white font-semibold mt-4">Trois Preuves Clés :</h4>
+              <ul class="list-disc pl-5 space-y-2">
+                <li><strong>Le Facteur Jérusalem :</strong> Il aurait été impossible de prêcher la résurrection à Jérusalem - le lieu même où Jésus a été enterré - si le tombeau était occupé. Les autorités auraient simplement pu produire le corps pour écraser le mouvement instantanément.</li>
+                <li><strong>Attestation Ennemie :</strong> La plus ancienne polémique juive contre les chrétiens était que « les disciples ont volé le corps » (Matt 28:11-15). C'est un aveu que le tombeau <em>était</em> vide. Ils n'ont pas dit « Il est toujours dans la tombe » ; ils ont essayé d'expliquer <em>pourquoi</em> il était vide.</li>
+                <li><strong>Témoignage des Femmes :</strong> En Judée au 1er siècle, le témoignage d'une femme était considéré comme invalide devant un tribunal. Si l'histoire avait été inventée, les auteurs auraient utilisé des disciples masculins comme premiers découvreurs. Citer des femmes suggère qu'ils rapportaient des faits historiques, même si c'était culturellement embarrassant.</li>
+              </ul>
+            </div>`,
+          es: `<div class="space-y-4 text-gray-300">
+              <p>Aunque las apariciones son la prueba más fuerte, la tumba vacía es un dato crucial aceptado por la mayoría de los académicos.</p>
+              <h4 class="text-white font-semibold mt-4">Tres Evidencias Clave:</h4>
+              <ul class="list-disc pl-5 space-y-2">
+                <li><strong>El Factor Jerusalén:</strong> Habría sido imposible predicar la resurrección en Jerusalén - el mismo lugar donde Jesús fue enterrado - si la tumba estuviera ocupada. Las autoridades simplemente podrían haber presentado el cuerpo para aplastar el movimiento al instante.</li>
+                <li><strong>Atestación Enemiga:</strong> La polémica judía más temprana contra los cristianos fue que "los discípulos robaron el cuerpo" (Mat 28:11-15). Esto es una admisión de que la tumba <em>estaba</em> vacía. No dijeron "Él todavía está en la tumba"; trataron de explicar <em>por qué</em> estaba vacía.</li>
+                <li><strong>Testimonio de Mujeres:</strong> En la Judea del siglo I, el testimonio de una mujer se consideraba inválido en la corte. Si la historia hubiera sido inventada, los escritores habrían utilizado discípulos varones como los principales descubridores. Citar a mujeres sugiere que estaban informando hechos históricos, aunque fuera culturalmente vergonzoso.</li>
+              </ul>
+            </div>`,
+          de: `<div class="space-y-4 text-gray-300">
+              <p>Während die Erscheinungen der stärkste Beweis sind, ist das leere Grab ein entscheidendes Datenstück, das von der Mehrheit der Gelehrten akzeptiert wird.</p>
+              <h4 class="text-white font-semibold mt-4">Drei Schlüsselbeweise:</h4>
+              <ul class="list-disc pl-5 space-y-2">
+                <li><strong>Der Jerusalem-Faktor:</strong> Es wäre unmöglich gewesen, die Auferstehung in Jerusalem zu predigen - genau dem Ort, an dem Jesus begraben wurde -, wenn das Grab belegt gewesen wäre. Die Behörden hätten einfach den Körper vorzeigen können, um die Bewegung sofort zu zerschlagen.</li>
+                <li><strong>Feindliche Bezeugung:</strong> Die früheste jüdische Polemik gegen Christen war, dass „die Jünger den Körper stahlen“ (Matt 28,11-15). Dies ist ein Eingeständnis, dass das Grab leer <em>war</em>. Sie sagten nicht „Er ist noch im Grab“; sie versuchten zu erklären, <em>warum</em> es leer war.</li>
+                <li><strong>Zeugnis von Frauen:</strong> Im Judäa des 1. Jahrhunderts galt das Zeugnis einer Frau vor Gericht als ungültig. Wäre die Geschichte erfunden worden, hätten die Autoren männliche Jünger als die primären Entdecker benutzt. Frauen zu zitieren deutet darauf hin, dass sie historische Fakten berichteten, auch wenn dies kulturell peinlich war.</li>
+              </ul>
+            </div>`,
+        }
+      },
     },
-    para1: {
-      en: "If Jesus rose from the dead, His claims about Himself are validated. He is who He said He was. But this raises a new question: Which Christian tradition most faithfully preserves His teachings?",
-      fr: "Si Jésus est ressuscité des morts, Ses affirmations sur Lui-même sont validées. Il est qui Il a dit être. Mais cela soulève une nouvelle question : Quelle tradition chrétienne préserve le plus fidèlement Ses enseignements ?",
-      es: "Si Jesús resucitó de entre los muertos, Sus afirmaciones sobre Sí mismo están validadas. Él es quien dijo ser. Pero esto plantea una nueva pregunta: ¿Qué tradición cristiana preserva más fielmente Sus enseñanzas?",
-      de: "Wenn Jesus von den Toten auferstanden ist, werden Seine Behauptungen über Sich selbst bestätigt. Er ist, wer Er sagte zu sein. Aber dies wirft eine neue Frage auf: Welche christliche Tradition bewahrt Seine Lehren am treuesten?",
+
+      // --- Manuscript Evidence Section ---
+      manuscriptEvidence: {
+        heading: {
+          en: "2. Unmatched Manuscript Evidence for the New Testament",
+          fr: "2. Preuves Manuscrites Inégalées pour le Nouveau Testament",
+          es: "2. Evidencia Manuscrita Incomparable del Nuevo Testamento",
+          de: "2. Unübertroffene Manuskript-Beweise für das Neue Testament",
+        },
+        intro: {
+          en: "When comparing the New Testament with other ancient works, its textual support is overwhelming:",
+          fr: "Lorsqu'on compare le Nouveau Testament avec d'autres œuvres anciennes, son soutien textuel est écrasant :",
+          es: "Al comparar el Nuevo Testamento con otras obras antiguas, su respaldo textual es abrumador:",
+          de: "Beim Vergleich des Neuen Testaments mit anderen antiken Werken ist seine textliche Unterstützung überwältigend:",
+        },
+        tableAuthor: { en: "AUTHOR", fr: "AUTEUR", es: "AUTOR", de: "AUTOR" },
+        tableManuscripts: { en: "NUMBER OF MANUSCRIPTS", fr: "NOMBRE DE MANUSCRITS", es: "NÚMERO DE MANUSCRITOS", de: "ANZAHL DER MANUSKRIPTE" },
+        tableTimeGap: { en: "TIME GAP (EVENT TO EARLIEST COPY)", fr: "ÉCART TEMPOREL (ÉVÉNEMENT À COPIE)", es: "TIEMPO TRANSCURRIDO (ORIGINAL A COPIA)", de: "ZEITSPANNE (EREIGNIS ZUR KOPIE)" },
+        newTestament: { en: "New Testament", fr: "Nouveau Testament", es: "Nuevo Testamento", de: "Neues Testament" },
+        timeGap25: { en: "25 years", fr: "25 ans", es: "25 años", de: "25 Jahre" },
+        timeGap400: { en: "400 years", fr: "400 ans", es: "400 años", de: "400 Jahre" },
+        timeGap750: { en: "750 years", fr: "750 ans", es: "750 años", de: "750 Jahre" },
+        timeGap1000: { en: "1,000 years", fr: "1 000 ans", es: "1.000 años", de: "1.000 Jahre" },
+        timeGap1200: { en: "1,200 years", fr: "1 200 ans", es: "1.200 años", de: "1.200 Jahre" },
+        timeGap1400: { en: "1,400 years", fr: "1 400 ans", es: "1.400 años", de: "1.400 Jahre" },
+        conclusion: {
+          en: "No other ancient document comes close in terms of early attestation and manuscript quantity. This makes the New Testament the most historically reliable document of antiquity.",
+          fr: "Aucun autre document ancien n'approche en termes d'attestation précoce et de quantité de manuscrits. Cela fait du Nouveau Testament le document le plus historiquement fiable de l'antiquité.",
+          es: "Ningún otro documento antiguo se acerca en términos de atestación temprana y cantidad de manuscritos. Esto hace del Nuevo Testamento el documento más históricamente confiable de la antigüedad.",
+          de: "Kein anderes antikes Dokument kommt in Bezug auf frühe Bezeugung und Manuskriptmenge nahe. Dies macht das Neue Testament zum historisch zuverlässigsten Dokument der Antike.",
+        },
+      },
+
+      // --- Author Names ---
+      authorHomer: {
+        en: "Homer",
+        fr: "Homère",
+        es: "Homero",
+        de: "Homer",
+      },
+      authorDemosthenes: {
+        en: "Demosthenes",
+        fr: "Démosthène",
+        es: "Demóstenes",
+        de: "Demosthenes",
+      },
+      authorHerodotus: {
+        en: "Herodotus",
+        fr: "Hérodote",
+        es: "Heródoto",
+        de: "Herodot",
+      },
+      authorPlato: {
+        en: "Plato",
+        fr: "Platon",
+        es: "Platón",
+        de: "Platon",
+      },
+      authorTacitus: {
+        en: "Tacitus",
+        fr: "Tacite",
+        es: "Tácito",
+        de: "Tacitus",
+      },
+      authorCaesar: {
+        en: "Caesar",
+        fr: "César",
+        es: "César",
+        de: "Cäsar",
+      },
+      authorPliny: {
+        en: "Pliny",
+        fr: "Pline",
+        es: "Plinio",
+        de: "Plinius",
+      },
+
+      // --- Chart Scales ---
+      rankUnmatched: { en: "The Unmatched Standard", fr: "Le Standard Inégalé", es: "El Estándar Inigualable", de: "Der Unübertroffene Standard" },
+      rankHistorical: { en: "Historical Document #", fr: "Document Historique #", es: "Documento Histórico #", de: "Historisches Dokument #" },
+      scaleCount: { en: "The Overwhelming Count", fr: "Le Compte Écrasant", es: "El Recuento Abrumador", de: "Die Überwältigende Zahl" },
+      scaleMaxMs: { en: "Scale: 6,000 max", fr: "Échelle : 6 000 max", es: "Escala: 6,000 máx", de: "Skala: 6.000 max" },
+      scaleTimeClose: { en: "The Closest in Time", fr: "Le Plus Proche dans le Temps", es: "El Más Cercano en el Tiempo", de: "Der Zeitlich Nächste" },
+      scaleMaxGap: { en: "Max Gap: 1,500 years", fr: "Écart Max : 1 500 ans", es: "Brecha Máx: 1,500 años", de: "Max. Zeitspanne: 1.500 Jahre" },
+      scaleVisualNote: {
+        en: "(Visual length of bar indicates relative closeness to original document)",
+        fr: "(La longueur visuelle de la barre indique la proximité relative avec le document original)",
+        es: "(La longitud visual de la barra indica la proximidad relativa al documento original)",
+        de: "(Die visuelle Länge des Balkens gibt die relative Nähe zum Originaldokument an)",
+      },
+
+      // --- Who Was Jesus ---
+      whoWasJesus: {
+        heading: {
+          en: "3. Who Was Jesus of Nazareth?",
+          fr: "3. Qui Était Jésus de Nazareth ?",
+          es: "3. ¿Quién Era Jesús de Nazaret?",
+          de: "3. Wer War Jesus von Nazareth?",
+        },
+        intro: {
+          en: "Before examining the resurrection, we must know who the man was. Historians, both religious and secular, agree on key facts about Jesus:",
+          fr: "Avant d'examiner la résurrection, nous devons savoir qui était l'homme. Les historiens, tant religieux que laïques, s'accordent sur des faits clés concernant Jésus :",
+          es: "Antes de examinar la resurrección, debemos saber quién fue el hombre. Los historiadores, tanto religiosos como seculares, concuerdan en hechos clave sobre Jesús:",
+          de: "Bevor wir die Auferstehung untersuchen, müssen wir wissen, wer dieser Mann war. Historiker, sowohl religiöse als auch säkulare, stimmen in wichtigen Fakten über Jesus überein:",
+        },
+        fact1: { en: "He was a first-century Jew from Galilee.", fr: "Il était un Juif de Galilée du premier siècle.", es: "Era un judío de Galilea del primer siglo.", de: "Er war ein Jude aus Galiläa im ersten Jahrhundert." },
+        fact2: { en: "He was an itinerant preacher known for his wisdom and claims of authority.", fr: "Il était un prédicateur itinérant connu pour sa sagesse et ses prétentions à l'autorité.", es: "Fue un predicador itinerante conocido por su sabiduría y sus afirmaciones de autoridad.", de: "Er war ein Wanderprediger, der für seine Weisheit und seine Autoritätsansprüche bekannt war." },
+        fact3: { en: "He was crucified in Jerusalem under Pontius Pilate.", fr: "Il a été crucifié à Jérusalem sous Ponce Pilate.", es: "Fue crucificado en Jerusalén bajo Poncio Pilato.", de: "Er wurde in Jerusalem unter Pontius Pilatus gekreuzigt." },
+        divineClaimIntro: {
+          en: "Crucially, the claim that Jesus understood himself to be divine is strongly attested in the Gospels. He did this not by walking around saying 'I am God,' but in ways a first-century Jew would have understood as a divine claim, such as forgiving sins and using the divine name. In John 8:58, Jesus said:",
+          fr: "De manière cruciale, l'affirmation selon laquelle Jésus se considérait comme divin est fortement attestée dans les Évangiles. Il ne le faisait pas en se promenant et en disant 'Je suis Dieu', mais d'une manière qu'un Juif du premier siècle aurait comprise comme une revendication divine, comme pardonner les péchés et utiliser le nom divin. Dans Jean 8:58, Jésus a dit :",
+          es: "Crucialmente, la afirmación de que Jesús se entendía a sí mismo como divino está fuertemente atestiguada en los Evangelios. No lo hizo andando por ahí diciendo 'Soy Dios', sino de maneras que un judío del primer siglo habría entendido como una afirmación divina, como perdonar pecados y usar el nombre divino. En Juan 8:58, Jesús dijo:",
+          de: "Entscheidend ist, dass die Behauptung, Jesus habe sich selbst als göttlich verstanden, in den Evangelien stark bezeugt ist. Er tat dies nicht, indem er herumlief und sagte 'Ich bin Gott', sondern auf eine Weise, die ein Jude des ersten Jahrhunderts als göttlichen Anspruch verstanden hätte, wie zum Beispiel die Vergebung von Sünden und die Verwendung des göttlichen Namens. In Johannes 8:58 sagte Jesus:",
+        },
+        john858: { en: "Before Abraham was, I AM.", fr: "Avant qu'Abraham fût, je suis.", es: "Antes de que Abraham fuera, YO SOY.", de: "Ehe Abraham war, bin ICH." },
+        john858Source: { en: "John 8:58", fr: "Jean 8:58", es: "Juan 8:58", de: "Johannes 8:58" },
+        blasphemy: {
+          en: "This was a direct claim to the divine name God revealed to Moses in the burning bush. The reaction of his audience, who immediately picked up stones to kill him for blasphemy, shows exactly how this claim was understood.",
+          fr: "C'était une revendication directe du nom divin que Dieu a révélé à Moïse dans le buisson ardent. La réaction de son auditoire, qui a immédiatement ramassé des pierres pour le tuer pour blasphème, montre exactement comment cette affirmation a été comprise.",
+          es: "Esta fue una afirmación directa del nombre divino que Dios reveló a Moisés en la zarza ardiente. La reacción de su audiencia, que inmediatamente recogió piedras para matarlo por blasfemia, muestra exactamente cómo se entendió esta afirmación.",
+          de: "Dies war ein direkter Anspruch auf den göttlichen Namen, den Gott Mose im brennenden Dornbusch offenbarte. Die Reaktion seiner Zuhörer, die sofort Steine aufhoben, um ihn wegen Blasphemie zu töten, zeigt genau, wie dieser Anspruch verstanden wurde.",
+        },
+        blasphemyReason: {
+          en: "It was these radical personal claims to divine authority, seen as blasphemy by the Jewish leadership, that led directly to his execution. The resurrection, therefore, is not just a miracle; it is God's divine vindication of the very claims that got Jesus killed.",
+          fr: "Ce sont ces revendications personnelles radicales d'autorité divine, considérées comme un blasphème par les dirigeants juifs, qui ont conduit directement à son exécution. La résurrection n'est donc pas seulement un miracle ; c'est la justification divine des affirmations mêmes qui ont valu à Jésus d'être tué.",
+          es: "Fueron estas afirmaciones personales radicales de autoridad divina, vistas como blasfemia por los líderes judíos, las que llevaron directamente a su ejecución. La resurrección, por lo tanto, no es solo un milagro; es la vindicación divina de las mismas afirmaciones por las que mataron a Jesús.",
+          de: "Es waren diese radikalen persönlichen Ansprüche auf göttliche Autorität, die von der jüdischen Führung als Blasphemie angesehen wurden, die direkt zu seiner Hinrichtung führten. Die Auferstehung ist daher nicht nur ein Wunder; sie ist Gottes göttliche Bestätigung genau der Ansprüche, für die Jesus getötet wurde.",
+        },
+      },
+
+      // --- Evaluation of Explanations ---
+      evaluatingExplanations: {
+        heading: {
+          en: "Evaluating the Explanations",
+          fr: "Évaluation des Explications",
+          es: "Evaluando las Explicaciones",
+          de: "Bewertung der Erklärungen",
+        },
+        intro: {
+          en: "Historians must find the best explanation that accounts for <strong>all 5 facts</strong>. Let's test the common alternative theories.",
+          fr: "Les historiens doivent trouver la meilleure explication qui rend compte des <strong>5 faits</strong>.",
+          es: "Los historiadores deben encontrar la mejor explicación que dé cuenta de los <strong>5 hechos</strong>.",
+          de: "Historiker müssen die beste Erklärung finden, die <strong>alle 5 Fakten</strong> berücksichtigt.",
+        },
+        hallucination: {
+          title: { en: "Hypothesis: Hallucinations", fr: "Hypothèse : Hallucinations", es: "Hipótesis: Alucinaciones", de: "Hypothese: Halluzinationen" },
+          summary: { en: "Could the disciples have just imagined it in their grief?", fr: "L'ont-ils imaginé ?", es: "¿Podrían haberlo imaginado?", de: "Haben sie es sich eingebildet?" },
+          content: {
+            en: `<div class="space-y-4 text-gray-300"><p>This theory suggests the disciples were so grief-stricken they hallucinated Jesus.</p><h4 class="text-red-400 font-semibold mt-4">Why it fails:</h4><ul class="list-disc pl-5 space-y-2"><li><strong>Group Hallucinations are Impossible:</strong> Hallucinations are internal, subjective experiences (like dreams). You cannot share a hallucination any more than you can share a dream. Yet, Jesus appeared to groups (the Twelve, the 500).</li><li><strong>Wrong State of Mind:</strong> Hallucinations usually require expectation or hysteria. The disciples were fearful and hiding, not expecting a resurrection. Paul (hostile) and James (skeptical) were definitely not in a psychological state to "project" a loving Jesus.</li><li><strong>Does Not Explain the Empty Tomb:</strong> Even if they all hallucinated, the body would still be in the tomb. The authorities could have exposed it.</li></ul></div>`,
+            fr: `<div class="space-y-4 text-gray-300"><p>Échoue car :</p><ul class="list-disc pl-5 space-y-2"><li><strong>Pas d'hallucinations de groupe :</strong> C'est une expérience individuelle.</li><li><strong>Mauvais état d'esprit :</strong> Les disciples avaient peur, Paul était hostile.</li><li><strong>Tombeau vide :</strong> Une hallucination n'explique pas l'absence du corps.</li></ul></div>`,
+            es: `<div class="space-y-4 text-gray-300"><p>Falla porque:</p><ul class="list-disc pl-5 space-y-2"><li><strong>No hay alucinaciones grupales:</strong> Es una experiencia individual.</li><li><strong>Estado mental incorrecto:</strong> Los discípulos tenían miedo, Pablo era hostil.</li><li><strong>Tumba vacía:</strong> Una alucinación no explica la ausencia del cuerpo.</li></ul></div>`,
+            de: `<div class="space-y-4 text-gray-300"><p>Scheitert weil:</p><ul class="list-disc pl-5 space-y-2"><li><strong>Keine Gruppenhalluzinationen:</strong> Es ist eine individuelle Erfahrung.</li><li><strong>Falsche Geisteshaltung:</strong> Jünger waren ängstlich, Paulus feindselig.</li><li><strong>Leeres Grab:</strong> Eine Halluzination erklärt nicht das Fehlen des Körpers.</li></ul></div>`,
+          }
+        },
+        swoon: {
+          title: { en: "Hypothesis: Apparent Death (Swoon)", fr: "Hypothèse : Mort Apparente", es: "Hipótesis: Muerte Aparente", de: "Hypothese: Scheintod" },
+          summary: { en: "Did Jesus survive the crucifixion and recover in the tomb?", fr: "Jésus a-t-il survécu à la croix ?", es: "¿Sobrevivió Jesús a la cruz?", de: "Überlebte Jesus das Kreuz?" },
+          content: {
+            en: `<div class="space-y-4 text-gray-300"><p>Often called the "Swoon Theory," this suggests Jesus fainted on the cross, was mistaken for dead, and revived in the tomb.</p><h4 class="text-red-400 font-semibold mt-4">Why it fails:</h4><ul class="list-disc pl-5 space-y-2"><li><strong>Medical Impossibility:</strong> A JAMA study on the crucifixion concluded that death was certain due to hypovolemic shock and heart failure. The spear thrust confirmed it.</li><li><strong>The "Wounded Jesus" Problem:</strong> A half-dead, limping man in desperate need of a doctor would not inspire the disciples to worship him as the Lord of Life.</li><li><strong>Paul's Vision:</strong> Paul saw the glorified, powerful Jesus. A recovering survivor does not explain Paul's radical conversion.</li></ul></div>`,
+            fr: `<div class="space-y-4 text-gray-300"><p>Échoue car :</p><ul class="list-disc pl-5 space-y-2"><li><strong>Médicalement impossible :</strong> Le coup de lance a confirmé la mort.</li><li><strong>Jésus blessé :</strong> Un homme mourant n'inspirerait pas l'adoration comme Seigneur de la Vie.</li><li><strong>Vision de Paul :</strong> Paul a vu un Seigneur glorifié, pas une victime.</li></ul></div>`,
+            es: `<div class="space-y-4 text-gray-300"><p>Falla porque:</p><ul class="list-disc pl-5 space-y-2"><li><strong>Médicamente imposible:</strong> La lanza confirmó la muerte.</li><li><strong>Jesús herido:</strong> Un hombre moribundo no inspiraría adoración.</li><li><strong>Visión de Pablo:</strong> Pablo vio a un Señor glorificado, no a una víctima.</li></ul></div>`,
+            de: `<div class="space-y-4 text-gray-300"><p>Scheitert weil:</p><ul class="list-disc pl-5 space-y-2"><li><strong>Medizinisch unmöglich:</strong> Der Speerstich bestätigte den Tod.</li><li><strong>Verwundeter Jesus:</strong> Ein sterbender Mann würde keine Anbetung inspirieren.</li><li><strong>Paulus' Vision:</strong> Paulus sah einen verherrlichten Herrn, kein Opfer.</li></ul></div>`,
+          }
+        },
+        fraud: {
+          title: { en: "Hypothesis: Fraud (Stolen Body)", fr: "Hypothèse : Fraude", es: "Hipótesis: Fraude", de: "Hypothese: Betrug" },
+          summary: { en: "Did the disciples (or someone else) steal the body?", fr: "Les disciples ont-ils volé le corps ?", es: "¿Robaron el cuerpo los discípulos?", de: "Stahlen die Jünger den Körper?" },
+          content: {
+            en: `<div class="space-y-4 text-gray-300"><p><strong>Fraud 1: The Disciples Stole It.</strong><br/>Fails because of their transformation. Men do not willingly face torture and death for a lie they invented. They had no motive (money, power, sex) to invent a story that got them killed.</p><p><strong>Fraud 2: Someone Else Stole It.</strong><br/>If enemies stole it, they would have produced the body to stop Christianity. If grave robbers stole it, it explains the tomb but fails completely to explain the <em>appearances</em> and conversions.</p></div>`,
+            fr: `<div class="space-y-4 text-gray-300"><p>Échoue car les hommes ne meurent pas pour un mensonge qu'ils ont inventé. Si des ennemis l'avaient volé, ils auraient produit le corps.</p></div>`,
+            es: `<div class="space-y-4 text-gray-300"><p>Falla porque los hombres no mueren por una mentira que inventaron. Si los enemigos lo hubieran robado, habrían presentado el cuerpo.</p></div>`,
+            de: `<div class="space-y-4 text-gray-300"><p>Scheitert, weil Menschen nicht für eine selbst erfundene Lüge sterben. Wenn Feinde ihn gestohlen hätten, hätten sie den Körper vorgezeigt.</p></div>`,
+          }
+        },
+        conversionDisorder: {
+          title: { en: "Hypothesis: Conversion Disorder", fr: "Hypothèse : Trouble Conversif", es: "Hipótesis: Trastorno Conversivo", de: "Hypothese: Konversionsstörung" },
+          summary: { en: "Did Paul have a psychological breakdown?", fr: "Paul a-t-il fait une dépression ?", es: "¿Tuvo Pablo un colapso?", de: "Hatte Paulus einen Zusammenbruch?" },
+          content: {
+            en: `<div class="space-y-4 text-gray-300"><p>Some skeptics argue Paul suffered from psychosomatic symptoms due to guilt.</p><h4 class="text-red-400 font-semibold mt-4">Why it fails:</h4><ul class="list-disc pl-5 space-y-2"><li><strong>Ad Hoc:</strong> Requires inventing a "guilt complex" for Paul that contradicts his own letters where he claims he was "blameless" and zealous.</li><li><strong>External Reality:</strong> Paul's companions also saw the light and heard the voice. A psychological disorder in Paul's head cannot be perceived by bystanders.</li><li><strong>Limited Scope:</strong> Explains nothing about the empty tomb, James' conversion, or the appearances to the Twelve.</li></ul></div>`,
+            fr: `<div class="space-y-4 text-gray-300"><p>Échoue car Paul ne montrait aucun signe de culpabilité. De plus, ses compagnons ont vu la lumière, ce qui exclut un trouble purement mental.</p></div>`,
+            es: `<div class="space-y-4 text-gray-300"><p>Falla porque Pablo no mostraba signos de culpa. Además, sus compañeros vieron la luz, lo que excluye un trastorno puramente mental.</p></div>`,
+            de: `<div class="space-y-4 text-gray-300"><p>Scheitert, weil Paulus keine Anzeichen von Schuld zeigte. Zudem sahen seine Begleiter das Licht, was eine rein mentale Störung ausschließt.</p></div>`,
+          }
+        },
+        wrongTomb: {
+          title: { en: "Hypothesis: Wrong Tomb", fr: "Hypothèse : Mauvais Tombeau", es: "Hipótesis: Tumba Equivocada", de: "Hypothese: Falsches Grab" },
+          summary: { en: "Did the women and disciples just go to the wrong grave?", fr: "Se sont-ils perdus ?", es: "¿Se perdieron?", de: "Haben sie sich verirrt?" },
+          content: {
+            en: `<div class="space-y-4 text-gray-300"><p>Suggested by Kirsopp Lake, this posits that everyone simply got lost.</p><h4 class="text-red-400 font-semibold mt-4">Why it fails:</h4><ul class="list-disc pl-5 space-y-2"><li><strong>Known Burial Site:</strong> Jesus was buried by Joseph of Arimathea, a public figure. The location was known.</li><li><strong>Checkable:</strong> Authorities could have simply gone to the <em>right</em> tomb and produced the body to crush the movement.</li><li><strong>Doesn't Explain Appearances:</strong> Seeing an empty grave causes confusion, not the belief that you have conversed with God.</li></ul></div>`,
+            fr: `<div class="space-y-4 text-gray-300"><p>Échoue car le tombeau était connu (Joseph d'Arimathie). Les autorités auraient pu aller au bon tombeau pour réfuter l'affirmation.</p></div>`,
+            es: `<div class="space-y-4 text-gray-300"><p>Falla porque la tumba era conocida. Las autoridades podrían haber ido a la tumba correcta para refutar la afirmación.</p></div>`,
+            de: `<div class="space-y-4 text-gray-300"><p>Scheitert, weil das Grab bekannt war. Die Behörden hätten zum richtigen Grab gehen können, um die Behauptung zu widerlegen.</p></div>`,
+          }
+        },
+        impact: {
+          title: { en: "Objection: Lack of Impact", fr: "Objection : Manque d'Impact", es: "Objeción: Falta de Impacto", de: "Einwand: Mangelnde Wirkung" },
+          summary: { en: "If He rose, why didn't more historians mention it?", fr: "Pourquoi peu d'historiens en parlent ?", es: "¿Por qué no lo mencionan más historiadores?", de: "Warum erwähnen es nicht mehr Historiker?" },
+          content: {
+            en: `<div class="space-y-4 text-gray-300"><p>Skeptics argue that a resurrection should have been recorded by every historian of the era.</p><h4 class="text-white font-semibold mt-4">Context is Key:</h4><ul class="list-disc pl-5 space-y-2"><li><strong>Comparison to Emperors:</strong> Tiberius Caesar (Emperor) is mentioned by 10 sources within 150 years. Jesus is mentioned by 42 sources (Christian and non-Christian) in the same timeframe. He is <em>better</em> attested than the Emperor.</li><li><strong>Lost History:</strong> We have lost huge portions of ancient history (e.g., 50% of Tacitus). We cannot argue from silence when records are missing.</li><li><strong>The Impact is Us:</strong> The fact that a humble carpenter is now the central figure of human history <em>is</em> the impact.</li></ul></div>`,
+            fr: `<div class="space-y-4 text-gray-300"><p>Jésus est mentionné par 42 sources en 150 ans (contre 10 pour l'empereur Tibère). Il est mieux attesté que l'Empereur lui-même.</p></div>`,
+            es: `<div class="space-y-4 text-gray-300"><p>Jesús es mencionado por 42 fuentes en 150 años (vs 10 para el emperador Tiberio). Está mejor atestiguado que el Emperador.</p></div>`,
+            de: `<div class="space-y-4 text-gray-300"><p>Jesus wird innerhalb von 150 Jahren von 42 Quellen erwähnt (vs. 10 für Kaiser Tiberius). Er ist besser bezeugt als der Kaiser.</p></div>`,
+          }
+        },
+        resurrection: {
+          title: { en: "Conclusion: The Resurrection", fr: "Conclusion : La Résurrection", es: "Conclusión: La Resurrección", de: "Fazit: Die Auferstehung" },
+          summary: { en: "The only explanation that fits all the data.", fr: "La seule explication qui colle à toutes les données.", es: "La única explicación que encaja con todos los datos.", de: "Die einzige Erklärung, die zu allen Daten passt." },
+          content: {
+            en: `<div class="space-y-4 text-gray-300"><p class="text-xl font-semibold text-white mb-4">"I know of no one fact in the history of mankind which is proved by better and fuller evidence of every sort... than the great sign which God hath given us that Christ died and rose again from the dead." <span class="text-base font-normal text-gray-400 block mt-2">— Thomas Arnold, Oxford Historian</span></p><p>Unlike the other theories, the <strong>Resurrection</strong> explains:</p><ul class="list-disc pl-5 space-y-2"><li><strong class="text-green-400">The Empty Tomb:</strong> Jesus left it.</li><li><strong class="text-green-400">The Appearances:</strong> They were real interactions with the risen Lord.</li><li><strong class="text-green-400">The Transformation:</strong> The disciples were bold because they knew the truth.</li><li><strong class="text-green-400">Paul & James:</strong> A real encounter converts enemies and skeptics.</li></ul></div>`,
+            fr: `<div class="space-y-4 text-gray-300"><p>Seule la Résurrection explique le tombeau vide, les apparitions, les transformations et les conversions sans contradiction.</p></div>`,
+            es: `<div class="space-y-4 text-gray-300"><p>Solo la Resurrección explica la tumba vacía, las apariciones, las transformaciones y las conversiones sin contradicción.</p></div>`,
+            de: `<div class="space-y-4 text-gray-300"><p>Nur die Auferstehung erklärt das leere Grab, die Erscheinungen, die Verwandlungen und die Bekehrungen ohne Widerspruch.</p></div>`,
+          }
+        }
+      },
+
+      // --- Section 6: Rationality ---
+      rationality: {
+        heading: {
+          en: "6. Rationality of the Resurrection",
+          fr: "6. Rationalité de la Résurrection",
+          es: "6. Racionalidad de la Resurrección",
+          de: "6. Rationalität der Auferstehung",
+        },
+        intro: {
+          en: "The resurrection of Jesus is not merely a religious belief. It is the best historical explanation for the collection of agreed-upon facts. When historians evaluate theories, they look for specific criteria:",
+          fr: "La résurrection de Jésus n'est pas simplement une croyance religieuse. C'est la meilleure explication historique pour l'ensemble des faits reconnus. Lorsque les historiens évaluent les théories, ils recherchent des critères spécifiques :",
+          es: "La resurrección de Jesús no es meramente una creencia religiosa. Es la mejor explicación histórica para el conjunto de hechos acordados. Cuando los historiadores evalúan las teorías, buscan criterios específicos:",
+          de: "Die Auferstehung Jesu ist nicht nur ein religiöser Glaube. Sie ist die beste historische Erklärung für die Sammlung anerkannter Fakten. Wenn Historiker Theorien bewerten, suchen sie nach bestimmten Kriterien:",
+        },
+        hypothesisLabel: {
+          en: "The Resurrection hypothesis meets these criteria perfectly:",
+          fr: "L'hypothèse de la Résurrection répond parfaitement à ces critères :",
+          es: "La hipótesis de la Resurrección cumple perfectamente estos criterios:",
+          de: "Die Auferstehungshypothese erfüllt diese Kriterien perfekt:",
+        },
+        plausible: { en: "Plausible:", fr: "Plausible :", es: "Plausible:", de: "Plausibel:" },
+        plausibleDetail: {
+          en: "It fits the historical and cultural context of Jesus's own unparalleled life and his radical, blasphemous claims to divine authority.",
+          fr: "Elle s'inscrit dans le contexte historique et culturel de la vie sans pareille de Jésus et de ses prétentions radicales à l'autorité divine.",
+          es: "Se ajusta al contexto histórico y cultural de la vida incomparable de Jesús y sus afirmaciones radicales de autoridad divina.",
+          de: "Sie passt in den historischen und kulturellen Kontext des unvergleichlichen Lebens Jesu und seiner radikalen Ansprüche auf göttliche Autorität.",
+        },
+        powerful: { en: "Powerful:", fr: "Puissante :", es: "Poderosa:", de: "Kraftvoll:" },
+        powerfulDetail: {
+          en: "It explains all the known data, including the empty tomb, the group appearances, and the sudden, inexplicable transformation of skeptics and cowards into martyrs.",
+          fr: "Elle explique toutes les données connues, y compris le tombeau vide, les apparitions de groupe et la transformation soudaine et inexplicable de sceptiques et de lâches en martyrs.",
+          es: "Explica todos los datos conocidos, incluida la tumba vacía, las apariciones grupales y la transformación repentina e inexplicable de escépticos y cobardes en mártires.",
+          de: "Sie erklärt alle bekannten Daten, einschließlich des leeren Grabs, der Gruppenerscheinungen und der plötzlichen, unerklärlichen Verwandlung von Skeptikern und Feiglingen in Märtyrer.",
+        },
+        consistent: { en: "Consistent:", fr: "Cohérente :", es: "Consistente:", de: "Konsistent:" },
+        consistentDetail: {
+          en: "It aligns with the earliest Christian creeds and external testimony. It is not an <em>ad hoc</em> or contrived theory, as it simply accepts the explanation given by the eyewitnesses themselves.",
+          fr: "Elle s'aligne sur les plus anciens crédos chrétiens et les témoignages externes. Ce n'est pas une théorie <em>ad hoc</em> ou artificielle, car elle accepte simplement l'explication donnée par les témoins oculaires eux-mêmes.",
+          es: "Se alinea con los credos cristianos más antiguos y el testimonio externo. No es una teoría <em>ad hoc</em> o artificial, ya que simplemente acepta la explicación dada por los propios testigos oculares.",
+          de: "Sie stimmt mit den frühesten christlichen Glaubensbekenntnissen und externen Zeugnissen überein. Sie ist keine <em>ad hoc</em> oder erfundene Theorie, da sie einfach die Erklärung der Augenzeugen selbst akzeptiert.",
+        },
+      },
+
+      // --- Section 7: Conclusion ---
+      conclusion: {
+        heading: {
+          en: "7. Faith Rooted in History",
+          fr: "7. Une Foi Enracinée dans l'Histoire",
+          es: "7. Una Fe Arraigada en la Historia",
+          de: "7. Glaube, Verwurzelt in der Geschichte",
+        },
+        para1: {
+          en: "Faith in Christ is a reasonable trust based on powerful historical evidence. Christianity, from its very inception, has invited examination and staked its entire claim on the reality of this one event. The resurrection is God's divine seal of approval on Jesus, validating his claims to be the unique, authoritative Son of God.",
+          fr: "La foi en Christ est une confiance raisonnable basée sur de solides preuves historiques. Le christianisme, depuis sa création, a invité à l'examen et a fondé toute sa revendication sur la réalité de cet unique événement. La résurrection est le sceau divin d'approbation de Dieu sur Jésus.",
+          es: "La fe en Cristo es una confianza razonable basada en una poderosa evidencia histórica. El cristianismo, desde sus inicios, ha invitado al examen y ha apostado todo a la realidad de este único evento. La resurrección es el sello divino de aprobación de Dios sobre Jesús.",
+          de: "Der Glaube an Christus ist ein vernünftiges Vertrauen, das auf starken historischen Beweisen basiert. Das Christentum hat von Anfang an zur Prüfung eingeladen und seinen gesamten Anspruch auf die Realität dieses einen Ereignisses gesetzt. Die Auferstehung ist Gottes göttliches Gütesiegel für Jesus.",
+        },
+        conclusionQuote: {
+          en: "Belief in the resurrection is not a leap into the dark, but a step into the light.",
+          fr: "Croire en la résurrection n'est pas un saut dans l'obscurité, mais un pas vers la lumière.",
+          es: "Creer en la resurrección no es un salto en la oscuridad, sino un paso hacia la luz.",
+          de: "Der Glaube an die Auferstehung ist kein Sprung ins Dunkle, sondern ein Schritt ins Licht.",
+        },
+        para2: {
+          en: "When we align our worldview with the historical reality of the life, death, and resurrection of Jesus, we are not merely embracing a religion. We are aligning ourselves with the truth about history itself.",
+          fr: "Lorsque nous alignons notre vision du monde avec la réalité historique de la vie, de la mort et de la résurrection de Jésus, nous n'embrassons pas simplement une religion. Nous nous alignons avec la vérité sur l'histoire elle-même.",
+          es: "Cuando alineamos nuestra cosmovisión con la realidad histórica de la vida, muerte y resurrección de Jesús, no estamos meramente abrazando una religión. Nos estamos alineando con la verdad sobre la historia misma.",
+          de: "Wenn wir unsere Weltanschauung mit der historischen Realität von Leben, Tod und Auferstehung Jesu in Einklang bringen, nehmen wir nicht nur eine Religion an. Wir richten uns nach der Wahrheit über die Geschichte selbst.",
+        },
+      },
+
+      additionalVideo: {
+        heading: {
+          en: "An Additional Perspective on the Evidence",
+          fr: "Une Perspective Supplémentaire sur les Preuves",
+          es: "Una Perspectiva Adicional sobre la Evidencia",
+          de: "Eine Zusätzliche Perspektive auf die Beweise",
+        },
+      },
+
+      // --- Moving Forward ---
+      bridge: {
+        heading: {
+          en: "Moving Forward",
+          fr: "Aller de l'Avant",
+          es: "Avanzando",
+          de: "Weitergehen",
+        },
+        para1: {
+          en: "If Jesus rose from the dead, His claims about Himself are validated. He is who He said He was. But this raises a new question: Which Christian tradition most faithfully preserves His teachings?",
+          fr: "Si Jésus est ressuscité des morts, Ses affirmations sur Lui-même sont validées. Il est qui Il a dit être. Mais cela soulève une nouvelle question : Quelle tradition chrétienne préserve le plus fidèlement Ses enseignements ?",
+          es: "Si Jesús resucitó de entre los muertos, Sus afirmaciones sobre Sí mismo están validadas. Él es quien dijo ser. Pero esto plantea una nueva pregunta: ¿Qué tradición cristiana preserva más fielmente Sus enseñanzas?",
+          de: "Wenn Jesus von den Toten auferstanden ist, werden Seine Behauptungen über Sich selbst bestätigt. Er ist, wer Er sagte zu sein. Aber dies wirft eine neue Frage auf: Welche christliche Tradition bewahrt Seine Lehren am treuesten?",
+        },
+        para2: {
+          en: "With God's existence established and Christ's resurrection confirmed, we can now ask: Why be Catholic specifically, rather than simply \"Christian\"? Let's explore what makes Catholicism unique.",
+          fr: 'Avec l\'existence de Dieu établie et la résurrection du Christ confirmée, nous pouvons maintenant demander : Pourquoi être catholique spécifiquement, plutôt que simplement "chrétien" ? Explorons ce qui rend le catholicisme unique.',
+          es: 'Con la existencia de Dios establecida y la resurrección de Cristo confirmada, ahora podemos preguntar: ¿Por qué ser católico específicamente, en lugar de simplemente "cristiano"? Exploremos qué hace único al catolicismo.',
+          de: 'Mit der festgestellten Existenz Gottes und der bestätigten Auferstehung Christi können wir nun fragen: Warum speziell katholisch sein, anstatt einfach "christlich"? Lassen Sie uns erkunden, was den Katholizismus einzigartig macht.',
+        },
+      },
     },
-    para2: {
-      en: "With God's existence established and Christ's resurrection confirmed, we can now ask: Why be Catholic specifically, rather than simply \"Christian\"? Let's explore what makes Catholicism unique.",
-      fr: "Avec l'existence de Dieu établie et la résurrection du Christ confirmée, nous pouvons maintenant demander : Pourquoi être catholique spécifiquement, plutôt que simplement « chrétien » ? Explorons ce qui rend le catholicisme unique.",
-      es: 'Con la existencia de Dios establecida y la resurrección de Cristo confirmada, ahora podemos preguntar: ¿Por qué ser católico específicamente, en lugar de simplemente "cristiano"? Exploremos qué hace único al catolicismo.',
-      de: 'Mit der festgestellten Existenz Gottes und der bestätigten Auferstehung Christi können wir nun fragen: Warum speziell katholisch sein, anstatt einfach „christlich"? Lassen Sie uns erkunden, was den Katholizismus einzigartig macht.',
-    },
-  },
-},
 
   // Why Be Catholic Topic
   whyBeCatholic: {
@@ -4083,11 +4132,11 @@ proofOfResurrection: {
     },
     quote: {
       text: {
-  en: "When the Advocate comes, whom I will send to you from the Father, the Spirit of truth who goes out from the Father, he will testify about me.",
-  fr: "Quand sera venu le Consolateur, que je vous enverrai de la part du Père, l'Esprit de vérité, qui procède du Père, il rendra témoignage de moi.",
-  es: "Pero cuando venga el Consolador, a quien yo os enviaré del Padre, el Espíritu de verdad, el cual procede del Padre, él dará testimonio acerca de mí.",
-  de: "Wenn aber der Tröster kommen wird, den ich euch senden werde vom Vater, der Geist der Wahrheit, der vom Vater ausgeht, der wird Zeugnis geben von mir.",
-},
+        en: "When the Advocate comes, whom I will send to you from the Father, the Spirit of truth who goes out from the Father, he will testify about me.",
+        fr: "Quand sera venu le Consolateur, que je vous enverrai de la part du Père, l'Esprit de vérité, qui procède du Père, il rendra témoignage de moi.",
+        es: "Pero cuando venga el Consolador, a quien yo os enviaré del Padre, el Espíritu de verdad, el cual procede del Padre, él dará testimonio acerca de mí.",
+        de: "Wenn aber der Tröster kommen wird, den ich euch senden werde vom Vater, der Geist der Wahrheit, der vom Vater ausgeht, der wird Zeugnis geben von mir.",
+      },
       source: {
         en: "John 15:26",
         fr: "Jean 15:26",
@@ -4138,7 +4187,7 @@ proofOfResurrection: {
         es: "Joseph Scheeben y la Teología Católica del Siglo XIX",
         de: "Joseph Scheeben und die Katholische Theologie des 19. Jahrhunderts",
       },
-      
+
       callout: {
         p1: {
           en: "His magnum opus, the <em>Handbook of Dogmatic Theology</em>, offers one of the most compelling accounts of the <em>Filioque</em> and its necessity for a coherent Trinitarian theology.",
@@ -4569,25 +4618,25 @@ proofOfResurrection: {
       },
     },
     bridge: {
-  h3: {
-    en: "Congratulations on completing this journey!",
-    fr: "Félicitations, vous avez terminé ce parcours !",
-    es: "¡Felicidades por completar este viaje!",
-    de: "Glückwunsch zum Abschluss dieser Reise!",
-  },
-  p1: {
-    en: "You've explored the foundations of Catholic faith, from God's existence to the specifics of Trinitarian theology. You've seen how Scripture, Tradition, and the Magisterium work together to preserve truth for two millennia.",
-    fr: "Vous avez exploré les fondements de la foi catholique, de l'existence de Dieu jusqu'aux détails de la théologie trinitaire. Vous avez vu comment l'Écriture, la Tradition et le Magistère collaborent pour préserver la vérité depuis deux millénaires.",
-    es: "Has explorado los fundamentos de la fe católica, desde la existencia de Dios hasta los detalles de la teología trinitaria. Has visto cómo la Escritura, la Tradición y el Magisterio trabajan juntos para preservar la verdad durante dos milenios.",
-    de: "Sie haben die Grundlagen des katholischen Glaubens erkundet, von der Existenz Gottes bis zu den Details der Trinitätstheologie. Sie haben gesehen, wie Schrift, Tradition und Lehramt zusammenwirken, um die Wahrheit seit zwei Jahrtausenden zu bewahren.",
-  },
-  p2: {
-    en: "May the Lord guide you in your continued search for truth. Ad Majorem Dei Gloriam - for the greater glory of God.",
-    fr: "Que le Seigneur vous guide dans votre recherche continue de la vérité. Ad Majorem Dei Gloriam - pour la plus grande gloire de Dieu.",
-    es: "Que el Señor te guíe en tu continua búsqueda de la verdad. Ad Majorem Dei Gloriam - para la mayor gloria de Dios.",
-    de: "Möge der Herr Sie auf Ihrer weiteren Suche nach der Wahrheit leiten. Ad Majorem Dei Gloriam - zur größeren Ehre Gottes.",
-  },
-},
+      h3: {
+        en: "Congratulations on completing this journey!",
+        fr: "Félicitations, vous avez terminé ce parcours !",
+        es: "¡Felicidades por completar este viaje!",
+        de: "Glückwunsch zum Abschluss dieser Reise!",
+      },
+      p1: {
+        en: "You've explored the foundations of Catholic faith, from God's existence to the specifics of Trinitarian theology. You've seen how Scripture, Tradition, and the Magisterium work together to preserve truth for two millennia.",
+        fr: "Vous avez exploré les fondements de la foi catholique, de l'existence de Dieu jusqu'aux détails de la théologie trinitaire. Vous avez vu comment l'Écriture, la Tradition et le Magistère collaborent pour préserver la vérité depuis deux millénaires.",
+        es: "Has explorado los fundamentos de la fe católica, desde la existencia de Dios hasta los detalles de la teología trinitaria. Has visto cómo la Escritura, la Tradición y el Magisterio trabajan juntos para preservar la verdad durante dos milenios.",
+        de: "Sie haben die Grundlagen des katholischen Glaubens erkundet, von der Existenz Gottes bis zu den Details der Trinitätstheologie. Sie haben gesehen, wie Schrift, Tradition und Lehramt zusammenwirken, um die Wahrheit seit zwei Jahrtausenden zu bewahren.",
+      },
+      p2: {
+        en: "May the Lord guide you in your continued search for truth. Ad Majorem Dei Gloriam - for the greater glory of God.",
+        fr: "Que le Seigneur vous guide dans votre recherche continue de la vérité. Ad Majorem Dei Gloriam - pour la plus grande gloire de Dieu.",
+        es: "Que el Señor te guíe en tu continua búsqueda de la verdad. Ad Majorem Dei Gloriam - para la mayor gloria de Dios.",
+        de: "Möge der Herr Sie auf Ihrer weiteren Suche nach der Wahrheit leiten. Ad Majorem Dei Gloriam - zur größeren Ehre Gottes.",
+      },
+    },
   },
 
   magisterium: {

@@ -213,14 +213,36 @@ function AppContent() {
   useEffect(() => {
     const saved = localStorage.getItem("journey-progress");
     if (saved) {
-      const { index, completed } = JSON.parse(saved);
-      // Only set the index from storage if it's not -1 (meaning explicitly on home)
-      if (index !== undefined && index !== -1) {
-        setCurrentTopicIndex(index);
-        setShowHome(false); // Assume if index is set, we are not on the main Home page
-      }
+      const {
+        index,
+        completed,
+        earlyChurch,
+        science,
+        glossary,
+        doctrine,
+      } = JSON.parse(saved);
+
       if (completed) {
         setCompletedTopics(new Set(completed));
+      }
+
+      // Restore special pages state
+      if (earlyChurch) {
+        setShowEarlyChurch(true);
+        setShowHome(false);
+      } else if (science) {
+        setShowScience(true);
+        setShowHome(false);
+      } else if (glossary) {
+        setShowGlossary(true);
+        setShowHome(false);
+      } else if (doctrine) {
+        setShowDoctrine(true);
+        setShowHome(false);
+      } else if (index !== undefined && index !== -1) {
+        // Only set the index from storage if it's not -1 (meaning explicitly on home)
+        setCurrentTopicIndex(index);
+        setShowHome(false);
       }
     }
   }, []);
@@ -231,9 +253,20 @@ function AppContent() {
       JSON.stringify({
         index: currentTopicIndex,
         completed: Array.from(completedTopics),
+        earlyChurch: showEarlyChurch,
+        science: showScience,
+        glossary: showGlossary,
+        doctrine: showDoctrine,
       }),
     );
-  }, [currentTopicIndex, completedTopics]);
+  }, [
+    currentTopicIndex,
+    completedTopics,
+    showEarlyChurch,
+    showScience,
+    showGlossary,
+    showDoctrine,
+  ]);
 
   const goToTopic = (index: number) => {
     setShowHome(false);
@@ -353,6 +386,10 @@ function AppContent() {
       JSON.stringify({
         index: -1,
         completed: Array.from(completedTopics),
+        earlyChurch: false,
+        science: false,
+        glossary: false,
+        doctrine: false,
       }),
     );
 

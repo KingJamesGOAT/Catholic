@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, Check, Circle, BookOpen, Sparkles, Search, MoreVertical } from 'lucide-react'; 
+import { Menu, X, Check, Circle, BookOpen, Sparkles, Search, MoreVertical, ScrollText, Gavel, BookA } from 'lucide-react'; 
 import { topics } from '../../App';
 import LanguageSelector from '../LanguageSelector';
 import { useLanguage } from '../../lib/i18n/LanguageContext';
@@ -72,7 +72,7 @@ export default function Navigation({
     onNavigate(index);
     setMenuOpen(false);
   };
- 
+  
   const handleLogoClick = () => {
       onLogoClick();
   };
@@ -216,7 +216,7 @@ export default function Navigation({
               </div>
 
               {/* FIX 2: Added pb-32 (8rem) to the bottom of the scrollable list.
-                  This pushes the last item up so it is not hidden by the browser's UI bar. */}
+                This pushes the last item up so it is not hidden by the browser's UI bar. */}
               <div className="grid md:grid-cols-2 gap-4 max-h-[70vh] overflow-y-auto pr-4 mb-8 pb-32">
                 
                 {topics.map((topic, index) => {
@@ -289,7 +289,7 @@ export default function Navigation({
                   >
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0 w-10 h-10 rounded-full bg-yellow-600 border-2 border-yellow-400 flex items-center justify-center">
-                        <BookOpen size={20} className="text-white" />
+                        <BookA size={20} className="text-white" /> 
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
@@ -344,14 +344,14 @@ export default function Navigation({
                 onClick={() => handleSpecialPageClick('earlyChurch')}
                 className="flex items-center gap-3 w-full text-left px-3 py-3 rounded-md text-gray-300 hover:bg-blue-600 hover:text-white transition-colors"
               >
-                <BookOpen size={18} />
+                <ScrollText size={18} />
                 <span>{t(trans.nav.earlyChurch, language)}</span>
               </button>
               <button
                 onClick={() => handleSpecialPageClick('doctrine')}
                 className="flex items-center gap-3 w-full text-left px-3 py-3 rounded-md text-gray-300 hover:bg-indigo-600 hover:text-white transition-colors"
               >
-                <BookOpen size={18} />
+                <Gavel size={18} />
                 <span>{t(trans.nav.scriptureFathers, language)}</span>
               </button>
               <div className="h-px bg-gray-700 my-1" />
@@ -359,7 +359,7 @@ export default function Navigation({
                 onClick={() => handleSpecialPageClick('glossary')}
                 className="flex items-center gap-3 w-full text-left px-3 py-3 rounded-md text-gray-300 hover:bg-yellow-600 hover:text-black transition-colors"
               >
-                <BookOpen size={18} />
+                <BookA size={18} />
                 <span>{t(trans.glossary.title, language)}</span>
               </button>
             </motion.div>

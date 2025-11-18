@@ -55,8 +55,17 @@ export default function LanguageSelector() {
               <button
                 key={lang.code}
                 onClick={() => {
+                  // 1. Update the React state (optional but good practice)
                   setLanguage(lang.code);
+                  
+                  // 2. Manually save to localStorage immediately to prevent race conditions
+                  localStorage.setItem('language', lang.code);
+                  
+                  // 3. Close the dropdown
                   setIsOpen(false);
+
+                  // 4. Force a hard reload to ensure all text and special pages render in the new language
+                  window.location.reload();
                 }}
                 className={`w-full flex items-center justify-between px-4 py-3 text-sm transition-colors ${
                   language === lang.code
