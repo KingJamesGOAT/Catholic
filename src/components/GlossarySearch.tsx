@@ -75,7 +75,7 @@ export default function GlossarySearch({ open, setOpen }: GlossarySearchProps) {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent className={`
         fixed left-[50%] translate-x-[-50%] 
-        bg-gray-950 border-4 border-blue-800 rounded-3xl 
+        bg-gray-950/80 backdrop-blur-xl border-4 border-blue-800 rounded-3xl 
         p-0 overflow-hidden shadow-2xl shadow-black/50 
         w-[90vw] sm:max-w-xl gap-0 ring-0 outline-none 
         
@@ -94,11 +94,11 @@ export default function GlossarySearch({ open, setOpen }: GlossarySearchProps) {
       `}>
         <DialogTitle className="sr-only">{t(trans.glossary.title, language)}</DialogTitle>
 
-        <Command shouldFilter={false} className="bg-gray-950 h-full w-full rounded-none flex flex-col">
+        <Command shouldFilter={false} className="bg-transparent h-full w-full rounded-none flex flex-col">
           
           {selectedTerm ? (
             // --- DEFINITION VIEW ---
-            <div className="flex flex-col h-full bg-gray-950 p-6 md:p-8 animate-in fade-in duration-300">
+            <div className="flex flex-col h-full bg-transparent p-6 md:p-8 animate-in fade-in duration-300">
               <button
                 onClick={() => setSelectedTerm(null)}
                 className="flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 mb-4 transition-colors w-fit group shrink-0"
@@ -126,18 +126,18 @@ export default function GlossarySearch({ open, setOpen }: GlossarySearchProps) {
             </div>
           ) : (
             // --- SEARCH LIST VIEW ---
-            <div className="flex flex-col w-full h-full bg-gray-950">
+            // CHANGED: bg-gray-950 -> bg-transparent
+            <div className="flex flex-col w-full h-full bg-transparent">
               
               <div className="flex items-center px-6 py-4 border-b border-blue-900/30 shrink-0">
                 <Search className="text-blue-600 shrink-0 mr-4" size={24} />
-
                 
                 <CommandPrimitive.Input
-  placeholder={t(trans.glossary.searchPlaceholder, language)}
-  className="flex-1 h-10 bg-transparent text-lg text-white placeholder:text-gray-500 outline-none border-none ring-0"
-  value={searchQuery}
-  onValueChange={setSearchQuery}
-/>
+                  placeholder={t(trans.glossary.searchPlaceholder, language)}
+                  className="flex-1 h-10 bg-transparent text-lg text-white placeholder:text-gray-500 outline-none border-none ring-0"
+                  value={searchQuery}
+                  onValueChange={setSearchQuery}
+                />
               </div>
 
               <CommandList className="bg-gray-950 p-2 h-full overflow-y-auto custom-scrollbar">

@@ -35,6 +35,7 @@ import ScienceAndMiracles from "./components/ScienceAndMiracles";
 
 type TopicComponentProps = {
   onComplete?: () => void;
+  onScienceClick?: () => void; // Add this line
 };
 
 export interface Topic {
@@ -509,6 +510,7 @@ function AppContent() {
               >
                 <CurrentTopicComponent
                   onComplete={markCurrentTopicComplete}
+                  onScienceClick={handleScienceClick} 
                 />
 
                 <div className="container mx-auto px-4 pb-16 max-w-4xl">

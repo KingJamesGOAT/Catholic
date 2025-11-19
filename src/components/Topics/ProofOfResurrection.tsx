@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { useIsMobile } from '../ui/use-mobile';
 import {
   BookOpen,
   Users,
@@ -15,7 +16,8 @@ import {
   Shield,
   TrendingUp,
   Activity,
-  History
+  History,
+  Microscope
 } from 'lucide-react';
 import TopicLayout from '../Journey/TopicLayout';
 import { Separator } from '../ui/separator';
@@ -25,6 +27,7 @@ import { cn } from '../ui/utils';
 
 type TopicComponentProps = {
   onComplete?: () => void;
+  onScienceClick?: () => void; // Add this
 };
 
 type DetailItem = {
@@ -36,9 +39,11 @@ type DetailItem = {
   color: string;
 };
 
-export default function ProofOfResurrection({ onComplete }: TopicComponentProps) {
+// Update function signature
+export default function ProofOfResurrection({ onComplete, onScienceClick }: TopicComponentProps) {
   const [selectedItem, setSelectedItem] = useState<DetailItem | null>(null);
   const { language } = useLanguage();
+  const isMobile = useIsMobile(); // Add this line
   const trans = translations.proofOfResurrection;
 
   // Lock body scroll when modal is open
@@ -184,12 +189,11 @@ export default function ProofOfResurrection({ onComplete }: TopicComponentProps)
               if (isNT) gapBarRatio = 15;
 
               return (
+                
                 <motion.div
                   key={data.key}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  // REMOVED: initial, whileInView, viewport, transition
+                  // This keeps the row static (visible immediately) so only the bars animate
                   className={cn( 
                     "flex flex-col md:flex-row items-center p-4 transition-all duration-300 gap-4 md:gap-0",
                     isNT ? "bg-gradient-to-r from-blue-900/50 to-blue-900/20 border-l-4 border-blue-600" : "hover:bg-gray-900/50",
@@ -214,9 +218,9 @@ export default function ProofOfResurrection({ onComplete }: TopicComponentProps)
                     </span>
                     <div className="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
                       <motion.div
-                        initial={{ width: 0 }}
+                        initial={{ width: isMobile ? `${msBarRatio}%` : 0 }}
                         whileInView={{ width: `${msBarRatio}%` }}
-                        transition={{ duration: 1.0, delay: index * 0.1 + 0.3 }}
+                        transition={{ duration: isMobile ? 0 : 1.0, delay: isMobile ? 0 : index * 0.1 + 0.3 }}
                         className={cn("h-full", isNT ? "bg-green-600" : "bg-purple-600")}
                         style={{ maxWidth: '100%' }}
                       />
@@ -236,9 +240,9 @@ export default function ProofOfResurrection({ onComplete }: TopicComponentProps)
                     </span>
                     <div className="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
                       <motion.div
-                        initial={{ width: 0 }}
+                        initial={{ width: isMobile ? `${gapBarRatio}%` : 0 }}
                         whileInView={{ width: `${gapBarRatio}%` }}
-                        transition={{ duration: 1.0, delay: index * 0.1 + 0.3 }}
+                        transition={{ duration: isMobile ? 0 : 1.0, delay: isMobile ? 0 : index * 0.1 + 0.3 }}
                         className={cn("h-full", getTimeGapColor(data.timeGap))}
                       />
                     </div>
@@ -295,7 +299,7 @@ export default function ProofOfResurrection({ onComplete }: TopicComponentProps)
         <p className="text-gray-400 mb-6">
           {t(trans.minimalFacts.intro, language)}
           <span className="text-blue-400 ml-2 text-sm font-medium tracking-wide uppercase block md:inline mt-2 md:mt-0">
-            Click cards for details
+            {t(trans.clickCards, language)}
           </span>
         </p>
 
@@ -327,7 +331,7 @@ export default function ProofOfResurrection({ onComplete }: TopicComponentProps)
                 <p className="text-sm text-gray-400 line-clamp-3 mb-4">{fact.summary}</p>
                 
                 <div className="flex items-center text-xs font-medium text-gray-500 group-hover:text-white transition-colors">
-                  Click to explore <ArrowRight size={12} className="ml-1" />
+                  {t(trans.clickExplore, language)} <ArrowRight size={12} className="ml-1" />
                 </div>
               </div>
             </motion.div>
@@ -355,7 +359,7 @@ export default function ProofOfResurrection({ onComplete }: TopicComponentProps)
         <p className="text-gray-400 mb-6">
           {t(trans.evaluatingExplanations.intro, language)}
           <span className="text-purple-400 ml-2 text-sm font-medium tracking-wide uppercase block md:inline mt-2 md:mt-0">
-            Click cards for details
+            {t(trans.clickCards, language)}
           </span>
         </p>
 
@@ -461,6 +465,39 @@ export default function ProofOfResurrection({ onComplete }: TopicComponentProps)
         </div>
       </section>
 
+
+    {/* --- NEW SECTION: Shroud of Turin --- */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="mb-16 bg-gradient-to-r from-gray-900 to-blue-950/20 border border-gray-800 rounded-xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 shadow-lg"
+      >
+        <div className="p-4 bg-blue-900/20 rounded-full hidden md:block">
+          <Microscope className="text-blue-400" size={32} />
+        </div>
+        
+        <div className="flex-1 space-y-3 text-center md:text-left">
+          <h3 className="text-xl font-bold text-white flex items-center justify-center md:justify-start gap-2">
+            <Microscope className="text-blue-400 md:hidden" size={24} />
+            {t(trans.shroud.title, language)}
+          </h3>
+          <p className="text-gray-300 text-sm leading-relaxed">
+            {t(trans.shroud.text, language)}
+          </p>
+        </div>
+
+        <button
+          onClick={onScienceClick}
+          className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-lg transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-blue-500/20 whitespace-nowrap group"
+        >
+          {t(trans.shroud.button, language)}
+          <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
+        </button>
+      </motion.div>
+
+      
+
       {/* 8. Moving Forward (IDENTICAL) */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -492,7 +529,8 @@ export default function ProofOfResurrection({ onComplete }: TopicComponentProps)
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
                 transition={{ duration: 0.2, ease: "easeOut" }}
-                className="bg-gray-900 w-full max-w-3xl max-h-[85vh] rounded-2xl shadow-2xl border border-gray-700 overflow-hidden flex flex-col"
+                // UPDATED: max-h-[60vh] on mobile, max-h-[85vh] on desktop
+                className="bg-gray-900 w-full max-w-3xl max-h-[60vh] md:max-h-[85vh] rounded-2xl shadow-2xl border border-gray-700 overflow-hidden flex flex-col"
                 onClick={(e) => e.stopPropagation()} 
               >
                 {/* Header */}
@@ -529,7 +567,7 @@ export default function ProofOfResurrection({ onComplete }: TopicComponentProps)
 
                 {/* Mobile Footer Tip */}
                 <div className="p-3 bg-black/40 border-t border-gray-800 text-center sm:hidden">
-                  <span className="text-xs text-gray-500 uppercase tracking-widest">Scroll for more</span>
+                  <span className="text-xs text-gray-500 uppercase tracking-widest">{t(trans.scrollMore, language)}</span>
                 </div>
               </motion.div>
             </motion.div>
