@@ -1251,10 +1251,10 @@ export const translations = {
       de: "Der Historische Fall für Ostern",
     },
     quote: {
-      en: '"If Christ has not been raised, then our preaching is in vain and your faith is in vain."',
-      fr: '"Si Christ n\'a pas été ressuscité, alors notre prédication est vaine et votre foi est vaine."',
-      es: '"Si Cristo no ha resucitado, entonces nuestra predicación es en vano y vuestra fe es en vano."',
-      de: '"Wenn Christus nicht auferstanden ist, dann ist unsere Predigt vergeblich und euer Glaube ist vergeblich."',
+      en: 'If Christ has not been raised, then our preaching is in vain and your faith is in vain.',
+      fr: '"Si Christ n\'a pas été ressuscité, alors notre prédication est vaine et votre foi est vaine.',
+      es: 'Si Cristo no ha resucitado, entonces nuestra predicación es en vano y vuestra fe es en vano.',
+      de: 'Wenn Christus nicht auferstanden ist, dann ist unsere Predigt vergeblich und euer Glaube ist vergeblich.',
     },
     quoteSource: {
       en: "1 Corinthians 15:14",

@@ -197,7 +197,8 @@ export default function ProofOfResurrection({ onComplete, onScienceClick }: Topi
                   className={cn( 
                     "flex flex-col md:flex-row items-center p-4 transition-all duration-300 gap-4 md:gap-0",
                     isNT ? "bg-gradient-to-r from-blue-900/50 to-blue-900/20 border-l-4 border-blue-600" : "hover:bg-gray-900/50",
-                    "border-b border-gray-800 last:border-0"
+                    // RESTORED: 4px blue border on mobile, 1px gray border on desktop
+                    "border-b-4 border-blue-700 md:border-b md:border-gray-800 last:border-0"
                   )}
                 >
                   {/* Author */}
