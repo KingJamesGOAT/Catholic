@@ -46,55 +46,54 @@ export const glossaryTerms: GlossaryTerm[] = [
     },
   },
 
-    {
-  id: "sedevacantism",
-  term: {
-    en: "Sedevacantism",
-    fr: "Sédévacantisme",
-    es: "Sedevacantismoa",
-    de: "Sedisvakantismus",
+  {
+    id: "sedevacantism",
+    term: {
+      en: "Sedevacantism",
+      fr: "Sédévacantisme",
+      es: "Sedevacantismoa",
+      de: "Sedisvakantismus",
+    },
+    definition: {
+      en: "The belief (Sedevacantism) or a person who holds the belief (Sedevacantist) that the See of Rome (the Papacy) is currently vacant. Adherents believe that recent Popes, typically since the Second Vatican Council (1962-1965), are heretics and have therefore lost or never validly obtained the papal office.",
+      fr: "La croyance (Sédévacantisme) ou une personne qui tient la croyance (Sédévacantiste) que le Siège de Rome (la Papauté) est actuellement vacant. Les adhérents estiment que les Papes récents, généralement depuis le Concile Vatican II (1962-1965), sont des hérétiques et ont par conséquent perdu ou n'ont jamais validement obtenu la charge papale.",
+      es: "La creencia (Sedevacantismo) o una persona que sostiene la creencia (Sedevacantista) de que la Sede de Roma (el Papado) está actualmente vacante. Los adherentes creen que los Papas recientes, generalmente desde el Concilio Vaticano II (1962-1965), son herejes y, por lo tanto, han perdido o nunca obtuvieron válidamente el oficio papal.",
+      de: "Der Glaube (Sedisvakantismus) oder eine Person, die den Glauben vertritt (Sedisvakantist), dass der Stuhl von Rom (das Papsttum) derzeit vakant ist. Anhänger glauben, dass die jüngsten Päpste, typischerweise seit dem Zweiten Vatikanischen Konzil (1962-1965), Häretiker sind und daher das päpstliche Amt verloren oder nie gültig erlangt haben.",
+    },
   },
-  definition: {
-    en: "The belief (Sedevacantism) or a person who holds the belief (Sedevacantist) that the See of Rome (the Papacy) is currently vacant. Adherents believe that recent Popes, typically since the Second Vatican Council (1962-1965), are heretics and have therefore lost or never validly obtained the papal office.",
-    fr: "La croyance (Sédévacantisme) ou une personne qui tient la croyance (Sédévacantiste) que le Siège de Rome (la Papauté) est actuellement vacant. Les adhérents estiment que les Papes récents, généralement depuis le Concile Vatican II (1962-1965), sont des hérétiques et ont par conséquent perdu ou n'ont jamais validement obtenu la charge papale.",
-    es: "La creencia (Sedevacantismo) o una persona que sostiene la creencia (Sedevacantista) de que la Sede de Roma (el Papado) está actualmente vacante. Los adherentes creen que los Papas recientes, generalmente desde el Concilio Vaticano II (1962-1965), son herejes y, por lo tanto, han perdido o nunca obtuvieron válidamente el oficio papal.",
-    de: "Der Glaube (Sedisvakantismus) oder eine Person, die den Glauben vertritt (Sedisvakantist), dass der Stuhl von Rom (das Papsttum) derzeit vakant ist. Anhänger glauben, dass die jüngsten Päpste, typischerweise seit dem Zweiten Vatikanischen Konzil (1962-1965), Häretiker sind und daher das päpstliche Amt verloren oder nie gültig erlangt haben.",
-  },
-},
 
   {
-  id: "agape",
-  term: {
-    en: "Agape",
-    fr: "Agapè",
-    es: "Ágape",
-    de: "Agape",
+    id: "agape",
+    term: {
+      en: "Agape",
+      fr: "Agapè",
+      es: "Ágape",
+      de: "Agape",
+    },
+    definition: {
+      en: "A Greek word for selfless, sacrificial, and unconditional love, representing the divine love of God for humanity and the love Christians are called to have for one another.",
+      fr: "Un mot grec désignant l'amour désintéressé, sacrificiel et inconditionnel, représentant l'amour divin de Dieu pour l'humanité et l'amour que les chrétiens sont appelés à avoir les uns pour les autres.",
+      es: "Una palabra griega para el amor desinteresado, sacrificial e incondicional, que representa el amor divino de Dios por la humanidad y el amor que los cristianos están llamados a tenerse unos a otros.",
+      de: "Ein griechisches Wort für selbstlose, opferbereite und bedingungslose Liebe, das die göttliche Liebe Gottes zur Menschheit und die Liebe darstellt, zu der Christen untereinander berufen sind.",
+    },
   },
-  definition: {
-    en: "A Greek word for selfless, sacrificial, and unconditional love, representing the divine love of God for humanity and the love Christians are called to have for one another.",
-    fr: "Un mot grec désignant l'amour désintéressé, sacrificiel et inconditionnel, représentant l'amour divin de Dieu pour l'humanité et l'amour que les chrétiens sont appelés à avoir les uns pour les autres.",
-    es: "Una palabra griega para el amor desinteresado, sacrificial e incondicional, que representa el amor divino de Dios por la humanidad y el amor que los cristianos están llamados a tenerse unos a otros.",
-    de: "Ein griechisches Wort für selbstlose, opferbereite und bedingungslose Liebe, das die göttliche Liebe Gottes zur Menschheit und die Liebe darstellt, zu der Christen untereinander berufen sind.",
-  },
-},
 
   {
-  id: "novus-ordo",
-  term: {
-    en: "Novus Ordo",
-    fr: "Novus Ordo",
-    es: "Novus Ordo",
-    de: "Novus Ordo",
+    id: "novus-ordo",
+    term: {
+      en: "Novus Ordo",
+      fr: "Novus Ordo",
+      es: "Novus Ordo",
+      de: "Novus Ordo",
+    },
+    definition: {
+      en: "A common name for the Mass of Paul VI (Missa Pauli VI), the revision of the Roman Rite Mass promulgated by Pope Paul VI in 1969, after the Second Vatican Council. It is now the Ordinary Form of the Roman Rite.",
+      fr: "Nom courant pour la Messe de Paul VI (Missa Pauli VI), la révision du rite romain de la messe promulguée par le pape Paul VI en 1969, après le Concile Vatican II. C'est maintenant la Forme Ordinaire du rite romain.",
+      es: "Nombre común para la Misa de Pablo VI (Missa Pauli VI), la revisión del rito romano de la Misa promulgada por el Papa Pablo VI en 1969, después del Concilio Vaticano II. Actualmente es la Forma Ordinaria del rito romano.",
+      de: "Ein gebräuchlicher Name für die Messe Pauls VI. (Missa Pauli VI), die 1969 von Papst Paul VI. nach dem Zweiten Vatikanischen Konzil promulgierte Neufassung der Messe im Römischen Ritus. Sie ist heute die Ordentliche Form des Römischen Ritus.",
+    },
   },
-  definition: {
-    en: "A common name for the Mass of Paul VI (Missa Pauli VI), the revision of the Roman Rite Mass promulgated by Pope Paul VI in 1969, after the Second Vatican Council. It is now the Ordinary Form of the Roman Rite.",
-    fr: "Nom courant pour la Messe de Paul VI (Missa Pauli VI), la révision du rite romain de la messe promulguée par le pape Paul VI en 1969, après le Concile Vatican II. C'est maintenant la Forme Ordinaire du rite romain.",
-    es: "Nombre común para la Misa de Pablo VI (Missa Pauli VI), la revisión del rito romano de la Misa promulgada por el Papa Pablo VI en 1969, después del Concilio Vaticano II. Actualmente es la Forma Ordinaria del rito romano.",
-    de: "Ein gebräuchlicher Name für die Messe Pauls VI. (Missa Pauli VI), die 1969 von Papst Paul VI. nach dem Zweiten Vatikanischen Konzil promulgierte Neufassung der Messe im Römischen Ritus. Sie ist heute die Ordentliche Form des Römischen Ritus.",
-  },
-},
 
-  
   {
     id: "adoration",
     term: {
@@ -111,23 +110,22 @@ export const glossaryTerms: GlossaryTerm[] = [
     },
   },
 
-
   {
-  id: "latin-mass",
-  term: {
-    en: "Latin Mass",
-    fr: "Messe Latine",
-    es: "Misa Latina",
-    de: "Lateinische Messe",
+    id: "latin-mass",
+    term: {
+      en: "Latin Mass",
+      fr: "Messe Latine",
+      es: "Misa Latina",
+      de: "Lateinische Messe",
+    },
+    definition: {
+      en: "The traditional form of the Roman Rite Mass, celebrated in Latin, as codified in the Roman Missal of 1962. Also known as the Tridentine Mass or the Extraordinary Form.",
+      fr: "La forme traditionnelle du rite romain de la messe, célébrée en latin, telle que codifiée dans le Missel romain de 1962. Également connue sous le nom de Messe tridentine ou Forme extraordinaire.",
+      es: "La forma tradicional del rito romano de la Misa, celebrada en latín, codificada en el Misal Romano de 1962. También conocida como la Misa Tridentina o la Forma Extraordinaria.",
+      de: "Die traditionelle Form der Messe im Römischen Ritus, die auf Latein gefeiert wird, wie sie im Römischen Messbuch von 1962 kodifiziert ist. Auch bekannt als Tridentinische Messe oder außerordentliche Form.",
+    },
   },
-  definition: {
-    en: "The traditional form of the Roman Rite Mass, celebrated in Latin, as codified in the Roman Missal of 1962. Also known as the Tridentine Mass or the Extraordinary Form.",
-    fr: "La forme traditionnelle du rite romain de la messe, célébrée en latin, telle que codifiée dans le Missel romain de 1962. Également connue sous le nom de Messe tridentine ou Forme extraordinaire.",
-    es: "La forma tradicional del rito romano de la Misa, celebrada en latín, codificada en el Misal Romano de 1962. También conocida como la Misa Tridentina o la Forma Extraordinaria.",
-    de: "Die traditionelle Form der Messe im Römischen Ritus, die auf Latein gefeiert wird, wie sie im Römischen Messbuch von 1962 kodifiziert ist. Auch bekannt als Tridentinische Messe oder außerordentliche Form.",
-  },
-},
-  
+
   {
     id: "advent",
     term: {
@@ -173,6 +171,23 @@ export const glossaryTerms: GlossaryTerm[] = [
       de: "Lateinisch für 'Lamm Gottes'. Ein Titel für Jesus Christus und ein Gebet, das während der Messe gesprochen wird.",
     },
   },
+
+  {
+    id: "deus_vult",
+    term: {
+      en: "Deus Vult",
+      fr: "Deus Vult",
+      es: "Deus Vult",
+      de: "Deus Vult",
+    },
+    definition: {
+      en: '"God wills it" — a medieval Latin expression affirming that an action accords with God\'s will.',
+      fr: '"Dieu le veut" — une expression latine médiévale affirmant qu\'une action est conforme à la volonté de Dieu.',
+      es: '"Dios lo quiere" — una expresión latina medieval que afirma que una acción está conforme a la voluntad de Dios.',
+      de: '"Gott will es" — ein mittelalterlicher lateinischer Ausdruck, der bestätigt, dass etwas dem Willen Gottes entspricht.',
+    },
+  },
+
   {
     id: "alleluia",
     term: {
@@ -188,6 +203,251 @@ export const glossaryTerms: GlossaryTerm[] = [
       de: "Aus dem Hebräischen, bedeutet 'Preist den Herrn'. Ein Ausruf der Freude, der besonders in der Osterzeit verwendet wird.",
     },
   },
+
+  {
+    id: "salve_regina",
+    term: {
+      en: "Salve Regina",
+      fr: "Salve Regina",
+      es: "Salve Regina",
+      de: "Salve Regina",
+    },
+    definition: {
+      en: 'A traditional Catholic Marian prayer beginning with "Hail, Holy Queen," recited especially at Compline.',
+      fr: "Une prière mariale catholique traditionnelle commençant par « Salut, Sainte Reine », récitée notamment aux complies.",
+      es: "Una oración mariana católica tradicional que comienza con « Dios te salve, Reina », rezada especialmente en completas.",
+      de: 'Ein traditionelles katholisches Mariengebet, das mit „Sei gegrüßt, o Königin" beginnt und besonders zur Komplet gebetet wird.',
+    },
+  },
+
+  {
+    id: "pater_noster",
+    term: {
+      en: "Pater Noster",
+      fr: "Pater Noster",
+      es: "Padre Nuestro",
+      de: "Vaterunser",
+    },
+    definition: {
+      en: 'The "Our Father," the prayer taught by Christ to His disciples as the model of Christian prayer.',
+      fr: "Le « Notre Père », la prière enseignée par le Christ à ses disciples comme modèle de prière chrétienne.",
+      es: "El « Padre Nuestro », la oración enseñada por Cristo como modelo de oración cristiana.",
+      de: "Das „Vaterunser“, das Gebet, das Christus seinen Jüngern als Vorbild des christlichen Gebets lehrte.",
+    },
+  },
+
+  {
+  id: "peter",
+  term: {
+    en: "Peter",
+    fr: "Pierre",
+    es: "Pedro",
+    de: "Petrus",
+  },
+  definition: {
+    en: "One of the Twelve Apostles and the first Pope.",
+    fr: "Un des Douze Apôtres et le premier pape.",
+    es: "Uno de los Doce Apóstoles y el primer papa.",
+    de: "Einer der zwölf Apostel und der erste Papst.",
+  },
+},
+{
+  id: "andrew",
+  term: {
+    en: "Andrew",
+    fr: "André",
+    es: "Andrés",
+    de: "Andreas",
+  },
+  definition: {
+    en: "Brother of Peter and one of the Twelve Apostles.",
+    fr: "Frère de Pierre et l’un des Douze Apôtres.",
+    es: "Hermano de Pedro y uno de los Doce Apóstoles.",
+    de: "Bruder des Petrus und einer der zwölf Apostel.",
+  },
+},
+{
+  id: "james_greater",
+  term: {
+    en: "James the Greater",
+    fr: "Jacques le Majeur",
+    es: "Santiago el Mayor",
+    de: "Jakobus der Ältere",
+  },
+  definition: {
+    en: "One of the Twelve Apostles, son of Zebedee.",
+    fr: "Un des Douze Apôtres, fils de Zébédée.",
+    es: "Uno de los Doce Apóstoles, hijo de Zebedeo.",
+    de: "Einer der zwölf Apostel, Sohn des Zebedäus.",
+  },
+},
+{
+  id: "john",
+  term: {
+    en: "John",
+    fr: "Jean",
+    es: "Juan",
+    de: "Johannes",
+  },
+  definition: {
+    en: "One of the Apostles and author of the Fourth Gospel.",
+    fr: "Un des Apôtres et auteur du quatrième Évangile.",
+    es: "Uno de los Apóstoles y autor del cuarto Evangelio.",
+    de: "Einer der Apostel und Autor des vierten Evangeliums.",
+  },
+},
+{
+  id: "philip",
+  term: {
+    en: "Philip",
+    fr: "Philippe",
+    es: "Felipe",
+    de: "Philippus",
+  },
+  definition: {
+    en: "One of the Twelve Apostles.",
+    fr: "Un des Douze Apôtres.",
+    es: "Uno de los Doce Apóstoles.",
+    de: "Einer der zwölf Apostel.",
+  },
+},
+{
+  id: "bartholomew",
+  term: {
+    en: "Bartholomew",
+    fr: "Barthélemy",
+    es: "Bartolomé",
+    de: "Bartholomäus",
+  },
+  definition: {
+    en: "One of the Twelve Apostles, traditionally identified with Nathanael.",
+    fr: "Un des Douze Apôtres, traditionnellement identifié à Nathanaël.",
+    es: "Uno de los Doce Apóstoles, tradicionalmente identificado con Natanael.",
+    de: "Einer der zwölf Apostel, traditionell mit Nathanael identifiziert.",
+  },
+},
+{
+  id: "matthew",
+  term: {
+    en: "Matthew",
+    fr: "Matthieu",
+    es: "Mateo",
+    de: "Matthäus",
+  },
+  definition: {
+    en: "Apostle and author of the Gospel of Matthew.",
+    fr: "Apôtre et auteur de l’Évangile selon Matthieu.",
+    es: "Apóstol y autor del Evangelio de Mateo.",
+    de: "Apostel und Autor des Matthäusevangeliums.",
+  },
+},
+{
+  id: "thomas",
+  term: {
+    en: "Thomas",
+    fr: "Thomas",
+    es: "Tomás",
+    de: "Thomas",
+  },
+  definition: {
+    en: "One of the Twelve Apostles, known for initially doubting the Resurrection.",
+    fr: "Un des Douze Apôtres, connu pour avoir d’abord douté de la Résurrection.",
+    es: "Uno de los Doce Apóstoles, conocido por dudar inicialmente de la Resurrección.",
+    de: "Einer der zwölf Apostel, bekannt für seinen anfänglichen Zweifel an der Auferstehung.",
+  },
+},
+{
+  id: "james_lesser",
+  term: {
+    en: "James the Lesser",
+    fr: "Jacques le Mineur",
+    es: "Santiago el Menor",
+    de: "Jakobus der Jüngere",
+  },
+  definition: {
+    en: "One of the Twelve Apostles, son of Alphaeus.",
+    fr: "Un des Douze Apôtres, fils d’Alphée.",
+    es: "Uno de los Doce Apóstoles, hijo de Alfeo.",
+    de: "Einer der zwölf Apostel, Sohn des Alphäus.",
+  },
+},
+{
+  id: "jude",
+  term: {
+    en: "Jude Thaddeus",
+    fr: "Jude Thaddée",
+    es: "Judas Tadeo",
+    de: "Judas Thaddäus",
+  },
+  definition: {
+    en: "One of the Twelve Apostles, often invoked as patron of difficult causes.",
+    fr: "Un des Douze Apôtres, souvent invoqué comme patron des causes difficiles.",
+    es: "Uno de los Doce Apóstoles, patrono de las causas difíciles.",
+    de: "Einer der zwölf Apostel, Patron schwieriger Anliegen.",
+  },
+},
+{
+  id: "simon_zealot",
+  term: {
+    en: "Simon the Zealot",
+    fr: "Simon le Zélote",
+    es: "Simón el Zelote",
+    de: "Simon der Zelot",
+  },
+  definition: {
+    en: "One of the Twelve Apostles.",
+    fr: "Un des Douze Apôtres.",
+    es: "Uno de los Doce Apóstoles.",
+    de: "Einer der zwölf Apostel.",
+  },
+},
+{
+  id: "judas_iscariot",
+  term: {
+    en: "Judas Iscariot",
+    fr: "Judas Iscariote",
+    es: "Judas Iscariote",
+    de: "Judas Iskariot",
+  },
+  definition: {
+    en: "One of the Twelve Apostles who betrayed Jesus.",
+    fr: "Un des Douze Apôtres qui a trahi Jésus.",
+    es: "Uno de los Doce Apóstoles que traicionó a Jesús.",
+    de: "Einer der zwölf Apostel, der Jesus verriet.",
+  },
+},
+{
+  id: "matthias",
+  term: {
+    en: "Matthias",
+    fr: "Matthias",
+    es: "Matías",
+    de: "Matthias",
+  },
+  definition: {
+    en: "Chosen to replace Judas Iscariot among the Twelve.",
+    fr: "Choisi pour remplacer Judas Iscariote parmi les Douze.",
+    es: "Elegido para reemplazar a Judas Iscariote entre los Doce.",
+    de: "Zum Ersatz für Judas Iskariot unter den Zwölf gewählt.",
+  },
+},
+
+  {
+    id: "jesus",
+    term: {
+      en: "Jesus",
+      fr: "Jésus",
+      es: "Jesús",
+      de: "Jesus",
+    },
+    definition: {
+      en: "Jesus Christ, the incarnate Son of God, true God and true man, the Savior of humanity.",
+      fr: "Jésus-Christ, le Fils de Dieu incarné, vrai Dieu et vrai homme, le Sauveur de l’humanité.",
+      es: "Jesucristo, el Hijo de Dios encarnado, verdadero Dios y verdadero hombre, el Salvador de la humanidad.",
+      de: "Jesus Christus, der menschgewordene Sohn Gottes, wahrer Gott und wahrer Mensch, der Erlöser der Menschheit.",
+    },
+  },
+
   {
     id: "altar",
     term: {
@@ -2142,36 +2402,36 @@ export const glossaryTerms: GlossaryTerm[] = [
   },
 
   {
-      "id": "sacrament",
-      "term": {
-        "en": "Sacrament",
-        "fr": "Sacrement",
-        "es": "Sacramento",
-        "de": "Sakrament"
-      },
-      "definition": {
-        "en": "An efficacious sign of grace, instituted by Christ and entrusted to the Church, by which divine life is dispensed to us. They are seven in number: Baptism, Confirmation, Eucharist, Penance, Anointing of the Sick, Holy Orders, and Matrimony.",
-        "fr": "Un signe efficace de la grâce, institué par le Christ et confié à l'Église, par lequel la vie divine nous est distribuée. Ils sont au nombre de sept : Baptême, Confirmation, Eucharistie, Pénitence, Onction des malades, Ordre et Mariage.",
-        "es": "Un signo eficaz de la gracia, instituido por Cristo y confiado a la Iglesia, por el cual se nos dispensa la vida divina. Son siete en total: Bautismo, Confirmación, Eucaristía, Penitencia, Unción de los enfermos, Orden Sacerdotal y Matrimonio.",
-        "de": "Ein wirksames Zeichen der Gnade, von Christus eingesetzt und der Kirche anvertraut, durch das uns das göttliche Leben gespendet wird. Sie sind sieben an der Zahl: Taufe, Firmung, Eucharistie, Buße, Krankensalbung, Weihe und Ehe."
-      },
+    id: "sacrament",
+    term: {
+      en: "Sacrament",
+      fr: "Sacrement",
+      es: "Sacramento",
+      de: "Sakrament",
     },
-    {
-      "id": "second-council-constantinople",
-      "term": {
-        "en": "Second Council of Constantinople",
-        "fr": "Deuxième Concile de Constantinople",
-        "es": "Segundo Concilio de Constantinopla",
-        "de": "Zweites Konzil von Konstantinopel"
-      },
-      "definition": {
-        "en": "The fifth Ecumenical Council, held in 553 AD, which condemned the Three Chapters to clarify and defend the teaching of the Council of Chalcedon. Its main purpose was to insist further upon the unity of the Person of Christ in his two natures, divine and human, against Nestorianism.",
-        "fr": "Le cinquième Concile œcuménique, tenu en 553 après J.C., qui a condamné les Trois Chapitres pour clarifier et défendre l'enseignement du Concile de Chalcédoine. Son but principal était d'insister davantage sur l'unité de la Personne du Christ dans ses deux natures, divine et humaine, contre le nestorianisme.",
-        "es": "El quinto Concilio Ecuménico, celebrado en 553 d.C., que condenó los Tres Capítulos para clarificar y defender la enseñanza del Concilio de Calcedonia. Su propósito principal fue insistir aún más en la unidad de la Persona de Cristo en sus dos naturalezas, divina y humana, contra el nestorianismo.",
-        "de": "Das fünfte Ökumenische Konzil, abgehalten 553 n. Chr., das die Drei Kapitel verurteilte, um die Lehre des Konzils von Chalkedon zu klären und zu verteidigen. Sein Hauptzweck war es, weiter auf der Einheit der Person Christi in seinen zwei Naturen, göttlich und menschlich, gegen den Nestorianismus zu bestehen."
-      },
+    definition: {
+      en: "An efficacious sign of grace, instituted by Christ and entrusted to the Church, by which divine life is dispensed to us. They are seven in number: Baptism, Confirmation, Eucharist, Penance, Anointing of the Sick, Holy Orders, and Matrimony.",
+      fr: "Un signe efficace de la grâce, institué par le Christ et confié à l'Église, par lequel la vie divine nous est distribuée. Ils sont au nombre de sept : Baptême, Confirmation, Eucharistie, Pénitence, Onction des malades, Ordre et Mariage.",
+      es: "Un signo eficaz de la gracia, instituido por Cristo y confiado a la Iglesia, por el cual se nos dispensa la vida divina. Son siete en total: Bautismo, Confirmación, Eucaristía, Penitencia, Unción de los enfermos, Orden Sacerdotal y Matrimonio.",
+      de: "Ein wirksames Zeichen der Gnade, von Christus eingesetzt und der Kirche anvertraut, durch das uns das göttliche Leben gespendet wird. Sie sind sieben an der Zahl: Taufe, Firmung, Eucharistie, Buße, Krankensalbung, Weihe und Ehe.",
     },
-  
+  },
+  {
+    id: "second-council-constantinople",
+    term: {
+      en: "Second Council of Constantinople",
+      fr: "Deuxième Concile de Constantinople",
+      es: "Segundo Concilio de Constantinopla",
+      de: "Zweites Konzil von Konstantinopel",
+    },
+    definition: {
+      en: "The fifth Ecumenical Council, held in 553 AD, which condemned the Three Chapters to clarify and defend the teaching of the Council of Chalcedon. Its main purpose was to insist further upon the unity of the Person of Christ in his two natures, divine and human, against Nestorianism.",
+      fr: "Le cinquième Concile œcuménique, tenu en 553 après J.C., qui a condamné les Trois Chapitres pour clarifier et défendre l'enseignement du Concile de Chalcédoine. Son but principal était d'insister davantage sur l'unité de la Personne du Christ dans ses deux natures, divine et humaine, contre le nestorianisme.",
+      es: "El quinto Concilio Ecuménico, celebrado en 553 d.C., que condenó los Tres Capítulos para clarificar y defender la enseñanza del Concilio de Calcedonia. Su propósito principal fue insistir aún más en la unidad de la Persona de Cristo en sus dos naturalezas, divina y humana, contra el nestorianismo.",
+      de: "Das fünfte Ökumenische Konzil, abgehalten 553 n. Chr., das die Drei Kapitel verurteilte, um die Lehre des Konzils von Chalkedon zu klären und zu verteidigen. Sein Hauptzweck war es, weiter auf der Einheit der Person Christi in seinen zwei Naturen, göttlich und menschlich, gegen den Nestorianismus zu bestehen.",
+    },
+  },
+
   {
     id: "filioque",
     term: {

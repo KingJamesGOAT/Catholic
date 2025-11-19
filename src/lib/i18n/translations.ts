@@ -1717,69 +1717,351 @@ export const translations = {
           de: "Bewertung der Erklärungen",
         },
         intro: {
-          en: "Historians must find the best explanation that accounts for <strong>all 5 facts</strong>. Let's test the common alternative theories.",
-          fr: "Les historiens doivent trouver la meilleure explication qui rend compte des <strong>5 faits</strong>.",
-          es: "Los historiadores deben encontrar la mejor explicación que dé cuenta de los <strong>5 hechos</strong>.",
-          de: "Historiker müssen die beste Erklärung finden, die <strong>alle 5 Fakten</strong> berücksichtigt.",
+          en: "Historians must find the best explanation that accounts for <strong>all 5 facts</strong>. Let's test the common alternative theories against the historical data.",
+          fr: "Les historiens doivent trouver la meilleure explication qui rend compte des <strong>5 faits</strong>. Testons les théories alternatives courantes face aux données historiques.",
+          es: "Los historiadores deben encontrar la mejor explicación que dé cuenta de los <strong>5 hechos</strong>. Probemos las teorías alternativas comunes frente a los datos históricos.",
+          de: "Historiker müssen die beste Erklärung finden, die <strong>alle 5 Fakten</strong> berücksichtigt. Lassen Sie uns die gängigen alternativen Theorien anhand der historischen Daten prüfen.",
         },
         hallucination: {
-          title: { en: "Hypothesis: Hallucinations", fr: "Hypothèse : Hallucinations", es: "Hipótesis: Alucinaciones", de: "Hypothese: Halluzinationen" },
-          summary: { en: "Could the disciples have just imagined it in their grief?", fr: "L'ont-ils imaginé ?", es: "¿Podrían haberlo imaginado?", de: "Haben sie es sich eingebildet?" },
+          title: { 
+            en: "Hypothesis: Hallucinations", 
+            fr: "Hypothèse : Hallucinations", 
+            es: "Hipótesis: Alucinaciones", 
+            de: "Hypothese: Halluzinationen" 
+          },
+          summary: { 
+            en: "Could the disciples have just imagined it in their grief?", 
+            fr: "Les disciples l'ont-ils simplement imaginé dans leur chagrin ?", 
+            es: "¿Podrían haberlo imaginado los discípulos en su dolor?", 
+            de: "Könnten die Jünger es sich in ihrer Trauer nur eingebildet haben?" 
+          },
           content: {
-            en: `<div class="space-y-4 text-gray-300"><p>This theory suggests the disciples were so grief-stricken they hallucinated Jesus.</p><h4 class="text-red-400 font-semibold mt-4">Why it fails:</h4><ul class="list-disc pl-5 space-y-2"><li><strong>Group Hallucinations are Impossible:</strong> Hallucinations are internal, subjective experiences (like dreams). You cannot share a hallucination any more than you can share a dream. Yet, Jesus appeared to groups (the Twelve, the 500).</li><li><strong>Wrong State of Mind:</strong> Hallucinations usually require expectation or hysteria. The disciples were fearful and hiding, not expecting a resurrection. Paul (hostile) and James (skeptical) were definitely not in a psychological state to "project" a loving Jesus.</li><li><strong>Does Not Explain the Empty Tomb:</strong> Even if they all hallucinated, the body would still be in the tomb. The authorities could have exposed it.</li></ul></div>`,
-            fr: `<div class="space-y-4 text-gray-300"><p>Échoue car :</p><ul class="list-disc pl-5 space-y-2"><li><strong>Pas d'hallucinations de groupe :</strong> C'est une expérience individuelle.</li><li><strong>Mauvais état d'esprit :</strong> Les disciples avaient peur, Paul était hostile.</li><li><strong>Tombeau vide :</strong> Une hallucination n'explique pas l'absence du corps.</li></ul></div>`,
-            es: `<div class="space-y-4 text-gray-300"><p>Falla porque:</p><ul class="list-disc pl-5 space-y-2"><li><strong>No hay alucinaciones grupales:</strong> Es una experiencia individual.</li><li><strong>Estado mental incorrecto:</strong> Los discípulos tenían miedo, Pablo era hostil.</li><li><strong>Tumba vacía:</strong> Una alucinación no explica la ausencia del cuerpo.</li></ul></div>`,
-            de: `<div class="space-y-4 text-gray-300"><p>Scheitert weil:</p><ul class="list-disc pl-5 space-y-2"><li><strong>Keine Gruppenhalluzinationen:</strong> Es ist eine individuelle Erfahrung.</li><li><strong>Falsche Geisteshaltung:</strong> Jünger waren ängstlich, Paulus feindselig.</li><li><strong>Leeres Grab:</strong> Eine Halluzination erklärt nicht das Fehlen des Körpers.</li></ul></div>`,
+            en: `
+              <div class="space-y-4 text-gray-300">
+                <p>This theory suggests that the disciples were so grief-stricken or deluded that they experienced hallucinations of Jesus. Critics argue that these were projections of their own minds.</p>
+                <h4 class="text-red-400 font-semibold mt-4">Why it fails (Refutations):</h4>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li><strong>Group Hallucinations are Impossible:</strong> Hallucinations are internal, subjective experiences, similar to dreams. You cannot share a hallucination any more than you can share a dream. Yet, the earliest traditions (1 Cor 15:3-8) report appearances to groups: the Twelve, 500 brethren at once, and all the apostles.</li>
+                  <li><strong>Wrong State of Mind:</strong> Hallucinations typically require a hopeful, expectant, or hysterical mindset. The disciples were in despair, fearful, and hiding behind locked doors. James was a skeptic who did not believe. Paul was a hostile persecutor who hated the Church. None fit the psychological profile to "project" a loving Jesus.</li>
+                  <li><strong>Too Many Variances:</strong> The appearances occurred to different types of people (men, women, friends, foes), in different locations (indoors, outdoors, on a road), and at different times of day. It pushes credulity to claim every single distinct event was a subjective hallucination.</li>
+                  <li><strong>Does Not Explain the Empty Tomb:</strong> Even if every disciple hallucinated, Jesus' body would still have been in the tomb. The Jewish and Roman authorities could have simply produced the body to silence the message.</li>
+                </ul>
+              </div>`,
+            fr: `
+              <div class="space-y-4 text-gray-300">
+                <p>Cette théorie suggère que les disciples étaient si affligés ou délirants qu'ils ont eu des hallucinations de Jésus. Les critiques soutiennent qu'il s'agissait de projections de leur propre esprit.</p>
+                <h4 class="text-red-400 font-semibold mt-4">Pourquoi cela échoue (Réfutations) :</h4>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li><strong>Les hallucinations de groupe sont impossibles :</strong> Les hallucinations sont des expériences internes et subjectives, semblables aux rêves. On ne peut pas partager une hallucination, tout comme on ne peut pas partager un rêve. Pourtant, les traditions les plus anciennes (1 Cor 15:3-8) rapportent des apparitions à des groupes : les Douze, 500 frères à la fois, et tous les apôtres.</li>
+                  <li><strong>Mauvais état d'esprit :</strong> Les hallucinations nécessitent généralement un état d'esprit plein d'espoir ou d'attente. Les disciples étaient désespérés, effrayés et se cachaient. Jacques était un sceptique qui ne croyait pas. Paul était un persécuteur hostile qui haïssait l'Église. Aucun ne correspond au profil psychologique pour « projeter » un Jésus aimant.</li>
+                  <li><strong>Trop de variations :</strong> Les apparitions ont eu lieu devant différents types de personnes (hommes, femmes, amis, ennemis), dans différents lieux (intérieur, extérieur, sur une route) et à différents moments. Il est difficile de croire que chaque événement distinct était une hallucination subjective.</li>
+                  <li><strong>N'explique pas le tombeau vide :</strong> Même si chaque disciple avait halluciné, le corps de Jésus aurait toujours été dans le tombeau. Les autorités auraient simplement pu produire le corps pour faire taire le message.</li>
+                </ul>
+              </div>`,
+            es: `
+              <div class="space-y-4 text-gray-300">
+                <p>Esta teoría sugiere que los discípulos estaban tan afligidos o engañados que experimentaron alucinaciones de Jesús. Los críticos argumentan que estas fueron proyecciones de sus propias mentes.</p>
+                <h4 class="text-red-400 font-semibold mt-4">Por qué falla (Refutaciones):</h4>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li><strong>Las alucinaciones grupales son imposibles:</strong> Las alucinaciones son experiencias internas y subjetivas, similares a los sueños. No se puede compartir una alucinación más de lo que se puede compartir un sueño. Sin embargo, las tradiciones más antiguas (1 Cor 15:3-8) informan apariciones a grupos: los Doce, 500 hermanos a la vez y todos los apóstoles.</li>
+                  <li><strong>Estado mental incorrecto:</strong> Las alucinaciones suelen requerir una mentalidad esperanzada o expectante. Los discípulos estaban desesperados, temerosos y escondidos. Santiago era un escéptico que no creía. Pablo era un perseguidor hostil que odiaba a la Iglesia. Ninguno encaja en el perfil psicológico para "proyectar" a un Jesús amoroso.</li>
+                  <li><strong>Demasiadas variaciones:</strong> Las apariciones ocurrieron ante diferentes tipos de personas (hombres, mujeres, amigos, enemigos), en diferentes lugares (interiores, exteriores, en un camino) y en diferentes momentos. Es difícil creer que cada evento distinto fuera una alucinación subjetiva.</li>
+                  <li><strong>No explica la tumba vacía:</strong> Incluso si todos los discípulos hubieran alucinado, el cuerpo de Jesús todavía habría estado en la tumba. Las autoridades podrían haber presentado el cuerpo para silenciar el mensaje.</li>
+                </ul>
+              </div>`,
+            de: `
+              <div class="space-y-4 text-gray-300">
+                <p>Diese Theorie besagt, dass die Jünger so bekümmert oder verblendet waren, dass sie Halluzinationen von Jesus erlebten. Kritiker argumentieren, dies seien Projektionen ihres eigenen Geistes gewesen.</p>
+                <h4 class="text-red-400 font-semibold mt-4">Warum sie scheitert (Widerlegungen):</h4>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li><strong>Gruppenhalluzinationen sind unmöglich:</strong> Halluzinationen sind interne, subjektive Erfahrungen, ähnlich wie Träume. Man kann eine Halluzination genauso wenig teilen wie einen Traum. Doch die frühesten Traditionen (1. Kor 15,3-8) berichten von Erscheinungen vor Gruppen: den Zwölfen, 500 Brüdern auf einmal und allen Aposteln.</li>
+                  <li><strong>Falsche Geisteshaltung:</strong> Halluzinationen erfordern typischerweise eine hoffnungsvolle oder erwartungsvolle Haltung. Die Jünger waren verzweifelt, ängstlich und versteckten sich. Jakobus war ein Skeptiker, der nicht glaubte. Paulus war ein feindseliger Verfolger, der die Kirche hasste. Keiner passt in das psychologische Profil, um einen liebenden Jesus zu „projizieren“.</li>
+                  <li><strong>Zu viele Variationen:</strong> Die Erscheinungen traten bei verschiedenen Personengruppen (Männer, Frauen, Freunde, Feinde), an verschiedenen Orten (drinnen, draußen, auf einem Weg) und zu verschiedenen Zeiten auf. Es ist unglaubwürdig zu behaupten, dass jedes einzelne Ereignis eine subjektive Halluzination war.</li>
+                  <li><strong>Erklärt nicht das leere Grab:</strong> Selbst wenn jeder Jünger halluziniert hätte, wäre Jesu Körper immer noch im Grab gewesen. Die Behörden hätten einfach den Körper vorzeigen können, um die Botschaft zum Schweigen zu bringen.</li>
+                </ul>
+              </div>`
           }
         },
         swoon: {
-          title: { en: "Hypothesis: Apparent Death (Swoon)", fr: "Hypothèse : Mort Apparente", es: "Hipótesis: Muerte Aparente", de: "Hypothese: Scheintod" },
-          summary: { en: "Did Jesus survive the crucifixion and recover in the tomb?", fr: "Jésus a-t-il survécu à la croix ?", es: "¿Sobrevivió Jesús a la cruz?", de: "Überlebte Jesus das Kreuz?" },
+          title: { 
+            en: "Hypothesis: Apparent Death (Swoon)", 
+            fr: "Hypothèse : Mort Apparente (Évanouissement)", 
+            es: "Hipótesis: Muerte Aparente (Desmayo)", 
+            de: "Hypothese: Scheintod (Ohnmacht)" 
+          },
+          summary: { 
+            en: "Did Jesus survive the crucifixion and recover in the tomb?", 
+            fr: "Jésus a-t-il survécu à la crucifixion et récupéré dans le tombeau ?", 
+            es: "¿Sobrevivió Jesús a la crucifixión y se recuperó en la tumba?", 
+            de: "Überlebte Jesus die Kreuzigung und erholte sich im Grab?" 
+          },
           content: {
-            en: `<div class="space-y-4 text-gray-300"><p>Often called the "Swoon Theory," this suggests Jesus fainted on the cross, was mistaken for dead, and revived in the tomb.</p><h4 class="text-red-400 font-semibold mt-4">Why it fails:</h4><ul class="list-disc pl-5 space-y-2"><li><strong>Medical Impossibility:</strong> A JAMA study on the crucifixion concluded that death was certain due to hypovolemic shock and heart failure. The spear thrust confirmed it.</li><li><strong>The "Wounded Jesus" Problem:</strong> A half-dead, limping man in desperate need of a doctor would not inspire the disciples to worship him as the Lord of Life.</li><li><strong>Paul's Vision:</strong> Paul saw the glorified, powerful Jesus. A recovering survivor does not explain Paul's radical conversion.</li></ul></div>`,
-            fr: `<div class="space-y-4 text-gray-300"><p>Échoue car :</p><ul class="list-disc pl-5 space-y-2"><li><strong>Médicalement impossible :</strong> Le coup de lance a confirmé la mort.</li><li><strong>Jésus blessé :</strong> Un homme mourant n'inspirerait pas l'adoration comme Seigneur de la Vie.</li><li><strong>Vision de Paul :</strong> Paul a vu un Seigneur glorifié, pas une victime.</li></ul></div>`,
-            es: `<div class="space-y-4 text-gray-300"><p>Falla porque:</p><ul class="list-disc pl-5 space-y-2"><li><strong>Médicamente imposible:</strong> La lanza confirmó la muerte.</li><li><strong>Jesús herido:</strong> Un hombre moribundo no inspiraría adoración.</li><li><strong>Visión de Pablo:</strong> Pablo vio a un Señor glorificado, no a una víctima.</li></ul></div>`,
-            de: `<div class="space-y-4 text-gray-300"><p>Scheitert weil:</p><ul class="list-disc pl-5 space-y-2"><li><strong>Medizinisch unmöglich:</strong> Der Speerstich bestätigte den Tod.</li><li><strong>Verwundeter Jesus:</strong> Ein sterbender Mann würde keine Anbetung inspirieren.</li><li><strong>Paulus' Vision:</strong> Paulus sah einen verherrlichten Herrn, kein Opfer.</li></ul></div>`,
+            en: `
+              <div class="space-y-4 text-gray-300">
+                <p>Often called the "Swoon Theory," this suggests Jesus fainted on the cross due to trauma, was mistaken for dead, and revived in the cool air of the tomb.</p>
+                <h4 class="text-red-400 font-semibold mt-4">Why it fails (Refutations):</h4>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li><strong>Medical Impossibility:</strong> A detailed 1986 study in the <em>Journal of the American Medical Association</em> (JAMA) concluded death was certain. The Roman scourging caused hypovolemic shock; the hanging position caused asphyxiation. The spear thrust ruptured the heart (pericardium), evidenced by the flow of "blood and water."</li>
+                  <li><strong>The "Wounded Jesus" Problem:</strong> As scholar D.F. Strauss argued, a half-dead man crawling out of a tomb, bleeding, pale, and limping, would need a doctor, not worship. He would be a pitiable figure, not the glorious "Prince of Life" and conqueror of death that inspired the disciples.</li>
+                  <li><strong>Inability to Escape:</strong> It is historically absurd to believe a man in critical condition, with pierced hands and feet, could push a heavy stone from the inside, overpower armed Roman guards, and walk miles.</li>
+                  <li><strong>Paul's Conversion:</strong> Paul saw the glorified, blindingly powerful Jesus. A recovering survivor would not explain Paul's radical reversal from persecutor to apostle.</li>
+                </ul>
+              </div>`,
+            fr: `
+              <div class="space-y-4 text-gray-300">
+                <p>Souvent appelée « théorie de l'évanouissement », elle suggère que Jésus s'est évanoui sur la croix à cause du traumatisme, a été cru mort et a repris conscience dans l'air frais du tombeau.</p>
+                <h4 class="text-red-400 font-semibold mt-4">Pourquoi cela échoue (Réfutations) :</h4>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li><strong>Impossibilité médicale :</strong> Une étude détaillée de 1986 du <em>Journal of the American Medical Association</em> (JAMA) a conclu que la mort était certaine. La flagellation romaine a causé un choc hypovolémique ; la position suspendue a causé l'asphyxie. Le coup de lance a rompu le sac cardiaque (péricarde), prouvé par l'écoulement de « sang et d'eau ».</li>
+                  <li><strong>Le problème du « Jésus blessé » :</strong> Comme l'a soutenu l'érudit D.F. Strauss, un homme à moitié mort rampant hors d'un tombeau, saignant, pâle et boitant, aurait besoin d'un médecin, pas d'adoration. Il aurait été une figure pitoyable, et non le glorieux « Prince de la Vie » et vainqueur de la mort qui a inspiré les disciples.</li>
+                  <li><strong>Incapacité de s'échapper :</strong> Il est historiquement absurde de croire qu'un homme dans un état critique, aux mains et aux pieds percés, pourrait pousser une lourde pierre de l'intérieur, maîtriser des gardes romains armés et marcher des kilomètres.</li>
+                  <li><strong>La conversion de Paul :</strong> Paul a vu le Jésus glorifié et aveuglant de puissance. Un survivant en convalescence n'expliquerait pas le renversement radical de Paul de persécuteur à apôtre.</li>
+                </ul>
+              </div>`,
+            es: `
+              <div class="space-y-4 text-gray-300">
+                <p>A menudo llamada "teoría del desmayo", sugiere que Jesús se desmayó en la cruz debido al trauma, fue dado por muerto y revivió en el aire fresco de la tumba.</p>
+                <h4 class="text-red-400 font-semibold mt-4">Por qué falla (Refutaciones):</h4>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li><strong>Imposibilidad médica:</strong> Un estudio detallado de 1986 en el <em>Journal of the American Medical Association</em> (JAMA) concluyó que la muerte era segura. La flagelación romana causó un shock hipovolémico; la posición colgada causó asfixia. La lanzada rompió el saco cardíaco (pericardio), evidenciado por el flujo de "sangre y agua".</li>
+                  <li><strong>El problema del "Jesús herido":</strong> Como argumentó el erudito D.F. Strauss, un hombre medio muerto arrastrándose fuera de una tumba, sangrando, pálido y cojeando, necesitaría un médico, no adoración. Sería una figura lastimosa, no el glorioso "Príncipe de la Vida" y vencedor de la muerte que inspiró a los discípulos.</li>
+                  <li><strong>Incapacidad de escapar:</strong> Es históricamente absurdo creer que un hombre en estado crítico, con manos y pies perforados, podría empujar una piedra pesada desde el interior, dominar a guardias romanos armados y caminar millas.</li>
+                  <li><strong>La conversión de Pablo:</strong> Pablo vio al Jesús glorificado y cegadoramente poderoso. Un sobreviviente en recuperación no explicaría la reversión radical de Pablo de perseguidor a apóstol.</li>
+                </ul>
+              </div>`,
+            de: `
+              <div class="space-y-4 text-gray-300">
+                <p>Oft als „Ohnmachtstheorie“ bezeichnet, besagt diese Theorie, dass Jesus am Kreuz aufgrund des Traumas ohnmächtig wurde, fälschlicherweise für tot gehalten wurde und im kühlen Grab wieder zu sich kam.</p>
+                <h4 class="text-red-400 font-semibold mt-4">Warum sie scheitert (Widerlegungen):</h4>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li><strong>Medizinische Unmöglichkeit:</strong> Eine detaillierte Studie von 1986 im <em>Journal of the American Medical Association</em> (JAMA) kam zu dem Schluss, dass der Tod sicher war. Die römische Geißelung verursachte einen hypovolämischen Schock; die hängende Position führte zur Asphyxie. Der Speerstich zerriss den Herzbeutel (Perikard), was durch den Fluss von „Blut und Wasser“ belegt wird.</li>
+                  <li><strong>Das Problem des „verwundeten Jesus“:</strong> Wie der Gelehrte D.F. Strauss argumentierte, würde ein halbtoter Mann, der aus einem Grab kriecht, blutend, blass und humpelnd, einen Arzt brauchen, keine Anbetung. Er wäre eine erbärmliche Gestalt, nicht der glorreiche „Fürst des Lebens“ und Überwinder des Todes, der die Jünger inspirierte.</li>
+                  <li><strong>Unfähigkeit zur Flucht:</strong> Es ist historisch absurd zu glauben, ein Mann in kritischem Zustand, mit durchbohrten Händen und Füßen, könnte einen schweren Stein von innen wegdrücken, bewaffnete römische Wachen überwältigen und meilenweit gehen.</li>
+                  <li><strong>Paulus' Bekehrung:</strong> Paulus sah den verherrlichten, blendend mächtigen Jesus. Ein genesender Überlebender würde Paulus' radikale Umkehr vom Verfolger zum Apostel nicht erklären.</li>
+                </ul>
+              </div>`
           }
         },
         fraud: {
-          title: { en: "Hypothesis: Fraud (Stolen Body)", fr: "Hypothèse : Fraude", es: "Hipótesis: Fraude", de: "Hypothese: Betrug" },
-          summary: { en: "Did the disciples (or someone else) steal the body?", fr: "Les disciples ont-ils volé le corps ?", es: "¿Robaron el cuerpo los discípulos?", de: "Stahlen die Jünger den Körper?" },
+          title: { 
+            en: "Hypothesis: Fraud (Stolen Body)", 
+            fr: "Hypothèse : Fraude (Corps Volé)", 
+            es: "Hipótesis: Fraude (Cuerpo Robado)", 
+            de: "Hypothese: Betrug (Gestohlener Körper)" 
+          },
+          summary: { 
+            en: "Did the disciples (Fraud 1) or someone else (Fraud 2) steal the body?", 
+            fr: "Les disciples (Fraude 1) ou quelqu'un d'autre (Fraude 2) ont-ils volé le corps ?", 
+            es: "¿Robaron el cuerpo los discípulos (Fraude 1) o alguien más (Fraude 2)?", 
+            de: "Haben die Jünger (Betrug 1) oder jemand anderes (Betrug 2) den Körper gestohlen?" 
+          },
           content: {
-            en: `<div class="space-y-4 text-gray-300"><p><strong>Fraud 1: The Disciples Stole It.</strong><br/>Fails because of their transformation. Men do not willingly face torture and death for a lie they invented. They had no motive (money, power, sex) to invent a story that got them killed.</p><p><strong>Fraud 2: Someone Else Stole It.</strong><br/>If enemies stole it, they would have produced the body to stop Christianity. If grave robbers stole it, it explains the tomb but fails completely to explain the <em>appearances</em> and conversions.</p></div>`,
-            fr: `<div class="space-y-4 text-gray-300"><p>Échoue car les hommes ne meurent pas pour un mensonge qu'ils ont inventé. Si des ennemis l'avaient volé, ils auraient produit le corps.</p></div>`,
-            es: `<div class="space-y-4 text-gray-300"><p>Falla porque los hombres no mueren por una mentira que inventaron. Si los enemigos lo hubieran robado, habrían presentado el cuerpo.</p></div>`,
-            de: `<div class="space-y-4 text-gray-300"><p>Scheitert, weil Menschen nicht für eine selbst erfundene Lüge sterben. Wenn Feinde ihn gestohlen hätten, hätten sie den Körper vorgezeigt.</p></div>`,
+            en: `
+              <div class="space-y-4 text-gray-300">
+                <p>This theory has two forms: either the disciples stole the body (Fraud 1) or enemies/thieves did (Fraud 2).</p>
+                <h4 class="text-red-400 font-semibold mt-4">Why it fails (Refutations):</h4>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li><strong>Fraud 1 (Disciples): Fails on Sincerity.</strong> History shows the disciples were transformed from cowards to bold martyrs. People may die for a lie they <em>believe</em> is true, but nobody willingly faces torture and death for a lie they <em>know</em> they invented. As Chuck Colson (Watergate conspirator) noted, conspiracies break down under pressure; the apostles never recanted.</li>
+                  <li><strong>Fraud 2 (Enemies): Fails on Logic.</strong> If the Jewish or Roman authorities stole the body, they would have produced it immediately to crush the Christian movement when the disciples started preaching the resurrection. Their silence proves they didn't have the body.</li>
+                  <li><strong>Grave Robbers:</strong> If thieves stole the body, it doesn't explain the <em>appearances</em>. The disciples didn't just see an empty tomb; they conversed and ate with Jesus. Also, thieves don't unwrap a body and leave the valuable linens neatly folded (John 20).</li>
+                  <li><strong>Does Not Convert Skeptics:</strong> An empty tomb alone would not convert James or Paul. They needed to see the <em>person</em> of Jesus to change their lives.</li>
+                </ul>
+              </div>`,
+            fr: `
+              <div class="space-y-4 text-gray-300">
+                <p>Cette théorie a deux formes : soit les disciples ont volé le corps (Fraude 1), soit des ennemis/voleurs l'ont fait (Fraude 2).</p>
+                <h4 class="text-red-400 font-semibold mt-4">Pourquoi cela échoue (Réfutations) :</h4>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li><strong>Fraude 1 (Disciples) : Échoue sur la sincérité.</strong> L'histoire montre que les disciples sont passés de lâches à martyrs audacieux. Les gens peuvent mourir pour un mensonge qu'ils <em>croient</em> être vrai, mais personne n'affronte volontairement la torture et la mort pour un mensonge qu'ils <em>savent</em> avoir inventé. Comme l'a noté Chuck Colson (conspirateur du Watergate), les conspirations s'effondrent sous la pression ; les apôtres ne se sont jamais rétractés.</li>
+                  <li><strong>Fraude 2 (Ennemis) : Échoue sur la logique.</strong> Si les autorités juives ou romaines avaient volé le corps, elles l'auraient produit immédiatement pour écraser le mouvement chrétien lorsque les disciples ont commencé à prêcher la résurrection. Leur silence prouve qu'ils n'avaient pas le corps.</li>
+                  <li><strong>Pilleurs de tombes :</strong> Si des voleurs avaient volé le corps, cela n'expliquerait pas les <em>apparitions</em>. Les disciples n'ont pas seulement vu un tombeau vide ; ils ont conversé et mangé avec Jésus. De plus, les voleurs ne déballent pas un corps pour laisser les linges de valeur soigneusement pliés (Jean 20).</li>
+                  <li><strong>Ne convertit pas les sceptiques :</strong> Un tombeau vide seul n'aurait pas converti Jacques ou Paul. Ils avaient besoin de voir la <em>personne</em> de Jésus pour changer leur vie.</li>
+                </ul>
+              </div>`,
+            es: `
+              <div class="space-y-4 text-gray-300">
+                <p>Esta teoría tiene dos formas: o los discípulos robaron el cuerpo (Fraude 1) o los enemigos/ladrones lo hicieron (Fraude 2).</p>
+                <h4 class="text-red-400 font-semibold mt-4">Por qué falla (Refutaciones):</h4>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li><strong>Fraude 1 (Discípulos): Falla en la sinceridad.</strong> La historia muestra que los discípulos se transformaron de cobardes en mártires audaces. La gente puede morir por una mentira que <em>cree</em> que es verdad, pero nadie enfrenta voluntariamente la tortura y la muerte por una mentira que <em>sabe</em> que inventó. Como señaló Chuck Colson (conspirador de Watergate), las conspiraciones se desmoronan bajo presión; los apóstoles nunca se retractaron.</li>
+                  <li><strong>Fraude 2 (Enemigos): Falla en la lógica.</strong> Si las autoridades judías o romanas hubieran robado el cuerpo, lo habrían presentado inmediatamente para aplastar el movimiento cristiano cuando los discípulos comenzaron a predicar la resurrección. Su silencio prueba que no tenían el cuerpo.</li>
+                  <li><strong>Ladrones de tumbas:</strong> Si los ladrones robaron el cuerpo, eso no explica las <em>apariciones</em>. Los discípulos no solo vieron una tumba vacía; conversaron y comieron con Jesús. Además, los ladrones no desenvuelven un cuerpo y dejan los valiosos lienzos cuidadosamente doblados (Juan 20).</li>
+                  <li><strong>No convierte a los escépticos:</strong> Una tumba vacía por sí sola no habría convertido a Santiago ni a Pablo. Necesitaban ver a la <em>persona</em> de Jesús para cambiar sus vidas.</li>
+                </ul>
+              </div>`,
+            de: `
+              <div class="space-y-4 text-gray-300">
+                <p>Diese Theorie hat zwei Formen: Entweder haben die Jünger den Körper gestohlen (Betrug 1) oder Feinde/Diebe haben es getan (Betrug 2).</p>
+                <h4 class="text-red-400 font-semibold mt-4">Warum sie scheitert (Widerlegungen):</h4>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li><strong>Betrug 1 (Jünger): Scheitert an der Aufrichtigkeit.</strong> Die Geschichte zeigt, dass sich die Jünger von Feiglingen zu kühnen Märtyrern wandelten. Menschen mögen für eine Lüge sterben, die sie für wahr <em>halten</em>, aber niemand nimmt freiwillig Folter und Tod für eine Lüge in Kauf, von der er <em>weiß</em>, dass er sie erfunden hat. Wie Chuck Colson (Watergate-Verschwörer) feststellte, brechen Verschwörungen unter Druck zusammen; die Apostel widerriefen nie.</li>
+                  <li><strong>Betrug 2 (Feinde): Scheitert an der Logik.</strong> Hätten die jüdischen oder römischen Behörden den Körper gestohlen, hätten sie ihn sofort vorgezeigt, um die christliche Bewegung zu zerschlagen, als die Jünger begannen, die Auferstehung zu predigen. Ihr Schweigen beweist, dass sie den Körper nicht hatten.</li>
+                  <li><strong>Grabräuber:</strong> Wenn Diebe den Körper gestohlen hätten, erklärt das nicht die <em>Erscheinungen</em>. Die Jünger sahen nicht nur ein leeres Grab; sie unterhielten sich und aßen mit Jesus. Außerdem wickeln Diebe keinen Körper aus und lassen die wertvollen Leinen ordentlich gefaltet zurück (Johannes 20).</li>
+                  <li><strong>Bekehrt keine Skeptiker:</strong> Ein leeres Grab allein hätte Jakobus oder Paulus nicht bekehrt. Sie mussten die <em>Person</em> Jesu sehen, um ihr Leben zu ändern.</li>
+                </ul>
+              </div>`
           }
         },
         conversionDisorder: {
-          title: { en: "Hypothesis: Conversion Disorder", fr: "Hypothèse : Trouble Conversif", es: "Hipótesis: Trastorno Conversivo", de: "Hypothese: Konversionsstörung" },
-          summary: { en: "Did Paul have a psychological breakdown?", fr: "Paul a-t-il fait une dépression ?", es: "¿Tuvo Pablo un colapso?", de: "Hatte Paulus einen Zusammenbruch?" },
+          title: { 
+            en: "Hypothesis: Conversion Disorder", 
+            fr: "Hypothèse : Trouble de Conversion", 
+            es: "Hipótesis: Trastorno de Conversión", 
+            de: "Hypothese: Konversionsstörung" 
+          },
+          summary: { 
+            en: "Did Paul have a psychological breakdown (psychosomatic blindness)?", 
+            fr: "Paul a-t-il fait une dépression psychologique ?", 
+            es: "¿Tuvo Pablo un colapso psicológico?", 
+            de: "Hatte Paulus einen psychischen Zusammenbruch?" 
+          },
           content: {
-            en: `<div class="space-y-4 text-gray-300"><p>Some skeptics argue Paul suffered from psychosomatic symptoms due to guilt.</p><h4 class="text-red-400 font-semibold mt-4">Why it fails:</h4><ul class="list-disc pl-5 space-y-2"><li><strong>Ad Hoc:</strong> Requires inventing a "guilt complex" for Paul that contradicts his own letters where he claims he was "blameless" and zealous.</li><li><strong>External Reality:</strong> Paul's companions also saw the light and heard the voice. A psychological disorder in Paul's head cannot be perceived by bystanders.</li><li><strong>Limited Scope:</strong> Explains nothing about the empty tomb, James' conversion, or the appearances to the Twelve.</li></ul></div>`,
-            fr: `<div class="space-y-4 text-gray-300"><p>Échoue car Paul ne montrait aucun signe de culpabilité. De plus, ses compagnons ont vu la lumière, ce qui exclut un trouble purement mental.</p></div>`,
-            es: `<div class="space-y-4 text-gray-300"><p>Falla porque Pablo no mostraba signos de culpa. Además, sus compañeros vieron la luz, lo que excluye un trastorno puramente mental.</p></div>`,
-            de: `<div class="space-y-4 text-gray-300"><p>Scheitert, weil Paulus keine Anzeichen von Schuld zeigte. Zudem sahen seine Begleiter das Licht, was eine rein mentale Störung ausschließt.</p></div>`,
+            en: `
+              <div class="space-y-4 text-gray-300">
+                <p>Some skeptics argue Paul experienced a "conversion disorder" where deep subconscious guilt manifests as physical symptoms (like blindness) and hallucinations.</p>
+                <h4 class="text-red-400 font-semibold mt-4">Why it fails (Refutations):</h4>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li><strong>Wrong Psychological Profile:</strong> Conversion disorder is statistically most common in women, adolescents, or individuals with lower IQs or high stress tolerance issues. Paul was a highly intellectual, disciplined male leader who showed no signs of prior mental instability.</li>
+                  <li><strong>Ad Hoc Complexity:</strong> To work, this theory requires inventing a "guilt complex" for Paul that contradicts his own letters (where he claims he was "blameless" and zealous without regret). It also requires adding other disorders like a "messiah complex" and auditory hallucinations to explain the voice he heard.</li>
+                  <li><strong>External Reality Check:</strong> It ignores the fact that Paul's traveling companions <em>also</em> saw the light and heard the voice (Acts 9). A psychological disorder inside Paul's head cannot be perceived by bystanders.</li>
+                  <li><strong>Limited Scope:</strong> Even if true for Paul, it explains absolutely nothing about the empty tomb, the conversion of James (who wasn't a persecutor), or the group appearances to the Twelve.</li>
+                </ul>
+              </div>`,
+            fr: `
+              <div class="space-y-4 text-gray-300">
+                <p>Certains sceptiques soutiennent que Paul a souffert d'un « trouble de conversion » où une profonde culpabilité subconsciente se manifeste par des symptômes physiques (comme la cécité) et des hallucinations.</p>
+                <h4 class="text-red-400 font-semibold mt-4">Pourquoi cela échoue (Réfutations) :</h4>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li><strong>Mauvais profil psychologique :</strong> Le trouble de conversion est statistiquement plus fréquent chez les femmes, les adolescents ou les personnes ayant un QI plus faible. Paul était un leader intellectuel masculin, discipliné, qui ne montrait aucun signe d'instabilité mentale antérieure.</li>
+                  <li><strong>Complexité ad hoc :</strong> Pour fonctionner, cette théorie nécessite d'inventer un « complexe de culpabilité » pour Paul qui contredit ses propres lettres (où il affirme être « irréprochable » et zélé sans regret). Elle nécessite également d'ajouter d'autres troubles comme un « complexe du messie » et des hallucinations auditives.</li>
+                  <li><strong>Réalité externe :</strong> Cela ignore le fait que les compagnons de voyage de Paul ont <em>aussi</em> vu la lumière et entendu la voix (Actes 9). Un trouble psychologique dans la tête de Paul ne peut pas être perçu par les spectateurs.</li>
+                  <li><strong>Portée limitée :</strong> Même si c'était vrai pour Paul, cela n'explique absolument rien sur le tombeau vide, la conversion de Jacques (qui n'était pas un persécuteur) ou les apparitions aux Douze.</li>
+                </ul>
+              </div>`,
+            es: `
+              <div class="space-y-4 text-gray-300">
+                <p>Algunos escépticos argumentan que Pablo experimentó un "trastorno de conversión" donde la culpa subconsciente profunda se manifiesta como síntomas físicos (como ceguera) y alucinaciones.</p>
+                <h4 class="text-red-400 font-semibold mt-4">Por qué falla (Refutaciones):</h4>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li><strong>Perfil psicológico incorrecto:</strong> El trastorno de conversión es estadísticamente más común en mujeres, adolescentes o personas con un coeficiente intelectual más bajo. Pablo era un líder intelectual masculino, disciplinado, que no mostraba signos de inestabilidad mental previa.</li>
+                  <li><strong>Complejidad ad hoc:</strong> Para funcionar, esta teoría requiere inventar un "complejo de culpa" para Pablo que contradice sus propias cartas (donde afirma que era "intachable" y celoso sin remordimientos). También requiere agregar otros trastornos como un "complejo de mesías" y alucinaciones auditivas.</li>
+                  <li><strong>Verificación de realidad externa:</strong> Ignora el hecho de que los compañeros de viaje de Pablo <em>también</em> vieron la luz y escucharon la voz (Hechos 9). Un trastorno psicológico dentro de la cabeza de Pablo no puede ser percibido por los espectadores.</li>
+                  <li><strong>Alcance limitado:</strong> Incluso si fuera cierto para Pablo, no explica absolutamente nada sobre la tumba vacía, la conversión de Santiago (que no era un perseguidor) o las apariciones a los Doce.</li>
+                </ul>
+              </div>`,
+            de: `
+              <div class="space-y-4 text-gray-300">
+                <p>Einige Skeptiker argumentieren, Paulus habe eine „Konversionsstörung“ erlebt, bei der sich tiefe unterbewusste Schuldgefühle als körperliche Symptome (wie Blindheit) und Halluzinationen manifestieren.</p>
+                <h4 class="text-red-400 font-semibold mt-4">Warum sie scheitert (Widerlegungen):</h4>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li><strong>Falsches psychologisches Profil:</strong> Konversionsstörungen sind statistisch gesehen bei Frauen, Jugendlichen oder Personen mit niedrigerem IQ am häufigsten. Paulus war ein hochintellektueller, disziplinierter männlicher Anführer, der keine Anzeichen einer früheren psychischen Instabilität zeigte.</li>
+                  <li><strong>Ad-hoc-Komplexität:</strong> Damit diese Theorie funktioniert, muss ein „Schuldkomplex“ für Paulus erfunden werden, der seinen eigenen Briefen widerspricht (in denen er behauptet, er sei „untadelig“ und ohne Reue eifrig gewesen). Sie erfordert auch das Hinzufügen anderer Störungen wie eines „Messias-Komplexes“ und auditiver Halluzinationen.</li>
+                  <li><strong>Überprüfung der äußeren Realität:</strong> Sie ignoriert die Tatsache, dass Paulus' Reisebegleiter <em>ebenfalls</em> das Licht sahen und die Stimme hörten (Apg 9). Eine psychische Störung in Paulus' Kopf kann von Umstehenden nicht wahrgenommen werden.</li>
+                  <li><strong>Begrenzter Umfang:</strong> Selbst wenn es für Paulus zuträfe, erklärt es absolut nichts über das leere Grab, die Bekehrung von Jakobus (der kein Verfolger war) oder die Erscheinungen vor den Zwölfen.</li>
+                </ul>
+              </div>`
           }
         },
         wrongTomb: {
-          title: { en: "Hypothesis: Wrong Tomb", fr: "Hypothèse : Mauvais Tombeau", es: "Hipótesis: Tumba Equivocada", de: "Hypothese: Falsches Grab" },
-          summary: { en: "Did the women and disciples just go to the wrong grave?", fr: "Se sont-ils perdus ?", es: "¿Se perdieron?", de: "Haben sie sich verirrt?" },
+          title: { 
+            en: "Hypothesis: Wrong Tomb", 
+            fr: "Hypothèse : Mauvais Tombeau", 
+            es: "Hipótesis: Tumba Equivocada", 
+            de: "Hypothese: Falsches Grab" 
+          },
+          summary: { 
+            en: "Did the women and disciples just go to the wrong grave?", 
+            fr: "Sont-ils allés au mauvais tombeau ?", 
+            es: "¿Fueron a la tumba equivocada?", 
+            de: "Gingen sie zum falschen Grab?" 
+          },
           content: {
-            en: `<div class="space-y-4 text-gray-300"><p>Suggested by Kirsopp Lake, this posits that everyone simply got lost.</p><h4 class="text-red-400 font-semibold mt-4">Why it fails:</h4><ul class="list-disc pl-5 space-y-2"><li><strong>Known Burial Site:</strong> Jesus was buried by Joseph of Arimathea, a public figure. The location was known.</li><li><strong>Checkable:</strong> Authorities could have simply gone to the <em>right</em> tomb and produced the body to crush the movement.</li><li><strong>Doesn't Explain Appearances:</strong> Seeing an empty grave causes confusion, not the belief that you have conversed with God.</li></ul></div>`,
-            fr: `<div class="space-y-4 text-gray-300"><p>Échoue car le tombeau était connu (Joseph d'Arimathie). Les autorités auraient pu aller au bon tombeau pour réfuter l'affirmation.</p></div>`,
-            es: `<div class="space-y-4 text-gray-300"><p>Falla porque la tumba era conocida. Las autoridades podrían haber ido a la tumba correcta para refutar la afirmación.</p></div>`,
-            de: `<div class="space-y-4 text-gray-300"><p>Scheitert, weil das Grab bekannt war. Die Behörden hätten zum richtigen Grab gehen können, um die Behauptung zu widerlegen.</p></div>`,
+            en: `
+              <div class="space-y-4 text-gray-300">
+                <p>This theory posits that the women and disciples were confused and went to an unused tomb by mistake, finding it empty and assuming resurrection.</p>
+                <h4 class="text-red-400 font-semibold mt-4">Why it fails (Refutations):</h4>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li><strong>Known Burial Site:</strong> Jesus was not buried in a common pit but in the tomb of Joseph of Arimathea, a prominent member of the Sanhedrin (Jewish Council). The location was specific and known to both followers and authorities.</li>
+                  <li><strong>Checkable Fact:</strong> If the disciples went to the wrong tomb, the Jewish and Roman authorities simply had to go to the <em>right</em> tomb (which they knew) and produce the body. This would have destroyed Christianity instantly. They never did because the right tomb was empty.</li>
+                  <li><strong>Does Not Explain Appearances:</strong> Seeing an empty grave causes confusion (as it did for Mary Magdalene: "They have taken the Lord!"), not the belief that God has raised someone to glory. Belief arose from <em>meeting</em> Jesus, not just seeing an empty cave.</li>
+                  <li><strong>No Ancient Counter-Narrative:</strong> No ancient critic (even Celsus or Jewish polemics) ever suggested they went to the wrong tomb; they accused them of theft, implicitly admitting the specific tomb was known and empty.</li>
+                </ul>
+              </div>`,
+            fr: `
+              <div class="space-y-4 text-gray-300">
+                <p>Cette théorie postule que les femmes et les disciples étaient confus et sont allés par erreur à un tombeau inutilisé, le trouvant vide et supposant la résurrection.</p>
+                <h4 class="text-red-400 font-semibold mt-4">Pourquoi cela échoue (Réfutations) :</h4>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li><strong>Lieu de sépulture connu :</strong> Jésus n'a pas été enterré dans une fosse commune, mais dans le tombeau de Joseph d'Arimathie, un membre éminent du Sanhédrin (Conseil juif). L'emplacement était spécifique et connu tant des disciples que des autorités.</li>
+                  <li><strong>Fait vérifiable :</strong> Si les disciples étaient allés au mauvais tombeau, les autorités juives et romaines n'avaient qu'à aller au <em>bon</em> tombeau (qu'elles connaissaient) et produire le corps. Cela aurait détruit le christianisme instantanément. Elles ne l'ont jamais fait parce que le bon tombeau était vide.</li>
+                  <li><strong>N'explique pas les apparitions :</strong> Voir un tombeau vide provoque la confusion (comme pour Marie Madeleine : « Ils ont enlevé le Seigneur ! »), pas la croyance que Dieu a ressuscité quelqu'un dans la gloire. La croyance est née de la <em>rencontre</em> avec Jésus, pas seulement de la vue d'une grotte vide.</li>
+                  <li><strong>Aucun contre-récit ancien :</strong> Aucun critique ancien (même Celse ou les polémiques juives) n'a jamais suggéré qu'ils étaient allés au mauvais tombeau ; ils les ont accusés de vol, admettant implicitement que le tombeau spécifique était connu et vide.</li>
+                </ul>
+              </div>`,
+            es: `
+              <div class="space-y-4 text-gray-300">
+                <p>Esta teoría postula que las mujeres y los discípulos estaban confundidos y fueron a una tumba no utilizada por error, encontrándola vacía y asumiendo la resurrección.</p>
+                <h4 class="text-red-400 font-semibold mt-4">Por qué falla (Refutaciones):</h4>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li><strong>Lugar de entierro conocido:</strong> Jesús no fue enterrado en una fosa común, sino en la tumba de José de Arimatea, un miembro prominente del Sanedrín (Consejo Judío). La ubicación era específica y conocida tanto por los seguidores como por las autoridades.</li>
+                  <li><strong>Hecho verificable:</strong> Si los discípulos fueron a la tumba equivocada, las autoridades judías y romanas simplemente tenían que ir a la tumba <em>correcta</em> (que conocían) y presentar el cuerpo. Esto habría destruido el cristianismo al instante. Nunca lo hicieron porque la tumba correcta estaba vacía.</li>
+                  <li><strong>No explica las apariciones:</strong> Ver una tumba vacía causa confusión (como le pasó a María Magdalena: "¡Se han llevado al Señor!"), no la creencia de que Dios ha resucitado a alguien a la gloria. La creencia surgió del <em>encuentro</em> con Jesús, no solo de ver una cueva vacía.</li>
+                  <li><strong>Sin contra-narrativa antigua:</strong> Ningún crítico antiguo (ni siquiera Celso o las polémicas judías) sugirió jamás que fueran a la tumba equivocada; los acusaron de robo, admitiendo implícitamente que la tumba específica era conocida y estaba vacía.</li>
+                </ul>
+              </div>`,
+            de: `
+              <div class="space-y-4 text-gray-300">
+                <p>Diese Theorie besagt, dass die Frauen und Jünger verwirrt waren und versehentlich zu einem unbenutzten Grab gingen, es leer vorfanden und eine Auferstehung annahmen.</p>
+                <h4 class="text-red-400 font-semibold mt-4">Warum sie scheitert (Widerlegungen):</h4>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li><strong>Bekannte Grabstätte:</strong> Jesus wurde nicht in einer Gemeinschaftsgrube begraben, sondern im Grab von Joseph von Arimathäa, einem prominenten Mitglied des Sanhedrin (Jüdischer Rat). Der Ort war spezifisch und sowohl Anhängern als auch Behörden bekannt.</li>
+                  <li><strong>Überprüfbarer Fakt:</strong> Wenn die Jünger zum falschen Grab gegangen wären, hätten die jüdischen und römischen Behörden einfach zum <em>richtigen</em> Grab gehen (das sie kannten) und den Körper vorzeigen müssen. Das hätte das Christentum sofort zerstört. Sie taten es nie, weil das richtige Grab leer war.</li>
+                  <li><strong>Erklärt Erscheinungen nicht:</strong> Ein leeres Grab zu sehen verursacht Verwirrung (wie bei Maria Magdalena: „Sie haben den Herrn weggenommen!“), nicht den Glauben, dass Gott jemanden zur Herrlichkeit auferweckt hat. Der Glaube entstand aus der <em>Begegnung</em> mit Jesus, nicht nur aus dem Sehen einer leeren Höhle.</li>
+                  <li><strong>Keine antike Gegenerzählung:</strong> Kein antiker Kritiker (selbst Celsus oder jüdische Polemiken) hat jemals vorgeschlagen, dass sie zum falschen Grab gegangen seien; sie beschuldigten sie des Diebstahls und gaben damit implizit zu, dass das spezifische Grab bekannt und leer war.</li>
+                </ul>
+              </div>`
           }
         },
         impact: {
-          title: { en: "Objection: Lack of Impact", fr: "Objection : Manque d'Impact", es: "Objeción: Falta de Impacto", de: "Einwand: Mangelnde Wirkung" },
-          summary: { en: "If He rose, why didn't more historians mention it?", fr: "Pourquoi peu d'historiens en parlent ?", es: "¿Por qué no lo mencionan más historiadores?", de: "Warum erwähnen es nicht mehr Historiker?" },
+          title: { en: "Objection: Lack of Impact / Bias", fr: "Objection : Manque d'Impact / Biais", es: "Objeción: Falta de Impacto / Sesgo", de: "Einwand: Mangelnde Wirkung / Voreingenommenheit" },
+          summary: { en: "Are the sources too biased or scarce?", fr: "Les sources sont-elles trop biaisées ou rares ?", es: "¿Son las fuentes demasiado sesgadas o escasas?", de: "Sind die Quellen zu voreingenommen oder selten?" },
           content: {
-            en: `<div class="space-y-4 text-gray-300"><p>Skeptics argue that a resurrection should have been recorded by every historian of the era.</p><h4 class="text-white font-semibold mt-4">Context is Key:</h4><ul class="list-disc pl-5 space-y-2"><li><strong>Comparison to Emperors:</strong> Tiberius Caesar (Emperor) is mentioned by 10 sources within 150 years. Jesus is mentioned by 42 sources (Christian and non-Christian) in the same timeframe. He is <em>better</em> attested than the Emperor.</li><li><strong>Lost History:</strong> We have lost huge portions of ancient history (e.g., 50% of Tacitus). We cannot argue from silence when records are missing.</li><li><strong>The Impact is Us:</strong> The fact that a humble carpenter is now the central figure of human history <em>is</em> the impact.</li></ul></div>`,
-            fr: `<div class="space-y-4 text-gray-300"><p>Jésus est mentionné par 42 sources en 150 ans (contre 10 pour l'empereur Tibère). Il est mieux attesté que l'Empereur lui-même.</p></div>`,
-            es: `<div class="space-y-4 text-gray-300"><p>Jesús es mencionado por 42 fuentes en 150 años (vs 10 para el emperador Tiberio). Está mejor atestiguado que el Emperador.</p></div>`,
-            de: `<div class="space-y-4 text-gray-300"><p>Jesus wird innerhalb von 150 Jahren von 42 Quellen erwähnt (vs. 10 für Kaiser Tiberius). Er ist besser bezeugt als der Kaiser.</p></div>`,
+            en: `
+              <div class="space-y-4 text-gray-300">
+                <p>Skeptics argue that the resurrection is not mentioned by enough secular historians or that the Christian sources are too "biased" to be trusted.</p>
+                <h4 class="text-white font-semibold mt-4">Why this objection fails:</h4>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li><strong>Historical Attestation:</strong> Jesus is actually mentioned by 42 sources within 150 years of his life (including Josephus, Tacitus, Suetonius). By comparison, the Emperor Tiberius is mentioned by only 10 sources in the same timeframe. Jesus is better attested than the Emperor.</li>
+                  <li><strong>The Argument from Bias:</strong> Bias does not equal falsehood. Survivors of the Holocaust are "biased" about the event, yet they are the primary witnesses. Furthermore, Paul and James were initially biased <em>against</em> Jesus, making their testimony even more powerful.</li>
+                </ul>
+              </div>`,
+            fr: `
+              <div class="space-y-4 text-gray-300">
+                <p>Les sceptiques soutiennent que la résurrection n'est pas mentionnée par assez d'historiens laïques ou que les sources chrétiennes sont trop « biaisées » pour être fiables.</p>
+                <h4 class="text-white font-semibold mt-4">Pourquoi cette objection échoue :</h4>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li><strong>Attestation historique :</strong> Jésus est en fait mentionné par 42 sources dans les 150 ans suivant sa vie (y compris Josèphe, Tacite, Suétone). En comparaison, l'empereur Tibère n'est mentionné que par 10 sources dans le même laps de temps. Jésus est mieux attesté que l'Empereur.</li>
+                  <li><strong>L'argument du biais :</strong> Le biais n'équivaut pas à la fausseté. Les survivants de l'Holocauste sont « biaisés » au sujet de l'événement, pourtant ils sont les principaux témoins. De plus, Paul et Jacques étaient initialement biaisés <em>contre</em> Jésus, ce qui rend leur témoignage encore plus puissant.</li>
+                </ul>
+              </div>`,
+            es: `
+              <div class="space-y-4 text-gray-300">
+                <p>Los escépticos argumentan que la resurrección no es mencionada por suficientes historiadores seculares o que las fuentes cristianas están demasiado "sesgadas" para ser confiables.</p>
+                <h4 class="text-white font-semibold mt-4">Por qué falla esta objeción:</h4>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li><strong>Atestación histórica:</strong> Jesús es mencionado de hecho por 42 fuentes dentro de los 150 años de su vida (incluyendo a Josefo, Tácito, Suetonio). En comparación, el emperador Tiberio es mencionado solo por 10 fuentes en el mismo período. Jesús está mejor atestiguado que el Emperador.</li>
+                  <li><strong>El argumento del sesgo:</strong> El sesgo no equivale a falsedad. Los sobrevivientes del Holocausto están "sesgados" sobre el evento, sin embargo, son los testigos principales. Además, Pablo y Santiago estaban inicialmente sesgados <em>en contra</em> de Jesús, lo que hace que su testimonio sea aún más poderoso.</li>
+                </ul>
+              </div>`,
+            de: `
+              <div class="space-y-4 text-gray-300">
+                <p>Skeptiker argumentieren, dass die Auferstehung nicht von genügend säkularen Historikern erwähnt wird oder dass die christlichen Quellen zu „voreingenommen“ sind, um vertrauenswürdig zu sein.</p>
+                <h4 class="text-white font-semibold mt-4">Warum dieser Einwand scheitert:</h4>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li><strong>Historische Bezeugung:</strong> Jesus wird tatsächlich von 42 Quellen innerhalb von 150 Jahren nach seinem Leben erwähnt (einschließlich Josephus, Tacitus, Sueton). Im Vergleich dazu wird Kaiser Tiberius im gleichen Zeitraum nur von 10 Quellen erwähnt. Jesus ist besser bezeugt als der Kaiser.</li>
+                  <li><strong>Das Argument der Voreingenommenheit:</strong> Voreingenommenheit ist nicht gleich Falschheit. Überlebende des Holocaust sind in Bezug auf das Ereignis „voreingenommen“, dennoch sind sie die Hauptzeugen. Außerdem waren Paulus und Jakobus anfangs <em>gegen</em> Jesus voreingenommen, was ihr Zeugnis umso mächtiger macht.</li>
+                </ul>
+              </div>`
           }
         },
         resurrection: {
