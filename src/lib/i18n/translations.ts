@@ -444,6 +444,23 @@ export const translations = {
       es: "Autoridad de la Iglesia",
       de: "Kirchliche Autorität",
     },
+
+    // Add to topicTitles
+    "what-is-worship": {
+      en: "What is Worship?",
+      fr: "Qu'est-ce que l'Adoration ?",
+      es: "¿Qué es la Adoración?",
+      de: "Was ist Anbetung?",
+    },
+
+    // Add to topicTitles
+    "marian-dogma": {
+      en: "Marian Dogma",
+      fr: "Dogmes Mariaux",
+      es: "Dogmas Marianos",
+      de: "Mariendogmen",
+    },
+
     "no-filioque": {
       en: "Filioque & Trinity",
       fr: "Filioque & Trinité",
@@ -526,6 +543,22 @@ export const translations = {
       es: "El Magisterio",
       de: "Das Lehramt",
     },
+    // Add to topicFullTitles
+    "what-is-worship": {
+      en: "What is Worship?",
+      fr: "Qu'est-ce que l'Adoration ?",
+      es: "¿Qué es la Adoración?",
+      de: "Was ist Anbetung?",
+    },
+
+    // Add to topicFullTitles
+    "marian-dogma": {
+      en: "Marian Dogma",
+      fr: "Dogmes Mariaux",
+      es: "Dogmas Marianos",
+      de: "Mariendogmen",
+    },
+
     "no-filioque": {
       en: "No Filioque? No Trinity.",
       fr: "Pas de Filioque ? Pas de Trinité.",
@@ -615,6 +648,22 @@ export const translations = {
       fr: "Le Magistère préserve les doctrines essentielles, y compris celles qui définissent notre compréhension de Dieu Lui-même...",
       es: "El Magisterio preserva doctrinas esenciales, incluyendo aquellas que definen nuestra comprensión de Dios mismo...",
       de: "Das Lehramt bewahrt wesentliche Lehren, einschließlich jener, die unser Verständnis von Gott selbst definieren...",
+    },
+
+    // Add to topicTransitions
+    "what-is-worship": {
+      en: "Having established that true worship (latria) belongs to God alone, we can now ask: what about the honor we give to saints, and especially to Mary?",
+      fr: "Ayant établi que la véritable adoration (latria) n'appartient qu'à Dieu seul, nous pouvons maintenant demander : qu'en est-il de l'honneur que nous rendons aux saints, et surtout à Marie ?",
+      es: "Habiendo establecido que la verdadera adoración (latria) pertenece solo a Dios, ahora podemos preguntar: ¿qué pasa con el honor que damos a los santos, y especialmente a María?",
+      de: "Nachdem wir festgestellt haben, dass die wahre Anbetung (latria) allein Gott gebührt, können wir nun fragen: Was ist mit der Ehre, die wir den Heiligen und insbesondere Maria erweisen?",
+    },
+
+    // Add to topicTransitions
+    "marian-dogma": {
+      en: "From the visible mother of the Church, we now turn our gaze to the invisible mystery of the Trinity and the Holy Spirit...",
+      fr: "De la mère visible de l'Église, nous tournons maintenant notre regard vers le mystère invisible de la Trinité et du Saint-Esprit...",
+      es: "Desde la madre visible de la Iglesia, ahora dirigimos nuestra mirada al misterio invisible de la Trinidad y el Espíritu Santo...",
+      de: "Von der sichtbaren Mutter der Kirche wenden wir nun unseren Blick auf das unsichtbare Geheimnis der Dreifaltigkeit und des Heiligen Geistes...",
     },
   },
 
@@ -1251,10 +1300,10 @@ export const translations = {
       de: "Der Historische Fall für Ostern",
     },
     quote: {
-      en: 'If Christ has not been raised, then our preaching is in vain and your faith is in vain.',
-      fr: '"Si Christ n\'a pas été ressuscité, alors notre prédication est vaine et votre foi est vaine.',
-      es: 'Si Cristo no ha resucitado, entonces nuestra predicación es en vano y vuestra fe es en vano.',
-      de: 'Wenn Christus nicht auferstanden ist, dann ist unsere Predigt vergeblich und euer Glaube ist vergeblich.',
+      en: "If Christ has not been raised, then our preaching is in vain and your faith is in vain.",
+      fr: "\"Si Christ n'a pas été ressuscité, alors notre prédication est vaine et votre foi est vaine.",
+      es: "Si Cristo no ha resucitado, entonces nuestra predicación es en vano y vuestra fe es en vano.",
+      de: "Wenn Christus nicht auferstanden ist, dann ist unsere Predigt vergeblich und euer Glaube ist vergeblich.",
     },
     quoteSource: {
       en: "1 Corinthians 15:14",
@@ -2201,29 +2250,25 @@ export const translations = {
         },
       },
       resurrection: {
-          title: { 
-            en: "Conclusion: The Resurrection", 
-            fr: "Conclusion : La Résurrection", 
-            es: "Conclusión: La Resurrección", 
-            de: "Fazit: Die Auferstehung" 
-          },
-          summary: { 
-            en: "The only explanation that fits all the data.", 
-            fr: "La seule explication qui colle à toutes les données.", 
-            es: "La única explicación que encaja con todos los datos.", 
-            de: "Die einzige Erklärung, die zu allen Daten passt." 
-          },
-          content: {
-            en: `<div class="space-y-4 text-gray-300"><p class="text-xl font-semibold text-white mb-4">"I know of no one fact in the history of mankind which is proved by better and fuller evidence of every sort... than the great sign which God hath given us that Christ died and rose again from the dead." <span class="text-base font-normal text-gray-400 block mt-2">— Thomas Arnold, Oxford Historian</span></p><p>Unlike the other theories, the <strong>Resurrection</strong> explains:</p><ul class="list-disc pl-5 space-y-2"><li><strong class="text-green-400">The Empty Tomb:</strong> Jesus left it.</li><li><strong class="text-green-400">The Appearances:</strong> They were real interactions with the risen Lord.</li><li><strong class="text-green-400">The Transformation:</strong> The disciples were bold because they knew the truth.</li><li><strong class="text-green-400">Paul & James:</strong> A real encounter converts enemies and skeptics.</li></ul></div>`,
-            fr: `<div class="space-y-4 text-gray-300"><p class="text-xl font-semibold text-white mb-4">« Je ne connais aucun fait dans l'histoire de l'humanité qui soit prouvé par des preuves meilleures et plus complètes de toutes sortes... que le grand signe que Dieu nous a donné que le Christ est mort et est ressuscité des morts. » <span class="text-base font-normal text-gray-400 block mt-2">— Thomas Arnold, Historien d'Oxford</span></p><p>Contrairement aux autres théories, la <strong>Résurrection</strong> explique :</p><ul class="list-disc pl-5 space-y-2"><li><strong class="text-green-400">Le Tombeau Vide :</strong> Jésus l'a quitté.</li><li><strong class="text-green-400">Les Apparitions :</strong> C'étaient de véritables interactions avec le Seigneur ressuscité.</li><li><strong class="text-green-400">La Transformation :</strong> Les disciples étaient audacieux parce qu'ils connaissaient la vérité.</li><li><strong class="text-green-400">Paul et Jacques :</strong> Une véritable rencontre convertit les ennemis et les sceptiques.</li></ul></div>`,
-            es: `<div class="space-y-4 text-gray-300"><p class="text-xl font-semibold text-white mb-4">"No conozco ningún hecho en la historia de la humanidad que esté probado por pruebas mejores y más completas de todo tipo... que la gran señal que Dios nos ha dado de que Cristo murió y resucitó de entre los muertos." <span class="text-base font-normal text-gray-400 block mt-2">— Thomas Arnold, Historiador de Oxford</span></p><p>A diferencia de las otras teorías, la <strong>Resurrección</strong> explica:</p><ul class="list-disc pl-5 space-y-2"><li><strong class="text-green-400">La Tumba Vacía:</strong> Jesús salió de ella.</li><li><strong class="text-green-400">Las Apariciones:</strong> Fueron interacciones reales con el Señor resucitado.</li><li><strong class="text-green-400">La Transformación:</strong> Los discípulos fueron valientes porque conocían la verdad.</li><li><strong class="text-green-400">Pablo y Santiago:</strong> Un encuentro real convierte a enemigos y escépticos.</li></ul></div>`,
-            de: `<div class="space-y-4 text-gray-300"><p class="text-xl font-semibold text-white mb-4">„Ich kenne keine Tatsache in der Geschichte der Menschheit, die durch bessere und vollständigere Beweise jeder Art bewiesen ist... als das große Zeichen, das Gott uns gegeben hat, dass Christus gestorben und von den Toten auferstanden ist.“ <span class="text-base font-normal text-gray-400 block mt-2">— Thomas Arnold, Historiker aus Oxford</span></p><p>Im Gegensatz zu den anderen Theorien erklärt die <strong>Auferstehung</strong>:</p><ul class="list-disc pl-5 space-y-2"><li><strong class="text-green-400">Das Leere Grab:</strong> Jesus hat es verlassen.</li><li><strong class="text-green-400">Die Erscheinungen:</strong> Es waren echte Begegnungen mit dem auferstandenen Herrn.</li><li><strong class="text-green-400">Die Verwandlung:</strong> Die Jünger waren kühn, weil sie die Wahrheit kannten.</li><li><strong class="text-green-400">Paulus & Jakobus:</strong> Eine echte Begegnung bekehrt Feinde und Skeptiker.</li></ul></div>`,
-          },
+        title: {
+          en: "Conclusion: The Resurrection",
+          fr: "Conclusion : La Résurrection",
+          es: "Conclusión: La Resurrección",
+          de: "Fazit: Die Auferstehung",
         },
-
-
-
-      
+        summary: {
+          en: "The only explanation that fits all the data.",
+          fr: "La seule explication qui colle à toutes les données.",
+          es: "La única explicación que encaja con todos los datos.",
+          de: "Die einzige Erklärung, die zu allen Daten passt.",
+        },
+        content: {
+          en: `<div class="space-y-4 text-gray-300"><p class="text-xl font-semibold text-white mb-4">"I know of no one fact in the history of mankind which is proved by better and fuller evidence of every sort... than the great sign which God hath given us that Christ died and rose again from the dead." <span class="text-base font-normal text-gray-400 block mt-2">— Thomas Arnold, Oxford Historian</span></p><p>Unlike the other theories, the <strong>Resurrection</strong> explains:</p><ul class="list-disc pl-5 space-y-2"><li><strong class="text-green-400">The Empty Tomb:</strong> Jesus left it.</li><li><strong class="text-green-400">The Appearances:</strong> They were real interactions with the risen Lord.</li><li><strong class="text-green-400">The Transformation:</strong> The disciples were bold because they knew the truth.</li><li><strong class="text-green-400">Paul & James:</strong> A real encounter converts enemies and skeptics.</li></ul></div>`,
+          fr: `<div class="space-y-4 text-gray-300"><p class="text-xl font-semibold text-white mb-4">« Je ne connais aucun fait dans l'histoire de l'humanité qui soit prouvé par des preuves meilleures et plus complètes de toutes sortes... que le grand signe que Dieu nous a donné que le Christ est mort et est ressuscité des morts. » <span class="text-base font-normal text-gray-400 block mt-2">— Thomas Arnold, Historien d'Oxford</span></p><p>Contrairement aux autres théories, la <strong>Résurrection</strong> explique :</p><ul class="list-disc pl-5 space-y-2"><li><strong class="text-green-400">Le Tombeau Vide :</strong> Jésus l'a quitté.</li><li><strong class="text-green-400">Les Apparitions :</strong> C'étaient de véritables interactions avec le Seigneur ressuscité.</li><li><strong class="text-green-400">La Transformation :</strong> Les disciples étaient audacieux parce qu'ils connaissaient la vérité.</li><li><strong class="text-green-400">Paul et Jacques :</strong> Une véritable rencontre convertit les ennemis et les sceptiques.</li></ul></div>`,
+          es: `<div class="space-y-4 text-gray-300"><p class="text-xl font-semibold text-white mb-4">"No conozco ningún hecho en la historia de la humanidad que esté probado por pruebas mejores y más completas de todo tipo... que la gran señal que Dios nos ha dado de que Cristo murió y resucitó de entre los muertos." <span class="text-base font-normal text-gray-400 block mt-2">— Thomas Arnold, Historiador de Oxford</span></p><p>A diferencia de las otras teorías, la <strong>Resurrección</strong> explica:</p><ul class="list-disc pl-5 space-y-2"><li><strong class="text-green-400">La Tumba Vacía:</strong> Jesús salió de ella.</li><li><strong class="text-green-400">Las Apariciones:</strong> Fueron interacciones reales con el Señor resucitado.</li><li><strong class="text-green-400">La Transformación:</strong> Los discípulos fueron valientes porque conocían la verdad.</li><li><strong class="text-green-400">Pablo y Santiago:</strong> Un encuentro real convierte a enemigos y escépticos.</li></ul></div>`,
+          de: `<div class="space-y-4 text-gray-300"><p class="text-xl font-semibold text-white mb-4">„Ich kenne keine Tatsache in der Geschichte der Menschheit, die durch bessere und vollständigere Beweise jeder Art bewiesen ist... als das große Zeichen, das Gott uns gegeben hat, dass Christus gestorben und von den Toten auferstanden ist.“ <span class="text-base font-normal text-gray-400 block mt-2">— Thomas Arnold, Historiker aus Oxford</span></p><p>Im Gegensatz zu den anderen Theorien erklärt die <strong>Auferstehung</strong>:</p><ul class="list-disc pl-5 space-y-2"><li><strong class="text-green-400">Das Leere Grab:</strong> Jesus hat es verlassen.</li><li><strong class="text-green-400">Die Erscheinungen:</strong> Es waren echte Begegnungen mit dem auferstandenen Herrn.</li><li><strong class="text-green-400">Die Verwandlung:</strong> Die Jünger waren kühn, weil sie die Wahrheit kannten.</li><li><strong class="text-green-400">Paulus & Jakobus:</strong> Eine echte Begegnung bekehrt Feinde und Skeptiker.</li></ul></div>`,
+        },
+      },
     },
 
     // --- Section 6: Rationality ---
@@ -2321,7 +2366,6 @@ export const translations = {
       },
     },
 
-
     // PASTE THIS BEFORE "bridge: {"
     shroud: {
       title: {
@@ -2331,11 +2375,11 @@ export const translations = {
         de: "Physischer Beweis? Das Grabtuch von Turin",
       },
       text: {
-  en: "While historical documents provide legal evidence, science offers physical evidence. The Shroud of Turin, a linen cloth bearing the remarkably precise image of a crucified man, remains one of the most studied artifacts in history and continues to defy natural explanation.",
-  fr: "Alors que les documents historiques fournissent des preuves juridiques, la science offre des preuves physiques. Le Linceul de Turin, un tissu de lin portant l'image remarquablement précise d'un homme crucifié, reste l'un des artefacts les plus étudiés de l'histoire et continue de défier toute explication naturelle.",
-  es: "Mientras que los documentos históricos proporcionan evidencia legal, la ciencia ofrece evidencia física. La Sábana Santa de Turín, un paño de lino que lleva la imagen extraordinariamente precisa de un hombre crucificado, sigue siendo uno de los artefactos más estudiados de la historia y continúa desafiando cualquier explicación natural.",
-  de: "Während historische Dokumente rechtliche Beweise liefern, bietet die Wissenschaft physische Beweise. Das Grabtuch von Turin, ein Leinentuch mit dem außerordentlich präzisen Bild eines gekreuzigten Mannes, gehört zu den meistuntersuchten Artefakten der Geschichte und entzieht sich bis heute jeder natürlichen Erklärung.",
-},
+        en: "While historical documents provide legal evidence, science offers physical evidence. The Shroud of Turin, a linen cloth bearing the remarkably precise image of a crucified man, remains one of the most studied artifacts in history and continues to defy natural explanation.",
+        fr: "Alors que les documents historiques fournissent des preuves juridiques, la science offre des preuves physiques. Le Linceul de Turin, un tissu de lin portant l'image remarquablement précise d'un homme crucifié, reste l'un des artefacts les plus étudiés de l'histoire et continue de défier toute explication naturelle.",
+        es: "Mientras que los documentos históricos proporcionan evidencia legal, la ciencia ofrece evidencia física. La Sábana Santa de Turín, un paño de lino que lleva la imagen extraordinariamente precisa de un hombre crucificado, sigue siendo uno de los artefactos más estudiados de la historia y continúa desafiando cualquier explicación natural.",
+        de: "Während historische Dokumente rechtliche Beweise liefern, bietet die Wissenschaft physische Beweise. Das Grabtuch von Turin, ein Leinentuch mit dem außerordentlich präzisen Bild eines gekreuzigten Mannes, gehört zu den meistuntersuchten Artefakten der Geschichte und entzieht sich bis heute jeder natürlichen Erklärung.",
+      },
       button: {
         en: "Explore Science & Miracles",
         fr: "Explorer Science & Miracles",
@@ -7204,6 +7248,610 @@ export const translations = {
         fr: "Si vous acceptez l'autorité de l'Église catholique pour déterminer le canon du Nouveau Testament, pourquoi rejeter son autorité concernant l'Ancien Testament ? Et si vous rejetez entièrement l'autorité de l'Église, sur quelle base savez-vous quels livres sont inspirés ? Cette question d'autorité est centrale à tout — et elle nous amène à explorer le rôle du Magistère.",
         es: "Si aceptas la autoridad de la Iglesia Católica para determinar el canon del Nuevo Testamento, ¿por qué rechazar su autoridad con respecto al Antiguo Testamento? Y si rechazas la autoridad de la Iglesia por completo, ¿sobre qué base sabes qué libros son inspirados? Esta cuestión de autoridad es central en todo, y nos lleva a explorar el papel del Magisterio.",
         de: "Wenn Sie die Autorität der katholischen Kirche bei der Bestimmung des neutestamentlichen Kanons akzeptieren, warum lehnen Sie dann ihre Autorität in Bezug auf das Alte Testament ab? Und wenn Sie die Autorität der Kirche gänzlich ablehnen, auf welcher Grundlage wissen Sie dann, welche Bücher inspiriert sind? Diese Autoritätsfrage ist von zentraler Bedeutung für alles – und sie führt uns dazu, die Rolle des Lehramtes zu erkunden.",
+      },
+    },
+  },
+
+
+  // ... existing translations
+
+  marianDogma: {
+    title: {
+      en: "Marian Dogma",
+      fr: "Dogmes Mariaux",
+      es: "Dogmas Marianos",
+      de: "Mariendogmen",
+    },
+    subtitle: {
+      en: "Mother of God, Mother of the Church",
+      fr: "Mère de Dieu, Mère de l'Église",
+      es: "Madre de Dios, Madre de la Iglesia",
+      de: "Mutter Gottes, Mutter der Kirche",
+    },
+    worshipTitle: {
+      en: "Do Catholics Worship Mary?",
+      fr: "Les Catholiques Adorent-ils Marie ?",
+      es: "¿Los Católicos Adoran a María?",
+      de: "Beten Katholiken Maria an?",
+    },
+    worshipIntro: {
+      en: "One of the most common objections to Catholicism is the claim that Catholics worship Mary. This arises from a misunderstanding. The Church clearly teaches that worship (adoration) is due to God alone. Mary is honored as the holiest of all saints, but she is a creature, not the Creator.",
+      fr: "L'une des objections les plus courantes au catholicisme est l'affirmation selon laquelle les catholiques adorent Marie. Cela vient d'un malentendu. L'Église enseigne clairement que l'adoration n'est due qu'à Dieu seul. Marie est honorée comme la plus sainte de tous les saints, mais elle est une créature, pas le Créateur.",
+      es: "Una de las objeciones más comunes al catolicismo es la afirmación de que los católicos adoran a María. Esto surge de un malentendido. La Iglesia enseña claramente que la adoración se debe solo a Dios. María es honrada como la más santa de todos los santos, pero es una criatura, no el Creador.",
+      de: "Einer der häufigsten Einwände gegen den Katholizismus ist die Behauptung, dass Katholiken Maria anbeten. Dies beruht auf einem Missverständnis. Die Kirche lehrt klar, dass Anbetung allein Gott gebührt. Maria wird als die heiligste aller Heiligen geehrt, aber sie ist ein Geschöpf, nicht der Schöpfer.",
+    },
+    latria: {
+      en: "Adoration due to God alone.",
+      fr: "Adoration due à Dieu seul.",
+      es: "Adoración debida solo a Dios.",
+      de: "Anbetung, die allein Gott gebührt.",
+    },
+    dulia: {
+      en: "Veneration or honor given to saints and angels.",
+      fr: "Vénération ou honneur rendu aux saints et aux anges.",
+      es: "Veneración u honor dado a los santos y ángeles.",
+      de: "Verehrung oder Ehre, die Heiligen und Engeln erwiesen wird.",
+    },
+    hyperdulia: {
+      en: "Special veneration for Mary as the Mother of God.",
+      fr: "Vénération spéciale pour Marie en tant que Mère de Dieu.",
+      es: "Veneración especial a María como Madre de Dios.",
+      de: "Besondere Verehrung für Maria als Mutter Gottes.",
+    },
+    augustineQuote: {
+      en: "We honor the saints, but we worship God alone.",
+      fr: "Nous honorons les saints, mais nous n'adorons que Dieu seul.",
+      es: "Honramos a los santos, pero adoramos solo a Dios.",
+      de: "Wir ehren die Heiligen, aber wir beten Gott allein an.",
+    },
+    newEveTitle: {
+      en: "Mary as the New Eve",
+      fr: "Marie comme la Nouvelle Ève",
+      es: "María como la Nueva Eva",
+      de: "Maria als die Neue Eva",
+    },
+    newEveIntro: {
+      en: "Just as Christ is the New Adam who undoes the disobedience of the first Adam, Mary is the New Eve. Where Eve said 'no' to God, bringing death, Mary said 'yes' (fiat), bringing Life into the world.",
+      fr: "Tout comme le Christ est le Nouvel Adam qui défait la désobéissance du premier Adam, Marie est la Nouvelle Ève. Là où Ève a dit « non » à Dieu, apportant la mort, Marie a dit « oui » (fiat), apportant la Vie dans le monde.",
+      es: "Así como Cristo es el Nuevo Adán que deshace la desobediencia del primer Adán, María es la Nueva Eva. Donde Eva dijo 'no' a Dios, trayendo la muerte, María dijo 'sí' (fiat), trayendo la Vida al mundo.",
+      de: "So wie Christus der neue Adam ist, der den Ungehorsam des ersten Adam ungeschehen macht, ist Maria die neue Eva. Wo Eva 'nein' zu Gott sagte und den Tod brachte, sagte Maria 'ja' (fiat) und brachte das Leben in die Welt.",
+    },
+    patristicTitle: {
+      en: "Patristic Witness (2nd Century)",
+      fr: "Témoignage Patristique (IIe siècle)",
+      es: "Testimonio Patrístico (Siglo II)",
+      de: "Patristisches Zeugnis (2. Jahrhundert)",
+    },
+    irenaeusQuote: {
+      en: "The knot of Eve's disobedience was loosed by the obedience of Mary.",
+      fr: "Le nœud de la désobéissance d'Ève a été dénoué par l'obéissance de Marie.",
+      es: "El nudo de la desobediencia de Eva fue desatado por la obediencia de María.",
+      de: "Der Knoten des Ungehorsams von Eva wurde durch den Gehorsam Marias gelöst.",
+    },
+    newEveImplication: {
+      en: "This typology explains why Mary has such a high place in theology: she is not an accidental vessel, but the Associate of the Redeemer.",
+      fr: "Cette typologie explique pourquoi Marie occupe une place si importante en théologie : elle n'est pas un vase accidentel, mais l'Associée du Rédempteur.",
+      es: "Esta tipología explica por qué María tiene un lugar tan alto en la teología: no es un vaso accidental, sino la Asociada del Redentor.",
+      de: "Diese Typologie erklärt, warum Maria einen so hohen Stellenwert in der Theologie hat: Sie ist kein zufälliges Gefäß, sondern die Gefährtin des Erlösers.",
+    },
+    dogmasTitle: {
+      en: "The Four Marian Dogmas",
+      fr: "Les Quatre Dogmes Mariaux",
+      es: "Los Cuatro Dogmas Marianos",
+      de: "Die Vier Mariendogmen",
+    },
+    dogmasIntro: {
+      en: "The Church has solemnly defined four truths about Mary. These are not 'extra' beliefs but safeguards for the truth about Jesus.",
+      fr: "L'Église a solennellement défini quatre vérités sur Marie. Ce ne sont pas des croyances « supplémentaires » mais des garde-fous pour la vérité sur Jésus.",
+      es: "La Iglesia ha definido solemnemente cuatro verdades sobre María. Estas no son creencias 'extra', sino salvaguardas de la verdad sobre Jesús.",
+      de: "Die Kirche hat vier Wahrheiten über Maria feierlich definiert. Dies sind keine 'zusätzlichen' Glaubenssätze, sondern Schutzmaßnahmen für die Wahrheit über Jesus.",
+    },
+    theotokosTitle: {
+      en: "Mother of God (Theotokos)",
+      fr: "Mère de Dieu (Théotokos)",
+      es: "Madre de Dios (Theotokos)",
+      de: "Mutter Gottes (Theotokos)",
+    },
+    theotokosContent: {
+      en: "This title defends Christ's divinity. Mary did not birth a nature; she birthed a Person. Since that Person is God, she is truly the Mother of God.",
+      fr: "Ce titre défend la divinité du Christ. Marie n'a pas donné naissance à une nature ; elle a donné naissance à une Personne. Puisque cette Personne est Dieu, elle est vraiment Mère de Dieu.",
+      es: "Este título defiende la divinidad de Cristo. María no dio a luz una naturaleza; dio a luz a una Persona. Dado que esa Persona es Dios, ella es verdaderamente la Madre de Dios.",
+      de: "Dieser Titel verteidigt die Gottheit Christi. Maria hat keine Natur geboren; sie hat eine Person geboren. Da diese Person Gott ist, ist sie wahrhaftig die Mutter Gottes.",
+    },
+    theotokosDef: {
+      en: "If anyone does not confess that God is truly Emmanuel... and the holy Virgin is the Mother of God... let him be anathema.",
+      fr: "Si quelqu'un ne confesse pas que Dieu est vraiment Emmanuel... et que la sainte Vierge est Mère de Dieu... qu'il soit anathème.",
+      es: "Si alguno no confiesa que Dios es verdaderamente Emmanuel... y la santa Virgen es Madre de Dios... sea anatema.",
+      de: "Wenn jemand nicht bekennt, dass Gott wahrhaftig Emmanuel ist... und die heilige Jungfrau die Mutter Gottes ist... der sei ausgeschlossen.",
+    },
+    virginityTitle: {
+      en: "Perpetual Virginity",
+      fr: "Virginité Perpétuelle",
+      es: "Virginidad Perpetua",
+      de: "Immerwährende Jungfräulichkeit",
+    },
+    virginityContent: {
+      en: "Mary remained a virgin before, during, and after the birth of Jesus. This was universally held by the early Church Fathers and even early Protestant Reformers.",
+      fr: "Marie est restée vierge avant, pendant et après la naissance de Jésus. Cela a été universellement soutenu par les premiers Pères de l'Église et même les premiers Réformateurs protestants.",
+      es: "María permaneció virgen antes, durante y después del nacimiento de Jesús. Esto fue sostenido universalmente por los primeros Padres de la Iglesia e incluso por los primeros reformadores protestantes.",
+      de: "Maria blieb vor, während und nach der Geburt Jesu Jungfrau. Dies wurde von den frühen Kirchenvätern und sogar den frühen protestantischen Reformatoren allgemein anerkannt.",
+    },
+    virginityJerome: {
+      en: "You say that Mary did not remain a virgin: I say still more—that Joseph himself was also a virgin through Mary.",
+      fr: "Vous dites que Marie n'est pas restée vierge : je dis bien plus — que Joseph lui-même était aussi vierge grâce à Marie.",
+      es: "Dices que María no permaneció virgen: yo digo aún más, que el mismo José también fue virgen por medio de María.",
+      de: "Du sagst, dass Maria keine Jungfrau blieb: Ich sage noch mehr – dass Joseph selbst durch Maria auch Jungfrau war.",
+    },
+    immaculateTitle: {
+      en: "Immaculate Conception",
+      fr: "Immaculée Conception",
+      es: "Inmaculada Concepción",
+      de: "Unbefleckte Empfängnis",
+    },
+    immaculateContent: {
+      en: "Mary was preserved free from original sin from the first moment of her existence. God saved her by anticipation of Christ's cross, just as one can be saved from a pit by being prevented from falling in.",
+      fr: "Marie a été préservée du péché originel dès le premier instant de son existence. Dieu l'a sauvée par anticipation de la croix du Christ, tout comme on peut être sauvé d'une fosse en étant empêché d'y tomber.",
+      es: "María fue preservada libre del pecado original desde el primer momento de su existencia. Dios la salvó por anticipación de la cruz de Cristo, así como uno puede ser salvado de un pozo evitando que caiga en él.",
+      de: "Maria wurde vom ersten Augenblick ihres Daseins an von der Erbsünde bewahrt. Gott rettete sie durch Vorwegnahme des Kreuzes Christi, so wie man vor einer Grube gerettet werden kann, indem man davor bewahrt wird, hineinzufallen.",
+    },
+    immaculateDef: {
+      en: "The most Blessed Virgin Mary... was preserved immune from all stain of original sin",
+      fr: "La très Sainte Vierge Marie... a été préservée de toute tache du péché originel",
+      es: "La Santísima Virgen María... fue preservada inmune de toda mancha de pecado original",
+      de: "Die seligste Jungfrau Maria... wurde von jedem Makel der Erbsünde bewahrt",
+    },
+    assumptionTitle: {
+      en: "The Assumption",
+      fr: "L'Assomption",
+      es: "La Asunción",
+      de: "Die Aufnahme in den Himmel",
+    },
+    assumptionContent: {
+      en: "At the end of her earthly life, Mary was taken up body and soul into heaven. She is the first to share fully in the Resurrection of her Son.",
+      fr: "À la fin de sa vie terrestre, Marie a été élevée corps et âme au ciel. Elle est la première à participer pleinement à la Résurrection de son Fils.",
+      es: "Al final de su vida terrenal, María fue asunta en cuerpo y alma al cielo. Ella es la primera en participar plenamente en la Resurrección de su Hijo.",
+      de: "Am Ende ihres irdischen Lebens wurde Maria mit Leib und Seele in den Himmel aufgenommen. Sie ist die erste, die voll an der Auferstehung ihres Sohnes teilhat.",
+    },
+    assumptionPoint1: {
+      en: "Eschatological sign of the Church's future.",
+      fr: "Signe eschatologique de l'avenir de l'Église.",
+      es: "Signo escatológico del futuro de la Iglesia.",
+      de: "Eschatologisches Zeichen für die Zukunft der Kirche.",
+    },
+    assumptionPoint2: {
+      en: "Fulfillment of the Ark of the Covenant (Psalm 132:8).",
+      fr: "Accomplissement de l'Arche d'Alliance (Psaume 132:8).",
+      es: "Cumplimiento del Arca de la Alianza (Salmo 132:8).",
+      de: "Erfüllung der Bundeslade (Psalm 132,8).",
+    },
+    otherDoctrinesTitle: {
+      en: "Other Doctrinally Significant Titles",
+      fr: "Autres Titres Doctrinalement Significatifs",
+      es: "Otros Títulos Doctrinalmente Significativos",
+      de: "Andere Lehrhaft Bedeutende Titel",
+    },
+    otherDoctrinesIntro: {
+      en: "While not dogmatically defined in the same way, these titles reflect deep truths about her role.",
+      fr: "Bien qu'ils ne soient pas définis dogmatiquement de la même manière, ces titres reflètent des vérités profondes sur son rôle.",
+      es: "Aunque no están definidos dogmáticamente de la misma manera, estos títulos reflejan verdades profundas sobre su papel.",
+      de: "Obwohl sie nicht auf die gleiche Weise dogmatisch definiert sind, spiegeln diese Titel tiefe Wahrheiten über ihre Rolle wider.",
+    },
+    mediatrixDesc: {
+      en: "Affirmed by Vatican II (Lumen Gentium 62), this highlights her intercessory role in the order of grace.",
+      fr: "Affirmé par Vatican II (Lumen Gentium 62), cela souligne son rôle d'intercession dans l'ordre de la grâce.",
+      es: "Afirmado por el Vaticano II (Lumen Gentium 62), esto destaca su papel intercesor en el orden de la gracia.",
+      de: "Vom Zweiten Vatikanum (Lumen Gentium 62) bestätigt, hebt dies ihre fürbittende Rolle in der Gnadenordnung hervor.",
+    },
+    queenDesc: {
+      en: "Rooted in the Davidic Kingdom, where the King's mother was Queen (Gebirah). Affirmed in Ad Caeli Reginam.",
+      fr: "Enraciné dans le Royaume Davidique, où la mère du Roi était Reine (Gebirah). Affirmé dans Ad Caeli Reginam.",
+      es: "Arraigado en el Reino Davidico, donde la madre del Rey era Reina (Gebirah). Afirmado en Ad Caeli Reginam.",
+      de: "Verwurzelt im davidischen Königreich, wo die Mutter des Königs Königin (Gebirah) war. Bestätigt in Ad Caeli Reginam.",
+    },
+
+    // ... inside marianDogma object ...
+    videoObjectionsTitle: {
+      en: "Addressing Every Objection",
+      fr: "Répondre à Toutes les Objections",
+      es: "Respondiendo a Todas las Objeciones",
+      de: "Jeden Einwand Beantworten",
+    },
+    videoObjectionsDesc: {
+      en: "In this comprehensive discussion, William Albrecht and Fr. Christiaan Kappas systematically respond to the most common historical and biblical objections regarding Mary, including the Immaculate Conception, Perpetual Virginity, and the Assumption.",
+      fr: "Dans cette discussion complète, William Albrecht et le père Christiaan Kappas répondent systématiquement aux objections historiques et bibliques les plus courantes concernant Marie, notamment l'Immaculée Conception, la Virginité Perpétuelle et l'Assomption.",
+      es: "En esta discusión integral, William Albrecht y el P. Christiaan Kappas responden sistemáticamente a las objeciones históricas y bíblicas más comunes sobre María, incluida la Inmaculada Concepción, la Virginidad Perpetua y la Asunción.",
+      de: "In dieser umfassenden Diskussion antworten William Albrecht und Pater Christiaan Kappas systematisch auf die häufigsten historischen und biblischen Einwände gegen Maria, einschließlich der Unbefleckten Empfängnis, der immerwährenden Jungfräulichkeit und der Aufnahme in den Himmel.",
+    },
+    
+    conclusionTitle: {
+      en: "Conclusion",
+      fr: "Conclusion",
+      es: "Conclusión",
+      de: "Schlussfolgerung",
+    },
+    conclusionText: {
+      en: "Each Marian dogma reveals a deeper truth about Christ. To honor the Mother is to glorify the Son who chose her, sanctified her, and raised her up.",
+      fr: "Chaque dogme marial révèle une vérité plus profonde sur le Christ. Honorer la Mère, c'est glorifier le Fils qui l'a choisie, sanctifiée et élevée.",
+      es: "Cada dogma mariano revela una verdad más profunda sobre Cristo. Honrar a la Madre es glorificar al Hijo que la eligió, la santificó y la exaltó.",
+      de: "Jedes Mariendogma offenbart eine tiefere Wahrheit über Christus. Die Mutter zu ehren bedeutet, den Sohn zu verherrlichen, der sie erwählt, geheiligt und erhöht hat.",
+    },
+    conclusionQuote: {
+      en: "What the Catholic faith believes about Mary is based on what it believes about Christ.",
+      fr: "Ce que la foi catholique croit au sujet de Marie est fondé sur ce qu'elle croit au sujet du Christ.",
+      es: "Lo que la fe católica cree acerca de María se funda en lo que cree acerca de Cristo.",
+      de: "Was der katholische Glaube über Maria glaubt, gründet darauf, was er über Christus glaubt.",
+    },
+    bridge: {
+      title: {
+        en: "Moving Forward: To the Inner Life of God",
+        fr: "Aller de l'Avant : Vers la Vie Intérieure de Dieu",
+        es: "Avanzando: Hacia la Vida Interior de Dios",
+        de: "Weitergehen: Zum Inneren Leben Gottes",
+      },
+      p1: {
+        en: "We have explored the Church's authority and its teachings on Mary. Now we turn to the deepest mystery of the Christian faith: the Holy Trinity. Specifically, we will examine a major point of contention between East and West regarding the Holy Spirit.",
+        fr: "Nous avons exploré l'autorité de l'Église et ses enseignements sur Marie. Nous nous tournons maintenant vers le mystère le plus profond de la foi chrétienne : la Sainte Trinité. Plus précisément, nous examinerons un point majeur de discorde entre l'Orient et l'Occident concernant le Saint-Esprit.",
+        es: "Hemos explorado la autoridad de la Iglesia y sus enseñanzas sobre María. Ahora nos volvemos al misterio más profundo de la fe cristiana: la Santísima Trinidad. Específicamente, examinaremos un punto importante de discordia entre Oriente y Occidente con respecto al Espíritu Santo.",
+        de: "Wir haben die Autorität der Kirche und ihre Lehren über Maria untersucht. Jetzt wenden wir uns dem tiefsten Geheimnis des christlichen Glaubens zu: der Heiligen Dreifaltigkeit. Insbesondere werden wir einen Hauptstreitpunkt zwischen Ost und West bezüglich des Heiligen Geistes untersuchen.",
+      },
+    },
+  },
+
+  whatIsWorship: {
+    title: {
+      en: "What is Worship?",
+      fr: "Qu'est-ce que l'Adoration ?",
+      es: "¿Qué es la Adoración?",
+      de: "Was ist Anbetung?",
+    },
+    subtitle: {
+      en: "The Mass as the Highest Form of Prayer",
+      fr: "La Messe comme Forme Suprême de Prière",
+      es: "La Misa como la Forma Suprema de Oración",
+      de: "Die Messe als Höchste Form des Gebets",
+    },
+    quote: {
+      en: "The Eucharist is 'the source and summit of the Christian life.'",
+      fr: "L'Eucharistie est « la source et le sommet de la vie chrétienne ».",
+      es: "La Eucaristía es 'la fuente y culmen de la vida cristiana'.",
+      de: "Die Eucharistie ist „Quelle und Höhepunkt des ganzen christlichen Lebens“.",
+    },
+    quoteSource: {
+      en: "CCC 1324",
+      fr: "CEC 1324",
+      es: "CIC 1324",
+      de: "KKK 1324",
+    },
+    intro: {
+      p1: {
+        en: "For Catholics, the Mass is not just a religious obligation or weekly gathering. It is the highest form of worship and the representation of Christ’s sacrifice. It is the source and summit of the Christian life.",
+        fr: "Pour les catholiques, la messe n'est pas seulement une obligation religieuse ou un rassemblement hebdomadaire. C'est la forme la plus élevée d'adoration et la représentation du sacrifice du Christ. C'est la source et le sommet de la vie chrétienne.",
+        es: "Para los católicos, la Misa no es solo una obligación religiosa o una reunión semanal. Es la forma más alta de adoración y la representación del sacrificio de Cristo. Es la fuente y cumbre de la vida cristiana.",
+        de: "Für Katholiken ist die Messe nicht nur eine religiöse Verpflichtung oder ein wöchentliches Treffen. Sie ist die höchste Form der Anbetung und die Vergegenwärtigung des Opfers Christi. Sie ist Quelle und Höhepunkt des christlichen Lebens.",
+      },
+      p2: {
+        en: "Attending Mass is an encounter with the living Christ in Word and Sacrament. It is a way to unite with the Church and receive the grace needed for holiness and mission.",
+        fr: "Assister à la messe, c'est rencontrer le Christ vivant dans la Parole et le Sacrement. C'est s'unir à l'Église et recevoir la grâce nécessaire à la sainteté et à la mission.",
+        es: "Asistir a Misa es encontrar al Cristo vivo en la Palabra y el Sacramento. Es unirse con la Iglesia y recibir la gracia necesaria para la santidad y la misión.",
+        de: "Die Messe zu besuchen bedeutet, dem lebendigen Christus in Wort und Sakrament zu begegnen. Es bedeutet, sich mit der Kirche zu vereinen und die Gnade zu empfangen, die für Heiligkeit und Mission notwendig ist.",
+      },
+    },
+    video2Title: {
+      en: "Deep Dive: Is Worship Just Teaching?",
+      fr: "Analyse : L'Adoration n'est-elle que de l'Enseignement ?",
+      es: "Profundización: ¿Es la Adoración Solo Enseñanza?",
+      de: "Vertiefung: Ist Anbetung nur Lehre?",
+    },
+    section1: {
+      title: {
+        en: "Worship vs. Teaching: The Temple and the Synagogue",
+        fr: "Adoration vs Enseignement : Le Temple et la Synagogue",
+        es: "Adoración vs Enseñanza: El Templo y la Sinagoga",
+        de: "Anbetung vs. Lehre: Der Tempel und die Synagoge",
+      },
+      p1: {
+        en: "Modern Christian services often focus on preaching and song. This resembles the ancient Jewish Synagogue which was a place of teaching. Biblical worship required something more. It required the Temple, the place of sacrifice. The Mass fulfills both.",
+        fr: "Les services chrétiens modernes se concentrent souvent sur la prédication et le chant. Cela ressemble à l'ancienne synagogue juive qui était un lieu d'enseignement. L'adoration biblique exigeait quelque chose de plus. Elle exigeait le Temple, le lieu du sacrifice. La messe accomplit les deux.",
+        es: "A menudo, los servicios cristianos modernos se centran en la predicación y el canto. Esto se asemeja a la antigua sinagoga judía, un lugar de enseñanza. Pero la adoración bíblica requería algo más. Requería el Templo, el lugar del sacrificio. La Misa cumple ambos.",
+        de: "Moderne christliche Gottesdienste konzentrieren sich oft auf Predigt und Gesang. Dies ähnelt der antiken jüdischen Synagoge, einem Ort der Lehre. Biblische Anbetung erforderte etwas mehr. Sie erforderte den Tempel, den Ort des Opfers. Die Messe erfüllt beides.",
+      },
+      synagogueTitle: {
+        en: "The Synagogue Model",
+        fr: "Le Modèle de la Synagogue",
+        es: "El Modelo de la Sinagoga",
+        de: "Das Synagogen-Modell",
+      },
+      synagogueDesc: {
+        en: "Focus on reading Scripture, teaching, and prayer. Protestant services often follow this model.",
+        fr: "Accent sur la lecture de l'Écriture, l'enseignement et la prière. Les services protestants suivent souvent ce modèle.",
+        es: "Enfoque en la lectura de las Escrituras, la enseñanza y la oración. Los servicios protestantes a menudo siguen este modelo.",
+        de: "Fokus auf Schriftlesung, Lehre und Gebet. Protestantische Gottesdienste folgen oft diesem Modell.",
+      },
+      templeTitle: {
+        en: "The Temple Model",
+        fr: "Le Modèle du Temple",
+        es: "El Modelo del Templo",
+        de: "Das Tempel-Modell",
+      },
+      templeDesc: {
+        en: "Focus on SACRIFICE. Worship involves offering a victim to God to seal a covenant. The Mass is the new Temple sacrifice.",
+        fr: "Accent sur le SACRIFICE. L'adoration implique l'offrande d'une victime à Dieu pour sceller une alliance. La messe est le nouveau sacrifice du Temple.",
+        es: "Enfoque en el SACRIFICIO. La adoración implica ofrecer una víctima a Dios para sellar una alianza. La Misa es el nuevo sacrificio del Templo.",
+        de: "Fokus auf OPFER. Anbetung beinhaltet das Darbringen eines Opfers an Gott, um einen Bund zu besiegeln. Die Messe ist das neue Tempelopfer.",
+      },
+      conclusion: {
+        en: "True biblical worship is not just hearing about God. It is offering the Sacrifice of the Son to the Father.",
+        fr: "La véritable adoration biblique ne consiste pas seulement à entendre parler de Dieu. C'est offrir le Sacrifice du Fils au Père.",
+        es: "La verdadera adoración bíblica no es solo escuchar acerca de Dios. Es ofrecer el Sacrificio del Hijo al Padre.",
+        de: "Wahre biblische Anbetung bedeutet nicht nur, von Gott zu hören. Es ist die Darbringung des Opfers des Sohnes an den Vater.",
+      },
+    },
+    section2: {
+      title: {
+        en: "The Mass Is Instituted by Christ",
+        fr: "La Messe est Instituée par le Christ",
+        es: "La Misa es Instituida por Cristo",
+        de: "Die Messe wurde von Christus eingesetzt",
+      },
+      p1: {
+        en: "The Mass is not man-made. It is Christ’s gift and command. At the Last Supper, Jesus commanded:",
+        fr: "La messe n'est pas une invention humaine. C'est un don et un commandement du Christ. Lors de la Cène, Jésus a commandé :",
+        es: "La Misa no es obra del hombre. Es un don y mandato de Cristo. En la Última Cena, Jesús ordenó:",
+        de: "Die Messe ist nicht menschengemacht. Sie ist Christi Geschenk und Gebot. Beim Letzten Abendmahl befahl Jesus:",
+      },
+      lukeQuote: {
+        en: "Do this in memory of me. (Luke 22:19)",
+        fr: "Faites ceci en mémoire de moi. (Luc 22:19)",
+        es: "Haced esto en conmemoración mía. (Lucas 22:19)",
+        de: "Tut dies zu meinem Gedächtnis. (Lukas 22:19)",
+      },
+      p2: {
+        en: "From the beginning, Christians gathered on the first day of the week, Sunday, to break bread (Acts 20:7) in fulfillment of this command.",
+        fr: "Dès le début, les chrétiens se réunissaient le premier jour de la semaine, le dimanche, pour rompre le pain (Actes 20:7) en accomplissement de ce commandement.",
+        es: "Desde el principio, los cristianos se reunían el primer día de la semana, el domingo, para partir el pan (Hechos 20:7) en cumplimiento de este mandato.",
+        de: "Von Anfang an versammelten sich die Christen am ersten Tag der Woche, dem Sonntag, um das Brot zu brechen (Apg 20,7), in Erfüllung dieses Gebots.",
+      },
+      cccQuote: {
+        en: "The Church was born of the Paschal mystery. For this reason, the Eucharist stands at the center of the Church’s life. (CCC 1344)",
+        fr: "L'Église est née du mystère pascal. Pour cette raison, l'Eucharistie est au centre de la vie de l'Église. (CEC 1344)",
+        es: "La Iglesia nació del misterio pascual. Por esta razón, la Eucaristía está en el centro de la vida de la Iglesia. (CIC 1344)",
+        de: "Die Kirche ist aus dem Pascha-Mysterium geboren. Aus diesem Grund steht die Eucharistie im Mittelpunkt des Lebens der Kirche. (KKK 1344)",
+      },
+    },
+    section3: {
+      title: {
+        en: "The Mass Makes Calvary Present",
+        fr: "La Messe Rend le Calvaire Présent",
+        es: "La Misa Hace Presente el Calvario",
+        de: "Die Messe Vergegenwärtigt Golgota",
+      },
+      p1: {
+        en: "The sacrifice of Christ on the cross occurred once in history. In the Mass, it is made sacramentally present.",
+        fr: "Le sacrifice du Christ sur la croix a eu lieu une fois dans l'histoire. À la messe, il est rendu sacramentellement présent.",
+        es: "El sacrificio de Cristo en la cruz ocurrió una vez en la historia. En la Misa, se hace sacramentalmente presente.",
+        de: "Das Opfer Christi am Kreuz geschah einmal in der Geschichte. In der Messe wird es sakramental gegenwärtig gesetzt.",
+      },
+      cccQuote: {
+        en: "The sacrifice of Christ and the sacrifice of the Eucharist are one single sacrifice. (CCC 1367)",
+        fr: "Le sacrifice du Christ et le sacrifice de l'Eucharistie sont un seul et même sacrifice. (CEC 1367)",
+        es: "El sacrificio de Cristo y el sacrificio de la Eucaristía son un único sacrificio. (CIC 1367)",
+        de: "Das Opfer Christi und das Opfer der Eucharistie sind ein einziges Opfer. (KKK 1367)",
+      },
+      p2: {
+        en: "This is not a re-crucifixion. It is a mystical participation in the one offering of Christ to the Father.",
+        fr: "Ce n'est pas une nouvelle crucifixion. C'est une participation mystique à l'unique offrande du Christ au Père.",
+        es: "No es una re-crucifixión. Es una participación mística en la única ofrenda de Cristo al Padre.",
+        de: "Es ist keine erneute Kreuzigung. Es ist eine mystische Teilhabe an der einen Opferung Christi an den Vater.",
+      },
+    },
+    section4: {
+      title: {
+        en: "Sunday Is the Lord’s Day",
+        fr: "Le Dimanche est le Jour du Seigneur",
+        es: "El Domingo es el Día del Señor",
+        de: "Der Sonntag ist der Tag des Herrn",
+      },
+      p1: {
+        en: "Catholics are obliged to attend Mass on Sundays and holy days of obligation. This is not about legalism. It is about love.",
+        fr: "Les catholiques sont obligés d'assister à la messe les dimanches et jours d'obligation. Ce n'est pas une question de légalisme. C'est une question d'amour.",
+        es: "Los católicos están obligados a asistir a Misa los domingos y días de precepto. No se trata de legalismo. Se trata de amor.",
+        de: "Katholiken sind verpflichtet, an Sonn- und Feiertagen die Messe zu besuchen. Dabei geht es nicht um Gesetzlichkeit. Es geht um Liebe.",
+      },
+      l1: {
+        en: "Sunday is the day of the Resurrection",
+        fr: "Le dimanche est le jour de la Résurrection",
+        es: "El domingo es el día de la Resurrección",
+        de: "Sonntag ist der Tag der Auferstehung",
+      },
+      l2: {
+        en: "It is the day Christians are called to keep holy (Exodus 20:8–11)",
+        fr: "C'est le jour que les chrétiens sont appelés à sanctifier (Exode 20:8–11)",
+        es: "Es el día que los cristianos están llamados a santificar (Éxodo 20:8–11)",
+        de: "Es ist der Tag, den Christen heiligen sollen (Exodus 20,8–11)",
+      },
+      l3: {
+        en: "Gathering for worship is a visible sign of our belonging to Christ and His Church",
+        fr: "Se rassembler pour le culte est un signe visible de notre appartenance au Christ et à Son Église",
+        es: "Reunirse para adorar es un signo visible de nuestra pertenencia a Cristo y a Su Iglesia",
+        de: "Die Versammlung zum Gottesdienst ist ein sichtbares Zeichen unserer Zugehörigkeit zu Christus und Seiner Kirche",
+      },
+      cccQuote: {
+        en: "The Sunday celebration of the Lord’s Day and his Eucharist is at the heart of the Church’s life. (CCC 2177)",
+        fr: "La célébration dominicale du Jour du Seigneur et de son Eucharistie est au cœur de la vie de l'Église. (CEC 2177)",
+        es: "La celebración dominical del Día del Señor y de su Eucaristía está en el centro de la vida de la Iglesia. (CIC 2177)",
+        de: "Die sonntägliche Feier des Tages des Herrn und seiner Eucharistie steht im Mittelpunkt des Lebens der Kirche. (KKK 2177)",
+      },
+    },
+    section5: {
+      title: {
+        en: "The Liturgy of the Word and the Eucharist",
+        fr: "La Liturgie de la Parole et de l'Eucharistie",
+        es: "La Liturgia de la Palabra y la Eucaristía",
+        de: "Der Wortgottesdienst und die Eucharistiefeier",
+      },
+      liturgyWord: {
+        en: "Liturgy of the Word",
+        fr: "Liturgie de la Parole",
+        es: "Liturgia de la Palabra",
+        de: "Wortgottesdienst",
+      },
+      liturgyWordDesc: {
+        en: "Readings from Scripture, homily, and prayers.",
+        fr: "Lectures de l'Écriture, homélie et prières.",
+        es: "Lecturas de las Escrituras, homilía y oraciones.",
+        de: "Lesungen aus der Schrift, Homilie und Gebete.",
+      },
+      liturgyEucharist: {
+        en: "Liturgy of the Eucharist",
+        fr: "Liturgie de l'Eucharistie",
+        es: "Liturgia de la Eucaristía",
+        de: "Eucharistiefeier",
+      },
+      liturgyEucharistDesc: {
+        en: "The consecration of bread and wine, and Communion.",
+        fr: "La consécration du pain et du vin, et la Communion.",
+        es: "La consagración del pan y el vino, y la Comunión.",
+        de: "Die Wandlung von Brot und Wein und die Kommunion.",
+      },
+      emmausRef: {
+        en: "This structure reflects the disciples' encounter with Christ on the road to Emmaus (Luke 24:13–35).",
+        fr: "Cette structure reflète la rencontre des disciples avec le Christ sur la route d'Emmaüs (Luc 24:13-35).",
+        es: "Esta estructura refleja el encuentro de los discípulos con Cristo en el camino a Emaús (Lucas 24:13–35).",
+        de: "Diese Struktur spiegelt die Begegnung der Jünger mit Christus auf dem Weg nach Emmaus wider (Lukas 24,13–35).",
+      },
+    },
+    section6: {
+      title: {
+        en: "Personal Encounter with Christ",
+        fr: "Rencontre Personnelle avec le Christ",
+        es: "Encuentro Personal con Cristo",
+        de: "Persönliche Begegnung mit Christus",
+      },
+      p1: {
+        en: "In the Eucharist, we receive the Body, Blood, Soul, and Divinity of Jesus. This is a personal and intimate communion with God.",
+        fr: "Dans l'Eucharistie, nous recevons le Corps, le Sang, l'Âme et la Divinité de Jésus. C'est une communion personnelle et intime avec Dieu.",
+        es: "En la Eucaristía, recibimos el Cuerpo, la Sangre, el Alma y la Divinidad de Jesús. Esta es una comunión personal e íntima con Dios.",
+        de: "In der Eucharistie empfangen wir Leib, Blut, Seele und Gottheit Jesu. Dies ist eine persönliche und innige Gemeinschaft mit Gott.",
+      },
+      johnQuote: {
+        en: "He who eats my flesh and drinks my blood abides in me, and I in him. (John 6:56)",
+        fr: "Celui qui mange ma chair et boit mon sang demeure en moi, et moi en lui. (Jean 6:56)",
+        es: "El que come mi carne y bebe mi sangre permanece en mí, y yo en él. (Juan 6:56)",
+        de: "Wer mein Fleisch isst und mein Blut trinkt, der bleibt in mir und ich in ihm. (Johannes 6,56)",
+      },
+      p2: {
+        en: "Mass is also a moment of profound listening and transformation. Christ speaks through the Scriptures and nourishes through the Sacrament.",
+        fr: "La messe est aussi un moment d'écoute profonde et de transformation. Le Christ parle à travers les Écritures et nourrit par le Sacrement.",
+        es: "La Misa es también un momento de profunda escucha y transformación. Cristo habla a través de las Escrituras y nutre a través del Sacramento.",
+        de: "Die Messe ist auch ein Moment tiefen Zuhörens und der Transformation. Christus spricht durch die Schriften und nährt durch das Sakrament.",
+      },
+    },
+    section7: {
+      title: {
+        en: "Communion & Spiritual Strength",
+        fr: "Communion et Force Spirituelle",
+        es: "Comunión y Fortaleza Espiritual",
+        de: "Gemeinschaft und Spirituelle Stärke",
+      },
+      communionTitle: {
+        en: "Communion with the Church",
+        fr: "Communion avec l'Église",
+        es: "Comunión con la Iglesia",
+        de: "Gemeinschaft mit der Kirche",
+      },
+      c1: {
+        en: "We worship with the saints and angels",
+        fr: "Nous adorons avec les saints et les anges",
+        es: "Adoramos con los santos y los ángeles",
+        de: "Wir beten mit den Heiligen und Engeln an",
+      },
+      c2: {
+        en: "We intercede for the living and the dead",
+        fr: "Nous intercédons pour les vivants et les morts",
+        es: "Intercedemos por los vivos y los muertos",
+        de: "Wir halten Fürbitte für die Lebenden und die Toten",
+      },
+      c3: {
+        en: "We express unity with Catholics around the world",
+        fr: "Nous exprimons notre unité avec les catholiques du monde entier",
+        es: "Expresamos unidad con los católicos de todo el mundo",
+        de: "Wir drücken die Einheit mit Katholiken auf der ganzen Welt aus",
+      },
+      cccQuote: {
+        en: "When the Church celebrates the Eucharist, she commemorates Christ’s Passover, and it is made present. (CCC 1364)",
+        fr: "Quand l'Église célèbre l'Eucharistie, elle commémore la Pâque du Christ, et elle est rendue présente. (CEC 1364)",
+        es: "Cuando la Iglesia celebra la Eucaristía, conmemora la Pascua de Cristo, y se hace presente. (CIC 1364)",
+        de: "Wenn die Kirche die Eucharistie feiert, gedenkt sie des Pascha Christi, und es wird gegenwärtig gesetzt. (KKK 1364)",
+      },
+      strengthTitle: {
+        en: "Spiritual and Moral Strength",
+        fr: "Force Spirituelle et Morale",
+        es: "Fortaleza Espiritual y Moral",
+        de: "Spirituelle und Moralische Stärke",
+      },
+      s1: {
+        en: "Deepens our love for God",
+        fr: "Approfondit notre amour pour Dieu",
+        es: "Profundiza nuestro amor por Dios",
+        de: "Vertieft unsere Liebe zu Gott",
+      },
+      s2: {
+        en: "Strengthens our resistance to sin",
+        fr: "Renforce notre résistance au péché",
+        es: "Fortalece nuestra resistencia al pecado",
+        de: "Stärkt unseren Widerstand gegen die Sünde",
+      },
+      s3: {
+        en: "Builds habits of gratitude and reverence",
+        fr: "Construit des habitudes de gratitude et de révérence",
+        es: "Construye hábitos de gratitud y reverencia",
+        de: "Baut Gewohnheiten der Dankbarkeit und Ehrfurcht auf",
+      },
+      s4: {
+        en: "Unites our personal sacrifices with Christ’s offering",
+        fr: "Unit nos sacrifices personnels à l'offrande du Christ",
+        es: "Une nuestros sacrificios personales con la ofrenda de Cristo",
+        de: "Vereint unsere persönlichen Opfer mit der Opferung Christi",
+      },
+    },
+    conclusion: {
+      title: {
+        en: "Conclusion",
+        fr: "Conclusion",
+        es: "Conclusión",
+        de: "Schlussfolgerung",
+      },
+      p1: {
+        en: "To go to Mass is to respond to Christ’s invitation. It is not merely a duty but a privilege. It is a foretaste of Heaven on earth. Through the Mass, the Church is fed, renewed, and sent forth to be the light of the world.",
+        fr: "Aller à la messe, c'est répondre à l'invitation du Christ. Ce n'est pas seulement un devoir, mais un privilège. C'est un avant-goût du Ciel sur la terre. Par la messe, l'Église est nourrie, renouvelée et envoyée pour être la lumière du monde.",
+        es: "Ir a Misa es responder a la invitación de Cristo. No es meramente un deber, sino un privilegio. Es un anticipo del Cielo en la tierra. A través de la Misa, la Iglesia es alimentada, renovada y enviada a ser la luz del mundo.",
+        de: "Zur Messe zu gehen heißt, der Einladung Christi zu folgen. Es ist nicht bloß eine Pflicht, sondern ein Privileg. Es ist ein Vorgeschmack des Himmels auf Erden. Durch die Messe wird die Kirche genährt, erneuert und ausgesandt, um das Licht der Welt zu sein.",
+      },
+      quote: {
+        en: "Blessed are those called to the supper of the Lamb.",
+        fr: "Heureux les invités au repas des noces de l'Agneau.",
+        es: "Dichosos los invitados a la cena del Cordero.",
+        de: "Selig, die zum Hochzeitsmahl des Lammes geladen sind.",
+      },
+      source: {
+        en: "Revelation 19:9",
+        fr: "Apocalypse 19:9",
+        es: "Apocalipsis 19:9",
+        de: "Offenbarung 19:9",
+      },
+    },
+    bridge: {
+      title: {
+        en: "Moving Forward: From Worship to Honor",
+        fr: "Aller de l'Avant : De l'Adoration à l'Honneur",
+        es: "Avanzando: De la Adoración al Honor",
+        de: "Weitergehen: Von der Anbetung zur Ehre",
+      },
+      p1: {
+        en: "If the Mass is the supreme act of worship due to God alone, how do Catholics justify their devotion to Mary? Does honoring her detract from the worship of God? Let us explore the Catholic understanding of Mary.",
+        fr: "Si la messe est l'acte suprême d'adoration dû à Dieu seul, comment les catholiques justifient-ils leur dévotion à Marie ? L'honorer détourne-t-elle de l'adoration de Dieu ? Explorons la compréhension catholique de Marie.",
+        es: "Si la Misa es el acto supremo de adoración debido solo a Dios, ¿cómo justifican los católicos su devoción a María? ¿Honrarla resta valor a la adoración a Dios? Exploremos la comprensión católica de María.",
+        de: "Wenn die Messe der höchste Akt der Anbetung ist, der allein Gott gebührt, wie rechtfertigen Katholiken dann ihre Verehrung Marias? Lenkt ihre Ehrung von der Anbetung Gottes ab? Lassen Sie uns das katholische Verständnis von Maria untersuchen.",
       },
     },
   },

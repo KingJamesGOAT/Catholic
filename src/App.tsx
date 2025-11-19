@@ -30,6 +30,8 @@ import CanonDilemma from "./components/Topics/CanonDilemma";
 import SeventyThreeBooks from "./components/Topics/SeventyThreeBooks";
 import PeterFirstPope from "./components/Topics/PeterFirstPope";
 import Magisterium from "./components/Topics/Magisterium";
+import WhatIsWorship from "./components/Topics/WhatIsWorship"; // Import the new component
+import MarianDogma from "./components/Topics/MarianDogma"; // Import the new component
 import NoFilioque from "./components/Topics/NoFilioque";
 import ScienceAndMiracles from "./components/ScienceAndMiracles";
 
@@ -143,6 +145,27 @@ export const topics: Topic[] = [
     transition:
       "The Magisterium preserves essential doctrines, including ones that define our understanding of God Himself...",
   },
+
+  // INSERT HERE
+  {
+    id: "what-is-worship",
+    title: "What is Worship?",
+    shortTitle: "What is Worship?",
+    component: WhatIsWorship,
+    transition:
+      "Having established that true worship (latria) belongs to God alone, we can now ask: what about the honor we give to saints, and especially to Mary?",
+  },
+
+  // INSERT HERE
+  {
+    id: "marian-dogma",
+    title: "Marian Dogma",
+    shortTitle: "Marian Dogma",
+    component: MarianDogma,
+    transition:
+      "From the visible mother of the Church, we now turn our gaze to the invisible mystery of the Trinity and the Holy Spirit...",
+  },
+  
   {
     id: "no-filioque",
     title: "No Filioque? No Trinity.",
