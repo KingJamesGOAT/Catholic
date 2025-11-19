@@ -1,3 +1,4 @@
+import SmartText from "../SmartText";
 import TopicLayout from "../Journey/TopicLayout";
 import { motion } from "motion/react";
 import { Separator } from "../ui/separator";
@@ -249,13 +250,11 @@ export default function Magisterium() {
           {t(trans.intro.h2, language)}
         </h2>
 
-        <p>{t(trans.intro.p1, language)}</p>
+        <p><SmartText ignore={["Magisterium"]}>{t(trans.intro.p1, language)}</SmartText></p>
 
-        <p
-          dangerouslySetInnerHTML={{
-            __html: t(trans.intro.p2, language),
-          }}
-        />
+        <p>
+          <SmartText ignore={["Magisterium"]}>{t(trans.intro.p2, language).replace(/<[^>]*>?/gm, '')}</SmartText>
+        </p>
 
         <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-blue-800 rounded-lg p-6">
           <h3 className="text-white mb-4">

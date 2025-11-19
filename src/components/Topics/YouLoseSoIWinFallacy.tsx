@@ -1,3 +1,4 @@
+import SmartText from "../SmartText";
 import TopicLayout from "../Journey/TopicLayout";
 import { motion } from "motion/react";
 import { Separator } from "../ui/separator";
@@ -29,7 +30,7 @@ export default function YouLoseSoIWinFallacy() {
       {/* Introduction */}
       <div className="space-y-6 text-gray-300 leading-relaxed mb-16">
         <p className="text-lg">
-          {t(trans.introPara1, language)}
+          <SmartText>{t(trans.introPara1, language)}</SmartText>
         </p>
 
         <div className="bg-gray-900/50 border-l-4 border-blue-600 p-6 rounded-r-lg">
@@ -144,10 +145,13 @@ export default function YouLoseSoIWinFallacy() {
                 <p className="text-gray-300 italic mb-3">
                   "{t(trans.section1.atheistExample, language)}"
                 </p>
+                
                 <div className="bg-black/30 rounded p-4 text-gray-400 text-sm">
                   <p className="mb-2">
-                    {t(trans.section1.atheistLogic1, language)}
+                    <SmartText>{t(trans.section1.atheistLogic1, language)}</SmartText>
                   </p>
+
+                  
                   <p className="mb-2">
                     {t(trans.section1.atheistLogic2, language)}
                   </p>

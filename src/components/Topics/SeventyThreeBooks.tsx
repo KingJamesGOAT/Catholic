@@ -1,3 +1,4 @@
+import SmartText from "../SmartText";
 import TopicLayout from "../Journey/TopicLayout";
 import { motion } from "motion/react";
 import { Separator } from "../ui/separator";
@@ -158,21 +159,17 @@ export default function SeventyThreeBooks() {
 
       {/* The Seven Disputed Books */}
       <motion.section
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="mb-16"
+        // ...
       >
         <h2 className="text-white mb-6">
           {t(trans.dispute.h2, language)}
         </h2>
 
-        <p
-          className="text-gray-300 mb-6"
-          dangerouslySetInnerHTML={{
-            __html: t(trans.dispute.p1, language),
-          }}
-        />
+        <p className="text-gray-300 mb-6">
+          <SmartText ignore={["Deuterocanonical"]}>{t(trans.dispute.p1, language).replace(/<[^>]*>?/gm, '')}</SmartText>
+        </p>
+
+        
 
         <div className="grid md:grid-cols-2 gap-4 mb-6">
           {deuterocanonicalBooks.map((book, index) => (

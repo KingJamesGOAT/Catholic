@@ -1,3 +1,4 @@
+import SmartText from "../SmartText";
 import TopicLayout from "../Journey/TopicLayout";
 import { motion } from "motion/react";
 import { Separator } from "../ui/separator";
@@ -146,16 +147,12 @@ export default function NoFilioque({ onComplete }: NoFilioqueProps) {
           {t(trans.intro.h2, language)}
         </h2>
 
-        <p
-          dangerouslySetInnerHTML={{
-            __html: t(trans.intro.p1, language),
-          }}
-        />
-        <p
-          dangerouslySetInnerHTML={{
-            __html: t(trans.intro.p2, language),
-          }}
-        />
+        <p>
+          <SmartText ignore={["Filioque"]}>{t(trans.intro.p1, language).replace(/<[^>]*>?/gm, '')}</SmartText>
+        </p>
+        <p>
+          <SmartText ignore={["Filioque"]}>{t(trans.intro.p2, language).replace(/<[^>]*>?/gm, '')}</SmartText>
+        </p>
 
         <div className="bg-blue-900/10 border border-blue-800 rounded-lg p-6">
           <p
@@ -274,7 +271,7 @@ export default function NoFilioque({ onComplete }: NoFilioqueProps) {
                 {category.title}
               </h3>
               <p className="text-gray-400 text-center text-sm">
-                {category.description}
+                <SmartText>{category.description}</SmartText>
               </p>
             </motion.div>
           ))}

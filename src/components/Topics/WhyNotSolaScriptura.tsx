@@ -1,3 +1,4 @@
+import SmartText from "../SmartText";
 import TopicLayout from "../Journey/TopicLayout";
 import { motion } from "motion/react";
 import { Separator } from "../ui/separator";
@@ -226,12 +227,14 @@ export default function WhyNotSolaScriptura() {
         <h2 className="text-white">
           {t(trans.intro.heading, language)}
         </h2>
-        <p
-          dangerouslySetInnerHTML={{
-            __html: t(trans.intro.p1, language),
-          }}
-        />
-        <p>{t(trans.intro.p2, language)}</p>
+
+        
+        <p>
+          <SmartText ignore={["Sola Scriptura"]}>{t(trans.intro.p1, language).replace(/<[^>]*>?/gm, '')}</SmartText>
+        </p>
+        <p><SmartText ignore={["Sola Scriptura"]}>{t(trans.intro.p2, language)}</SmartText></p>
+
+        
         <div className="bg-gray-900/50 border-l-4 border-purple-600 p-6 rounded-r-lg">
           <p className="text-gray-300 italic">
             {t(trans.intro.ortlandQuote, language)}

@@ -1,3 +1,4 @@
+import SmartText from "../SmartText";
 import TopicLayout from "../Journey/TopicLayout";
 import { motion } from "motion/react";
 import { Separator } from "../ui/separator";
@@ -66,11 +67,9 @@ export default function CanonDilemma() {
         <h2 className="text-white">
           {t(trans.intro.h2, language)}
         </h2>
-        <p
-          dangerouslySetInnerHTML={{
-            __html: t(trans.intro.p1, language),
-          }}
-        />
+        <p>
+          <SmartText ignore={["Canon"]}>{t(trans.intro.p1, language).replace(/<[^>]*>?/gm, '')}</SmartText>
+        </p>
         <p
           dangerouslySetInnerHTML={{
             __html: t(trans.intro.p2, language),
@@ -271,10 +270,9 @@ export default function CanonDilemma() {
                     }}
                   />
                 </div>
-                <p
-                  className="text-gray-300 mb-4"
-                  dangerouslySetInnerHTML={{ __html: item.p1 }}
-                />
+                <p className="text-gray-300 mb-4">
+                  <SmartText>{item.p1.replace(/<[^>]*>?/gm, '')}</SmartText>
+                </p>
                 <p
                   className="text-gray-300"
                   dangerouslySetInnerHTML={{ __html: item.p2 }}

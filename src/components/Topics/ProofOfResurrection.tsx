@@ -1,3 +1,4 @@
+import SmartText from "../SmartText";
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useIsMobile } from '../ui/use-mobile';
@@ -138,8 +139,8 @@ export default function ProofOfResurrection({ onComplete, onScienceClick }: Topi
         {/* Is Christianity Rooted in History? */}
         <div className="space-y-6">
           <h2 className="text-white text-2xl font-bold">{t(trans.introHeading, language)}</h2>
-          <p dangerouslySetInnerHTML={{ __html: t(trans.introPara1, language) }} />
-          <p dangerouslySetInnerHTML={{ __html: t(trans.introPara2, language) }} />
+          <p><SmartText ignore={["Resurrection"]}>{t(trans.introPara1, language).replace(/<[^>]*>?/gm, '')}</SmartText></p>
+          <p><SmartText ignore={["Resurrection"]}>{t(trans.introPara2, language).replace(/<[^>]*>?/gm, '')}</SmartText></p>
         </div>
 
         {/* 1. The "Minimal Facts" Approach */}

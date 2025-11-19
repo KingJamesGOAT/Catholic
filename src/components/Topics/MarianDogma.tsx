@@ -1,3 +1,4 @@
+import SmartText from "../SmartText";
 import React from 'react';
 import TopicLayout from '../Journey/TopicLayout';
 import { useLanguage } from '../../lib/i18n/LanguageContext';
@@ -18,7 +19,7 @@ export default function MarianDogma() {
         <div className="bg-blue-950/30 border border-blue-800/50 rounded-xl p-6 mb-8">
             <h2 className="text-2xl font-bold text-white mb-4">{t(trans.worshipTitle, language)}</h2>
             <p className="text-gray-300 mb-6 leading-relaxed">
-                {t(trans.worshipIntro, language)}
+                <SmartText ignore={["Latria", "Dulia", "Hyperdulia"]}>{t(trans.worshipIntro, language)}</SmartText>
             </p>
             
             <div className="grid md:grid-cols-2 gap-6">
@@ -107,7 +108,9 @@ export default function MarianDogma() {
             </div>
             <div className="p-6 grid md:grid-cols-2 gap-6">
                 <div className="space-y-4">
-                    <p className="text-gray-300">{t(trans.theotokosContent, language)}</p>
+                    <p className="text-gray-300">
+                      <SmartText ignore={["Theotokos"]}>{t(trans.theotokosContent, language)}</SmartText>
+                    </p>
                     <div className="bg-blue-900/10 p-4 rounded-lg border border-blue-900/30">
                         <p className="italic text-blue-200 text-sm">"{t(trans.theotokosDef, language)}"</p>
                         <p className="text-xs text-blue-500 mt-2 text-right">Council of Ephesus</p>

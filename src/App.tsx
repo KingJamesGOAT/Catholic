@@ -1,4 +1,11 @@
-import { useState, useEffect, useRef } from "react";
+// ADD: lazy and Suspense to the import
+import {
+  useState,
+  useEffect,
+  useRef,
+  lazy,
+  Suspense,
+} from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Navigation from "./components/Journey/Navigation";
 import ProgressTracker from "./components/Journey/ProgressTracker";
@@ -18,21 +25,52 @@ import GlossaryPage from "./components/GlossaryPage";
 import DoctrineExplorer from "./components/DoctrineExplorer";
 
 // Topic Components
-import ExistenceOfGod from "./components/Topics/ExistenceOfGod";
-import ProofOfResurrection from "./components/Topics/ProofOfResurrection";
-import WhyBeCatholic from "./components/Topics/WhyBeCatholic";
-import YouLoseSoIWinFallacy from "./components/Topics/YouLoseSoIWinFallacy";
-import AuthorityDilemmaFallacy from "./components/Topics/AuthorityDilemmaFallacy";
-import WhyNotSolaScriptura from "./components/Topics/WhyNotSolaScriptura";
-import ScholasticApproaches from "./components/Topics/ScholasticApproaches";
-import SolaScripturaImpossible from "./components/Topics/SolaScripturaImpossible";
-import CanonDilemma from "./components/Topics/CanonDilemma";
-import SeventyThreeBooks from "./components/Topics/SeventyThreeBooks";
-import PeterFirstPope from "./components/Topics/PeterFirstPope";
-import Magisterium from "./components/Topics/Magisterium";
-import WhatIsWorship from "./components/Topics/WhatIsWorship"; // Import the new component
-import MarianDogma from "./components/Topics/MarianDogma"; // Import the new component
-import NoFilioque from "./components/Topics/NoFilioque";
+// CHANGE: Replace static imports with lazy imports
+const ExistenceOfGod = lazy(
+  () => import("./components/Topics/ExistenceOfGod"),
+);
+const ProofOfResurrection = lazy(
+  () => import("./components/Topics/ProofOfResurrection"),
+);
+const WhyBeCatholic = lazy(
+  () => import("./components/Topics/WhyBeCatholic"),
+);
+const YouLoseSoIWinFallacy = lazy(
+  () => import("./components/Topics/YouLoseSoIWinFallacy"),
+);
+const AuthorityDilemmaFallacy = lazy(
+  () => import("./components/Topics/AuthorityDilemmaFallacy"),
+);
+const WhyNotSolaScriptura = lazy(
+  () => import("./components/Topics/WhyNotSolaScriptura"),
+);
+const ScholasticApproaches = lazy(
+  () => import("./components/Topics/ScholasticApproaches"),
+);
+const SolaScripturaImpossible = lazy(
+  () => import("./components/Topics/SolaScripturaImpossible"),
+);
+const CanonDilemma = lazy(
+  () => import("./components/Topics/CanonDilemma"),
+);
+const SeventyThreeBooks = lazy(
+  () => import("./components/Topics/SeventyThreeBooks"),
+);
+const PeterFirstPope = lazy(
+  () => import("./components/Topics/PeterFirstPope"),
+);
+const Magisterium = lazy(
+  () => import("./components/Topics/Magisterium"),
+);
+const WhatIsWorship = lazy(
+  () => import("./components/Topics/WhatIsWorship"),
+);
+const MarianDogma = lazy(
+  () => import("./components/Topics/MarianDogma"),
+);
+const NoFilioque = lazy(
+  () => import("./components/Topics/NoFilioque"),
+);
 import ScienceAndMiracles from "./components/ScienceAndMiracles";
 
 type TopicComponentProps = {
@@ -165,7 +203,7 @@ export const topics: Topic[] = [
     transition:
       "From the visible mother of the Church, we now turn our gaze to the invisible mystery of the Trinity and the Holy Spirit...",
   },
-  
+
   {
     id: "no-filioque",
     title: "No Filioque? No Trinity.",
@@ -291,6 +329,50 @@ function AppContent() {
     showGlossary,
     showDoctrine,
   ]);
+
+
+  // --- INSERT START ---
+
+  // 2. Keyboard Navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Disable if special pages are open or search is active
+      if (showHome || showEarlyChurch || showScience || showGlossary || showDoctrine || isSearchOpen) return;
+
+      if (e.key === 'ArrowRight') {
+        nextTopic();
+      } else if (e.key === 'ArrowLeft') {
+        previousTopic();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [currentTopicIndex, showHome, showEarlyChurch, showScience, showGlossary, showDoctrine, isSearchOpen]);
+
+  // 3. Dynamic Document Titles
+  useEffect(() => {
+    if (showHome) {
+      document.title = "Home | Catholic Foundations";
+    } else if (showEarlyChurch) {
+      document.title = "Early Church Fathers | Catholic Foundations";
+    } else if (showScience) {
+      document.title = "Science & Miracles | Catholic Foundations";
+    } else if (showGlossary) {
+      document.title = "Catholic Glossary | Catholic Foundations";
+    } else if (showDoctrine) {
+      document.title = "Doctrine Explorer | Catholic Foundations";
+    } else if (currentTopicIndex >= 0 && topics[currentTopicIndex]) {
+      document.title = `${topics[currentTopicIndex].title} | Catholic Foundations`;
+    } else {
+      document.title = "Catholic Foundations";
+    }
+  }, [currentTopicIndex, showHome, showEarlyChurch, showScience, showGlossary, showDoctrine]);
+
+  // --- INSERT END ---
+
+
+  
 
   const goToTopic = (index: number) => {
     setShowHome(false);
@@ -531,10 +613,19 @@ function AppContent() {
                   },
                 }}
               >
-                <CurrentTopicComponent
-                  onComplete={markCurrentTopicComplete}
-                  onScienceClick={handleScienceClick} 
-                />
+                {/* ADD: Suspense wrapper */}
+                <Suspense
+                  fallback={
+                    <div className="min-h-[50vh] flex items-center justify-center">
+                      Loading...
+                    </div>
+                  }
+                >
+                  <CurrentTopicComponent
+                    onComplete={markCurrentTopicComplete}
+                    onScienceClick={handleScienceClick}
+                  />
+                </Suspense>
 
                 <div className="container mx-auto px-4 pb-16 max-w-4xl">
                   <div className="flex flex-col md:flex-row items-center justify-between border-t border-gray-800 pt-8 gap-6 md:gap-4 mt-16">

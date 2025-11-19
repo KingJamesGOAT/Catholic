@@ -1,3 +1,4 @@
+import SmartText from "../SmartText";
 import TopicLayout from "../Journey/TopicLayout";
 import { motion } from "motion/react";
 import { Separator } from "../ui/separator";
@@ -75,23 +76,14 @@ export default function ExistenceOfGod() {
 
       {/* Introduction (Updated content in translations) */}
       <div className="space-y-6 text-gray-300 leading-relaxed mb-16">
-        <p
-          className="text-lg"
-          dangerouslySetInnerHTML={{
-            __html: t(trans.intro1, language),
-          }}
-        />
-        <p
-          dangerouslySetInnerHTML={{
-            __html: t(trans.intro2, language),
-          }}
-        />
-        <p
-          dangerouslySetInnerHTML={{
-            __html: t(trans.intro3, language),
-          }}
-        />
+        <p className="text-lg">
+          <SmartText>{t(trans.intro1, language).replace(/<[^>]*>?/gm, '')}</SmartText>
+        </p>
+        <p><SmartText>{t(trans.intro2, language).replace(/<[^>]*>?/gm, '')}</SmartText></p>
+        <p><SmartText>{t(trans.intro3, language).replace(/<[^>]*>?/gm, '')}</SmartText></p>
       </div>
+
+      
 
       {/* Five Arguments Overview */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-16">

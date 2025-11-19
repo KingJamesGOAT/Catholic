@@ -1,3 +1,4 @@
+import SmartText from "../SmartText";
 import TopicLayout from "../Journey/TopicLayout";
 import { motion } from "motion/react";
 import { Separator } from "../ui/separator";
@@ -97,7 +98,7 @@ export default function PeterFirstPope() {
     >
       {/* Introduction */}
       <div className="space-y-6 text-gray-300 leading-relaxed mb-16">
-        <p>{t(trans.intro.p1, language)}</p>
+        <p><SmartText ignore={["Peter", "Pope"]}>{t(trans.intro.p1, language)}</SmartText></p>
 
         <div className="bg-gray-900/50 border-l-4 border-blue-600 p-6 rounded-r-lg">
           <p className="text-gray-300 italic mb-3">

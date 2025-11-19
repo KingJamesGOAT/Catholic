@@ -1,3 +1,4 @@
+import SmartText from "../SmartText";
 import React from 'react';
 import TopicLayout from '../Journey/TopicLayout';
 import { useLanguage } from '../../lib/i18n/LanguageContext';
@@ -24,10 +25,10 @@ export default function WhatIsWorship() {
       {/* Introduction */}
       <div className="space-y-6 text-gray-300 mb-12">
         <p className="text-lg leading-relaxed">
-          {t(trans.intro.p1, language)}
+          <SmartText ignore={["Worship", "Sacrifice", "Latria", "Dulia"]}>{t(trans.intro.p1, language)}</SmartText>
         </p>
         <p className="text-lg leading-relaxed">
-          {t(trans.intro.p2, language)}
+          <SmartText ignore={["Worship"]}>{t(trans.intro.p2, language)}</SmartText>
         </p>
       </div>
 

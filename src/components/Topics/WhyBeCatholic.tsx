@@ -1,3 +1,4 @@
+import SmartText from "../SmartText";
 import TopicLayout from '../Journey/TopicLayout';
 import { motion } from 'motion/react';
 import { Separator } from '../ui/separator';
@@ -69,8 +70,8 @@ export default function WhyBeCatholic() {
 
       {/* Introduction */}
       <div className="space-y-6 text-gray-300 leading-relaxed mb-16">
-        <p className="text-lg" dangerouslySetInnerHTML={{ __html: t(trans.introPara1, language) }} />
-        <p dangerouslySetInnerHTML={{ __html: t(trans.introPara2, language) }} />
+        <p className="text-lg"><SmartText>{t(trans.introPara1, language).replace(/<[^>]*>?/gm, '')}</SmartText></p>
+        <p><SmartText>{t(trans.introPara2, language).replace(/<[^>]*>?/gm, '')}</SmartText></p>
       </div>
 
       {/* Key Points Grid */}
@@ -88,7 +89,7 @@ export default function WhyBeCatholic() {
               <point.icon className="text-blue-400" size={20} />
             </div>
             <h4 className="text-white mb-2">{point.title}</h4>
-            <p className="text-gray-500 text-sm">{point.description}</p>
+            <p className="text-gray-500 text-sm"><SmartText>{point.description}</SmartText></p>
           </motion.div>
         ))}
       </div>

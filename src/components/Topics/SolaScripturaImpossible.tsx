@@ -1,3 +1,4 @@
+import SmartText from "../SmartText";
 import TopicLayout from "../Journey/TopicLayout";
 import { motion } from "motion/react";
 import { Separator } from "../ui/separator";
@@ -84,9 +85,9 @@ export default function SolaScripturaImpossible() {
           </p>
         </div>
 
-        <p>{t(trans.intro.p1, language)}</p>
+        <p><SmartText>{t(trans.intro.p1, language)}</SmartText></p>
 
-        <p>{t(trans.intro.p2, language)}</p>
+        <p><SmartText>{t(trans.intro.p2, language)}</SmartText></p>
       </div>
 
       {/* Videos */}
@@ -369,7 +370,7 @@ export default function SolaScripturaImpossible() {
                   {element.label}
                 </h4>
                 <p className="text-gray-400 text-sm">
-                  {element.description}
+                  <SmartText>{element.description}</SmartText>
                 </p>
               </motion.div>
             ))}

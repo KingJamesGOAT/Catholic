@@ -1,3 +1,4 @@
+import SmartText from "../SmartText";
 import TopicLayout from "../Journey/TopicLayout";
 import { motion } from "motion/react";
 import { Separator } from "../ui/separator";
@@ -116,7 +117,7 @@ export default function AuthorityDilemmaFallacy() {
     >
       {/* Introduction */}
       <div className="space-y-6 text-gray-300 leading-relaxed mb-16">
-        <p className="text-lg">{t(trans.intro.p1, language)}</p>
+        <p className="text-lg"><SmartText>{t(trans.intro.p1, language)}</SmartText></p>
 
         <div className="bg-gray-900/50 border-l-4 border-blue-600 p-6 rounded-r-lg">
           <p className="text-white text-lg">
@@ -185,7 +186,7 @@ export default function AuthorityDilemmaFallacy() {
                       size={18}
                     />
                     <span className="text-gray-300">
-                      {item.text}
+                      <SmartText>{item.text}</SmartText>
                     </span>
                   </li>
                 ))}
