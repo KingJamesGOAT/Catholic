@@ -1,6 +1,104 @@
 import { Language } from "./LanguageContext";
 
 export const translations = {
+
+
+
+
+  // ADD THIS NEW SECTION:
+  topicDescriptions: {
+    "existence-of-god": {
+      en: "Logical proofs for a Creator.",
+      fr: "Preuves logiques d'un Créateur.",
+      es: "Pruebas lógicas de un Creador.",
+      de: "Logische Beweise für einen Schöpfer.",
+    },
+    "proof-of-resurrection": {
+      en: "History's verdict on the empty tomb.",
+      fr: "Le verdict de l'histoire sur le tombeau vide.",
+      es: "El veredicto histórico sobre la tumba vacía.",
+      de: "Das Urteil der Geschichte über das leere Grab.",
+    },
+    "why-be-catholic": {
+      en: "The fullness of the Christian faith.",
+      fr: "La plénitude de la foi chrétienne.",
+      es: "La plenitud de la fe cristiana.",
+      de: "Die Fülle des christlichen Glaubens.",
+    },
+    "you-lose-so-i-win": {
+      en: "Exposing a common atheist & Protestant fallacy.",
+      fr: "Exposer un sophisme courant.",
+      es: "Exponiendo una falacia común.",
+      de: "Aufdeckung eines häufigen Fehlschlusses.",
+    },
+    "authority-dilemma": {
+      en: "Why the Bible needs an infallible interpreter.",
+      fr: "Pourquoi la Bible a besoin d'un interprète infaillible.",
+      es: "Por qué la Biblia necesita un intérprete infalible.",
+      de: "Warum die Bibel einen unfehlbaren Interpreten braucht.",
+    },
+    "why-not-sola-scriptura": {
+      en: "Why 'Bible Alone' fails historically.",
+      fr: "L'échec historique de la « Bible seule ».",
+      es: "Por qué 'Solo la Biblia' falla históricamente.",
+      de: "Warum 'Allein die Schrift' historisch scheitert.",
+    },
+    "scholastic-approaches": {
+      en: "Deep theology vs. Sola Scriptura.",
+      fr: "Théologie profonde contre Sola Scriptura.",
+      es: "Teología profunda vs. Sola Scriptura.",
+      de: "Tiefe Theologie vs. Sola Scriptura.",
+    },
+    "sola-scriptura-impossible": {
+      en: "Logical contradictions of the Protestant rule.",
+      fr: "Contradictions logiques de la règle protestante.",
+      es: "Contradicciones lógicas de la regla protestante.",
+      de: "Logische Widersprüche der protestantischen Regel.",
+    },
+    "canon-dilemma": {
+      en: "How do we know which books are Bible?",
+      fr: "Comment définir les livres de la Bible ?",
+      es: "¿Cómo sabemos qué libros son Biblia?",
+      de: "Woher wissen wir, welche Bücher Bibel sind?",
+    },
+    "73-books": {
+      en: "Why Catholic Bibles are bigger.",
+      fr: "Pourquoi les Bibles catholiques sont plus grandes.",
+      es: "Por qué las Biblias católicas son más grandes.",
+      de: "Warum katholische Bibeln umfangreicher sind.",
+    },
+    "peter-first-pope": {
+      en: "Biblical evidence for the Papacy.",
+      fr: "Preuves bibliques de la Papauté.",
+      es: "Evidencia bíblica del Papado.",
+      de: "Biblische Beweise für das Papsttum.",
+    },
+    magisterium: {
+      en: "The teaching authority of the Church.",
+      fr: "L'autorité d'enseignement de l'Église.",
+      es: "La autoridad docente de la Iglesia.",
+      de: "Die Lehrautorität der Kirche.",
+    },
+    "what-is-worship": {
+      en: "Worship is sacrifice, not just songs.",
+      fr: "L'adoration est un sacrifice, pas juste des chants.",
+      es: "La adoración es sacrificio, no solo cantos.",
+      de: "Anbetung ist Opfer, nicht nur Gesang.",
+    },
+    "marian-dogma": {
+      en: "Mary's role in God's plan.",
+      fr: "Le rôle de Marie dans le plan de Dieu.",
+      es: "El papel de María en el plan de Dios.",
+      de: "Marias Rolle in Gottes Plan.",
+    },
+    "no-filioque": {
+      en: "The Holy Spirit and the Trinity.",
+      fr: "Le Saint-Esprit et la Trinité.",
+      es: "El Espíritu Santo y la Trinidad.",
+      de: "Der Heilige Geist und die Dreifaltigkeit.",
+    },
+  },
+  
   // --- ADD THIS SECTION FOR DOCTRINE EXPLORER ---
   doctrineExplorer: {
     title: {
@@ -6574,9 +6672,9 @@ export const translations = {
         de: "Die Wurzel des Streits: Die Sieben Umstrittenen Bücher",
       },
       p1: {
-        en: "The <strong>Deuterocanonical Books</strong> (called &quot;Apocrypha&quot; by Protestants) include:",
-        fr: "Les <strong>Livres Deutérocanoniques</strong> (appelés « Apocryphes » par les protestants) incluent :",
-        es: "Los <strong>Libros Deuterocanónicos</strong> (llamados &quot;Apócrifos&quot; por los protestantes) incluyen:",
+        en: "The <strong>Deuterocanonical Books</strong> (called Apocrypha by Protestants) include:",
+        fr: "Les <strong>Livres Deutérocanoniques</strong> (appelés «Apocryphes» par les protestants) incluent :",
+        es: "Los <strong>Libros Deuterocanónicos</strong> (llamados Apócrifos por los protestantes) incluyen:",
         de: "Die <strong>Deuterokanonischen Bücher</strong> (von Protestanten „Apokryphen“ genannt) umfassen:",
       },
       books: {

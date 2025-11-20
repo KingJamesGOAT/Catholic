@@ -56,8 +56,7 @@ export default function GlossaryTooltip({
 
   // Shared Content Design (Apple Glass Style)
   const TooltipBody = () => (
-    // UPDATE: w-[90vw] ensures it fits on small mobile screens (90% width)
-    // sm:w-80 keeps it a fixed 20rem width on tablets and desktops
+    // w-[90vw] ensures it fits on small mobile screens, sm:w-80 keeps it fixed on desktop
     <div className="w-[90vw] sm:w-80 overflow-hidden rounded-2xl bg-gray-950/60 backdrop-blur-xl border border-white/10 shadow-2xl ring-1 ring-black/5">
       {/* Glass Header */}
       <div className="bg-white/5 border-b border-white/10 px-4 py-3 flex items-center gap-3">
@@ -80,7 +79,8 @@ export default function GlossaryTooltip({
 
   const TriggerButton = (
     <button
-      className="inline text-blue-400 decoration-blue-500/40 decoration-dotted decoration-2 underline-offset-4 border-b-0 hover:text-blue-300 hover:decoration-blue-400 transition-colors cursor-help mx-0.5 px-0 py-0 bg-transparent font-inherit focus:outline-none rounded-sm"
+      // ADDED 'underline' here so the dots actually show up!
+      className="inline text-blue-400 underline decoration-blue-500/50 decoration-dotted decoration-2 underline-offset-4 hover:text-blue-300 hover:decoration-blue-400 transition-colors cursor-help mx-0.5 px-0 py-0 bg-transparent font-inherit focus:outline-none rounded-sm"
       type="button"
       onClick={(e) => {
         e.stopPropagation();
@@ -102,7 +102,7 @@ export default function GlossaryTooltip({
         <PopoverContent
           className="p-0 border-0 bg-transparent shadow-none w-auto"
           sideOffset={8}
-          collisionPadding={16} // UPDATE: Ensures 16px safety margin from screen edges
+          collisionPadding={16} // Ensures 16px safety margin from screen edges
         >
           <TooltipBody />
         </PopoverContent>

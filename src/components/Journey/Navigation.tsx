@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, Check, Circle, BookOpen, Sparkles, Search, MoreVertical, ScrollText, Gavel, BookA } from 'lucide-react'; 
+import { Menu, X, Check, Circle, Sparkles, Search, MoreVertical, ScrollText, Gavel, BookA } from 'lucide-react'; 
 import { topics } from '../../App';
 import LanguageSelector from '../LanguageSelector';
 import { useLanguage } from '../../lib/i18n/LanguageContext';
@@ -197,8 +197,6 @@ export default function Navigation({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
-              // FIX 1: Changed pt-20 (5rem) to pt-8 (2rem) for mobile
-              // This brings the content much higher, just under the status bar.
               className="container mx-auto px-4 pt-8 md:pt-24 pb-12 max-w-5xl"
               onClick={(e) => e.stopPropagation()}
             >
@@ -215,8 +213,6 @@ export default function Navigation({
                 </button>
               </div>
 
-              {/* FIX 2: Added pb-32 (8rem) to the bottom of the scrollable list.
-                This pushes the last item up so it is not hidden by the browser's UI bar. */}
               <div className="grid md:grid-cols-2 gap-4 max-h-[70vh] overflow-y-auto pr-4 mb-8 pb-32">
                 
                 {topics.map((topic, index) => {
@@ -268,11 +264,12 @@ export default function Navigation({
                           }`}>
                             {t(trans.topicFullTitles[topic.id as keyof typeof trans.topicFullTitles], language)}
                           </h3>
-                          {topic.transition && (
-                            <p className="text-sm text-gray-500 line-clamp-2">
-                              {t(trans.topicTransitions[topic.id as keyof typeof trans.topicTransitions], language)}
-                            </p>
-                          )}
+                          
+                          {/* Use dynamic translation key for description */}
+                          <p className="text-sm text-gray-500 line-clamp-2">
+                              {t(trans.topicDescriptions[topic.id as keyof typeof trans.topicDescriptions], language)}
+                          </p>
+
                         </div>
                       </div>
                     </motion.button>
