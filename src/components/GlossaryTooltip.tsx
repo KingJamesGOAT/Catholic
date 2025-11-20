@@ -54,8 +54,11 @@ export default function GlossaryTooltip({
     return obj[language] || obj["en"] || "";
   };
 
+  // Shared Content Design (Apple Glass Style)
   const TooltipBody = () => (
-    <div className="w-80 overflow-hidden rounded-2xl bg-gray-950/60 backdrop-blur-xl border border-white/10 shadow-2xl ring-1 ring-black/5">
+    // UPDATE: w-[90vw] ensures it fits on small mobile screens (90% width)
+    // sm:w-80 keeps it a fixed 20rem width on tablets and desktops
+    <div className="w-[90vw] sm:w-80 overflow-hidden rounded-2xl bg-gray-950/60 backdrop-blur-xl border border-white/10 shadow-2xl ring-1 ring-black/5">
       {/* Glass Header */}
       <div className="bg-white/5 border-b border-white/10 px-4 py-3 flex items-center gap-3">
         <div className="p-1.5 bg-blue-500/20 rounded-lg border border-blue-500/20 shadow-inner">
@@ -97,8 +100,9 @@ export default function GlossaryTooltip({
       <Popover open={isOpen} onOpenChange={setIsOpen}>
         <PopoverTrigger asChild>{TriggerButton}</PopoverTrigger>
         <PopoverContent
-          className="p-0 border-0 bg-transparent shadow-none"
+          className="p-0 border-0 bg-transparent shadow-none w-auto"
           sideOffset={8}
+          collisionPadding={16} // UPDATE: Ensures 16px safety margin from screen edges
         >
           <TooltipBody />
         </PopoverContent>
