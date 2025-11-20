@@ -1235,10 +1235,6 @@
     cursor: help;
   }
 
-  .cursor-not-allowed {
-    cursor: not-allowed;
-  }
-
   .cursor-pointer {
     cursor: pointer;
   }
@@ -4654,6 +4650,12 @@
   }
 
   @media (width >= 48rem) {
+    .md\:flex-none {
+      flex: none;
+    }
+  }
+
+  @media (width >= 48rem) {
     .md\:translate-y-\[-50\%\] {
       --tw-translate-y: -50%;
       translate: var(--tw-translate-x) var(--tw-translate-y);
@@ -5185,15 +5187,6 @@
 
 html {
   font-size: var(--font-size);
-  --lightningcss-light: ;
-  --lightningcss-dark: initial;
-  color-scheme: dark;
-}
-
-.dark {
-  --lightningcss-light: ;
-  --lightningcss-dark: initial;
-  color-scheme: dark;
 }
 
 @property --tw-translate-x {

@@ -192,12 +192,8 @@
 
 html {
   font-size: var(--font-size);
-  color-scheme: dark;
 }
 
-.dark {
-  color-scheme: dark;
-}
 
 /* Custom scrollbar styling for Table of Contents */
 @layer utilities {

@@ -7579,6 +7579,30 @@ export const translations = {
       es: "Lo que la fe católica cree acerca de María se funda en lo que cree acerca de Cristo.",
       de: "Was der katholische Glaube über Maria glaubt, gründet darauf, was er über Christus glaubt.",
     },
+
+    // --- ADD THIS BLOCK ---
+    marianApparitions: {
+      title: {
+        en: "Physical Evidence? Marian Apparitions",
+        fr: "Preuve Physique ? Apparitions Mariales",
+        es: "¿Evidencia Física? Apariciones Marianas",
+        de: "Physischer Beweis? Marienerscheinungen",
+      },
+      text: {
+        en: "Throughout history, Mary has appeared to offer guidance and hope. The Miracle of the Sun at Fatima, witnessed by 70,000 people, and the image of Our Lady of Guadalupe, which defies scientific explanation, stand as enduring testimonies.",
+        fr: "Tout au long de l'histoire, Marie est apparue pour offrir conseils et espoir. Le Miracle du Soleil à Fatima, dont ont été témoins 70 000 personnes, et l'image de Notre-Dame de Guadalupe, qui défie toute explication scientifique, demeurent des témoignages durables.",
+        es: "A lo largo de la historia, María ha aparecido para ofrecer guía y esperanza. El Milagro del Sol en Fátima, presenciado por 70,000 personas, y la imagen de Nuestra Señora de Guadalupe, que desafía la explicación científica, permanecen como testimonios perdurables.",
+        de: "Im Laufe der Geschichte ist Maria erschienen, um Führung und Hoffnung zu geben. Das Sonnenwunder von Fatima, das von 70.000 Menschen bezeugt wurde, und das Bild Unserer Lieben Frau von Guadalupe, das sich jeder wissenschaftlichen Erklärung entzieht, stehen als bleibende Zeugnisse.",
+      },
+      button: {
+        en: "Explore Science & Miracles",
+        fr: "Explorer Science & Miracles",
+        es: "Explorar Ciencia y Milagros",
+        de: "Wissenschaft & Wunder Erkunden",
+      },
+    },
+
+    
     bridge: {
       title: {
         en: "Moving Forward: To the Inner Life of God",
@@ -7938,6 +7962,29 @@ export const translations = {
         de: "Offenbarung 19:9",
       },
     },
+
+    // --- ADD THIS BLOCK ---
+    eucharisticMiracles: {
+      title: {
+        en: "Physical Evidence? Eucharistic Miracles",
+        fr: "Preuve Physique ? Miracles Eucharistiques",
+        es: "¿Evidencia Física? Milagros Eucarísticos",
+        de: "Physischer Beweis? Eucharistische Wunder",
+      },
+      text: {
+        en: "While theology explains the Real Presence, science has examined physical manifestations. Eucharistic miracles, such as flesh and blood appearing during the Mass, have been scientifically analyzed and found to be human heart tissue and AB blood type.",
+        fr: "Alors que la théologie explique la Présence Réelle, la science a examiné des manifestations physiques. Les miracles eucharistiques, tels que l'apparition de chair et de sang pendant la messe, ont été analysés scientifiquement et identifiés comme du tissu cardiaque humain de groupe sanguin AB.",
+        es: "Mientras que la teología explica la Presencia Real, la ciencia ha examinado manifestaciones físicas. Los milagros eucarísticos, como la aparición de carne y sangre durante la Misa, han sido analizados científicamente y se ha encontrado que son tejido cardíaco humano y sangre tipo AB.",
+        de: "Während die Theologie die Realpräsenz erklärt, hat die Wissenschaft physische Manifestationen untersucht. Eucharistische Wunder, wie das Erscheinen von Fleisch und Blut während der Messe, wurden wissenschaftlich analysiert und als menschliches Herzgewebe und AB-Blutgruppe identifiziert.",
+      },
+      button: {
+        en: "Explore Science & Miracles",
+        fr: "Explorer Science & Miracles",
+        es: "Explorar Ciencia y Milagros",
+        de: "Wissenschaft & Wunder Erkunden",
+      },
+    },
+    
     bridge: {
       title: {
         en: "Moving Forward: From Worship to Honor",

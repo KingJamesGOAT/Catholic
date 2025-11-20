@@ -1,10 +1,17 @@
 import SmartText from "../SmartText";
 import React from 'react';
+import { motion } from 'motion/react'; // Added
+import { Microscope, ArrowRight } from 'lucide-react'; // Added
 import TopicLayout from '../Journey/TopicLayout';
 import { useLanguage } from '../../lib/i18n/LanguageContext';
 import { translations, t } from '../../lib/i18n/translations';
 
-export default function MarianDogma() {
+type TopicComponentProps = {
+  onComplete?: () => void;
+  onScienceClick?: () => void;
+};
+
+export default function MarianDogma({ onScienceClick }: TopicComponentProps) {
   const { language } = useLanguage();
   const trans = translations.marianDogma;
 
@@ -255,6 +262,37 @@ export default function MarianDogma() {
           "{t(trans.conclusionQuote, language)}"
         </p>
       </div>
+
+      {/* --- NEW SECTION: Marian Apparitions --- */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="mb-12 bg-gradient-to-r from-gray-900 to-blue-950/20 border border-gray-800 rounded-xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 shadow-lg"
+      >
+        <div className="p-4 bg-blue-900/20 rounded-full hidden md:block">
+          <Microscope className="text-blue-400" size={32} />
+        </div>
+        
+        <div className="flex-1 space-y-3 text-center md:text-left">
+          <h3 className="text-xl font-bold text-white flex items-center justify-center md:justify-start gap-2">
+            <Microscope className="text-blue-400 md:hidden" size={24} />
+            {t(trans.marianApparitions.title, language)}
+          </h3>
+          <p className="text-gray-300 text-sm leading-relaxed">
+             {t(trans.marianApparitions.text, language)}
+          </p>
+        </div>
+
+        <button
+          onClick={onScienceClick}
+          className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-lg transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-blue-500/20 whitespace-nowrap group"
+        >
+          {t(trans.marianApparitions.button, language)}
+          <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
+        </button>
+      </motion.div>
+      
       
       {/* Bridge */}
        <div className="bg-gray-900/50 border-l-4 border-indigo-500 p-6 rounded-r-xl">
