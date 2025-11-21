@@ -1,10 +1,49 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowLeft, Play, BookOpen, Heart, Star } from "lucide-react";
+import { Play, BookOpen, Heart, Star, Flame, ShieldCheck, Hourglass } from "lucide-react";
 import { useLanguage } from "../lib/i18n/LanguageContext";
 import { tlmTranslations } from "../lib/i18n/tlmTranslations";
 
 interface TraditionalLatinMassProps {
   onBack: () => void;
+}
+
+// Helper component for lazy loading videos with high-res thumbnails
+function VideoFacade({ id, title }: { id: string; title: string }) {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  if (isPlaying) {
+    return (
+      <iframe
+        width="100%"
+        height="100%"
+        src={`https://www.youtube.com/embed/${id}?autoplay=1`}
+        title={title}
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        className="w-full h-full"
+      />
+    );
+  }
+
+  return (
+    <div 
+      className="relative w-full h-full cursor-pointer group"
+      onClick={() => setIsPlaying(true)}
+    >
+      <img 
+        src={`https://img.youtube.com/vi/${id}/maxresdefault.jpg`} 
+        alt={title}
+        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+        <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+          <Play className="ml-1 text-black fill-black" size={32} />
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default function TraditionalLatinMass({ onBack }: TraditionalLatinMassProps) {
@@ -38,18 +77,10 @@ export default function TraditionalLatinMass({ onBack }: TraditionalLatinMassPro
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
-          <button 
-            onClick={onBack}
-            className="mb-8 inline-flex items-center justify-center gap-2 text-gray-400 hover:text-white transition-colors hover:bg-gray-800 px-4 py-2 rounded-lg"
-          >
-            <ArrowLeft size={20} /> 
-            <span>{trans.backButton[language as keyof typeof trans.backButton]}</span>
-          </button>
-          
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight">
             {trans.title[language as keyof typeof trans.title]}
           </h1>
-          <p className="text-xl text-amber-500 font-serif italic max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-[#fe9a00] font-serif italic max-w-2xl mx-auto leading-relaxed">
             {trans.subtitle[language as keyof typeof trans.subtitle]}
           </p>
         </motion.div>
@@ -61,16 +92,7 @@ export default function TraditionalLatinMass({ onBack }: TraditionalLatinMassPro
           transition={{ delay: 0.2 }}
           className="relative aspect-video w-full rounded-xl overflow-hidden border border-gray-800 shadow-2xl mb-16 bg-gray-900 group"
         >
-          <iframe
-            width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/p8m8Fq8eKXI"
-            title="Intro to Latin Mass"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="w-full h-full"
-          />
+           <VideoFacade id="p8m8Fq8eKXI" title="Intro to Latin Mass" />
         </motion.div>
 
         {/* Introduction Text */}
@@ -94,8 +116,8 @@ export default function TraditionalLatinMass({ onBack }: TraditionalLatinMassPro
               transition={{ delay: i * 0.1 }}
               className="bg-gray-900/30 border border-gray-800 p-8 rounded-xl text-center hover:bg-gray-900/50 transition-colors group"
             >
-              <div className="bg-amber-900/20 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-amber-900/30 transition-colors">
-                <pillar.icon className="text-amber-500" size={28} />
+              <div className="bg-[#fe9a00]/20 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[#fe9a00]/30 transition-colors">
+                <pillar.icon className="text-[#fe9a00]" size={28} />
               </div>
               <h3 className="text-xl font-bold text-white mb-3">
                 {pillar.title[language as keyof typeof pillar.title]}
@@ -127,16 +149,7 @@ export default function TraditionalLatinMass({ onBack }: TraditionalLatinMassPro
                 className="space-y-4"
               >
                 <div className="aspect-video rounded-lg overflow-hidden border border-gray-800 shadow-lg bg-gray-900">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src={`https://www.youtube.com/embed/${video.id}`}
-                    title={`Episode ${i + 1}`}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                  />
+                  <VideoFacade id={video.id} title={String(video.title)} />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-200 px-1">
                   {video.title[language as keyof typeof video.title]}
@@ -146,40 +159,100 @@ export default function TraditionalLatinMass({ onBack }: TraditionalLatinMassPro
           </div>
         </div>
 
-        {/* Deep Dive Section */}
-        <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="bg-gradient-to-br from-gray-900 to-gray-900/50 border border-gray-800 rounded-2xl p-8 md:p-12"
-        >
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/30 border border-blue-800 text-blue-400 text-sm font-medium">
-                <Play size={14} className="fill-current" /> 
-                {trans.deepDive.title[language as keyof typeof trans.deepDive.title]}
+        {/* Deep Dive Section - Expanded with Insights */}
+        <div className="space-y-8">
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-br from-gray-900 to-gray-900/50 border border-gray-800 rounded-2xl p-8 md:p-12"
+          >
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
+              <div className="space-y-8">
+                <div className="space-y-4">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border text-sm font-medium" 
+                    style={{ 
+                      backgroundColor: 'rgba(254, 154, 0, 0.1)', 
+                      borderColor: 'rgba(254, 154, 0, 0.3)', 
+                      color: '#fe9a00' 
+                    }}>
+                    <Play size={14} className="fill-current" /> 
+                    {trans.deepDive.title[language as keyof typeof trans.deepDive.title]}
+                  </div>
+                  <h2 className="text-3xl font-bold text-white">
+                    {trans.deepDive.videoTitle[language as keyof typeof trans.deepDive.videoTitle]}
+                  </h2>
+                  <p className="text-gray-400 text-lg leading-relaxed">
+                    {trans.deepDive.desc[language as keyof typeof trans.deepDive.desc]}
+                  </p>
+                </div>
+
+                <div className="aspect-video rounded-xl overflow-hidden border border-gray-800 shadow-2xl bg-black">
+                  <VideoFacade id="69evrQSTbEA" title="Deep Dive" />
+                </div>
               </div>
-              <h2 className="text-3xl font-bold text-white">
-                The Latin Mass is Not Going Away
-              </h2>
-              <p className="text-gray-400 text-lg leading-relaxed">
-                {trans.deepDive.desc[language as keyof typeof trans.deepDive.desc]}
-              </p>
+
+              
+              {/* Text Analysis from Video - Optimized for Mobile */}
+              <div className="space-y-6">
+                {/* Card 1: Organic Development */}
+                <div className="bg-black/40 rounded-xl p-6 border border-gray-800/50 hover:border-[#fe9a00]/30 transition-colors duration-300">
+                  <div className="flex flex-col sm:flex-row gap-4 sm:items-start">
+                    <div className="shrink-0 w-12 h-12 rounded-full bg-[#fe9a00]/10 flex items-center justify-center">
+                      <Hourglass className="text-[#fe9a00]" size={22} />
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="text-lg font-bold text-white">
+                        {trans.insights.organic.title[language as keyof typeof trans.insights.organic.title]}
+                      </h3>
+                      <p className="text-gray-400 leading-relaxed text-base">
+                        {trans.insights.organic.desc[language as keyof typeof trans.insights.organic.desc]}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 2: Autoimmune Condition */}
+                <div className="bg-black/40 rounded-xl p-6 border border-gray-800/50 hover:border-[#fe9a00]/30 transition-colors duration-300">
+                  <div className="flex flex-col sm:flex-row gap-4 sm:items-start">
+                    <div className="shrink-0 w-12 h-12 rounded-full bg-[#fe9a00]/10 flex items-center justify-center">
+                      <ShieldCheck className="text-[#fe9a00]" size={22} />
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="text-lg font-bold text-white">
+                        {trans.insights.autoimmune.title[language as keyof typeof trans.insights.autoimmune.title]}
+                      </h3>
+                      <p className="text-gray-400 leading-relaxed text-base">
+                        {trans.insights.autoimmune.desc[language as keyof typeof trans.insights.autoimmune.desc]}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 3: True Participation */}
+                <div className="bg-black/40 rounded-xl p-6 border border-gray-800/50 hover:border-[#fe9a00]/30 transition-colors duration-300">
+                  <div className="flex flex-col sm:flex-row gap-4 sm:items-start">
+                    <div className="shrink-0 w-12 h-12 rounded-full bg-[#fe9a00]/10 flex items-center justify-center">
+                      <Flame className="text-[#fe9a00]" size={22} />
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="text-lg font-bold text-white">
+                        {trans.insights.participation.title[language as keyof typeof trans.insights.participation.title]}
+                      </h3>
+                      <p className="text-gray-400 leading-relaxed text-base">
+                        {trans.insights.participation.desc[language as keyof typeof trans.insights.participation.desc]}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              
             </div>
-            <div className="aspect-video rounded-xl overflow-hidden border border-gray-800 shadow-2xl bg-black">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/69evrQSTbEA"
-                title="Deep Dive"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              />
-            </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
 
       </div>
     </div>

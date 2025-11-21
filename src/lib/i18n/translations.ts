@@ -1,11 +1,7 @@
 import { Language } from "./LanguageContext";
-import { tlmTranslations } from './tlmTranslations';
+import { tlmTranslations } from "./tlmTranslations";
 
 export const translations = {
-
-
-
-
   // ADD THIS NEW SECTION:
   topicDescriptions: {
     "existence-of-god": {
@@ -99,7 +95,7 @@ export const translations = {
       de: "Der Heilige Geist und die Dreifaltigkeit.",
     },
   },
-  
+
   // --- ADD THIS SECTION FOR DOCTRINE EXPLORER ---
   doctrineExplorer: {
     title: {
@@ -240,6 +236,13 @@ export const translations = {
       fr: "Explorer les phénomènes surnaturels", // Placeholder
       es: "Explorar fenómenos sobrenaturales", // Placeholder
       de: "Übernatürliche Phänomene entdecken", // Placeholder
+    },
+
+    latinMass: {
+      en: "Latin Mass",
+      fr: "Messe traditionnelle",
+      es: "Misa Tridentina",
+      de: "Tridentinische Messe",
     },
 
     backToJourney: {
@@ -7351,7 +7354,6 @@ export const translations = {
     },
   },
 
-
   // ... existing translations
 
   marianDogma: {
@@ -7561,7 +7563,7 @@ export const translations = {
       es: "En esta discusión integral, William Albrecht y el P. Christiaan Kappas responden sistemáticamente a las objeciones históricas y bíblicas más comunes sobre María, incluida la Inmaculada Concepción, la Virginidad Perpetua y la Asunción.",
       de: "In dieser umfassenden Diskussion antworten William Albrecht und Pater Christiaan Kappas systematisch auf die häufigsten historischen und biblischen Einwände gegen Maria, einschließlich der Unbefleckten Empfängnis, der immerwährenden Jungfräulichkeit und der Aufnahme in den Himmel.",
     },
-    
+
     conclusionTitle: {
       en: "Conclusion",
       fr: "Conclusion",
@@ -7603,7 +7605,6 @@ export const translations = {
       },
     },
 
-    
     bridge: {
       title: {
         en: "Moving Forward: To the Inner Life of God",
@@ -7985,7 +7986,7 @@ export const translations = {
         de: "Wissenschaft & Wunder Erkunden",
       },
     },
-    
+
     bridge: {
       title: {
         en: "Moving Forward: From Worship to Honor",
