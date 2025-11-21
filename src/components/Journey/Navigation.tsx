@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, Check, Circle, Sparkles, Search, MoreVertical, ScrollText, Gavel, BookA } from 'lucide-react'; 
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, Check, Circle, Sparkles, Search, MoreVertical, ScrollText, Gavel, BookA, Church } from 'lucide-react'; 
 import { topics } from '../../App';
 import LanguageSelector from '../LanguageSelector';
 import { useLanguage } from '../../lib/i18n/LanguageContext';
@@ -23,6 +23,8 @@ interface NavigationProps {
   showGlossary?: boolean;
   onDoctrineClick?: () => void;
   showDoctrine?: boolean;
+  onTLMClick?: () => void;
+  showTLM?: boolean;
   onLogoClick: () => void;
 }
 
@@ -41,6 +43,8 @@ export default function Navigation({
   showGlossary = false,
   onDoctrineClick,
   showDoctrine = false,
+  onTLMClick,
+  showTLM = false,
   onLogoClick
 }: NavigationProps) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -77,7 +81,7 @@ export default function Navigation({
       onLogoClick();
   };
 
-  const handleSpecialPageClick = (action: 'earlyChurch' | 'science' | 'glossary' | 'doctrine') => {
+  const handleSpecialPageClick = (action: 'earlyChurch' | 'science' | 'glossary' | 'doctrine' | 'tlm') => {
     setMenuOpen(false);
     setKebabMenuOpen(false); 
     if (action === 'earlyChurch' && onEarlyChurchClick) {
@@ -88,6 +92,8 @@ export default function Navigation({
       onGlossaryClick();
     } else if (action === 'doctrine' && onDoctrineClick) {
       onDoctrineClick();
+    } else if (action === 'tlm' && onTLMClick) {
+      onTLMClick();
     }
   };
 
@@ -124,6 +130,7 @@ export default function Navigation({
 
               <div className="w-px h-6 bg-gray-800 hidden md:block" />
 
+              {/* MAIN GROUP: Science, Early Church, Doctrine */}
               <div className="hidden md:flex rounded-lg border border-gray-700 bg-gray-900/50 p-1">
                 <button
                   onClick={() => handleSpecialPageClick('science')}
@@ -153,6 +160,21 @@ export default function Navigation({
                   {t(trans.nav.scriptureFathers, language)}
                 </button>
               </div>
+
+              {/* STANDALONE BUTTON: Latin Mass (Desktop only) */}
+              <button
+                  onClick={() => handleSpecialPageClick('tlm')}
+                  className={cn(
+                    "hidden md:flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors duration-200 whitespace-nowrap border",
+                    showTLM 
+                      ? "bg-amber-700 border-amber-600 text-white shadow-[0_0_15px_rgba(217,119,6,0.3)] hover:bg-amber-600" 
+                      : "bg-transparent border-gray-700 text-white hover:border-amber-500 hover:text-white hover:bg-amber-900/10"
+                  )}
+                  style={{ height: '42px' }} 
+                >
+                  <Church size={16} className={showTLM ? "text-white" : "text-white group-hover:text-white"} />
+                  <span>Latin Mass</span>
+              </button>
               
               <button
                 onClick={() => setMenuOpen(true)}
@@ -164,6 +186,7 @@ export default function Navigation({
               
               <LanguageSelector />
 
+              {/* MOBILE KEBAB MENU BUTTON */}
               <button
                 className="text-gray-400 hover:text-white transition-colors md:hidden"
                 onClick={() => setKebabMenuOpen(!kebabMenuOpen)}
@@ -184,6 +207,7 @@ export default function Navigation({
         </div>
       </motion.nav>
 
+      {/* Main Topics Menu */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -265,7 +289,6 @@ export default function Navigation({
                             {t(trans.topicFullTitles[topic.id as keyof typeof trans.topicFullTitles], language)}
                           </h3>
                           
-                          {/* Use dynamic translation key for description */}
                           <p className="text-sm text-gray-500 line-clamp-2">
                               {t(trans.topicDescriptions[topic.id as keyof typeof trans.topicDescriptions], language)}
                           </p>
@@ -312,6 +335,7 @@ export default function Navigation({
         )}
       </AnimatePresence>
 
+      {/* KEBAB MENU (Mobile Only) */}
       <AnimatePresence>
         {kebabMenuOpen && (
           <>
@@ -351,7 +375,22 @@ export default function Navigation({
                 <Gavel size={18} />
                 <span>{t(trans.nav.scriptureFathers, language)}</span>
               </button>
+
+              {/* SEPARATOR 1 */}
               <div className="h-px bg-gray-700 my-1" />
+
+              {/* LATIN MASS - AMBER COLOR */}
+              <button
+                onClick={() => handleSpecialPageClick('tlm')}
+                className="flex items-center gap-3 w-full text-left px-3 py-3 rounded-md text-amber-500 hover:bg-amber-700 hover:text-white transition-colors"
+              >
+                <Church size={18} />
+                <span>The Latin Mass</span>
+              </button>
+
+              {/* SEPARATOR 2 */}
+              <div className="h-px bg-gray-700 my-1" />
+
               <button
                 onClick={() => handleSpecialPageClick('glossary')}
                 className="flex items-center gap-3 w-full text-left px-3 py-3 rounded-md text-gray-300 hover:bg-yellow-600 hover:text-black transition-colors"

@@ -1,4 +1,5 @@
 import { Language } from "./LanguageContext";
+import { tlmTranslations } from './tlmTranslations';
 
 export const translations = {
 

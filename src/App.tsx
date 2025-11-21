@@ -5,7 +5,7 @@ import {
   lazy,
   Suspense,
 } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 import Navigation from "./components/Journey/Navigation";
 import ProgressTracker from "./components/Journey/ProgressTracker";
 import TopicTransition from "./components/Journey/TopicTransition";
@@ -22,10 +22,11 @@ import { useIsMobile } from "./components/ui/use-mobile";
 import GlossarySearch from "./components/GlossarySearch";
 import GlossaryPage from "./components/GlossaryPage";
 import DoctrineExplorer from "./components/DoctrineExplorer";
-import { Button } from "./components/ui/button"; // <--- ADD THIS LINE
+import { Button } from "./components/ui/button"; 
 
 // Topic Components
 import ScienceAndMiracles from "./components/ScienceAndMiracles";
+import TraditionalLatinMass from "./components/TraditionalLatinMass"; 
 
 const ExistenceOfGod = lazy(
   () => import("./components/Topics/ExistenceOfGod"),
@@ -208,7 +209,6 @@ export const topics: Topic[] = [
   },
 ];
 
-// ... [Rest of the AppContent and App functions remains exactly the same as before]
 function AppContent() {
   const [currentTopicIndex, setCurrentTopicIndex] =
     useState(-1);
@@ -226,6 +226,7 @@ function AppContent() {
   const [showScience, setShowScience] = useState(false);
   const [showGlossary, setShowGlossary] = useState(false);
   const [showDoctrine, setShowDoctrine] = useState(false);
+  const [showTLM, setShowTLM] = useState(false);
 
   // Command Palette State
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -264,7 +265,8 @@ function AppContent() {
       showEarlyChurch ||
       showScience ||
       showGlossary ||
-      showDoctrine
+      showDoctrine ||
+      showTLM
     ) &&
     (isMobile || showHome || isHovering);
 
@@ -278,6 +280,7 @@ function AppContent() {
         science,
         glossary,
         doctrine,
+        tlm
       } = JSON.parse(saved);
 
       if (completed) {
@@ -297,6 +300,9 @@ function AppContent() {
       } else if (doctrine) {
         setShowDoctrine(true);
         setShowHome(false);
+      } else if (tlm) {
+        setShowTLM(true);
+        setShowHome(false);
       } else if (index !== undefined && index !== -1) {
         setCurrentTopicIndex(index);
         setShowHome(false);
@@ -314,6 +320,7 @@ function AppContent() {
         science: showScience,
         glossary: showGlossary,
         doctrine: showDoctrine,
+        tlm: showTLM,
       }),
     );
   }, [
@@ -323,6 +330,7 @@ function AppContent() {
     showScience,
     showGlossary,
     showDoctrine,
+    showTLM,
   ]);
 
   // 2. Keyboard Navigation
@@ -335,6 +343,7 @@ function AppContent() {
         showScience ||
         showGlossary ||
         showDoctrine ||
+        showTLM ||
         isSearchOpen
       )
         return;
@@ -356,6 +365,7 @@ function AppContent() {
     showScience,
     showGlossary,
     showDoctrine,
+    showTLM,
     isSearchOpen,
   ]);
 
@@ -375,6 +385,9 @@ function AppContent() {
     } else if (showDoctrine) {
       document.title =
         "Doctrine Explorer | Catholic Foundations";
+    } else if (showTLM) {
+      document.title = 
+        "The Latin Mass | Catholic Foundations";
     } else if (
       currentTopicIndex >= 0 &&
       topics[currentTopicIndex]
@@ -390,6 +403,7 @@ function AppContent() {
     showScience,
     showGlossary,
     showDoctrine,
+    showTLM,
   ]);
 
   const goToTopic = (index: number) => {
@@ -398,6 +412,7 @@ function AppContent() {
     setShowScience(false);
     setShowGlossary(false);
     setShowDoctrine(false);
+    setShowTLM(false);
 
     if (index === currentTopicIndex) {
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -459,6 +474,7 @@ function AppContent() {
     setShowScience(false);
     setShowGlossary(false);
     setShowDoctrine(false);
+    setShowTLM(false);
     setShowEarlyChurch(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -468,6 +484,7 @@ function AppContent() {
     setShowEarlyChurch(false);
     setShowGlossary(false);
     setShowDoctrine(false);
+    setShowTLM(false);
     setShowScience(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -477,6 +494,7 @@ function AppContent() {
     setShowEarlyChurch(false);
     setShowScience(false);
     setShowDoctrine(false);
+    setShowTLM(false);
     setShowGlossary(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -486,7 +504,18 @@ function AppContent() {
     setShowEarlyChurch(false);
     setShowScience(false);
     setShowGlossary(false);
+    setShowTLM(false);
     setShowDoctrine(true);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleTLMClick = () => {
+    setShowHome(false);
+    setShowEarlyChurch(false);
+    setShowScience(false);
+    setShowGlossary(false);
+    setShowDoctrine(false);
+    setShowTLM(true);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -497,6 +526,7 @@ function AppContent() {
     setShowScience(false);
     setShowGlossary(false);
     setShowDoctrine(false);
+    setShowTLM(false);
 
     localStorage.setItem(
       "journey-progress",
@@ -507,6 +537,7 @@ function AppContent() {
         science: false,
         glossary: false,
         doctrine: false,
+        tlm: false,
       }),
     );
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -534,6 +565,8 @@ function AppContent() {
         onSearchClick={() => setIsSearchOpen(true)}
         onDoctrineClick={handleDoctrineClick}
         showDoctrine={showDoctrine}
+        onTLMClick={handleTLMClick}
+        showTLM={showTLM}
         onHoverStart={handleHoverStart}
         onHoverEnd={handleHoverEnd}
         isSpecialPage={
@@ -541,7 +574,8 @@ function AppContent() {
           showScience ||
           showHome ||
           showGlossary ||
-          showDoctrine
+          showDoctrine ||
+          showTLM
         }
         showEarlyChurch={showEarlyChurch}
         showScience={showScience}
@@ -562,12 +596,14 @@ function AppContent() {
       ) : showEarlyChurch ||
         showScience ||
         showGlossary ||
-        showDoctrine ? (
+        showDoctrine ||
+        showTLM ? (
         <>
           {showEarlyChurch && <EarlyChurch />}
           {showScience && <ScienceAndMiracles />}
           {showGlossary && <GlossaryPage />}
           {showDoctrine && <DoctrineExplorer />}
+          {showTLM && <TraditionalLatinMass onBack={handleBackToHome} />}
         </>
       ) : (
         currentTopicIndex >= 0 && (
