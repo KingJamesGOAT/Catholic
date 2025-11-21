@@ -1,6 +1,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  color-scheme: light dark;
   --font-size: 16px;
   --background: #ffffff;
   --foreground: oklch(0.145 0 0);
@@ -193,7 +194,6 @@
 html {
   font-size: var(--font-size);
 }
-
 
 /* Custom scrollbar styling for Table of Contents */
 @layer utilities {

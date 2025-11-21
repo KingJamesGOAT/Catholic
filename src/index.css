@@ -5108,6 +5108,9 @@
 }
 
 :root {
+  --lightningcss-light: initial;
+  --lightningcss-dark: ;
+  color-scheme: light dark;
   --font-size: 16px;
   --background: #fff;
   --foreground: oklch(.145 0 0);
@@ -5146,6 +5149,13 @@
   --sidebar-accent-foreground: oklch(.205 0 0);
   --sidebar-border: oklch(.922 0 0);
   --sidebar-ring: oklch(.708 0 0);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --lightningcss-light: ;
+    --lightningcss-dark: initial;
+  }
 }
 
 .dark {
