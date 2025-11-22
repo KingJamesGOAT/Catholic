@@ -9,8 +9,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import Navigation from "./components/Journey/Navigation";
 import ProgressTracker from "./components/Journey/ProgressTracker";
 import TopicTransition from "./components/Journey/TopicTransition";
-import EarlyChurch from "./components/EarlyChurch";
-import Home from "./components/Home";
 import { Toaster } from "./components/ui/sonner";
 import {
   LanguageProvider,
@@ -20,59 +18,36 @@ import { translations, t } from "./lib/i18n/translations";
 import { cn } from "./components/ui/utils";
 import { useIsMobile } from "./components/ui/use-mobile";
 import GlossarySearch from "./components/GlossarySearch";
-import GlossaryPage from "./components/GlossaryPage";
-import DoctrineExplorer from "./components/DoctrineExplorer";
-import { Button } from "./components/ui/button"; 
+import { Button } from "./components/ui/button";
 
-// Topic Components
-import ScienceAndMiracles from "./components/ScienceAndMiracles";
-import TraditionalLatinMass from "./components/TraditionalLatinMass"; 
+// ------------------------------------------------------------------
+// OPTIMIZATION: Lazy load Top-Level Views to reduce initial bundle size
+// ------------------------------------------------------------------
+const Home = lazy(() => import("./components/Home"));
+const EarlyChurch = lazy(() => import("./components/EarlyChurch"));
+const ScienceAndMiracles = lazy(() => import("./components/ScienceAndMiracles"));
+const GlossaryPage = lazy(() => import("./components/GlossaryPage"));
+const DoctrineExplorer = lazy(() => import("./components/DoctrineExplorer"));
+const TraditionalLatinMass = lazy(() => import("./components/TraditionalLatinMass"));
 
-const ExistenceOfGod = lazy(
-  () => import("./components/Topics/ExistenceOfGod"),
-);
-const ProofOfResurrection = lazy(
-  () => import("./components/Topics/ProofOfResurrection"),
-);
-const WhyBeCatholic = lazy(
-  () => import("./components/Topics/WhyBeCatholic"),
-);
-const YouLoseSoIWinFallacy = lazy(
-  () => import("./components/Topics/YouLoseSoIWinFallacy"),
-);
-const AuthorityDilemmaFallacy = lazy(
-  () => import("./components/Topics/AuthorityDilemmaFallacy"),
-);
-const WhyNotSolaScriptura = lazy(
-  () => import("./components/Topics/WhyNotSolaScriptura"),
-);
-const ScholasticApproaches = lazy(
-  () => import("./components/Topics/ScholasticApproaches"),
-);
-const SolaScripturaImpossible = lazy(
-  () => import("./components/Topics/SolaScripturaImpossible"),
-);
-const CanonDilemma = lazy(
-  () => import("./components/Topics/CanonDilemma"),
-);
-const SeventyThreeBooks = lazy(
-  () => import("./components/Topics/SeventyThreeBooks"),
-);
-const PeterFirstPope = lazy(
-  () => import("./components/Topics/PeterFirstPope"),
-);
-const Magisterium = lazy(
-  () => import("./components/Topics/Magisterium"),
-);
-const WhatIsWorship = lazy(
-  () => import("./components/Topics/WhatIsWorship"),
-);
-const MarianDogma = lazy(
-  () => import("./components/Topics/MarianDogma"),
-);
-const NoFilioque = lazy(
-  () => import("./components/Topics/NoFilioque"),
-);
+// ------------------------------------------------------------------
+// Topic Components (Already Lazy Loaded)
+// ------------------------------------------------------------------
+const ExistenceOfGod = lazy(() => import("./components/Topics/ExistenceOfGod"));
+const ProofOfResurrection = lazy(() => import("./components/Topics/ProofOfResurrection"));
+const WhyBeCatholic = lazy(() => import("./components/Topics/WhyBeCatholic"));
+const YouLoseSoIWinFallacy = lazy(() => import("./components/Topics/YouLoseSoIWinFallacy"));
+const AuthorityDilemmaFallacy = lazy(() => import("./components/Topics/AuthorityDilemmaFallacy"));
+const WhyNotSolaScriptura = lazy(() => import("./components/Topics/WhyNotSolaScriptura"));
+const ScholasticApproaches = lazy(() => import("./components/Topics/ScholasticApproaches"));
+const SolaScripturaImpossible = lazy(() => import("./components/Topics/SolaScripturaImpossible"));
+const CanonDilemma = lazy(() => import("./components/Topics/CanonDilemma"));
+const SeventyThreeBooks = lazy(() => import("./components/Topics/SeventyThreeBooks"));
+const PeterFirstPope = lazy(() => import("./components/Topics/PeterFirstPope"));
+const Magisterium = lazy(() => import("./components/Topics/Magisterium"));
+const WhatIsWorship = lazy(() => import("./components/Topics/WhatIsWorship"));
+const MarianDogma = lazy(() => import("./components/Topics/MarianDogma"));
+const NoFilioque = lazy(() => import("./components/Topics/NoFilioque"));
 
 type TopicComponentProps = {
   onComplete?: () => void;
@@ -83,7 +58,6 @@ export interface Topic {
   id: string;
   title: string;
   shortTitle: string;
-  // description field removed - using i18n lookup instead
   component: React.ComponentType<TopicComponentProps>;
   transition?: string;
 }
@@ -220,7 +194,7 @@ type View =
   | 'tlm';
 
 function AppContent() {
-  // Core State: Replaced multiple booleans with single 'currentView'
+  // Core State
   const [currentView, setCurrentView] = useState<View>('home');
   const [currentTopicIndex, setCurrentTopicIndex] = useState(-1);
   
@@ -274,11 +248,9 @@ function AppContent() {
         setCompletedTopics(new Set(completed));
       }
 
-      // Handle new 'view' property or fallback to legacy boolean checks
       if (view) {
         setCurrentView(view as View);
       } else {
-        // Legacy fallback logic for older saves
         if (legacy.earlyChurch) setCurrentView('early-church');
         else if (legacy.science) setCurrentView('science');
         else if (legacy.glossary) setCurrentView('glossary');
@@ -300,7 +272,7 @@ function AppContent() {
       JSON.stringify({
         index: currentTopicIndex,
         completed: Array.from(completedTopics),
-        view: currentView, // Save the single source of truth
+        view: currentView,
       }),
     );
   }, [currentTopicIndex, completedTopics, currentView]);
@@ -308,7 +280,6 @@ function AppContent() {
   // 3. Keyboard Navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      // Disable if not on topic view or search is active
       if (currentView !== 'topic' || isSearchOpen) return;
 
       if (e.key === "ArrowRight") {
@@ -458,16 +429,18 @@ function AppContent() {
         onHoverEnd={handleHoverEnd}
       />
 
-      {/* Main Content Area */}
-      {currentView === 'home' && (
-        <Home onStart={startJourney} />
-      )}
+      {/* Main Content Area - WRAPPED IN SUSPENSE */}
+      <Suspense fallback={<div className="min-h-[80vh] flex items-center justify-center text-gray-400">Loading...</div>}>
+        {currentView === 'home' && (
+          <Home onStart={startJourney} />
+        )}
 
-      {currentView === 'early-church' && <EarlyChurch />}
-      {currentView === 'science' && <ScienceAndMiracles />}
-      {currentView === 'glossary' && <GlossaryPage />}
-      {currentView === 'doctrine' && <DoctrineExplorer />}
-      {currentView === 'tlm' && <TraditionalLatinMass />}
+        {currentView === 'early-church' && <EarlyChurch />}
+        {currentView === 'science' && <ScienceAndMiracles />}
+        {currentView === 'glossary' && <GlossaryPage />}
+        {currentView === 'doctrine' && <DoctrineExplorer />}
+        {currentView === 'tlm' && <TraditionalLatinMass />}
+      </Suspense>
 
       {currentView === 'topic' && currentTopicIndex >= 0 && (
         <AnimatePresence mode="wait">
