@@ -1403,7 +1403,7 @@ export const translations = {
     },
     quote: {
       en: "If Christ has not been raised, then our preaching is in vain and your faith is in vain.",
-      fr: "\"Si Christ n'a pas été ressuscité, alors notre prédication est vaine et votre foi est vaine.",
+      fr: "Si Christ n'a pas été ressuscité, alors notre prédication est vaine et votre foi est vaine.",
       es: "Si Cristo no ha resucitado, entonces nuestra predicación es en vano y vuestra fe es en vano.",
       de: "Wenn Christus nicht auferstanden ist, dann ist unsere Predigt vergeblich und euer Glaube ist vergeblich.",
     },
@@ -1514,7 +1514,7 @@ export const translations = {
                 <li><strong class="text-red-400">The Jewish Talmud:</strong> Reports that "Yeshu was hanged" on the eve of Passover. Being "hanged on a tree" was the common Jewish description for crucifixion.</li>
               </ul>
               <div class="bg-gray-800/50 p-4 rounded-lg border-l-4 border-red-500 mt-4">
-                <p class="italic">"That he was crucified is as sure as anything historical can ever be." <br/><span class="text-sm text-gray-400">- John Dominic Crossan (Co-founder of the Jesus Seminar)</span></p>
+                <p class="italic">"That he was crucified is as sure as anything historical can ever be."</p>
               </div>
             </div>`,
           fr: `
@@ -1529,8 +1529,7 @@ export const translations = {
       </ul>
 
       <div class="bg-gray-800/50 p-4 rounded-lg border-l-4 border-red-500 mt-4">
-        <p class="italic">« Qu’il ait été crucifié est aussi certain que n’importe quel fait historique peut l’être. »<br/>
-        <span class="text-sm text-gray-400">- John Dominic Crossan (Cofondateur du Jesus Seminar)</span></p>
+        <p class="italic">« Qu’il ait été crucifié est aussi certain que n’importe quel fait historique peut l’être. »</p>
       </div>
     </div>`,
 
@@ -1546,8 +1545,7 @@ export const translations = {
       </ul>
 
       <div class="bg-gray-800/50 p-4 rounded-lg border-l-4 border-red-500 mt-4">
-        <p class="italic">« Que fue crucificado es tan seguro como cualquier hecho histórico puede serlo. »<br/>
-        <span class="text-sm text-gray-400">- John Dominic Crossan (Cofundador del Jesus Seminar)</span></p>
+        <p class="italic">« Que fue crucificado es tan seguro como cualquier hecho histórico puede serlo. »</p>
       </div>
     </div>`,
 
@@ -1563,8 +1561,7 @@ export const translations = {
       </ul>
 
       <div class="bg-gray-800/50 p-4 rounded-lg border-l-4 border-red-500 mt-4">
-        <p class="italic">« Dass er gekreuzigt wurde, ist so sicher wie irgendeine historische Tatsache nur sein kann. »<br/>
-        <span class="text-sm text-gray-400">- John Dominic Crossan (Mitbegründer des Jesus Seminar)</span></p>
+        <p class="italic">« Dass er gekreuzigt wurde, ist so sicher wie irgendeine historische Tatsache nur sein kann. »</p>
       </div>
     </div>`,
         },

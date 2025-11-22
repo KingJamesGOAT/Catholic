@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Check, Circle, Sparkles, Search, MoreVertical, ScrollText, Gavel, BookA, Church } from 'lucide-react'; 
+import { Menu, X, Check, Circle, Sparkles, Search, MoreVertical, ScrollText, Gavel, BookA, Church } from 'lucide-react';
 import { topics } from '../../App';
 import LanguageSelector from '../LanguageSelector';
 import { useLanguage } from '../../lib/i18n/LanguageContext';
@@ -34,10 +34,11 @@ export default function Navigation({
   completedTopics, 
   onEarlyChurchClick, 
   onScienceClick, 
-  onGlossaryClick,
-  onSearchClick,
+  onGlossaryClick, 
+  onSearchClick, 
   onHoverStart, 
   onHoverEnd,
+  isSpecialPage, // <--- ADD THIS LINE
   showEarlyChurch = false,
   showScience = false,
   showGlossary = false,
@@ -49,8 +50,50 @@ export default function Navigation({
 }: NavigationProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [kebabMenuOpen, setKebabMenuOpen] = useState(false); 
+  
+  // --- Reading Progress Logic ---
+  const [readingProgress, setReadingProgress] = useState(0);
+
+  useEffect(() => {
+    const updateScrollCompletion = () => {
+      const currentProgress = window.scrollY;
+      const scrollHeight = document.body.scrollHeight - window.innerHeight;
+      if (scrollHeight) {
+        setReadingProgress(Number((currentProgress / scrollHeight).toFixed(2)) * 100);
+      }
+    };
+
+    window.addEventListener('scroll', updateScrollCompletion);
+    return () => window.removeEventListener('scroll', updateScrollCompletion);
+  }, []);
+  // ------------------------------
+
+  // Determine if we are specifically on the Home Page
+  // (It is a special page, but NOT one of the specific sections like Science or TLM)
+  const isHomePage = isSpecialPage && 
+    !showEarlyChurch && 
+    !showScience && 
+    !showGlossary && 
+    !showDoctrine && 
+    !showTLM;
+
   const { language } = useLanguage();
   const trans = translations;
+
+  // --- Dynamic Progress Bar Color Logic ---
+  let progressColorClass = 'bg-blue-600'; // Default Blue
+  let progressShadowStyle = '0 0 10px rgba(37,99,235,0.5)'; // Default Blue Glow
+
+  if (showTLM) {
+    // Latin Mass Orange (#fe9a00)
+    progressColorClass = 'bg-[#fe9a00]'; 
+    progressShadowStyle = '0 0 10px rgba(254,154,0,0.5)';
+  } else if (showDoctrine) {
+    // Scripture & Tradition Indigo (#4f39f6)
+    progressColorClass = 'bg-[#4f39f6]';
+    progressShadowStyle = '0 0 10px rgba(79,57,246,0.5)';
+  }
+  // ----------------------------------------
 
   useEffect(() => {
     if (menuOpen || kebabMenuOpen) {
@@ -104,7 +147,7 @@ export default function Navigation({
         animate={{ y: 0 }}
         className="fixed top-0 left-0 right-0 z-40 bg-black/95 backdrop-blur-sm border-b border-gray-800"
         onHoverStart={onHoverStart} 
-        onHoverEnd={onHoverEnd}     
+        onHoverEnd={onHoverEnd}      
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16 md:h-20">
@@ -205,6 +248,20 @@ export default function Navigation({
               </button>
             </div>
           </div>
+
+          {/* Reading Progress Bar - Hidden on Home Page */}
+          {!isHomePage && (
+            <div 
+              className={cn(
+                "absolute bottom-0 left-0 h-[3px] z-50 transition-all duration-150 ease-out",
+                progressColorClass
+              )}
+              style={{ 
+                width: `${readingProgress}%`,
+                boxShadow: progressShadowStyle
+              }} 
+            />
+          )}
         </div>
       </motion.nav>
 

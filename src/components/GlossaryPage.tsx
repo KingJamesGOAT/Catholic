@@ -224,13 +224,15 @@ export default function GlossaryPage() {
                 
                 {/* Content - Centered Container */}
                 <div className="container mx-auto max-w-4xl px-4 mt-6">
+                  
                   <div className="grid gap-4">
                     {groupedTerms[letter].map((item, idx) => (
                       <div 
                         key={idx} 
-                        className="group relative bg-gray-900/30 border border-gray-800 rounded-xl p-6 hover:border-blue-500/30 hover:bg-gray-900/50 transition-all duration-300"
+                        className="group relative bg-gray-900/30 border border-gray-800 rounded-xl p-6 hover:border-blue-500/30 hover:bg-gray-900/50 transition-all duration-300 overflow-hidden"
                       >
-                        <div className="absolute top-0 left-0 w-1 h-full bg-blue-600 rounded-l-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        <div className="absolute top-0 left-0 w-1 h-full bg-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        
                         <h3 className="text-xl font-bold text-gray-100 mb-2 group-hover:text-blue-400 transition-colors">
                           {item.term}
                         </h3>
