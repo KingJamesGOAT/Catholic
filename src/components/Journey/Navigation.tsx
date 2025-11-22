@@ -38,7 +38,7 @@ export default function Navigation({
   onSearchClick, 
   onHoverStart, 
   onHoverEnd,
-  isSpecialPage, // <--- ADD THIS LINE
+  isSpecialPage,
   showEarlyChurch = false,
   showScience = false,
   showGlossary = false,
@@ -69,7 +69,6 @@ export default function Navigation({
   // ------------------------------
 
   // Determine if we are specifically on the Home Page
-  // (It is a special page, but NOT one of the specific sections like Science or TLM)
   const isHomePage = isSpecialPage && 
     !showEarlyChurch && 
     !showScience && 

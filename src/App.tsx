@@ -209,24 +209,25 @@ export const topics: Topic[] = [
   },
 ];
 
-function AppContent() {
-  const [currentTopicIndex, setCurrentTopicIndex] =
-    useState(-1);
-  const [showTransition, setShowTransition] = useState(false);
-  const [direction, setDirection] = useState<
-    "forward" | "backward"
-  >("forward");
-  const [completedTopics, setCompletedTopics] = useState<
-    Set<number>
-  >(new Set());
+// Define the possible views for the application
+type View = 
+  | 'home' 
+  | 'topic' 
+  | 'early-church' 
+  | 'science' 
+  | 'glossary' 
+  | 'doctrine' 
+  | 'tlm';
 
-  // State for Page Routing
-  const [showHome, setShowHome] = useState(true);
-  const [showEarlyChurch, setShowEarlyChurch] = useState(false);
-  const [showScience, setShowScience] = useState(false);
-  const [showGlossary, setShowGlossary] = useState(false);
-  const [showDoctrine, setShowDoctrine] = useState(false);
-  const [showTLM, setShowTLM] = useState(false);
+function AppContent() {
+  // Core State: Replaced multiple booleans with single 'currentView'
+  const [currentView, setCurrentView] = useState<View>('home');
+  const [currentTopicIndex, setCurrentTopicIndex] = useState(-1);
+  
+  // Navigation & Progress State
+  const [showTransition, setShowTransition] = useState(false);
+  const [direction, setDirection] = useState<"forward" | "backward">("forward");
+  const [completedTopics, setCompletedTopics] = useState<Set<number>>(new Set());
 
   // Command Palette State
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -235,9 +236,7 @@ function AppContent() {
   const trans = translations;
   const isMobile = useIsMobile();
   const [isHovering, setIsHovering] = useState(false);
-  const hoverTimeoutRef = useRef<ReturnType<
-    typeof setTimeout
-  > | null>(null);
+  const hoverTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const handleHoverStart = () => {
     if (hoverTimeoutRef.current) {
@@ -260,93 +259,57 @@ function AppContent() {
     };
   }, []);
 
-  const isProgressVisible =
-    !(
-      showEarlyChurch ||
-      showScience ||
-      showGlossary ||
-      showDoctrine ||
-      showTLM
-    ) &&
-    (isMobile || showHome || isHovering);
+  const isProgressVisible = 
+    (currentView === 'home' || currentView === 'topic') && 
+    (isMobile || currentView === 'home' || isHovering);
 
+  // 1. Load Progress from Local Storage
   useEffect(() => {
     const saved = localStorage.getItem("journey-progress");
     if (saved) {
-      const {
-        index,
-        completed,
-        earlyChurch,
-        science,
-        glossary,
-        doctrine,
-        tlm
-      } = JSON.parse(saved);
+      const parsed = JSON.parse(saved);
+      const { index, completed, view, ...legacy } = parsed;
 
       if (completed) {
         setCompletedTopics(new Set(completed));
       }
 
-      // Restore special pages state
-      if (earlyChurch) {
-        setShowEarlyChurch(true);
-        setShowHome(false);
-      } else if (science) {
-        setShowScience(true);
-        setShowHome(false);
-      } else if (glossary) {
-        setShowGlossary(true);
-        setShowHome(false);
-      } else if (doctrine) {
-        setShowDoctrine(true);
-        setShowHome(false);
-      } else if (tlm) {
-        setShowTLM(true);
-        setShowHome(false);
-      } else if (index !== undefined && index !== -1) {
+      // Handle new 'view' property or fallback to legacy boolean checks
+      if (view) {
+        setCurrentView(view as View);
+      } else {
+        // Legacy fallback logic for older saves
+        if (legacy.earlyChurch) setCurrentView('early-church');
+        else if (legacy.science) setCurrentView('science');
+        else if (legacy.glossary) setCurrentView('glossary');
+        else if (legacy.doctrine) setCurrentView('doctrine');
+        else if (legacy.tlm) setCurrentView('tlm');
+        else if (index !== undefined && index !== -1) setCurrentView('topic');
+      }
+
+      if (index !== undefined && index !== -1) {
         setCurrentTopicIndex(index);
-        setShowHome(false);
       }
     }
   }, []);
 
+  // 2. Save Progress to Local Storage
   useEffect(() => {
     localStorage.setItem(
       "journey-progress",
       JSON.stringify({
         index: currentTopicIndex,
         completed: Array.from(completedTopics),
-        earlyChurch: showEarlyChurch,
-        science: showScience,
-        glossary: showGlossary,
-        doctrine: showDoctrine,
-        tlm: showTLM,
+        view: currentView, // Save the single source of truth
       }),
     );
-  }, [
-    currentTopicIndex,
-    completedTopics,
-    showEarlyChurch,
-    showScience,
-    showGlossary,
-    showDoctrine,
-    showTLM,
-  ]);
+  }, [currentTopicIndex, completedTopics, currentView]);
 
-  // 2. Keyboard Navigation
+  // 3. Keyboard Navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      // Disable if special pages are open or search is active
-      if (
-        showHome ||
-        showEarlyChurch ||
-        showScience ||
-        showGlossary ||
-        showDoctrine ||
-        showTLM ||
-        isSearchOpen
-      )
-        return;
+      // Disable if not on topic view or search is active
+      if (currentView !== 'topic' || isSearchOpen) return;
 
       if (e.key === "ArrowRight") {
         nextTopic();
@@ -356,87 +319,64 @@ function AppContent() {
     };
 
     window.addEventListener("keydown", handleKeyDown);
-    return () =>
-      window.removeEventListener("keydown", handleKeyDown);
-  }, [
-    currentTopicIndex,
-    showHome,
-    showEarlyChurch,
-    showScience,
-    showGlossary,
-    showDoctrine,
-    showTLM,
-    isSearchOpen,
-  ]);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [currentTopicIndex, currentView, isSearchOpen]);
 
-  // 3. Dynamic Document Titles
+  // 4. Dynamic Document Titles
   useEffect(() => {
-    if (showHome) {
-      document.title = "Home | Catholic Foundations";
-    } else if (showEarlyChurch) {
-      document.title =
-        "Early Church Fathers | Catholic Foundations";
-    } else if (showScience) {
-      document.title =
-        "Science & Miracles | Catholic Foundations";
-    } else if (showGlossary) {
-      document.title =
-        "Catholic Glossary | Catholic Foundations";
-    } else if (showDoctrine) {
-      document.title =
-        "Doctrine Explorer | Catholic Foundations";
-    } else if (showTLM) {
-      document.title = 
-        "The Latin Mass | Catholic Foundations";
-    } else if (
-      currentTopicIndex >= 0 &&
-      topics[currentTopicIndex]
-    ) {
-      document.title = `${topics[currentTopicIndex].title} | Catholic Foundations`;
-    } else {
-      document.title = "Catholic Foundations";
+    switch (currentView) {
+      case 'home':
+        document.title = "Home | Catholic Foundations";
+        break;
+      case 'early-church':
+        document.title = "Early Church Fathers | Catholic Foundations";
+        break;
+      case 'science':
+        document.title = "Science & Miracles | Catholic Foundations";
+        break;
+      case 'glossary':
+        document.title = "Catholic Glossary | Catholic Foundations";
+        break;
+      case 'doctrine':
+        document.title = "Doctrine Explorer | Catholic Foundations";
+        break;
+      case 'tlm':
+        document.title = "The Latin Mass | Catholic Foundations";
+        break;
+      case 'topic':
+        if (currentTopicIndex >= 0 && topics[currentTopicIndex]) {
+          document.title = `${topics[currentTopicIndex].title} | Catholic Foundations`;
+        }
+        break;
+      default:
+        document.title = "Catholic Foundations";
     }
-  }, [
-    currentTopicIndex,
-    showHome,
-    showEarlyChurch,
-    showScience,
-    showGlossary,
-    showDoctrine,
-    showTLM,
-  ]);
+  }, [currentTopicIndex, currentView]);
+
+  const handleViewChange = (view: View) => {
+    setCurrentView(view);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const goToTopic = (index: number) => {
-    setShowHome(false);
-    setShowEarlyChurch(false);
-    setShowScience(false);
-    setShowGlossary(false);
-    setShowDoctrine(false);
-    setShowTLM(false);
-
-    if (index === currentTopicIndex) {
+    if (index === currentTopicIndex && currentView === 'topic') {
       window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
 
-    setDirection(
-      index > currentTopicIndex ? "forward" : "backward",
-    );
+    setDirection(index > currentTopicIndex ? "forward" : "backward");
 
     if (index > currentTopicIndex) {
-      setCompletedTopics(
-        (prev) => new Set([...prev, currentTopicIndex]),
-      );
+      setCompletedTopics((prev) => new Set([...prev, currentTopicIndex]));
     }
 
     setCurrentTopicIndex(index);
+    setCurrentView('topic');
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const markCurrentTopicComplete = () => {
-    setCompletedTopics(
-      (prev) => new Set([...prev, currentTopicIndex]),
-    );
+    setCompletedTopics((prev) => new Set([...prev, currentTopicIndex]));
   };
 
   const nextTopic = () => {
@@ -460,93 +400,20 @@ function AppContent() {
     }
   };
 
-  const BlankTopic: React.ComponentType<
-    TopicComponentProps
-  > = () => null;
+  const BlankTopic: React.ComponentType<TopicComponentProps> = () => null;
 
   const CurrentTopicComponent =
-    currentTopicIndex >= 0
-      ? topics[currentTopicIndex].component
-      : BlankTopic;
+    currentTopicIndex >= 0 ? topics[currentTopicIndex].component : BlankTopic;
 
-  const handleEarlyChurchClick = () => {
-    setShowHome(false);
-    setShowScience(false);
-    setShowGlossary(false);
-    setShowDoctrine(false);
-    setShowTLM(false);
-    setShowEarlyChurch(true);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  const handleScienceClick = () => {
-    setShowHome(false);
-    setShowEarlyChurch(false);
-    setShowGlossary(false);
-    setShowDoctrine(false);
-    setShowTLM(false);
-    setShowScience(true);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  const handleGlossaryClick = () => {
-    setShowHome(false);
-    setShowEarlyChurch(false);
-    setShowScience(false);
-    setShowDoctrine(false);
-    setShowTLM(false);
-    setShowGlossary(true);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  const handleDoctrineClick = () => {
-    setShowHome(false);
-    setShowEarlyChurch(false);
-    setShowScience(false);
-    setShowGlossary(false);
-    setShowTLM(false);
-    setShowDoctrine(true);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  const handleTLMClick = () => {
-    setShowHome(false);
-    setShowEarlyChurch(false);
-    setShowScience(false);
-    setShowGlossary(false);
-    setShowDoctrine(false);
-    setShowTLM(true);
+  const startJourney = () => {
+    setCurrentTopicIndex(0);
+    setCurrentView('topic');
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handleBackToHome = () => {
     setCurrentTopicIndex(-1);
-    setShowHome(true);
-    setShowEarlyChurch(false);
-    setShowScience(false);
-    setShowGlossary(false);
-    setShowDoctrine(false);
-    setShowTLM(false);
-
-    localStorage.setItem(
-      "journey-progress",
-      JSON.stringify({
-        index: -1,
-        completed: Array.from(completedTopics),
-        earlyChurch: false,
-        science: false,
-        glossary: false,
-        doctrine: false,
-        tlm: false,
-      }),
-    );
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  const startJourney = () => {
-    setShowHome(false);
-    setCurrentTopicIndex(0);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    handleViewChange('home');
   };
 
   return (
@@ -555,35 +422,34 @@ function AppContent() {
         open={isSearchOpen}
         setOpen={setIsSearchOpen}
       />
+      
       <Navigation
         currentTopicIndex={currentTopicIndex}
         onNavigate={goToTopic}
         completedTopics={completedTopics}
-        onEarlyChurchClick={handleEarlyChurchClick}
-        onScienceClick={handleScienceClick}
-        onGlossaryClick={handleGlossaryClick}
+        
+        onEarlyChurchClick={() => handleViewChange('early-church')}
+        onScienceClick={() => handleViewChange('science')}
+        onGlossaryClick={() => handleViewChange('glossary')}
+        onDoctrineClick={() => handleViewChange('doctrine')}
+        onTLMClick={() => handleViewChange('tlm')}
+        onLogoClick={handleBackToHome}
         onSearchClick={() => setIsSearchOpen(true)}
-        onDoctrineClick={handleDoctrineClick}
-        showDoctrine={showDoctrine}
-        onTLMClick={handleTLMClick}
-        showTLM={showTLM}
+        
         onHoverStart={handleHoverStart}
         onHoverEnd={handleHoverEnd}
-        isSpecialPage={
-          showEarlyChurch ||
-          showScience ||
-          showHome ||
-          showGlossary ||
-          showDoctrine ||
-          showTLM
-        }
-        showEarlyChurch={showEarlyChurch}
-        showScience={showScience}
-        showGlossary={showGlossary}
-        onLogoClick={handleBackToHome}
+        
+        // Props for active state highlighting
+        isSpecialPage={currentView !== 'topic'}
+        showEarlyChurch={currentView === 'early-church'}
+        showScience={currentView === 'science'}
+        showGlossary={currentView === 'glossary'}
+        showDoctrine={currentView === 'doctrine'}
+        showTLM={currentView === 'tlm'}
       />
+
       <ProgressTracker
-        currentIndex={showHome ? -1 : currentTopicIndex}
+        currentIndex={currentView === 'home' ? -1 : currentTopicIndex}
         total={topics.length}
         completedTopics={completedTopics}
         isVisible={isProgressVisible}
@@ -591,119 +457,112 @@ function AppContent() {
         onHoverStart={handleHoverStart}
         onHoverEnd={handleHoverEnd}
       />
-      {showHome ? (
+
+      {/* Main Content Area */}
+      {currentView === 'home' && (
         <Home onStart={startJourney} />
-      ) : showEarlyChurch ||
-        showScience ||
-        showGlossary ||
-        showDoctrine ||
-        showTLM ? (
-        <>
-          {showEarlyChurch && <EarlyChurch />}
-          {showScience && <ScienceAndMiracles />}
-          {showGlossary && <GlossaryPage />}
-          {showDoctrine && <DoctrineExplorer />}
-          {showTLM && <TraditionalLatinMass onBack={handleBackToHome} />}
-        </>
-      ) : (
-        currentTopicIndex >= 0 && (
-          <AnimatePresence mode="wait">
-            {showTransition ? (
-              <TopicTransition
-                key="transition"
-                message={
-                  topics[currentTopicIndex].transition
-                    ? t(
-                        trans.topicTransitions[
-                          topics[currentTopicIndex]
-                            .id as keyof typeof trans.topicTransitions
-                        ],
-                        language,
-                      )
-                    : ""
+      )}
+
+      {currentView === 'early-church' && <EarlyChurch />}
+      {currentView === 'science' && <ScienceAndMiracles />}
+      {currentView === 'glossary' && <GlossaryPage />}
+      {currentView === 'doctrine' && <DoctrineExplorer />}
+      {currentView === 'tlm' && <TraditionalLatinMass />}
+
+      {currentView === 'topic' && currentTopicIndex >= 0 && (
+        <AnimatePresence mode="wait">
+          {showTransition ? (
+            <TopicTransition
+              key="transition"
+              message={
+                topics[currentTopicIndex].transition
+                  ? t(
+                      trans.topicTransitions[
+                        topics[currentTopicIndex]
+                          .id as keyof typeof trans.topicTransitions
+                      ],
+                      language,
+                    )
+                  : ""
+              }
+            />
+          ) : (
+            <motion.main
+              key={currentTopicIndex}
+              initial={{
+                opacity: 0,
+                x: direction === "forward" ? 100 : -100,
+              }}
+              animate={{
+                opacity: 1,
+                x: 0,
+                paddingTop: isProgressVisible
+                  ? isMobile
+                    ? "100px"
+                    : "200px"
+                  : "80px",
+              }}
+              exit={{
+                opacity: 0,
+                x: direction === "forward" ? -100 : 100,
+              }}
+              transition={{
+                opacity: { duration: 0.5 },
+                x: { duration: 0.5 },
+                paddingTop: {
+                  duration: 0.3,
+                  ease: "easeInOut",
+                },
+              }}
+            >
+              <Suspense
+                fallback={
+                  <div className="min-h-[50vh] flex items-center justify-center">
+                    Loading...
+                  </div>
                 }
-              />
-            ) : (
-              <motion.main
-                key={currentTopicIndex}
-                initial={{
-                  opacity: 0,
-                  x: direction === "forward" ? 100 : -100,
-                }}
-                animate={{
-                  opacity: 1,
-                  x: 0,
-                  paddingTop: isProgressVisible
-                    ? isMobile
-                      ? "100px"
-                      : "200px"
-                    : "80px",
-                }}
-                exit={{
-                  opacity: 0,
-                  x: direction === "forward" ? -100 : 100,
-                }}
-                transition={{
-                  opacity: { duration: 0.5 },
-                  x: { duration: 0.5 },
-                  paddingTop: {
-                    duration: 0.3,
-                    ease: "easeInOut",
-                  },
-                }}
               >
-                <Suspense
-                  fallback={
-                    <div className="min-h-[50vh] flex items-center justify-center">
-                      Loading...
-                    </div>
-                  }
-                >
-                  <CurrentTopicComponent
-                    onComplete={markCurrentTopicComplete}
-                    onScienceClick={handleScienceClick}
-                  />
-                </Suspense>
-                <div className="container mx-auto px-4 pb-16 max-w-4xl">
-                  <div className="flex flex-col md:flex-row items-center justify-between border-t border-gray-800 pt-8 gap-6 md:gap-4 mt-16">
-                    <div className="text-center text-gray-500 order-1 md:order-2 text-sm md:text-base">
-                      {t(trans.progress.topicOf, language)}{" "}
-                      {currentTopicIndex + 1}{" "}
-                      {t(trans.progress.of, language)}{" "}
-                      {topics.length}
-                    </div>
-
-
-                    
-                    <div className="flex w-full md:w-auto gap-4 order-2 md:contents">
-                      <Button
-                        variant="outline"
-                        size="lg"
-                        onClick={previousTopic}
-                        disabled={currentTopicIndex === 0}
-                        className="flex-1 md:flex-none md:order-1 border-gray-700 text-gray-300 hover:bg-gray-800 hover:text-white bg-transparent"
-                      >
-                        ← {t(trans.progress.previous, language)}
-                      </Button>
-                      <Button
-                        size="lg"
-                        onClick={nextTopic}
-                        className="flex-1 md:flex-none md:order-3 bg-white text-black hover:bg-gray-200 border-0"
-                      >
-                        {currentTopicIndex === topics.length - 1
-                          ? t(trans.progress.complete, language)
-                          : `${t(trans.progress.next, language)} →`}
-                      </Button>
-                    </div>
-
-                    
+                <CurrentTopicComponent
+                  onComplete={markCurrentTopicComplete}
+                  onScienceClick={() => handleViewChange('science')}
+                />
+              </Suspense>
+              <div className="container mx-auto px-4 pb-16 max-w-4xl">
+                <div className="flex flex-col md:flex-row items-center justify-between border-t border-gray-800 pt-8 gap-6 md:gap-4 mt-16">
+                  <div className="text-center text-gray-500 order-1 md:order-2 text-sm md:text-base">
+                    {t(trans.progress.topicOf, language)}{" "}
+                    {currentTopicIndex + 1}{" "}
+                    {t(trans.progress.of, language)}{" "}
+                    {topics.length}
+                  </div>
+                  
+                  <div className="flex w-full md:w-auto gap-4 order-2 md:contents">
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      onClick={previousTopic}
+                      disabled={currentTopicIndex === 0}
+                      className="flex-1 md:flex-none md:order-1 border-gray-700 text-gray-300 hover:bg-gray-800 hover:text-white bg-transparent"
+                    >
+                      ← {t(trans.progress.previous, language)}
+                    </Button>
+                    <Button
+                      size="lg"
+                      onClick={nextTopic}
+                      className="flex-1 md:flex-none md:order-3 bg-white text-black hover:bg-gray-200 border-0"
+                    >
+                      {currentTopicIndex === topics.length - 1
+                        ? t(trans.progress.complete, language)
+                        : `${t(trans.progress.next, language)} →`}
+                    </Button>
                   </div>
                 </div>
-              </motion.main>
-            )}
-          </AnimatePresence>
-        )
+              </div>
+            </motion.main>
+          )}
+        </AnimatePresence>
       )}
+      
       <Toaster />
     </div>
   );
