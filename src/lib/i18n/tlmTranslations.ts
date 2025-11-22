@@ -27,7 +27,7 @@ export const tlmTranslations = {
     description: {
       en: "The Traditional Latin Mass, often called the Extraordinary Form, stands as a timeless monument of faith that has sanctified countless generations of saints and martyrs for over a millennium and a half. This ancient liturgy acts as a living window into eternity, where every gesture, prayer, and moment of silence is designed to orient the soul directly toward God. It is not merely a relic of history but a vibrant spiritual treasure, distinguished by its profound reverence, contemplative silence, and an unwavering focus on the Holy Sacrifice of the Eucharist as the center of Christian life.",
       fr: "La Messe Traditionnelle en Latin, souvent appelée Forme Extraordinaire, se dresse comme un monument de foi intemporel qui a sanctifié d'innombrables générations de saints et de martyrs pendant plus d'un millénaire et demi. Cette ancienne liturgie agit comme une fenêtre vivante sur l'éternité, où chaque geste, prière et moment de silence est conçu pour orienter l'âme directement vers Dieu. Ce n'est pas simplement une relique de l'histoire mais un trésor spirituel vibrant, distingué par sa profonde révérence, son silence contemplatif et une concentration inébranlable sur le Saint Sacrifice de l'Eucharistie comme centre de la vie chrétienne.",
-      es: "La Misa Tradicional en Latín, a menudo llamada la Forma Extraordinaria, se erige como un monumento de fe atemporal que ha santificado a incontables generaciones de santos y mártires durante más de un milenio y medio. Esta antigua liturgia actúa como una ventana viva a la eternidad, donde cada gesto, oración y momento de silencio está diseñado para orientar el alma directamente hacia Dios. No es meramente una reliquia de la historia, sino un tesoro espiritual vibrante, distinguido por su profunda reverencia, silencio contemplativo y un enfoque inquebrantable en el Santo Sacrificio de la Eucaristía como el centro de la vida cristiana.",
+      es: "La Misa Tradicional en Latín, a menudo llamada la Forma Extraordinaria, se erige como un monumento de fe atemporal que ha santificado a incontables generaciones de santos y mártires durante más de un milenio y medio. Esta antigua liturgia actúa como una ventana viva a la eternidad, donde cada gesto, oración y momento de silencio está diseñado para orienter el alma directamente hacia Dios. No es meramente una reliquia de la historia, sino un tesoro espiritual vibrante, distinguido por su profunda reverencia, silencio contemplativo y un enfoque inquebrantable en el Santo Sacrificio de la Eucaristía como el centro de la vida cristiana.",
       de: "Die Traditionelle Lateinische Messe, oft als die Außerordentliche Form bezeichnet, steht als zeitloses Denkmal des Glaubens, das unzählige Generationen von Heiligen und Märtyrern über anderthalb Jahrtausende geheiligt hat. Diese alte Liturgie wirkt wie ein lebendiges Fenster in die Ewigkeit, wo jede Geste, jedes Gebet und jeder Moment der Stille darauf ausgelegt ist, die Seele direkt auf Gott auszurichten. Sie ist nicht bloß ein Relikt der Geschichte, sondern ein lebendiger spiritueller Schatz, der sich durch tiefe Ehrfurcht, kontemplative Stille und einen unerschütterlichen Fokus auf das Heilige Opfer der Eucharistie als Zentrum des christlichen Lebens auszeichnet.",
     },
   },
@@ -163,6 +163,39 @@ export const tlmTranslations = {
         es: "La verdadera participación no es solo una acción externa, sino un compromiso profundo del corazón. El silencio y el ritual nos invitan a ofrecer nuestras mentes, corazones y cuerpos en profunda unión con el sacrificio de Cristo.",
         de: "Wahre Teilnahme ist nicht nur äußere Handlung, sondern ein tiefes Engagement des Herzens. Die Stille und das Ritual laden uns ein, unseren Verstand, unser Herz und unseren Körper in tiefer Einheit mit dem Opfer Christi darzubringen.",
       },
+    },
+  },
+  // THIS IS THE MISSING PART
+  finder: {
+    title: {
+      en: "Attending Your First Mass",
+      fr: "Assister à Votre Première Messe",
+      es: "Asistir a Su Primera Misa",
+      de: "Der Besuch Ihrer Ersten Messe",
+    },
+    subtitle: {
+      en: "Practical tips for newcomers to help you feel at home in the ancient liturgy.",
+      fr: "Conseils pratiques pour les nouveaux venus afin de vous sentir chez vous dans la liturgie ancienne.",
+      es: "Consejos prácticos para recién llegados para ayudarle a sentirse en casa en la antigua liturgia.",
+      de: "Praktische Tipps für Neulinge, damit Sie sich in der alten Liturgie zu Hause fühlen.",
+    },
+    videoTitle: {
+      en: "Tips for Your First Latin Mass",
+      fr: "Conseils pour Votre Première Messe en Latin",
+      es: "Consejos para Su Primera Misa en Latín",
+      de: "Tipps für Ihre Erste Lateinische Messe",
+    },
+    mapTitle: {
+      en: "Find a Latin Mass Near You",
+      fr: "Trouver une Messe en Latin Près de Chez Vous",
+      es: "Encuentre una Misa en Latín Cerca de Usted",
+      de: "Finden Sie eine Lateinische Messe in Ihrer Nähe",
+    },
+    mapDesc: {
+      en: "Discover a community dedicated to preserving this sacred tradition. Use the global directory to find a parish in your area.",
+      fr: "Découvrez une communauté dédiée à la préservation de cette tradition sacrée. Utilisez l'annuaire mondial pour trouver une paroisse dans votre région.",
+      es: "Descubra una comunidad dedicada a preservar esta sagrada tradición. Utilice el directorio global para encontrar una parroquia en su zona.",
+      de: "Entdecken Sie eine Gemeinschaft, die sich der Bewahrung dieser heiligen Tradition widmet. Nutzen Sie das globale Verzeichnis, um eine Pfarrei in Ihrer Gegend zu finden.",
     },
   },
 };
