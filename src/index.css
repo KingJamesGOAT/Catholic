@@ -4661,12 +4661,6 @@
   }
 
   @media (width >= 40rem) {
-    .sm\:items-start {
-      align-items: flex-start;
-    }
-  }
-
-  @media (width >= 40rem) {
     .sm\:justify-end {
       justify-content: flex-end;
     }

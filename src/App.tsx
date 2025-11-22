@@ -24,30 +24,70 @@ import { Button } from "./components/ui/button";
 // OPTIMIZATION: Lazy load Top-Level Views to reduce initial bundle size
 // ------------------------------------------------------------------
 const Home = lazy(() => import("./components/Home"));
-const EarlyChurch = lazy(() => import("./components/EarlyChurch"));
-const ScienceAndMiracles = lazy(() => import("./components/ScienceAndMiracles"));
-const GlossaryPage = lazy(() => import("./components/GlossaryPage"));
-const DoctrineExplorer = lazy(() => import("./components/DoctrineExplorer"));
-const TraditionalLatinMass = lazy(() => import("./components/TraditionalLatinMass"));
+const EarlyChurch = lazy(
+  () => import("./components/EarlyChurch"),
+);
+const ScienceAndMiracles = lazy(
+  () => import("./components/ScienceAndMiracles"),
+);
+const GlossaryPage = lazy(
+  () => import("./components/GlossaryPage"),
+);
+const DoctrineExplorer = lazy(
+  () => import("./components/DoctrineExplorer"),
+);
+const TraditionalLatinMass = lazy(
+  () => import("./components/TraditionalLatinMass"),
+);
 
 // ------------------------------------------------------------------
 // Topic Components (Already Lazy Loaded)
 // ------------------------------------------------------------------
-const ExistenceOfGod = lazy(() => import("./components/Topics/ExistenceOfGod"));
-const ProofOfResurrection = lazy(() => import("./components/Topics/ProofOfResurrection"));
-const WhyBeCatholic = lazy(() => import("./components/Topics/WhyBeCatholic"));
-const YouLoseSoIWinFallacy = lazy(() => import("./components/Topics/YouLoseSoIWinFallacy"));
-const AuthorityDilemmaFallacy = lazy(() => import("./components/Topics/AuthorityDilemmaFallacy"));
-const WhyNotSolaScriptura = lazy(() => import("./components/Topics/WhyNotSolaScriptura"));
-const ScholasticApproaches = lazy(() => import("./components/Topics/ScholasticApproaches"));
-const SolaScripturaImpossible = lazy(() => import("./components/Topics/SolaScripturaImpossible"));
-const CanonDilemma = lazy(() => import("./components/Topics/CanonDilemma"));
-const SeventyThreeBooks = lazy(() => import("./components/Topics/SeventyThreeBooks"));
-const PeterFirstPope = lazy(() => import("./components/Topics/PeterFirstPope"));
-const Magisterium = lazy(() => import("./components/Topics/Magisterium"));
-const WhatIsWorship = lazy(() => import("./components/Topics/WhatIsWorship"));
-const MarianDogma = lazy(() => import("./components/Topics/MarianDogma"));
-const NoFilioque = lazy(() => import("./components/Topics/NoFilioque"));
+const ExistenceOfGod = lazy(
+  () => import("./components/Topics/ExistenceOfGod"),
+);
+const ProofOfResurrection = lazy(
+  () => import("./components/Topics/ProofOfResurrection"),
+);
+const WhyBeCatholic = lazy(
+  () => import("./components/Topics/WhyBeCatholic"),
+);
+const YouLoseSoIWinFallacy = lazy(
+  () => import("./components/Topics/YouLoseSoIWinFallacy"),
+);
+const AuthorityDilemmaFallacy = lazy(
+  () => import("./components/Topics/AuthorityDilemmaFallacy"),
+);
+const WhyNotSolaScriptura = lazy(
+  () => import("./components/Topics/WhyNotSolaScriptura"),
+);
+const ScholasticApproaches = lazy(
+  () => import("./components/Topics/ScholasticApproaches"),
+);
+const SolaScripturaImpossible = lazy(
+  () => import("./components/Topics/SolaScripturaImpossible"),
+);
+const CanonDilemma = lazy(
+  () => import("./components/Topics/CanonDilemma"),
+);
+const SeventyThreeBooks = lazy(
+  () => import("./components/Topics/SeventyThreeBooks"),
+);
+const PeterFirstPope = lazy(
+  () => import("./components/Topics/PeterFirstPope"),
+);
+const Magisterium = lazy(
+  () => import("./components/Topics/Magisterium"),
+);
+const WhatIsWorship = lazy(
+  () => import("./components/Topics/WhatIsWorship"),
+);
+const MarianDogma = lazy(
+  () => import("./components/Topics/MarianDogma"),
+);
+const NoFilioque = lazy(
+  () => import("./components/Topics/NoFilioque"),
+);
 
 type TopicComponentProps = {
   onComplete?: () => void;
@@ -184,24 +224,29 @@ export const topics: Topic[] = [
 ];
 
 // Define the possible views for the application
-type View = 
-  | 'home' 
-  | 'topic' 
-  | 'early-church' 
-  | 'science' 
-  | 'glossary' 
-  | 'doctrine' 
-  | 'tlm';
+type View =
+  | "home"
+  | "topic"
+  | "early-church"
+  | "science"
+  | "glossary"
+  | "doctrine"
+  | "tlm";
 
 function AppContent() {
   // Core State
-  const [currentView, setCurrentView] = useState<View>('home');
-  const [currentTopicIndex, setCurrentTopicIndex] = useState(-1);
-  
+  const [currentView, setCurrentView] = useState<View>("home");
+  const [currentTopicIndex, setCurrentTopicIndex] =
+    useState(-1);
+
   // Navigation & Progress State
   const [showTransition, setShowTransition] = useState(false);
-  const [direction, setDirection] = useState<"forward" | "backward">("forward");
-  const [completedTopics, setCompletedTopics] = useState<Set<number>>(new Set());
+  const [direction, setDirection] = useState<
+    "forward" | "backward"
+  >("forward");
+  const [completedTopics, setCompletedTopics] = useState<
+    Set<number>
+  >(new Set());
 
   // Command Palette State
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -210,7 +255,35 @@ function AppContent() {
   const trans = translations;
   const isMobile = useIsMobile();
   const [isHovering, setIsHovering] = useState(false);
-  const hoverTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const hoverTimeoutRef = useRef<ReturnType<
+    typeof setTimeout
+  > | null>(null);
+
+  // ------------------------------------------------------------------
+  // HELPER: Sync State with URL (Deep Linking)
+  // ------------------------------------------------------------------
+  const updateURL = (view: View, topicId?: string) => {
+    const params = new URLSearchParams();
+
+    // Only add params if we are NOT on home
+    if (view !== "home") {
+      params.set("view", view);
+    }
+
+    // If it's a topic, add the topic ID
+    if (view === "topic" && topicId) {
+      params.set("topic", topicId);
+    }
+
+    // Create the new query string
+    const queryString = params.toString();
+    const newUrl = queryString
+      ? `?${queryString}`
+      : window.location.pathname;
+
+    // Push to browser history without reloading
+    window.history.pushState({}, "", newUrl);
+  };
 
   const handleHoverStart = () => {
     if (hoverTimeoutRef.current) {
@@ -233,39 +306,79 @@ function AppContent() {
     };
   }, []);
 
-  const isProgressVisible = 
-    (currentView === 'home' || currentView === 'topic') && 
-    (isMobile || currentView === 'home' || isHovering);
+  const isProgressVisible =
+    (currentView === "home" || currentView === "topic") &&
+    (isMobile || currentView === "home" || isHovering);
 
-  // 1. Load Progress from Local Storage
+  // ------------------------------------------------------------------
+  // 1. INITIALIZATION: Load from URL (Priority) + Local Storage (Backup)
+  // ------------------------------------------------------------------
   useEffect(() => {
+    // A. Always load "Completed Topics" from Local Storage
     const saved = localStorage.getItem("journey-progress");
     if (saved) {
       const parsed = JSON.parse(saved);
-      const { index, completed, view, ...legacy } = parsed;
-
-      if (completed) {
-        setCompletedTopics(new Set(completed));
+      if (parsed.completed) {
+        setCompletedTopics(new Set(parsed.completed));
       }
+    }
 
-      if (view) {
-        setCurrentView(view as View);
-      } else {
-        if (legacy.earlyChurch) setCurrentView('early-church');
-        else if (legacy.science) setCurrentView('science');
-        else if (legacy.glossary) setCurrentView('glossary');
-        else if (legacy.doctrine) setCurrentView('doctrine');
-        else if (legacy.tlm) setCurrentView('tlm');
-        else if (index !== undefined && index !== -1) setCurrentView('topic');
-      }
+    // B. Check URL for Current View (Source of Truth)
+    const params = new URLSearchParams(window.location.search);
+    const viewParam = params.get("view") as View;
+    const topicParam = params.get("topic");
 
-      if (index !== undefined && index !== -1) {
-        setCurrentTopicIndex(index);
+    if (viewParam) {
+      // If URL has a view, use it immediately
+      setCurrentView(viewParam);
+
+      if (viewParam === "topic" && topicParam) {
+        // Find the index that matches the ID in the URL
+        const idx = topics.findIndex(
+          (t) => t.id === topicParam,
+        );
+        if (idx !== -1) {
+          setCurrentTopicIndex(idx);
+        }
       }
+    } else {
+      // If URL is empty (e.g. catholic.site), default to Home.
+      // We explicitly DO NOT load the 'view' from local storage here
+      // so that typing the main URL always gives you a fresh Home screen.
+      setCurrentView("home");
+      setCurrentTopicIndex(-1);
     }
   }, []);
 
-  // 2. Save Progress to Local Storage
+  // ------------------------------------------------------------------
+  // 2. LISTEN FOR BACK BUTTON (PopState)
+  // ------------------------------------------------------------------
+  useEffect(() => {
+    const handlePopState = () => {
+      const params = new URLSearchParams(
+        window.location.search,
+      );
+      const view = (params.get("view") as View) || "home";
+      const topicId = params.get("topic");
+
+      setCurrentView(view);
+
+      if (view === "topic" && topicId) {
+        const idx = topics.findIndex((t) => t.id === topicId);
+        if (idx !== -1) setCurrentTopicIndex(idx);
+      } else {
+        // If we went back to a non-topic page, reset index
+        setCurrentTopicIndex(-1);
+      }
+    };
+
+    window.addEventListener("popstate", handlePopState);
+    return () =>
+      window.removeEventListener("popstate", handlePopState);
+  }, []);
+
+  // 3. Save Progress to Local Storage
+  // (We still save it so 'completedTopics' works, but we don't rely on 'view' for loading anymore)
   useEffect(() => {
     localStorage.setItem(
       "journey-progress",
@@ -277,10 +390,10 @@ function AppContent() {
     );
   }, [currentTopicIndex, completedTopics, currentView]);
 
-  // 3. Keyboard Navigation
+  // 4. Keyboard Navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (currentView !== 'topic' || isSearchOpen) return;
+      if (currentView !== "topic" || isSearchOpen) return;
 
       if (e.key === "ArrowRight") {
         nextTopic();
@@ -290,32 +403,41 @@ function AppContent() {
     };
 
     window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
+    return () =>
+      window.removeEventListener("keydown", handleKeyDown);
   }, [currentTopicIndex, currentView, isSearchOpen]);
 
-  // 4. Dynamic Document Titles
+  // 5. Dynamic Document Titles
   useEffect(() => {
     switch (currentView) {
-      case 'home':
+      case "home":
         document.title = "Home | Catholic Foundations";
         break;
-      case 'early-church':
-        document.title = "Early Church Fathers | Catholic Foundations";
+      case "early-church":
+        document.title =
+          "Early Church Fathers | Catholic Foundations";
         break;
-      case 'science':
-        document.title = "Science & Miracles | Catholic Foundations";
+      case "science":
+        document.title =
+          "Science & Miracles | Catholic Foundations";
         break;
-      case 'glossary':
-        document.title = "Catholic Glossary | Catholic Foundations";
+      case "glossary":
+        document.title =
+          "Catholic Glossary | Catholic Foundations";
         break;
-      case 'doctrine':
-        document.title = "Doctrine Explorer | Catholic Foundations";
+      case "doctrine":
+        document.title =
+          "Doctrine Explorer | Catholic Foundations";
         break;
-      case 'tlm':
-        document.title = "The Latin Mass | Catholic Foundations";
+      case "tlm":
+        document.title =
+          "The Latin Mass | Catholic Foundations";
         break;
-      case 'topic':
-        if (currentTopicIndex >= 0 && topics[currentTopicIndex]) {
+      case "topic":
+        if (
+          currentTopicIndex >= 0 &&
+          topics[currentTopicIndex]
+        ) {
           document.title = `${topics[currentTopicIndex].title} | Catholic Foundations`;
         }
         break;
@@ -324,30 +446,50 @@ function AppContent() {
     }
   }, [currentTopicIndex, currentView]);
 
+  // ------------------------------------------------------------------
+  // UPDATED NAVIGATION HANDLERS (Now Update URL)
+  // ------------------------------------------------------------------
+
   const handleViewChange = (view: View) => {
     setCurrentView(view);
+    updateURL(view); // Sync URL
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const goToTopic = (index: number) => {
-    if (index === currentTopicIndex && currentView === 'topic') {
+    if (
+      index === currentTopicIndex &&
+      currentView === "topic"
+    ) {
       window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
 
-    setDirection(index > currentTopicIndex ? "forward" : "backward");
+    setDirection(
+      index > currentTopicIndex ? "forward" : "backward",
+    );
 
     if (index > currentTopicIndex) {
-      setCompletedTopics((prev) => new Set([...prev, currentTopicIndex]));
+      setCompletedTopics(
+        (prev) => new Set([...prev, currentTopicIndex]),
+      );
     }
 
     setCurrentTopicIndex(index);
-    setCurrentView('topic');
+    setCurrentView("topic");
+
+    // Sync URL using the Topic ID (more robust than index)
+    if (topics[index]) {
+      updateURL("topic", topics[index].id);
+    }
+
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const markCurrentTopicComplete = () => {
-    setCompletedTopics((prev) => new Set([...prev, currentTopicIndex]));
+    setCompletedTopics(
+      (prev) => new Set([...prev, currentTopicIndex]),
+    );
   };
 
   const nextTopic = () => {
@@ -371,20 +513,28 @@ function AppContent() {
     }
   };
 
-  const BlankTopic: React.ComponentType<TopicComponentProps> = () => null;
+  const BlankTopic: React.ComponentType<
+    TopicComponentProps
+  > = () => null;
 
   const CurrentTopicComponent =
-    currentTopicIndex >= 0 ? topics[currentTopicIndex].component : BlankTopic;
+    currentTopicIndex >= 0
+      ? topics[currentTopicIndex].component
+      : BlankTopic;
 
   const startJourney = () => {
     setCurrentTopicIndex(0);
-    setCurrentView('topic');
+    setCurrentView("topic");
+    // Sync URL for the first topic
+    if (topics[0]) {
+      updateURL("topic", topics[0].id);
+    }
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handleBackToHome = () => {
     setCurrentTopicIndex(-1);
-    handleViewChange('home');
+    handleViewChange("home"); // This will call updateURL('home') which clears params
   };
 
   return (
@@ -393,34 +543,35 @@ function AppContent() {
         open={isSearchOpen}
         setOpen={setIsSearchOpen}
       />
-      
+
       <Navigation
         currentTopicIndex={currentTopicIndex}
         onNavigate={goToTopic}
         completedTopics={completedTopics}
-        
-        onEarlyChurchClick={() => handleViewChange('early-church')}
-        onScienceClick={() => handleViewChange('science')}
-        onGlossaryClick={() => handleViewChange('glossary')}
-        onDoctrineClick={() => handleViewChange('doctrine')}
-        onTLMClick={() => handleViewChange('tlm')}
+        onEarlyChurchClick={() =>
+          handleViewChange("early-church")
+        }
+        onScienceClick={() => handleViewChange("science")}
+        onGlossaryClick={() => handleViewChange("glossary")}
+        onDoctrineClick={() => handleViewChange("doctrine")}
+        onTLMClick={() => handleViewChange("tlm")}
         onLogoClick={handleBackToHome}
         onSearchClick={() => setIsSearchOpen(true)}
-        
         onHoverStart={handleHoverStart}
         onHoverEnd={handleHoverEnd}
-        
         // Props for active state highlighting
-        isSpecialPage={currentView !== 'topic'}
-        showEarlyChurch={currentView === 'early-church'}
-        showScience={currentView === 'science'}
-        showGlossary={currentView === 'glossary'}
-        showDoctrine={currentView === 'doctrine'}
-        showTLM={currentView === 'tlm'}
+        isSpecialPage={currentView !== "topic"}
+        showEarlyChurch={currentView === "early-church"}
+        showScience={currentView === "science"}
+        showGlossary={currentView === "glossary"}
+        showDoctrine={currentView === "doctrine"}
+        showTLM={currentView === "tlm"}
       />
 
       <ProgressTracker
-        currentIndex={currentView === 'home' ? -1 : currentTopicIndex}
+        currentIndex={
+          currentView === "home" ? -1 : currentTopicIndex
+        }
         total={topics.length}
         completedTopics={completedTopics}
         isVisible={isProgressVisible}
@@ -430,19 +581,25 @@ function AppContent() {
       />
 
       {/* Main Content Area - WRAPPED IN SUSPENSE */}
-      <Suspense fallback={<div className="min-h-[80vh] flex items-center justify-center text-gray-400">Loading...</div>}>
-        {currentView === 'home' && (
+      <Suspense
+        fallback={
+          <div className="min-h-[80vh] flex items-center justify-center text-gray-400">
+            Loading...
+          </div>
+        }
+      >
+        {currentView === "home" && (
           <Home onStart={startJourney} />
         )}
 
-        {currentView === 'early-church' && <EarlyChurch />}
-        {currentView === 'science' && <ScienceAndMiracles />}
-        {currentView === 'glossary' && <GlossaryPage />}
-        {currentView === 'doctrine' && <DoctrineExplorer />}
-        {currentView === 'tlm' && <TraditionalLatinMass />}
+        {currentView === "early-church" && <EarlyChurch />}
+        {currentView === "science" && <ScienceAndMiracles />}
+        {currentView === "glossary" && <GlossaryPage />}
+        {currentView === "doctrine" && <DoctrineExplorer />}
+        {currentView === "tlm" && <TraditionalLatinMass />}
       </Suspense>
 
-      {currentView === 'topic' && currentTopicIndex >= 0 && (
+      {currentView === "topic" && currentTopicIndex >= 0 && (
         <AnimatePresence mode="wait">
           {showTransition ? (
             <TopicTransition
@@ -497,7 +654,9 @@ function AppContent() {
               >
                 <CurrentTopicComponent
                   onComplete={markCurrentTopicComplete}
-                  onScienceClick={() => handleViewChange('science')}
+                  onScienceClick={() =>
+                    handleViewChange("science")
+                  }
                 />
               </Suspense>
               <div className="container mx-auto px-4 pb-16 max-w-4xl">
@@ -508,7 +667,7 @@ function AppContent() {
                     {t(trans.progress.of, language)}{" "}
                     {topics.length}
                   </div>
-                  
+
                   <div className="flex w-full md:w-auto gap-4 order-2 md:contents">
                     <Button
                       variant="outline"
@@ -535,7 +694,7 @@ function AppContent() {
           )}
         </AnimatePresence>
       )}
-      
+
       <Toaster />
     </div>
   );
