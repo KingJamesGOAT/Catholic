@@ -948,6 +948,24 @@ export const glossaryTerms: GlossaryTerm[] = [
       de: "Das Korpus von Gesetzen und Vorschriften, das von der kirchlichen Autorität (Kirchenleitung) für die Leitung der katholischen Kirche erlassen wurde.",
     },
   },
+
+  {
+  id: "legate",
+  term: {
+    en: "Legate",
+    fr: "Légat",
+    es: "Legado",
+    de: "Legat",
+  },
+  definition: {
+    en: "An official representative or emissary, often sent on a mission to act on behalf of a higher authority.",
+    fr: "Un représentant ou émissaire officiel, souvent envoyé en mission pour agir au nom d'une autorité supérieure.",
+    es: "Un representante o emisario oficial, a menudo enviado en misión para actuar en nombre de una autoridad superior.",
+    de: "Ein offizieller Vertreter oder Gesandter, der oft auf eine Mission geschickt wird, um im Namen einer höheren Autorität zu handeln.",
+  },
+},
+
+  
   {
     id: "canonization",
     term: {
