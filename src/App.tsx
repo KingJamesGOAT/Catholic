@@ -5,6 +5,7 @@ import {
   lazy,
   Suspense,
 } from "react";
+import AboutOverlay from "./components/AboutOverlay";
 import { motion, AnimatePresence } from "framer-motion";
 import Navigation from "./components/Journey/Navigation";
 import ProgressTracker from "./components/Journey/ProgressTracker";
@@ -694,7 +695,7 @@ function AppContent() {
           )}
         </AnimatePresence>
       )}
-
+      <AboutOverlay />
       <Toaster />
     </div>
   );
