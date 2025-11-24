@@ -252,6 +252,24 @@ export default function MarianDogma({ onScienceClick }: TopicComponentProps) {
         </div>
       </section>
 
+
+    {/* NEW SECTION: Rosary Video */}
+      <section className="mb-16">
+        <h3 className="text-xl font-bold text-white mb-4">{t(trans.rosaryVideoTitle, language)}</h3>
+        <p className="text-gray-300 mb-6">
+          {t(trans.rosaryVideoDesc, language)}
+        </p>
+        <div className="aspect-video rounded-xl overflow-hidden border border-gray-800 shadow-2xl">
+            <iframe
+            className="w-full h-full"
+            src="https://www.youtube.com/embed/Hc-uFyfpGG4"
+            title="Does the Bible CONDEMN the Rosary?"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            />
+        </div>
+      </section>
+
       {/* Conclusion */}
       <div className="bg-gradient-to-br from-gray-900 to-blue-900/20 border border-gray-800 rounded-xl p-8 text-center mb-12">
         <h3 className="text-2xl font-bold text-white mb-4">{t(trans.conclusionTitle, language)}</h3>

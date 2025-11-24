@@ -7547,6 +7547,20 @@ export const translations = {
       de: "Verwurzelt im davidischen Königreich, wo die Mutter des Königs Königin (Gebirah) war. Bestätigt in Ad Caeli Reginam.",
     },
 
+    // --- NEW SECTION: Rosary Video ---
+    rosaryVideoTitle: {
+      en: "Is the Rosary Biblical?",
+      fr: "Le Rosaire est-il Biblique ?",
+      es: "¿Es Bíblico el Rosario?",
+      de: "Ist der Rosenkranz biblisch?",
+    },
+    rosaryVideoDesc: {
+      en: "An in-depth look at objections to the Rosary, answering claims that it is unbiblical, repetitive, or idolatrous.",
+      fr: "Un regard approfondi sur les objections au Rosaire, répondant aux affirmations selon lesquelles il est non biblique, répétitif ou idolâtre.",
+      es: "Una mirada profunda a las objeciones al Rosario, respondiendo a las afirmaciones de que es no bíblico, repetitivo o idólatra.",
+      de: "Ein eingehender Blick auf Einwände gegen den Rosenkranz, der auf Behauptungen eingeht, er sei unbiblisch, repetitiv oder götzendienerisch.",
+    },
+
     // ... inside marianDogma object ...
     videoObjectionsTitle: {
       en: "Addressing Every Objection",
