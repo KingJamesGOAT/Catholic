@@ -2539,16 +2539,17 @@ export const translations = {
 
     // Introduction
     introPara1: {
-      en: 'Why be Catholic and not just "Christian"? It\'s a fair question—one that arises from both genuine curiosity and theological challenge. For many, Catholicism appears as just one denomination among many. But Catholics claim something radically different: that Catholicism is not a denomination, but the Church founded by Jesus Christ, in full continuity with the apostles and the earliest Christians.',
-      fr: "Pourquoi être catholique et pas simplement « chrétien » ? C'est une question légitime — qui naît à la fois d'une curiosité authentique et d'un défi théologique. Pour beaucoup, le catholicisme apparaît comme une simple dénomination parmi d'autres. Mais les catholiques revendiquent quelque chose de radicalement différent : que le catholicisme n'est pas une dénomination, mais l'Église fondée par Jésus-Christ, en pleine continuité avec les apôtres et les premiers chrétiens.",
-      es: '¿Por qué ser católico y no solo "cristiano"? Es una pregunta justa—una que surge tanto de la curiosidad genuina como del desafío teológico. Para muchos, el catolicismo parece ser solo una denominación entre muchas. Pero los católicos reclaman algo radicalmente diferente: que el catolicismo no es una denominación, sino la Iglesia fundada por Jesucristo, en plena continuidad con los apóstoles y los primeros cristianos.',
-      de: 'Warum katholisch sein und nicht nur „christlich"? Das ist eine berechtigte Frage — eine, die sowohl aus echter Neugier als auch aus theologischer Herausforderung entsteht. Für viele erscheint der Katholizismus als nur eine Konfession unter vielen. Aber Katholiken behaupten etwas radikal Anderes: dass der Katholizismus keine Konfession ist, sondern die von Jesus Christus gegründete Kirche, in voller Kontinuität mit den Aposteln und den frühesten Christen.',
+      en: 'Why be Catholic instead of simply calling yourself "Christian"? It is an honest question that comes from real curiosity and from theological doubts many people have. To a lot of people, Catholicism looks like just one denomination among many. But Catholics make a very different claim: that the Catholic Church is not a denomination at all, but the Church founded by Jesus Christ, continuing without interruption from the apostles and the first Christians.',
+      fr: "Pourquoi être catholique plutôt que simplement « chrétien » ? C'est une question légitime qui vient autant d'une vraie curiosité que d'un questionnement théologique. Pour beaucoup, le catholicisme semble n'être qu'une dénomination parmi d'autres. Pourtant, les catholiques affirment quelque chose de tout autre : que le catholicisme n'est pas une dénomination, mais l'Église fondée par Jésus-Christ, en continuité réelle avec les apôtres et les premiers chrétiens.",
+      es: "¿Por qué ser católico y no simplemente “cristiano”? Es una pregunta válida que nace tanto de la curiosidad sincera como de un desafío teológico. Para muchos, el catolicismo parece solo una denominación más. Sin embargo, los católicos afirman algo muy distinto: que el catolicismo no es una denominación, sino la Iglesia fundada por Jesucristo, en continuidad real con los apóstoles y los primeros cristianos.",
+      de: "Warum sollte man katholisch sein und sich nicht einfach „christlich“ nennen? Diese Frage ist völlig berechtigt und entsteht aus echter Neugier und auch aus theologischen Überlegungen. Für viele wirkt der Katholizismus wie nur eine weitere Konfession. Doch Katholiken behaupten etwas ganz anderes: dass der Katholizismus keine Konfession ist, sondern die Kirche, die von Jesus Christus gegründet wurde und seit den Aposteln ununterbrochen weiterbesteht.",
     },
+
     introPara2: {
-      en: "This exploration examines the biblical, historical, rational, and spiritual case for Catholicism—not as a break from Christianity, but as its fullness.",
-      fr: "Cette exploration examine le cas biblique, historique, rationnel et spirituel du catholicisme — non pas comme une rupture avec le christianisme, mais comme sa plénitude.",
-      es: "Esta exploración examina el caso bíblico, histórico, racional y espiritual del catolicismo—no como una ruptura del cristianismo, sino como su plenitud.",
-      de: "Diese Untersuchung prüft den biblischen, historischen, rationalen und spirituellen Fall für den Katholizismus — nicht als Bruch mit dem Christentum, sondern als dessen Fülle.",
+      en: "This section explores the biblical, historical, rational, and spiritual reasons for Catholicism, not as a departure from Christianity but as its complete expression.",
+      fr: "Cette partie examine les raisons bibliques, historiques, rationnelles et spirituelles du catholicisme, non pas comme une rupture avec le christianisme mais comme son expression la plus complète.",
+      es: "Esta parte analiza los fundamentos bíblicos, históricos, racionales y espirituales del catolicismo, no como una separación del cristianismo sino como su forma más plena.",
+      de: "Dieser Abschnitt beleuchtet die biblischen, historischen, rationalen und spirituellen Gründe für den Katholizismus, nicht als Abkehr vom Christentum, sondern als dessen volle Entfaltung.",
     },
 
     // Key Points
@@ -2636,11 +2637,15 @@ export const translations = {
         de: '1. Ein Falsches Dilemma: „Katholisch oder Christlich?"',
       },
       para1: {
-        en: 'The question "Why be Catholic instead of Christian?" presumes a category error. Catholicism isn\'t an alternative to Christianity—it is Christianity, historically and theologically. Saying "I\'m Christian, not Catholic" is like saying, "I\'m a fruit, not an apple," when in reality, Catholicism claims to be the whole tree—not a branch.',
-        fr: "La question « Pourquoi être catholique au lieu de chrétien ? » présume une erreur de catégorie. Le catholicisme n'est pas une alternative au christianisme — il est le christianisme, historiquement et théologiquement. Dire « Je suis chrétien, pas catholique » revient à dire « Je suis un fruit, pas une pomme », alors qu'en réalité, le catholicisme prétend être l'arbre entier — pas une branche.",
-        es: 'La pregunta "¿Por qué ser católico en lugar de cristiano?" presume un error de categoría. El catolicismo no es una alternativa al cristianismo—es el cristianismo, histórica y teológicamente. Decir "Soy cristiano, no católico" es como decir "Soy una fruta, no una manzana", cuando en realidad, el catolicismo afirma ser el árbol entero—no una rama.',
-        de: 'Die Frage „Warum katholisch statt christlich sein?" setzt einen Kategoriefehler voraus. Der Katholizismus ist keine Alternative zum Christentum — er ist das Christentum, historisch und theologisch. „Ich bin christlich, nicht katholisch" zu sagen, ist wie zu sagen: „Ich bin eine Frucht, keine Apfel", während der Katholizismus in Wirklichkeit behauptet, der ganze Baum zu sein — kein Zweig.',
+        en: 'The question "Why be Catholic instead of Christian?" starts from a misunderstanding. Catholicism is not an alternative to Christianity; it is Christianity in its historical and theological sense. Saying "I am Christian, not Catholic" is similar to saying "I am a fruit, not an apple," even though Catholicism claims to be the entire tree, not just one of its branches.',
+
+        fr: "La question « Pourquoi être catholique plutôt que chrétien ? » part d'un malentendu. Le catholicisme n'est pas une alternative au christianisme, il est le christianisme dans son sens historique et théologique. Dire « Je suis chrétien, pas catholique » revient à dire « Je suis un fruit, pas une pomme », alors que le catholicisme affirme être l'arbre entier et non une simple branche.",
+
+        es: 'La pregunta "¿Por qué ser católico en lugar de cristiano?" nace de un malentendido. El catolicismo no es una alternativa al cristianismo; es el cristianismo en su sentido histórico y teológico. Decir "Soy cristiano, no católico" es como decir "Soy una fruta, no una manzana", aunque el catolicismo sostiene que es el árbol completo y no solo una de sus ramas.',
+
+        de: 'Die Frage „Warum katholisch statt christlich sein?" beruht auf einem Missverständnis. Der Katholizismus ist keine Alternative zum Christentum; er ist das Christentum in seinem historischen und theologischen Sinn. Zu sagen „Ich bin christlich, nicht katholisch" ist etwa so, als würde man sagen „Ich bin eine Frucht, keine Apfel", obwohl der Katholizismus für sich beansprucht, der ganze Baum zu sein und nicht nur ein einzelner Zweig.',
       },
+
       holdsworthQuote: {
         en: "Catholicism is the whole of which all the others, to whatever degree they are true, portray some aspect.",
         fr: "Le catholicisme est le tout dont tous les autres, dans la mesure où ils sont vrais, représentent un aspect.",
@@ -2658,11 +2663,15 @@ export const translations = {
         de: "2. Der Katholizismus Beansprucht, die Fülle des Glaubens zu Sein",
       },
       para1: {
-        en: "Catholics believe that Jesus didn't simply leave us a book or a general spiritual community. He founded a visible, unified, hierarchical Church—with authority passed through the apostles to their successors (bishops). This Church is:",
-        fr: "Les catholiques croient que Jésus ne nous a pas simplement laissé un livre ou une communauté spirituelle générale. Il a fondé une Église visible, unifiée et hiérarchique — avec une autorité transmise par les apôtres à leurs successeurs (évêques). Cette Église est :",
-        es: "Los católicos creen que Jesús no simplemente nos dejó un libro o una comunidad espiritual general. Fundó una Iglesia visible, unificada y jerárquica—con autoridad transmitida a través de los apóstoles a sus sucesores (obispos). Esta Iglesia es:",
-        de: "Katholiken glauben, dass Jesus uns nicht einfach ein Buch oder eine allgemeine spirituelle Gemeinschaft hinterlassen hat. Er gründete eine sichtbare, vereinte, hierarchische Kirche — mit Autorität, die durch die Apostel an ihre Nachfolger (Bischöfe) weitergegeben wurde. Diese Kirche ist:",
+        en: "Catholics believe that Jesus did not simply leave behind a book or a vague spiritual community. He established a visible, united, and structured Church, with authority handed down from the apostles to their successors, the bishops. This Church is:",
+
+        fr: "Les catholiques croient que Jésus ne nous a pas simplement laissé un livre ou une communauté spirituelle vague. Il a fondé une Église visible, unifiée et structurée, avec une autorité transmise par les apôtres à leurs successeurs, les évêques. Cette Église est :",
+
+        es: "Los católicos creen que Jesús no solo dejó un libro o una comunidad espiritual vaga. Él estableció una Iglesia visible, unida y estructurada, con autoridad transmitida de los apóstoles a sus sucesores, los obispos. Esta Iglesia es:",
+
+        de: "Katholiken glauben, dass Jesus uns nicht einfach ein Buch oder eine lose spirituelle Gemeinschaft hinterlassen hat. Er gründete eine sichtbare, geeinte und klar aufgebaute Kirche, deren Autorität von den Aposteln an ihre Nachfolger, die Bischöfe, weitergegeben wurde. Diese Kirche ist:",
       },
+
       one: {
         en: "One",
         fr: "Une",
@@ -2706,10 +2715,13 @@ export const translations = {
         de: "(verwurzelt in apostolischer Sukzession)",
       },
       para2: {
-        en: "This is not self-referential circular logic—it's a claim tested by Scripture, history, and logic.",
-        fr: "Ce n'est pas une logique circulaire autoréférentielle — c'est une affirmation testée par l'Écriture, l'histoire et la logique.",
-        es: "Esto no es una lógica circular autorreferencial—es una afirmación probada por la Escritura, la historia y la lógica.",
-        de: "Dies ist keine selbstreferentielle Zirkellogik — es ist eine Behauptung, die durch die Schrift, Geschichte und Logik geprüft wird.",
+        en: "This is not circular or self-referential reasoning. It is a claim examined through Scripture, history, and logic.",
+
+        fr: "Ce n'est pas une logique circulaire ou autoréférentielle. C'est une affirmation examinée à la lumière de l'Écriture, de l'histoire et de la raison.",
+
+        es: "Esto no es una forma de razonamiento circular o autorreferencial. Es una afirmación examinada a través de la Escritura, la historia y la lógica.",
+
+        de: "Das ist keine zirkuläre oder selbstbezogene Argumentation. Es ist eine Aussage, die anhand der Schrift, der Geschichte und der Logik geprüft wird.",
       },
     },
 
@@ -2721,53 +2733,61 @@ export const translations = {
         es: "3. ¿Solo la Escritura? Un Fundamento Defectuoso",
         de: "3. Allein die Schrift? Ein Fehlerhaftes Fundament",
       },
+
       para1: {
-        en: "Many objections to Catholicism come from the assumption of Sola Scriptura—that the Bible alone is the Christian's only authority. But:",
-        fr: "De nombreuses objections au catholicisme proviennent de la supposition de la Sola Scriptura — que la Bible seule est la seule autorité du chrétien. Mais :",
-        es: "Muchas objeciones al catolicismo provienen de la suposición de Sola Scriptura—que solo la Biblia es la única autoridad del cristiano. Pero:",
-        de: "Viele Einwände gegen den Katholizismus stammen von der Annahme der Sola Scriptura — dass die Bibel allein die einzige Autorität des Christen ist. Aber:",
+        en: "Many objections to Catholicism start with the assumption of Sola Scriptura, the idea that the Bible alone is the Christian's authority. But:",
+        fr: "De nombreuses objections au catholicisme reposent sur l'idée de la Sola Scriptura, selon laquelle la Bible seule serait l'unique autorité du chrétien. Mais :",
+        es: "Muchas objeciones al catolicismo parten de la idea de Sola Scriptura, que sostiene que solo la Biblia es la única autoridad del cristiano. Pero:",
+        de: "Viele Einwände gegen den Katholizismus beginnen mit der Annahme der Sola Scriptura, also der Vorstellung, dass allein die Bibel die einzige Autorität des Christen sei. Aber:",
       },
+
       point1: {
         en: "The Bible never teaches Sola Scriptura.",
         fr: "La Bible n'enseigne jamais la Sola Scriptura.",
         es: "La Biblia nunca enseña Sola Scriptura.",
-        de: "Die Bibel lehrt nie Sola Scriptura.",
+        de: "Die Bibel lehrt die Sola Scriptura nicht.",
       },
+
       point2: {
-        en: "The Bible doesn't define its own canon—that list came from Church councils (Rome 382, Hippo 393, Carthage 397).",
-        fr: "La Bible ne définit pas son propre canon — cette liste provient des conciles de l'Église (Rome 382, Hippone 393, Carthage 397).",
-        es: "La Biblia no define su propio canon—esa lista vino de los concilios de la Iglesia (Roma 382, Hipona 393, Cartago 397).",
-        de: "Die Bibel definiert ihren eigenen Kanon nicht — diese Liste stammte von Kirchenkonzilen (Rom 382, Hippo 393, Karthago 397).",
+        en: "The Bible does not define its own canon. That list came from Church councils (Rome 382, Hippo 393, Carthage 397).",
+        fr: "La Bible ne définit pas son propre canon. Cette liste vient des conciles de l'Église (Rome 382, Hippone 393, Carthage 397).",
+        es: "La Biblia no define su propio canon. Esa lista provino de los concilios de la Iglesia (Roma 382, Hipona 393, Cartago 397).",
+        de: "Die Bibel legt ihren eigenen Kanon nicht fest. Diese Liste stammt von Kirchenkonzilen (Rom 382, Hippo 393, Karthago 397).",
       },
+
       point3: {
-        en: "Scripture commands oral Tradition:",
-        fr: "L'Écriture commande la Tradition orale :",
-        es: "La Escritura ordena la Tradición oral:",
-        de: "Die Schrift befiehlt mündliche Tradition:",
+        en: "Scripture commands the preservation of oral Tradition:",
+        fr: "L'Écriture demande de garder la Tradition orale :",
+        es: "La Escritura manda conservar la Tradición oral:",
+        de: "Die Schrift fordert die Bewahrung der mündlichen Tradition:",
       },
+
       thessaloniansQuote: {
-        en: "Hold to the traditions you were taught by us, either by word of mouth or by letter.",
-        fr: "Tenez fermement les traditions que vous avez apprises de nous, soit par la parole, soit par notre lettre.",
-        es: "Mantengan las tradiciones que les fueron enseñadas por nosotros, ya sea de palabra o por carta.",
-        de: "Haltet fest an den Überlieferungen, die ihr von uns gelernt habt, sei es durch Wort oder durch Brief.",
+        en: "Hold to the traditions you were taught by us, whether by spoken word or by letter.",
+        fr: "Tenez fermement les traditions que vous avez reçues de nous, soit par la parole, soit par lettre.",
+        es: "Mantengan las tradiciones que les enseñamos, ya sea de palabra o por carta.",
+        de: "Haltet fest an den Überlieferungen, die ihr von uns gelernt habt, sei es durch das gesprochene Wort oder durch einen Brief.",
       },
+
       thessaloniansSource: {
         en: "2 Thessalonians 2:15",
         fr: "2 Thessaloniciens 2:15",
         es: "2 Tesalonicenses 2:15",
         de: "2 Thessalonicher 2:15",
       },
+
       para2: {
-        en: "Without the Catholic Church, you wouldn't have the Bible as you know it today.",
+        en: "Without the Catholic Church, you would not have the Bible as it exists today.",
         fr: "Sans l'Église catholique, vous n'auriez pas la Bible telle que vous la connaissez aujourd'hui.",
-        es: "Sin la Iglesia Católica, no tendrías la Biblia como la conoces hoy.",
-        de: "Ohne die katholische Kirche hätten Sie die Bibel nicht so, wie Sie sie heute kennen.",
+        es: "Sin la Iglesia Católica, no tendrías la Biblia tal como la conoces hoy.",
+        de: "Ohne die katholische Kirche gäbe es die Bibel nicht in der Form, wie Sie sie heute kennen.",
       },
+
       holdsworthQuote2: {
-        en: "There's a middleman between Protestants and their 'highest authority'—the Catholic Church.",
-        fr: "Il y a un intermédiaire entre les protestants et leur « autorité suprême » — l'Église catholique.",
-        es: "Hay un intermediario entre los protestantes y su 'máxima autoridad'—la Iglesia Católica.",
-        de: 'Es gibt einen Mittelsmann zwischen Protestanten und ihrer „höchsten Autorität" — die katholische Kirche.',
+        en: "Protestants still rely on a middleman between themselves and what they call their highest authority: the Catholic Church.",
+        fr: "Il existe un intermédiaire entre les protestants et ce qu'ils considèrent comme leur autorité suprême : l'Église catholique.",
+        es: "Entre los protestantes y lo que llaman su máxima autoridad hay un intermediario: la Iglesia Católica.",
+        de: "Zwischen Protestanten und dem, was sie ihre höchste Autorität nennen, steht dennoch ein Mittelsmann: die katholische Kirche.",
       },
     },
 
@@ -2886,10 +2906,10 @@ export const translations = {
         de: "Schrift (geschriebenes apostolisches Zeugnis)",
       },
       para4: {
-        en: "These are not three separate authorities—they are one united source: the deposit of faith.",
-        fr: "Ce ne sont pas trois autorités séparées — elles sont une source unie : le dépôt de la foi.",
-        es: "Estas no son tres autoridades separadas—son una fuente unida: el depósito de la fe.",
-        de: "Dies sind nicht drei separate Autoritäten — sie sind eine vereinte Quelle: das Glaubensgut.",
+        en: "These are not three different authorities. They form one unified source: the deposit of faith.",
+        fr: "Ce ne sont pas trois autorités distinctes. Elles forment une seule source unifiée : le dépôt de la foi.",
+        es: "No son tres autoridades distintas. Forman una sola fuente unificada: el depósito de la fe.",
+        de: "Das sind nicht drei getrennte Autoritäten. Sie bilden eine einzige gemeinsame Quelle: das Glaubensgut.",
       },
     },
 
@@ -2931,17 +2951,19 @@ export const translations = {
         es: "Juan 20:23",
         de: "Johannes 20:23",
       },
+
       para2: {
-        en: "Catholics believe this apostolic authority didn't die out—it was passed down through bishops, with Peter's successor in Rome (the Pope) having a unique role as the \"rock\" (Matthew 16:18).",
-        fr: "Les catholiques croient que cette autorité apostolique ne s'est pas éteinte — elle a été transmise par les évêques, avec le successeur de Pierre à Rome (le Pape) ayant un rôle unique comme le « roc » (Matthieu 16:18).",
-        es: 'Los católicos creen que esta autoridad apostólica no murió—fue transmitida a través de los obispos, con el sucesor de Pedro en Roma (el Papa) teniendo un papel único como la "roca" (Mateo 16:18).',
-        de: "Katholiken glauben, dass diese apostolische Autorität nicht ausgestorben ist — sie wurde durch Bischöfe weitergegeben, wobei Petrus' Nachfolger in Rom (der Papst) eine einzigartige Rolle als der „Fels\" hat (Matthäus 16:18).",
+        en: 'Catholics believe this apostolic authority did not disappear. It was passed down through the bishops, with Peter\'s successor in Rome (the Pope) holding a unique role as the "rock" (Matthew 16:18).',
+        fr: "Les catholiques croient que cette autorité apostolique n'a pas disparu. Elle a été transmise par les évêques, le successeur de Pierre à Rome (le Pape) ayant un rôle unique comme le « roc » (Matthieu 16:18).",
+        es: 'Los católicos creen que esta autoridad apostólica no se perdió. Fue transmitida a través de los obispos, con el sucesor de Pedro en Roma (el Papa) desempeñando un papel único como la "roca" (Mateo 16:18).',
+        de: "Katholiken glauben, dass diese apostolische Autorität nicht verschwunden ist. Sie wurde durch die Bischöfe weitergegeben, wobei Petrus' Nachfolger in Rom (der Papst) eine einzigartige Rolle als der „Fels\" innehat (Matthäus 16:18).",
       },
+
       para3: {
-        en: "No Protestant denomination today can trace its ordination lineage to the apostles. The Catholic, Orthodox, and Eastern Churches can.",
+        en: "No Protestant denomination today can trace its ordination lineage back to the apostles. The Catholic, Orthodox, and Eastern Churches can.",
         fr: "Aucune dénomination protestante aujourd'hui ne peut retracer sa lignée d'ordination jusqu'aux apôtres. Les Églises catholique, orthodoxe et orientales le peuvent.",
-        es: "Ninguna denominación protestante hoy puede rastrear su linaje de ordenación hasta los apóstoles. Las Iglesias Católica, Ortodoxa y Oriental pueden.",
-        de: "Keine protestantische Konfession kann heute ihre Ordinationslinie zu den Aposteln zurückverfolgen. Die katholischen, orthodoxen und östlichen Kirchen können es.",
+        es: "Ninguna denominación protestante hoy puede rastrear su linaje de ordenación hasta los apóstoles. Las Iglesias Católica, Ortodoxa y Oriental sí pueden.",
+        de: "Keine protestantische Konfession kann heute ihre Ordinationslinie bis zu den Aposteln zurückverfolgen. Die katholische, orthodoxe und östliche Kirche können das.",
       },
     },
 
@@ -2949,16 +2971,17 @@ export const translations = {
     section7: {
       heading: {
         en: "7. The Church That Gave You the Bible",
-        fr: "7. L'Église Qui Vous a Donné la Bible",
-        es: "7. La Iglesia Que Te Dio la Biblia",
-        de: "7. Die Kirche, die Ihnen die Bibel Gab",
+        fr: "7. L'Église qui vous a donné la Bible",
+        es: "7. La Iglesia que te dio la Biblia",
+        de: "7. Die Kirche, die Ihnen die Bibel gab",
       },
       para1: {
-        en: "The early Church fathers—those who preserved the faith, debated heresies, and formed the canon—were Catholic in their belief and practice. To name a few:",
-        fr: "Les premiers Pères de l'Église — ceux qui ont préservé la foi, débattu des hérésies et formé le canon — étaient catholiques dans leur croyance et leur pratique. Pour n'en nommer que quelques-uns :",
-        es: "Los primeros padres de la Iglesia—aquellos que preservaron la fe, debatieron herejías y formaron el canon—eran católicos en su creencia y práctica. Por nombrar algunos:",
-        de: "Die frühen Kirchenväter — diejenigen, die den Glauben bewahrten, Häresien debattierten und den Kanon bildeten — waren katholisch in ihrem Glauben und ihrer Praxis. Um nur einige zu nennen:",
+        en: "The early Church fathers, who preserved the faith, debated heresies, and helped form the canon, were Catholic in their belief and practice. To name a few:",
+        fr: "Les premiers Pères de l'Église, qui ont préservé la foi, débattu des hérésies et contribué à former le canon, étaient catholiques dans leur croyance et leur pratique. Pour n'en nommer que quelques-uns :",
+        es: "Los primeros padres de la Iglesia, que preservaron la fe, debatieron herejías y ayudaron a formar el canon, eran católicos en su creencia y práctica. Por nombrar algunos:",
+        de: "Die frühen Kirchenväter, die den Glauben bewahrten, Häresien debattierten und am Kanon mitarbeiteten, waren in ihrem Glauben und ihrer Praxis katholisch. Um nur einige zu nennen:",
       },
+
       ignatius: {
         en: "Ignatius of Antioch (c. 110 AD): taught the Eucharist is the flesh of Christ and obedience to bishops is necessary",
         fr: "Ignace d'Antioche (c. 110 ap. J.-C.) : enseignait que l'Eucharistie est la chair du Christ et que l'obéissance aux évêques est nécessaire",
@@ -2972,11 +2995,12 @@ export const translations = {
         de: "Irenäus von Lyon (ca. 180 n. Chr.): bekräftigte die apostolische Sukzession und die Autorität Roms",
       },
       others: {
-        en: "Cyril of Jerusalem, Augustine, Athanasius—all upheld Marian devotion, sacraments, prayers for the dead, and the necessity of the visible Church",
-        fr: "Cyrille de Jérusalem, Augustin, Athanase — tous ont soutenu la dévotion mariale, les sacrements, les prières pour les morts et la nécessité de l'Église visible",
-        es: "Cirilo de Jerusalén, Agustín, Atanasio—todos defendieron la devoción mariana, los sacramentos, las oraciones por los muertos y la necesidad de la Iglesia visible",
-        de: "Kyrill von Jerusalem, Augustinus, Athanasius — alle unterstützten die Marienverehrung, Sakramente, Gebete für die Toten und die Notwendigkeit der sichtbaren Kirche",
+        en: "Cyril of Jerusalem, Augustine, and Athanasius all supported Marian devotion, the sacraments, prayers for the dead, and the importance of the visible Church",
+        fr: "Cyrille de Jérusalem, Augustin et Athanase ont tous soutenu la dévotion mariale, les sacrements, les prières pour les morts et l'importance de l'Église visible",
+        es: "Cirilo de Jerusalén, Agustín y Atanasio apoyaron la devoción mariana, los sacramentos, las oraciones por los muertos y la importancia de la Iglesia visible",
+        de: "Kyrill von Jerusalem, Augustinus und Athanasius unterstützten alle die Marienverehrung, die Sakramente, Gebete für die Verstorbenen und die Bedeutung der sichtbaren Kirche",
       },
+
       para2: {
         en: "To ignore the Fathers is to sever yourself from the faith as lived by the earliest Christians.",
         fr: "Ignorer les Pères, c'est se couper de la foi telle que vécue par les premiers chrétiens.",
@@ -2994,11 +3018,12 @@ export const translations = {
         de: "8. Historische Kontinuität Ist Wichtig",
       },
       para1: {
-        en: "Jesus didn't write the Bible—He founded a Church. And that Church:",
-        fr: "Jésus n'a pas écrit la Bible — Il a fondé une Église. Et cette Église :",
-        es: "Jesús no escribió la Biblia—fundó una Iglesia. Y esa Iglesia:",
-        de: "Jesus schrieb nicht die Bibel — Er gründete eine Kirche. Und diese Kirche:",
+        en: "Jesus did not write the Bible. He founded a Church. And that Church:",
+        fr: "Jésus n'a pas écrit la Bible. Il a fondé une Église. Et cette Église :",
+        es: "Jesús no escribió la Biblia. Fundó una Iglesia. Y esa Iglesia:",
+        de: "Jesus schrieb nicht die Bibel. Er gründete eine Kirche. Und diese Kirche:",
       },
+
       point1: {
         en: "Evangelized the Roman Empire",
         fr: "A évangélisé l'Empire romain",
@@ -3110,11 +3135,12 @@ export const translations = {
         de: "10. Vernunft, Glaube und Erfüllung",
       },
       para1: {
-        en: "Catholicism doesn't reject reason—it embraces it. From Aquinas to Augustine, Catholic thinkers have used logic, history, and philosophy to defend the faith.",
-        fr: "Le catholicisme ne rejette pas la raison — il l'embrasse. D'Aquin à Augustin, les penseurs catholiques ont utilisé la logique, l'histoire et la philosophie pour défendre la foi.",
-        es: "El catolicismo no rechaza la razón—la abraza. Desde Aquino hasta Agustín, los pensadores católicos han usado la lógica, la historia y la filosofía para defender la fe.",
-        de: "Der Katholizismus lehnt die Vernunft nicht ab — er umarmt sie. Von Aquin bis Augustinus haben katholische Denker Logik, Geschichte und Philosophie verwendet, um den Glauben zu verteidigen.",
+        en: "Catholicism does not reject reason. It welcomes it. From Aquinas to Augustine, Catholic thinkers have used logic, history, and philosophy to defend the faith.",
+        fr: "Le catholicisme ne rejette pas la raison. Il l'accueille. D'Aquin à Augustin, les penseurs catholiques ont utilisé la logique, l'histoire et la philosophie pour défendre la foi.",
+        es: "El catolicismo no rechaza la razón. La acoge. Desde Aquino hasta Agustín, los pensadores católicos han utilizado la lógica, la historia y la filosofía para defender la fe.",
+        de: "Der Katholizismus lehnt die Vernunft nicht ab. Er nimmt sie an. Von Aquin bis Augustinus haben katholische Denker Logik, Geschichte und Philosophie genutzt, um den Glauben zu verteidigen.",
       },
+
       para2: {
         en: "Faith and reason go together in Catholicism:",
         fr: "Foi et raison vont de pair dans le catholicisme :",
@@ -3192,11 +3218,12 @@ export const translations = {
         de: "Die Säule und das Bollwerk der Wahrheit in einer geteilten Welt",
       },
       para: {
-        en: 'Catholicism isn\'t "just another Christian option." It is the fullness of Christianity—biblical, historical, sacramental, and apostolic.',
-        fr: "Le catholicisme n'est pas « simplement une autre option chrétienne ». C'est la plénitude du christianisme — biblique, historique, sacramentelle et apostolique.",
-        es: 'El catolicismo no es "solo otra opción cristiana". Es la plenitud del cristianismo—bíblico, histórico, sacramental y apostólico.',
-        de: 'Der Katholizismus ist nicht „nur eine weitere christliche Option". Er ist die Fülle des Christentums — biblisch, historisch, sakramental und apostolisch.',
+        en: 'Catholicism is not "just another Christian option." It is the fullness of Christianity, encompassing the biblical, historical, sacramental, and apostolic dimensions.',
+        fr: "Le catholicisme n'est pas « simplement une autre option chrétienne ». Il représente la plénitude du christianisme, dans ses dimensions biblique, historique, sacramentelle et apostolique.",
+        es: 'El catolicismo no es "solo otra opción cristiana". Es la plenitud del cristianismo, en sus aspectos bíblico, histórico, sacramental y apostólico.',
+        de: 'Der Katholizismus ist nicht „nur eine weitere christliche Option". Er ist die Fülle des Christentums in biblischer, historischer, sakramentaler und apostolischer Hinsicht.',
       },
+
       newmanQuote: {
         en: "To be deep in history is to cease to be Protestant.",
         fr: "Être profondément dans l'histoire, c'est cesser d'être protestant.",
@@ -3220,16 +3247,17 @@ export const translations = {
         de: "Weitergehen",
       },
       para1: {
-        en: "The case for Catholicism is strong—historically, scripturally, and logically. But in discussions about faith, it's important to think clearly and avoid common logical fallacies that can derail productive conversation.",
-        fr: "Le cas pour le catholicisme est solide — historiquement, scripturellement et logiquement. Mais dans les discussions sur la foi, il est important de penser clairement et d'éviter les sophismes logiques courants qui peuvent faire dérailler une conversation productive.",
-        es: "El caso del catolicismo es sólido—histórica, escritural y lógicamente. Pero en las discusiones sobre la fe, es importante pensar con claridad y evitar las falacias lógicas comunes que pueden descarrilar la conversación productiva.",
-        de: "Der Fall für den Katholizismus ist stark — historisch, schriftlich und logisch. Aber in Diskussionen über den Glauben ist es wichtig, klar zu denken und häufige logische Fehlschlüsse zu vermeiden, die ein produktives Gespräch entgleisen lassen können.",
+        en: "The case for Catholicism is strong, historically, scripturally, and logically. But in discussions about faith, it is important to think clearly and avoid common logical errors that can derail productive conversation.",
+        fr: "Le cas pour le catholicisme est solide, historiquement, bibliquement et logiquement. Mais dans les discussions sur la foi, il est important de penser clairement et d'éviter les erreurs logiques courantes qui peuvent faire dérailler une conversation productive.",
+        es: "El caso del catolicismo es sólido, histórica, bíblicamente y lógicamente. Pero en las discusiones sobre la fe, es importante pensar con claridad y evitar errores lógicos comunes que puedan descarrilar la conversación productiva.",
+        de: "Das Argument für den Katholizismus ist stark, historisch, biblisch und logisch. Doch in Diskussionen über den Glauben ist es wichtig, klar zu denken und häufige logische Fehler zu vermeiden, die ein produktives Gespräch stören könnten.",
       },
+
       para2: {
-        en: "Before we dive deeper into specific Catholic teachings, let's equip ourselves with some critical thinking tools to recognize faulty arguments when we encounter them.",
-        fr: "Avant d'approfondir les enseignements catholiques spécifiques, équipons-nous d'outils de pensée critique pour reconnaître les arguments défectueux lorsque nous les rencontrons.",
-        es: "Antes de profundizar en las enseñanzas católicas específicas, equipémonos con algunas herramientas de pensamiento crítico para reconocer argumentos defectuosos cuando los encontramos.",
-        de: "Bevor wir tiefer in spezifische katholische Lehren eintauchen, rüsten wir uns mit einigen kritischen Denkwerkzeugen aus, um fehlerhafte Argumente zu erkennen, wenn wir auf sie stoßen.",
+        en: "Before exploring specific Catholic teachings, let's equip ourselves with some critical thinking tools to identify faulty arguments when we encounter them.",
+        fr: "Avant d'explorer les enseignements catholiques spécifiques, équipons-nous d'outils de pensée critique pour identifier les arguments défectueux lorsque nous les rencontrons.",
+        es: "Antes de profundizar en las enseñanzas católicas específicas, equipémonos con algunas herramientas de pensamiento crítico para identificar argumentos defectuosos cuando los encontremos.",
+        de: "Bevor wir tiefer in spezifische katholische Lehren eintauchen, rüsten wir uns mit kritischen Denkwerkzeugen aus, um fehlerhafte Argumente zu erkennen, wenn wir ihnen begegnen.",
       },
     },
   },
@@ -7534,6 +7562,20 @@ export const translations = {
       es: "Aunque no están definidos dogmáticamente de la misma manera, estos títulos reflejan verdades profundas sobre su papel.",
       de: "Obwohl sie nicht auf die gleiche Weise dogmatisch definiert sind, spiegeln diese Titel tiefe Wahrheiten über ihre Rolle wider.",
     },
+
+    mediatrixTitle: {
+      en: "Mediatrix & Advocate",
+      fr: "Médiatrice & Avocate",
+      es: "Mediadora y Abogada",
+      de: "Mittlerin & Fürsprecherin",
+    },
+    queenTitle: {
+      en: "Queen of Heaven",
+      fr: "Reine du Ciel",
+      es: "Reina del Cielo",
+      de: "Königin des Himmels",
+    },
+
     mediatrixDesc: {
       en: "Affirmed by Vatican II (Lumen Gentium 62), this highlights her intercessory role in the order of grace.",
       fr: "Affirmé par Vatican II (Lumen Gentium 62), cela souligne son rôle d'intercession dans l'ordre de la grâce.",
@@ -7569,10 +7611,10 @@ export const translations = {
       de: "Jeden Einwand Beantworten",
     },
     videoObjectionsDesc: {
-      en: "In this comprehensive discussion, William Albrecht and Fr. Christiaan Kappas systematically respond to the most common historical and biblical objections regarding Mary, including the Immaculate Conception, Perpetual Virginity, and the Assumption.",
-      fr: "Dans cette discussion complète, William Albrecht et le père Christiaan Kappas répondent systématiquement aux objections historiques et bibliques les plus courantes concernant Marie, notamment l'Immaculée Conception, la Virginité Perpétuelle et l'Assomption.",
-      es: "En esta discusión integral, William Albrecht y el P. Christiaan Kappas responden sistemáticamente a las objeciones históricas y bíblicas más comunes sobre María, incluida la Inmaculada Concepción, la Virginidad Perpetua y la Asunción.",
-      de: "In dieser umfassenden Diskussion antworten William Albrecht und Pater Christiaan Kappas systematisch auf die häufigsten historischen und biblischen Einwände gegen Maria, einschließlich der Unbefleckten Empfängnis, der immerwährenden Jungfräulichkeit und der Aufnahme in den Himmel.",
+      en: "In this comprehensive discussion, William Albrecht and Fr. Christiaan Kappas systematically respond to the most common objections regarding Mary, including the Immaculate Conception, Perpetual Virginity, and the Assumption.",
+      fr: "Dans cette discussion complète, William Albrecht et le père Christiaan Kappas répondent systématiquement aux objections les plus courantes concernant Marie, notamment l'Immaculée Conception, la Virginité Perpétuelle et l'Assomption.",
+      es: "En esta discusión integral, William Albrecht y el P. Christiaan Kappas responden sistemáticamente a las objeciones más comunes sobre María, incluida la Inmaculada Concepción, la Virginidad Perpetua y la Asunción.",
+      de: "In dieser umfassenden Diskussion antworten William Albrecht und Pater Christiaan Kappas systematisch auf die häufigsten Einwände gegen Maria, einschließlich der Unbefleckten Empfängnis, der immerwährenden Jungfräulichkeit und der Aufnahme in den Himmel.",
     },
 
     conclusionTitle: {

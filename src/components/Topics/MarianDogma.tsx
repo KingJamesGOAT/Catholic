@@ -227,11 +227,13 @@ export default function MarianDogma({ onScienceClick }: TopicComponentProps) {
         <p className="mb-4">{t(trans.otherDoctrinesIntro, language)}</p>
         <div className="grid md:grid-cols-2 gap-4">
             <div className="p-4 bg-gray-800/40 rounded-lg">
-                <h4 className="font-bold text-white mb-1">Mediatrix & Advocate</h4>
+                {/* MODIFIED LINE BELOW */}
+                <h4 className="font-bold text-white mb-1">{t(trans.mediatrixTitle, language)}</h4>
                 <p className="text-sm text-gray-400">{t(trans.mediatrixDesc, language)}</p>
             </div>
             <div className="p-4 bg-gray-800/40 rounded-lg">
-                <h4 className="font-bold text-white mb-1">Queen of Heaven</h4>
+                {/* MODIFIED LINE BELOW */}
+                <h4 className="font-bold text-white mb-1">{t(trans.queenTitle, language)}</h4>
                 <p className="text-sm text-gray-400">{t(trans.queenDesc, language)}</p>
             </div>
         </div>
