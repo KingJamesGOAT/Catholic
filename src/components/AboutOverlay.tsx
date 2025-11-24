@@ -40,85 +40,92 @@ export default function AboutOverlay() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="space-y-6"
+            className="space-y-4"
           >
-            <div className="w-12 h-12 rounded-full bg-blue-900/30 flex items-center justify-center mb-2 border border-blue-500/30">
-              <Target className="text-blue-400" size={24} />
+            {/* Fixed Header Part */}
+            <div className="flex flex-col items-center md:items-start">
+              <div className="w-12 h-12 rounded-full bg-blue-900/30 flex items-center justify-center mb-4 border border-blue-500/30">
+                <Target className="text-blue-400" size={24} />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2 text-center md:text-left">
+                {t(trans.mission.title, language)}
+              </h3>
             </div>
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-4">{t(trans.mission.title, language)}</h3>
-              <p className="text-gray-300 leading-relaxed text-sm md:text-lg">
+
+            {/* Scrollable Content Part */}
+            <div className="max-h-[300px] md:max-h-none overflow-y-auto pr-2 custom-scrollbar bg-gray-900/20 md:bg-transparent p-1 md:p-0 rounded-lg">
+              <p className="text-gray-300 leading-relaxed text-sm md:text-lg mb-8">
                 {t(trans.mission.mainText, language)}
               </p>
-            </div>
 
-            <div className="bg-gray-900/50 rounded-xl p-4 md:p-5 border border-gray-800 mt-6">
-              <h4 className="text-white font-semibold mb-4 flex items-center gap-2 border-b border-gray-800 pb-2">
-                {t(trans.mission.howItWorksTitle, language)}
-              </h4>
-              
-              {isMobile ? (
-                // MOBILE INSTRUCTIONS
-                <div className="space-y-4">
-                  <div className="flex gap-3 items-start">
-                    <div className="shrink-0 w-8 h-8 rounded bg-gray-800 border border-gray-700 flex items-center justify-center text-gray-400">
-                      <Menu size={18} />
+              {/* How It Works Section - Vertical Stack */}
+              <div className="bg-gray-900/50 rounded-xl p-4 md:p-5 border border-gray-800">
+                <h4 className="text-white font-semibold mb-4 flex items-center gap-2 border-b border-gray-800 pb-2">
+                  {t(trans.mission.howItWorksTitle, language)}
+                </h4>
+                
+                {isMobile ? (
+                  // MOBILE INSTRUCTIONS - Vertical Stack
+                  <div className="space-y-4">
+                    <div className="flex gap-3 items-start">
+                      <div className="shrink-0 w-8 h-8 rounded bg-gray-800 border border-gray-700 flex items-center justify-center text-gray-400">
+                        <Menu size={18} />
+                      </div>
+                      <p className="text-gray-400 text-sm leading-tight mt-1.5">
+                        {t(trans.mission.mobileMenu, language)}
+                      </p>
                     </div>
-                    <p className="text-gray-400 text-sm leading-tight mt-1.5">
-                      {t(trans.mission.mobileMenu, language)}
-                    </p>
-                  </div>
-                  
-                  <div className="flex gap-3 items-start">
-                    <div className="shrink-0 w-8 h-8 rounded bg-gray-800 border border-gray-700 flex items-center justify-center text-gray-400">
-                      <MoreVertical size={18} />
+                    
+                    <div className="flex gap-3 items-start">
+                      <div className="shrink-0 w-8 h-8 rounded bg-gray-800 border border-gray-700 flex items-center justify-center text-gray-400">
+                        <MoreVertical size={18} />
+                      </div>
+                      <p className="text-gray-400 text-sm leading-tight mt-1.5">
+                        {t(trans.mission.mobileOptions, language)}
+                      </p>
                     </div>
-                    <p className="text-gray-400 text-sm leading-tight mt-1.5">
-                      {t(trans.mission.mobileOptions, language)}
-                    </p>
-                  </div>
 
-                  <div className="flex gap-3 items-start">
-                    <div className="shrink-0 w-8 h-8 rounded bg-gray-800 border border-gray-700 flex items-center justify-center text-gray-400">
-                      <Search size={18} />
+                    <div className="flex gap-3 items-start">
+                      <div className="shrink-0 w-8 h-8 rounded bg-gray-800 border border-gray-700 flex items-center justify-center text-gray-400">
+                        <Search size={18} />
+                      </div>
+                      <p className="text-gray-400 text-sm leading-tight mt-1.5">
+                        {t(trans.mission.mobileSearch, language)}
+                      </p>
                     </div>
-                    <p className="text-gray-400 text-sm leading-tight mt-1.5">
-                      {t(trans.mission.mobileSearch, language)}
-                    </p>
                   </div>
-                </div>
-              ) : (
-                // DESKTOP INSTRUCTIONS
-                <div className="space-y-4">
-                  <div className="flex gap-3 items-start">
-                    <div className="shrink-0 w-8 h-8 rounded bg-gray-800 border border-gray-700 flex items-center justify-center text-gray-400">
-                      {/* Changed to Menu icon (3 horizontal lines) as requested */}
-                      <Menu size={18} />
+                ) : (
+                  // DESKTOP INSTRUCTIONS - Vertical Stack
+                  <div className="space-y-4">
+                    <div className="flex gap-3 items-start">
+                      <div className="shrink-0 w-8 h-8 rounded bg-gray-800 border border-gray-700 flex items-center justify-center text-gray-400">
+                        <Menu size={18} />
+                      </div>
+                      <p className="text-gray-400 text-base leading-tight mt-1">
+                        {t(trans.mission.pcAllTopics, language)}
+                      </p>
                     </div>
-                    <p className="text-gray-400 text-base leading-tight mt-1">
-                      {t(trans.mission.pcAllTopics, language)}
-                    </p>
-                  </div>
 
-                  <div className="flex gap-3 items-start">
-                    <div className="shrink-0 w-8 h-8 rounded bg-gray-800 border border-gray-700 flex items-center justify-center text-gray-400">
-                      <Search size={18} />
+                    <div className="flex gap-3 items-start">
+                      <div className="shrink-0 w-8 h-8 rounded bg-gray-800 border border-gray-700 flex items-center justify-center text-gray-400">
+                        <Search size={18} />
+                      </div>
+                      <p className="text-gray-400 text-base leading-tight mt-1">
+                        {t(trans.mission.pcSearch, language)}
+                      </p>
                     </div>
-                    <p className="text-gray-400 text-base leading-tight mt-1">
-                      {t(trans.mission.pcSearch, language)}
-                    </p>
-                  </div>
 
-                  <div className="flex gap-3 items-start">
-                    <div className="shrink-0 w-8 h-8 rounded bg-gray-800 border border-gray-700 flex items-center justify-center text-gray-400">
-                      <span className="text-[10px] font-bold">TOP</span>
+                    <div className="flex gap-3 items-start">
+                      <div className="shrink-0 w-8 h-8 rounded bg-gray-800 border border-gray-700 flex items-center justify-center text-gray-400">
+                        <span className="text-[10px] font-bold">TOP</span>
+                      </div>
+                      <p className="text-gray-400 text-base leading-tight mt-1">
+                        {t(trans.mission.pcTopSubjects, language)}
+                      </p>
                     </div>
-                    <p className="text-gray-400 text-base leading-tight mt-1">
-                      {t(trans.mission.pcTopSubjects, language)}
-                    </p>
                   </div>
-                </div>
-              )}
+                )}
+              </div>
             </div>
           </motion.div>
         );
@@ -131,13 +138,18 @@ export default function AboutOverlay() {
             exit={{ opacity: 0, y: -10 }}
             className="space-y-4"
           >
-            <div className="w-12 h-12 rounded-full bg-purple-900/30 flex items-center justify-center mb-4 border border-purple-500/30">
-              <User className="text-purple-400" size={24} />
+            {/* Fixed Header Part - No scrolling title */}
+            <div className="flex flex-col items-center md:items-start">
+              <div className="w-12 h-12 rounded-full bg-purple-900/30 flex items-center justify-center mb-4 border border-purple-500/30">
+                <User className="text-purple-400" size={24} />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2 text-center md:text-left">
+                {t(trans.author.title, language)}
+              </h3>
             </div>
-            <h3 className="text-2xl font-bold text-white">{t(trans.author.title, language)}</h3>
             
-            {/* Mobile: Scrollable container | Desktop: Normal */}
-            <div className="max-h-[250px] md:max-h-none overflow-y-auto pr-2 md:pr-0 custom-scrollbar">
+            {/* Scrollable Text Only */}
+            <div className="max-h-[300px] md:max-h-none overflow-y-auto pr-2 md:pr-0 custom-scrollbar bg-gray-900/20 md:bg-transparent p-1 md:p-0 rounded-lg">
               <p className="text-gray-300 leading-relaxed text-sm md:text-lg whitespace-pre-line">
                 {t(trans.author.text, language)}
               </p>
@@ -153,10 +165,14 @@ export default function AboutOverlay() {
             exit={{ opacity: 0, y: -10 }}
             className="space-y-6"
           >
-            <div className="w-12 h-12 rounded-full bg-green-900/30 flex items-center justify-center mb-4 border border-green-500/30">
-              <Mail className="text-green-400" size={24} />
+            <div className="flex flex-col items-center md:items-start">
+              <div className="w-12 h-12 rounded-full bg-green-900/30 flex items-center justify-center mb-4 border border-green-500/30">
+                <Mail className="text-green-400" size={24} />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2">
+                {t(trans.contact.title, language)}
+              </h3>
             </div>
-            <h3 className="text-2xl font-bold text-white">{t(trans.contact.title, language)}</h3>
             <p className="text-gray-300 leading-relaxed text-sm md:text-lg">
               {t(trans.contact.text, language)}
             </p>
@@ -182,8 +198,6 @@ export default function AboutOverlay() {
         onClick={() => setIsOpen(true)}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        // UPDATED: Rounded pill on desktop, circle on mobile. 
-        // 'w-11' on mobile, 'px-4' on desktop for text space.
         className="fixed bottom-6 left-6 z-50 h-11 min-w-[44px] px-0 md:px-4 flex items-center justify-center rounded-full bg-black/20 backdrop-blur-xl border border-white/10 text-white/60 transition-all duration-300 hover:bg-black/40 hover:text-white hover:border-white/20 shadow-2xl gap-2"
         aria-label="About & Contact"
       >
@@ -209,7 +223,7 @@ export default function AboutOverlay() {
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="relative bg-black border border-gray-800 w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[85vh]"
+              className="relative bg-black border border-gray-800 w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[85vh] md:max-h-[800px]"
             >
               {/* Header (Fixed) */}
               <div className="p-4 md:p-6 border-b border-gray-800/50 bg-black/50 backdrop-blur-sm shrink-0 relative">
