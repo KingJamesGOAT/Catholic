@@ -4,7 +4,7 @@ import {
   useTransform,
   useMotionValue,
   MotionValue,
-} from "framer-motion";
+} from "motion/react";
 import { Button } from "./ui/button";
 import { ChevronRight } from "lucide-react";
 import { useLanguage } from "../lib/i18n/LanguageContext";
@@ -159,7 +159,17 @@ const ParticleCanvas = () => {
     window.addEventListener("resize", handleResize);
     handleResize();
 
-    const render = () => {
+    let lastTime = performance.now();
+    const TARGET_FPS = 60;
+    const BASE_SPEED = 1.5; 
+
+    const render = (currentTime: number) => {
+      const deltaTime = Math.max(0, currentTime - lastTime);
+      lastTime = currentTime;
+
+      const timeScale = deltaTime / (1000 / TARGET_FPS);
+      const safeTimeScale = Math.min(timeScale, 2.0); 
+
       ctx.fillStyle = "#000000";
       ctx.fillRect(0, 0, width, height);
 
@@ -176,10 +186,9 @@ const ParticleCanvas = () => {
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, width, height);
 
-      const speed = 1.5;
-
       stars.forEach((star) => {
-        star.z -= speed;
+        star.z -= BASE_SPEED * safeTimeScale;
+
         if (star.z <= 0) {
           star.z = Z_DEPTH;
           star.x = (Math.random() - 0.5) * width * 2;
@@ -190,32 +199,32 @@ const ParticleCanvas = () => {
         const px = star.x * k + width / 2;
         const py = star.y * k + height / 2;
 
-        // --- UPDATED REPULSION LOGIC ---
         if (!isMobile) {
           const dx = px - mouseRef.current.x;
           const dy = py - mouseRef.current.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          
-          // Radius reduced to 100px (was 200) for a tighter effect
           const repulsionRadius = 100;
 
           if (dist < repulsionRadius) {
-            // Force reduced to 10 (was 20) for a gentler push
             const force = (1 - dist / repulsionRadius) * 10;
             const angle = Math.atan2(dy, dx);
-            
-            star.x += (Math.cos(angle) * force) / k;
-            star.y += (Math.sin(angle) * force) / k;
+            star.x += ((Math.cos(angle) * force) / k) * safeTimeScale;
+            star.y += ((Math.sin(angle) * force) / k) * safeTimeScale;
           }
         }
 
         if (px >= 0 && px <= width && py >= 0 && py <= height) {
           const size = (1 - star.z / Z_DEPTH) * (isMobile ? 3 : 4.5);
           const alpha = 1 - star.z / Z_DEPTH;
+          
           ctx.beginPath();
           ctx.fillStyle = STAR_COLOR;
-          ctx.globalAlpha = alpha;
-          ctx.arc(px, py, size / 2, 0, Math.PI * 2);
+          ctx.globalAlpha = Math.max(0, Math.min(1, alpha));
+          
+          // CRITICAL FIX: Ensure radius is never negative
+          const radius = Math.max(0, size / 2);
+          
+          ctx.arc(px, py, radius, 0, Math.PI * 2);
           ctx.fill();
         }
       });
@@ -245,6 +254,7 @@ const ParticleCanvas = () => {
 export default function Home({ onStart }: HomeProps) {
   const { language } = useLanguage();
   const trans = translations.home;
+  const isMobile = useIsMobile(); // We need this to adjust vertical positioning
 
   const scrollYProgress = useMotionValue(0);
 
@@ -289,22 +299,24 @@ export default function Home({ onStart }: HomeProps) {
   }, [scrollYProgress]);
 
   return (
-    <div className="relative h-[400vh] bg-black">
+    <div className="relative h-[250vh] md:h-[400vh] bg-black">
       <ParticleCanvas />
 
       <div className="fixed inset-0 flex flex-col items-center justify-center z-10 pointer-events-none overflow-hidden">
         {/* --- LAYER 1: TITLE --- */}
         <motion.div
+          key={`title-container-${language}`}
           className="absolute flex flex-col items-center justify-center text-center w-full px-4"
           style={{
             opacity: titleOpacity,
-            top: "50%",
+            top: "50%", // Keep Title centered
             y: "-50%",
             scale: useTransform(scrollYProgress, [0, 0.3], [1, 0.8]),
           }}
         >
           <h1 className="text-4xl md:text-7xl font-extrabold text-white tracking-tight leading-tight drop-shadow-2xl text-center max-w-4xl mx-auto">
             <SplitStaggeredText
+              key={`title-text-${language}`}
               htmlContent={t(trans.title, language)}
               scrollYProgress={scrollYProgress}
               range={[0, 0.25]}
@@ -315,15 +327,17 @@ export default function Home({ onStart }: HomeProps) {
             style={{ opacity: titleOpacity }}
             className="absolute -bottom-32 left-0 right-0 text-center text-blue-400/60 animate-bounce text-xs md:text-sm font-medium tracking-widest uppercase"
           >
-            Scroll to Begin
+            {t(trans.scrollToBegin, language)}
           </motion.div>
         </motion.div>
 
         {/* --- LAYER 2: QUOTE --- */}
         <motion.div
+          key={`quote-container-${language}`}
           className="absolute flex flex-col items-center justify-center text-center w-full px-4"
           style={{
-            top: "50%",
+            // FIX: If NOT mobile, push down to 55%
+            top: isMobile ? "50%" : "55%", 
             y: "-50%",
             opacity: quoteOpacity,
           }}
@@ -331,6 +345,7 @@ export default function Home({ onStart }: HomeProps) {
           <div className="bg-black/40 backdrop-blur-md border border-blue-900/40 p-6 md:p-12 rounded-3xl text-center shadow-[0_0_50px_-10px_rgba(76,29,149,0.3)] w-full max-w-3xl">
             <p className="text-xl md:text-3xl text-gray-100 italic font-serif leading-relaxed text-center">
               <SplitStaggeredText
+                key={`quote-text-${language}`}
                 htmlContent={t(trans.quote, language)}
                 scrollYProgress={scrollYProgress}
                 range={[0.6, 0.8]}
@@ -350,15 +365,17 @@ export default function Home({ onStart }: HomeProps) {
             style={{ opacity: quoteScrollHintOpacity }}
             className="absolute -bottom-24 left-0 right-0 text-center text-blue-400/60 animate-bounce text-xs md:text-sm font-medium tracking-widest uppercase"
           >
-            Keep Scrolling
+            {t(trans.keepScrolling, language)}
           </motion.div>
         </motion.div>
 
         {/* --- LAYER 3: FINAL DESCRIPTION & BUTTON --- */}
         <motion.div
+          key={`final-container-${language}`}
           className="absolute flex flex-col items-center justify-center text-center w-full px-4 left-0 right-0 mx-auto"
           style={{
-            top: "50%",
+            // FIX: If NOT mobile, push down to 55%
+            top: isMobile ? "50%" : "55%",
             y: "-50%",
             scale: finalScale,
             opacity: finalOpacity,

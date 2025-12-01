@@ -312,6 +312,22 @@ export const translations = {
       es: "Comienza Tu Viaje hacia la <span class='text-blue-500'>Fe Católica</span>",
       de: "Beginnen Sie Ihre Reise in den <span class='text-blue-500'>Katholischen Glauben</span>",
     },
+
+    // --- ADD THIS BLOCK ---
+    scrollToBegin: {
+      en: "Scroll to Begin",
+      fr: "Défilez pour commencer",
+      es: "Desplázate para comenzar",
+      de: "Scrollen zum Beginnen",
+    },
+    keepScrolling: {
+      en: "Keep Scrolling",
+      fr: "Continuez à défiler",
+      es: "Sigue desplazándote",
+      de: "Weiter scrollen",
+    },
+
+    
     quote: {
       en: "You will know how people ought to conduct themselves in God’s household, which is the <span class='text-blue-400'>church</span> of the living God, <span class='text-blue-400'>the pillar and foundation of the truth.</span>",
       fr: "Tu sauras comment il faut se conduire dans la maison de Dieu, qui est l'<span class='text-blue-400'>Église</span> du Dieu vivant, <span class='text-blue-400'>la colonne et l'appui de la vérité.</span>",

@@ -40,10 +40,10 @@ export const tlmTranslations = {
         de: "Ad Orientem",
       },
       desc: {
-        en: "The priest and the people face East together, leading us towards Christ, rather than centering on the community.",
-        fr: "Le prêtre et le peuple se tournent ensemble vers l'Est, nous conduisant vers le Christ, plutôt que de se centrer sur la communauté.",
-        es: "El sacerdote y el pueblo miran juntos hacia el Este, guiándonos hacia Cristo, en lugar de centrarse en la comunidad.",
-        de: "Der Priester und das Volk blicken gemeinsam nach Osten und führen uns zu Christus, anstatt sich auf die Gemeinschaft zu konzentrieren.",
+        en: "The priest and the people face East together, leading us towards Christ.",
+        fr: "Le prêtre et le peuple se tournent ensemble vers l'Est, nous conduisant vers le Christ.",
+        es: "El sacerdote y el pueblo miran juntos hacia el Este, guiándonos hacia Cristo.",
+        de: "Der Priester und das Volk blicken gemeinsam nach Osten und führen uns zu Christus.",
       },
     },
     silence: {
