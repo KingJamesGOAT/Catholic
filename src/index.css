@@ -5427,6 +5427,18 @@
   }
 
   @media (width >= 48rem) {
+    .md\:bg-black\/50 {
+      background-color: #00000080;
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      .md\:bg-black\/50 {
+        background-color: color-mix(in oklab, var(--color-black) 50%, transparent);
+      }
+    }
+  }
+
+  @media (width >= 48rem) {
     .md\:bg-transparent {
       background-color: #0000;
     }
@@ -5617,6 +5629,14 @@
   @media (width >= 48rem) {
     .md\:text-gray-500 {
       color: var(--color-gray-500);
+    }
+  }
+
+  @media (width >= 48rem) {
+    .md\:backdrop-blur-none {
+      --tw-backdrop-blur: ;
+      -webkit-backdrop-filter: var(--tw-backdrop-blur, ) var(--tw-backdrop-brightness, ) var(--tw-backdrop-contrast, ) var(--tw-backdrop-grayscale, ) var(--tw-backdrop-hue-rotate, ) var(--tw-backdrop-invert, ) var(--tw-backdrop-opacity, ) var(--tw-backdrop-saturate, ) var(--tw-backdrop-sepia, );
+      backdrop-filter: var(--tw-backdrop-blur, ) var(--tw-backdrop-brightness, ) var(--tw-backdrop-contrast, ) var(--tw-backdrop-grayscale, ) var(--tw-backdrop-hue-rotate, ) var(--tw-backdrop-invert, ) var(--tw-backdrop-opacity, ) var(--tw-backdrop-saturate, ) var(--tw-backdrop-sepia, );
     }
   }
 
