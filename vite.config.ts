@@ -6,10 +6,11 @@ import Sitemap from 'vite-plugin-sitemap';
 export default defineConfig({
   plugins: [
     react(),
-    Sitemap({
-      hostname: 'https://catholicroute.com',
-      dynamicRoutes: ['/']
-    })
+    Sitemap({ 
+      hostname: 'https://catholicroute.com', 
+      outDir: 'build', // <--- THIS LINE FIXES THE ERROR
+      dynamicRoutes: ['/'] 
+    }) 
   ],
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
@@ -58,5 +59,9 @@ export default defineConfig({
   build: {
     target: 'esnext',
     outDir: 'build',
+  },
+  server: {
+    port: 3000,
+    open: true,
   },
 });
