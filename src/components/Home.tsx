@@ -6,7 +6,7 @@ import {
   MotionValue,
 } from "motion/react";
 import { Button } from "./ui/button";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, BookOpen, Scroll, Microscope, Church, Map } from "lucide-react";
 import { useLanguage } from "../lib/i18n/LanguageContext";
 import { translations, t } from "../lib/i18n/translations";
 import { useIsMobile } from "./ui/use-mobile";
@@ -16,7 +16,7 @@ interface HomeProps {
 }
 
 // ------------------------------------------------------------------
-// 1. HELPER: WORD-AWARE SPLIT TEXT
+// 1. HELPER: WORD-AWARE SPLIT TEXT (Only for Title)
 // ------------------------------------------------------------------
 const SplitStaggeredText = ({
   htmlContent,
@@ -32,21 +32,16 @@ const SplitStaggeredText = ({
   const { words, totalChars } = useMemo(() => {
     const regex = /(<span[^>]*>.*?<\/span>)|([^<]+)/g;
     const matches = htmlContent.match(regex) || [];
-
     let parsedWords: any[] = [];
     let charCounter = 0;
-
     matches.forEach((part) => {
       let text = part;
       let isBlue = false;
-
       if (part.startsWith("<span")) {
         text = part.replace(/<[^>]+>/g, "");
         isBlue = true;
       }
-
       const tokens = text.split(/(\s+)/);
-
       tokens.forEach((token) => {
         if (token.match(/\s+/)) {
           parsedWords.push({ type: "space", text: token });
@@ -61,7 +56,6 @@ const SplitStaggeredText = ({
         }
       });
     });
-
     return { words: parsedWords, totalChars: charCounter };
   }, [htmlContent]);
 
@@ -72,11 +66,7 @@ const SplitStaggeredText = ({
     <span className={`${baseClass} inline`}>
       {words.map((word, i) => {
         if (word.type === "space") {
-          return (
-            <span key={i} className="inline">
-              {word.text}
-            </span>
-          );
+          return <span key={i} className="inline">{word.text}</span>;
         }
         return (
           <span key={i} className="inline-block whitespace-nowrap">
@@ -88,17 +78,10 @@ const SplitStaggeredText = ({
               const rotate = useTransform(scrollYProgress, [charStart, charEnd], [0, Math.random() * 360 - 180]);
               const y = useTransform(scrollYProgress, [charStart, charEnd], [0, 50]);
               const blur = useTransform(scrollYProgress, [charStart, charEnd], ["0px", "5px"]);
-
               return (
                 <motion.span
                   key={j}
-                  style={{
-                    scale,
-                    opacity,
-                    rotate,
-                    y,
-                    filter: useTransform(blur, (v) => `blur(${v})`),
-                  }}
+                  style={{ scale, opacity, rotate, y, filter: useTransform(blur, (v) => `blur(${v})`) }}
                   className={`inline-block ${word.isBlue ? "text-blue-500" : ""}`}
                 >
                   {item.char}
@@ -113,21 +96,27 @@ const SplitStaggeredText = ({
 };
 
 // ------------------------------------------------------------------
-// 2. NATIVE CANVAS ENGINE (Smaller, Gentler Repulsion)
+// 2. PARTICLE ENGINE (Persistent & Warp Capable)
 // ------------------------------------------------------------------
-const ParticleCanvas = () => {
+type AnimationMode = 'normal' | 'implode' | 'void' | 'explode';
+
+const ParticleCanvas = ({ mode }: { mode: AnimationMode }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const isMobile = useIsMobile();
-  
   const mouseRef = useRef({ x: -9999, y: -9999 });
+  
+  // PERSISTENT STAR STORAGE (Fixes the reset issue)
+  const starsRef = useRef<any[]>([]);
+  const initializedRef = useRef(false);
+
+  const modeRef = useRef(mode);
+  useEffect(() => { modeRef.current = mode; }, [mode]);
 
   useEffect(() => {
     if (isMobile) return;
-
     const handleMouseMove = (e: MouseEvent) => {
-      mouseRef.current = { x: e.clientX, y: e.clientY };
+        mouseRef.current = { x: e.clientX, y: e.clientY };
     };
-
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, [isMobile]);
@@ -138,17 +127,21 @@ const ParticleCanvas = () => {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    const PARTICLE_COUNT = isMobile ? 800 : 1600;
+    const PARTICLE_COUNT = isMobile ? 600 : 1200;
     const Z_DEPTH = 1000;
-    const STAR_COLOR = "#3b82f6";
+    const STAR_COLOR = "#3b82f6"; 
     let width = window.innerWidth;
     let height = window.innerHeight;
 
-    const stars = Array.from({ length: PARTICLE_COUNT }).map(() => ({
-      x: (Math.random() - 0.5) * width * 3,
-      y: (Math.random() - 0.5) * height * 3,
-      z: Math.random() * Z_DEPTH,
-    }));
+    // Initialize ONCE
+    if (!initializedRef.current) {
+        starsRef.current = Array.from({ length: PARTICLE_COUNT }).map(() => ({
+            x: (Math.random() - 0.5) * width * 3,
+            y: (Math.random() - 0.5) * height * 3,
+            z: Math.random() * Z_DEPTH,
+        }));
+        initializedRef.current = true;
+    }
 
     const handleResize = () => {
       width = window.innerWidth;
@@ -161,15 +154,16 @@ const ParticleCanvas = () => {
 
     let lastTime = performance.now();
     const TARGET_FPS = 60;
-    const BASE_SPEED = 1.5; 
+    const BASE_SPEED = 1.5;
 
     const render = (currentTime: number) => {
       const deltaTime = Math.max(0, currentTime - lastTime);
       lastTime = currentTime;
 
       const timeScale = deltaTime / (1000 / TARGET_FPS);
-      const safeTimeScale = Math.min(timeScale, 2.0); 
+      const safeTimeScale = Math.min(timeScale, 2.0);
 
+      // 1. ALWAYS DRAW BACKGROUND (The Event Horizon)
       ctx.fillStyle = "#000000";
       ctx.fillRect(0, 0, width, height);
 
@@ -186,20 +180,44 @@ const ParticleCanvas = () => {
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, width, height);
 
-      stars.forEach((star) => {
-        star.z -= BASE_SPEED * safeTimeScale;
+      // 2. IF VOID, SKIP PHYSICS
+      if (modeRef.current === 'void') {
+        requestAnimationFrame(render);
+        return;
+      }
 
+      // 3. DRAW STARS
+      const stars = starsRef.current;
+      
+      stars.forEach((star) => {
+        let speed = 1.5 * safeTimeScale;
+        const currentMode = modeRef.current;
+
+        if (currentMode === 'implode') {
+            // SUCK INWARDS
+            star.z += speed * 15; 
+        } else {
+            // Normal & Explode same speed (Original Speed)
+            star.z -= speed;
+        }
+
+        // Bounds check
         if (star.z <= 0) {
-          star.z = Z_DEPTH;
-          star.x = (Math.random() - 0.5) * width * 2;
-          star.y = (Math.random() - 0.5) * height * 2;
+            star.z = Z_DEPTH;
+            star.x = (Math.random() - 0.5) * width * 2;
+            star.y = (Math.random() - 0.5) * height * 2;
+        } else if (star.z > Z_DEPTH * 1.5) {
+             star.z = 1;
+             star.x = (Math.random() - 0.5) * width * 2;
+             star.y = (Math.random() - 0.5) * height * 2;
         }
 
         const k = 128.0 / star.z;
         const px = star.x * k + width / 2;
         const py = star.y * k + height / 2;
 
-        if (!isMobile) {
+        // Mouse Interaction
+        if (!isMobile && (currentMode === 'normal' || currentMode === 'explode')) {
           const dx = px - mouseRef.current.x;
           const dy = py - mouseRef.current.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
@@ -214,18 +232,18 @@ const ParticleCanvas = () => {
         }
 
         if (px >= 0 && px <= width && py >= 0 && py <= height) {
-          const size = (1 - star.z / Z_DEPTH) * (isMobile ? 3 : 4.5);
-          const alpha = 1 - star.z / Z_DEPTH;
-          
-          ctx.beginPath();
-          ctx.fillStyle = STAR_COLOR;
-          ctx.globalAlpha = Math.max(0, Math.min(1, alpha));
-          
-          // CRITICAL FIX: Ensure radius is never negative
-          const radius = Math.max(0, size / 2);
-          
-          ctx.arc(px, py, radius, 0, Math.PI * 2);
-          ctx.fill();
+          let size = (1 - star.z / Z_DEPTH) * (isMobile ? 3 : 4.5);
+          let alpha = 1 - star.z / Z_DEPTH;
+
+          if (currentMode === 'implode') alpha *= 0.5;
+
+          if (alpha > 0) {
+            ctx.beginPath();
+            ctx.fillStyle = STAR_COLOR;
+            ctx.globalAlpha = Math.min(1, alpha);
+            ctx.arc(px, py, Math.max(0, size / 2), 0, Math.PI * 2);
+            ctx.fill();
+          }
         }
       });
 
@@ -249,17 +267,86 @@ const ParticleCanvas = () => {
 };
 
 // ------------------------------------------------------------------
-// 3. MAIN COMPONENT
+// 3. WARP STORY NODE (NO BLUR)
+// ------------------------------------------------------------------
+const WarpStoryNode = ({
+  scrollYProgress,
+  startRange,
+  endRange,
+  title,
+  desc,
+  icon: Icon,
+  color,
+}: {
+  scrollYProgress: MotionValue<number>;
+  startRange: number;
+  endRange: number;
+  title: string;
+  desc: string;
+  icon: any;
+  color: string;
+}) => {
+  
+  const span = endRange - startRange;
+  const entryEnd = startRange + (span * 0.3); 
+  const stayStart = entryEnd;
+  const stayEnd = endRange - (span * 0.3);
+  
+  // SCALE: Big -> Normal -> Normal -> Tiny
+  const scale = useTransform(
+    scrollYProgress,
+    [startRange, stayStart, stayEnd, endRange],
+    [2.5, 1, 1, 0] 
+  );
+
+  // OPACITY: Fade In -> Hold -> Hold -> Fade Out
+  const opacity = useTransform(
+    scrollYProgress,
+    [startRange, stayStart, stayEnd, endRange],
+    [0, 1, 1, 0]
+  );
+
+  // NO BLUR - Removed for sharpness
+
+  // Dynamic class for white or colored icons
+  const iconClass = color === "white" 
+    ? "text-white md:w-12 md:h-12" 
+    : `text-${color}-500 md:w-12 md:h-12`;
+
+  return (
+    <motion.div
+      style={{ scale, opacity }}
+      className="absolute flex flex-col items-center justify-center text-center w-full px-6 md:px-4 top-1/2 -translate-y-1/2 pointer-events-none z-20"
+    >
+      <div className="relative mb-6 md:mb-8 p-6 rounded-full bg-black border border-white/20 z-10">
+        <Icon size={32} className={iconClass} />
+      </div>
+
+      <h2 className="text-3xl md:text-6xl font-bold text-white mb-4 md:mb-6 tracking-tight drop-shadow-2xl">
+        {title}
+      </h2>
+      
+      <p className="text-gray-300 text-lg md:text-2xl max-w-xl mx-auto leading-relaxed bg-black/90 p-4 rounded-xl border border-white/10">
+        {desc}
+      </p>
+    </motion.div>
+  );
+};
+
+// ------------------------------------------------------------------
+// 4. MAIN COMPONENT
 // ------------------------------------------------------------------
 export default function Home({ onStart }: HomeProps) {
   const { language } = useLanguage();
   const trans = translations.home;
-  const isMobile = useIsMobile(); // We need this to adjust vertical positioning
-
+  const isMobile = useIsMobile();
   const scrollYProgress = useMotionValue(0);
+  
+  const [mode, setMode] = useState<AnimationMode>('normal');
 
   useEffect(() => {
     const handleScroll = () => {
+      // 950vh to fit the journey
       const totalScroll = document.body.scrollHeight - window.innerHeight;
       const currentScroll = window.scrollY;
       const progress = Math.min(Math.max(currentScroll / totalScroll, 0), 1);
@@ -269,60 +356,75 @@ export default function Home({ onStart }: HomeProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [scrollYProgress]);
 
+  // --- ANIMATION MODES ---
+  useEffect(() => {
+    return scrollYProgress.on("change", (latest) => {
+      if (latest < 0.15) {
+        setMode('normal');
+      } else if (latest < 0.40) { // Reduced Quote Duration (Ended at 0.40 instead of 0.45)
+        setMode('implode');     
+      } else if (latest < 0.85) { 
+        setMode('void');        
+      } else {
+        setMode('explode');     
+      }
+    });
+  }, [scrollYProgress]);
+
   const handleStartClick = () => {
     onStart();
   };
 
-  const titleOpacity = useTransform(scrollYProgress, [0, 0.25], [1, 0]);
-
-  // Quote Visibility (Fades OUT before final text)
-  const quoteOpacity = useTransform(
-    scrollYProgress,
-    [0.2, 0.35, 0.65, 0.8],
-    [0, 1, 1, 0]
-  );
+  // --- RANGES ---
+  const titleOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
   
-  const quoteScrollHintOpacity = useTransform(
-    scrollYProgress,
-    [0.35, 0.45, 0.55, 0.65],
-    [0, 1, 1, 0]
-  );
+  // SHORTER QUOTE DURATION (80% of original)
+  // Was 0.20 to 0.45 (25% span). Now 0.20 to 0.36 (16% span).
+  const quoteOpacity = useTransform(scrollYProgress, [0.15, 0.20, 0.36, 0.40], [0, 1, 1, 0]); 
 
-  const finalOpacity = useTransform(scrollYProgress, [0.75, 0.9], [0, 1]);
-  const finalScale = useTransform(scrollYProgress, [0.75, 1], [0.9, 1]);
+  // START WARP earlier (0.40)
+  // Gap from 0.40 to 0.85 = 0.45 span
+  // 5 Items -> 0.09 per item
+
+  const finalOpacity = useTransform(scrollYProgress, [0.85, 0.95], [0, 1]);
+  const finalScale = useTransform(scrollYProgress, [0.85, 0.98], [0, 1]);
 
   const [pointerEvents, setPointerEvents] = useState<"none" | "auto">("none");
   useEffect(() => {
     return scrollYProgress.on("change", (latest) => {
-      setPointerEvents(latest > 0.85 ? "auto" : "none");
+      setPointerEvents(latest > 0.9 ? "auto" : "none");
     });
   }, [scrollYProgress]);
 
   return (
-    <div className="relative h-[250vh] md:h-[400vh] bg-black">
-      <ParticleCanvas />
+    <div className="relative h-[950vh] bg-black">
+
+    {/* --- NEW: READING PROGRESS BAR --- */}
+      <motion.div
+        className="fixed top-16 md:top-20 left-0 right-0 h-1 bg-blue-600 origin-left z-50"
+        style={{ scaleX: scrollYProgress }}
+      />
+      {/* --------------------------------- */}
+
+      
+      <ParticleCanvas mode={mode} />
 
       <div className="fixed inset-0 flex flex-col items-center justify-center z-10 pointer-events-none overflow-hidden">
+        
         {/* --- LAYER 1: TITLE --- */}
         <motion.div
           key={`title-container-${language}`}
           className="absolute flex flex-col items-center justify-center text-center w-full px-4"
-          style={{
-            opacity: titleOpacity,
-            top: "50%", // Keep Title centered
-            y: "-50%",
-            scale: useTransform(scrollYProgress, [0, 0.3], [1, 0.8]),
-          }}
+          style={{ opacity: titleOpacity, scale: useTransform(scrollYProgress, [0, 0.15], [1, 0.8]) }}
         >
           <h1 className="text-4xl md:text-7xl font-extrabold text-white tracking-tight leading-tight drop-shadow-2xl text-center max-w-4xl mx-auto">
             <SplitStaggeredText
               key={`title-text-${language}`}
               htmlContent={t(trans.title, language)}
               scrollYProgress={scrollYProgress}
-              range={[0, 0.25]}
+              range={[0, 0.15]}
             />
           </h1>
-
           <motion.div
             style={{ opacity: titleOpacity }}
             className="absolute -bottom-32 left-0 right-0 text-center text-blue-400/60 animate-bounce text-xs md:text-sm font-medium tracking-widest uppercase"
@@ -335,46 +437,80 @@ export default function Home({ onStart }: HomeProps) {
         <motion.div
           key={`quote-container-${language}`}
           className="absolute flex flex-col items-center justify-center text-center w-full px-4"
-          style={{
-            // FIX: If NOT mobile, push down to 55%
-            top: isMobile ? "50%" : "55%", 
-            y: "-50%",
-            opacity: quoteOpacity,
-          }}
+          style={{ top: isMobile ? "50%" : "55%", y: "-50%", opacity: quoteOpacity }}
         >
           <div className="bg-black/40 backdrop-blur-md border border-blue-900/40 p-6 md:p-12 rounded-3xl text-center shadow-[0_0_50px_-10px_rgba(76,29,149,0.3)] w-full max-w-3xl">
-            <p className="text-xl md:text-3xl text-gray-100 italic font-serif leading-relaxed text-center">
-              <SplitStaggeredText
-                key={`quote-text-${language}`}
-                htmlContent={t(trans.quote, language)}
-                scrollYProgress={scrollYProgress}
-                range={[0.6, 0.8]}
-                baseClass="italic text-center"
-              />
-            </p>
-
-            <motion.p
-              style={{ opacity: useTransform(scrollYProgress, [0.6, 0.7], [1, 0]) }}
-              className="text-blue-400 mt-6 md:mt-8 font-bold tracking-widest uppercase text-xs md:text-base text-center"
-            >
+            <div 
+              className="text-xl md:text-3xl text-gray-100 italic font-serif leading-relaxed text-center"
+              dangerouslySetInnerHTML={{ __html: t(trans.quote, language) }}
+            />
+            <p className="text-blue-400 mt-6 md:mt-8 font-bold tracking-widest uppercase text-xs md:text-base text-center">
               — {t(trans.quoteSource, language)}
-            </motion.p>
+            </p>
+            <div className="absolute -bottom-16 left-0 right-0 text-center text-blue-400/60 animate-bounce text-xs font-medium uppercase">
+              {t(trans.keepScrolling, language)}
+            </div>
           </div>
-
-          <motion.div
-            style={{ opacity: quoteScrollHintOpacity }}
-            className="absolute -bottom-24 left-0 right-0 text-center text-blue-400/60 animate-bounce text-xs md:text-sm font-medium tracking-widest uppercase"
-          >
-            {t(trans.keepScrolling, language)}
-          </motion.div>
         </motion.div>
 
-        {/* --- LAYER 3: FINAL DESCRIPTION & BUTTON --- */}
+        {/* --- LAYER 3: THE WARP TUNNEL (5 Items) --- */}
+        
+        {/* 1. LOGIC (White Icon) */}
+        <WarpStoryNode 
+          scrollYProgress={scrollYProgress}
+          startRange={0.40} endRange={0.49}
+          title={t(trans.logicTitle, language)}
+          desc={t(trans.logicDesc, language)}
+          icon={BookOpen}
+          color="white"
+        />
+
+        {/* 2. HISTORY */}
+        <WarpStoryNode 
+          scrollYProgress={scrollYProgress}
+          startRange={0.49} endRange={0.58}
+          title={t(trans.historyTitle, language)}
+          desc={t(trans.historyDesc, language)}
+          icon={Scroll}
+          color="amber"
+        />
+
+        {/* 3. SCIENCE */}
+        <WarpStoryNode 
+          scrollYProgress={scrollYProgress}
+          startRange={0.58} endRange={0.67}
+          title={t(trans.scienceTitle, language)}
+          desc={t(trans.scienceDesc, language)}
+          icon={Microscope}
+          color="cyan"
+        />
+
+        {/* 4. BEAUTY (Gold) */}
+        <WarpStoryNode 
+          scrollYProgress={scrollYProgress}
+          startRange={0.67} endRange={0.76}
+          title={t(trans.beautyTitle, language)}
+          desc={t(trans.beautyDesc, language)}
+          icon={Church}
+          color="yellow" 
+        />
+
+        {/* 5. JOURNEY (Purple) */}
+        <WarpStoryNode 
+          scrollYProgress={scrollYProgress}
+          startRange={0.76} endRange={0.85}
+          title={t(trans.journeyTitle, language)}
+          desc={t(trans.journeyDesc, language)}
+          icon={Map}
+          color="purple"
+        />
+
+
+        {/* --- LAYER 4: FINALE (NO BLUR) --- */}
         <motion.div
           key={`final-container-${language}`}
           className="absolute flex flex-col items-center justify-center text-center w-full px-4 left-0 right-0 mx-auto"
           style={{
-            // FIX: If NOT mobile, push down to 55%
             top: isMobile ? "50%" : "55%",
             y: "-50%",
             scale: finalScale,
@@ -382,7 +518,7 @@ export default function Home({ onStart }: HomeProps) {
             pointerEvents: pointerEvents,
           }}
         >
-          <div className="bg-black/40 backdrop-blur-md border border-blue-900/40 p-6 py-8 md:p-12 rounded-3xl text-center shadow-[0_0_50px_-10px_rgba(76,29,149,0.3)] w-[90vw] max-w-2xl flex flex-col items-center gap-6 z-20">
+          <div className="bg-black/90 border border-blue-900/40 p-6 py-8 md:p-12 rounded-3xl text-center shadow-[0_0_50px_-10px_rgba(76,29,149,0.3)] w-[90vw] max-w-2xl flex flex-col items-center gap-6 z-20">
             <div className="w-full max-h-[60vh] overflow-y-auto scrollbar-none px-2">
               <p className="text-gray-100 text-base md:text-xl leading-relaxed font-medium text-center drop-shadow-lg break-words whitespace-normal">
                 {t(trans.description, language)}

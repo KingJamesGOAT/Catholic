@@ -327,6 +327,80 @@ export const translations = {
       de: "Weiter scrollen",
     },
 
+
+    
+    // 1. LOGIC
+    logicTitle: {
+      en: "Scripture & Tradition",
+      fr: "Écriture et Tradition",
+      es: "Escritura y Tradición",
+      de: "Schrift und Tradition",
+    },
+    logicDesc: {
+      en: "Is the Bible alone enough? Discover why the earliest Christians relied on both the written Word and the living Tradition.",
+      fr: "La Bible seule suffit-elle ? Découvrez pourquoi les premiers chrétiens s'appuyaient à la fois sur la Parole écrite et la Tradition vivante.",
+      es: "¿Es suficiente la Biblia sola? Descubre por qué los primeros cristianos confiaban tanto en la Palabra escrita como en la Tradición viva.",
+      de: "Reicht die Bibel allein? Entdecken Sie, warum die ersten Christen sich sowohl auf das geschriebene Wort als auch auf die lebendige Tradition stützten.",
+    },
+
+    // 2. HISTORY
+    historyTitle: {
+      en: "The Early Church",
+      fr: "L'Église Primitive",
+      es: "La Iglesia Primitiva",
+      de: "Die Frühe Kirche",
+    },
+    historyDesc: {
+      en: "History doesn't lie. Read the actual writings of the men taught by the Apostles themselves.",
+      fr: "L'histoire ne ment pas. Lisez les écrits réels des hommes enseignés par les Apôtres eux-mêmes.",
+      es: "La historia no miente. Lee los escritos reales de los hombres enseñados por los propios Apóstoles.",
+      de: "Die Geschichte lügt nicht. Lesen Sie die tatsächlichen Schriften der Männer, die von den Aposteln selbst gelehrt wurden.",
+    },
+
+    // 3. SCIENCE
+    scienceTitle: {
+      en: "Science & Miracles",
+      fr: "Science et Miracles",
+      es: "Ciencia y Milagros",
+      de: "Wissenschaft und Wunder",
+    },
+    scienceDesc: {
+      en: "Faith involves reason. Explore Eucharistic miracles and relics examined by modern science.",
+      fr: "La foi implique la raison. Explorez les miracles eucharistiques et les reliques examinées par la science moderne.",
+      es: "La fe implica razón. Explora milagros eucarísticos y reliquias examinadas por la ciencia moderna.",
+      de: "Glaube beinhaltet Vernunft. Erforschen Sie eucharistische Wunder und Reliquien, die von der modernen Wissenschaft untersucht wurden.",
+    },
+
+    // 4. BEAUTY (Latin Mass)
+    beautyTitle: {
+      en: "The Latin Mass",
+      fr: "La Messe en Latin",
+      es: "La Misa en Latín",
+      de: "Die Lateinische Messe",
+    },
+    beautyDesc: {
+      en: "Step out of time. Experience the liturgy that has sanctified saints for centuries.",
+      fr: "Sortez du temps. Vivez la liturgie qui a sanctifié les saints pendant des siècles.",
+      es: "Sal del tiempo. Experimenta la liturgia que ha santificado a los santos durante siglos.",
+      de: "Treten Sie aus der Zeit heraus. Erleben Sie die Liturgie, die Heilige über Jahrhunderte geheiligt hat.",
+    },
+
+    // 5. JOURNEY (New Section)
+    journeyTitle: {
+      en: "The Journey",
+      fr: "Le Parcours",
+      es: "El Viaje",
+      de: "Die Reise",
+    },
+    journeyDesc: {
+      en: "A systematic exploration of 15 essential topics, from the existence of God to the dogmas of the Faith.",
+      fr: "Une exploration systématique de 15 sujets essentiels, de l'existence de Dieu aux dogmes de la Foi.",
+      es: "Una exploración sistemática de 15 temas esenciales, desde la existencia de Dios hasta los dogmas de la Fe.",
+      de: "Eine systematische Erkundung von 15 wesentlichen Themen, von der Existenz Gottes bis zu den Dogmen des Glaubens.",
+    },
+
+    
+
     quote: {
       en: "You will know how people ought to conduct themselves in God’s household, which is the <span class='text-blue-400'>church</span> of the living God, <span class='text-blue-400'>the pillar and foundation of the truth.</span>",
       fr: "Tu sauras comment il faut se conduire dans la maison de Dieu, qui est l'<span class='text-blue-400'>Église</span> du Dieu vivant, <span class='text-blue-400'>la colonne et l'appui de la vérité.</span>",
