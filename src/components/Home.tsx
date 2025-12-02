@@ -186,14 +186,19 @@ const ParticleCanvas = ({ mode }: { mode: AnimationMode }) => {
         return;
       }
 
+      
       // 3. DRAW STARS
       const stars = starsRef.current;
       
       stars.forEach((star) => {
-        let speed = 1.5 * safeTimeScale;
+        // Lower speed for mobile (e.g. 0.5), standard for desktop (1.5)
+        let speed = (isMobile ? 0.5 : 1.5) * safeTimeScale;
         const currentMode = modeRef.current;
 
         if (currentMode === 'implode') {
+
+
+          
             // SUCK INWARDS
             star.z += speed * 15; 
         } else {
