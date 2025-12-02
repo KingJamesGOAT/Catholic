@@ -327,7 +327,6 @@ export const translations = {
       de: "Weiter scrollen",
     },
 
-    
     quote: {
       en: "You will know how people ought to conduct themselves in God’s household, which is the <span class='text-blue-400'>church</span> of the living God, <span class='text-blue-400'>the pillar and foundation of the truth.</span>",
       fr: "Tu sauras comment il faut se conduire dans la maison de Dieu, qui est l'<span class='text-blue-400'>Église</span> du Dieu vivant, <span class='text-blue-400'>la colonne et l'appui de la vérité.</span>",
@@ -3324,6 +3323,7 @@ export const translations = {
       es: "Los católicos argumentan que dado que el canon de las Escrituras es <strong>infalible</strong>, el proceso por el cual fue reconocido también debe ser <strong>infalible</strong>. Pero los protestantes a menudo responden con una de dos respuestas:",
       de: "Katholiken argumentieren, dass da der Kanon der Schrift <strong>unfehlbar</strong> ist, auch der Prozess, durch den er erkannt wurde, <strong>unfehlbar</strong> sein muss. Aber Protestanten antworten oft mit einer von zwei Antworten:",
     },
+
     response1: {
       en: "\"We don't need infallibility to know something is true. I'm fallible, yet I know God is infallible.\"",
       fr: "« Nous n'avons pas besoin d'infaillibilité pour savoir que quelque chose est vrai. Je suis faillible, mais je sais que Dieu est infaillible. »",
@@ -3331,10 +3331,10 @@ export const translations = {
       de: '„Wir brauchen keine Unfehlbarkeit, um zu wissen, dass etwas wahr ist. Ich bin fehlbar, aber ich weiß, dass Gott unfehlbar ist."',
     },
     response2: {
-      en: '"We can use historical methods—manuscript evidence, early church usage, and apostolic authorship—to identify the correct books."',
-      fr: "« Nous pouvons utiliser des méthodes historiques — preuves manuscrites, usage de l'Église primitive et paternité apostolique — pour identifier les bons livres. »",
-      es: '"Podemos usar métodos históricos—evidencia de manuscritos, uso de la iglesia primitiva y autoría apostólica—para identificar los libros correctos."',
-      de: '„Wir können historische Methoden verwenden — Manuskriptbeweise, frühe kirchliche Nutzung und apostolische Autorschaft — um die richtigen Bücher zu identifizieren."',
+      en: '"We can use historical methods, including manuscript evidence, early church usage, and apostolic authorship, to identify the correct books."',
+      fr: "« Nous pouvons utiliser des méthodes historiques, comme les preuves manuscrites, l'usage de l'Église primitive et la paternité apostolique, pour identifier les bons livres. »",
+      es: '"Podemos usar métodos históricos, como evidencia de manuscritos, uso de la iglesia primitiva y autoría apostólica, para identificar los libros correctos."',
+      de: '„Wir können historische Methoden verwenden, wie Manuskriptbeweise, frühe kirchliche Nutzung und apostolische Autorschaft, um die richtigen Bücher zu identifizieren."',
     },
     introPara3: {
       en: "At first glance, these seem reasonable. But a closer look reveals significant logical and theological problems.",
@@ -3349,10 +3349,10 @@ export const translations = {
       de: "Diese Untersuchung prüft zwei Hauptthemen:",
     },
     issue1: {
-      en: 'The <strong>"You Lose, So I Win" fallacy</strong>—a logical misstep common in critiques of Catholicism.',
-      fr: "Le <strong>sophisme « Vous perdez, donc je gagne »</strong> — un faux pas logique courant dans les critiques du catholicisme.",
-      es: 'La <strong>falacia "Tú pierdes, luego yo gano"</strong>—un error lógico común en las críticas al catolicismo.',
-      de: 'Der <strong>„Du verlierst, also gewinne ich" Fehlschluss</strong> — ein logischer Fehltritt, der in Kritiken am Katholizismus häufig vorkommt.',
+      en: 'The <strong>"You Lose, So I Win" fallacy</strong>, a logical misstep common in critiques of Catholicism.',
+      fr: "Le <strong>sophisme « Vous perdez, donc je gagne »</strong>, un faux pas logique courant dans les critiques du catholicisme.",
+      es: 'La <strong>falacia "Tú pierdes, luego yo gano"</strong>, un error lógico común en las críticas al catolicismo.',
+      de: 'Der <strong>„Du verlierst, also gewinne ich" Fehlschluss</strong>, ein logischer Fehltritt, der in Kritiken am Katholizismus häufig vorkommt.',
     },
     issue2: {
       en: 'The <strong>limits of appealing to historical or "scientific" methods</strong> as the sole basis for identifying the canon of Scripture.',
