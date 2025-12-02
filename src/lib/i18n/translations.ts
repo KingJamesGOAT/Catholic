@@ -191,10 +191,10 @@ export const translations = {
   // Navigation & Common
   nav: {
     title: {
-      en: "Catholic Foundations",
-      fr: "Fondements Catholiques",
-      es: "Fundamentos Católicos",
-      de: "Katholische Grundlagen",
+      en: "Catholic Route",
+      fr: "Parcours Catholique",
+      es: "Ruta Católica",
+      de: "Katholischer Weg",
     },
     subtitle: {
       en: "Your Journey to Truth",
