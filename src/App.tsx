@@ -412,38 +412,31 @@ function AppContent() {
   useEffect(() => {
     switch (currentView) {
       case "home":
-        document.title = "Home | Catholic Foundations";
+        // Matches the detailed SEO title you set in index.html
+        document.title = "Catholic Route | Apologetics, Foundations & Faith Journey";
         break;
       case "early-church":
-        document.title =
-          "Early Church Fathers | Catholic Foundations";
+        document.title = "Early Church Fathers | Catholic Route";
         break;
       case "science":
-        document.title =
-          "Science & Miracles | Catholic Foundations";
+        document.title = "Science & Miracles | Catholic Route";
         break;
       case "glossary":
-        document.title =
-          "Catholic Glossary | Catholic Foundations";
+        document.title = "Catholic Glossary | Catholic Route";
         break;
       case "doctrine":
-        document.title =
-          "Doctrine Explorer | Catholic Foundations";
+        document.title = "Doctrine Explorer | Catholic Route";
         break;
       case "tlm":
-        document.title =
-          "The Latin Mass | Catholic Foundations";
+        document.title = "The Latin Mass | Catholic Route";
         break;
       case "topic":
-        if (
-          currentTopicIndex >= 0 &&
-          topics[currentTopicIndex]
-        ) {
-          document.title = `${topics[currentTopicIndex].title} | Catholic Foundations`;
+        if (currentTopicIndex >= 0 && topics[currentTopicIndex]) {
+          document.title = `${topics[currentTopicIndex].title} | Catholic Route`;
         }
         break;
       default:
-        document.title = "Catholic Foundations";
+        document.title = "Catholic Route";
     }
   }, [currentTopicIndex, currentView]);
 
