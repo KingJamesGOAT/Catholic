@@ -41,7 +41,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.3 }}
         >
           <h1 className="text-white mb-6 tracking-wide">
-            Catholic Foundations
+            Catholic Route
           </h1>
           
           <motion.p
