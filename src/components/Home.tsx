@@ -17,7 +17,7 @@ interface HomeProps {
 }
 
 // ------------------------------------------------------------------
-// 1. HELPER: WORD-AWARE SPLIT TEXT (Only for Title)
+// 1. HELPER: WORD-AWARE SPLIT TEXT
 // ------------------------------------------------------------------
 const SplitStaggeredText = ({
   htmlContent,
@@ -361,12 +361,13 @@ export default function Home({ onStart }: HomeProps) {
   // --- MOBILE ANIMATION ---
   useEffect(() => {
     if (isMobile) {
-        // Locking overflow allows the "Tap" experience but prevents the address bar from hiding
+        // Locking overflow allows the "Tap" experience
         document.body.style.overflow = "hidden";
         
+        // This drives the blue bar and the warp animation based on the 'Stage'
         animate(scrollYProgress, MOBILE_STAGES[mobileStage], { 
             duration: 1.2, 
-            ease: [0.16, 1, 0.3, 1] // Cubic-bezier for smooth landing
+            ease: [0.16, 1, 0.3, 1] 
         });
     } else {
         document.body.style.overflow = "";
@@ -432,7 +433,7 @@ export default function Home({ onStart }: HomeProps) {
         onClick={handleMobileTap}
     >
 
-      {/* --- FIX: Increased Z-Index to 60 to appear above ProgressTracker (z-30) --- */}
+      {/* --- BLUE PROGRESS BAR (Z-Index 60 to fix visibility) --- */}
       <motion.div
         className="fixed top-16 md:top-20 left-0 right-0 h-1 bg-blue-600 origin-left z-[60]"
         style={{ scaleX: scrollYProgress }}
