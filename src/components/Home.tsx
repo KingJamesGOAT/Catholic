@@ -433,7 +433,10 @@ export default function Home({ onStart }: HomeProps) {
         onClick={handleMobileTap}
     >
 
-      {/* --- BLUE PROGRESS BAR (Z-Index 60 to fix visibility) --- */}
+      {/* --- BLUE PROGRESS BAR --- */}
+      {/* Z-Index set to 60 to ensure it floats ABOVE the ProgressTracker (z-30) and Navbar.
+          scaleX is tied to scrollYProgress, which is driven by taps on mobile.
+      */}
       <motion.div
         className="fixed top-16 md:top-20 left-0 right-0 h-1 bg-blue-600 origin-left z-[60]"
         style={{ scaleX: scrollYProgress }}
