@@ -125,17 +125,28 @@
 }
 
 @layer base {
+  html {
+    /* UPDATED: Prevents text size inflation on mobile browsers like Perplexity */
+    -webkit-text-size-adjust: 100%;
+    /* UPDATED: Ensure background is consistent in overscroll areas */
+    background-color: black; 
+  }
+
   * {
     @apply border-border outline-ring/50;
   }
 
   body {
     @apply bg-background text-foreground;
+    /* UPDATED: Use dynamic viewport height to fix white bar issues */
+    min-height: 100dvh; 
+    /* UPDATED: Ensure background covers the safe area */
+    background-color: var(--background); 
   }
 }
 
 /**
- * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ * Base typography.
  */
 @layer base {
   :where(
@@ -195,7 +206,7 @@ html {
   font-size: var(--font-size);
 }
 
-/* Custom scrollbar styling for Table of Contents */
+/* Custom scrollbar styling */
 @layer utilities {
   .scrollbar-thin::-webkit-scrollbar {
     width: 6px;
@@ -214,7 +225,6 @@ html {
     background: #4b5563;
   }
 
-  /* Firefox scrollbar */
   .scrollbar-thin {
     scrollbar-width: thin;
     scrollbar-color: #374151 transparent;
