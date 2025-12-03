@@ -53,7 +53,10 @@ export default function Navigation({ activeSection, scrolled, onSearchClick }: N
               className="cursor-pointer"
               onClick={() => scrollToSection('home')}
             >
-              <h1 className="text-white tracking-wide">Catholic Foundations</h1>
+              {/* UPDATED: Explicit text sizing to prevent inconsistencies across mobile browsers */}
+              <h1 className="text-xl md:text-2xl font-bold text-white tracking-wide">
+                Catholic Foundations
+              </h1>
             </motion.div>
 
             {/* Desktop Navigation */}
