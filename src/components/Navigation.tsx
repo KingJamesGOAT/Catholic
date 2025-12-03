@@ -50,11 +50,15 @@ export default function Navigation({ activeSection, scrolled, onSearchClick }: N
             {/* Logo */}
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="cursor-pointer"
+              className="cursor-pointer flex-shrink-0" // Added flex-shrink-0 to prevent crushing
               onClick={() => scrollToSection('home')}
             >
-              {/* UPDATED: text-lg for mobile (smaller/one-line), font-extrabold (thicker/pro) */}
-              <h1 className="text-lg md:text-2xl font-extrabold text-white tracking-wide">
+              {/* UPDATED: 
+                  - whitespace-nowrap: Forces single line 
+                  - text-base: Slightly smaller to fit mobile width 
+                  - font-extrabold: Thicker "pro" look
+              */}
+              <h1 className="text-base md:text-2xl font-extrabold text-white tracking-wide whitespace-nowrap">
                 Catholic Foundations
               </h1>
             </motion.div>
@@ -78,7 +82,7 @@ export default function Navigation({ activeSection, scrolled, onSearchClick }: N
             </div>
 
             {/* Search and Mobile Menu */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 flex-shrink-0">
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
