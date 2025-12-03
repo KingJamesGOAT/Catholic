@@ -59,7 +59,7 @@ export default function Navigation({ activeSection, scrolled, onSearchClick }: N
                   - font-extrabold: Thicker "pro" look
               */}
               <h1 className="text-base md:text-2xl font-extrabold text-white tracking-wide whitespace-nowrap">
-                Catholic Foundations
+                Catholic Route
               </h1>
             </motion.div>
 
