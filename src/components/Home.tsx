@@ -4,6 +4,7 @@ import {
   useTransform,
   useMotionValue,
   MotionValue,
+  animate,
 } from "motion/react";
 import { Button } from "./ui/button";
 import { ChevronRight, BookOpen, Scroll, Microscope, Church, Map } from "lucide-react";
@@ -105,7 +106,6 @@ const ParticleCanvas = ({ mode }: { mode: AnimationMode }) => {
   const isMobile = useIsMobile();
   const mouseRef = useRef({ x: -9999, y: -9999 });
   
-  // PERSISTENT STAR STORAGE (Fixes the reset issue)
   const starsRef = useRef<any[]>([]);
   const initializedRef = useRef(false);
 
@@ -127,13 +127,13 @@ const ParticleCanvas = ({ mode }: { mode: AnimationMode }) => {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
+    // Reduce particle count on mobile for performance
     const PARTICLE_COUNT = isMobile ? 600 : 1200;
     const Z_DEPTH = 1000;
     const STAR_COLOR = "#3b82f6"; 
     let width = window.innerWidth;
     let height = window.innerHeight;
 
-    // Initialize ONCE
     if (!initializedRef.current) {
         starsRef.current = Array.from({ length: PARTICLE_COUNT }).map(() => ({
             x: (Math.random() - 0.5) * width * 3,
@@ -154,7 +154,6 @@ const ParticleCanvas = ({ mode }: { mode: AnimationMode }) => {
 
     let lastTime = performance.now();
     const TARGET_FPS = 60;
-    const BASE_SPEED = 1.5;
 
     const render = (currentTime: number) => {
       const deltaTime = Math.max(0, currentTime - lastTime);
@@ -163,7 +162,7 @@ const ParticleCanvas = ({ mode }: { mode: AnimationMode }) => {
       const timeScale = deltaTime / (1000 / TARGET_FPS);
       const safeTimeScale = Math.min(timeScale, 2.0);
 
-      // 1. ALWAYS DRAW BACKGROUND (The Event Horizon)
+      // Draw Background
       ctx.fillStyle = "#000000";
       ctx.fillRect(0, 0, width, height);
 
@@ -180,33 +179,24 @@ const ParticleCanvas = ({ mode }: { mode: AnimationMode }) => {
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, width, height);
 
-      // 2. IF VOID, SKIP PHYSICS
       if (modeRef.current === 'void') {
         requestAnimationFrame(render);
         return;
       }
 
-      
-      // 3. DRAW STARS
       const stars = starsRef.current;
       
       stars.forEach((star) => {
-        // Lower speed for mobile (e.g. 0.5), standard for desktop (1.5)
+        // Slower speed on mobile
         let speed = (isMobile ? 0.5 : 1.5) * safeTimeScale;
         const currentMode = modeRef.current;
 
         if (currentMode === 'implode') {
-
-
-          
-            // SUCK INWARDS
             star.z += speed * 15; 
         } else {
-            // Normal & Explode same speed (Original Speed)
             star.z -= speed;
         }
 
-        // Bounds check
         if (star.z <= 0) {
             star.z = Z_DEPTH;
             star.x = (Math.random() - 0.5) * width * 2;
@@ -221,7 +211,6 @@ const ParticleCanvas = ({ mode }: { mode: AnimationMode }) => {
         const px = star.x * k + width / 2;
         const py = star.y * k + height / 2;
 
-        // Mouse Interaction
         if (!isMobile && (currentMode === 'normal' || currentMode === 'explode')) {
           const dx = px - mouseRef.current.x;
           const dy = py - mouseRef.current.y;
@@ -272,7 +261,7 @@ const ParticleCanvas = ({ mode }: { mode: AnimationMode }) => {
 };
 
 // ------------------------------------------------------------------
-// 3. WARP STORY NODE (NO BLUR)
+// 3. WARP STORY NODE
 // ------------------------------------------------------------------
 const WarpStoryNode = ({
   scrollYProgress,
@@ -297,23 +286,18 @@ const WarpStoryNode = ({
   const stayStart = entryEnd;
   const stayEnd = endRange - (span * 0.3);
   
-  // SCALE: Big -> Normal -> Normal -> Tiny
   const scale = useTransform(
     scrollYProgress,
     [startRange, stayStart, stayEnd, endRange],
     [2.5, 1, 1, 0] 
   );
 
-  // OPACITY: Fade In -> Hold -> Hold -> Fade Out
   const opacity = useTransform(
     scrollYProgress,
     [startRange, stayStart, stayEnd, endRange],
     [0, 1, 1, 0]
   );
 
-  // NO BLUR - Removed for sharpness
-
-  // Dynamic class for white or colored icons
   const iconClass = color === "white" 
     ? "text-white md:w-12 md:h-12" 
     : `text-${color}-500 md:w-12 md:h-12`;
@@ -349,9 +333,26 @@ export default function Home({ onStart }: HomeProps) {
   
   const [mode, setMode] = useState<AnimationMode>('normal');
 
+  // --- MOBILE STATE ---
+  const [mobileStage, setMobileStage] = useState(0);
+  
+  // Precise checkpoints for the mobile "slides"
+  const MOBILE_STAGES = [
+    0,      // 0: Title
+    0.28,   // 1: Quote
+    0.445,  // 2: Logic
+    0.535,  // 3: History
+    0.625,  // 4: Science
+    0.715,  // 5: Beauty
+    0.805,  // 6: Journey
+    1.0     // 7: Final
+  ];
+
+  // --- DESKTOP SCROLLING ---
   useEffect(() => {
+    if (isMobile) return; 
+
     const handleScroll = () => {
-      // 950vh to fit the journey
       const totalScroll = document.body.scrollHeight - window.innerHeight;
       const currentScroll = window.scrollY;
       const progress = Math.min(Math.max(currentScroll / totalScroll, 0), 1);
@@ -359,14 +360,51 @@ export default function Home({ onStart }: HomeProps) {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [scrollYProgress]);
+  }, [scrollYProgress, isMobile]);
+
+  // --- MOBILE ANIMATION ---
+  useEffect(() => {
+    if (isMobile) {
+        // Lock scroll on mobile to treat it like a slideshow
+        document.body.style.overflow = "hidden";
+        
+        // Smooth spring animation to the next stage
+        animate(scrollYProgress, MOBILE_STAGES[mobileStage], { 
+            duration: 1.2, 
+            ease: [0.16, 1, 0.3, 1] // Cubic-bezier for smooth landing
+        });
+    } else {
+        document.body.style.overflow = "";
+    }
+
+    return () => { document.body.style.overflow = ""; };
+  }, [isMobile, mobileStage, scrollYProgress]);
+
+  // --- MOBILE TAP HANDLER ---
+  const handleMobileTap = (e: React.MouseEvent) => {
+      if (!isMobile) return;
+      
+      const { clientY } = e;
+      const windowHeight = window.innerHeight;
+      
+      // Top 30% = Go Back
+      if (clientY < windowHeight * 0.30) {
+          setMobileStage(prev => Math.max(0, prev - 1));
+      } 
+      // Bottom 70% = Go Forward
+      else {
+          if (mobileStage < MOBILE_STAGES.length - 1) {
+              setMobileStage(prev => prev + 1);
+          }
+      }
+  };
 
   // --- ANIMATION MODES ---
   useEffect(() => {
     return scrollYProgress.on("change", (latest) => {
       if (latest < 0.15) {
         setMode('normal');
-      } else if (latest < 0.40) { // Reduced Quote Duration (Ended at 0.40 instead of 0.45)
+      } else if (latest < 0.40) {
         setMode('implode');     
       } else if (latest < 0.85) { 
         setMode('void');        
@@ -376,21 +414,14 @@ export default function Home({ onStart }: HomeProps) {
     });
   }, [scrollYProgress]);
 
-  const handleStartClick = () => {
+  const handleStartClick = (e: React.MouseEvent) => {
+    e.stopPropagation(); 
     onStart();
   };
 
   // --- RANGES ---
   const titleOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
-  
-  // SHORTER QUOTE DURATION (80% of original)
-  // Was 0.20 to 0.45 (25% span). Now 0.20 to 0.36 (16% span).
   const quoteOpacity = useTransform(scrollYProgress, [0.15, 0.20, 0.36, 0.40], [0, 1, 1, 0]); 
-
-  // START WARP earlier (0.40)
-  // Gap from 0.40 to 0.85 = 0.45 span
-  // 5 Items -> 0.09 per item
-
   const finalOpacity = useTransform(scrollYProgress, [0.85, 0.95], [0, 1]);
   const finalScale = useTransform(scrollYProgress, [0.85, 0.98], [0, 1]);
 
@@ -402,16 +433,17 @@ export default function Home({ onStart }: HomeProps) {
   }, [scrollYProgress]);
 
   return (
-    <div className="relative h-[950vh] bg-black">
+    <div 
+        className={isMobile ? "fixed inset-0 bg-black overflow-hidden touch-manipulation" : "relative h-[950vh] bg-black"}
+        onClick={handleMobileTap}
+    >
 
-    {/* --- NEW: READING PROGRESS BAR --- */}
+    {/* --- PROGRESS BAR --- */}
       <motion.div
         className="fixed top-16 md:top-20 left-0 right-0 h-1 bg-blue-600 origin-left z-50"
         style={{ scaleX: scrollYProgress }}
       />
-      {/* --------------------------------- */}
 
-      
       <ParticleCanvas mode={mode} />
 
       <div className="fixed inset-0 flex flex-col items-center justify-center z-10 pointer-events-none overflow-hidden">
@@ -434,7 +466,7 @@ export default function Home({ onStart }: HomeProps) {
             style={{ opacity: titleOpacity }}
             className="absolute -bottom-32 left-0 right-0 text-center text-blue-400/60 animate-bounce text-xs md:text-sm font-medium tracking-widest uppercase"
           >
-            {t(trans.scrollToBegin, language)}
+             {isMobile ? t(trans.tapToBegin, language) : t(trans.scrollToBegin, language)}
           </motion.div>
         </motion.div>
 
@@ -453,14 +485,14 @@ export default function Home({ onStart }: HomeProps) {
               — {t(trans.quoteSource, language)}
             </p>
             <div className="absolute -bottom-16 left-0 right-0 text-center text-blue-400/60 animate-bounce text-xs font-medium uppercase">
-              {t(trans.keepScrolling, language)}
+               {isMobile ? t(trans.tapToContinue, language) : t(trans.keepScrolling, language)}
             </div>
           </div>
         </motion.div>
 
-        {/* --- LAYER 3: THE WARP TUNNEL (5 Items) --- */}
+        {/* --- LAYER 3: THE WARP TUNNEL --- */}
         
-        {/* 1. LOGIC (White Icon) */}
+        {/* 1. LOGIC */}
         <WarpStoryNode 
           scrollYProgress={scrollYProgress}
           startRange={0.40} endRange={0.49}
@@ -490,7 +522,7 @@ export default function Home({ onStart }: HomeProps) {
           color="cyan"
         />
 
-        {/* 4. BEAUTY (Gold) */}
+        {/* 4. BEAUTY */}
         <WarpStoryNode 
           scrollYProgress={scrollYProgress}
           startRange={0.67} endRange={0.76}
@@ -500,7 +532,7 @@ export default function Home({ onStart }: HomeProps) {
           color="yellow" 
         />
 
-        {/* 5. JOURNEY (Purple) */}
+        {/* 5. JOURNEY */}
         <WarpStoryNode 
           scrollYProgress={scrollYProgress}
           startRange={0.76} endRange={0.85}
@@ -511,7 +543,7 @@ export default function Home({ onStart }: HomeProps) {
         />
 
 
-        {/* --- LAYER 4: FINALE (NO BLUR) --- */}
+        {/* --- LAYER 4: FINALE --- */}
         <motion.div
           key={`final-container-${language}`}
           className="absolute flex flex-col items-center justify-center text-center w-full px-4 left-0 right-0 mx-auto"
@@ -533,7 +565,7 @@ export default function Home({ onStart }: HomeProps) {
             <Button
               onClick={handleStartClick}
               size="lg"
-              className="shrink-0 bg-white text-black hover:bg-blue-50 hover:text-blue-900 text-lg md:text-xl px-10 py-6 md:px-12 md:py-8 rounded-full transition-all duration-300 shadow-[0_0_60px_-15px_rgba(255,255,255,0.5)] transform hover:scale-105 active:scale-95"
+              className="shrink-0 bg-white text-black hover:bg-blue-50 hover:text-blue-900 text-lg md:text-xl px-10 py-6 md:px-12 md:py-8 rounded-full transition-all duration-300 shadow-[0_0_60px_-15px_rgba(255,255,255,0.5)] transform hover:scale-105 active:scale-95 pointer-events-auto"
             >
               {t(trans.startJourney, language)}
               <ChevronRight className="ml-3 w-5 h-5 md:w-6 md:h-6" />
