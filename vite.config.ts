@@ -9,7 +9,6 @@ export default defineConfig({
     Sitemap({ 
       hostname: 'https://catholicroute.com', 
       outDir: 'build', // <--- THIS LINE FIXES THE ERROR
-      dynamicRoutes: ['/'] 
     }) 
   ],
   resolve: {
