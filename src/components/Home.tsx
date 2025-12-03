@@ -97,7 +97,7 @@ const SplitStaggeredText = ({
 };
 
 // ------------------------------------------------------------------
-// 2. PARTICLE ENGINE (Persistent & Warp Capable)
+// 2. PARTICLE ENGINE
 // ------------------------------------------------------------------
 type AnimationMode = 'normal' | 'implode' | 'void' | 'explode';
 
@@ -127,7 +127,6 @@ const ParticleCanvas = ({ mode }: { mode: AnimationMode }) => {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    // Reduce particle count on mobile for performance
     const PARTICLE_COUNT = isMobile ? 600 : 1200;
     const Z_DEPTH = 1000;
     const STAR_COLOR = "#3b82f6"; 
@@ -158,11 +157,9 @@ const ParticleCanvas = ({ mode }: { mode: AnimationMode }) => {
     const render = (currentTime: number) => {
       const deltaTime = Math.max(0, currentTime - lastTime);
       lastTime = currentTime;
-
       const timeScale = deltaTime / (1000 / TARGET_FPS);
       const safeTimeScale = Math.min(timeScale, 2.0);
 
-      // Draw Background
       ctx.fillStyle = "#000000";
       ctx.fillRect(0, 0, width, height);
 
@@ -187,7 +184,6 @@ const ParticleCanvas = ({ mode }: { mode: AnimationMode }) => {
       const stars = starsRef.current;
       
       stars.forEach((star) => {
-        // Slower speed on mobile
         let speed = (isMobile ? 0.5 : 1.5) * safeTimeScale;
         const currentMode = modeRef.current;
 
@@ -365,10 +361,8 @@ export default function Home({ onStart }: HomeProps) {
   // --- MOBILE ANIMATION ---
   useEffect(() => {
     if (isMobile) {
-        // Lock scroll on mobile to treat it like a slideshow
         document.body.style.overflow = "hidden";
         
-        // Smooth spring animation to the next stage
         animate(scrollYProgress, MOBILE_STAGES[mobileStage], { 
             duration: 1.2, 
             ease: [0.16, 1, 0.3, 1] // Cubic-bezier for smooth landing
@@ -387,11 +381,11 @@ export default function Home({ onStart }: HomeProps) {
       const { clientY } = e;
       const windowHeight = window.innerHeight;
       
-      // Top 30% = Go Back
+      // Top 30% of screen goes BACK (up)
       if (clientY < windowHeight * 0.30) {
           setMobileStage(prev => Math.max(0, prev - 1));
       } 
-      // Bottom 70% = Go Forward
+      // Bottom 70% of screen goes FORWARD (down)
       else {
           if (mobileStage < MOBILE_STAGES.length - 1) {
               setMobileStage(prev => prev + 1);
@@ -419,7 +413,6 @@ export default function Home({ onStart }: HomeProps) {
     onStart();
   };
 
-  // --- RANGES ---
   const titleOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
   const quoteOpacity = useTransform(scrollYProgress, [0.15, 0.20, 0.36, 0.40], [0, 1, 1, 0]); 
   const finalOpacity = useTransform(scrollYProgress, [0.85, 0.95], [0, 1]);
@@ -438,7 +431,6 @@ export default function Home({ onStart }: HomeProps) {
         onClick={handleMobileTap}
     >
 
-    {/* --- PROGRESS BAR --- */}
       <motion.div
         className="fixed top-16 md:top-20 left-0 right-0 h-1 bg-blue-600 origin-left z-50"
         style={{ scaleX: scrollYProgress }}
@@ -492,7 +484,6 @@ export default function Home({ onStart }: HomeProps) {
 
         {/* --- LAYER 3: THE WARP TUNNEL --- */}
         
-        {/* 1. LOGIC */}
         <WarpStoryNode 
           scrollYProgress={scrollYProgress}
           startRange={0.40} endRange={0.49}
@@ -502,7 +493,6 @@ export default function Home({ onStart }: HomeProps) {
           color="white"
         />
 
-        {/* 2. HISTORY */}
         <WarpStoryNode 
           scrollYProgress={scrollYProgress}
           startRange={0.49} endRange={0.58}
@@ -512,7 +502,6 @@ export default function Home({ onStart }: HomeProps) {
           color="amber"
         />
 
-        {/* 3. SCIENCE */}
         <WarpStoryNode 
           scrollYProgress={scrollYProgress}
           startRange={0.58} endRange={0.67}
@@ -522,7 +511,6 @@ export default function Home({ onStart }: HomeProps) {
           color="cyan"
         />
 
-        {/* 4. BEAUTY */}
         <WarpStoryNode 
           scrollYProgress={scrollYProgress}
           startRange={0.67} endRange={0.76}
@@ -532,7 +520,6 @@ export default function Home({ onStart }: HomeProps) {
           color="yellow" 
         />
 
-        {/* 5. JOURNEY */}
         <WarpStoryNode 
           scrollYProgress={scrollYProgress}
           startRange={0.76} endRange={0.85}
@@ -541,7 +528,6 @@ export default function Home({ onStart }: HomeProps) {
           icon={Map}
           color="purple"
         />
-
 
         {/* --- LAYER 4: FINALE --- */}
         <motion.div
