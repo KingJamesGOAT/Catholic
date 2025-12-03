@@ -327,6 +327,18 @@ export const translations = {
       de: "Weiter scrollen",
     },
 
+    tapToBegin: {
+      en: "Tap to Begin",
+      fr: "Appuyez pour commencer",
+      es: "Toca para comenzar",
+      de: "Tippen zum Beginnen",
+    },
+    tapToContinue: {
+      en: "Tap to Continue",
+      fr: "Appuyez pour continuer",
+      es: "Toca para continuar",
+      de: "Tippen zum Fortfahren",
+    },
 
     
     // 1. LOGIC
