@@ -12,6 +12,7 @@ interface ProgressTrackerProps {
   onNavigate: (index: number) => void;
   onHoverStart: () => void;
   onHoverEnd: () => void;
+  onPreloadTopic?: (index: number) => void; // Added prop
 }
 
 export default function ProgressTracker({
@@ -22,6 +23,7 @@ export default function ProgressTracker({
   onNavigate,
   onHoverStart,
   onHoverEnd,
+  onPreloadTopic, // Destructure new prop
 }: ProgressTrackerProps) {
   const { language } = useLanguage();
   const trans = translations;
@@ -108,6 +110,11 @@ export default function ProgressTracker({
                 <button
                   key={topic.id}
                   onClick={() => onNavigate(index)}
+                  // PRELOAD ON HOVER
+                  onMouseEnter={() => {
+                    onHoverStart(); // Keep the bar open
+                    onPreloadTopic?.(index); // Start downloading the topic
+                  }}
                   className="flex-1 flex flex-col items-center min-w-0 text-left bg-transparent border-none p-0 cursor-pointer group"
                 >
                   <div className="relative flex items-center justify-center w-full mb-3">
@@ -192,6 +199,8 @@ export default function ProgressTracker({
                 <button
                   key={index}
                   onClick={() => onNavigate(index)}
+                  // Preload on mobile touch start just in case, though less useful than hover
+                  onTouchStart={() => onPreloadTopic?.(index)}
                   className="flex-1 h-8 flex items-center justify-center group cursor-pointer outline-none"
                   aria-label={`Go to topic ${index + 1}`}
                 >
