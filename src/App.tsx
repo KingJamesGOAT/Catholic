@@ -408,12 +408,12 @@ function AppContent() {
       window.removeEventListener("keydown", handleKeyDown);
   }, [currentTopicIndex, currentView, isSearchOpen]);
 
-  // 5. Dynamic Document Titles
+ // 5. Dynamic Document Titles
   useEffect(() => {
     switch (currentView) {
       case "home":
-        // Matches the detailed SEO title you set in index.html
-        document.title = "Catholic Route | Apologetics, Foundations & Faith Journey";
+        // CHANGE THIS LINE:
+        document.title = "Catholic Route | Apologetics & Faith Journey";
         break;
       case "early-church":
         document.title = "Early Church Fathers | Catholic Route";
@@ -431,7 +431,10 @@ function AppContent() {
         document.title = "The Latin Mass | Catholic Route";
         break;
       case "topic":
-        if (currentTopicIndex >= 0 && topics[currentTopicIndex]) {
+        if (
+          currentTopicIndex >= 0 &&
+          topics[currentTopicIndex]
+        ) {
           document.title = `${topics[currentTopicIndex].title} | Catholic Route`;
         }
         break;
