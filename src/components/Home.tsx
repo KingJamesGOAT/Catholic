@@ -864,13 +864,26 @@ export default function Home({ onStart }: HomeProps) {
 
 
 
-      <motion.div
-
-        className="fixed top-16 md:top-20 left-0 right-0 h-1 bg-blue-600 origin-left z-50"
-
-        style={{ scaleX: scrollYProgress }}
-
-      />
+      
+      {/* --- PROGRESS BAR --- */}
+{isMobile ? (
+  // MOBILE: Calculate progress based on Step Index (0 to 7)
+  <motion.div
+    className="fixed top-16 md:top-20 left-0 right-0 h-1 bg-blue-600 origin-left z-50"
+    initial={{ scaleX: 0 }}
+    animate={{ 
+      // Uniform progress: Current Step / Max Steps
+      scaleX: mobileStage / (MOBILE_STAGES.length - 1) 
+    }}
+    transition={{ duration: 0.5, ease: "easeInOut" }}
+  />
+) : (
+  // DESKTOP: Existing scroll-based behavior
+  <motion.div
+    className="fixed top-16 md:top-20 left-0 right-0 h-1 bg-blue-600 origin-left z-50"
+    style={{ scaleX: scrollYProgress }}
+  />
+)}>
 
 
 
