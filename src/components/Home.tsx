@@ -361,6 +361,7 @@ export default function Home({ onStart }: HomeProps) {
   // --- MOBILE ANIMATION ---
   useEffect(() => {
     if (isMobile) {
+        // Locking overflow allows the "Tap" experience but prevents the address bar from hiding
         document.body.style.overflow = "hidden";
         
         animate(scrollYProgress, MOBILE_STAGES[mobileStage], { 
@@ -399,11 +400,11 @@ export default function Home({ onStart }: HomeProps) {
       if (latest < 0.15) {
         setMode('normal');
       } else if (latest < 0.40) {
-        setMode('implode');     
-      } else if (latest < 0.85) { 
-        setMode('void');        
+        setMode('implode');      
+      } else if (latest < 0.85) {  
+        setMode('void');         
       } else {
-        setMode('explode');     
+        setMode('explode');      
       }
     });
   }, [scrollYProgress]);
@@ -427,12 +428,13 @@ export default function Home({ onStart }: HomeProps) {
 
   return (
     <div 
-        className={isMobile ? "fixed inset-0 bg-black overflow-hidden touch-manipulation" : "relative h-[950vh] bg-black"}
+        className={isMobile ? "fixed inset-0 bg-black overflow-hidden touch-manipulation min-h-[100dvh]" : "relative h-[950vh] bg-black"}
         onClick={handleMobileTap}
     >
 
+      {/* --- FIX: Increased Z-Index to 60 to appear above ProgressTracker (z-30) --- */}
       <motion.div
-        className="fixed top-16 md:top-20 left-0 right-0 h-1 bg-blue-600 origin-left z-50"
+        className="fixed top-16 md:top-20 left-0 right-0 h-1 bg-blue-600 origin-left z-[60]"
         style={{ scaleX: scrollYProgress }}
       />
 
