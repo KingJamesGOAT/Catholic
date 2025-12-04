@@ -1,13 +1,16 @@
+import { useState, useEffect } from "react";
 import { motion } from "motion/react";
-import { History, PlayCircle } from "lucide-react";
+import { History, PlayCircle, Hash } from "lucide-react";
 import { useLanguage } from "../lib/i18n/LanguageContext";
 import { reformationTranslations } from "../lib/i18n/reformationTranslations";
 import SmartText from "./SmartText";
-import TableOfContents from "./Journey/TableOfContents"; // Using the shared component
+import { cn } from "./ui/utils";
+import { Separator } from "./ui/separator";
 
 export default function ReformationHistory() {
   const { language } = useLanguage();
   const t = reformationTranslations[language];
+  const [activeSection, setActiveSection] = useState("nature");
 
   // Helper for Animation
   const fadeInUp = {
@@ -83,70 +86,94 @@ export default function ReformationHistory() {
     }
   ];
 
-  return (
-    // We use <article> so TableOfContents can find the headers
-    <article className="min-h-screen bg-black text-gray-100 pt-24 pb-32 relative">
+  // Scroll Spy
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 300; 
       
-      {/* 1. THE SHARED TOC COMPONENT (Handles Floating Desktop + Mobile Button) */}
-      <TableOfContents />
+      for (const section of sections) {
+        const element = document.getElementById(section.id);
+        if (element && element.offsetTop <= scrollPosition) {
+          setActiveSection(section.id);
+        }
+      }
+    };
 
-      <div className="container mx-auto px-4 max-w-4xl">
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [sections]);
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 100;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-black text-gray-100 pt-24 pb-16 relative">
+      <div className="container mx-auto px-4 max-w-7xl">
         
-        {/* Page Header */}
+        {/* Header */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="mb-32 text-center"
+          className="mb-24 text-center max-w-4xl mx-auto"
         >
-          <div className="inline-flex items-center justify-center p-4 rounded-full bg-green-900/20 border border-green-800/50 mb-8 shadow-[0_0_30px_-5px_rgba(22,163,74,0.3)]">
-            <History className="w-10 h-10 text-green-400" />
+          <div className="inline-flex items-center justify-center p-3 rounded-full bg-green-900/30 border border-green-800 mb-6">
+            <History className="w-8 h-8 text-green-400" />
           </div>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-8 tracking-tight leading-tight">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">
             {t.title}
           </h1>
-          <p className="text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-xl text-gray-400 leading-relaxed">
             {t.subtitle}
           </p>
         </motion.div>
 
-        {/* Content Sections */}
-        <div className="flex flex-col">
-          {sections.map((section, idx) => (
-            <motion.section
-              key={section.id}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={fadeInUp}
-              transition={{ delay: 0.1 }}
-              // 2. MASSIVE SPACING ADDED HERE (mb-64)
-              className="mb-64 scroll-mt-32"
-            >
-              {/* Section Header */}
-              <div className="mb-16 border-l-4 border-green-600 pl-8 py-2">
-                {/* ID goes here for ToC linking */}
-                <h2 id={section.id} className="text-3xl md:text-4xl font-bold text-white mb-6">
-                  {section.title}
-                </h2>
-                <div className="text-xl text-gray-300 leading-relaxed max-w-3xl">
-                  <SmartText>{section.description}</SmartText>
+        {/* 2-Column Layout */}
+        <div className="flex flex-col lg:flex-row gap-16 relative">
+          
+          {/* Main Content (Left) */}
+          <div className="flex-1 flex flex-col gap-48 pb-32">
+            {sections.map((section, idx) => (
+              <motion.section
+                key={section.id}
+                id={section.id}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                variants={fadeInUp}
+                transition={{ delay: idx * 0.1 }}
+                className="scroll-mt-32 relative"
+              >
+                {/* Section Title Group */}
+                <div className="mb-12 pl-6 border-l-4 border-green-600 flex flex-col gap-4">
+                  <h2 className="text-3xl md:text-4xl font-bold text-white">
+                    {section.title}
+                  </h2>
+                  <div className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl">
+                    <SmartText>{section.description}</SmartText>
+                  </div>
                 </div>
-              </div>
 
-              {/* Videos */}
-              <div className="space-y-24">
-                {section.videos.map((video) => (
-                  <div 
-                    key={video.id} 
-                    className="group"
-                  >
-                    {/* Video Card */}
-                    <div className="bg-gray-900/20 border border-gray-800 rounded-2xl overflow-hidden hover:border-green-900/50 transition-all duration-500 shadow-2xl">
-                      
-                      {/* Video Embed */}
-                      <div className="aspect-video w-full bg-black relative">
+                {/* Videos Group (Flex Gap instead of space-y) */}
+                <div className="flex flex-col gap-24">
+                  {section.videos.map((video) => (
+                    <div 
+                      key={video.id} 
+                      className="bg-gray-900/20 border border-gray-800/50 rounded-2xl overflow-hidden hover:border-green-900/50 transition-colors duration-300"
+                    >
+                      <div className="aspect-video w-full bg-black relative group shadow-2xl">
                         <iframe
                           width="100%"
                           height="100%"
@@ -159,13 +186,12 @@ export default function ReformationHistory() {
                         ></iframe>
                       </div>
 
-                      {/* Video Text Content */}
-                      <div className="p-8 md:p-10">
-                        <div className="flex items-center gap-2 mb-4 text-green-400 text-sm font-bold uppercase tracking-wider">
+                      <div className="p-8 md:p-10 flex flex-col gap-4">
+                        <div className="flex items-center gap-2 text-green-400 text-sm font-bold uppercase tracking-wider">
                           <PlayCircle size={16} />
                           {video.channel}
                         </div>
-                        <h3 className="text-2xl font-bold text-white mb-6">
+                        <h3 className="text-2xl font-bold text-white">
                           {video.title}
                         </h3>
                         <div className="text-gray-300 leading-relaxed text-lg border-t border-gray-800 pt-6">
@@ -173,16 +199,52 @@ export default function ReformationHistory() {
                         </div>
                       </div>
                     </div>
-                  </div>
-                ))}
-              </div>
-            </motion.section>
-          ))}
+                  ))}
+                </div>
+
+                {/* Visual Separator */}
+                {idx < sections.length - 1 && (
+                    <div className="mt-48 h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent" />
+                )}
+
+              </motion.section>
+            ))}
+          </div>
+
+          {/* Sidebar (Right) - Fixed/Sticky */}
+          <aside className="hidden lg:block w-[280px] flex-shrink-0">
+            <div className="sticky top-32">
+                <div className="p-6 rounded-xl border border-gray-800 bg-gray-900/40 backdrop-blur-md shadow-xl flex flex-col gap-4">
+                    <h3 className="text-white font-semibold flex items-center gap-2 text-lg">
+                        <Hash size={18} className="text-green-400" />
+                        {t.tocTitle}
+                    </h3>
+                    <nav className="flex flex-col gap-1 relative">
+                        <div className="absolute left-0 top-0 bottom-0 w-px bg-gray-800" />
+                        {sections.map((section) => {
+                            const isActive = activeSection === section.id;
+                            return (
+                                <button
+                                    key={section.id}
+                                    onClick={() => scrollToSection(section.id)}
+                                    className={cn(
+                                    "block w-full text-left px-4 py-2.5 rounded-md text-sm transition-all duration-200 relative border-l-2",
+                                    isActive
+                                        ? "border-green-500 bg-green-500/10 text-green-400 font-medium"
+                                        : "border-transparent text-gray-400 hover:text-white hover:bg-white/5"
+                                    )}
+                                >
+                                    {section.title}
+                                </button>
+                            );
+                        })}
+                    </nav>
+                </div>
+            </div>
+          </aside>
+
         </div>
-
-        {/* Removed Back Button */}
-
       </div>
-    </article>
+    </div>
   );
 }
