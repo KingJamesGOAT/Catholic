@@ -110,7 +110,7 @@ export default function ReformationHistory() {
         </motion.div>
 
         {/* Content Sections */}
-        {/* FIXED: increased gap to prevent shadow overlap */}
+        {/* spacing stays the same */}
         <div className="flex flex-col gap-y-72">
           {sections.map((section) => (
             <motion.section
@@ -123,7 +123,8 @@ export default function ReformationHistory() {
               className="scroll-mt-32"
             >
               {/* Section Header */}
-              <div className="pt-6 mb-20 border-l-4 border-green-600 pl-8 py-2">
+              {/* FIX APPLIED HERE: pt-24 so the green border starts LOWER */}
+              <div className="pt-24 mb-20 border-l-4 border-green-600 pl-8 py-2">
                 <h2 id={section.id} className="text-3xl md:text-4xl font-bold text-white mb-6">
                   {section.title}
                 </h2>
@@ -133,7 +134,6 @@ export default function ReformationHistory() {
               </div>
 
               {/* Videos */}
-              {/* FIXED: added more space because shadows extend visually */}
               <div className="space-y-40">
                 {section.videos.map((video) => (
                   <div 
