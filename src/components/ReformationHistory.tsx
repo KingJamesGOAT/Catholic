@@ -36,7 +36,8 @@ export default function ReformationHistory() {
       description: t.lutherDesc,
       videos: [
         {
-          id: "SbBJCvbFRbk",
+          // Corrected: Placed "War on Philosophy" video ID here
+          id: "gl9h3lf1tWw",
           title: t.vid2aTitle,
           text: t.vid2aText,
           channel: "Shameless Popery"
@@ -55,13 +56,15 @@ export default function ReformationHistory() {
       description: t.mythsDesc,
       videos: [
         {
-          id: "Cj6iVUKK_m0",
+           // Corrected: Placed "8 Myths" video ID here
+          id: "SbBJCvbFRbk",
           title: t.vid3aTitle,
           text: t.vid3aText,
           channel: "Shameless Popery"
         },
         {
-          id: "gl9h3lf1tWw",
+          // Corrected: Placed "Bible Martyrs" video ID here
+          id: "Cj6iVUKK_m0",
           title: t.vid3bTitle,
           text: t.vid3bText,
           channel: "Counsel of Trent"
