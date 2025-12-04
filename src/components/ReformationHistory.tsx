@@ -86,6 +86,8 @@ export default function ReformationHistory() {
       <TableOfContents />
 
       <div className="container mx-auto px-4 max-w-4xl">
+        
+        {/* Page Header */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -104,6 +106,7 @@ export default function ReformationHistory() {
           </p>
         </motion.div>
 
+        {/* Sections */}
         <div className="flex flex-col gap-y-72">
           {sections.map((section) => (
             <motion.section
@@ -115,6 +118,7 @@ export default function ReformationHistory() {
               transition={{ delay: 0.1 }}
               className="scroll-mt-32"
             >
+
               {/* Section Header + Description */}
               <div className="pt-24 pb-12">
                 <div className="border-l-4 border-green-600 pl-8 py-2">
@@ -128,40 +132,48 @@ export default function ReformationHistory() {
               </div>
 
               {/* Videos */}
-              <div className="space-y-40">
-                {section.videos.map((video) => (
-                  <div key={video.id} className="group mb-32">
-                    {/* ^^^ THIS mb-32 FIXES THE PROBLEM */}
+              <div>
+                {section.videos.map((video, index) => (
+                  <div key={video.id}>
                     
-                    <div className="bg-gray-900/20 border border-gray-800 rounded-2xl overflow-hidden hover:border-green-900/50 transition-all duration-500 shadow-2xl">
-                      
-                      <div className="aspect-video w-full bg-black relative">
-                        <iframe
-                          width="100%"
-                          height="100%"
-                          src={`https://www.youtube.com/embed/${video.id}`}
-                          title={video.title}
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                          className="w-full h-full z-10 relative"
-                        ></iframe>
-                      </div>
-
-                      <div className="p-8 md:p-10">
-                        <div className="flex items-center gap-2 mb-4 text-green-400 text-sm font-bold uppercase tracking-wider">
-                          <PlayCircle size={16} />
-                          {video.channel}
+                    {/* Video Card */}
+                    <div className="group">
+                      <div className="bg-gray-900/20 border border-gray-800 rounded-2xl overflow-hidden hover:border-green-900/50 transition-all duration-500 shadow-2xl">
+                        
+                        <div className="aspect-video w-full bg-black relative">
+                          <iframe
+                            width="100%"
+                            height="100%"
+                            src={`https://www.youtube.com/embed/${video.id}`}
+                            title={video.title}
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            className="w-full h-full z-10 relative"
+                          ></iframe>
                         </div>
-                        <h3 className="text-2xl font-bold text-white mb-6">
-                          {video.title}
-                        </h3>
-                        <div className="text-gray-300 leading-relaxed text-lg border-t border-gray-800 pt-6">
-                          <SmartText>{video.text}</SmartText>
-                        </div>
-                      </div>
 
+                        <div className="p-8 md:p-10">
+                          <div className="flex items-center gap-2 mb-4 text-green-400 text-sm font-bold uppercase tracking-wider">
+                            <PlayCircle size={16} />
+                            {video.channel}
+                          </div>
+                          <h3 className="text-2xl font-bold text-white mb-6">
+                            {video.title}
+                          </h3>
+                          <div className="text-gray-300 leading-relaxed text-lg border-t border-gray-800 pt-6">
+                            <SmartText>{video.text}</SmartText>
+                          </div>
+                        </div>
+
+                      </div>
                     </div>
+
+                    {/* Spacer between videos */}
+                    {index !== section.videos.length - 1 && (
+                      <div className="h-40" />
+                    )}
+
                   </div>
                 ))}
               </div>
@@ -169,6 +181,7 @@ export default function ReformationHistory() {
             </motion.section>
           ))}
         </div>
+
       </div>
     </article>
   );
