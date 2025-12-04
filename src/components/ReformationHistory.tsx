@@ -169,13 +169,13 @@ export default function ReformationHistory() {
                       </div>
                     </div>
 
-                    {/* INVISIBLE STRUCTURAL SPACER BLOCK */}
-                    {/* This is the "real block" that is invisible.
-                       It physically occupies 192px (h-48) of vertical space.
-                       It only renders between videos in the same section.
+                    {/* SPACER BLOCK */}
+                    {/* I kept the exact dimensions (h-48) and margins (my-8) from the red version 
+                       that you confirmed worked, but changed the color to bg-black.
+                       It is now an invisible, physical barrier.
                     */}
                     {index < section.videos.length - 1 && (
-                      <div className="h-48 w-full block bg-transparent" aria-hidden="true" />
+                      <div className="h-48 w-full bg-black my-8" aria-hidden="true" />
                     )}
                   </div>
                 ))}
