@@ -11,7 +11,7 @@ export default function ReformationHistory() {
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
+    visible: { opacity: 1, y: 0 },
   };
 
   const sections = [
@@ -24,9 +24,9 @@ export default function ReformationHistory() {
           id: "V2QxA-7YLus",
           title: t.vid1Title,
           text: t.vid1Text,
-          channel: "Brian Holdsworth"
-        }
-      ]
+          channel: "Brian Holdsworth",
+        },
+      ],
     },
     {
       id: "luther",
@@ -37,15 +37,15 @@ export default function ReformationHistory() {
           id: "gl9h3lf1tWw",
           title: t.vid2aTitle,
           text: t.vid2aText,
-          channel: "Shameless Popery"
+          channel: "Shameless Popery",
         },
         {
           id: "GT4Mc59Cmy4",
           title: t.vid2bTitle,
           text: t.vid2bText,
-          channel: "Shameless Popery"
-        }
-      ]
+          channel: "Shameless Popery",
+        },
+      ],
     },
     {
       id: "myths",
@@ -56,15 +56,15 @@ export default function ReformationHistory() {
           id: "SbBJCvbFRbk",
           title: t.vid3aTitle,
           text: t.vid3aText,
-          channel: "Shameless Popery"
+          channel: "Shameless Popery",
         },
         {
           id: "Cj6iVUKK_m0",
           title: t.vid3bTitle,
           text: t.vid3bText,
-          channel: "Counsel of Trent"
-        }
-      ]
+          channel: "Counsel of Trent",
+        },
+      ],
     },
     {
       id: "modern",
@@ -75,10 +75,10 @@ export default function ReformationHistory() {
           id: "jPZMx0S4zeQ",
           title: t.vid4Title,
           text: t.vid4Text,
-          channel: "Brian Holdsworth"
-        }
-      ]
-    }
+          channel: "Brian Holdsworth",
+        },
+      ],
+    },
   ];
 
   return (
@@ -86,8 +86,7 @@ export default function ReformationHistory() {
       <TableOfContents />
 
       <div className="container mx-auto px-4 max-w-4xl">
-        
-        {/* Page Header */}
+        {/* Header */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -118,11 +117,13 @@ export default function ReformationHistory() {
               transition={{ delay: 0.1 }}
               className="scroll-mt-32"
             >
-
-              {/* Section Header + Description */}
+              {/* Header + Description */}
               <div className="pt-24 pb-12">
                 <div className="border-l-4 border-green-600 pl-8 py-2">
-                  <h2 id={section.id} className="text-3xl md:text-4xl font-bold text-white mb-6">
+                  <h2
+                    id={section.id}
+                    className="text-3xl md:text-4xl font-bold text-white mb-6"
+                  >
                     {section.title}
                   </h2>
                   <div className="text-xl text-gray-300 leading-relaxed max-w-3xl">
@@ -135,11 +136,9 @@ export default function ReformationHistory() {
               <div>
                 {section.videos.map((video, index) => (
                   <div key={video.id}>
-                    
-                    {/* Video Card */}
+                    {/* VIDEO CARD */}
                     <div className="group">
                       <div className="bg-gray-900/20 border border-gray-800 rounded-2xl overflow-hidden hover:border-green-900/50 transition-all duration-500 shadow-2xl">
-                        
                         <div className="aspect-video w-full bg-black relative">
                           <iframe
                             width="100%"
@@ -158,30 +157,28 @@ export default function ReformationHistory() {
                             <PlayCircle size={16} />
                             {video.channel}
                           </div>
+
                           <h3 className="text-2xl font-bold text-white mb-6">
                             {video.title}
                           </h3>
+
                           <div className="text-gray-300 leading-relaxed text-lg border-t border-gray-800 pt-6">
                             <SmartText>{video.text}</SmartText>
                           </div>
                         </div>
-
                       </div>
                     </div>
 
-                    {/* Spacer between videos */}
-                    {index !== section.videos.length - 1 && (
-                      <div className="h-40" />
+                    {/* SPACER (only between videos, never after last) */}
+                    {index < section.videos.length - 1 && (
+                      <div className="h-40 w-full"></div>
                     )}
-
                   </div>
                 ))}
               </div>
-
             </motion.section>
           ))}
         </div>
-
       </div>
     </article>
   );
