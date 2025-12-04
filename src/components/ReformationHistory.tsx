@@ -132,11 +132,11 @@ export default function ReformationHistory() {
                 </div>
               </div>
 
-              {/* Videos Container */}
-              {/* flex-col gap-40 ENSURES 160px space between vertically stacked videos */}
-              <div className="flex flex-col gap-40">
+              {/* Videos */}
+              {/* FIX: Using GRID layout (like your other pages) to strictly enforce spacing */}
+              <div className="grid grid-cols-1 gap-40 w-full">
                 {section.videos.map((video) => (
-                  <div key={video.id}>
+                  <div key={video.id} className="w-full">
                     {/* VIDEO CARD */}
                     <div className="group">
                       <div className="bg-gray-900/20 border border-gray-800 rounded-2xl overflow-hidden hover:border-green-900/50 transition-all duration-500 shadow-2xl">
