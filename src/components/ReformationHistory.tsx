@@ -132,9 +132,9 @@ export default function ReformationHistory() {
                 </div>
               </div>
 
-              {/* Videos */}
-              {/* Added gap-32 to force space between videos */}
-              <div className="flex flex-col gap-32">
+              {/* Videos Container */}
+              {/* flex-col gap-40 ENSURES 160px space between vertically stacked videos */}
+              <div className="flex flex-col gap-40">
                 {section.videos.map((video) => (
                   <div key={video.id}>
                     {/* VIDEO CARD */}
