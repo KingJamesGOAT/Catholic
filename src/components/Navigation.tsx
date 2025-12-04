@@ -13,19 +13,18 @@ interface NavigationProps {
 export default function Navigation({ activeSection, scrolled, onSearchClick }: NavigationProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
-  // Hook for translations
   const { language } = useLanguage();
   const t = translations.nav;
 
-  // Updated navItems using translations
+  // Base navigation items (Desktop defaults)
   const navItems = [
     { id: 'home', label: t.home[language] },
     { id: 'what-it-means', label: t.whatItMeans[language] },
     { id: 'authority', label: t.authority[language] },
     { id: 'questions', label: t.questions[language] },
     { id: 'history', label: t.history[language] },
-    { id: 'reformation', label: t.reformation[language] }, // Ensures dynamic translation
-    { id: 'science', label: t.scienceAndMiracles[language] }, // Fixed: Matches translations.ts key
+    { id: 'reformation', label: t.reformation[language] }, // Desktop label
+    { id: 'science', label: t.scienceAndMiracles[language] },
     { id: 'learn-more', label: t.learnMore[language] },
   ];
 
@@ -84,7 +83,7 @@ export default function Navigation({ activeSection, scrolled, onSearchClick }: N
               ))}
             </div>
 
-            {/* Search and Mobile Menu */}
+            {/* Search and Mobile Menu Buttons */}
             <div className="flex items-center gap-4 flex-shrink-0">
               <motion.button
                 whileHover={{ scale: 1.1 }}
@@ -114,19 +113,27 @@ export default function Navigation({ activeSection, scrolled, onSearchClick }: N
             className="lg:hidden bg-black/98 backdrop-blur-sm border-t border-gray-800"
           >
             <div className="container mx-auto px-4 py-6 space-y-4">
-              {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className={`block w-full text-left py-2 transition-colors ${
-                    activeSection === item.id
-                      ? 'text-white'
-                      : 'text-gray-400 hover:text-gray-200'
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
+              {navItems.map((item) => {
+                // LOGIC TO SWAP LABEL FOR MOBILE
+                let label = item.label;
+                if (item.id === 'reformation') {
+                  label = t.reformationHistory[language]; // Uses the specific mobile key
+                }
+
+                return (
+                  <button
+                    key={item.id}
+                    onClick={() => scrollToSection(item.id)}
+                    className={`block w-full text-left py-2 transition-colors ${
+                      activeSection === item.id
+                        ? 'text-white'
+                        : 'text-gray-400 hover:text-gray-200'
+                    }`}
+                  >
+                    {label}
+                  </button>
+                );
+              })}
             </div>
           </motion.div>
         )}
