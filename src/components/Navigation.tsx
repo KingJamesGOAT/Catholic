@@ -18,15 +18,14 @@ export default function Navigation({ activeSection, scrolled, onSearchClick }: N
   const t = translations.nav;
 
   // Updated navItems using translations
-  // Note: Ensure your translations.ts has these keys (home, history, reformation, etc.)
   const navItems = [
     { id: 'home', label: t.home[language] },
     { id: 'what-it-means', label: t.whatItMeans[language] },
     { id: 'authority', label: t.authority[language] },
     { id: 'questions', label: t.questions[language] },
     { id: 'history', label: t.history[language] },
-    { id: 'reformation', label: t.reformation[language] }, // New Reformation Button
-    { id: 'science', label: t.science[language] },
+    { id: 'reformation', label: t.reformation[language] }, // Ensures dynamic translation
+    { id: 'science', label: t.scienceAndMiracles[language] }, // Fixed: Matches translations.ts key
     { id: 'learn-more', label: t.learnMore[language] },
   ];
 
