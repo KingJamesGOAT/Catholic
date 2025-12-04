@@ -3,19 +3,17 @@ import { History, PlayCircle } from "lucide-react";
 import { useLanguage } from "../lib/i18n/LanguageContext";
 import { reformationTranslations } from "../lib/i18n/reformationTranslations";
 import SmartText from "./SmartText";
-import TableOfContents from "./Journey/TableOfContents"; // Using the shared component
+import TableOfContents from "./Journey/TableOfContents";
 
 export default function ReformationHistory() {
   const { language } = useLanguage();
   const t = reformationTranslations[language];
 
-  // Animation
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
   };
 
-  // Data
   const sections = [
     {
       id: "nature",
@@ -36,7 +34,6 @@ export default function ReformationHistory() {
       description: t.lutherDesc,
       videos: [
         {
-          // Corrected: Placed "War on Philosophy" video ID here
           id: "gl9h3lf1tWw",
           title: t.vid2aTitle,
           text: t.vid2aText,
@@ -56,14 +53,12 @@ export default function ReformationHistory() {
       description: t.mythsDesc,
       videos: [
         {
-           // Corrected: Placed "8 Myths" video ID here
           id: "SbBJCvbFRbk",
           title: t.vid3aTitle,
           text: t.vid3aText,
           channel: "Shameless Popery"
         },
         {
-          // Corrected: Placed "Bible Martyrs" video ID here
           id: "Cj6iVUKK_m0",
           title: t.vid3bTitle,
           text: t.vid3bText,
@@ -88,12 +83,9 @@ export default function ReformationHistory() {
 
   return (
     <article className="min-h-screen bg-black text-gray-100 pt-24 pb-32 relative">
-      
       <TableOfContents />
 
       <div className="container mx-auto px-4 max-w-4xl">
-        
-        {/* Page Header */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -112,7 +104,6 @@ export default function ReformationHistory() {
           </p>
         </motion.div>
 
-        {/* Sections */}
         <div className="flex flex-col gap-y-72">
           {sections.map((section) => (
             <motion.section
@@ -124,11 +115,8 @@ export default function ReformationHistory() {
               transition={{ delay: 0.1 }}
               className="scroll-mt-32"
             >
-              {/* Section Header Wrapper */}
-              {/* UPDATED: Increased mb-20 to mb-40 for more space before first video */}
-              <div className="pt-24 mb-40">
-                
-                {/* Actual Header WITH border */}
+              {/* Section Header + Description */}
+              <div className="pt-24 pb-12"> {/* <-- added pb-12 for visible gap below description */}
                 <div className="border-l-4 border-green-600 pl-8 py-2">
                   <h2 id={section.id} className="text-3xl md:text-4xl font-bold text-white mb-6">
                     {section.title}
@@ -137,19 +125,13 @@ export default function ReformationHistory() {
                     <SmartText>{section.description}</SmartText>
                   </div>
                 </div>
-
               </div>
 
               {/* Videos */}
-              {/* UPDATED: Increased space-y-40 to space-y-64 for more space between videos */}
-              <div className="space-y-64">
+              <div className="space-y-40"> {/* <-- space-y-40 ensures visible gap between videos */}
                 {section.videos.map((video) => (
-                  <div 
-                    key={video.id} 
-                    className="group mb-20"
-                  >
+                  <div key={video.id} className="group">
                     <div className="bg-gray-900/20 border border-gray-800 rounded-2xl overflow-hidden hover:border-green-900/50 transition-all duration-500 shadow-2xl">
-                      
                       <div className="aspect-video w-full bg-black relative">
                         <iframe
                           width="100%"
@@ -175,16 +157,13 @@ export default function ReformationHistory() {
                           <SmartText>{video.text}</SmartText>
                         </div>
                       </div>
-
                     </div>
                   </div>
                 ))}
               </div>
-
             </motion.section>
           ))}
         </div>
-
       </div>
     </article>
   );
