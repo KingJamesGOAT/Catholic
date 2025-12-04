@@ -116,7 +116,7 @@ export default function ReformationHistory() {
               className="scroll-mt-32"
             >
               {/* Section Header + Description */}
-              <div className="pt-24 pb-12"> {/* <-- added pb-12 for visible gap below description */}
+              <div className="pt-24 pb-12">
                 <div className="border-l-4 border-green-600 pl-8 py-2">
                   <h2 id={section.id} className="text-3xl md:text-4xl font-bold text-white mb-6">
                     {section.title}
@@ -128,10 +128,13 @@ export default function ReformationHistory() {
               </div>
 
               {/* Videos */}
-              <div className="space-y-40"> {/* <-- space-y-40 ensures visible gap between videos */}
+              <div className="space-y-40">
                 {section.videos.map((video) => (
-                  <div key={video.id} className="group">
+                  <div key={video.id} className="group mb-32">
+                    {/* ^^^ THIS mb-32 FIXES THE PROBLEM */}
+                    
                     <div className="bg-gray-900/20 border border-gray-800 rounded-2xl overflow-hidden hover:border-green-900/50 transition-all duration-500 shadow-2xl">
+                      
                       <div className="aspect-video w-full bg-black relative">
                         <iframe
                           width="100%"
@@ -157,10 +160,12 @@ export default function ReformationHistory() {
                           <SmartText>{video.text}</SmartText>
                         </div>
                       </div>
+
                     </div>
                   </div>
                 ))}
               </div>
+
             </motion.section>
           ))}
         </div>
