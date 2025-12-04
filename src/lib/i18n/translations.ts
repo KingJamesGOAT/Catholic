@@ -238,6 +238,13 @@ export const translations = {
       de: "Übernatürliche Phänomene entdecken", // Placeholder
     },
 
+    reformation: {
+      en: "Reformation",
+      fr: "Réforme",
+      es: "Reforma",
+      de: "Reformation",
+    },
+
     latinMass: {
       en: "Latin Mass",
       fr: "Messe traditionnelle",
