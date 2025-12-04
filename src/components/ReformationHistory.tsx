@@ -169,14 +169,13 @@ export default function ReformationHistory() {
                       </div>
                     </div>
 
-                    {/* --- THE DEBUG SPACER BLOCK --- */}
-                    {/* Renders ONLY between videos. Visualized with RED BG and "GAP" text. */}
+                    {/* INVISIBLE STRUCTURAL SPACER BLOCK */}
+                    {/* This is the "real block" that is invisible.
+                       It physically occupies 192px (h-48) of vertical space.
+                       It only renders between videos in the same section.
+                    */}
                     {index < section.videos.length - 1 && (
-                      <div className="h-48 w-full flex items-center justify-center bg-red-900/50 border-2 border-red-500 my-8">
-                         <span className="text-4xl font-bold text-white uppercase tracking-widest">
-                           GAP (SPACER)
-                         </span>
-                      </div>
+                      <div className="h-48 w-full block bg-transparent" aria-hidden="true" />
                     )}
                   </div>
                 ))}
