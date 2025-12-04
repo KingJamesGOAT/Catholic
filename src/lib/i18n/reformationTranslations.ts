@@ -93,34 +93,34 @@ export const reformationTranslations = {
     
     backButton: "Retour au Voyage"
   },
-  pt: {
-    title: "História da Reforma: Mitos, Homens e Moralidade",
-    subtitle: "Explorando o contexto histórico, os mitos e as figuras-chave que moldaram a Reforma Protestante.",
+  de: {
+    title: "Reformationsgeschichte: Mythen, Männer & Moral",
+    subtitle: "Untersuchung des historischen Kontextes, der Mythen und der Schlüsselfiguren, die die protestantische Reformation prägten.",
     
-    natureTitle: "A Natureza da Divisão",
-    natureDesc: "O protestantismo é frequentemente visto como uma fé independente, mas histórica e teologicamente, é definido inteiramente por sua oposição a Roma. Sem a Igreja Católica, dissolve-se em facções incoerentes.",
-    vid1Title: "O Protestantismo Precisa do Catolicismo para Existir",
-    vid1Insight: "A analogia do 'Anel ao redor de Saturno': O protestantismo não tem princípio unificador interno. É definido inteiramente pelo que se opõe (Roma).",
+    natureTitle: "Die Natur der Spaltung",
+    natureDesc: "Der Protestantismus wird oft als eigenständiger Glaube angesehen, aber historisch und theologisch definiert er sich vollständig durch seinen Widerstand gegen Rom. Ohne die katholische Kirche, gegen die er protestieren kann, löst er sich in inkohärente Fraktionen auf.",
+    vid1Title: "Protestantismus braucht Katholizismus um zu existieren",
+    vid1Insight: "Die 'Ring um Saturn'-Analogie: Der Protestantismus hat kein internes vereinigendes Prinzip. Er definiert sich ausschließlich durch das, wogegen er sich stellt (Rom).",
 
-    lutherTitle: "Desconstruindo Martinho Lutero",
-    lutherDesc: "Indo além do mito do 'Herói' para examinar o caráter real e as motivações dos Reformadores. Era realmente sobre o Evangelho, ou algo mais?",
-    vid2aTitle: "A Guerra Narcisista de Lutero contra a Filosofia",
-    vid2aInsight: "Explora a extrema arrogância de Lutero — alegando saber mais do que todos os Pais da Igreja — e sua perigosa rejeição da Razão e da Filosofia.",
-    vid2bTitle: "A Moralidade Conveniente dos Reformadores",
-    vid2bInsight: "Um olhar devastador sobre como Lutero, Calvino e Knox mudavam seus 'princípios intransigentes' sempre que convinha às suas necessidades políticas.",
+    lutherTitle: "Dekonstruktion von Martin Luther",
+    lutherDesc: "Über den 'Helden'-Mythos hinausgehen, um den wahren Charakter und die Motivationen der Reformatoren zu untersuchen. Ging es wirklich um das Evangelium oder um etwas anderes?",
+    vid2aTitle: "Martin Luthers narzisstischer Krieg gegen die Philosophie",
+    vid2aInsight: "Untersucht Luthers extreme Arroganz – er behauptete, mehr zu wissen als alle Kirchenväter – und seine gefährliche Ablehnung von Vernunft und Philosophie.",
+    vid2bTitle: "Die bequeme Moral der Reformatoren",
+    vid2bInsight: "Ein vernichtender Blick darauf, wie Luther, Calvin und Knox ihre 'kompromisslosen Prinzipien' änderten, wann immer es ihren politischen Bedürfnissen entsprach.",
 
-    mythsTitle: "Derrubando Mitos Históricos",
-    mythsDesc: "A Reforma é frequentemente justificada por alegações históricas específicas — que a Igreja queimava Bíblias ou que Lutero estava sozinho contra a tirania. Estas são, em grande parte, ficções.",
-    vid3aTitle: "8 Mitos sobre Martinho Lutero",
-    vid3aInsight: "Desmistifica os 'momentos de filme': Ele provavelmente nunca pregou as 95 Teses, não disse 'Aqui estou', e não foi o primeiro a dar uma Bíblia aos alemães.",
-    vid3bTitle: "O Mito dos Mártires Bíblicos Protestantes",
-    vid3bInsight: "A Igreja não queimava pessoas por traduzir a Bíblia; elas eram punidas por heresia e sedição. A Igreja realmente apoiava Bíblias vernáculas antes de Lutero.",
+    mythsTitle: "Historische Mythen entlarven",
+    mythsDesc: "Die Reformation wird oft mit spezifischen historischen Behauptungen gerechtfertigt – dass die Kirche Bibeln verbrannte oder dass Luther allein gegen die Tyrannei stand. Dies sind weitgehend Fiktionen.",
+    vid3aTitle: "8 Mythen über Martin Luther",
+    vid3aInsight: "Entlarvt die 'Filmmomente': Er hat wahrscheinlich nie die 95 Thesen angeschlagen, er hat nicht gesagt 'Hier stehe ich', und er war nicht der Erste, der den Deutschen eine Bibel gab.",
+    vid3bTitle: "Der Mythos der protestantischen Bibelmärtyrer",
+    vid3bInsight: "Die Kirche verbrannte keine Menschen für das Übersetzen der Bibel; sie wurden wegen Häresie und Aufruhr bestraft. Die Kirche unterstützte tatsächlich volkssprachliche Bibeln vor Luther.",
 
-    modernTitle: "A Defesa Moderna",
-    modernDesc: "Por que você não pode simplesmente 'ignorar' a história enquanto mantém a teologia.",
-    vid4Title: "A Pior Resposta Protestante",
-    vid4Insight: "Aborda a alegação comum: 'Lutero não é meu Papa, eu apenas sigo a Bíblia'. Explica por que não se pode adotar as inovações da Reforma enquanto se repudia os homens que as inventaram.",
+    modernTitle: "Die moderne Verteidigung",
+    modernDesc: "Warum man die Geschichte nicht einfach 'ignorieren' kann, während man die Theologie beibehält.",
+    vid4Title: "Die schlechteste protestantische Antwort",
+    vid4Insight: "Behandelt die übliche Behauptung: 'Luther ist nicht mein Papst, ich folge nur der Bibel.' Erklärt, warum man die Innovationen der Reformation nicht übernehmen kann, während man die Männer verleugnet, die sie erfunden haben.",
     
-    backButton: "Voltar para a Jornada"
+    backButton: "Zurück zur Reise"
   }
 };
