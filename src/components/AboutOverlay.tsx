@@ -37,6 +37,20 @@ export default function AboutOverlay() {
 
   // CHANNELS DATA
   const channels = [
+
+    {
+      name: "Catholic Apologetics",
+      sub: "Featured Playlist",
+      desc: {
+        en: "A playlist of videos that explain what Catholics believe and why. Made to help anyone curious or asking questions about the faith",
+        fr: "Une playlist de vidéos expliquant ce que croient les catholiques et pourquoi. Conçue pour aider toute personne curieuse ou se posant des questions sur la foi",
+        es: "Una lista de reproducción de videos que explican qué creen los católicos y por qué. Hecha para ayudar a cualquiera que tenga curiosidad o preguntas sobre la fe",
+        de: "Eine Playlist mit Videos, die erklären, was Katholiken glauben und warum. Gedacht für alle, die neugierig sind oder Fragen zum Glauben haben",
+      },
+      link: "https://youtube.com/playlist?list=PLFIUyfQr51fMx-XFFm_60YTGdbmOKQB9o",
+      image: "",
+    },
+    
     {
       name: "Joshua Charles",
       sub: "Eternal Christendom",
