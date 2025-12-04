@@ -31,6 +31,7 @@ const loadScience = () => import("./components/ScienceAndMiracles");
 const loadGlossary = () => import("./components/GlossaryPage");
 const loadDoctrine = () => import("./components/DoctrineExplorer");
 const loadTLM = () => import("./components/TraditionalLatinMass");
+const loadReformation = () => import("./components/ReformationHistory"); // NEW
 
 // Topic Loaders
 const loadExistenceOfGod = () => import("./components/Topics/ExistenceOfGod");
@@ -58,6 +59,7 @@ const ScienceAndMiracles = lazy(loadScience);
 const GlossaryPage = lazy(loadGlossary);
 const DoctrineExplorer = lazy(loadDoctrine);
 const TraditionalLatinMass = lazy(loadTLM);
+const ReformationHistory = lazy(loadReformation); // NEW
 
 const ExistenceOfGod = lazy(loadExistenceOfGod);
 const ProofOfResurrection = lazy(loadProofOfResurrection);
@@ -233,7 +235,8 @@ type View =
   | "science"
   | "glossary"
   | "doctrine"
-  | "tlm";
+  | "tlm"
+  | "reformation"; // NEW
 
 function AppContent() {
   // Core State
@@ -279,6 +282,7 @@ function AppContent() {
       loadScience();
       loadTLM();
       loadDoctrine();
+      loadReformation(); // NEW
       // AboutOverlay is statically imported, so it's already loaded
     }, 1000);
 
@@ -422,6 +426,9 @@ function AppContent() {
       case "tlm":
         document.title = "The Latin Mass | Catholic Route";
         break;
+      case "reformation": // NEW
+        document.title = "Reformation History | Catholic Route";
+        break;
       case "topic":
         if (currentTopicIndex >= 0 && topics[currentTopicIndex]) {
           document.title = `${topics[currentTopicIndex].title} | Catholic Route`;
@@ -443,6 +450,7 @@ function AppContent() {
     if (view === 'doctrine') loadDoctrine();
     if (view === 'tlm') loadTLM();
     if (view === 'glossary') loadGlossary();
+    if (view === 'reformation') loadReformation(); // NEW
 
     setCurrentView(view);
     updateURL(view);
@@ -536,6 +544,7 @@ function AppContent() {
         onGlossaryClick={() => handleViewChange("glossary")}
         onDoctrineClick={() => handleViewChange("doctrine")}
         onTLMClick={() => handleViewChange("tlm")}
+        onReformationClick={() => handleViewChange("reformation")} // NEW
         onLogoClick={handleBackToHome}
         onSearchClick={() => setIsSearchOpen(true)}
         onHoverStart={handleHoverStart}
@@ -546,6 +555,7 @@ function AppContent() {
         showGlossary={currentView === "glossary"}
         showDoctrine={currentView === "doctrine"}
         showTLM={currentView === "tlm"}
+        showReformation={currentView === "reformation"} // NEW
       />
 
       {/* PASS PRELOAD HANDLER TO PROGRESS TRACKER */}
@@ -574,6 +584,7 @@ function AppContent() {
         {currentView === "glossary" && <GlossaryPage />}
         {currentView === "doctrine" && <DoctrineExplorer />}
         {currentView === "tlm" && <TraditionalLatinMass />}
+        {currentView === "reformation" && <ReformationHistory />} {/* NEW */}
       </Suspense>
 
       {currentView === "topic" && currentTopicIndex >= 0 && (
