@@ -132,9 +132,9 @@ export default function ReformationHistory() {
                 </div>
               </div>
 
-              {/* Videos */}
-              <div>
-                {section.videos.map((video, index) => (
+              {/* Videos - FIXED LAYOUT */}
+              <div className="flex flex-col gap-40">
+                {section.videos.map((video) => (
                   <div key={video.id}>
                     {/* VIDEO CARD */}
                     <div className="group">
@@ -168,11 +168,6 @@ export default function ReformationHistory() {
                         </div>
                       </div>
                     </div>
-
-                    {/* SPACER (only between videos, never after last) */}
-                    {index < section.videos.length - 1 && (
-                      <div className="h-40 w-full"></div>
-                    )}
                   </div>
                 ))}
               </div>
