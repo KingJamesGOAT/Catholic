@@ -62,7 +62,7 @@ export default function ReformationHistory() {
         },
         {
           id: "gl9h3lf1tWw",
-          title: t.vid3bText,
+          title: t.vid3bTitle, // FIXED: Was incorrectly using t.vid3bText
           text: t.vid3bText,
           channel: "Counsel of Trent"
         }
@@ -112,7 +112,8 @@ export default function ReformationHistory() {
         </motion.div>
 
         {/* Content Sections */}
-        <div className="flex flex-col">
+        {/* 2. SPACING FIX: Added gap-y-48 to parent instead of margins on children */}
+        <div className="flex flex-col gap-y-48">
           {sections.map((section) => (
             <motion.section
               key={section.id}
@@ -121,8 +122,8 @@ export default function ReformationHistory() {
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeInUp}
               transition={{ delay: 0.1 }}
-              // 2. MASSIVE SPACING ALREADY HERE
-              className="mb-64 scroll-mt-32"
+              // Removed mb-64, kept scroll margin for anchor linking
+              className="scroll-mt-32"
             >
               {/* Section Header */}
               <div className="pt-20 mb-16 border-l-4 border-green-600 pl-8 py-2">
