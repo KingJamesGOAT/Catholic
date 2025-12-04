@@ -124,10 +124,11 @@ export default function ReformationHistory() {
               transition={{ delay: 0.1 }}
               className="scroll-mt-32"
             >
-              {/* Section Header Wrapper (spacing only) */}
-              <div className="pt-24 mb-20">
+              {/* Section Header Wrapper */}
+              {/* UPDATED: Increased mb-20 to mb-40 for more space before first video */}
+              <div className="pt-24 mb-40">
                 
-                {/* Actual Header WITH border (starts lower now) */}
+                {/* Actual Header WITH border */}
                 <div className="border-l-4 border-green-600 pl-8 py-2">
                   <h2 id={section.id} className="text-3xl md:text-4xl font-bold text-white mb-6">
                     {section.title}
@@ -140,7 +141,8 @@ export default function ReformationHistory() {
               </div>
 
               {/* Videos */}
-              <div className="space-y-40">
+              {/* UPDATED: Increased space-y-40 to space-y-64 for more space between videos */}
+              <div className="space-y-64">
                 {section.videos.map((video) => (
                   <div 
                     key={video.id} 
