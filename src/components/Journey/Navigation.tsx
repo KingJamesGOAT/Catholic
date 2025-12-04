@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Check, Circle, Sparkles, Search, MoreVertical, ScrollText, Gavel, BookA, Church, History } from 'lucide-react'; // NEW (Added History)
+import { Menu, X, Check, Circle, Sparkles, Search, MoreVertical, ScrollText, Gavel, BookA, Church, History } from 'lucide-react';
 import { topics } from '../../App';
 import LanguageSelector from '../LanguageSelector';
 import { useLanguage } from '../../lib/i18n/LanguageContext';
@@ -25,8 +25,8 @@ interface NavigationProps {
   showDoctrine?: boolean;
   onTLMClick?: () => void;
   showTLM?: boolean;
-  onReformationClick?: () => void; // NEW
-  showReformation?: boolean;       // NEW
+  onReformationClick?: () => void; 
+  showReformation?: boolean;       
   onLogoClick: () => void;
 }
 
@@ -48,8 +48,8 @@ export default function Navigation({
   showDoctrine = false,
   onTLMClick,
   showTLM = false,
-  onReformationClick, // NEW
-  showReformation = false, // NEW
+  onReformationClick, 
+  showReformation = false, 
   onLogoClick
 }: NavigationProps) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -79,7 +79,7 @@ export default function Navigation({
     !showGlossary && 
     !showDoctrine && 
     !showTLM &&
-    !showReformation; // NEW
+    !showReformation; 
 
   const { language } = useLanguage();
   const trans = translations;
@@ -96,7 +96,7 @@ export default function Navigation({
     // Scripture & Tradition Indigo (#4f39f6)
     progressColorClass = 'bg-[#4f39f6]';
     progressShadowStyle = '0 0 10px rgba(79,57,246,0.5)';
-  } else if (showReformation) { // NEW
+  } else if (showReformation) { 
     // Reformation Green (#16a34a)
     progressColorClass = 'bg-green-600';
     progressShadowStyle = '0 0 10px rgba(22,163,74,0.5)';
@@ -145,7 +145,7 @@ export default function Navigation({
       onDoctrineClick();
     } else if (action === 'tlm' && onTLMClick) {
       onTLMClick();
-    } else if (action === 'reformation' && onReformationClick) { // NEW
+    } else if (action === 'reformation' && onReformationClick) { 
       onReformationClick();
     }
   };
@@ -212,7 +212,7 @@ export default function Navigation({
                 >
                   {t(trans.nav.scriptureFathers, language)}
                 </button>
-                {/* NEW: Reformation Button (Greenish) */}
+                {/* NEW: Reformation Button (Greenish) - DESKTOP */}
                 <button
                   onClick={() => handleSpecialPageClick('reformation')}
                   className={cn(
@@ -220,7 +220,8 @@ export default function Navigation({
                     showReformation ? "bg-green-600 text-white hover:bg-green-700" : "text-gray-400 hover:bg-gray-800/50 hover:text-white"
                   )}
                 >
-                  Reformation
+                  {/* Uses the short translation "Reformation" */}
+                  {t(trans.nav.reformation, language)}
                 </button>
               </div>
 
@@ -460,7 +461,8 @@ export default function Navigation({
                 className="flex items-center gap-3 w-full text-left px-3 py-3 rounded-md text-gray-300 hover:bg-green-600 hover:text-white transition-colors"
               >
                 <History size={18} />
-                <span>Reformation History</span>
+                {/* Uses the long translation "Reformation History" */}
+                <span>{t(trans.nav.reformationHistory, language)}</span>
               </button>
 
               {/* SEPARATOR 1 */}
