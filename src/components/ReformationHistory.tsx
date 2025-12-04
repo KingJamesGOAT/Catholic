@@ -133,10 +133,9 @@ export default function ReformationHistory() {
               </div>
 
               {/* Videos */}
-              {/* FIX: Using GRID layout (like your other pages) to strictly enforce spacing */}
-              <div className="grid grid-cols-1 gap-40 w-full">
-                {section.videos.map((video) => (
-                  <div key={video.id} className="w-full">
+              <div>
+                {section.videos.map((video, index) => (
+                  <div key={video.id}>
                     {/* VIDEO CARD */}
                     <div className="group">
                       <div className="bg-gray-900/20 border border-gray-800 rounded-2xl overflow-hidden hover:border-green-900/50 transition-all duration-500 shadow-2xl">
@@ -169,6 +168,13 @@ export default function ReformationHistory() {
                         </div>
                       </div>
                     </div>
+
+                    {/* SPACER CONTAINER */}
+                    {/* This div is ONLY rendered between videos (not after the last one). */}
+                    {/* It provides a physical gap of h-32 (128px) or h-48 (192px) on desktop. */}
+                    {index < section.videos.length - 1 && (
+                      <div className="h-32 md:h-48 w-full block" aria-hidden="true"></div>
+                    )}
                   </div>
                 ))}
               </div>
