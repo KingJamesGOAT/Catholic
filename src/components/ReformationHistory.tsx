@@ -120,7 +120,8 @@ export default function ReformationHistory() {
             >
 
               {/* Section Header + Description */}
-              <div className="pt-24 pb-12">
+              {/* UPDATED: Changed pb-12 to mb-40 for the big gap you wanted */}
+              <div className="pt-24 mb-40">
                 <div className="border-l-4 border-green-600 pl-8 py-2">
                   <h2 id={section.id} className="text-3xl md:text-4xl font-bold text-white mb-6">
                     {section.title}
