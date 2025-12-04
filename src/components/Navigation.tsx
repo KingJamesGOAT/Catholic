@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Search, Menu, X } from 'lucide-react';
+import { useLanguage } from "../lib/i18n/LanguageContext";
+import { translations } from "../lib/i18n/translations";
 
 interface NavigationProps {
   activeSection: string;
@@ -10,15 +12,22 @@ interface NavigationProps {
 
 export default function Navigation({ activeSection, scrolled, onSearchClick }: NavigationProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  
+  // Hook for translations
+  const { language } = useLanguage();
+  const t = translations.nav;
 
+  // Updated navItems using translations
+  // Note: Ensure your translations.ts has these keys (home, history, reformation, etc.)
   const navItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'what-it-means', label: 'What Does It Mean to Be Catholic' },
-    { id: 'authority', label: 'Authority Structure' },
-    { id: 'questions', label: 'Essential Questions and Misconceptions' },
-    { id: 'history', label: 'Church History' },
-    { id: 'science', label: 'Science and Miracles' },
-    { id: 'learn-more', label: 'Learn More' },
+    { id: 'home', label: t.home[language] },
+    { id: 'what-it-means', label: t.whatItMeans[language] },
+    { id: 'authority', label: t.authority[language] },
+    { id: 'questions', label: t.questions[language] },
+    { id: 'history', label: t.history[language] },
+    { id: 'reformation', label: t.reformation[language] }, // New Reformation Button
+    { id: 'science', label: t.science[language] },
+    { id: 'learn-more', label: t.learnMore[language] },
   ];
 
   const scrollToSection = (id: string) => {
@@ -50,16 +59,11 @@ export default function Navigation({ activeSection, scrolled, onSearchClick }: N
             {/* Logo */}
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="cursor-pointer flex-shrink-0" // Added flex-shrink-0 to prevent crushing
+              className="cursor-pointer flex-shrink-0"
               onClick={() => scrollToSection('home')}
             >
-              {/* UPDATED: 
-                  - whitespace-nowrap: Forces single line 
-                  - text-base: Slightly smaller to fit mobile width 
-                  - font-extrabold: Thicker "pro" look
-              */}
               <h1 className="text-base md:text-2xl font-extrabold text-white tracking-wide whitespace-nowrap">
-                Catholic Route
+                {t.title[language]}
               </h1>
             </motion.div>
 
