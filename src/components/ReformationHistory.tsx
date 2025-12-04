@@ -9,13 +9,13 @@ export default function ReformationHistory() {
   const { language } = useLanguage();
   const t = reformationTranslations[language];
 
-  // Helper for Animation
+  // Animation
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
   };
 
-  // Video Data Structure
+  // Data
   const sections = [
     {
       id: "nature",
@@ -109,8 +109,7 @@ export default function ReformationHistory() {
           </p>
         </motion.div>
 
-        {/* Content Sections */}
-        {/* spacing stays the same */}
+        {/* Sections */}
         <div className="flex flex-col gap-y-72">
           {sections.map((section) => (
             <motion.section
@@ -122,15 +121,19 @@ export default function ReformationHistory() {
               transition={{ delay: 0.1 }}
               className="scroll-mt-32"
             >
-              {/* Section Header */}
-              {/* FIX APPLIED HERE: pt-24 so the green border starts LOWER */}
-              <div className="pt-24 mb-20 border-l-4 border-green-600 pl-8 py-2">
-                <h2 id={section.id} className="text-3xl md:text-4xl font-bold text-white mb-6">
-                  {section.title}
-                </h2>
-                <div className="text-xl text-gray-300 leading-relaxed max-w-3xl">
-                  <SmartText>{section.description}</SmartText>
+              {/* Section Header Wrapper (spacing only) */}
+              <div className="pt-24 mb-20">
+                
+                {/* Actual Header WITH border (starts lower now) */}
+                <div className="border-l-4 border-green-600 pl-8 py-2">
+                  <h2 id={section.id} className="text-3xl md:text-4xl font-bold text-white mb-6">
+                    {section.title}
+                  </h2>
+                  <div className="text-xl text-gray-300 leading-relaxed max-w-3xl">
+                    <SmartText>{section.description}</SmartText>
+                  </div>
                 </div>
+
               </div>
 
               {/* Videos */}
@@ -140,10 +143,8 @@ export default function ReformationHistory() {
                     key={video.id} 
                     className="group mb-20"
                   >
-                    {/* Video Card */}
                     <div className="bg-gray-900/20 border border-gray-800 rounded-2xl overflow-hidden hover:border-green-900/50 transition-all duration-500 shadow-2xl">
                       
-                      {/* Video Embed */}
                       <div className="aspect-video w-full bg-black relative">
                         <iframe
                           width="100%"
@@ -157,7 +158,6 @@ export default function ReformationHistory() {
                         ></iframe>
                       </div>
 
-                      {/* Video Text Content */}
                       <div className="p-8 md:p-10">
                         <div className="flex items-center gap-2 mb-4 text-green-400 text-sm font-bold uppercase tracking-wider">
                           <PlayCircle size={16} />
@@ -170,10 +170,12 @@ export default function ReformationHistory() {
                           <SmartText>{video.text}</SmartText>
                         </div>
                       </div>
+
                     </div>
                   </div>
                 ))}
               </div>
+
             </motion.section>
           ))}
         </div>
