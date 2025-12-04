@@ -112,7 +112,7 @@ export default function ReformationHistory() {
         </motion.div>
 
         {/* Content Sections */}
-        {/* 2. SPACING FIX: Added gap-y-48 to parent instead of margins on children */}
+        {/* unchanged section gap */}
         <div className="flex flex-col gap-y-48">
           {sections.map((section) => (
             <motion.section
@@ -122,12 +122,10 @@ export default function ReformationHistory() {
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeInUp}
               transition={{ delay: 0.1 }}
-              // Removed mb-64, kept scroll margin for anchor linking
               className="scroll-mt-32"
             >
               {/* Section Header */}
-              <div className="pt-20 mb-16 border-l-4 border-green-600 pl-8 py-2">
-                {/* ID goes here for ToC linking */}
+              <div className="pt-6 mb-20 border-l-4 border-green-600 pl-8 py-2">
                 <h2 id={section.id} className="text-3xl md:text-4xl font-bold text-white mb-6">
                   {section.title}
                 </h2>
