@@ -62,7 +62,7 @@ export default function ReformationHistory() {
         },
         {
           id: "gl9h3lf1tWw",
-          title: t.vid3bTitle, // FIXED: Was incorrectly using t.vid3bText
+          title: t.vid3bTitle,
           text: t.vid3bText,
           channel: "Counsel of Trent"
         }
@@ -84,10 +84,8 @@ export default function ReformationHistory() {
   ];
 
   return (
-    // We use <article> so TableOfContents can find the headers
     <article className="min-h-screen bg-black text-gray-100 pt-24 pb-32 relative">
       
-      {/* 1. THE SHARED TOC COMPONENT (Handles Floating Desktop + Mobile Button) */}
       <TableOfContents />
 
       <div className="container mx-auto px-4 max-w-4xl">
@@ -112,8 +110,8 @@ export default function ReformationHistory() {
         </motion.div>
 
         {/* Content Sections */}
-        {/* unchanged section gap */}
-        <div className="flex flex-col gap-y-48">
+        {/* FIXED: increased gap to prevent shadow overlap */}
+        <div className="flex flex-col gap-y-72">
           {sections.map((section) => (
             <motion.section
               key={section.id}
@@ -135,11 +133,12 @@ export default function ReformationHistory() {
               </div>
 
               {/* Videos */}
-              <div className="space-y-24">
+              {/* FIXED: added more space because shadows extend visually */}
+              <div className="space-y-40">
                 {section.videos.map((video) => (
                   <div 
                     key={video.id} 
-                    className="group"
+                    className="group mb-20"
                   >
                     {/* Video Card */}
                     <div className="bg-gray-900/20 border border-gray-800 rounded-2xl overflow-hidden hover:border-green-900/50 transition-all duration-500 shadow-2xl">
