@@ -169,11 +169,12 @@ export default function ReformationHistory() {
                       </div>
                     </div>
 
-                    {/* SPACER CONTAINER */}
-                    {/* This div is ONLY rendered between videos (not after the last one). */}
-                    {/* It provides a physical gap of h-32 (128px) or h-48 (192px) on desktop. */}
+                    {/* THE "REAL BLOCK" SPACER 
+                        This renders an invisible structural block ONLY between videos 
+                        in the same section. It is 12rem (192px) tall.
+                    */}
                     {index < section.videos.length - 1 && (
-                      <div className="h-32 md:h-48 w-full block" aria-hidden="true"></div>
+                      <div className="h-48 w-full block bg-transparent" aria-hidden="true" />
                     )}
                   </div>
                 ))}
