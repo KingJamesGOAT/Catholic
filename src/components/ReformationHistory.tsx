@@ -5,6 +5,7 @@ import { useLanguage } from "../lib/i18n/LanguageContext";
 import { reformationTranslations } from "../lib/i18n/reformationTranslations";
 import SmartText from "./SmartText";
 import { cn } from "./ui/utils";
+import { Separator } from "./ui/separator"; // Ensure you have this component, or use <hr />
 
 export default function ReformationHistory() {
   const { language } = useLanguage();
@@ -88,7 +89,8 @@ export default function ReformationHistory() {
   // Scroll Spy for TOC highlighting
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 200; // Offset
+      // Offset to trigger earlier
+      const scrollPosition = window.scrollY + 300; 
       
       for (const section of sections) {
         const element = document.getElementById(section.id);
@@ -117,8 +119,8 @@ export default function ReformationHistory() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-gray-100 pt-24 pb-16">
-      <div className="container mx-auto px-4 max-w-6xl">
+    <div className="min-h-screen bg-black text-gray-100 pt-24 pb-16 relative">
+      <div className="container mx-auto px-4 max-w-7xl">
         
         {/* Header */}
         <motion.div
@@ -126,7 +128,7 @@ export default function ReformationHistory() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
-          className="mb-16 text-center max-w-4xl mx-auto"
+          className="mb-24 text-center max-w-4xl mx-auto"
         >
           <div className="inline-flex items-center justify-center p-3 rounded-full bg-green-900/30 border border-green-800 mb-6">
             <History className="w-8 h-8 text-green-400" />
@@ -139,10 +141,11 @@ export default function ReformationHistory() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-12 relative">
+        {/* 2-Column Grid for Content + Sidebar */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-16 relative">
           
           {/* Main Content Column */}
-          <div className="space-y-32">
+          <div className="space-y-48 pb-32">
             {sections.map((section, idx) => (
               <motion.section
                 key={section.id}
@@ -152,20 +155,20 @@ export default function ReformationHistory() {
                 viewport={{ once: true, margin: "-100px" }}
                 variants={fadeInUp}
                 transition={{ delay: idx * 0.1 }}
-                className="scroll-mt-32" 
+                className="scroll-mt-32 relative"
               >
                 {/* Section Header */}
                 <div className="mb-12 border-l-4 border-green-600 pl-6">
-                  <h2 className="text-3xl font-bold text-white mb-4">
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                     {section.title}
                   </h2>
-                  <div className="text-lg text-gray-300 leading-relaxed">
+                  <div className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl">
                     <SmartText>{section.description}</SmartText>
                   </div>
                 </div>
 
                 {/* Videos Grid */}
-                <div className="space-y-16">
+                <div className="space-y-20">
                   {section.videos.map((video) => (
                     <div 
                       key={video.id} 
@@ -186,50 +189,64 @@ export default function ReformationHistory() {
                       </div>
 
                       {/* Content */}
-                      <div className="p-8">
+                      <div className="p-8 md:p-10">
                         <div className="flex items-center gap-2 mb-4 text-green-400 text-sm font-bold uppercase tracking-wider">
                           <PlayCircle size={16} />
                           {video.channel}
                         </div>
-                        <h3 className="text-2xl font-bold text-white mb-4">
+                        <h3 className="text-2xl font-bold text-white mb-6">
                           {video.title}
                         </h3>
-                        <div className="text-gray-300 leading-relaxed text-base border-t border-gray-800 pt-4">
+                        <div className="text-gray-300 leading-relaxed text-lg border-t border-gray-800 pt-6">
                           <SmartText>{video.text}</SmartText>
                         </div>
                       </div>
                     </div>
                   ))}
                 </div>
+
+                {/* Separator between sections (except last) */}
+                {idx < sections.length - 1 && (
+                    <div className="mt-48 h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent" />
+                )}
+
               </motion.section>
             ))}
           </div>
 
           {/* Floating TOC Column (Hidden on mobile) */}
-          <div className="hidden lg:block relative">
-            <div className="sticky top-32 p-6 rounded-xl border border-gray-800 bg-gray-900/30 backdrop-blur-sm">
-              <h3 className="text-white font-semibold mb-4 flex items-center gap-2">
-                <Hash size={16} className="text-green-400" />
-                {t.tocTitle}
-              </h3>
-              <nav className="space-y-1">
-                {sections.map((section) => (
-                  <button
-                    key={section.id}
-                    onClick={() => scrollToSection(section.id)}
-                    className={cn(
-                      "block w-full text-left px-3 py-2 rounded-md text-sm transition-all duration-200",
-                      activeSection === section.id
-                        ? "bg-green-900/30 text-green-400 font-medium translate-x-1"
-                        : "text-gray-400 hover:text-white hover:bg-gray-800/50"
-                    )}
-                  >
-                    {section.title}
-                  </button>
-                ))}
-              </nav>
+          <aside className="hidden lg:block h-full">
+            <div className="sticky top-32 w-full">
+                <div className="p-6 rounded-xl border border-gray-800 bg-gray-900/40 backdrop-blur-md shadow-xl">
+                    <h3 className="text-white font-semibold mb-6 flex items-center gap-2 text-lg">
+                        <Hash size={18} className="text-green-400" />
+                        {t.tocTitle}
+                    </h3>
+                    <nav className="space-y-2 relative">
+                        {/* Active Indicator Line (Optional visual flair) */}
+                        <div className="absolute left-0 top-0 bottom-0 w-px bg-gray-800" />
+
+                        {sections.map((section) => {
+                            const isActive = activeSection === section.id;
+                            return (
+                                <button
+                                    key={section.id}
+                                    onClick={() => scrollToSection(section.id)}
+                                    className={cn(
+                                    "block w-full text-left px-4 py-2.5 rounded-md text-sm transition-all duration-200 relative border-l-2",
+                                    isActive
+                                        ? "border-green-500 bg-green-500/10 text-green-400 font-medium"
+                                        : "border-transparent text-gray-400 hover:text-white hover:bg-white/5"
+                                    )}
+                                >
+                                    {section.title}
+                                </button>
+                            );
+                        })}
+                    </nav>
+                </div>
             </div>
-          </div>
+          </aside>
 
         </div>
       </div>
