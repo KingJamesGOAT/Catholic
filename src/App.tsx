@@ -268,6 +268,8 @@ function AppContent() {
     }
   };
 
+
+  
   // Preload Heavy Pages and First Topic on Mount
   useEffect(() => {
     // 1. If on Home, preload the first topic immediately
@@ -275,19 +277,33 @@ function AppContent() {
       preloadTopic(0);
     }
 
-    // 2. Preload major sections in the background
-    // We use a small timeout to let the main thread render the initial view first
-    const preloadTimer = setTimeout(() => {
+    // 2. Preload major sections in the background (1 second delay)
+    const heavyTimer = setTimeout(() => {
       loadEarlyChurch();
       loadScience();
       loadTLM();
       loadDoctrine();
-      loadReformation(); // NEW
-      // AboutOverlay is statically imported, so it's already loaded
+      loadReformation(); 
     }, 1000);
 
-    return () => clearTimeout(preloadTimer);
+    // 3. BACKGROUND PRELOAD ALL TOPICS (4 second delay)
+    // This downloads every topic one by one so they are ready before the user clicks.
+    const allTopicsTimer = setTimeout(() => {
+      topics.forEach((topic, index) => {
+         setTimeout(() => {
+           topic.preload();
+         }, index * 200); // Stagger downloads (200ms apart) to prevent freezing
+      });
+    }, 4000);
+
+    return () => {
+      clearTimeout(heavyTimer);
+      clearTimeout(allTopicsTimer);
+    };
   }, []);
+
+
+  
 
   // ------------------------------------------------------------------
   // HELPER: Sync State with URL (Deep Linking)
