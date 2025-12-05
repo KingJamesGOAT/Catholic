@@ -12028,6 +12028,29 @@ export const translations = {
         de: `„Christus hat uns kein Buch gegeben, das Seine Stimme ersetzt. Er hat uns Seine Kirche gegeben - 'Pfeiler und Grundfeste der Wahrheit'.“`,
       },
     },
+
+    // ADD THIS SECTION
+    reformation: {
+      title: {
+        en: "Historical Context: The Reformation",
+        fr: "Contexte Historique : La Réforme",
+        es: "Contexto Histórico: La Reforma",
+        de: "Historischer Kontext: Die Reformation",
+      },
+      text: {
+        en: "How did this doctrine arise? Explore the timeline, key figures, and theological shifts of the Protestant Reformation to understand the origins of the division.",
+        fr: "Comment cette doctrine est-elle apparue ? Explorez la chronologie, les figures clés et les changements théologiques de la Réforme protestante pour comprendre les origines de la division.",
+        es: "¿Cómo surgió esta doctrina? Explora la línea de tiempo, las figuras clave y los cambios teológicos de la Reforma Protestante para entender los orígenes de la división.",
+        de: "Wie entstand diese Lehre? Erkunden Sie den Zeitstrahl, die Schlüsselfiguren und die theologischen Veränderungen der protestantischen Reformation, um die Ursprünge der Spaltung zu verstehen.",
+      },
+      button: {
+        en: "Explore Reformation History",
+        fr: "Explorer l'Histoire de la Réforme",
+        es: "Explorar la Historia de la Reforma",
+        de: "Reformationsgeschichte Erkunden",
+      },
+    },
+    
     bridge: {
       heading: {
         en: "What We Find Instead",
