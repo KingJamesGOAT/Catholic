@@ -624,34 +624,34 @@ function AppContent() {
 
 
           
-            <motion.main
-  key={currentTopicIndex}
-  // FIX: If mobile, start at x:0 (no slide), otherwise slide from 100/-100
-  initial={{ 
-    opacity: 0, 
-    x: isMobile ? 0 : (direction === "forward" ? 100 : -100) 
-  }}
-  animate={{
-    opacity: 1,
-    x: 0,
-    paddingTop: isProgressVisible
-      ? isMobile
-        ? "100px"
-        : "200px"
-      : "80px",
-  }}
-  // FIX: If mobile, exit at x:0 (fade out only), otherwise slide away
-  exit={{ 
-    opacity: 0, 
-    x: isMobile ? 0 : (direction === "forward" ? -100 : 100) 
-  }}
-  transition={{
-    opacity: { duration: 0.5 },
-    // FIX: If mobile, make the slide instant/zero so it doesn't lag the GPU
-    x: { duration: isMobile ? 0 : 0.5 },
-    paddingTop: { duration: 0.3, ease: "easeInOut" },
-  }}
->
+          <motion.main
+              key={currentTopicIndex}
+              // MODIFIED: If mobile, start at x:0 (no slide). If desktop, slide 100px.
+              initial={{ 
+                opacity: 0, 
+                x: isMobile ? 0 : (direction === "forward" ? 100 : -100) 
+              }}
+              animate={{
+                opacity: 1,
+                x: 0,
+                paddingTop: isProgressVisible
+                  ? isMobile
+                    ? "100px"
+                    : "200px"
+                  : "80px",
+              }}
+              // MODIFIED: If mobile, exit at x:0 (fade only). If desktop, slide away.
+              exit={{ 
+                opacity: 0, 
+                x: isMobile ? 0 : (direction === "forward" ? -100 : 100) 
+              }}
+              transition={{
+                opacity: { duration: 0.3 }, 
+                // MODIFIED: If mobile, duration is 0 (Instant/No Slide). Desktop gets 0.5s.
+                x: { duration: isMobile ? 0 : 0.5 },
+                paddingTop: { duration: 0.3, ease: "easeInOut" },
+              }}
+            >
 
 
 
