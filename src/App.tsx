@@ -664,10 +664,14 @@ function AppContent() {
                   </div>
                 }
               >
+                
                 <CurrentTopicComponent
                   onComplete={markCurrentTopicComplete}
                   onScienceClick={() => handleViewChange("science")}
+                  onReformationClick={() => handleViewChange("reformation")} // Added this
                 />
+
+                
               </Suspense>
               <div className="container mx-auto px-4 pb-16 max-w-4xl">
                 <div className="flex flex-col md:flex-row items-center justify-between border-t border-gray-800 pt-8 gap-6 md:gap-4 mt-16">
