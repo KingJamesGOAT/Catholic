@@ -80,6 +80,7 @@ const NoFilioque = lazy(loadNoFilioque);
 type TopicComponentProps = {
   onComplete?: () => void;
   onScienceClick?: () => void;
+  onReformationClick?: () => void; // Added this
 };
 
 export interface Topic {
