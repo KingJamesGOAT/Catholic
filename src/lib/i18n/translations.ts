@@ -1331,67 +1331,113 @@ export const translations = {
       },
     },
 
-    // Argument 5: Resurrection
-    resurrection: {
+    arg5Title: {
+      en: "Scientific Evidence",
+      fr: "Preuves Scientifiques",
+      es: "Evidencia Científica",
+      de: "Wissenschaftliche Beweise",
+    },
+    arg5Subtitle: {
+      en: "The Return of the God Hypothesis",
+      fr: "Le Retour de l'Hypothèse Dieu",
+      es: "El Retorno de la Hipótesis de Dios",
+      de: "Die Rückkehr der Gotteshypothese",
+    },
+
+    // REPLACE the entire 'resurrection' object with this 'science' object:
+    science: {
       heading: {
-        en: "The Argument from Jesus' Resurrection",
-        fr: "L'Argument de la Résurrection de Jésus",
-        es: "El Argumento de la Resurrección de Jesús",
-        de: "Das Argument aus der Auferstehung Jesu",
+        en: "Scientific Evidence & Intelligent Design",
+        fr: "Preuves Scientifiques et Dessein Intelligent",
+        es: "Evidencia Científica y Diseño Inteligente",
+        de: "Wissenschaftliche Beweise und Intelligent Design",
       },
       tagline: {
-        en: "Historical evidence for divine intervention",
-        fr: "Preuves historiques d'intervention divine",
-        es: "Evidencia histórica de intervención divina",
-        de: "Historische Beweise für göttliches Eingreifen",
+        en: "The universe is not silent; it speaks of a Creator.",
+        fr: "L'univers n'est pas silencieux ; il parle d'un Créateur.",
+        es: "El universo no es silencioso; habla de un Creador.",
+        de: "Das Universum ist nicht still; es spricht von einem Schöpfer.",
       },
       intro: {
-        en: "The historical evidence for Jesus's resurrection is compelling. It rests on three key facts agreed upon by the majority of New Testament scholars:",
-        fr: "Les preuves historiques de la résurrection de Jésus sont convaincantes. Elles reposent sur trois faits clés reconnus par la majorité des spécialistes du Nouveau Testament :",
-        es: "La evidencia histórica de la resurrección de Jesús es convincente. Se basa en tres hechos clave acordados por la mayoría de los eruditos del Nuevo Testamento:",
-        de: "Die historischen Beweise für Jesu Auferstehung sind überzeugend. Sie stützen sich auf drei Schlüsselfakten, die von der Mehrheit der neutestamentlichen Gelehrten anerkannt werden:",
+        en: "For decades, it was popularly assumed that science had buried God. However, three major discoveries in the 20th and 21st centuries—in cosmology, physics, and biology—have turned the tide. The 'God Hypothesis' is no longer a retreat to ignorance, but the best explanation for the specific data we find in nature.",
+        fr: "Pendant des décennies, on a supposé que la science avait enterré Dieu. Cependant, trois découvertes majeures aux XXe et XXIe siècles — en cosmologie, physique et biologie — ont inversé la tendance. L'« Hypothèse Dieu » n'est plus un repli vers l'ignorance, mais la meilleure explication des données spécifiques que nous trouvons dans la nature.",
+        es: "Durante décadas, se asumió popularmente que la ciencia había enterrado a Dios. Sin embargo, tres descubrimientos importantes en los siglos XX y XXI —en cosmología, física y biología— han cambiado la marea. La 'Hipótesis de Dios' ya no es un retiro a la ignorancia, sino la mejor explicación para los datos específicos que encontramos en la naturaleza.",
+        de: "Jahrzehntelang wurde angenommen, die Wissenschaft habe Gott begraben. Doch drei große Entdeckungen im 20. und 21. Jahrhundert – in Kosmologie, Physik und Biologie – haben das Blatt gewendet. Die 'Gotteshypothese' ist kein Rückzug in die Unwissenheit mehr, sondern die beste Erklärung für die spezifischen Daten, die wir in der Natur finden.",
       },
-      fact1: {
-        en: "Jesus was buried in a known tomb.",
-        fr: "Jésus a été enterré dans un tombeau connu.",
-        es: "Jesús fue enterrado en una tumba conocida.",
-        de: "Jesus wurde in einem bekannten Grab beigesetzt.",
+      
+      // Video 1: Panel
+      video1Title: {
+        en: "By Design: Behe, Lennox, and Meyer",
+        fr: "Par Dessein : Behe, Lennox et Meyer",
+        es: "Por Diseño: Behe, Lennox y Meyer",
+        de: "Durch Design: Behe, Lennox und Meyer",
       },
-      fact2: {
-        en: "His tomb was found empty",
-        fr: "Son tombeau a été trouvé vide",
-        es: "Su tumba fue encontrada vacía",
-        de: "Sein Grab wurde leer vorgefunden",
+      video1Desc: {
+        en: "A panel of leading scholars—a biochemist, a mathematician, and a geophysicist—discusses why Neo-Darwinism fails to explain the complexity of life and why the evidence points inevitably to a Mind.",
+        fr: "Un panel d'éminents chercheurs — un biochimiste, un mathématicien et un géophysicien — discute des raisons pour lesquelles le néo-darwinisme ne parvient pas à expliquer la complexité de la vie et pourquoi les preuves pointent inévitablement vers un Esprit.",
+        es: "Un panel de destacados académicos —un bioquímico, un matemático y un geofísico— discute por qué el neodarwinismo no logra explicar la complejidad de la vida y por qué la evidencia apunta inevitablemente a una Mente.",
+        de: "Ein Panel führender Gelehrter – ein Biochemiker, ein Mathematiker und ein Geophysiker – diskutiert, warum der Neodarwinismus die Komplexität des Lebens nicht erklären kann und warum die Beweise unvermeidlich auf einen Geist hinweisen.",
       },
-      fact2Detail: {
-        en: "by a group of women followers.",
-        fr: "par un groupe de femmes disciples.",
-        es: "por un grupo de mujeres seguidoras.",
-        de: "von einer Gruppe von Frauen, die ihm nachfolgten.",
+
+      // Video 2: Meyer
+      video2Title: {
+        en: "The Return of the God Hypothesis",
+        fr: "Le Retour de l'Hypothèse Dieu",
+        es: "El Retorno de la Hipótesis de Dios",
+        de: "Die Rückkehr der Gotteshypothese",
       },
-      fact3: {
-        en: "Multiple individuals and groups experienced appearances",
-        fr: "Plusieurs individus et groupes ont vécu des apparitions",
-        es: "Múltiples individuos y grupos experimentaron apariciones",
-        de: "Mehrere Individuen und Gruppen erlebten Erscheinungen",
+      video2Desc: {
+        en: "Dr. Stephen Meyer presents three scientific discoveries that challenge materialism: the origin of the universe (Big Bang), the fine-tuning of physics, and the information in DNA.",
+        fr: "Le Dr Stephen Meyer présente trois découvertes scientifiques qui remettent en cause le matérialisme : l'origine de l'univers (Big Bang), le réglage fin de la physique et l'information dans l'ADN.",
+        es: "El Dr. Stephen Meyer presenta tres descubrimientos científicos que desafían el materialismo: el origen del universo (Big Bang), el ajuste fino de la física y la información en el ADN.",
+        de: "Dr. Stephen Meyer stellt drei wissenschaftliche Entdeckungen vor, die den Materialismus herausfordern: den Ursprung des Universums (Urknall), die Feinabstimmung der Physik und die Informationen in der DNA.",
       },
-      fact3Detail: {
-        en: "of Jesus alive after His death.",
-        fr: "de Jésus vivant après Sa mort.",
-        es: "de Jesús vivo después de Su muerte.",
-        de: "von Jesus lebendig nach Seinem Tod.",
+
+      // The Three Discoveries
+      discovery1Title: {
+        en: "1. The Beginning of the Universe",
+        fr: "1. Le Commencement de l'Univers",
+        es: "1. El Comienzo del Universo",
+        de: "1. Der Anfang des Universums",
       },
-      explanation: {
-        en: "Naturalistic explanations (like hallucinations, theft, or myth development) fail to account for all the data. The resurrection is the best explanation, implying divine confirmation of Jesus's claims.",
-        fr: "Les explications naturalistes (comme les hallucinations, le vol ou le développement du mythe) ne parviennent pas à expliquer toutes les données. La résurrection est la meilleure explication, impliquant une confirmation divine des affirmations de Jésus.",
-        es: "Las explicaciones naturalistas (como alucinaciones, robo o desarrollo de mitos) no logran explicar todos los datos. La resurrección es la mejor explicación, lo que implica una confirmación divina de las afirmaciones de Jesús.",
-        de: "Naturalistische Erklärungen (wie Halluzinationen, Diebstahl oder Mythenbildung) können nicht alle Daten erklären. Die Auferstehung ist die beste Erklärung, was eine göttliche Bestätigung von Jesu Ansprüchen impliziert.",
+      discovery1Text: {
+        en: "Standard Big Bang cosmology confirms that the universe is not eternal; it had a definite beginning. Since something cannot come from nothing, the universe must have a transcendent cause beyond space, time, and matter.",
+        fr: "La cosmologie standard du Big Bang confirme que l'univers n'est pas éternel ; il a eu un commencement défini. Puisque quelque chose ne peut pas venir de rien, l'univers doit avoir une cause transcendante au-delà de l'espace, du temps et de la matière.",
+        es: "La cosmología estándar del Big Bang confirma que el universo no es eterno; tuvo un comienzo definido. Dado que algo no puede surgir de la nada, el universo debe tener una causa trascendente más allá del espacio, el tiempo y la materia.",
+        de: "Die Standard-Urknall-Kosmologie bestätigt, dass das Universum nicht ewig ist; es hatte einen definitiven Anfang. Da etwas nicht aus dem Nichts kommen kann, muss das Universum eine transzendente Ursache jenseits von Raum, Zeit und Materie haben.",
       },
-      nextTopicNote: {
-        en: "The historical evidence for the Resurrection is a complex topic and is explored in detail in the next topic: 'Proof of Resurrection.'",
-        fr: "Les preuves historiques de la Résurrection sont un sujet complexe et sont explorées en détail dans le sujet suivant : « Preuve de la Résurrection. »",
-        es: "La evidencia histórica de la Resurrección es un tema complejo y se explora en detalle en el siguiente tema: 'Prueba de la Resurrección.'",
-        de: "Die historischen Beweise für die Auferstehung sind ein komplexes Thema und werden im nächsten Thema: 'Beweis der Auferstehung' detailliert untersucht.",
+
+      discovery2Title: {
+        en: "2. The Fine-Tuning of Physics",
+        fr: "2. Le Réglage Fin de la Physique",
+        es: "2. El Ajuste Fino de la Física",
+        de: "2. Die Feinabstimmung der Physik",
+      },
+      discovery2Text: {
+        en: "The fundamental laws of physics (gravity, electromagnetism, etc.) are precisely calibrated to support life. The odds of this happening by chance are mathematically negligible (like hitting a single atom in the universe blindfolded). This points to a fine-tuner.",
+        fr: "Les lois fondamentales de la physique (gravité, électromagnétisme, etc.) sont précisément calibrées pour soutenir la vie. Les chances que cela se produise par hasard sont mathématiquement négligeables. Cela pointe vers un 'régleur' intelligent.",
+        es: "Las leyes fundamentales de la física (gravedad, electromagnetismo, etc.) están calibradas con precisión para sustentar la vida. Las probabilidades de que esto ocurra por azar son matemáticamente insignificantes. Esto apunta a un sintonizador fino.",
+        de: "Die fundamentalen Gesetze der Physik (Schwerkraft, Elektromagnetismus usw.) sind präzise kalibriert, um Leben zu ermöglichen. Die Wahrscheinlichkeit, dass dies durch Zufall geschieht, ist mathematisch vernachlässigbar. Dies deutet auf einen Feinabstimmer hin.",
+      },
+
+      discovery3Title: {
+        en: "3. Digital Code in DNA",
+        fr: "3. Le Code Numérique dans l'ADN",
+        es: "3. Código Digital en el ADN",
+        de: "3. Digitaler Code in der DNA",
+      },
+      discovery3Text: {
+        en: "DNA contains specified complexity—information that functions like computer code or a language. We know from uniform experience that information always originates from a mind, never from undirected material processes.",
+        fr: "L'ADN contient une complexité spécifiée — une information qui fonctionne comme un code informatique ou un langage. Nous savons par expérience uniforme que l'information provient toujours d'un esprit, jamais de processus matériels non dirigés.",
+        es: "El ADN contiene complejidad especificada: información que funciona como código informático o un lenguaje. Sabemos por experiencia uniforme que la información siempre se origina en una mente, nunca en procesos materiales no dirigidos.",
+        de: "DNA enthält spezifizierte Komplexität – Informationen, die wie ein Computercode oder eine Sprache funktionieren. Wir wissen aus einheitlicher Erfahrung, dass Informationen immer von einem Geist stammen, niemals von ungerichteten materiellen Prozessen.",
+      },
+
+      conclusion: {
+        en: "Scientific materialism cannot explain the origin of the universe, the precision of its laws, or the information necessary for life. Theism—the belief in a super-intelligent Creator—provides the most coherent explanation for reality.",
+        fr: "Le matérialisme scientifique ne peut expliquer l'origine de l'univers, la précision de ses lois ou l'information nécessaire à la vie. Le théisme — la croyance en un Créateur super-intelligent — fournit l'explication la plus cohérente de la réalité.",
+        es: "El materialismo científico no puede explicar el origen del universo, la precisión de sus leyes o la información necesaria para la vida. El teísmo —la creencia en un Creador superinteligente— proporciona la explicación más coherente de la realidad.",
+        de: "Der wissenschaftliche Materialismus kann den Ursprung des Universums, die Präzision seiner Gesetze oder die für das Leben notwendigen Informationen nicht erklären. Der Theismus – der Glaube an einen superintelligenten Schöpfer – liefert die kohärenteste Erklärung für die Realität.",
       },
     },
 
