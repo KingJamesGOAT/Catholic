@@ -1344,7 +1344,7 @@ export const translations = {
       de: "Die Rückkehr der Gotteshypothese",
     },
 
-    // REPLACE the entire 'resurrection' object with this 'science' object:
+    // INSERT THIS NEW SCIENCE SECTION
     science: {
       heading: {
         en: "Scientific Evidence & Intelligent Design",
@@ -1359,13 +1359,13 @@ export const translations = {
         de: "Das Universum ist nicht still; es spricht von einem Schöpfer.",
       },
       intro: {
-        en: "For decades, it was popularly assumed that science had buried God. However, three major discoveries in the 20th and 21st centuries—in cosmology, physics, and biology—have turned the tide. The 'God Hypothesis' is no longer a retreat to ignorance, but the best explanation for the specific data we find in nature.",
-        fr: "Pendant des décennies, on a supposé que la science avait enterré Dieu. Cependant, trois découvertes majeures aux XXe et XXIe siècles — en cosmologie, physique et biologie — ont inversé la tendance. L'« Hypothèse Dieu » n'est plus un repli vers l'ignorance, mais la meilleure explication des données spécifiques que nous trouvons dans la nature.",
-        es: "Durante décadas, se asumió popularmente que la ciencia había enterrado a Dios. Sin embargo, tres descubrimientos importantes en los siglos XX y XXI —en cosmología, física y biología— han cambiado la marea. La 'Hipótesis de Dios' ya no es un retiro a la ignorancia, sino la mejor explicación para los datos específicos que encontramos en la naturaleza.",
-        de: "Jahrzehntelang wurde angenommen, die Wissenschaft habe Gott begraben. Doch drei große Entdeckungen im 20. und 21. Jahrhundert – in Kosmologie, Physik und Biologie – haben das Blatt gewendet. Die 'Gotteshypothese' ist kein Rückzug in die Unwissenheit mehr, sondern die beste Erklärung für die spezifischen Daten, die wir in der Natur finden.",
+        en: "For decades, it was popularly assumed that science had buried God. However, three major discoveries in the 20th and 21st centuries in cosmology, physics, and biology have turned the tide. The 'God Hypothesis' is no longer a retreat to ignorance but the best explanation for the specific data we find in nature.",
+        fr: "Pendant des décennies, on a supposé que la science avait enterré Dieu. Cependant, trois découvertes majeures aux XXe et XXIe siècles en cosmologie, physique et biologie ont inversé la tendance. L'« Hypothèse Dieu » n'est plus un repli vers l'ignorance mais la meilleure explication des données spécifiques que nous trouvons dans la nature.",
+        es: "Durante décadas, se asumió popularmente que la ciencia había enterrado a Dios. Sin embargo, tres descubrimientos importantes en los siglos XX y XXI en cosmología, física y biología han cambiado la marea. La 'Hipótesis de Dios' ya no es un retiro a la ignorancia sino la mejor explicación para los datos específicos que encontramos en la naturaleza.",
+        de: "Jahrzehntelang wurde angenommen, die Wissenschaft habe Gott begraben. Doch drei große Entdeckungen im 20. und 21. Jahrhundert in Kosmologie, Physik und Biologie haben das Blatt gewendet. Die 'Gotteshypothese' ist kein Rückzug in die Unwissenheit mehr, sondern die beste Erklärung für die spezifischen Daten, die wir in der Natur finden.",
       },
       
-      // Video 1: Panel
+      // Video 1
       video1Title: {
         en: "By Design: Behe, Lennox, and Meyer",
         fr: "Par Dessein : Behe, Lennox et Meyer",
@@ -1373,13 +1373,13 @@ export const translations = {
         de: "Durch Design: Behe, Lennox und Meyer",
       },
       video1Desc: {
-        en: "A panel of leading scholars—a biochemist, a mathematician, and a geophysicist—discusses why Neo-Darwinism fails to explain the complexity of life and why the evidence points inevitably to a Mind.",
-        fr: "Un panel d'éminents chercheurs — un biochimiste, un mathématicien et un géophysicien — discute des raisons pour lesquelles le néo-darwinisme ne parvient pas à expliquer la complexité de la vie et pourquoi les preuves pointent inévitablement vers un Esprit.",
-        es: "Un panel de destacados académicos —un bioquímico, un matemático y un geofísico— discute por qué el neodarwinismo no logra explicar la complejidad de la vida y por qué la evidencia apunta inevitablemente a una Mente.",
-        de: "Ein Panel führender Gelehrter – ein Biochemiker, ein Mathematiker und ein Geophysiker – diskutiert, warum der Neodarwinismus die Komplexität des Lebens nicht erklären kann und warum die Beweise unvermeidlich auf einen Geist hinweisen.",
+        en: "A panel of leading scholars, including a biochemist, a mathematician, and a geophysicist, discusses why Neo-Darwinism fails to explain the complexity of life and why the evidence points inevitably to a Mind.",
+        fr: "Un panel d'éminents chercheurs, dont un biochimiste, un mathématicien et un géophysicien, discute des raisons pour lesquelles le néo-darwinisme ne parvient pas à expliquer la complexité de la vie et pourquoi les preuves pointent inévitablement vers un Esprit.",
+        es: "Un panel de destacados académicos, incluidos un bioquímico, un matemático y un geofísico, discute por qué el neodarwinismo no logra explicar la complejidad de la vida y por qué la evidencia apunta inevitablemente a una Mente.",
+        de: "Ein Panel führender Gelehrter, darunter ein Biochemiker, ein Mathematiker und ein Geophysiker, diskutiert, warum der Neodarwinismus die Komplexität des Lebens nicht erklären kann und warum die Beweise unvermeidlich auf einen Geist hinweisen.",
       },
 
-      // Video 2: Meyer
+      // Video 2
       video2Title: {
         en: "The Return of the God Hypothesis",
         fr: "Le Retour de l'Hypothèse Dieu",
@@ -1387,13 +1387,13 @@ export const translations = {
         de: "Die Rückkehr der Gotteshypothese",
       },
       video2Desc: {
-        en: "Dr. Stephen Meyer presents three scientific discoveries that challenge materialism: the origin of the universe (Big Bang), the fine-tuning of physics, and the information in DNA.",
-        fr: "Le Dr Stephen Meyer présente trois découvertes scientifiques qui remettent en cause le matérialisme : l'origine de l'univers (Big Bang), le réglage fin de la physique et l'information dans l'ADN.",
-        es: "El Dr. Stephen Meyer presenta tres descubrimientos científicos que desafían el materialismo: el origen del universo (Big Bang), el ajuste fino de la física y la información en el ADN.",
-        de: "Dr. Stephen Meyer stellt drei wissenschaftliche Entdeckungen vor, die den Materialismus herausfordern: den Ursprung des Universums (Urknall), die Feinabstimmung der Physik und die Informationen in der DNA.",
+        en: "Dr. Stephen Meyer presents three scientific discoveries that challenge materialism: the origin of the universe, the fine-tuning of physics, and the information in DNA.",
+        fr: "Le Dr Stephen Meyer présente trois découvertes scientifiques qui remettent en cause le matérialisme : l'origine de l'univers, le réglage fin de la physique et l'information dans l'ADN.",
+        es: "El Dr. Stephen Meyer presenta tres descubrimientos científicos que desafían el materialismo: el origen del universo, el ajuste fino de la física y la información en el ADN.",
+        de: "Dr. Stephen Meyer stellt drei wissenschaftliche Entdeckungen vor, die den Materialismus herausfordern: den Ursprung des Universums, die Feinabstimmung der Physik und die Informationen in der DNA.",
       },
 
-      // The Three Discoveries
+      // Discovery 1
       discovery1Title: {
         en: "1. The Beginning of the Universe",
         fr: "1. Le Commencement de l'Univers",
@@ -1401,12 +1401,13 @@ export const translations = {
         de: "1. Der Anfang des Universums",
       },
       discovery1Text: {
-        en: "Standard Big Bang cosmology confirms that the universe is not eternal; it had a definite beginning. Since something cannot come from nothing, the universe must have a transcendent cause beyond space, time, and matter.",
-        fr: "La cosmologie standard du Big Bang confirme que l'univers n'est pas éternel ; il a eu un commencement défini. Puisque quelque chose ne peut pas venir de rien, l'univers doit avoir une cause transcendante au-delà de l'espace, du temps et de la matière.",
-        es: "La cosmología estándar del Big Bang confirma que el universo no es eterno; tuvo un comienzo definido. Dado que algo no puede surgir de la nada, el universo debe tener una causa trascendente más allá del espacio, el tiempo y la materia.",
-        de: "Die Standard-Urknall-Kosmologie bestätigt, dass das Universum nicht ewig ist; es hatte einen definitiven Anfang. Da etwas nicht aus dem Nichts kommen kann, muss das Universum eine transzendente Ursache jenseits von Raum, Zeit und Materie haben.",
+        en: "Standard Big Bang cosmology confirms that the universe is not eternal. It had a definite beginning in space and time. Since something cannot come from nothing, the universe must have a transcendent cause that exists beyond space, time, and matter. This aligns perfectly with the concept of a Creator.",
+        fr: "La cosmologie standard du Big Bang confirme que l'univers n'est pas éternel. Il a eu un commencement défini dans l'espace et le temps. Puisque quelque chose ne peut pas venir de rien, l'univers doit avoir une cause transcendante qui existe au-delà de l'espace, du temps et de la matière. Cela s'aligne parfaitement avec le concept d'un Créateur.",
+        es: "La cosmología estándar del Big Bang confirma que el universo no es eterno. Tuvo un comienzo definido en el espacio y el tiempo. Dado que algo no puede surgir de la nada, el universo debe tener una causa trascendente que existe más allá del espacio, el tiempo y la materia. Esto se alinea perfectamente con el concepto de un Creador.",
+        de: "Die Standard-Urknall-Kosmologie bestätigt, dass das Universum nicht ewig ist. Es hatte einen definitiven Anfang in Raum und Zeit. Da etwas nicht aus dem Nichts kommen kann, muss das Universum eine transzendente Ursache haben, die jenseits von Raum, Zeit und Materie existiert. Dies stimmt perfekt mit dem Konzept eines Schöpfers überein.",
       },
 
+      // Discovery 2
       discovery2Title: {
         en: "2. The Fine-Tuning of Physics",
         fr: "2. Le Réglage Fin de la Physique",
@@ -1414,12 +1415,13 @@ export const translations = {
         de: "2. Die Feinabstimmung der Physik",
       },
       discovery2Text: {
-        en: "The fundamental laws of physics (gravity, electromagnetism, etc.) are precisely calibrated to support life. The odds of this happening by chance are mathematically negligible (like hitting a single atom in the universe blindfolded). This points to a fine-tuner.",
-        fr: "Les lois fondamentales de la physique (gravité, électromagnétisme, etc.) sont précisément calibrées pour soutenir la vie. Les chances que cela se produise par hasard sont mathématiquement négligeables. Cela pointe vers un 'régleur' intelligent.",
-        es: "Las leyes fundamentales de la física (gravedad, electromagnetismo, etc.) están calibradas con precisión para sustentar la vida. Las probabilidades de que esto ocurra por azar son matemáticamente insignificantes. Esto apunta a un sintonizador fino.",
-        de: "Die fundamentalen Gesetze der Physik (Schwerkraft, Elektromagnetismus usw.) sind präzise kalibriert, um Leben zu ermöglichen. Die Wahrscheinlichkeit, dass dies durch Zufall geschieht, ist mathematisch vernachlässigbar. Dies deutet auf einen Feinabstimmer hin.",
+        en: "The fundamental laws of physics, such as gravity and electromagnetism, are precisely calibrated to support life. This is often called the Goldilocks universe because conditions are just right. The odds of this happening by chance are mathematically negligible. It is like hitting a single atom in the universe while blindfolded. This extreme precision points to a fine tuner who set the parameters.",
+        fr: "Les lois fondamentales de la physique, telles que la gravité et l'électromagnétisme, sont précisément calibrées pour soutenir la vie. C'est souvent appelé l'univers Boucle d'or car les conditions sont juste parfaites. Les chances que cela se produise par hasard sont mathématiquement négligeables. C'est comme toucher un seul atome dans l'univers en ayant les yeux bandés. Cette précision extrême pointe vers un régleur intelligent qui a défini les paramètres.",
+        es: "Las leyes fundamentales de la física, como la gravedad y el electromagnetismo, están calibradas con precisión para sustentar la vida. A menudo se le llama el universo Ricitos de Oro porque las condiciones son perfectas. Las probabilidades de que esto ocurra por azar son matemáticamente insignificantes. Es como golpear un solo átomo en el universo con los ojos vendados. Esta precisión extrema apunta a un sintonizador fino que estableció los parámetros.",
+        de: "Die fundamentalen Gesetze der Physik, wie Schwerkraft und Elektromagnetismus, sind präzise kalibriert, um Leben zu ermöglichen. Dies wird oft als Goldlöckchen-Universum bezeichnet, da die Bedingungen genau richtig sind. Die Wahrscheinlichkeit, dass dies durch Zufall geschieht, ist mathematisch vernachlässigbar. Es ist, als würde man ein einzelnes Atom im Universum mit verbundenen Augen treffen. Diese extreme Präzision deutet auf einen Feinabstimmer hin, der die Parameter festgelegt hat.",
       },
 
+      // Discovery 3
       discovery3Title: {
         en: "3. Digital Code in DNA",
         fr: "3. Le Code Numérique dans l'ADN",
@@ -1427,17 +1429,17 @@ export const translations = {
         de: "3. Digitaler Code in der DNA",
       },
       discovery3Text: {
-        en: "DNA contains specified complexity—information that functions like computer code or a language. We know from uniform experience that information always originates from a mind, never from undirected material processes.",
-        fr: "L'ADN contient une complexité spécifiée — une information qui fonctionne comme un code informatique ou un langage. Nous savons par expérience uniforme que l'information provient toujours d'un esprit, jamais de processus matériels non dirigés.",
-        es: "El ADN contiene complejidad especificada: información que funciona como código informático o un lenguaje. Sabemos por experiencia uniforme que la información siempre se origina en una mente, nunca en procesos materiales no dirigidos.",
-        de: "DNA enthält spezifizierte Komplexität – Informationen, die wie ein Computercode oder eine Sprache funktionieren. Wir wissen aus einheitlicher Erfahrung, dass Informationen immer von einem Geist stammen, niemals von ungerichteten materiellen Prozessen.",
+        en: "DNA contains specified complexity. This is information that functions like computer code or a written language. We know from uniform experience that information always originates from a mind. It never arises from undirected material processes. The presence of such complex code in every cell is strong evidence for an intelligent designer.",
+        fr: "L'ADN contient une complexité spécifiée. C'est une information qui fonctionne comme un code informatique ou un langage écrit. Nous savons par expérience uniforme que l'information provient toujours d'un esprit. Elle ne surgit jamais de processus matériels non dirigés. La présence d'un code aussi complexe dans chaque cellule est une preuve solide d'un concepteur intelligent.",
+        es: "El ADN contiene complejidad especificada. Esta es información que funciona como código informático o un lenguaje escrito. Sabemos por experiencia uniforme que la información siempre se origina en una mente. Nunca surge de procesos materiales no dirigidos. La presencia de un código tan complejo en cada célula es una fuerte evidencia de un diseñador inteligente.",
+        de: "DNA enthält spezifizierte Komplexität. Dies sind Informationen, die wie ein Computercode oder eine geschriebene Sprache funktionieren. Wir wissen aus einheitlicher Erfahrung, dass Informationen immer von einem Geist stammen. Sie entstehen niemals aus ungerichteten materiellen Prozessen. Das Vorhandensein eines solch komplexen Codes in jeder Zelle ist ein starker Beweis für einen intelligenten Designer.",
       },
 
       conclusion: {
-        en: "Scientific materialism cannot explain the origin of the universe, the precision of its laws, or the information necessary for life. Theism—the belief in a super-intelligent Creator—provides the most coherent explanation for reality.",
-        fr: "Le matérialisme scientifique ne peut expliquer l'origine de l'univers, la précision de ses lois ou l'information nécessaire à la vie. Le théisme — la croyance en un Créateur super-intelligent — fournit l'explication la plus cohérente de la réalité.",
-        es: "El materialismo científico no puede explicar el origen del universo, la precisión de sus leyes o la información necesaria para la vida. El teísmo —la creencia en un Creador superinteligente— proporciona la explicación más coherente de la realidad.",
-        de: "Der wissenschaftliche Materialismus kann den Ursprung des Universums, die Präzision seiner Gesetze oder die für das Leben notwendigen Informationen nicht erklären. Der Theismus – der Glaube an einen superintelligenten Schöpfer – liefert die kohärenteste Erklärung für die Realität.",
+        en: "Scientific materialism cannot explain the origin of the universe, the precision of its laws, or the information necessary for life. Theism, the belief in a super-intelligent Creator, provides the most coherent explanation for reality.",
+        fr: "Le matérialisme scientifique ne peut expliquer l'origine de l'univers, la précision de ses lois ou l'information nécessaire à la vie. Le théisme, la croyance en un Créateur super-intelligent, fournit l'explication la plus cohérente de la réalité.",
+        es: "El materialismo científico no puede explicar el origen del universo, la precisión de sus leyes o la información necesaria para la vida. El teísmo, la creencia en un Creador superinteligente, proporciona la explicación más coherente de la realidad.",
+        de: "Der wissenschaftliche Materialismus kann den Ursprung des Universums, die Präzision seiner Gesetze oder die für das Leben notwendigen Informationen nicht erklären. Der Theismus, der Glaube an einen superintelligenten Schöpfer, liefert die kohärenteste Erklärung für die Realität.",
       },
     },
 
