@@ -4,13 +4,13 @@ export const reformationTranslations = {
     subtitle: "A deep dive into the historical reality of the Protestant Reformation to separate the actual events from the later legends.",
     tocTitle: "On This Page",
     
-    // Section 1
+    // Section 1: Nature
     natureTitle: "The Nature of the Split",
     natureDesc: "Protestantism is often presented as a return to 'original' Christianity. Historically and theologically however it operates more like a reaction than a standalone faith. This section explores why it struggles to maintain unity without the Catholic Church as its point of reference.",
     vid1Title: "Protestantism Needs Catholicism to Exist",
     vid1Text: "Brian Holdsworth presents the 'Ring around Saturn' analogy to explain the fragmentation of Protestantism. He argues that Protestantism lacks an internal unifying principle as it is defined entirely by what it opposes which is Rome. If the Catholic Church were to disappear tomorrow then Protestantism would lose its definition and dissolve into thousands of unrelated sects. The only thing binding a Baptist and a Lutheran and a Pentecostal together is their shared protest against the Pope.",
 
-    // Section 2
+    // Section 2: Luther
     lutherTitle: "Deconstructing Martin Luther",
     lutherDesc: "Martin Luther is arguably the most influential figure of the last millennium. But the popular image of him as a humble and unwavering hero of conscience often clashes with his actual writings and behavior. To understand the Reformation we must understand the man who started it.",
     vid2aTitle: "Martin Luther and His Narcissistic War on Philosophy",
@@ -18,7 +18,19 @@ export const reformationTranslations = {
     vid2bTitle: "The Convenient Morality of the Reformers",
     vid2bText: "Were the Reformers truly uncompromising men of principle who spoke truth to power? History suggests a more complicated reality. This breakdown reveals how Martin Luther and John Calvin and John Knox frequently flipped their 'unshakeable' theological positions whenever it suited their political needs or personal safety. This included their views on state authority and the validity of councils and female rulers. It paints a picture of political operators rather than just pious martyrs.",
 
-    // Section 3
+    // Section 3: Faith Alone (New)
+    faithTitle: "The Sola Fide Controversy",
+    faithDesc: "While Luther's revolt began with authority, it quickly moved to soteriology. The doctrine of 'Faith Alone' became the cornerstone of the Reformation, yet it remains one of the most misunderstood and scripturally contradicted innovations of the 16th century.",
+    vidFaithTitle: "Why I Reject 'Faith Alone'",
+    vidFaithText: "Keith Nester, a former Protestant pastor, breaks down why the math of 'Faith Alone' doesn't add up scripturally or practically. He highlights the logical contradiction of requiring works to 'prove' faith while denying they play a role in salvation, and points to James 2:24 as a direct scriptural refutation of the doctrine.",
+
+    // Section 4: Division (New)
+    divisionTitle: "The Fruit of Division",
+    divisionDesc: "The Reformers promised that Scripture alone would unify the Church around clear truth. Five centuries later, the result is tens of thousands of competing denominations. This section examines whether the Reformation failed its own test of validity.",
+    vidDivisionTitle: "The Argument Protestants Can't Answer",
+    vidDivisionText: "Joe Heschmeyer argues that the 'Fruit of Division' isn't just an unfortunate side effect—it is the logical disproof of the Protestant view of Scripture. If the Bible were meant to be the sole authority without a magisterium, it would produce unity among sincere believers. The fact that it produces endless fragmentation suggests the underlying premise is false.",
+
+    // Section 5: Myths
     mythsTitle: "Busting Historical Myths",
     mythsDesc: "The Reformation is often justified by specific historical narratives such as the idea that the Church banned the Bible or that the laity were kept in ignorance or that Luther stood alone against a tyrannical empire. Modern historians have largely debunked these claims yet they persist in popular culture.",
     vid3aTitle: "8 Myths about Martin Luther",
@@ -26,7 +38,7 @@ export const reformationTranslations = {
     vid3bTitle: "The Myth of Protestant Bible Martyrs",
     vid3bText: "A common accusation is that the Catholic Church executed William Tyndale just for translating the Bible. This is false. The Church had authorized vernacular Bibles for centuries. Tyndale and others like Wycliffe were punished by the State for heresy and sedition. Specifically this was for creating intentional mistranslations designed to incite rebellion against the hierarchy such as changing 'Church' to 'Congregation' and 'Priest' to 'Elder' to undermine apostolic authority.",
 
-    // Section 4
+    // Section 6: Modern
     modernTitle: "The Modern Defense",
     modernDesc: "When confronted with the difficult history of the Reformation a common modern defense is to simply distance oneself from the Reformers while trying to keep their theology. This section explores why that approach is intellectually fatal.",
     vid4Title: "The Worst Protestant Reply",
@@ -48,6 +60,16 @@ export const reformationTranslations = {
     vid2aText: "A menudo escuchamos que Lutero defendió 'solo la Escritura' pero rara vez escuchamos sobre lo que atacó que fue la Razón. Lutero llamó a la Razón 'la ramera del Diablo' y expresó un profundo odio por Aristóteles y la Escolástica. Este video explora su extrema arrogancia donde afirmó entender las Escrituras mejor que todos los Padres de la Iglesia combinados y cómo su rechazo de la síntesis entre Fe y Razón condujo a una teología basada puramente en la emoción y la voluntad.",
     vid2bTitle: "La Moralidad Conveniente de los Reformadores",
     vid2bText: "¿Eran los reformadores verdaderamente hombres de principios inquebrantables que decían la verdad al poder? La historia sugiere una realidad más complicada. Este análisis revela cómo Martín Lutero y Juan Calvino y John Knox cambiaban frecuentemente sus posiciones teológicas 'inquebrantables' cada vez que convenía a sus necesidades políticas o seguridad personal. Esto incluía sus opiniones sobre la autoridad estatal y la validez de los concilios y las gobernantes femeninas. Esto pinta un cuadro de operadores políticos más que de simples mártires piadosos.",
+
+    faithTitle: "La Controversia de Sola Fide",
+    faithDesc: "Aunque la revuelta de Lutero comenzó con la autoridad, rápidamente se trasladó a la soteriología. La doctrina de 'Solo la Fe' se convirtió en la piedra angular de la Reforma, sin embargo, sigue siendo una de las innovaciones más malinterpretadas y bíblicamente contradichas del siglo XVI.",
+    vidFaithTitle: "¿Por qué rechazo la 'Sola Fe'?",
+    vidFaithText: "Keith Nester, un ex pastor protestante, desglosa por qué la matemática de la 'Sola Fe' no cuadra ni bíblicamente ni en la práctica. Destaca la contradicción lógica de requerir obras para 'probar' la fe mientras se niega que jueguen un papel en la salvación, y señala a Santiago 2:24 como una refutación bíblica directa.",
+
+    divisionTitle: "El Fruto de la División",
+    divisionDesc: "Los reformadores prometieron que la Escritura por sí sola unificaría a la Iglesia en torno a la verdad clara. Cinco siglos después, el resultado son decenas de miles de denominaciones en competencia. Esta sección examina si la Reforma falló en su propia prueba de validez.",
+    vidDivisionTitle: "El Argumento que los Protestantes no pueden responder",
+    vidDivisionText: "Joe Heschmeyer argumenta que el 'Fruto de la División' no es solo un efecto secundario desafortunado, sino la refutación lógica de la visión protestante de la Escritura. Si la Biblia estuviera destinada a ser la única autoridad sin un magisterio, produciría unidad entre los creyentes sinceros. El hecho de que produzca una fragmentación interminable sugiere que la premisa subyacente es falsa.",
 
     mythsTitle: "Rompiendo Mitos Históricos",
     mythsDesc: "La Reforma a menudo se justifica mediante narrativas históricas específicas como que la Iglesia prohibió la Biblia o que los laicos se mantuvieron en la ignorancia o que Lutero se enfrentó solo a un imperio tiránico. Los historiadores modernos han desacreditado en gran medida estas afirmaciones pero persisten en la cultura popular.",
@@ -78,8 +100,18 @@ export const reformationTranslations = {
     vid2bTitle: "La Moralité Commode des Réformateurs",
     vid2bText: "Les Réformateurs étaient-ils vraiment des hommes de principes intransigeants qui disaient la vérité au pouvoir ? L'histoire suggère une réalité plus complexe. Cette analyse révèle comment Martin Luther et Jean Calvin et John Knox ont fréquemment changé leurs positions théologiques 'inébranlables' chaque fois que cela convenait à leurs besoins politiques ou à leur sécurité personnelle. Cela incluait leurs opinions sur l'autorité de l'État et la validité des conciles et les femmes dirigeantes. Cela dresse le portrait d'opérateurs politiques plutôt que de simples martyrs pieux.",
 
+    faithTitle: "La Controverse de Sola Fide",
+    faithDesc: "Bien que la révolte de Luther ait commencé par l'autorité, elle s'est rapidement déplacée vers la sotériologie. La doctrine de la 'Foi Seule' est devenue la pierre angulaire de la Réforme, pourtant elle reste l'une des innovations les plus mal comprises et bibliquement contredites du XVIe siècle.",
+    vidFaithTitle: "Pourquoi je rejette la 'Foi Seule'",
+    vidFaithText: "Keith Nester, un ancien pasteur protestant, explique pourquoi le calcul de la 'Foi Seule' ne tient pas la route, ni bibliquement ni pratiquement. Il souligne la contradiction logique d'exiger des œuvres pour 'prouver' la foi tout en niant qu'elles jouent un rôle dans le salut, et pointe Jacques 2:24 comme une réfutation biblique directe.",
+
+    divisionTitle: "Le Fruit de la Division",
+    divisionDesc: "Les réformateurs avaient promis que l'Écriture seule unirait l'Église autour de la vérité claire. Cinq siècles plus tard, le résultat est des dizaines de milliers de dénominations concurrentes. Cette section examine si la Réforme a échoué à son propre test de validité.",
+    vidDivisionTitle: "L'Argument que les Protestants ne peuvent pas répondre",
+    vidDivisionText: "Joe Heschmeyer soutient que le 'Fruit de la Division' n'est pas simplement un effet secondaire malheureux—c'est la réfutation logique de la vision protestante de l'Écriture. Si la Bible devait être la seule autorité sans magistère, elle produirait l'unité parmi les croyants sincères. Le fait qu'elle produise une fragmentation sans fin suggère que la prémisse sous-jacente est fausse.",
+
     mythsTitle: "Briser les Mythes Historiques",
-    mythsDesc: "La Réforme est souvent justifiée par des récits historiques spécifiques comme l'idée que l'Église a interdit la Bible ou que les laïcs ont été maintenus dans l'ignorance ou que Luther s'est dressé seul contre un empire tyrannique. Les historiens modernes ont largement démenti ces affirmations bien qu'elles persistent dans la culture populaire.",
+    mythsDesc: "La Réforme est souvent justifiée par des récits historiques spécifiques comme l'idée que l'Église a interdit la Bible ou que les laïcs ont été maintenus dans l'ignorance ou que Lutero se s'est dressé seul contre un empire tyrannique. Les historiens modernes ont largement démenti ces affirmations bien qu'elles persistent dans la culture populaire.",
     vid3aTitle: "8 Mythes sur Martin Luther",
     vid3aText: "La plupart de ce que les gens 'savent' sur Luther relève de la magie du cinéma et pas de l'histoire. Par exemple il n'a probablement jamais cloué les 95 Thèses à la porte car c'était une lettre envoyée. Il n'a presque certainement jamais prononcé la célèbre phrase 'Je me tiens ici' à la Diète de Worms. Et il n'était absolument pas la première personne à donner une Bible au peuple allemand car il y avait 18 traductions catholiques allemandes autorisées imprimées avant même la naissance de Luther.",
     vid3bTitle: "Le Mythe des Martyrs Bibliques Protestants",
@@ -106,6 +138,16 @@ export const reformationTranslations = {
     vid2aText: "Wir hören oft dass Luther 'nur die Schrift' verfocht aber selten hören wir was er angriff und das war die Vernunft. Luther nannte die Vernunft bekanntlich 'die Hure des Teufels' und äußerte einen tiefen Hass auf Aristoteles und die Scholastik. Dieses Video untersucht seine extreme Arroganz wo er behauptete die Schrift besser zu verstehen als alle Kirchenväter zusammen. Es zeigt auch wie seine Ablehnung der Synthese von Glaube und Vernunft zu einer Theologie führte die rein auf Emotion und Willen basierte.",
     vid2bTitle: "Die bequeme Moral der Reformatoren",
     vid2bText: "Waren die Reformatoren wirklich kompromisslose Männer mit Prinzipien die der Macht die Wahrheit sagten? Die Geschichte legt eine kompliziertere Realität nahe. Diese Analyse zeigt wie Martin Luther und Johannes Calvin und John Knox ihre 'unerschütterlichen' theologischen Positionen häufig änderten wann immer es ihren politischen Bedürfnissen oder ihrer persönlichen Sicherheit entsprach. Dies betraf ihre Ansichten zu staatlicher Autorität und der Gültigkeit von Konzilien und weiblichen Herrschern. Es zeichnet das Bild von politischen Akteuren statt nur frommen Märtyrern.",
+
+    faithTitle: "Die Sola Fide Kontroverse",
+    faithDesc: "Während Luthers Revolte mit Autorität begann, verlagerte sie sich schnell auf die Soteriologie. Die Lehre vom 'Glauben allein' wurde zum Eckpfeiler der Reformation, bleibt jedoch eine der am meisten missverstandenen und biblisch widersprochenen Innovationen des 16. Jahrhunderts.",
+    vidFaithTitle: "Warum ich 'Allein durch Glauben' ablehne",
+    vidFaithText: "Keith Nester, ein ehemaliger protestantischer Pastor, schlüsselt auf, warum die Rechnung von 'Allein durch Glauben' weder biblisch noch praktisch aufgeht. Er hebt den logischen Widerspruch hervor, Werke zu verlangen, um den Glauben zu 'beweisen', während man leugnet, dass sie eine Rolle bei der Errettung spielen, und verweist auf Jakobus 2:24 als direkte biblische Widerlegung.",
+
+    divisionTitle: "Die Frucht der Spaltung",
+    divisionDesc: "Die Reformatoren versprachen, dass die Schrift allein die Kirche um die klare Wahrheit vereinen würde. Fünf Jahrhunderte später ist das Ergebnis Zehntausende konkurrierender Konfessionen. Dieser Abschnitt untersucht, ob die Reformation ihren eigenen Gültigkeitstest nicht bestanden hat.",
+    vidDivisionTitle: "Das Argument, das Protestanten nicht beantworten können",
+    vidDivisionText: "Joe Heschmeyer argumentiert, dass die 'Frucht der Spaltung' nicht nur ein unglücklicher Nebeneffekt ist – sie ist die logische Widerlegung der protestantischen Sicht auf die Schrift. Wenn die Bibel die einzige Autorität ohne Lehramt sein sollte, würde sie Einheit unter aufrichtigen Gläubigen schaffen. Die Tatsache, dass sie endlose Fragmentierung erzeugt, deutet darauf hin, dass die zugrunde liegende Prämisse falsch ist.",
 
     mythsTitle: "Historische Mythen entlarven",
     mythsDesc: "Die Reformation wird oft mit spezifischen historischen Narrativen gerechtfertigt wie dass die Kirche die Bibel verbot oder dass die Laien in Unwissenheit gehalten wurden oder dass Luther allein gegen ein tyrannisches Reich stand. Moderne Historiker haben diese Behauptungen weitgehend widerlegt und dennoch halten sie sich hartnäckig in der Populärkultur.",
