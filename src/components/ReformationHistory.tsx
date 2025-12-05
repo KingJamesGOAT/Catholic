@@ -47,6 +47,34 @@ export default function ReformationHistory() {
         },
       ],
     },
+    // NEW SECTION: Faith Alone
+    {
+      id: "faith",
+      title: t.faithTitle,
+      description: t.faithDesc,
+      videos: [
+        {
+          id: "Mki3MBhbksE",
+          title: t.vidFaithTitle,
+          text: t.vidFaithText,
+          channel: "Keith Nester",
+        },
+      ],
+    },
+    // NEW SECTION: Fruit of Division
+    {
+      id: "division",
+      title: t.divisionTitle,
+      description: t.divisionDesc,
+      videos: [
+        {
+          id: "GlSkKi3chQA",
+          title: t.vidDivisionTitle,
+          text: t.vidDivisionText,
+          channel: "Shameless Popery",
+        },
+      ],
+    },
     {
       id: "myths",
       title: t.mythsTitle,
@@ -170,10 +198,6 @@ export default function ReformationHistory() {
                     </div>
 
                     {/* SPACER BLOCK */}
-                    {/* I kept the exact dimensions (h-48) and margins (my-8) from the red version 
-                       that you confirmed worked, but changed the color to bg-black.
-                       It is now an invisible, physical barrier.
-                    */}
                     {index < section.videos.length - 1 && (
                       <div className="h-48 w-full bg-black my-8" aria-hidden="true" />
                     )}
