@@ -22,6 +22,11 @@ import { useLanguage } from "../../lib/i18n/LanguageContext";
 import { translations, t } from "../../lib/i18n/translations";
 import React from "react";
 
+// --- ADD THE INTERFACE HERE ---
+type TopicComponentProps = {
+  onReformationClick?: () => void;
+};
+
 export default function WhyNotSolaScriptura({ onReformationClick }: TopicComponentProps) {
   const { language } = useLanguage();
   const trans = translations.whyNotSolaScriptura;
