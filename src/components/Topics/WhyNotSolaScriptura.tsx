@@ -1943,6 +1943,40 @@ export default function WhyNotSolaScriptura({ onReformationClick }: TopicCompone
           </div>
         </div>
       </motion.section>
+
+
+    {/* --- NEW SECTION: Reformation History --- */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="mb-16 bg-gradient-to-r from-gray-900 to-amber-950/20 border border-gray-800 rounded-xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 shadow-lg"
+      >
+        <div className="p-4 bg-amber-900/20 rounded-full hidden md:block">
+          <History className="text-amber-500" size={32} />
+        </div>
+        
+        <div className="flex-1 space-y-3 text-center md:text-left">
+          <h3 className="text-xl font-bold text-white flex items-center justify-center md:justify-start gap-2">
+            <History className="text-amber-500 md:hidden" size={24} />
+            {t(trans.reformation.title, language)}
+          </h3>
+          <p className="text-gray-300 text-sm leading-relaxed">
+            {t(trans.reformation.text, language)}
+          </p>
+        </div>
+
+        <button
+          onClick={onReformationClick}
+          className="px-6 py-3 bg-amber-600 hover:bg-amber-500 text-white font-medium rounded-lg transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-amber-500/20 whitespace-nowrap group"
+        >
+          {t(trans.reformation.button, language)}
+          <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
+        </button>
+      </motion.div>
+
+
+      
       {/* Bridge to Next Topic */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
