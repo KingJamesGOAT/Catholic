@@ -22,7 +22,7 @@ import { useLanguage } from "../../lib/i18n/LanguageContext";
 import { translations, t } from "../../lib/i18n/translations";
 import React from "react";
 
-export default function WhyNotSolaScriptura() {
+export default function WhyNotSolaScriptura({ onReformationClick }: TopicComponentProps) {
   const { language } = useLanguage();
   const trans = translations.whyNotSolaScriptura;
 
