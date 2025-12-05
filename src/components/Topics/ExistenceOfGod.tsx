@@ -517,7 +517,9 @@ export default function ExistenceOfGod() {
         </div>
       </motion.section>
 
-      {/* Argument 5: Resurrection */}
+      
+
+      {/* Argument 5: Scientific Evidence (Replaces Resurrection) */}
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -526,74 +528,108 @@ export default function ExistenceOfGod() {
       >
         <div className="flex items-start gap-4 mb-6">
           <div className="w-12 h-12 rounded-lg bg-blue-900/30 flex items-center justify-center border border-blue-800 flex-shrink-0">
-            <Cross className="text-blue-400" size={24} />
+            <Sparkles className="text-blue-400" size={24} />
           </div>
           <div>
             <h3 className="text-white mb-2">
-              {t(trans.resurrection.heading, language)}
+              {t(trans.science.heading, language)}
             </h3>
             <p className="text-blue-400 italic">
-              {t(trans.resurrection.tagline, language)}
+              {t(trans.science.tagline, language)}
             </p>
           </div>
         </div>
 
-        <div className="space-y-4 text-gray-300 leading-relaxed">
-          <p
-            dangerouslySetInnerHTML={{
-              __html: t(trans.resurrection.intro, language),
-            }}
-          />
+        <div className="space-y-6 text-gray-300 leading-relaxed">
+          <p>{t(trans.science.intro, language)}</p>
 
+          {/* Video 1: By Design Panel */}
           <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
-            <ul className="list-none space-y-3 pl-4">
-              <li className="flex items-start gap-3">
-                <span className="text-blue-400 mt-1">•</span>
-                <span>
-                  <strong className="text-white">
-                    {t(trans.resurrection.fact1, language)}
-                  </strong>
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-blue-400 mt-1">•</span>
-                <span>
-                  <strong className="text-white">
-                    {t(trans.resurrection.fact2, language)}
-                  </strong>{" "}
-                  {t(trans.resurrection.fact2Detail, language)}
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-blue-400 mt-1">•</span>
-                <span>
-                  <strong className="text-white">
-                    {t(trans.resurrection.fact3, language)}
-                  </strong>{" "}
-                  {t(trans.resurrection.fact3Detail, language)}
-                </span>
-              </li>
-            </ul>
+            <h4 className="text-white mb-2 font-semibold">
+              {t(trans.science.video1Title, language)}
+            </h4>
+            <p className="text-sm text-gray-400 mb-4">
+              {t(trans.science.video1Desc, language)}
+            </p>
+            <div className="aspect-video w-full rounded-md overflow-hidden bg-gray-900 border border-gray-800">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/rXexaVsvhCM"
+                title="By Design: Behe, Lennox, and Meyer"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            </div>
           </div>
 
-          <p
-            dangerouslySetInnerHTML={{
-              __html: t(
-                trans.resurrection.explanation,
-                language,
-              ),
-            }}
-          />
-          
-          {/* Note sur le prochain sujet */}
-          <div className="bg-gray-900/50 border-l-4 border-yellow-600 p-6 rounded-r-lg my-6">
-            <p className="text-gray-300">
-              {t(trans.resurrection.nextTopicNote, language)}
+          {/* Video 2: Stephen Meyer */}
+          <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
+            <h4 className="text-white mb-2 font-semibold">
+              {t(trans.science.video2Title, language)}
+            </h4>
+            <p className="text-sm text-gray-400 mb-4">
+              {t(trans.science.video2Desc, language)}
+            </p>
+            <div className="aspect-video w-full rounded-md overflow-hidden bg-gray-900 border border-gray-800">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/z_8PPO-cAlA"
+                title="Stephen Meyer: Return of the God Hypothesis"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            </div>
+          </div>
+
+          {/* The Three Discoveries */}
+          <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-6 space-y-4">
+            <div>
+              <h5 className="text-white font-bold flex items-center gap-2">
+                <span className="text-blue-400">•</span>
+                {t(trans.science.discovery1Title, language)}
+              </h5>
+              <p className="pl-5 text-gray-400 text-sm mt-1">
+                {t(trans.science.discovery1Text, language)}
+              </p>
+            </div>
+            <div>
+              <h5 className="text-white font-bold flex items-center gap-2">
+                <span className="text-blue-400">•</span>
+                {t(trans.science.discovery2Title, language)}
+              </h5>
+              <p className="pl-5 text-gray-400 text-sm mt-1">
+                {t(trans.science.discovery2Text, language)}
+              </p>
+            </div>
+            <div>
+              <h5 className="text-white font-bold flex items-center gap-2">
+                <span className="text-blue-400">•</span>
+                {t(trans.science.discovery3Title, language)}
+              </h5>
+              <p className="pl-5 text-gray-400 text-sm mt-1">
+                {t(trans.science.discovery3Text, language)}
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-gray-900/50 border-l-4 border-blue-600 p-6 rounded-r-lg my-6">
+            <p className="text-gray-300 italic">
+              "{t(trans.science.conclusion, language)}"
             </p>
           </div>
-          
         </div>
       </motion.section>
+
+
+
+
+      
 
       <Separator className="my-16 bg-gray-800" />
 
