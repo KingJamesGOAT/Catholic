@@ -41,11 +41,12 @@ export default function ExistenceOfGod() {
       subtitle: t(trans.arg4Subtitle, language),
       key: "moral",
     },
+    // REPLACED Resurrection with Science:
     {
-      icon: Cross, // Resurrection Argument (Kept)
+      icon: Sparkles, // Scientific Evidence
       title: t(trans.arg5Title, language),
       subtitle: t(trans.arg5Subtitle, language),
-      key: "resurrection",
+      key: "science",
     },
   ];
 
