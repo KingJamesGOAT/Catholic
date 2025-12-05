@@ -605,25 +605,41 @@ function AppContent() {
               }
             />
           ) : (
+
+
+          
             <motion.main
-              key={currentTopicIndex}
-              initial={{ opacity: 0, x: direction === "forward" ? 100 : -100 }}
-              animate={{
-                opacity: 1,
-                x: 0,
-                paddingTop: isProgressVisible
-                  ? isMobile
-                    ? "100px"
-                    : "200px"
-                  : "80px",
-              }}
-              exit={{ opacity: 0, x: direction === "forward" ? -100 : 100 }}
-              transition={{
-                opacity: { duration: 0.5 },
-                x: { duration: 0.5 },
-                paddingTop: { duration: 0.3, ease: "easeInOut" },
-              }}
-            >
+  key={currentTopicIndex}
+  // FIX: If mobile, start at x:0 (no slide), otherwise slide from 100/-100
+  initial={{ 
+    opacity: 0, 
+    x: isMobile ? 0 : (direction === "forward" ? 100 : -100) 
+  }}
+  animate={{
+    opacity: 1,
+    x: 0,
+    paddingTop: isProgressVisible
+      ? isMobile
+        ? "100px"
+        : "200px"
+      : "80px",
+  }}
+  // FIX: If mobile, exit at x:0 (fade out only), otherwise slide away
+  exit={{ 
+    opacity: 0, 
+    x: isMobile ? 0 : (direction === "forward" ? -100 : 100) 
+  }}
+  transition={{
+    opacity: { duration: 0.5 },
+    // FIX: If mobile, make the slide instant/zero so it doesn't lag the GPU
+    x: { duration: isMobile ? 0 : 0.5 },
+    paddingTop: { duration: 0.3, ease: "easeInOut" },
+  }}
+>
+
+
+
+              
               <Suspense
                 fallback={
                   <div className="min-h-[50vh] flex items-center justify-center">
