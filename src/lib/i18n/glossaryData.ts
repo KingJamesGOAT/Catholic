@@ -5646,19 +5646,25 @@ export const glossaryTerms: GlossaryTerm[] = [
       de: "Die Achtung vor der menschlichen Person und den Rechten, die aus der Menschenwürde fließen und diese garantieren.",
     },
   },
+
+
+  
   {
     id: "sola-fide",
-    term: {
-      en: "Sola Fide",
-      fr: "Sola Fide",
-      es: "Sola Fide",
-      de: "Sola Fide",
-    },
-    definition: {
-      en: "The Protestant doctrine of justification by 'faith alone,' excluding good works or merit.",
-      fr: "La doctrine protestante de la justification par la 'foi seule', excluant les bonnes œuvres ou le mérite.",
-      es: "La doctrina protestante de la justificación por la 'fe sola', excluyendo las buenas obras o el mérito.",
-      de: "Die protestantische Lehre der Rechtfertigung 'allein durch Glauben', unter Ausschluss guter Werke oder Verdienste.",
+  term: {
+    en: "Sola Fide",
+    fr: "Sola Fide",
+    es: "Sola Fide",
+    de: "Sola Fide",
+  },
+  definition: {
+    en: "The Reformation doctrine that faith alone justifies, meaning that faith by itself, even without charity, fully secures justification. Works play no role in causing justification and charity is understood to come only after.",
+    
+    fr: "Doctrine de la Réforme selon laquelle la foi seule justifie, c’est-à-dire que la foi prise isolément, même sans la charité, obtient la justification. Les œuvres ne causent pas la justification et la charité vient seulement après.",
+    
+    es: "Doctrina de la Reforma que enseña que la fe sola justifica, lo que significa que la fe por sí misma, incluso sin caridad, asegura la justificación. Las obras no causan la justificación y la caridad se considera posterior.",
+    
+    de: "Reformationslehre, dass der Glaube allein rechtfertigt, was bedeutet, dass der Glaube für sich, selbst ohne Liebe, die Rechtfertigung bewirkt. Werke tragen nichts zur Ursache bei und die Liebe folgt erst danach.",
     },
   },
   {
