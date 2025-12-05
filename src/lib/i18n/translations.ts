@@ -2307,50 +2307,65 @@ export const translations = {
           de: "Hatte Paulus einen psychischen Zusammenbruch?",
         },
         content: {
+
+
+
+
+          
           en: `
-              <div class="space-y-4 text-gray-300">
-                <p>Some skeptics argue Paul experienced a "conversion disorder" where deep subconscious guilt manifests as physical symptoms (like blindness) and hallucinations.</p>
-                <h4 class="text-red-400 font-semibold mt-4">Why it fails (Refutations):</h4>
-                <ul class="list-disc pl-5 space-y-2">
-                  <li><strong>Wrong Psychological Profile:</strong> Conversion disorder is statistically most common in women, adolescents, or individuals with lower IQs or high stress tolerance issues. Paul was a highly intellectual, disciplined male leader who showed no signs of prior mental instability.</li>
-                  <li><strong>Ad Hoc Complexity:</strong> To work, this theory requires inventing a "guilt complex" for Paul that contradicts his own letters (where he claims he was "blameless" and zealous without regret). It also requires adding other disorders like a "messiah complex" and auditory hallucinations to explain the voice he heard.</li>
-                  <li><strong>External Reality Check:</strong> It ignores the fact that Paul's traveling companions <em>also</em> saw the light and heard the voice (Acts 9). A psychological disorder inside Paul's head cannot be perceived by bystanders.</li>
-                  <li><strong>Limited Scope:</strong> Even if true for Paul, it explains absolutely nothing about the empty tomb, the conversion of James (who wasn't a persecutor), or the group appearances to the Twelve.</li>
-                </ul>
-              </div>`,
-          fr: `
-              <div class="space-y-4 text-gray-300">
-                <p>Certains sceptiques soutiennent que Paul a souffert d'un « trouble de conversion » où une profonde culpabilité subconsciente se manifeste par des symptômes physiques (comme la cécité) et des hallucinations.</p>
-                <h4 class="text-red-400 font-semibold mt-4">Pourquoi cela échoue (Réfutations) :</h4>
-                <ul class="list-disc pl-5 space-y-2">
-                  <li><strong>Mauvais profil psychologique :</strong> Le trouble de conversion est statistiquement plus fréquent chez les femmes, les adolescents ou les personnes ayant un QI plus faible. Paul était un leader intellectuel masculin, discipliné, qui ne montrait aucun signe d'instabilité mentale antérieure.</li>
-                  <li><strong>Complexité ad hoc :</strong> Pour fonctionner, cette théorie nécessite d'inventer un « complexe de culpabilité » pour Paul qui contredit ses propres lettres (où il affirme être « irréprochable » et zélé sans regret). Elle nécessite également d'ajouter d'autres troubles comme un « complexe du messie » et des hallucinations auditives.</li>
-                  <li><strong>Réalité externe :</strong> Cela ignore le fait que les compagnons de voyage de Paul ont <em>aussi</em> vu la lumière et entendu la voix (Actes 9). Un trouble psychologique dans la tête de Paul ne peut pas être perçu par les spectateurs.</li>
-                  <li><strong>Portée limitée :</strong> Même si c'était vrai pour Paul, cela n'explique absolument rien sur le tombeau vide, la conversion de Jacques (qui n'était pas un persécuteur) ou les apparitions aux Douze.</li>
-                </ul>
-              </div>`,
-          es: `
-              <div class="space-y-4 text-gray-300">
-                <p>Algunos escépticos argumentan que Pablo experimentó un "trastorno de conversión" donde la culpa subconsciente profunda se manifiesta como síntomas físicos (como ceguera) y alucinaciones.</p>
-                <h4 class="text-red-400 font-semibold mt-4">Por qué falla (Refutaciones):</h4>
-                <ul class="list-disc pl-5 space-y-2">
-                  <li><strong>Perfil psicológico incorrecto:</strong> El trastorno de conversión es estadísticamente más común en mujeres, adolescentes o personas con un coeficiente intelectual más bajo. Pablo era un líder intelectual masculino, disciplinado, que no mostraba signos de inestabilidad mental previa.</li>
-                  <li><strong>Complejidad ad hoc:</strong> Para funcionar, esta teoría requiere inventar un "complejo de culpa" para Pablo que contradice sus propias cartas (donde afirma que era "intachable" y celoso sin remordimientos). También requiere agregar otros trastornos como un "complejo de mesías" y alucinaciones auditivas.</li>
-                  <li><strong>Verificación de realidad externa:</strong> Ignora el hecho de que los compañeros de viaje de Pablo <em>también</em> vieron la luz y escucharon la voz (Hechos 9). Un trastorno psicológico dentro de la cabeza de Pablo no puede ser percibido por los espectadores.</li>
-                  <li><strong>Alcance limitado:</strong> Incluso si fuera cierto para Pablo, no explica absolutamente nada sobre la tumba vacía, la conversión de Santiago (que no era un perseguidor) o las apariciones a los Doce.</li>
-                </ul>
-              </div>`,
-          de: `
-              <div class="space-y-4 text-gray-300">
-                <p>Einige Skeptiker argumentieren, Paulus habe eine „Konversionsstörung“ erlebt, bei der sich tiefe unterbewusste Schuldgefühle als körperliche Symptome (wie Blindheit) und Halluzinationen manifestieren.</p>
-                <h4 class="text-red-400 font-semibold mt-4">Warum sie scheitert (Widerlegungen):</h4>
-                <ul class="list-disc pl-5 space-y-2">
-                  <li><strong>Falsches psychologisches Profil:</strong> Konversionsstörungen sind statistisch gesehen bei Frauen, Jugendlichen oder Personen mit niedrigerem IQ am häufigsten. Paulus war ein hochintellektueller, disziplinierter männlicher Anführer, der keine Anzeichen einer früheren psychischen Instabilität zeigte.</li>
-                  <li><strong>Ad-hoc-Komplexität:</strong> Damit diese Theorie funktioniert, muss ein „Schuldkomplex“ für Paulus erfunden werden, der seinen eigenen Briefen widerspricht (in denen er behauptet, er sei „untadelig“ und ohne Reue eifrig gewesen). Sie erfordert auch das Hinzufügen anderer Störungen wie eines „Messias-Komplexes“ und auditiver Halluzinationen.</li>
-                  <li><strong>Überprüfung der äußeren Realität:</strong> Sie ignoriert die Tatsache, dass Paulus' Reisebegleiter <em>ebenfalls</em> das Licht sahen und die Stimme hörten (Apg 9). Eine psychische Störung in Paulus' Kopf kann von Umstehenden nicht wahrgenommen werden.</li>
-                  <li><strong>Begrenzter Umfang:</strong> Selbst wenn es für Paulus zuträfe, erklärt es absolut nichts über das leere Grab, die Bekehrung von Jakobus (der kein Verfolger war) oder die Erscheinungen vor den Zwölfen.</li>
-                </ul>
-              </div>`,
+    <div class="space-y-4 text-gray-300">
+      <p>Some skeptics argue Paul experienced a "conversion disorder" where deep subconscious guilt manifests as physical symptoms (like blindness) and hallucinations.</p>
+      <h4 class="text-red-400 font-semibold mt-4">Why it fails (Refutations):</h4>
+      <ul class="list-disc pl-5 space-y-2">
+        <li><strong>Wrong Psychological Profile:</strong> Conversion disorder is statistically most common in adolescents or individuals with lower IQs or major stress-tolerance issues. Paul was a highly intellectual, disciplined leader who showed no signs of prior mental instability.</li>
+        <li><strong>Ad Hoc Complexity:</strong> To work, this theory requires inventing a "guilt complex" for Paul that contradicts his own letters (where he claims he was "blameless" and zealous without regret). It also requires adding other disorders like a "messiah complex" and auditory hallucinations to explain the voice he heard.</li>
+        <li><strong>External Reality Check:</strong> It ignores the fact that Paul's traveling companions <em>also</em> saw the light and heard the voice (Acts 9). A psychological disorder inside Paul's mind cannot be perceived by bystanders.</li>
+        <li><strong>Limited Scope:</strong> Even if true for Paul, it explains absolutely nothing about the empty tomb, the conversion of James (who wasn't a persecutor), or the group appearances to the Twelve.</li>
+      </ul>
+    </div>`,
+
+  fr: `
+    <div class="space-y-4 text-gray-300">
+      <p>Certains sceptiques soutiennent que Paul a souffert d’un « trouble de conversion » où une profonde culpabilité subconsciente se manifeste par des symptômes physiques (comme la cécité) et des hallucinations.</p>
+      <h4 class="text-red-400 font-semibold mt-4">Pourquoi cela échoue (Réfutations) :</h4>
+      <ul class="list-disc pl-5 space-y-2">
+        <li><strong>Mauvais profil psychologique :</strong> Le trouble de conversion est statistiquement plus fréquent chez les adolescents ou les personnes ayant un QI plus faible ou une faible tolérance au stress. Paul était un leader hautement intellectuel et discipliné, sans aucun signe d’instabilité mentale antérieure.</li>
+        <li><strong>Complexité ad hoc :</strong> Pour fonctionner, cette théorie exige d’inventer un « complexe de culpabilité » pour Paul, ce qui contredit ses propres lettres (où il affirme être « irréprochable » et zélé sans regret). Elle implique aussi d’ajouter d’autres troubles comme un « complexe du messie » et des hallucinations auditives.</li>
+        <li><strong>Réalité externe :</strong> Elle ignore le fait que les compagnons de voyage de Paul ont <em>aussi</em> vu la lumière et entendu la voix (Actes 9). Un trouble psychologique dans l’esprit de Paul ne peut pas être perçu par des témoins.</li>
+        <li><strong>Portée limitée :</strong> Même si c’était vrai pour Paul, cela n’explique absolument rien sur le tombeau vide, la conversion de Jacques (qui n’était pas un persécuteur) ou les apparitions aux Douze.</li>
+      </ul>
+    </div>`,
+
+  es: `
+    <div class="space-y-4 text-gray-300">
+      <p>Algunos escépticos argumentan que Pablo experimentó un "trastorno de conversión" donde una culpa subconsciente profunda se manifiesta como síntomas físicos (como ceguera) y alucinaciones.</p>
+      <h4 class="text-red-400 font-semibold mt-4">Por qué falla (Refutaciones):</h4>
+      <ul class="list-disc pl-5 space-y-2">
+        <li><strong>Perfil psicológico incorrecto:</strong> El trastorno de conversión es estadísticamente más común en adolescentes o personas con un coeficiente intelectual más bajo o problemas severos de manejo del estrés. Pablo era un líder altamente intelectual y disciplinado, sin señales de inestabilidad mental previa.</li>
+        <li><strong>Complejidad ad hoc:</strong> Para funcionar, esta teoría exige inventar un "complejo de culpa" para Pablo que contradice sus propias cartas (donde afirma que era "intachable" y celoso sin remordimientos). También requiere añadir otros trastornos como un "complejo de mesías" y alucinaciones auditivas.</li>
+        <li><strong>Verificación externa:</strong> Ignora el hecho de que los compañeros de viaje de Pablo <em>también</em> vieron la luz y escucharon la voz (Hechos 9). Un trastorno psicológico dentro de la mente de Pablo no puede ser percibido por observadores externos.</li>
+        <li><strong>Alcance limitado:</strong> Incluso si fuera cierto para Pablo, no explica nada sobre la tumba vacía, la conversión de Santiago (que no era un perseguidor) ni las apariciones grupales a los Doce.</li>
+      </ul>
+    </div>`,
+
+  de: `
+    <div class="space-y-4 text-gray-300">
+      <p>Einige Skeptiker argumentieren, Paulus habe eine „Konversionsstörung“ erlebt, bei der sich tiefe unterbewusste Schuldgefühle als körperliche Symptome (wie Blindheit) und Halluzinationen äußern.</p>
+      <h4 class="text-red-400 font-semibold mt-4">Warum sie scheitert (Widerlegungen):</h4>
+      <ul class="list-disc pl-5 space-y-2">
+        <li><strong>Falsches psychologisches Profil:</strong> Konversionsstörungen treten statistisch am häufigsten bei Jugendlichen oder Personen mit niedrigerem IQ oder stark eingeschränkter Stresstoleranz auf. Paulus war ein hochintellektueller, disziplinierter Anführer ohne jegliche Anzeichen früherer psychischer Instabilität.</li>
+        <li><strong>Ad-hoc-Komplexität:</strong> Damit diese Theorie funktioniert, muss ein „Schuldkomplex“ für Paulus erfunden werden, der seinen eigenen Briefen widerspricht (in denen er behauptet, er sei „untadelig“ und ohne Reue eifrig gewesen). Außerdem müsste man weitere Störungen wie einen „Messias-Komplex“ und auditive Halluzinationen hinzufügen.</li>
+        <li><strong>Überprüfung der äußeren Realität:</strong> Sie ignoriert die Tatsache, dass Paulus’ Reisebegleiter <em>ebenfalls</em> das Licht sahen und die Stimme hörten (Apg 9). Eine psychische Störung im Inneren von Paulus kann von außenstehenden Beobachtern nicht wahrgenommen werden.</li>
+        <li><strong>Begrenzter Erklärungswert:</strong> Selbst wenn es auf Paulus zuträfe, erklärt es nichts über das leere Grab, die Bekehrung des Jakobus (der kein Verfolger war) oder die Erscheinungen vor den Zwölfen.</li>
+      </ul>
+    </div>`
+          
+          
+          ,
+
+
+
+          
         },
       },
       wrongTomb: {
