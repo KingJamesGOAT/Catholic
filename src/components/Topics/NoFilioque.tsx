@@ -12,6 +12,7 @@ import {
   BookOpen,
   Award,
   CheckCircle,
+  PlayCircle,
 } from "lucide-react";
 import { useLanguage } from "../../lib/i18n/LanguageContext";
 import { translations, t } from "../../lib/i18n/translations";
