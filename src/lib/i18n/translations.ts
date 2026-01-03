@@ -5315,6 +5315,89 @@ export const translations = {
         },
       },
     },
+
+  biblical: {
+      h2: {
+        en: "Biblical Evidence for the Filioque",
+        fr: "Preuves Bibliques du Filioque",
+        es: "Evidencia Bíblica del Filioque",
+        de: "Biblische Beweise für das Filioque",
+      },
+      intro: {
+        en: "While opponents often claim the Filioque is unbiblical, a deeper look at the Gospels and Epistles reveals that the procession of the Spirit from the Son is deeply rooted in Scripture.",
+        fr: "Alors que les opposants affirment souvent que le Filioque n'est pas biblique, un examen plus approfondi des Évangiles et des Épîtres révèle que la procession de l'Esprit du Fils est profondément enracinée dans l'Écriture.",
+        es: "Aunque los oponentes a menudo afirman que el Filioque no es bíblico, una mirada más profunda a los Evangelios y las Epístolas revela que la procesión del Espíritu desde el Hijo está profundamente arraigada en las Escrituras.",
+        de: "Während Gegner oft behaupten, das Filioque sei unbiblisch, zeigt ein tieferer Blick in die Evangelien und Briefe, dass der Ausgang des Geistes aus dem Sohn tief in der Heiligen Schrift verwurzelt ist.",
+      },
+      videoTitle: {
+        en: "The Filioque in Scripture",
+        fr: "Le Filioque dans l'Écriture",
+        es: "El Filioque en las Escrituras",
+        de: "Das Filioque in der Heiligen Schrift",
+      },
+      args: {
+        arg1: {
+          title: {
+            en: "Receiving 'All Things' (John 16:15)",
+            fr: "Recevoir 'Toutes Choses' (Jean 16:15)",
+            es: "Recibir 'Todas las Cosas' (Juan 16:15)",
+            de: "Empfangen 'Aller Dinge' (Johannes 16:15)",
+          },
+          verse: {
+            en: "All things that the Father has are Mine. Therefore I said that He [the Spirit] will take of Mine and declare it to you.",
+            fr: "Tout ce que le Père a est à moi; c'est pourquoi j'ai dit qu'il prend de ce qui est à moi, et qu'il vous l'annoncera.",
+            es: "Todo lo que tiene el Padre es mío; por eso dije que tomará de lo mío, y os lo hará saber.",
+            de: "Alles, was der Vater hat, ist mein. Darum habe ich gesagt: Er nimmt von dem Meinen und wird es euch verkündigen.",
+          },
+          explanation: {
+            en: "Jesus explicitly states that the Spirit receives from Him. If the Spirit receives truth and essence from the Son, He receives the Divine Nature itself from the Son.",
+            fr: "Jésus déclare explicitement que l'Esprit reçoit de Lui. Si l'Esprit reçoit la vérité et l'essence du Fils, Il reçoit la Nature Divine elle-même du Fils.",
+            es: "Jesús declara explícitamente que el Espíritu recibe de Él. Si el Espíritu recibe la verdad y la esencia del Hijo, recibe la Naturaleza Divina misma del Hijo.",
+            de: "Jesus erklärt ausdrücklich, dass der Geist von Ihm empfängt. Wenn der Geist Wahrheit und Wesen vom Sohn empfängt, empfängt Er die göttliche Natur selbst vom Sohn.",
+          },
+        },
+        arg2: {
+          title: {
+            en: "Temporal Mission Reflects Eternal Origin",
+            fr: "La Mission Temporelle Reflète l'Origine Éternelle",
+            es: "La Misión Temporal Refleja el Origen Eterno",
+            de: "Die zeitliche Sendung spiegelt den ewigen Ursprung wider",
+          },
+          verse: {
+            en: "When the Helper comes, whom I shall send to you from the Father... (John 15:26)",
+            fr: "Quand sera venu le consolateur, que je vous enverrai de la part du Père... (Jean 15:26)",
+            es: "Pero cuando venga el Consolador, a quien yo os enviaré del Padre... (Juan 15:26)",
+            de: "Wenn aber der Tröster kommen wird, welchen ich euch senden werde vom Vater... (Johannes 15:26)",
+          },
+          explanation: {
+            en: "The Son sends the Spirit in time. In the Trinity, how God acts in history (economy) always reveals who He is eternally (theology). Therefore, the Spirit proceeds from the Son.",
+            fr: "Le Fils envoie l'Esprit dans le temps. Dans la Trinité, la manière dont Dieu agit dans l'histoire (économie) révèle toujours qui Il est éternellement (théologie). Par conséquent, l'Esprit procède du Fils.",
+            es: "El Hijo envía al Espíritu en el tiempo. En la Trinidad, cómo actúa Dios en la historia (economía) siempre revela quién es Él eternamente (teología). Por lo tanto, el Espíritu procede del Hijo.",
+            de: "Der Sohn sendet den Geist in der Zeit. In der Dreifaltigkeit offenbart das Handeln Gottes in der Geschichte (Ökonomie) immer, wer Er ewig ist (Theologie). Daher geht der Geist aus dem Sohn hervor.",
+          },
+        },
+        arg3: {
+          title: {
+            en: "The 'Spirit of the Son'",
+            fr: "L'Esprit du Fils",
+            es: "El 'Espíritu del Hijo'",
+            de: "Der 'Geist des Sohnes'",
+          },
+          verse: {
+            en: "God has sent forth the Spirit of His Son into your hearts... (Galatians 4:6)",
+            fr: "Dieu a envoyé dans nos cœurs l'Esprit de son Fils... (Galates 4:6)",
+            es: "Dios envió a vuestros corazones el Espíritu de su Hijo... (Gálatas 4:6)",
+            de: "Hat Gott gesandt den Geist seines Sohnes in eure Herzen... (Galater 4:6)",
+          },
+          explanation: {
+            en: "Scripture calls Him the 'Spirit of the Son'. The genitive 'of' implies origin—just as the Son is 'of the Father' because He is begotten, the Spirit is 'of the Son' because He proceeds.",
+            fr: "L'Écriture L'appelle l''Esprit du Fils'. Le génitif 'de' implique l'origine — tout comme le Fils est 'du Père' parce qu'Il est engendré, l'Esprit est 'du Fils' parce qu'Il procède.",
+            es: "La Escritura lo llama el 'Espíritu del Hijo'. El genitivo 'de' implica origen; así como el Hijo es 'del Padre' porque es engendrado, el Espíritu es 'del Hijo' porque procede.",
+            de: "Die Schrift nennt Ihn den 'Geist des Sohnes'. Der Genitiv 'des' impliziert Ursprung – so wie der Sohn 'vom Vater' ist, weil er gezeugt ist, ist der Geist 'vom Sohn', weil er hervorgeht.",
+          },
+        },
+      },
+    
     grounding: {
       h2: {
         en: "Theological and Patristic Grounding",
