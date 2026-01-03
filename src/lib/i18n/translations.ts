@@ -5390,10 +5390,10 @@ export const translations = {
             de: "Hat Gott gesandt den Geist seines Sohnes in eure Herzen... (Galater 4:6)",
           },
           explanation: {
-            en: "Scripture calls Him the 'Spirit of the Son'. The genitive 'of' implies origin—just as the Son is 'of the Father' because He is begotten, the Spirit is 'of the Son' because He proceeds.",
-            fr: "L'Écriture L'appelle l''Esprit du Fils'. Le génitif 'de' implique l'origine — tout comme le Fils est 'du Père' parce qu'Il est engendré, l'Esprit est 'du Fils' parce qu'Il procède.",
+            en: "Scripture calls Him the 'Spirit of the Son'. The genitive 'of' implies origin, just as the Son is 'of the Father' because He is begotten, the Spirit is 'of the Son' because He proceeds.",
+            fr: "L'Écriture L'appelle l''Esprit du Fils'. Le génitif 'de' implique l'origine, tout comme le Fils est 'du Père' parce qu'Il est engendré, l'Esprit est 'du Fils' parce qu'Il procède.",
             es: "La Escritura lo llama el 'Espíritu del Hijo'. El genitivo 'de' implica origen; así como el Hijo es 'del Padre' porque es engendrado, el Espíritu es 'del Hijo' porque procede.",
-            de: "Die Schrift nennt Ihn den 'Geist des Sohnes'. Der Genitiv 'des' impliziert Ursprung – so wie der Sohn 'vom Vater' ist, weil er gezeugt ist, ist der Geist 'vom Sohn', weil er hervorgeht.",
+            de: "Die Schrift nennt Ihn den 'Geist des Sohnes'. Der Genitiv 'des' impliziert Ursprung, so wie der Sohn 'vom Vater' ist, weil er gezeugt ist, ist der Geist 'vom Sohn', weil er hervorgeht.",
           },
         },
       },
