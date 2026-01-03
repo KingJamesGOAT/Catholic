@@ -465,6 +465,76 @@ export default function NoFilioque({ onComplete }: NoFilioqueProps) {
 
       <Separator className="my-16 bg-gray-800" />
 
+
+    {/* NEW SECTION: Biblical Evidence */}
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="mb-16"
+      >
+        <h2 className="text-white mb-6">
+          {t(trans.biblical.h2, language)}
+        </h2>
+
+        <div className="space-y-8">
+          <p className="text-gray-300 leading-relaxed">
+            {t(trans.biblical.intro, language)}
+          </p>
+
+          <div className="aspect-video w-full rounded-lg overflow-hidden bg-gray-900 border border-gray-800 shadow-xl">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/f72aNg7JhqQ"
+              title={t(trans.biblical.videoTitle, language)}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            ></iframe>
+          </div>
+
+          <div className="grid gap-6">
+            {[1, 2, 3].map((num) => {
+              // @ts-ignore - Dynamic access to translations
+              const arg = trans.biblical.args[`arg${num}`];
+              return (
+                <motion.div
+                  key={num}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: num * 0.1 }}
+                  className="bg-blue-950/20 border border-blue-900/50 rounded-lg p-6"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="p-2 bg-blue-900/30 rounded-lg text-blue-400 mt-1">
+                      <PlayCircle size={24} />
+                    </div>
+                    <div>
+                      <h3 className="text-xl text-white mb-2">{t(arg.title, language)}</h3>
+                      <div className="bg-blue-900/10 border-l-4 border-blue-500 p-3 my-3 rounded-r">
+                        <p className="text-blue-200 italic text-sm">"{t(arg.verse, language)}"</p>
+                      </div>
+                      <p className="text-gray-300 text-sm leading-relaxed">
+                        {t(arg.explanation, language)}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </motion.section>
+
+      <Separator className="my-16 bg-gray-800" />
+
+
+
+      
+
       {/* Theological and Patristic Grounding */}
       <motion.section
         initial={{ opacity: 0, y: 30 }}
