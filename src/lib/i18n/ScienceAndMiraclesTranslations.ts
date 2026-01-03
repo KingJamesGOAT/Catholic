@@ -475,7 +475,7 @@ export const scienceAndMiraclesTranslations = {
         de: "3D-Studien (Geschichte)",
       },
       link3_url: {
-        en: "https://jumpshare.com/share/7qETxe10sVIynpzScjeo",
+        en: "/pdfs/shroud-3d-study.pdf",
       },
       pdf1_name: {
         en: "3D Reconstruction (PDF)",
@@ -484,7 +484,7 @@ export const scienceAndMiraclesTranslations = {
         de: "3D-Rekonstruktion (PDF)",
       },
       pdf1_url: {
-        en: "https://jumpshare.com/share/7qETxe10sVIynpzScjeo",
+        en: "/pdfs/shroud-3d-study.pdf",
       },
       link4: {
         en: "https://www.shroud.com/78conclu.htm",
@@ -623,7 +623,7 @@ export const scienceAndMiraclesTranslations = {
         de: "Eingehende Analyse von Fátima (PDF)",
       },
       pdf1_url: {
-        en: "https://jumpshare.com/share/Aw19bX3jBmie3XEtUc79",
+        en: "/pdfs/fatima-pictures.pdf",
       },
 
       keySci: {
@@ -731,7 +731,7 @@ export const scienceAndMiraclesTranslations = {
           de: "Das Argument lesen (PDF)",
         },
         pdf_url: {
-          en: "https://jumpshare.com/share/lNmeBiFhvEvJKMoiw9rm",
+          en: "/pdfs/fatima-argument.pdf",
         }, // Fixed
       },
     },
@@ -813,7 +813,7 @@ export const scienceAndMiraclesTranslations = {
           de: "Auszug lesen (PDF)",
         },
         pdf_url: {
-          en: "https://jumpshare.com/share/ssffRg5A8OcOBYw398je",
+          en: "/pdfs/zeitoun-book.pdf",
         }, // Fixed
       },
     },
@@ -900,7 +900,7 @@ export const scienceAndMiraclesTranslations = {
         de: "Maria - Wunderbares Bild (PDF)",
       },
       pdf1_url: {
-        en: "https://jumpshare.com/share/tLyvPGzIXoGDKlUrifKQ",
+        en: "/pdfs/guadalupe-image.pdf",
       },
       pdf2_name: {
         en: "Science & Guadalupe (PDF)",
@@ -909,7 +909,7 @@ export const scienceAndMiraclesTranslations = {
         de: "Wissenschaft & Guadalupe (PDF)",
       },
       pdf2_url: {
-        en: "https://jumpshare.com/share/URlGk017Q7VXmyRv9hEJ",
+        en: "/pdfs/guadalupe-science.pdf",
       },
     },
 
@@ -1026,7 +1026,7 @@ export const scienceAndMiraclesTranslations = {
         de: "Zeitgenössische Wunder (PDF)",
       },
       pdf_url: {
-        en: "https://jumpshare.com/share/EHZu7YsFmPybkmwkB49i",
+        en: "/pdfs/eucharistic-intro.pdf",
       },
     },
     buenosAires: {
@@ -1086,7 +1086,7 @@ export const scienceAndMiraclesTranslations = {
           de: "Gescannte Berichte von Dr. Zugibe (PDF)",
         },
         pdf1_url: {
-          en: "https://jumpshare.com/share/6MSJBeboFMnfQL63es4C",
+          en: "/pdfs/zugibe-report.pdf",
         },
         h5: {
           en: "Dr. Frederick Zugibe – Forensic Pathology Report",
@@ -1732,7 +1732,7 @@ export const scienceAndMiraclesTranslations = {
         de: "Die Semantik eucharistischer Wunder (PDF)",
       },
       pdf_semantics_url: {
-        en: "https://jumpshare.com/share/0y9Yuk34haYBE3uXFmZ3",
+        en: "/pdfs/eucharistic-semantics.pdf",
       },
     },
 
