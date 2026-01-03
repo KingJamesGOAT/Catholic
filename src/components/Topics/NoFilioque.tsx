@@ -509,24 +509,22 @@ export default function NoFilioque({ onComplete }: NoFilioqueProps) {
                   transition={{ duration: 0.5, delay: num * 0.1 }}
                   className="bg-blue-950/20 border border-blue-900/50 rounded-lg p-6"
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="p-2 bg-blue-900/30 rounded-lg text-blue-400 mt-1">
-                      <PlayCircle size={24} />
+                  {/* REMOVED THE DIV WITH PLAYCIRCLE AND THE FLEX WRAPPER */}
+                  <div>
+                    <h3 className="text-xl text-white mb-2">{t(arg.title, language)}</h3>
+                    <div className="bg-blue-900/10 border-l-4 border-blue-500 p-3 my-3 rounded-r">
+                      <p className="text-blue-200 italic text-sm">"{t(arg.verse, language)}"</p>
                     </div>
-                    <div>
-                      <h3 className="text-xl text-white mb-2">{t(arg.title, language)}</h3>
-                      <div className="bg-blue-900/10 border-l-4 border-blue-500 p-3 my-3 rounded-r">
-                        <p className="text-blue-200 italic text-sm">"{t(arg.verse, language)}"</p>
-                      </div>
-                      <p className="text-gray-300 text-sm leading-relaxed">
-                        {t(arg.explanation, language)}
-                      </p>
-                    </div>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      {t(arg.explanation, language)}
+                    </p>
                   </div>
                 </motion.div>
               );
             })}
           </div>
+
+          
         </div>
       </motion.section>
 
