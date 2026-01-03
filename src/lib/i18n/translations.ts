@@ -5397,7 +5397,7 @@ export const translations = {
           },
         },
       },
-    
+    },
     grounding: {
       h2: {
         en: "Theological and Patristic Grounding",
