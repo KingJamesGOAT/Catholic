@@ -5634,11 +5634,11 @@ export const translations = {
           de: "1. Das Wesen der Offenbarung",
         },
         p1: {
-          en: "Revelation is the communication of divine truths by God to man—truths necessary for salvation. As Ludwig Ott explains:",
-          fr: "La Révélation est la communication des vérités divines par Dieu à l'homme — des vérités nécessaires au salut. Comme l'explique Ludwig Ott :",
-          es: "La Revelación es la comunicación de verdades divinas por Dios al hombre—verdades necesarias para la salvación. Como explica Ludwig Ott:",
-          de: "Offenbarung ist die Mitteilung göttlicher Wahrheiten durch Gott an den Menschen – Wahrheiten, die zum Heil notwendig sind. Wie Ludwig Ott erklärt:",
-        },
+  en: "Revelation is the communication of divine truths by God to man, truths necessary for salvation. As Ludwig Ott explains:",
+  fr: "La Révélation est la communication des vérités divines par Dieu à l'homme, des vérités nécessaires au salut. Comme l'explique Ludwig Ott :",
+  es: "La Revelación es la comunicación de verdades divinas por Dios al hombre, verdades necesarias para la salvación. Como explica Ludwig Ott:",
+  de: "Offenbarung ist die Mitteilung göttlicher Wahrheiten durch Gott an den Menschen, Wahrheiten, die zum Heil notwendig sind. Wie Ludwig Ott erklärt:",
+},
         ottQuote: {
           en: "&quot;Revelation is a fruitful principle of supernatural knowledge and life... a supreme law of faith, thought and action for all men... through which they are to be united in one kingdom of truth and holiness.&quot;",
           fr: "« La Révélation est un principe fécond de connaissance et de vie surnaturelles... une loi suprême de foi, de pensée et d'action pour tous les hommes... par laquelle ils doivent être unis en un seul royaume de vérité et de sainteté. »",
@@ -5659,12 +5659,12 @@ export const translations = {
               es: "Comunicación Divina",
               de: "Göttliche Mitteilung",
             },
-            desc: {
-              en: "Revelation is the communication of divine truths by God to man—truths necessary for salvation.",
-              fr: "La Révélation est la communication des vérités divines par Dieu à l'homme — des vérités nécessaires au salut.",
-              es: "La Revelación es la comunicación de verdades divinas por Dios al hombre—verdades necesarias para la salvación.",
-              de: "Offenbarung ist die Mitteilung göttlicher Wahrheiten durch Gott an den Menschen – Wahrheiten, die zum Heil notwendig sind.",
-            },
+           desc: {
+  en: "Revelation is the communication of divine truths by God to man, truths necessary for salvation.",
+  fr: "La Révélation est la communication des vérités divines par Dieu à l'homme, des vérités nécessaires au salut.",
+  es: "La Revelación es la comunicación de verdades divinas por Dios al hombre, verdades necesarias para la salvación.",
+  de: "Offenbarung ist die Mitteilung göttlicher Wahrheiten durch Gott an den Menschen, Wahrheiten, die zum Heil notwendig sind.",
+},
           },
           p2: {
             title: {
@@ -6352,11 +6352,11 @@ export const translations = {
       },
       callout: {
         p1: {
-          en: "The Catholic Church alone corresponds to the vitality and catholicity of the word of God. In her Magisterium, the Word of Christ continues to speak—not as a dead letter or private interpretation—but through living ambassadors of truth.",
-          fr: "Seule l'Église catholique correspond à la vitalité et à la catholicité de la parole de Dieu. Dans son Magistère, la Parole du Christ continue de parler — non comme une lettre morte ou une interprétation privée — mais à travers des ambassadeurs vivants de la vérité.",
-          es: "Solo la Iglesia Católica corresponde a la vitalidad y catolicidad de la palabra de Dios. En su Magisterio, la Palabra de Cristo continúa hablando—no como una letra muerta o una interpretación privada—sino a través de embajadores vivos de la verdad.",
-          de: "Die katholische Kirche allein entspricht der Vitalität und Katholizität des Wortes Gottes. In ihrem Lehramt spricht das Wort Christi weiter – nicht als toter Buchstabe oder private Interpretation – sondern durch lebendige Botschafter der Wahrheit.",
-        },
+  en: "The Catholic Church alone corresponds to the vitality and catholicity of the word of God. In her Magisterium, the Word of Christ continues to speak, not as a dead letter or private interpretation, but through living ambassadors of truth.",
+  fr: "Seule l'Église catholique correspond à la vitalité et à la catholicité de la parole de Dieu. Dans son Magistère, la Parole du Christ continue de parler, non comme une lettre morte ou une interprétation privée, mais à travers des ambassadeurs vivants de la vérité.",
+  es: "Solo la Iglesia Católica corresponde a la vitalidad y catolicidad de la palabra de Dios. En su Magisterio, la Palabra de Cristo continúa hablando, no como una letra muerta o una interpretación privada, sino a través de embajadores vivos de la verdad.",
+  de: "Die katholische Kirche allein entspricht der Vitalität und Katholizität des Wortes Gottes. In ihrem Lehramt spricht das Wort Christi weiter, nicht als toter Buchstabe oder private Interpretation, sondern durch lebendige Botschafter der Wahrheit.",
+},
       },
     },
     visual: {
@@ -6423,11 +6423,11 @@ export const translations = {
         de: "Im Laufe der Geschichte hat das Lehramt wesentliche christliche Lehren definiert und verteidigt. Von der Natur der Trinität bis zur Göttlichkeit Christi, vom Kanon der Schrift bis zu moralischen Lehren hat die Lehrautorität der Kirche den Glauben rein erhalten.",
       },
       p2: {
-        en: "One of the most important doctrines the Magisterium has preserved is the full doctrine of the Trinity—including a clause that some Orthodox Christians reject. Let's see why this matters.",
-        fr: "L'une des doctrines les plus importantes que le Magistère ait préservées est la doctrine complète de la Trinité, y compris une clause que certains chrétiens orthodoxes rejettent. Voyons pourquoi cela est important.",
-        es: "Una de las doctrinas más importantes que el Magisterio ha preservado es la doctrina completa de la Trinidad, incluida una cláusula que algunos cristianos ortodoxos rechazan. Veamos por qué esto importa.",
-        de: "Eine der wichtigsten Lehren, die das Lehramt bewahrt hat, ist die vollständige Lehre von der Trinität – einschließlich einer Klausel, die einige orthodoxe Christen ablehnen. Sehen wir uns an, warum das wichtig ist.",
-      },
+  en: "One of the most important doctrines the Magisterium has preserved is the full doctrine of the Trinity, including a clause that some Orthodox Christians reject. Let's see why this matters.",
+  fr: "L'une des doctrines les plus importantes que le Magistère ait préservées est la doctrine complète de la Trinité, y compris une clause que certains chrétiens orthodoxes rejettent. Voyons pourquoi cela est important.",
+  es: "Una de las doctrinas más importantes que el Magisterio ha preservado es la doctrina completa de la Trinidad, incluida una cláusula que algunos cristianos ortodoxos rechazan. Veamos por qué esto importa.",
+  de: "Eine der wichtigsten Lehren, die das Lehramt bewahrt hat, ist die vollständige Lehre von der Trinität, einschließlich einer Klausel, die einige orthodoxe Christen ablehnen. Sehen wir uns an, warum das ist wichtig.",
+},
     },
   },
 
