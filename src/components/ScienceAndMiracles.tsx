@@ -49,7 +49,9 @@ const YouTubeEmbed = ({
   </div>
 );
 
-// --- NEW PDF COMPONENT (Fixed Height + Zoom) ---
+
+
+// --- NEW PDF COMPONENT (Fixed Height + Zoom + Vertical Scroll) ---
 const PdfEmbed = ({
   src,
   title,
@@ -59,14 +61,13 @@ const PdfEmbed = ({
 }) => {
   const [numPages, setNumPages] = useState<number | null>(null);
   const [containerWidth, setContainerWidth] = useState<number>(0);
-  const [scale, setScale] = useState<number>(1.0); // 1.0 = 100% width
+  const [scale, setScale] = useState<number>(1.0); // 1.0 = 100%
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Responsive width handler
   useEffect(() => {
     const resizeObserver = new ResizeObserver((entries) => {
       if (entries[0]) {
-        // Subtract padding to ensure it fits perfectly at scale 1.0
         setContainerWidth(entries[0].contentRect.width);
       }
     });
@@ -83,11 +84,10 @@ const PdfEmbed = ({
   }
 
   // Zoom handlers
-  const handleZoomIn = () => setScale(prev => Math.min(prev + 0.2, 3.0)); // Max 300%
-  const handleZoomOut = () => setScale(prev => Math.max(prev - 0.2, 0.6)); // Min 60%
+  const handleZoomIn = () => setScale(prev => Math.min(prev + 0.2, 2.5)); // Max 250%
+  const handleZoomOut = () => setScale(prev => Math.max(prev - 0.2, 0.5)); // Min 50%
 
   return (
-    // Fixed height container
     <div 
       className="w-full bg-gray-900 border border-gray-800 rounded-lg overflow-hidden my-8 shadow-xl flex flex-col h-[500px] md:h-[700px]" 
     >
@@ -137,10 +137,10 @@ const PdfEmbed = ({
         </div>
       </div>
 
-      {/* PDF Document Viewer - INTERNAL SCROLL */}
+      {/* PDF Document Viewer - SCROLLABLE CONTAINER */}
       <div 
         ref={containerRef}
-        className="flex-1 overflow-auto bg-gray-500/10 p-4 relative scroll-smooth text-center"
+        className="flex-1 overflow-y-auto overflow-x-auto bg-gray-500/10 p-4 relative scroll-smooth text-center"
       >
         <Document
           file={src}
@@ -160,14 +160,15 @@ const PdfEmbed = ({
               </a>
             </div>
           }
-          className="inline-flex flex-col items-center gap-6"
+          // IMPORTANT: flex-col ensures they stack vertically
+          className="flex flex-col items-center gap-6"
         >
           {/* Map through all pages and render them in a vertical stack */}
           {numPages && Array.from(new Array(numPages), (el, index) => (
             <Page 
               key={`page_${index + 1}`}
               pageNumber={index + 1} 
-              // Width calculation: (Container Width - Padding) * Scale Factor
+              // Width calculation: (Container Width - Padding) * Zoom Scale
               width={containerWidth ? (containerWidth - 48) * scale : undefined} 
               renderTextLayer={false}
               renderAnnotationLayer={false}
@@ -177,7 +178,7 @@ const PdfEmbed = ({
                    className="bg-gray-800 animate-pulse mb-4 rounded-sm" 
                    style={{ 
                      width: containerWidth ? (containerWidth - 48) * scale : '100%',
-                     height: (containerWidth ? (containerWidth - 48) * scale : 500) * 1.4 // Approx A4 aspect ratio placeholder
+                     height: (containerWidth ? (containerWidth - 48) * scale : 500) * 1.4
                    }} 
                 />
               }
@@ -188,6 +189,10 @@ const PdfEmbed = ({
     </div>
   );
 };
+
+
+
+
 
 // Helper component for external links
 const ResourceLink = ({
