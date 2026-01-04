@@ -801,11 +801,11 @@ p3: {
         },
         author: { en: "Travis Dumsday" },
         desc: {
-          en: "This book explores the history of these fascinating events and critically examines every scientific explanation... The author argues that... these attempts have failed, and thus the Marian apparitions at Zeitoun constitute powerful evidence for the reality of the supernatural.",
-          fr: "Ce livre explore l'histoire de ces événements fascinants et examine de manière critique chaque explication scientifique... L'auteur soutient que... ces tentatives ont échoué, et donc que les apparitions mariales à Zeitoun constituent une preuve puissante de la réalité du surnaturel.",
-          es: "Este libro explora la historia de estos eventos fascinantes y examina críticamente cada explicación científica... El autor argumenta que... estos intentos han fallado, y por lo tanto las apariciones marianas en Zeitoun constituyen una evidencia poderosa de la realidad de lo sobrenatural.",
-          de: "Dieses Buch untersucht die Geschichte dieser faszinierenden Ereignisse und prüft kritisch jede wissenschaftliche Erklärung... Der Autor argumentiert, dass... diese Versuche gescheitert sind und somit die Marienerscheinungen in Zeitoun einen starken Beweis für die Realität des Übernatürlichen darstellen.",
-        },
+  en: "This book explores the history of these fascinating events and critically examines every scientific explanation thus far put forward in an attempt to account for them in naturalistic terms. The author argues that, so far, these attempts have failed, and thus the Marian apparitions at Zeitoun constitute powerful evidence for the reality of the supernatural.",
+  fr: "Ce livre explore l'histoire de ces événements fascinants et examine de manière critique chaque explication scientifique avancée jusqu'ici pour tenter de les expliquer en termes naturalistes. L'auteur soutient que, jusqu'à présent, ces tentatives ont échoué, et donc que les apparitions mariales à Zeitoun constituent une preuve puissante de la réalité du surnaturel.",
+  es: "Este libro explora la historia de estos eventos fascinantes y examina críticamente cada explicación científica propuesta hasta el momento para intentar explicarlos en términos naturalistas. El autor argumenta que, hasta ahora, estos intentos han fallado, y por lo tanto las apariciones marianas en Zeitoun constituyen una evidencia poderosa de la realidad de lo sobrenatural.",
+  de: "Dieses Buch untersucht die Geschichte dieser faszinierenden Ereignisse und prüft kritisch jede wissenschaftliche Erklärung, die bisher vorgebracht wurde, um sie naturalistisch zu deuten. Der Autor argumentiert, dass diese Versuche bisher gescheitert sind und somit die Marienerscheinungen in Zeitoun einen starken Beweis für die Realität des Übernatürlichen darstellen.",
+},
         pdf_name: {
           en: "Read Excerpt (PDF)",
           fr: "Lire un Extrait (PDF)",
