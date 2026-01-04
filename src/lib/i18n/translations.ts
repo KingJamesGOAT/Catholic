@@ -4028,11 +4028,11 @@ export const translations = {
         },
         quote: {
           text: {
-            en: "The formation of the canon was not a matter of private judgment but a corporate, ecclesial decision—showing that the church's authority was indispensable.",
-            fr: "La formation du canon n'était pas une question de jugement privé mais une décision collégiale et ecclésiale—montrant que l'autorité de l'Église était indispensable.",
-            es: "La formación del canon no fue una cuestión de juicio privado sino una decisión corporativa y eclesial—mostrando que la autoridad de la iglesia era indispensable.",
-            de: "Die Bildung des Kanons war keine Frage des privaten Urteils, sondern eine korporative, kirchliche Entscheidung—was zeigt, dass die Autorität der Kirche unverzichtbar war.",
-          },
+  en: "The formation of the canon was not a matter of private judgment but a corporate, ecclesial decision, showing that the church's authority was indispensable.",
+  fr: "La formation du canon n'était pas une question de jugement privé mais une décision collégiale et ecclésiale, montrant que l'autorité de l'Église était indispensable.",
+  es: "La formación del canon no fue una cuestión de juicio privado sino una decisión corporativa y eclesial, demostrando que la autoridad de la iglesia era indispensable.",
+  de: "Die Bildung des Kanons war keine Frage des privaten Urteils, sondern eine korporative, kirchliche Entscheidung, was zeigt, dass die Autorität der Kirche unverzichtbar war.",
+},
           source: {
             en: "Michael J. Kruger, The Question of Canon, 2003",
             fr: "Michael J. Kruger, The Question of Canon, 2003",
@@ -4084,14 +4084,14 @@ export const translations = {
         de: "Philosophische Überlegungen zu Autorität und Unfehlbarkeit",
       },
       p1: {
-        en: 'From a philosophical standpoint, consider the epistemological challenge of <strong class="text-white">foundationalism</strong>—the view that knowledge rests on certain basic, self-evident truths or reliable authorities. If the Church\'s authority to define the canon is not infallible, the entire foundation of Scripture becomes suspect.',
-        fr: "D'un point de vue philosophique, considérez le défi épistémologique du <strong class=\"text-white\">fondationnalisme</strong>—la vue selon laquelle la connaissance repose sur certaines vérités de base, évidentes en soi ou sur des autorités fiables. Si l'autorité de l'Église pour définir le canon n'est pas infaillible, le fondement même de l'Écriture devient suspect.",
-        es: 'Desde un punto de vista filosófico, considere el desafío epistemológico del <strong class="text-white">fundacionalismo</strong>—la visión de que el conocimiento se basa en ciertas verdades básicas, autoevidentes o autoridades fiables. Si la autoridad de la Iglesia para definir el canon no es infalible, la base misma de la Escritura se vuelve sospechosa.',
-        de: 'Aus philosophischer Sicht betrachten Sie die erkenntnistheoretische Herausforderung des <strong class="text-white">Fundationalismus</strong>—die Ansicht, dass Wissen auf bestimmten grundlegenden, selbstverständlichen Wahrheiten oder zuverlässigen Autoritäten beruht. Wenn die Autorität der Kirche zur Definition des Kanons nicht unfehlbar ist, wird das gesamte Fundament der Schrift verdächtig.',
-      },
+  en: 'From a philosophical standpoint, consider the epistemological challenge of <strong class="text-white">foundationalism</strong>, the view that knowledge rests on certain basic, self-evident truths or reliable authorities. If the Church\'s authority to define the canon is not infallible, the entire foundation of Scripture becomes suspect.',
+  fr: "D'un point de vue philosophique, considérez le défi épistémologique du <strong class=\"text-white\">fondationnalisme</strong>, la vue selon laquelle la connaissance repose sur certaines vérités de base, évidentes en soi ou sur des autorités fiables. Si l'autorité de l'Église pour définir le canon n'est pas infaillible, le fondement même de l'Écriture devient suspect.",
+  es: 'Desde un punto de vista filosófico, considere el desafío epistemológico del <strong class="text-white">fundacionalismo</strong>, la visión de que el conocimiento se basa en ciertas verdades básicas, autoevidentes o autoridades fiables. Si la autoridad de la Iglesia para definir el canon no es infalible, la base misma de la Escritura se vuelve sospechosa.',
+  de: 'Aus philosophischer Sicht betrachten Sie die erkenntnistheoretische Herausforderung des <strong class="text-white">Fundationalismus</strong>, der Ansicht, dass Wissen auf bestimmten grundlegenden, selbstverständlichen Wahrheiten oder zuverlässigen Autoritäten beruht. Wenn die Autorität der Kirche zur Definition des Kanons nicht unfehlbar ist, wird das gesamte Fundament der Schrift verdächtig.',
+},
       quote: {
         text: {
-          en: '"An infallible Scripture requires an infallible interpreter. Without a stable, authoritative custodian, the Bible becomes a source of endless dispute and confusion."',
+          en: 'An infallible Scripture requires an infallible interpreter. Without a stable, authoritative custodian, the Bible becomes a source of endless dispute and confusion.',
           fr: "« Une Écriture infaillible nécessite un interprète infaillible. Sans un gardien stable et faisant autorité, la Bible devient une source de disputes et de confusion sans fin. »",
           es: '"Una Escritura infalible requiere un intérprete infalible. Sin un custodio estable y autorizado, la Biblia se convierte en una fuente de disputa y confusión interminables."',
           de: '„Eine unfehlbare Schrift erfordert einen unfehlbaren Interpreten. Ohne einen stabilen, autoritativen Hüter wird die Bibel zu einer Quelle endloser Streitigkeiten und Verwirrung."',
