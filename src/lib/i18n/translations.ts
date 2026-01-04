@@ -6460,11 +6460,11 @@ export const translations = {
     },
     intro: {
       p1: {
-        en: "The Catholic Church teaches that St. Peter was the first Pope — the visible head of the Church on earth, appointed by Christ Himself. This belief is rooted in Scripture, affirmed by early Christian writings, and sustained through an unbroken line of successors in Rome.",
-        fr: "L'Église catholique enseigne que Saint Pierre fut le premier Pape — le chef visible de l'Église sur terre, désigné par le Christ Lui-même. Cette croyance est enracinée dans l'Écriture, affirmée par les écrits des premiers chrétiens, et maintenue à travers une lignée ininterrompue de successeurs à Rome.",
-        es: "La Iglesia Católica enseña que San Pedro fue el primer Papa — la cabeza visible de la Iglesia en la tierra, designado por Cristo mismo. Esta creencia está arraigada en la Escritura, afirmada por los primeros escritos cristianos, y sostenida a través de una línea ininterrumpida de sucesores en Roma.",
-        de: "Die katholische Kirche lehrt, dass der heilige Petrus der erste Papst war — das sichtbare Oberhaupt der Kirche auf Erden, von Christus selbst eingesetzt. Dieser Glaube ist in der Schrift verwurzelt, von frühchristlichen Schriften bestätigt und durch eine ununterbrochene Linie von Nachfolgern in Rom aufrechterhalten.",
-      },
+  en: "The Catholic Church teaches that St. Peter was the first Pope, the visible head of the Church on earth, appointed by Christ Himself. This belief is rooted in Scripture, affirmed by early Christian writings, and sustained through an unbroken line of successors in Rome.",
+  fr: "L'Église catholique enseigne que Saint Pierre fut le premier Pape, le chef visible de l'Église sur terre, désigné par le Christ Lui-même. Cette croyance est enracinée dans l'Écriture, affirmée par les écrits des premiers chrétiens, et maintenue à travers une lignée ininterrompue de successeurs à Rome.",
+  es: "La Iglesia Católica enseña que San Pedro fue el primer Papa, la cabeza visible de la Iglesia en la tierra, designado por Cristo mismo. Esta creencia está arraigada en la Escritura, afirmada por los primeros escritos cristianos, y sostenida a través de una línea ininterrumpida de sucesores en Roma.",
+  de: "Die katholische Kirche lehrt, dass der heilige Petrus der erste Papst war, das sichtbare Oberhaupt der Kirche auf Erden, von Christus selbst eingesetzt. Dieser Glaube ist in der Schrift verwurzelt, von frühchristlichen Schriften bestätigt und durch eine ununterbrochene Linie von Nachfolgern in Rom aufrechterhalten.",
+},
       callout: {
         text: {
           en: "The Lord made Simon alone, whom he named Peter, the rock of his Church. He gave him the keys of his Church and instituted him shepherd of the whole flock.",
@@ -6521,11 +6521,11 @@ export const translations = {
       },
       evidence: {
         e1: {
-          en: "Peter's name is mentioned over 150 times — more than all the other apostles combined.",
-          fr: "Le nom de Pierre est mentionné plus de 150 fois — plus que tous les autres apôtres réunis.",
-          es: "El nombre de Pedro se menciona más de 150 veces — más que todos los demás apóstoles juntos.",
-          de: "Petrus' Name wird über 150 Mal erwähnt — öfter als alle anderen Apostel zusammen.",
-        },
+  en: "Peter's name is mentioned over 150 times, more than all the other apostles combined.",
+  fr: "Le nom de Pierre est mentionné plus de 150 fois, plus que tous les autres apôtres réunis.",
+  es: "El nombre de Pedro se menciona más de 150 veces, más que todos los demás apóstoles juntos.",
+  de: "Petrus' Name wird über 150 Mal erwähnt, öfter als alle anderen Apostel zusammen.",
+},
         e2: {
           en: "He is always listed first in apostolic lists (e.g., Matthew 10:2).",
           fr: "Il est toujours listé en premier dans les listes apostoliques (par ex., Matthieu 10:2).",
@@ -6535,11 +6535,11 @@ export const translations = {
       },
       matthew: {
         h3: {
-          en: "Matthew 16:18–19 – The Foundational Text",
-          fr: "Matthieu 16:18–19 – Le Texte Fondamental",
-          es: "Mateo 16:18–19 – El Texto Fundacional",
-          de: "Matthäus 16:18–19 – Der Grundlegende Text",
-        },
+  en: "Matthew 16:18–19: The Foundational Text",
+  fr: "Matthieu 16:18–19 : Le texte fondamental",
+  es: "Mateo 16:18–19: El texto fundacional",
+  de: "Matthäus 16:18–19: Der grundlegende Text",
+},
         quote: {
           en: "You are Peter, and on this rock I will build my Church... I will give you the keys of the kingdom of heaven...",
           fr: "« Tu es Pierre, et sur cette pierre je bâtirai mon Église... Je te donnerai les clefs du royaume des cieux... »",
@@ -6560,11 +6560,11 @@ export const translations = {
             de: '„Petrus" (Griechisch: <em>Petros</em>) bedeutet Fels.',
           },
           p2: {
-            en: "Jesus changes Simon's name — a biblical act denoting mission (cf. Abram → Abraham).",
-            fr: "Jésus change le nom de Simon — un acte biblique dénotant une mission (cf. Abram → Abraham).",
-            es: "Jesús cambia el nombre de Simón — un acto bíblico que denota misión (cf. Abram → Abraham).",
-            de: "Jesus ändert Simons Namen — ein biblischer Akt, der eine Mission kennzeichnet (vgl. Abram → Abraham).",
-          },
+  en: "Jesus changes Simon's name, a biblical act denoting mission (cf. Abram → Abraham).",
+  fr: "Jésus change le nom de Simon, un acte biblique dénotant une mission (cf. Abram → Abraham).",
+  es: "Jesús cambia el nombre de Simón, un acto bíblico que denota misión (cf. Abram → Abraham).",
+  de: "Jesus ändert Simons Namen, ein biblischer Akt, der eine Mission kennzeichnet (vgl. Abram → Abraham).",
+},
           p3: {
             en: "The &quot;keys&quot; symbolize authority (cf. Isaiah 22:22).",
             fr: "Les « clés » symbolisent l'autorité (cf. Isaïe 22:22).",
@@ -6789,7 +6789,7 @@ export const translations = {
       },
       ccc: {
         text: {
-          en: "&quot;The Pope, Bishop of Rome and Peter&apos;s successor, is the perpetual and visible source and foundation of the unity both of the bishops and of the whole company of the faithful.&quot;",
+          en: "The Pope, Bishop of Rome and Peter&apos;s successor, is the perpetual and visible source and foundation of the unity both of the bishops and of the whole company of the faithful",
           fr: "« Le Pape, évêque de Rome et successeur de Pierre, est le principe et le fondement perpétuel et visible de l'unité tant des évêques que de la multitude des fidèles. »",
           es: '"El Papa, obispo de Roma y sucesor de Pedro, es el principio y fundamento perpetuo y visible de unidad, tanto de los obispos como de la muchedumbre de los fieles."',
           de: "„Der Papst, der Bischof von Rom und Nachfolger Petri, ist das immerwährende, sichtbare Prinzip und Fundament für die Einheit der Vielheit sowohl der Bischöfe als auch der Gläubigen.“",
@@ -6887,18 +6887,20 @@ export const translations = {
         es: "La Sucesión Continúa",
         de: "Die Nachfolge Geht Weiter",
       },
+      
       p1: {
-        en: "Peter's authority didn't die with him—it was passed on through apostolic succession to his successors in Rome. This unbroken line continues to the present day with Pope Francis as the 266th successor of Peter.",
-        fr: "L'autorité de Pierre n'est pas morte avec lui — elle a été transmise par succession apostolique à ses successeurs à Rome. Cette lignée ininterrompue se poursuit jusqu'à nos jours avec le Pape François comme 266e successeur de Pierre.",
-        es: "La autoridad de Pedro no murió con él—fue transmitida a través de la sucesión apostólica a sus sucesores en Roma. Esta línea ininterrumpida continúa hasta el día de hoy con el Papa Francisco como el 266º sucesor de Pedro.",
-        de: "Petrus' Autorität starb nicht mit ihm—sie wurde durch apostolische Sukzession an seine Nachfolger in Rom weitergegeben. Diese ununterbrochene Linie setzt sich bis heute fort mit Papst Franziskus als dem 266. Nachfolger Petri.",
-      },
-      p2: {
-        en: "The papacy isn't just about one man's authority—it's about the Church's teaching authority as a whole. Let's explore what that means and how the Magisterium functions.",
-        fr: "La papauté ne concerne pas seulement l'autorité d'un seul homme — elle concerne l'autorité d'enseignement de l'Église dans son ensemble. Explorons ce que cela signifie et comment fonctionne le Magistère.",
-        es: "El papado no se trata solo de la autoridad de un hombre—se trata de la autoridad de enseñanza de la Iglesia en su conjunto. Exploremos lo que eso significa y cómo funciona el Magisterio.",
-        de: "Beim Papsttum geht es nicht nur um die Autorität eines Mannes—es geht um die Lehrautorität der Kirche als Ganzes. Lassen Sie uns untersuchen, was das bedeutet und wie das Lehramt funktioniert.",
-      },
+  en: "Peter's authority didn't die with him, but was passed on through apostolic succession to his successors in Rome. This unbroken line continues to the present day with Pope Francis as the 266th successor of Peter.",
+  fr: "L'autorité de Pierre n'est pas morte avec lui, mais a été transmise par succession apostolique à ses successeurs à Rome. Cette lignée ininterrompue se poursuit jusqu'à nos jours avec le Pape François comme 266e successeur de Pierre.",
+  es: "La autoridad de Pedro no murió con él, sino que fue transmitida a través de la sucesión apostólica a sus sucesores en Roma. Esta línea ininterrumpida continúa hasta el día de hoy con el Papa Francisco como el 266º sucesor de Pedro.",
+  de: "Petrus' Autorität starb nicht mit ihm, sondern wurde durch apostolische Sukzession an seine Nachfolger in Rom weitergegeben. Diese ununterbrochene Linie setzt sich bis heute fort mit Papst Franziskus als dem 266. Nachfolger Petri.",
+},
+p2: {
+  en: "The papacy isn't just about one man's authority, but concerns the Church's teaching authority as a whole. Let's explore what that means and how the Magisterium functions.",
+  fr: "La papauté ne concerne pas seulement l'autorité d'un seul homme, mais l'autorité d'enseignement de l'Église dans son ensemble. Explorons ce que cela signifie et comment fonctionne le Magistère.",
+  es: "El papado no se trata solo de la autoridad de un hombre, sino de la autoridad de enseñanza de la Iglesia en su conjunto. Exploremos lo que eso significa y cómo funciona el Magisterio.",
+  de: "Beim Papsttum geht es nicht nur um die Autorität eines Mannes, sondern um die Lehrautorität der Kirche als Ganzes. Lassen Sie uns untersuchen, was das bedeutet und wie das Lehramt funktioniert.",
+},
+      
     },
   },
 
