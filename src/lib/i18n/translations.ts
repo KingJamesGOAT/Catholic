@@ -4158,11 +4158,11 @@ export const translations = {
         de: "Schlussfolgerung",
       },
       para1: {
-        en: 'The question of the canon cannot be settled by fallacies or by historical guesswork. The "You Lose, So I Win" fallacy—so often used against Catholic claims—does not vindicate Sola Scriptura. <strong>Disproving one model of authority does not prove another.</strong>',
-        fr: "La question du canon ne peut être réglée par des sophismes ou par des conjectures historiques. Le sophisme « Vous perdez, donc je gagne » — si souvent utilisé contre les revendications catholiques — ne justifie pas la Sola Scriptura. <strong>Réfuter un modèle d'autorité ne prouve pas un autre.</strong>",
-        es: 'La cuestión del canon no puede resolverse mediante falacias o conjeturas históricas. La falacia "Tú pierdes, luego yo gano"—tan a menudo usada contra las afirmaciones católicas—no vindica Sola Scriptura. <strong>Refutar un modelo de autoridad no prueba otro.</strong>',
-        de: 'Die Frage des Kanons kann nicht durch Fehlschlüsse oder historische Vermutungen geklärt werden. Der „Du verlierst, also gewinne ich" Fehlschluss — so oft gegen katholische Ansprüche verwendet — rechtfertigt Sola Scriptura nicht. <strong>Ein Autoritätsmodell zu widerlegen beweist kein anderes.</strong>',
-      },
+  en: 'The question of the canon cannot be settled by fallacies or by historical guesswork. The "You Lose, So I Win" fallacy, so often used against Catholic claims, does not vindicate Sola Scriptura. <strong>Disproving one model of authority does not prove another.</strong>',
+  fr: "La question du canon ne peut être réglée par des sophismes ou par des conjectures historiques. Le sophisme « Vous perdez, donc je gagne », si souvent utilisé contre les revendications catholiques, ne justifie pas la Sola Scriptura. <strong>Réfuter un modèle d'autorité ne prouve pas un autre.</strong>",
+  es: 'La cuestión del canon no puede resolverse mediante falacias o conjeturas históricas. La falacia "Tú pierdes, luego yo gano", tan a menudo usada contra las afirmaciones católicas, no vindica la Sola Scriptura. <strong>Refutar un modelo de autoridad no prueba otro.</strong>',
+  de: 'Die Frage des Kanons kann nicht durch Fehlschlüsse oder historische Vermutungen geklärt werden. Der „Du verlierst, also gewinne ich"-Fehlschluss, so oft gegen katholische Ansprüche verwendet, rechtfertigt Sola Scriptura nicht. <strong>Ein Autoritätsmodell zu widerlegen beweist kein anderes.</strong>',
+},
       para2: {
         en: 'And appealing to "scientific" or historical methods to define the canon can, at best, give us <strong>probability</strong>, not <strong>certainty</strong>. It leaves us with human opinion, not divine assurance.',
         fr: "Et faire appel à des méthodes « scientifiques » ou historiques pour définir le canon peut, au mieux, nous donner une <strong>probabilité</strong>, pas une <strong>certitude</strong>. Cela nous laisse avec l'opinion humaine, pas l'assurance divine.",
@@ -4206,11 +4206,11 @@ export const translations = {
         de: "Und Gott schützt diese Kirche vor Irrtümern in wesentlichen Heilsfragen.",
       },
       finalStatement: {
-        en: "Only with an <strong>infallible authority</strong> can we be sure we have an <strong>infallible Bible</strong>.",
-        fr: "Seulement avec une <strong>autorité infaillible</strong> pouvons-nous être sûrs d'avoir une <strong>Bible infaillible</strong>.",
-        es: "Solo con una <strong>autoridad infalible</strong> podemos estar seguros de que tenemos una <strong>Biblia infalible</strong>.",
-        de: "Nur mit einer <strong>unfehlbaren Autorität</strong> können wir sicher sein, dass wir eine <strong>unfehlbare Bibel</strong> haben.",
-      },
+  en: "An infallible canon can function as a rule of faith only if it is defined and proposed by an <strong>infallible ecclesial authority</strong>.",
+  fr: "Un canon infaillible ne peut servir de règle de foi que s'il est défini et proposé par une <strong>autorité ecclésiale infaillible</strong>.",
+  es: "Un canon infalible solo puede funcionar como regla de fe si es definido y propuesto por una <strong>autoridad eclesial infalible</strong>.",
+  de: "Ein unfehlbarer Kanon kann nur dann als Glaubensregel fungieren, wenn er von einer <strong>unfehlbaren kirchlichen Autorität</strong> definiert und vorgelegt wird.",
+},
     },
 
     // Bridge to Next Topic
