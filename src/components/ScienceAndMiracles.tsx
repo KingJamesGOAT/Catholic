@@ -3,8 +3,6 @@ import { motion } from "motion/react";
 import { Separator } from "./ui/separator";
 import {
   Link as LinkIcon,
-  Download,
-  Youtube,
   BookOpen,
   Sparkles,
   Heart,
@@ -40,7 +38,7 @@ const YouTubeEmbed = ({
   </div>
 );
 
-// Helper component for PDF embeds
+// Helper component for PDF embeds - UPDATED to use <object>
 const PdfEmbed = ({
   src,
   title,
@@ -49,13 +47,26 @@ const PdfEmbed = ({
   title: string;
 }) => (
   <div className="aspect-[4/5] w-full rounded-lg overflow-hidden bg-gray-900 border border-gray-800 my-6">
-    <iframe
-      src={src}
-      title={title}
+    <object
+      data={src}
+      type="application/pdf"
       width="100%"
       height="100%"
       className="w-full h-full"
-    ></iframe>
+      aria-label={title}
+    >
+      <div className="flex flex-col items-center justify-center h-full text-center p-6 bg-gray-800 text-gray-300">
+        <p className="mb-4">Unable to display PDF directly.</p>
+        <a 
+          href={src} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+        >
+          View {title}
+        </a>
+      </div>
+    </object>
   </div>
 );
 
@@ -117,7 +128,7 @@ export default function ScienceAndMiracles() {
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-7xl relative">
-      {/* Header (No sidebar) */}
+      {/* Header */}
       <motion.header
         className="text-center max-w-4xl mx-auto mb-12 pt-24"
         initial={{ opacity: 0, y: 20 }}
@@ -141,15 +152,13 @@ export default function ScienceAndMiracles() {
         </div>
       </motion.header>
 
-      {/* 3-Block Selector (Centered) */}
+      {/* 3-Block Selector */}
       <motion.div
-        // Added flex and justify-center for centering the inner block
         className="flex justify-center max-w-5xl mx-auto mb-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        {/* Inner div restricts width to content and applies the grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-fit">
           <SelectorButton
             title={t(trans.selector.title1, language)}
@@ -189,7 +198,6 @@ export default function ScienceAndMiracles() {
       {/* Content Area */}
       <div className="max-w-4xl mx-auto">
         <div className="prose prose-invert max-w-none prose-h2:text-white prose-h2:mb-6 prose-h3:text-gray-200 prose-h3:mb-4 prose-p:text-gray-300 prose-p:leading-relaxed prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline prose-li:text-gray-300 prose-li:leading-relaxed">
-          {/* This now renders the <main> tag, ToC, and Content */}
           {renderContent()}
         </div>
       </div>
@@ -295,7 +303,6 @@ const ShroudContent = () => {
       <h3>{t(trans.sci.h3, language)}</h3>
       <h4>{t(trans.sci.A.h4, language)}</h4>
       <ul className="list-none space-y-2 pl-6">
-        {/* ... (List items) ... */}
         <li className="flex items-start gap-3">
           <span className="text-blue-400 mt-1">•</span>
           {t(trans.sci.A.li1, language)}
@@ -335,7 +342,6 @@ const ShroudContent = () => {
       </div>
       <h4>{t(trans.sci.B.h4, language)}</h4>
       <ul className="list-none space-y-2 pl-6">
-        {/* ... (List items) ... */}
         <li className="flex items-start gap-3">
           <span className="text-blue-400 mt-1">•</span>
           {t(trans.sci.B.li1, language)}
@@ -414,7 +420,6 @@ const ShroudContent = () => {
       <h3>{t(trans.anomalies.h3, language)}</h3>
       <p>{t(trans.anomalies.p1, language)}</p>
       <ul className="list-none space-y-2 pl-6">
-        {/* ... (List items) ... */}
         <li className="flex items-start gap-3">
           <span className="text-blue-400 mt-1">•</span>
           {t(trans.anomalies.li1, language)}
@@ -502,7 +507,6 @@ const ShroudContent = () => {
           text={t(trans.sources.link3_text, language)}
           icon={<LinkIcon size={16} />}
         />
-        {/* <PdfEmbed src={t(trans.sources.pdf1_url, language)} title="3D Reconstruction (PDF)" /> */}
         <ResourceLink
           href={t(trans.sources.link4, language)}
           text="STURP Conclusions"
@@ -529,11 +533,6 @@ const ShroudContent = () => {
         title={t(trans.sources.pdf1_name, language)}
       />
     </motion.section>
-
-
-
-
-    
   );
 };
 
@@ -630,24 +629,21 @@ const MarianContent = () => {
         title={t(trans.fatima.pdf1_name, language)}
       />
 
-      {/* RENDER KEY SCIENTIFIC OBSERVATIONS - NEW STYLED VERSION */}
+      {/* RENDER KEY SCIENTIFIC OBSERVATIONS */}
       <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-6">
         <h4 className="text-white mb-4">
           {t(trans.fatima.keySci.h4, language)}
         </h4>
         <div className="space-y-4">
           {keySciList.map((item, index) => {
-            // Logic to separate the leading number (1., 2., 3., etc.) from the content
             const rawHtml = t(item, language);
             const match = rawHtml.match(/^(\d+\.\s)(.*)/s);
-
             const number = match ? match[1] : "";
             const content = match ? match[2] : rawHtml;
 
             return (
               <div
                 key={index}
-                // Apply a visually distinct card-like style for each observation
                 className="flex items-start gap-3 p-4 bg-gray-900/50 rounded-lg border border-gray-700 hover:border-blue-700 transition-all duration-300"
               >
                 <span className="text-blue-400 font-semibold flex-shrink-0 mt-1">
@@ -655,7 +651,6 @@ const MarianContent = () => {
                 </span>
                 <span
                   className="text-gray-300 leading-relaxed"
-                  // Use dangerouslySetInnerHTML for the remaining complex content
                   dangerouslySetInnerHTML={{
                     __html: content,
                   }}
@@ -666,7 +661,7 @@ const MarianContent = () => {
         </div>
       </div>
 
-      {/* RENDER INVALIDATED HYPOTHESES - NEW STYLED VERSION */}
+      {/* RENDER INVALIDATED HYPOTHESES */}
       <div className="bg-red-900/20 border border-red-800 rounded-lg p-6 mt-6">
         <h4 className="text-white mb-4">
           {t(trans.fatima.invalid.h4, language)}
@@ -675,7 +670,6 @@ const MarianContent = () => {
           {invalidList.map((item, index) => (
             <div
               key={index}
-              // Style block to clearly mark refuted hypothesis
               className="flex items-start gap-3 p-3 bg-red-900/30 rounded-lg border border-red-700"
             >
               <XCircle
@@ -693,7 +687,7 @@ const MarianContent = () => {
         </div>
       </div>
 
-      {/* RENDER CONCLUSION IN STYLED BLOCK */}
+      {/* RENDER CONCLUSION */}
       <div className="bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-blue-800 rounded-lg p-6">
         <h4 className="text-white mb-2">
           {t(trans.fatima.conclusion.h4, language)}
@@ -862,9 +856,6 @@ const MarianContent = () => {
     </motion.section>
   );
 };
-
-
-
 
 const EucharisticContent = () => {
   const { language } = useLanguage();
@@ -1439,7 +1430,7 @@ const EucharisticContent = () => {
               />
             </div>
 
-            {/* V. Microscopic Fusion of Tissue and Bread Matrix (Highlight Fusion Point) */}
+            {/* V. Microscopic Fusion of Tissue and Bread Matrix */}
             <div className="bg-red-900/10 border border-red-800 rounded-lg p-6">
               <div className="flex items-start gap-4">
                 <Sparkles
@@ -1447,7 +1438,6 @@ const EucharisticContent = () => {
                   size={24}
                 />
                 <div>
-                  {/* The title is now rendered via dangerouslySetInnerHTML from trans.critique.p_fusion, which starts with a bold tag */}
                   <p
                     className="text-gray-300"
                     dangerouslySetInnerHTML={{
@@ -1461,7 +1451,7 @@ const EucharisticContent = () => {
               </div>
             </div>
 
-            {/* VI. Statistical Improbability and Multi-Case Consistency */}
+            {/* VI. Statistical Improbability */}
             <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
               <p
                 className="text-gray-300"
@@ -1471,7 +1461,7 @@ const EucharisticContent = () => {
               />
             </div>
 
-            {/* VII. Methodological Clarifications and Minimum Protocol */}
+            {/* VII. Methodological Clarifications */}
             <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6">
               <p
                 className="text-gray-300"
@@ -1482,7 +1472,7 @@ const EucharisticContent = () => {
             </div>
           </div>
 
-          {/* Final Conclusion Block (Styled as a compelling summary) */}
+          {/* Final Conclusion Block */}
           <div className="bg-green-900/10 border border-green-800 rounded-lg p-8 mt-6">
             <h3 className="text-white mb-4 flex items-center gap-3">
               <CheckCircle className="text-green-400" size={24} />
@@ -1504,14 +1494,11 @@ const EucharisticContent = () => {
           {t(trans.critique.faq.h4, language)}
         </h4>
         <ul className="list-none space-y-4">
-          {/* FAQ list items rendering logic must remain here */}
           {trans.critique.faq.q1 &&
             Array.from({ length: 10 }).map((_, index) => {
-              // Type assertion to access dynamic keys safely
               const qKey = `q${index + 1}` as keyof typeof trans.critique.faq;
               const aKey = `a${index + 1}` as keyof typeof trans.critique.faq;
 
-              // Ensure both Q and A keys exist before trying to render
               if (
                 !trans.critique.faq[qKey] ||
                 !trans.critique.faq[aKey]
