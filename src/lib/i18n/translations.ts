@@ -6937,17 +6937,17 @@ export const translations = {
         de: "Warum Dies Wichtig Ist",
       },
       p1: {
-        en: "The difference between the <strong>Catholic Bible</strong> (73 books) and the <strong> Protestant Bible</strong> (66 books) is one of the most common—and most misunderstood—issues in Christian theology. Protestants often accuse Catholics of &quot;adding books&quot; at the Council of Trent. But history, scholarship, and early Church authority all tell a very different story.",
-        fr: "La différence entre la <strong>Bible catholique</strong> (73 livres) et la <strong>Bible protestante</strong> (66 livres) est l'une des questions les plus courantes — et les plus mal comprises — de la théologie chrétienne. Les protestants accusent souvent les catholiques d'avoir « ajouté des livres » au Concile de Trente. Mais l'histoire, l'érudition et l'autorité de l'Église primitive racontent toutes une histoire très différente.",
-        es: "La diferencia entre la <strong>Biblia Católica</strong> (73 libros) y la <strong>Biblia Protestante</strong> (66 libros) es uno de los temas más comunes —y más incomprendidos— de la teología cristiana. Los protestantes a menudo acusan a los católicos de &quot;añadir libros&quot; en el Concilio de Trento. Pero la historia, la erudición y la autoridad de la Iglesia primitiva cuentan una historia muy diferente.",
-        de: "Der Unterschied zwischen der <strong>katholischen Bibel</strong> (73 Bücher) und der <strong>protestantischen Bibel</strong> (66 Bücher) ist eines der häufigsten — und am meisten missverstandenen — Themen der christlichen Theologie. Protestanten werfen Katholiken oft vor, beim Konzil von Trient „Bücher hinzugefügt“ zu haben. Aber Geschichte, Wissenschaft und die Autorität der frühen Kirche erzählen alle eine ganz andere Geschichte.",
-      },
+  en: "The difference between the <strong>Catholic Bible</strong> (73 books) and the <strong> Protestant Bible</strong> (66 books) is one of the most common, and most misunderstood, issues in Christian theology. Protestants often accuse Catholics of &quot;adding books&quot; at the Council of Trent. But history, scholarship, and early Church authority all tell a very different story.",
+  fr: "La différence entre la <strong>Bible catholique</strong> (73 livres) et la <strong>Bible protestante</strong> (66 livres) est l'une des questions les plus courantes, et les plus mal comprises, de la théologie chrétienne. Les protestants accusent souvent les catholiques d'avoir « ajouté des livres » au Concile de Trente. Mais l'histoire, l'érudition et l'autorité de l'Église primitive racontent toutes une histoire très différente.",
+  es: "La diferencia entre la <strong>Biblia Católica</strong> (73 libros) y la <strong>Biblia Protestante</strong> (66 libros) es uno de los temas más comunes, y más incomprendidos, de la teología cristiana. Los protestantes a menudo acusan a los católicos de &quot;añadir libros&quot; en el Concilio de Trento. Pero la historia, la erudición y la autoridad de la Iglesia primitiva cuentan una historia muy diferente.",
+  de: "Der Unterschied zwischen der <strong>katholischen Bibel</strong> (73 Bücher) und der <strong>protestantischen Bibel</strong> (66 Bücher) ist eines der häufigsten, und am meisten missverstandenen, Themen der christlichen Theologie. Protestanten werfen Katholiken oft vor, beim Konzil von Trient „Bücher hinzugefügt“ zu haben. Aber Geschichte, Wissenschaft und die Autorität der frühen Kirche erzählen alle eine ganz andere Geschichte.",
+},
       callout: {
-        en: "The Catholic Church never added books—it preserved the full canon received from the early Church.",
-        fr: "L'Église catholique n'a jamais ajouté de livres — elle a préservé le canon complet reçu de l'Église primitive.",
-        es: "La Iglesia Católica nunca añadió libros, sino que preservó el canon completo recibido de la Iglesia primitiva.",
-        de: "Die katholische Kirche hat nie Bücher hinzugefügt – sie hat den vollständigen Kanon bewahrt, den sie von der frühen Kirche empfangen hat.",
-      },
+  en: "The Catholic Church never added books, but preserved the full canon received from the early Church.",
+  fr: "L'Église catholique n'a jamais ajouté de livres, mais a préservé le canon complet reçu de l'Église primitive.",
+  es: "La Iglesia Católica nunca añadió libros, sino que preservó el canon completo recibido de la Iglesia primitiva.",
+  de: "Die katholische Kirche hat nie Bücher hinzugefügt, sondern den vollständigen Kanon bewahrt, den sie von der frühen Kirche empfangen hat.",
+},
     },
     video1: {
       title: {
@@ -7021,19 +7021,19 @@ export const translations = {
         de: "Sowie längere Fassungen von <strong>Daniel</strong> und <strong>Esther</strong>.",
       },
       callout: {
-        en: "These books were accepted in Christian Bibles for over a millennium until <strong>Martin Luther</strong> removed them in the 16th century—not based on historical consensus, but on theological grounds.",
-        fr: "Ces livres ont été acceptés dans les Bibles chrétiennes pendant plus d'un millénaire jusqu'à ce que <strong>Martin Luther</strong> les retire au 16ème siècle — non pas sur la base d'un consensus historique, mais pour des raisons théologiques.",
-        es: "Estos libros fueron aceptados en las Biblias cristianas durante más de un milenio hasta que <strong>Martín Lutero</strong> los eliminó en el siglo XVI, no basándose en el consenso histórico, sino en fundamentos teológicos.",
-        de: "Diese Bücher wurden über ein Jahrtausend lang in christlichen Bibeln akzeptiert, bis <strong>Martin Luther</strong> sie im 16. Jahrhundert entfernte – nicht aufgrund eines historischen Konsenses, sondern aus theologischen Gründen.",
-      },
+  en: "These books were received and used in the Church’s Scriptures for over a millennium, until the Reformation, when <strong>Martin Luther</strong> and other Reformers, on theological grounds, denied them canonical status.",
+  fr: "Ces livres ont été reçus et utilisés dans les Écritures de l'Église pendant plus d'un millénaire, jusqu'à la Réforme, lorsque <strong>Martin Luther</strong> et d'autres réformateurs, pour des motifs théologiques, leur ont refusé le statut canonique.",
+  es: "Estos libros fueron recibidos y utilizados en las Escrituras de la Iglesia durante más de un milenio, hasta la Reforma, cuando <strong>Martín Lutero</strong> y otros reformadores, por motivos teológicos, les negaron el estatus canónico.",
+  de: "Diese Bücher wurden über ein Jahrtausend lang in den Schriften der Kirche empfangen und verwendet, bis zur Reformation, als <strong>Martin Luther</strong> und andere Reformatoren ihnen aus theologischen Gründen den kanonischen Status absprachen.",
+},
     },
     arguments: {
       h2: {
-        en: "Protestant Arguments—and the Catholic Response",
-        fr: "Arguments Protestants — et la Réponse Catholique",
-        es: "Argumentos Protestantes—y la Respuesta Católica",
-        de: "Protestantische Argumente – und die Katholische Antwort",
-      },
+  en: "Protestant Arguments and the Catholic Response",
+  fr: "Arguments protestants et la réponse catholique",
+  es: "Argumentos protestantes y la respuesta católica",
+  de: "Protestantische Argumente und die katholische Antwort",
+},
       o1: {
         obj: {
           en: "The Jews didn't accept these books",
@@ -7048,11 +7048,11 @@ export const translations = {
           de: "Es gab keinen einzigen, universell anerkannten jüdischen Kanon zur Zeit Jesu. Gelehrte identifizieren mindestens fünf verschiedene jüdische Kanons, die im 1. Jahrhundert in Gebrauch waren: die pharisäische, sadduzäische, samaritanische, Qumran- und die Septuaginta-Tradition.",
         },
         res2: {
-          en: "The Septuagint—a Greek translation of the Hebrew Scriptures that included the Deuterocanonical books —was the version most often quoted by the New Testament authors.",
-          fr: "La Septante — une traduction grecque des Écritures hébraïques qui incluait les livres deutérocanoniques — était la version la plus souvent citée par les auteurs du Nouveau Testament.",
-          es: "La Septuaginta —una traducción griega de las Escrituras hebreas que incluía los libros deuterocanónicos — fue la versión más citada por los autores del Nuevo Testamento.",
-          de: "Die Septuaginta – eine griechische Übersetzung der hebräischen Schriften, die die deuterokanonischen Bücher enthielt – war die Version, die von den Autoren des Neuen Testaments am häufigsten zitiert wurde.",
-        },
+  en: "The Septuagint, a Greek translation of the Hebrew Scriptures that included the Deuterocanonical books, was the version most often quoted by the New Testament authors.",
+  fr: "La Septante, une traduction grecque des Écritures hébraïques qui incluait les livres deutérocanoniques, était la version la plus souvent citée par les auteurs du Nouveau Testament.",
+  es: "La Septuaginta, una traducción griega de las Escrituras hebreas que incluía los libros deuterocanónicos, fue la versión más citada por los autores del Nuevo Testamento.",
+  de: "Die Septuaginta, eine griechische Übersetzung der hebräischen Schriften, die die deuterokanonischen Bücher enthielt, war die Version, die von den Autoren des Neuen Testaments am häufigsten zitiert wurde.",
+},
         quote: {
           text: {
             en: "The New Testament authors almost always use the Septuagint to access the Jewish scriptures.",
@@ -7118,24 +7118,24 @@ export const translations = {
           de: "Das gilt auch für viele unbestrittene Bücher in protestantischen Bibeln. Bücher wie Richter, Esra, Esther, Obadja, Nahum, und Zefanja werden ebenfalls nie explizit im Neuen Testament zitiert.",
         },
         res2: {
-          en: "The Deuterocanonicals are often referenced or echoed: Hebrews 11 alludes to 2 Maccabees 6–7; Wisdom 2 prophesies about the righteous man being killed—fulfilled in Christ; Jesus celebrates Hanukkah in John 10:22–23, a feast only described in 1 Maccabees.",
-          fr: "Les Deutérocanoniques sont souvent référencés ou évoqués : Hébreux 11 fait allusion à 2 Maccabées 6–7 ; Sagesse 2 prophétise la mort du juste — accomplie dans le Christ ; Jésus célèbre Hanoukka dans Jean 10:22–23, une fête décrite uniquement dans 1 Maccabées.",
-          es: "Los Deuterocanónicos a menudo se referencian o se hacen eco de ellos: Hebreos 11 alude a 2 Macabeos 6–7; Sabiduría 2 profetiza sobre la muerte del justo —cumplida en Cristo; Jesús celebra Janucá en Juan 10:22–23, una fiesta descrita solo en 1 Macabeos.",
-          de: "Auf die Deuterokanonika wird oft verwiesen oder angespielt: Hebräer 11 spielt auf 2 Makkabäer 6–7 an; Weisheit 2 prophezeit den Tod des Gerechten – erfüllt in Christus; Jesus feiert Chanukka in Johannes 10:22–23, ein Fest, das nur in 1 Makkabäer beschrieben wird.",
-        },
+  en: "The Deuterocanonicals are often referenced or echoed: Hebrews 11 alludes to 2 Maccabees 6–7; Wisdom 2 prophesies about the righteous man being killed, fulfilled in Christ; Jesus celebrates Hanukkah in John 10:22–23, a feast only described in 1 Maccabees.",
+  fr: "Les Deutérocanoniques sont souvent référencés ou évoqués : Hébreux 11 fait allusion à 2 Maccabées 6–7 ; Sagesse 2 prophétise la mort du juste, accomplie dans le Christ ; Jésus célèbre Hanoukka dans Jean 10:22–23, une fête décrite uniquement dans 1 Maccabées.",
+  es: "Los Deuterocanónicos a menudo se referencian o se hacen eco de ellos: Hebreos 11 alude a 2 Macabeos 6–7; Sabiduría 2 profetiza sobre la muerte del justo, cumplida en Cristo; Jesús celebra Janucá en Juan 10:22–23, una fiesta descrita solo en 1 Macabeos.",
+  de: "Auf die Deuterokanonika wird oft verwiesen oder angespielt: Hebräer 11 spielt auf 2 Makkabäer 6–7 an; Weisheit 2 prophezeit den Tod des Gerechten, erfüllt in Christus; Jesus feiert Chanukka in Johannes 10:22–23, ein Fest, das nur in 1 Makkabäer beschrieben wird.",
+},
         quote: {
           text: {
-            en: "Wisdom 2… is really explicitly Christological in a way that would be very hard to predict.",
-            fr: "Sagesse 2... est vraiment explicitement christologique d'une manière qui serait très difficile à prédire.",
-            es: "Sabiduría 2... es realmente explícitamente cristológico de una manera que sería muy difícil de predecir.",
-            de: "Weisheit 2... ist wirklich explizit christologisch auf eine Weise, die sehr schwer vorherzusagen wäre.",
-          },
-          source: {
-            en: "Biblical Scholars",
-            fr: "Érudits Bibliques",
-            es: "Eruditos Bíblicos",
-            de: "Bibelwissenschaftler",
-          },
+  en: "Wisdom 2 is really explicitly Christological in a way that would be very hard to predict.",
+  fr: "Sagesse 2 est vraiment explicitement christologique, d'une manière qui serait très difficile à prédire.",
+  es: "Sabiduría 2 es realmente explícitamente cristológico, de una manera que sería muy difícil de predecir.",
+  de: "Weisheit 2 ist wirklich explizit christologisch, auf eine Weise, die sehr schwer vorherzusagen wäre.",
+},
+source: {
+  en: "Dr. Brant Pitre",
+  fr: "Dr Brant Pitre",
+  es: "Dr. Brant Pitre",
+  de: "Dr. Brant Pitre",
+},
         },
       },
 
@@ -7147,17 +7147,17 @@ export const translations = {
           de: "Der heilige Hieronymus lehnte die deuterokanonischen Bücher ab",
         },
         res1: {
-          en: "Jerome, influenced by the rabbinic canon, initially expressed doubts about these books. However, Jerome ultimately submitted to the judgment of the Church—and translated all the Deuterocanonical books into Latin for inclusion in the Vulgate.",
-          fr: "Jérôme, influencé par le canon rabbinique, a d'abord exprimé des doutes sur ces livres. Cependant, Jérôme s'est finalement soumis au jugement de l'Église — et a traduit tous les livres deutérocanoniques en latin pour les inclure dans la Vulgate.",
-          es: "Jerónimo, influenciado por el canon rabínico, inicialmente expresó dudas sobre estos libros. Sin embargo, Jerónimo finalmente se sometió al juicio de la Iglesia — y tradujo todos los libros deuterocanónicos al latín para incluirlos en la Vulgata.",
-          de: "Hieronymus, beeinflusst vom rabbinischen Kanon, äußerte anfangs Zweifel an diesen Büchern. Jedoch unterwarf sich Hieronymus letztendlich dem Urteil der Kirche – und übersetzte alle deuterokanonischen Bücher ins Lateinische zur Aufnahme in die Vulgata.",
-        },
-        res2: {
-          en: "Despite his initial reservations, Jerome quoted from the Deuterocanonical books as Scripture in his later works. Most importantly, Jerome's early private opinion was not binding—the consistent canon affirmed by councils and tradition was.",
-          fr: "Malgré ses réserves initiales, Jérôme a cité les livres deutérocanoniques comme Écriture dans ses œuvres ultérieures. Plus important encore, l'opinion privée précoce de Jérôme n'était pas contraignante — le canon cohérent affirmé par les conciles et la tradition l'était.",
-          es: "A pesar de sus reservas iniciales, Jerónimo citó los libros deuterocanónicos como Escritura en sus obras posteriores. Lo más importante es que la opinión privada temprana de Jerónimo no era vinculante; el canon consistente afirmado por los concilios y la tradición sí lo era.",
-          de: "Trotz seiner anfänglichen Vorbehalte zitierte Hieronymus in seinen späteren Werken aus den deuterokanonischen Büchern als Heilige Schrift. Am wichtigsten ist, dass Hieronymus' frühe Privatmeinung nicht bindend war – der von Konzilien und Tradition bestätigte konsistente Kanon war es.",
-        },
+  en: "Jerome, influenced by the rabbinic canon, initially expressed doubts about these books. However, Jerome ultimately submitted to the judgment of the Church, and translated all the Deuterocanonical books into Latin for inclusion in the Vulgate.",
+  fr: "Jérôme, influencé par le canon rabbinique, a d'abord exprimé des doutes sur ces livres. Cependant, Jérôme s'est finalement soumis au jugement de l'Église, et a traduit tous les livres deutérocanoniques en latin pour les inclure dans la Vulgate.",
+  es: "Jerónimo, influenciado por el canon rabínico, inicialmente expresó dudas sobre estos libros. Sin embargo, Jerónimo finalmente se sometió al juicio de la Iglesia, y tradujo todos los libros deuterocanónicos al latín para incluirlos en la Vulgata.",
+  de: "Hieronymus, beeinflusst vom rabbinischen Kanon, äußerte anfangs Zweifel an diesen Büchern. Jedoch unterwarf sich Hieronymus letztendlich dem Urteil der Kirche, und übersetzte alle deuterokanonischen Bücher ins Lateinische zur Aufnahme in die Vulgata.",
+},
+res2: {
+  en: "Despite his initial reservations, Jerome quoted from the Deuterocanonical books as Scripture in his later works. Most importantly, Jerome's early private opinion was not binding, whereas the consistent canon affirmed by councils and tradition was.",
+  fr: "Malgré ses réserves initiales, Jérôme a cité les livres deutérocanoniques comme Écriture dans ses œuvres ultérieures. Plus important encore, l'opinion privée précoce de Jérôme n'était pas contraignante, contrairement au canon cohérent affirmé par les conciles et la tradition.",
+  es: "A pesar de sus reservas iniciales, Jerónimo citó los libros deuterocanónicos como Escritura en sus obras posteriores. Lo más importante es que la opinión privada temprana de Jerónimo no era vinculante, mientras que el canon consistente afirmado por los concilios y la tradición sí lo era.",
+  de: "Trotz seiner anfänglichen Vorbehalte zitierte Hieronymus in seinen späteren Werken aus den deuterokanonischen Büchern als Heilige Schrift. Am wichtigsten ist, dass Hieronymus' frühe Privatmeinung nicht bindend war, wohingegen der von Konzilien und Tradition bestätigte konsistente Kanon es war.",
+},
 
         quote: {
           text: {
@@ -7232,11 +7232,11 @@ export const translations = {
       },
       callout: {
         p1: {
-          en: "No. The Council of Trent (1546) did not add books—it confirmed infallibly what had always been taught.",
-          fr: "Non. Le Concile de Trente (1546) n'a pas ajouté de livres — il a confirmé infailliblement ce qui avait toujours été enseigné.",
-          es: "No. El Concilio de Trento (1546) no añadió libros, sino que confirmó infaliblemente lo que siempre se había enseñado.",
-          de: "Nein. Das Konzil von Trient (1546) hat keine Bücher hinzugefügt – es hat unfehlbar bestätigt, was immer gelehrt worden war.",
-        },
+  en: "No. The Council of Trent (1546) did not add books, but confirmed infallibly what had always been taught.",
+  fr: "Non. Le Concile de Trente (1546) n'a pas ajouté de livres, mais a confirmé infailliblement ce qui avait toujours été enseigné.",
+  es: "No. El Concilio de Trento (1546) no añadió libros, sino que confirmó infaliblemente lo que siempre se había enseñado.",
+  de: "Nein. Das Konzil von Trient (1546) hat keine Bücher hinzugefügt, sondern unfehlbar bestätigt, was immer gelehrt worden war.",
+},
         p2: {
           en: "The same canon was already affirmed at multiple earlier councils.",
           fr: "Le même canon avait déjà été affirmé lors de plusieurs conciles antérieurs.",
@@ -7304,12 +7304,12 @@ export const translations = {
             es: "397 d.C.",
             de: "397 n. Chr.",
           },
-          desc: {
-            en: "Confirmed Canon 36, listing the 73 books of the Bible used in the Catholic Church today—46 Old Testament (including the Deuterocanonical books) and 27 New Testament books. Acts signed by St. Augustine.",
-            fr: "A confirmé le Canon 36, listant les 73 livres de la Bible utilisés aujourd'hui dans l'Église catholique — 46 livres de l'Ancien Testament (y compris les livres deutérocanoniques) et 27 livres du Nouveau Testament. Actes signés par Saint Augustin.",
-            es: "Confirmó el Canon 36, enumerando los 73 libros de la Biblia utilizados en la Iglesia Católica hoy en día: 46 del Antiguo Testamento (incluidos los libros deuterocanónicos) y 27 del Nuevo Testamento. Actas firmadas por San Agustín.",
-            de: "Bestätigte Kanon 36, der die 73 Bücher der Bibel auflistet, die heute in der katholischen Kirche verwendet werden – 46 Bücher des Alten Testaments (einschließlich der deuterokanonischen Bücher) und 27 Bücher des Neuen Testaments. Akten unterzeichnet vom Hl. Augustinus.",
-          },
+         desc: {
+  en: "Confirmed Canon 36, listing the 73 books of the Bible used in the Catholic Church today, specifically 46 Old Testament books (including the Deuterocanonical books) and 27 New Testament books. Acts signed by St. Augustine.",
+  fr: "A confirmé le Canon 36, listant les 73 livres de la Bible utilisés aujourd'hui dans l'Église catholique, soit 46 livres de l'Ancien Testament (y compris les livres deutérocanoniques) et 27 livres du Nouveau Testament. Actes signés par Saint Augustin.",
+  es: "Confirmó el Canon 36, enumerando los 73 libros de la Biblia utilizados en la Iglesia Católica hoy en día, concretamente 46 del Antiguo Testamento (incluidos los libros deuterocanónicos) y 27 del Nuevo Testamento. Actas firmadas por San Agustín.",
+  de: "Bestätigte Kanon 36, der die 73 Bücher der Bibel auflistet, die heute in der katholischen Kirche verwendet werden, nämlich 46 Bücher des Alten Testaments (einschließlich der deuterokanonischen Bücher) und 27 Bücher des Neuen Testaments. Akten unterzeichnet vom Hl. Augustinus.",
+},
         },
         c4: {
           name: {
@@ -7353,11 +7353,11 @@ export const translations = {
         },
       },
       q1: {
-        en: "&quot;This wasn&apos;t adding to scripture—it was infallibly reasserting what had already been taught.&quot;",
-        fr: "« Ce n'était pas ajouter à l'écriture — c'était réaffirmer infailliblement ce qui avait déjà été enseigné. »",
-        es: '"Esto no fue añadir a la escritura, fue reafirmar infaliblemente lo que ya se había enseñado."',
-        de: '„Das war kein Hinzufügen zur Schrift – es war eine unfehlbare Bestätigung dessen, was bereits gelehrt worden war."',
-      },
+  en: "&quot;This wasn&apos;t adding to scripture, but infallibly reasserting what had already been taught.&quot;",
+  fr: "« Ce n'était pas ajouter à l'écriture, mais réaffirmer infailliblement ce qui avait déjà été enseigné. »",
+  es: '"Esto no fue añadir a la escritura, sino reafirmar infaliblemente lo que ya se había enseñado."',
+  de: '„Das war kein Hinzufügen zur Schrift, sondern eine unfehlbare Bestätigung dessen, was bereits gelehrt worden war.“',
+},
     },
     video3: {
       title: {
@@ -7403,11 +7403,11 @@ export const translations = {
             de: "Kanon 36",
           },
           desc: {
-            en: 'Confirmed listing the <strong className="text-white">73 books</strong> of the Bible used in the Catholic Church today—<strong className="text-white">46 Old Testament</strong> (including the Deuterocanonical books) and <strong className="text-white">27 New Testament</strong> books.',
-            fr: 'A confirmé la liste des <strong class="text-white">73 livres</strong> de la Bible utilisés aujourd\'hui dans l\'Église catholique — <strong class="text-white">46 livres de l\'Ancien Testament</strong> (y compris les livres deutérocanoniques) et <strong class="text-white">27 livres du Nouveau Testament</strong>.',
-            es: 'Confirmó la lista de los <strong class="text-white">73 libros</strong> de la Biblia utilizados en la Iglesia Católica hoy en día: <strong class="text-white">46 del Antiguo Testamento</strong> (incluidos los libros deuterocanónicos) y <strong class="text-white">27 del Nuevo Testamento</strong>.',
-            de: 'Bestätigte die Auflistung der <strong class="text-white">73 Bücher</strong> der Bibel, die heute in der katholischen Kirche verwendet werden – <strong class="text-white">46 Bücher des Alten Testaments</strong> (einschließlich der deuterokanonischen Bücher) und <strong class="text-white">27 Bücher des Neuen Testaments</strong>.',
-          },
+  en: 'Confirmed listing the <strong className="text-white">73 books</strong> of the Bible used in the Catholic Church today, comprising <strong className="text-white">46 Old Testament</strong> (including the Deuterocanonical books) and <strong className="text-white">27 New Testament</strong> books.',
+  fr: 'A confirmé la liste des <strong class="text-white">73 livres</strong> de la Bible utilisés aujourd\'hui dans l\'Église catholique, soit <strong class="text-white">46 livres de l\'Ancien Testament</strong> (y compris les livres deutérocanoniques) et <strong class="text-white">27 livres du Nouveau Testament</strong>.',
+  es: 'Confirmó la lista de los <strong class="text-white">73 libros</strong> de la Biblia utilizados en la Iglesia Católica hoy en día, concretamente <strong class="text-white">46 del Antiguo Testamento</strong> (incluidos los libros deuterocanónicos) y <strong class="text-white">27 del Nuevo Testamento</strong>.',
+  de: 'Bestätigte die Auflistung der <strong class="text-white">73 Bücher</strong> der Bibel, die heute in der katholischen Kirche verwendet werden, nämlich <strong class="text-white">46 Bücher des Alten Testaments</strong> (einschließlich der deuterokanonischen Bücher) und <strong class="text-white">27 Bücher des Neuen Testaments</strong>.',
+},
         },
         p3: {
           title: {
@@ -7524,11 +7524,11 @@ export const translations = {
           de: "Wenn der Heilige Geist die Kirche geleitet hat, den Kanon des Neuen Testaments zu bestätigen, warum sollten wir Ihm nicht auch zutrauen, den Kanon des Alten Testaments zu leiten?",
         },
         q1: {
-          en: "&quot;We either trust that the Holy Spirit guided that process—or we don&apos;t.&quot;",
-          fr: "« Soit nous croyons que le Saint-Esprit a guidé ce processus, soit nous n'y croyons pas. »",
-          es: '"O confiamos en que el Espíritu Santo guio ese proceso, o no lo hacemos."',
-          de: '„Entweder vertrauen wir darauf, dass der Heilige Geist diesen Prozess geleitet hat – oder wir tun es nicht."',
-        },
+  en: "&quot;We either trust that the Holy Spirit guided that process, or we don&apos;t.&quot;",
+  fr: "« Soit nous croyons que le Saint-Esprit a guidé ce processus, soit nous n'y croyons pas. »",
+  es: '"O confiamos en que el Espíritu Santo guio ese proceso, o no lo hacemos."',
+  de: '„Entweder vertrauen wir darauf, dass der Heilige Geist diesen Prozess geleitet hat, oder wir tun es nicht.“',
+},
       },
       p2: {
         en: "The Catholic Bible stands not on late innovation, but on <strong>ancient fidelity</strong>.",
@@ -7635,11 +7635,11 @@ export const translations = {
         de: "Dies bringt uns zurück zur Grundfrage: <em>Wer hat die Autorität zu bestimmen, was die Heilige Schrift ist?</em>",
       },
       p2: {
-        en: "If you accept the Catholic Church&apos;s authority in determining the New Testament canon, why reject its authority regarding the Old Testament? And if you reject the Church&apos;s authority entirely, on what basis do you know which books are inspired? This question of authority is central to everything—and it leads us to explore the role of the Magisterium.",
-        fr: "Si vous acceptez l'autorité de l'Église catholique pour déterminer le canon du Nouveau Testament, pourquoi rejeter son autorité concernant l'Ancien Testament ? Et si vous rejetez entièrement l'autorité de l'Église, sur quelle base savez-vous quels livres sont inspirés ? Cette question d'autorité est centrale à tout — et elle nous amène à explorer le rôle du Magistère.",
-        es: "Si aceptas la autoridad de la Iglesia Católica para determinar el canon del Nuevo Testamento, ¿por qué rechazar su autoridad con respecto al Antiguo Testamento? Y si rechazas la autoridad de la Iglesia por completo, ¿sobre qué base sabes qué libros son inspirados? Esta cuestión de autoridad es central en todo, y nos lleva a explorar el papel del Magisterio.",
-        de: "Wenn Sie die Autorität der katholischen Kirche bei der Bestimmung des neutestamentlichen Kanons akzeptieren, warum lehnen Sie dann ihre Autorität in Bezug auf das Alte Testament ab? Und wenn Sie die Autorität der Kirche gänzlich ablehnen, auf welcher Grundlage wissen Sie dann, welche Bücher inspiriert sind? Diese Autoritätsfrage ist von zentraler Bedeutung für alles – und sie führt uns dazu, die Rolle des Lehramtes zu erkunden.",
-      },
+  en: "If you accept the Catholic Church&apos;s authority in determining the New Testament canon, why reject its authority regarding the Old Testament? And if you reject the Church&apos;s authority entirely, on what basis do you know which books are inspired? This question of authority is central to everything, and it leads us to explore the role of the Magisterium.",
+  fr: "Si vous acceptez l'autorité de l'Église catholique pour déterminer le canon du Nouveau Testament, pourquoi rejeter son autorité concernant l'Ancien Testament ? Et si vous rejetez entièrement l'autorité de l'Église, sur quelle base savez-vous quels livres sont inspirés ? Cette question d'autorité est centrale à tout, et elle nous amène à explorer le rôle du Magistère.",
+  es: "Si aceptas la autoridad de la Iglesia Católica para determinar el canon del Nuevo Testamento, ¿por qué rechazar su autoridad con respecto al Antiguo Testamento? Y si rechazas la autoridad de la Iglesia por completo, ¿sobre qué base sabes qué libros son inspirados? Esta cuestión de autoridad es central en todo, y nos lleva a explorar el papel del Magisterio.",
+  de: "Wenn Sie die Autorität der katholischen Kirche bei der Bestimmung des neutestamentlichen Kanons akzeptieren, warum lehnen Sie dann ihre Autorität in Bezug auf das Alte Testament ab? Und wenn Sie die Autorität der Kirche gänzlich ablehnen, auf welcher Grundlage wissen Sie dann, welche Bücher inspiriert sind? Diese Autoritätsfrage ist von zentraler Bedeutung für alles, und sie führt uns dazu, die Rolle des Lehramtes zu erkunden.",
+},
     },
   },
 
@@ -8355,11 +8355,11 @@ export const translations = {
         de: "Einführung",
       },
       p1: {
-        en: "The Protestant principle of <em>sola scriptura</em>—that Scripture alone is the final authority in Christian faith—faces a critical and often overlooked problem: <strong>How do we know which books belong in the Bible?</strong>",
-        fr: "Le principe protestant de <em>sola scriptura</em> — que l'Écriture seule est l'autorité finale en matière de foi chrétienne — est confronté à un problème critique et souvent négligé : <strong>Comment savons-nous quels livres appartiennent à la Bible ?</strong>",
-        es: "El principio protestante de <em>sola scriptura</em> —que la Escritura por sí sola es la autoridad final en la fe cristiana— se enfrenta a un problema crítico ya menudo pasado por alto: <strong>¿Cómo sabemos qué libros pertenecen a la Biblia?</strong>",
-        de: "Das protestantische Prinzip <em>sola scriptura</em> – dass die Schrift allein die letzte Autorität im christlichen Glauben ist – steht vor einem kritischen und oft übersehenen Problem: <strong>Woher wissen wir, welche Bücher zur Bibel gehören?</strong>",
-      },
+  en: "The Protestant principle of <em>sola scriptura</em>, asserting that Scripture alone is the final authority in Christian faith, faces a critical and often overlooked problem: <strong>How do we know which books belong in the Bible?</strong>",
+  fr: "Le principe protestant de <em>sola scriptura</em>, selon lequel l'Écriture seule est l'autorité finale en matière de foi chrétienne, est confronté à un problème critique et souvent négligé : <strong>Comment savons-nous quels livres appartiennent à la Bible ?</strong>",
+  es: "El principio protestante de <em>sola scriptura</em>, que sostiene que la Escritura por sí sola es la autoridad final en la fe cristiana, se enfrenta a un problema crítico y a menudo pasado por alto: <strong>¿Cómo sabemos qué libros pertenecen a la Biblia?</strong>",
+  de: "Das protestantische Prinzip <em>sola scriptura</em>, wonach die Schrift allein die letzte Autorität im christlichen Glauben ist, steht vor einem kritischen und oft übersehenen Problem: <strong>Woher wissen wir, welche Bücher zur Bibel gehören?</strong>",
+},
       p2: {
         en: "This is not a trivial question. It goes to the very core of what it means to trust the Bible as the word of God. If the Bible does not define its own boundaries, then <em>sola scriptura</em> rests on an external process that cannot itself be justified by Scripture alone.",
         fr: "Ce n'est pas une question triviale. Elle touche au cœur même de ce que signifie faire confiance à la Bible en tant que parole de Dieu. Si la Bible ne définit pas ses propres limites, alors <em>sola scriptura</em> repose sur un processus externe qui ne peut lui-même être justifié par l'Écriture seule.",
@@ -8596,12 +8596,12 @@ export const translations = {
           es: "Esto afirma que la cualidad divina de los libros es evidente por sí misma, como una 'luz que brilla en la oscuridad'.",
           de: "Dies behauptet, die göttliche Qualität der Bücher sei selbstverständlich, wie ein 'Licht, das in der Finsternis scheint'.",
         },
-        p2: {
-          en: "<strong>Problem:</strong> This is historically false. The early Church fathers—holy men, closer to the source—disputed these books for centuries. If it wasn't 'self-evident' to them, it certainly isn't to us.",
-          fr: "<strong>Problème :</strong> C'est historiquement faux. Les pères de l'Église primitive — des hommes saints, plus proches de la source — ont disputé ces livres pendant des siècles. Si ce n'était pas « évident » pour eux, ça ne l'est certainement pas pour nous.",
-          es: "<strong>Problema:</strong> Esto es históricamente falso. Los padres de la Iglesia primitiva —hombres santos, más cercanos a la fuente— disputaron estos libros durante siglos. Si no era 'evidente' para ellos, ciertamente no lo es para nosotros.",
-          de: "<strong>Problem:</strong> Das ist historisch falsch. Die frühen Kirchenväter – heilige Männer, näher an der Quelle – haben jahrhundertelang über diese Bücher gestritten. Wenn es für sie nicht 'selbstverständlich' war, ist es das für uns sicherlich nicht.",
-        },
+       p2: {
+  en: "<strong>Problem:</strong> This is historically false. The early Church fathers, holy men closer to the source, disputed these books for centuries. If it wasn't 'self-evident' to them, it certainly isn't to us.",
+  fr: "<strong>Problème :</strong> C'est historiquement faux. Les pères de l'Église primitive, des hommes saints plus proches de la source, ont disputé ces livres pendant des siècles. Si ce n'était pas « évident » pour eux, ça ne l'est certainement pas pour nous.",
+  es: "<strong>Problema:</strong> Esto es históricamente falso. Los padres de la Iglesia primitiva, hombres santos más cercanos a la fuente, disputaron estos libros durante siglos. Si no era 'evidente' para ellos, ciertamente no lo es para nosotros.",
+  de: "<strong>Problem:</strong> Das ist historisch falsch. Die frühen Kirchenväter, heilige Männer näher an der Quelle, haben jahrhundertelang über diese Bücher gestritten. Wenn es für sie nicht 'selbstverständlich' war, ist es das für uns sicherlich nicht.",
+},
       },
     },
     conclusion: {
