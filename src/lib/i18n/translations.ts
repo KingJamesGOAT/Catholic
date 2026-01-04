@@ -10381,11 +10381,11 @@ export const translations = {
           de: "Es gibt kein letztes Wort zur Lehre, nur endlose Interpretationen.",
         },
         quote2: {
-          en: "\"Each doctrinal dispute inevitably results in new denominational splits. This pattern of fragmentation isn't simply due to human imperfection—it's precisely what we would predict given Sola Scriptura's fundamental premise.\"",
-          fr: "« Chaque différend doctrinal aboutit inévitablement à de nouvelles scissions confessionnelles. Ce schéma de fragmentation n'est pas simplement dû à l'imperfection humaine — c'est précisément ce que nous prédirions compte tenu de la prémisse fondamentale de Sola Scriptura. »",
-          es: '"Cada disputa doctrinal resulta inevitablemente en nuevas divisiones denominacionales. Este patrón de fragmentación no se debe simplemente a la imperfección humana—es precisamente lo que predeciríamos dada la premisa fundamental de Sola Scriptura."',
-          de: '„Jeder Lehrstreit führt unweigerlich zu neuen konfessionellen Spaltungen. Dieses Muster der Zersplitterung ist nicht einfach auf menschliche Unvollkommenheit zurückzuführen – es ist genau das, was wir angesichts der Grundprämisse von Sola Scriptura erwarten würden."',
-        },
+  en: "\"Each doctrinal dispute inevitably results in new denominational splits. This pattern of fragmentation isn't simply due to human imperfection, but is precisely what we would predict given Sola Scriptura's fundamental premise.\"",
+  fr: "« Chaque différend doctrinal aboutit inévitablement à de nouvelles scissions confessionnelles. Ce schéma de fragmentation n'est pas simplement dû à l'imperfection humaine, mais c'est précisément ce que nous prédirions compte tenu de la prémisse fondamentale de Sola Scriptura. »",
+  es: "\"Cada disputa doctrinal resulta inevitablemente en nuevas divisiones denominacionales. Este patrón de fragmentación no se debe simplemente a la imperfección humana, sino que es precisamente lo que predeciríamos dada la premisa fundamental de la Sola Scriptura.\"",
+  de: "\"Jeder Lehrstreit führt unweigerlich zu neuen konfessionellen Spaltungen. Dieses Muster der Zersplitterung ist nicht einfach auf menschliche Unvollkommenheit zurückzuführen, sondern es ist genau das, was wir angesichts der Grundprämisse von Sola Scriptura erwarten würden.\"",
+},
       },
       consequences: {
         heading: {
