@@ -10413,11 +10413,11 @@ export const translations = {
           de: '<strong>Evangelistischer Skandal:</strong> Das geteilte Zeugnis des Christentums untergräbt die Botschaft des Evangeliums. Jesus betete, „damit sie eins seien... damit die Welt glaube" (Johannes 17:21).',
         },
         quote: {
-          en: '"If God\'s intention were really Sola Scriptura, why would the fruit of that intention be a landscape of perpetual doctrinal chaos and uncertainty—the very opposite of the unity Christ prayed for?"',
-          fr: "« Si l'intention de Dieu était réellement Sola Scriptura, pourquoi le fruit de cette intention serait-il un paysage de chaos doctrinal perpétuel et d'incertitude — l'opposé même de l'unité pour laquelle Christ a prié ? »",
-          es: '"Si la intención de Dios fuera realmente Sola Scriptura, ¿por qué el fruto de esa intención sería un paisaje de perpetuo caos doctrinal e incertidumbre—exactamente lo contrario de la unidad por la que Cristo oró?"',
-          de: '„Wenn Gottes Absicht wirklich Sola Scriptura wäre, warum wäre die Frucht dieser Absicht eine Landschaft perpetuellen doktrinären Chaos und Unsicherheit – genau das Gegenteil der Einheit, für die Christus gebetet hat?"',
-        },
+  en: '"If God\'s intention were really Sola Scriptura, why would the fruit of that intention be a landscape of perpetual doctrinal chaos and uncertainty, the very opposite of the unity Christ prayed for?"',
+  fr: "« Si l'intention de Dieu était réellement Sola Scriptura, pourquoi le fruit de cette intention serait-il un paysage de chaos doctrinal perpétuel et d'incertitude, l'opposé même de l'unité pour laquelle Christ a prié ? »",
+  es: '"Si la intención de Dios fuera realmente Sola Scriptura, ¿por qué el fruto de esa intención sería un paisaje de perpetuo caos doctrinal e incertidumbre, exactamente lo contrario de la unidad por la que Cristo oró?"',
+  de: '„Wenn Gottes Absicht wirklich Sola Scriptura wäre, warum wäre die Frucht dieser Absicht eine Landschaft perpetuellen doktrinären Chaos und Unsicherheit, genau das Gegenteil der Einheit, für die Christus gebetet hat?"',
+},
       },
     },
     arg7: {
@@ -10459,11 +10459,11 @@ export const translations = {
           de: "Jeder Gläubige muss wesentliche Lehren wie Taufe, Eucharistie, Erlösung, Prädestination usw. bestimmen.",
         },
         b2: {
-          en: "One must <strong>privately judge</strong> between conflicting theologians or pastors—none of whom are infallible.",
-          fr: "On doit <strong>juger en privé</strong> entre des théologiens ou des pasteurs en conflit — dont aucun n'est infaillible.",
-          es: "Uno debe <strong>juzgar privadamente</strong> entre teólogos o pastores en conflicto—ninguno de los cuales es infalible.",
-          de: "Man muss <strong>privat urteilen</strong> zwischen widersprüchlichen Theologen oder Pastoren – von denen keiner unfehlbar ist.",
-        },
+  en: "One must <strong>privately judge</strong> between conflicting theologians or pastors, none of whom are infallible.",
+  fr: "On doit <strong>juger en privé</strong> entre des théologiens ou des pasteurs en conflit, dont aucun n'est infaillible.",
+  es: "Uno debe <strong>juzgar privadamente</strong> entre teólogos o pastores en conflicto, ninguno de los cuales es infalible.",
+  de: "Man muss <strong>privat urteilen</strong> zwischen widersprüchlichen Theologen oder Pastoren, von denen keiner unfehlbar ist.",
+},
         b3: {
           en: "There is no living, visible Church authority to settle disagreements with finality.",
           fr: "Il n'y a pas d'autorité ecclésiale vivante et visible pour régler les désaccords avec finalité.",
@@ -10503,11 +10503,11 @@ export const translations = {
           de: '<strong>Sie sind zutiefst uneinig:</strong> <span class="text-gray-400"> Selbst renommierte Persönlichkeiten wie Luther und Calvin waren sich über grundlegende Lehren wie die Natur der Eucharistie uneinig.</span>',
         },
         quote: {
-          en: "\"You're forced back into deciding who's correct… based on your own fallible judgment.\"",
-          fr: "« Vous êtes obligé de décider qui a raison... sur la base de votre propre jugement faillible. »",
-          es: '"Te ves forzado a decidir quién tiene razón... basándote en tu propio juicio falible."',
-          de: '„Du bist gezwungen, zu entscheiden, wer Recht hat... basierend auf deinem eigenen fehlbaren Urteil."',
-        },
+  en: "\"You're forced back into deciding who's correct, based on your own fallible judgment.\"",
+  fr: "« Vous êtes obligé de décider qui a raison, sur la base de votre propre jugement faillible. »",
+  es: '"Te ves forzado a decidir quién tiene razón, basándote en tu propio juicio falible."',
+  de: '„Du bist gezwungen zu entscheiden, wer Recht hat, basierend auf deinem eigenen fehlbaren Urteil."',
+},
       },
       contrast: {
         heading: {
@@ -10517,11 +10517,11 @@ export const translations = {
           de: "Katholischer Kontrast: Ein Grundlegendes Urteil",
         },
         p1: {
-          en: "Catholics also exercise private judgment—but once. A Catholic makes a single foundational decision: to trust the Church established by Christ. After that, doctrinal and moral questions are answered with consistency.",
-          fr: "Les catholiques exercent également leur jugement privé, mais une seule fois. Un catholique prend une seule décision fondamentale : faire confiance à l'Église établie par le Christ. Après cela, les questions doctrinales et morales reçoivent une réponse cohérente.",
-          es: "Los católicos también ejercen el juicio privado, pero una vez. Un católico toma una única decisión fundamental: confiar en la Iglesia establecida por Cristo. Después de eso, las preguntas doctrinales y morales se responden con coherencia.",
-          de: "Katholiken üben auch ein privates Urteil aus – aber nur einmal. Ein Katholik trifft eine einzige grundlegende Entscheidung: der von Christus gegründeten Kirche zu vertrauen. Danach werden lehrmäßige und moralische Fragen konsistent beantwortet.",
-        },
+  en: "Catholics also exercise private judgment, but only once. A Catholic makes a single foundational decision: to trust the Church established by Christ. After that, doctrinal and moral questions are answered with consistency.",
+  fr: "Les catholiques exercent également leur jugement privé, mais une seule fois. Un catholique prend une seule décision fondamentale : faire confiance à l'Église établie par le Christ. Après cela, les questions doctrinales et morales reçoivent une réponse cohérente.",
+  es: "Los católicos también ejercen el juicio privado, pero una sola vez. Un católico toma una única decisión fundamental: confiar en la Iglesia establecida por Cristo. Después de eso, las preguntas doctrinales y morales se responden con coherencia.",
+  de: "Katholiken üben auch ein privates Urteil aus, aber nur einmal. Ein Katholik trifft eine einzige grundlegende Entscheidung: der von Christus gegründeten Kirche zu vertrauen. Danach werden lehrmäßige und moralische Fragen konsistent beantwortet.",
+},
         quote1: {
           en: "\"Catholics make one foundational judgment. Okay, they identify Christ's true Church. It's like carefully choosing a reliable GPS only once. After that, difficult doctrinal questions are authoritatively clarified.\"",
           fr: "« Les catholiques posent un jugement fondamental unique. D'accord, ils identifient la véritable Église du Christ. C'est comme choisir avec soin un GPS fiable une seule fois. Après cela, les questions doctrinales difficiles sont clarifiées avec autorité. »",
