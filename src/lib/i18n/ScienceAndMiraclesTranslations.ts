@@ -224,11 +224,11 @@ export const scienceAndMiraclesTranslations = {
           de: "Spektroskopische Tests stimmen mit Markern echter Blutzersetzung überein",
         },
         li5: {
-          en: "No image under bloodstains — suggesting the blood was transferred before the image formed, which contradicts known artistic techniques",
-          fr: "Pas d'image sous les taches de sang — suggérant que le sang a été transféré avant que l'image ne se forme, ce qui contredit les techniques artistiques connues",
-          es: "No hay imagen bajo las manchas de sangre — lo que sugiere que la sangre se transfirió antes de que se formara la imagen, contradiciendo técnicas artísticas conocidas",
-          de: "Kein Bild unter Blutflecken — was darauf hindeutet, dass das Blut vor der Bildentstehung übertragen wurde, was bekannten künstlerischen Techniken widerspricht",
-        },
+  en: "No image under bloodstains, suggesting the blood was transferred before the image formed, which contradicts known artistic techniques",
+  fr: "Pas d'image sous les taches de sang, suggérant que le sang a été transféré avant que l'image ne se forme, ce qui contredit les techniques artistiques connues",
+  es: "No hay imagen bajo las manchas de sangre, lo que sugiere que la sangre se transfirió antes de que se formara la imagen, contradiciendo técnicas artísticas conocidas",
+  de: "Kein Bild unter Blutflecken, was darauf hindeutet, dass das Blut vor der Bildentstehung übertragen wurde, was bekannten künstlerischen Techniken widerspricht",
+},
         q: {
           text: {
             en: "The blood is real, human, and shows signs of hemolysis typical of severe injury.",
