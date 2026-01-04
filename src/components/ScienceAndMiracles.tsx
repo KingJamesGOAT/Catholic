@@ -1,18 +1,32 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "motion/react";
 import { Separator } from "./ui/separator";
 import {
   Link as LinkIcon,
+  Download,
   BookOpen,
   Sparkles,
   Heart,
   CheckCircle,
   XCircle,
+  ChevronLeft,
+  ChevronRight,
+  Maximize2
 } from "lucide-react";
 import { useLanguage } from "../lib/i18n/LanguageContext";
 import { t } from "../lib/i18n/translations";
 import { scienceAndMiraclesTranslations } from "../lib/i18n/ScienceAndMiraclesTranslations";
 import TableOfContents from "./Journey/TableOfContents";
+
+// --- React PDF Imports ---
+import { Document, Page, pdfjs } from 'react-pdf';
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+import 'react-pdf/dist/esm/Page/TextLayer.css';
+
+// --- PDF Worker Configuration (CDN) ---
+// This forces the app to download the worker from a public CDN, 
+// bypassing Vercel/Vite build path issues.
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 type Topic = "shroud" | "marian" | "eucharistic";
 
@@ -38,37 +52,123 @@ const YouTubeEmbed = ({
   </div>
 );
 
-// Helper component for PDF embeds - UPDATED to use <object>
+// --- NEW PDF COMPONENT (React-PDF) ---
 const PdfEmbed = ({
   src,
   title,
 }: {
   src: string;
   title: string;
-}) => (
-  <div className="aspect-[4/5] w-full rounded-lg overflow-hidden bg-gray-900 border border-gray-800 my-6">
-    <object
-      data={src}
-      type="application/pdf"
-      width="100%"
-      height="100%"
-      className="w-full h-full"
-      aria-label={title}
+}) => {
+  const [numPages, setNumPages] = useState<number | null>(null);
+  const [pageNumber, setPageNumber] = useState(1);
+  const [containerWidth, setContainerWidth] = useState<number>(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // Responsive width handler
+  useEffect(() => {
+    const resizeObserver = new ResizeObserver((entries) => {
+      if (entries[0]) {
+        setContainerWidth(entries[0].contentRect.width);
+      }
+    });
+
+    if (containerRef.current) {
+      resizeObserver.observe(containerRef.current);
+    }
+
+    return () => resizeObserver.disconnect();
+  }, []);
+
+  function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
+    setNumPages(numPages);
+    setPageNumber(1); 
+  }
+
+  return (
+    <div 
+      className="w-full bg-gray-900 border border-gray-800 rounded-lg overflow-hidden my-8 shadow-xl" 
+      ref={containerRef}
     >
-      <div className="flex flex-col items-center justify-center h-full text-center p-6 bg-gray-800 text-gray-300">
-        <p className="mb-4">Unable to display PDF directly.</p>
-        <a 
-          href={src} 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
-        >
-          View {title}
-        </a>
+      {/* PDF Header / Controls */}
+      <div className="flex items-center justify-between px-4 py-3 bg-gray-800 border-b border-gray-700">
+        <div className="flex items-center gap-2 overflow-hidden">
+          <span className="text-red-400 font-bold text-xs uppercase tracking-wider border border-red-400/30 px-2 py-0.5 rounded">PDF</span>
+          <span className="text-gray-200 text-sm font-medium truncate" title={title}>{title}</span>
+        </div>
+        
+        <div className="flex items-center gap-1">
+           {/* Pagination Controls */}
+           <div className="flex items-center bg-gray-900 rounded-md border border-gray-700 mr-2">
+              <button
+                disabled={pageNumber <= 1}
+                onClick={() => setPageNumber(p => p - 1)}
+                className="p-1.5 text-gray-400 hover:text-white disabled:opacity-30 disabled:hover:text-gray-400 transition-colors"
+                aria-label="Previous page"
+              >
+                <ChevronLeft size={16} />
+              </button>
+              <span className="text-xs text-gray-300 font-mono px-2 min-w-[3rem] text-center border-x border-gray-700">
+                 {pageNumber} / {numPages || '-'}
+              </span>
+              <button
+                disabled={pageNumber >= (numPages || 1)}
+                onClick={() => setPageNumber(p => p + 1)}
+                className="p-1.5 text-gray-400 hover:text-white disabled:opacity-30 disabled:hover:text-gray-400 transition-colors"
+                aria-label="Next page"
+              >
+                <ChevronRight size={16} />
+              </button>
+           </div>
+
+           {/* Download Link */}
+           <a 
+             href={src} 
+             target="_blank" 
+             rel="noopener noreferrer"
+             className="p-2 text-gray-400 hover:text-blue-400 transition-colors"
+             title="Download / Open in New Tab"
+           >
+             <Download size={18} />
+           </a>
+        </div>
       </div>
-    </object>
-  </div>
-);
+
+      {/* PDF Document Viewer */}
+      <div className="bg-gray-500/10 min-h-[300px] relative flex justify-center">
+        <Document
+          file={src}
+          onLoadSuccess={onDocumentLoadSuccess}
+          loading={
+            <div className="flex flex-col items-center justify-center h-48 gap-3 text-gray-400 animate-pulse">
+               <BookOpen size={32} className="opacity-50" />
+               <span className="text-sm">Loading Document...</span>
+            </div>
+          }
+          error={
+            <div className="flex flex-col items-center justify-center h-48 gap-3 text-red-400 p-6 text-center">
+              <XCircle size={32} />
+              <p className="text-sm">Unable to load PDF preview.</p>
+              <a href={src} target="_blank" rel="noopener noreferrer" className="text-xs underline hover:text-red-300">
+                Click here to download directly
+              </a>
+            </div>
+          }
+          className="flex justify-center"
+        >
+          {/* We pass the container width to Page so it scales perfectly */}
+          <Page 
+            pageNumber={pageNumber} 
+            width={containerWidth || undefined} 
+            renderTextLayer={false}
+            renderAnnotationLayer={false}
+            className="shadow-lg max-w-full"
+          />
+        </Document>
+      </div>
+    </div>
+  );
+};
 
 // Helper component for external links
 const ResourceLink = ({
@@ -128,7 +228,7 @@ export default function ScienceAndMiracles() {
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-7xl relative">
-      {/* Header */}
+      {/* Header (No sidebar) */}
       <motion.header
         className="text-center max-w-4xl mx-auto mb-12 pt-24"
         initial={{ opacity: 0, y: 20 }}
@@ -152,7 +252,7 @@ export default function ScienceAndMiracles() {
         </div>
       </motion.header>
 
-      {/* 3-Block Selector */}
+      {/* 3-Block Selector (Centered) */}
       <motion.div
         className="flex justify-center max-w-5xl mx-auto mb-4"
         initial={{ opacity: 0, y: 20 }}
