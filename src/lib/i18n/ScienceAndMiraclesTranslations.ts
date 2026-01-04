@@ -361,11 +361,11 @@ export const scienceAndMiraclesTranslations = {
         de: "Warum es keine Verzerrung durch Körperkontakt gibt (z. B. Nase oder Wangen), was auf einen berührungslosen Abbildungsprozess hindeutet",
       },
       li5: {
-        en: "How blood was transferred before image formation — contradictory to artistic layering",
-        fr: "Comment le sang a été transféré avant la formation de l'image — contradictoire avec la superposition artistique",
-        es: "Cómo se transfirió la sangre antes de la formación de la imagen — contradictorio con la estratificación artística",
-        de: "Wie Blut vor der Bildentstehung übertragen wurde — im Widerspruch zu künstlerischer Schichtung",
-      },
+  en: "How blood was transferred before image formation, contradictory to artistic layering",
+  fr: "Comment le sang a été transféré avant la formation de l'image, contradictoire avec la superposition artistique",
+  es: "Cómo se transfirió la sangre antes de la formación de la imagen, contradictorio con la estratificación artística",
+  de: "Wie Blut vor der Bildentstehung übertragen wurde, im Widerspruch zu künstlerischer Schichtung",
+},
       li6: {
         en: "The lack of degradation in the blood despite age",
         fr: "L'absence de dégradation du sang malgré l'âge",
