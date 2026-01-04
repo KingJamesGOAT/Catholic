@@ -4974,11 +4974,11 @@ export const translations = {
         de: "Einführung",
       },
       p1: {
-        en: "Among the most enduring theological controversies between the Catholic Church and the Eastern Orthodox Church is the doctrine of the <strong>Filioque</strong> — the assertion that the Holy Spirit proceeds from the Father <strong>and the Son</strong>. While often dismissed as a minor linguistic or political disagreement, deeper study reveals that this doctrine touches the very heart of the mystery of the Trinity.",
-        fr: "Parmi les controverses théologiques les plus durables entre l'Église catholique et l'Église orthodoxe orientale se trouve la doctrine du <strong>Filioque</strong> — l'affirmation que le Saint-Esprit procède du Père <strong>et du Fils</strong>. Bien que souvent rejetée comme un désaccord linguistique ou politique mineur, une étude plus approfondie révèle que cette doctrine touche au cœur même du mystère de la Trinité.",
-        es: "Una de las controversias teológicas más duraderas entre la Iglesia Católica y la Iglesia Ortodoxa Oriental es la doctrina del <strong>Filioque</strong> — la afirmación de que el Espíritu Santo procede del Padre <strong>y del Hijo</strong>. Aunque a menudo se descarta como un desacuerdo lingüístico o político menor, un estudio más profundo revela que esta doctrina toca el corazón mismo del misterio de la Trinidad.",
-        de: "Eine der beständigsten theologischen Kontroversen zwischen der katholischen Kirche und der östlich-orthodoxen Kirche ist die Lehre vom <strong>Filioque</strong> — die Behauptung, dass der Heilige Geist vom Vater <strong>und dem Sohn</strong> ausgeht. Obwohl oft als geringfügige sprachliche oder politische Meinungsverschiedenheit abgetan, zeigt eine tiefere Untersuchung, dass diese Lehre das Herzstück des Geheimnisses der Trinität berührt.",
-      },
+  en: "Among the most enduring theological controversies between the Catholic Church and the Eastern Orthodox Church is the doctrine of the <strong>Filioque</strong>, the assertion that the Holy Spirit proceeds from the Father <strong>and the Son</strong>. While often dismissed as a minor linguistic or political disagreement, deeper study reveals that this doctrine touches the very heart of the mystery of the Trinity.",
+  fr: "Parmi les controverses théologiques les plus durables entre l'Église catholique et l'Église orthodoxe orientale se trouve la doctrine du <strong>Filioque</strong>, l'affirmation que le Saint-Esprit procède du Père <strong>et du Fils</strong>. Bien que souvent rejetée comme un désaccord linguistique ou politique mineur, une étude plus approfondie révèle que cette doctrine touche au cœur même du mystère de la Trinité.",
+  es: "Una de las controversias teológicas más duraderas entre la Iglesia Católica y la Iglesia Ortodoxa Oriental es la doctrina del <strong>Filioque</strong>, la afirmación de que el Espíritu Santo procede del Padre <strong>y del Hijo</strong>. Aunque a menudo se descarta como un desacuerdo lingüístico o político menor, un estudio más profundo revela que esta doctrina toca el corazón mismo del misterio de la Trinidad.",
+  de: "Eine der beständigsten theologischen Kontroversen zwischen der katholischen Kirche und der östlich-orthodoxen Kirche ist die Lehre vom <strong>Filioque</strong>, die Behauptung, dass der Heilige Geist vom Vater <strong>und dem Sohn</strong> ausgeht. Obwohl oft als geringfügige sprachliche oder politische Meinungsverschiedenheit abgetan, zeigt eine tiefere Untersuchung, dass diese Lehre das Herzstück des Geheimnisses der Trinität berührt.",
+},
       p2: {
         en: "One of the most powerful defenses of the <em>Filioque</em> comes from 19th-century Catholic theologian <strong>Joseph Scheeben</strong>, a representative of the so-called <em>Collegio Romano</em> theologians.",
         fr: "L'une des défenses les plus puissantes du <em>Filioque</em> provient du théologien catholique du XIXe siècle <strong>Joseph Scheeben</strong>, un représentant des théologiens dits du <em>Collegio Romano</em>.",
@@ -5134,11 +5134,11 @@ export const translations = {
           de: "Es zerbricht die Einheit der vollkommenen Gemeinschaft zwischen Vater und Sohn, durch die der Sohn alles mit dem Vater gemeinsam haben muss, außer der Vaterschaft.",
         },
         explanation: {
-          en: "The Father gives to the Son all that He has — including the power to spirate the Spirit. Denying this makes the Son a lesser reflection of the Father.",
-          fr: "Le Père donne au Fils tout ce qu'Il a — y compris le pouvoir de spirer l'Esprit. Nier cela fait du Fils un reflet moindre du Père.",
-          es: "El Padre da al Hijo todo lo que Él tiene — incluido el poder de espirar al Espíritu. Negar esto convierte al Hijo en un reflejo menor del Padre.",
-          de: "Der Vater gibt dem Sohn alles, was Er hat — einschließlich der Macht, den Geist zu hauchen. Dies zu leugnen macht den Sohn zu einem geringeren Abbild des Vaters.",
-        },
+  en: "The Father gives to the Son all that He has, including the power to spirate the Spirit. Denying this makes the Son a lesser reflection of the Father.",
+  fr: "Le Père donne au Fils tout ce qu'Il a, y compris le pouvoir de spirer l'Esprit. Nier cela fait du Fils un reflet moindre du Père.",
+  es: "El Padre da al Hijo todo lo que Él tiene, incluido el poder de espirar al Espíritu. Negar esto convierte al Hijo en un reflejo menor del Padre.",
+  de: "Der Vater gibt dem Sohn alles, was Er hat, einschließlich der Macht, den Geist zu hauchen. Dies zu leugnen macht den Sohn zu einem geringeren Abbild des Vaters.",
+},
       },
       arg3: {
         title: {
@@ -5154,11 +5154,11 @@ export const translations = {
           de: "Es spaltet die unteilbare Einheit des Vaters... plötzlich neben seiner Vaterschaft stehend, muss eine Person genauso konstituieren wie letztere.",
         },
         explanation: {
-          en: "If the Father's role as source of the Spirit is unrelated to His role as Father of the Son, then two distinct identities are posited in the Father — a theological absurdity.",
-          fr: "Si le rôle du Père en tant que source de l'Esprit est sans rapport avec Son rôle de Père du Fils, alors deux identités distinctes sont posées dans le Père — une absurdité théologique.",
-          es: "Si el papel del Padre como fuente del Espíritu no está relacionado con Su papel como Padre del Hijo, entonces se postulan dos identidades distintas en el Padre — un absurdo teológico.",
-          de: "Wenn die Rolle des Vaters als Quelle des Geistes nicht mit Seiner Rolle als Vater des Sohnes zusammenhängt, werden zwei unterschiedliche Identitäten im Vater postuliert — eine theologische Absurdität.",
-        },
+  en: "If the Father's role as source of the Spirit is unrelated to His role as Father of the Son, then two distinct identities are posited in the Father, a theological absurdity.",
+  fr: "Si le rôle du Père en tant que source de l'Esprit est sans rapport avec Son rôle de Père du Fils, alors deux identités distinctes sont posées dans le Père, une absurdité théologique.",
+  es: "Si el papel del Padre como fuente del Espíritu no está relacionado con Su papel como Padre del Hijo, entonces se postulan dos identidades distintas en el Padre, un absurdo teológico.",
+  de: "Wenn die Rolle des Vaters als Quelle des Geistes nicht mit Seiner Rolle als Vater des Sohnes zusammenhängt, werden zwei unterschiedliche Identitäten im Vater postuliert, eine theologische Absurdität.",
+},
       },
     },
     destroysUnity: {
