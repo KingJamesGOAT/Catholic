@@ -8729,12 +8729,12 @@ export const translations = {
           es: "Desde el punto de vista protestante, no existe una forma coherente de hacer un acto de fe en el hecho de que los libros del Nuevo Testamento están divinamente inspirados.",
           de: "Nach protestantischer Auffassung gibt es keine konsistente Möglichkeit, einen Glaubensakt hinsichtlich der Tatsache zu vollziehen, dass die Bücher des Neuen Testaments göttlich inspiriert sind.",
         },
-        p2: {
-          en: "This is because that knowledge must come to us by divine revelation through sacred tradition, proposed authoritatively by the Magisterium—elements rejected by the Protestant rule of faith (<em>Sola Scriptura</em>).",
-          fr: "C'est parce que cette connaissance doit nous parvenir par la révélation divine à travers la sainte tradition, proposée avec autorité par le Magistère — éléments rejetés par la règle de foi protestante (<em>Sola Scriptura</em>).",
-          es: "Esto se debe a que ese conocimiento debe llegarnos por revelación divina a través de la sagrada tradición, propuesta autoritativamente por el Magisterio, elementos rechazados por la regla de fe protestante (<em>Sola Scriptura</em>).",
-          de: "Dies liegt daran, dass uns dieses Wissen durch göttliche Offenbarung durch die heilige Tradition übermittelt werden muss, die vom Lehramt autoritativ vorgelegt wird – Elemente, die von der protestantischen Glaubensregel (<em>Sola Scriptura</em>) abgelehnt werden.",
-        },
+       p2: {
+  en: "This is because that knowledge must come to us by divine revelation through sacred tradition, proposed authoritatively by the Magisterium, elements rejected by the Protestant rule of faith (<em>Sola Scriptura</em>).",
+  fr: "C'est parce que cette connaissance doit nous parvenir par la révélation divine à travers la sainte tradition, proposée avec autorité par le Magistère, éléments rejetés par la règle de foi protestante (<em>Sola Scriptura</em>).",
+  es: "Esto se debe a que ese conocimiento debe llegarnos por revelación divina a través de la sagrada tradición, propuesta autoritativamente por el Magisterio, elementos rechazados por la regla de fe protestante (<em>Sola Scriptura</em>).",
+  de: "Dies liegt daran, dass uns dieses Wissen durch göttliche Offenbarung durch die heilige Tradition übermittelt werden muss, die vom Lehramt autoritativ vorgelegt wird, Elemente, die von der protestantischen Glaubensregel (<em>Sola Scriptura</em>) abgelehnt werden.",
+},
       },
       p2: {
         en: "Common Protestant objections are anticipated: appeals to tradition, ecclesial authority, motives of credibility, or accusations of circularity. These will be answered clearly and fairly.",
@@ -8873,11 +8873,11 @@ export const translations = {
         de: "Katholiken unterscheiden zwischen fehlbaren und unfehlbaren Glaubensregeln.",
       },
       p4: {
-        en: "Being a rule of faith means having <strong>authenticity</strong>—the authority to bind conscience. Tradition and ecclesial authority may assist in interpretation, but in <em>Sola Scriptura</em> they do not bind.",
-        fr: "Être une règle de foi signifie avoir l'<strong>authenticité</strong> — l'autorité de lier la conscience. La tradition et l'autorité ecclésiale peuvent aider à l'interprétation, mais dans <em>Sola Scriptura</em>, elles ne lient pas.",
-        es: "Ser una regla de fe significa tener <strong>autenticidad</strong>, la autoridad para obligar la conciencia. La tradición y la autoridad eclesial pueden ayudar en la interpretación, pero en <em>Sola Scriptura</em> no obligan.",
-        de: "Eine Glaubensregel zu sein bedeutet, <strong>Authentizität</strong> zu haben – die Autorität, das Gewissen zu binden. Tradition und kirchliche Autorität können bei der Interpretation helfen, aber bei <em>Sola Scriptura</em> binden sie nicht.",
-      },
+  en: "Being a rule of faith means having <strong>authenticity</strong>, the authority to bind conscience. Tradition and ecclesial authority may assist in interpretation, but in <em>Sola Scriptura</em> they do not bind.",
+  fr: "Être une règle de foi signifie avoir l'<strong>authenticité</strong>, l'autorité de lier la conscience. La tradition et l'autorité ecclésiale peuvent aider à l'interprétation, mais dans <em>Sola Scriptura</em>, elles ne lient pas.",
+  es: "Ser una regla de fe significa tener <strong>autenticidad</strong>, la autoridad para obligar la conciencia. La tradición y la autoridad eclesial pueden ayudar en la interpretación, pero en <em>Sola Scriptura</em> no obligan.",
+  de: "Eine Glaubensregel zu sein bedeutet, <strong>Authentizität</strong> zu haben, die Autorität, das Gewissen zu binden. Tradition und kirchliche Autorität können bei der Interpretation helfen, aber bei <em>Sola Scriptura</em> binden sie nicht.",
+},
     },
     natureOfFaith: {
       h2: {
@@ -9158,11 +9158,11 @@ export const translations = {
           de: "1. Erleuchtung durch den Geist",
         },
         p1: {
-          en: "Some Protestants say the Spirit testifies internally to the canon. But this cannot supply the <strong>formal object</strong> of faith—that it is revealed by God. If the Spirit provides this directly, then each Christian receives a private revelation of the canon, which Protestants reject. If it does not, then the formal object is missing.",
-          fr: "Certains protestants disent que l'Esprit témoigne intérieurement du canon. Mais cela ne peut pas fournir l'<strong>objet formel</strong> de la foi — qu'il est révélé par Dieu. Si l'Esprit fournit cela directement, alors chaque chrétien reçoit une révélation privée du canon, ce que les protestants rejettent. Si ce n'est pas le cas, alors l'objet formel est manquant.",
-          es: "Algunos protestantes dicen que el Espíritu testifica internamente sobre el canon. Pero esto no puede suministrar el <strong>objeto formal</strong> de la fe: que es revelado por Dios. Si el Espíritu proporciona esto directamente, entonces cada cristiano recibe una revelación privada del canon, lo cual los protestantes rechazan. Si no lo hace, entonces falta el objeto formal.",
-          de: "Einige Protestanten sagen, der Geist bezeuge innerlich den Kanon. Dies kann jedoch nicht das <strong>formale Objekt</strong> des Glaubens liefern – dass es von Gott offenbart ist. Wenn der Geist dies direkt bereitstellt, empfängt jeder Christ eine private Offenbarung des Kanons, was Protestanten ablehnen. Wenn nicht, fehlt das formale Objekt.",
-        },
+  en: "Some Protestants say the Spirit testifies internally to the canon. But this cannot supply the <strong>formal object</strong> of faith, that it is revealed by God. If the Spirit provides this directly, then each Christian receives a private revelation of the canon, which Protestants reject. If it does not, then the formal object is missing.",
+  fr: "Certains protestants disent que l'Esprit témoigne intérieurement du canon. Mais cela ne peut pas fournir l'<strong>objet formel</strong> de la foi, qu'il est révélé par Dieu. Si l'Esprit fournit cela directement, alors chaque chrétien reçoit une révélation privée du canon, ce que les protestants rejettent. Si ce n'est pas le cas, alors l'objet formel est manquant.",
+  es: "Algunos protestantes dicen que el Espíritu testifica internamente sobre el canon. Pero esto no puede suministrar el <strong>objeto formal</strong> de la fe, que es revelado por Dios. Si el Espíritu proporciona esto directamente, entonces cada cristiano recibe una revelación privada del canon, lo cual los protestantes rechazan. Si no lo hace, entonces falta el objeto formal.",
+  de: "Einige Protestanten sagen, der Geist bezeuge innerlich den Kanon. Dies kann jedoch nicht das <strong>formale Objekt</strong> des Glaubens liefern, dass es von Gott offenbart ist. Wenn der Geist dies direkt bereitstellt, empfängt jeder Christ eine private Offenbarung des Kanons, was Protestanten ablehnen. Wenn nicht, fehlt das formale Objekt.",
+},
       },
       c2: {
         h3: {
@@ -9213,34 +9213,36 @@ export const translations = {
           es: "5. La Apelación a los Motivos de Credibilidad Solamente",
           de: "5. Die Berufung allein auf Glaubwürdigkeitsmotive",
         },
+        
         p1: {
-          en: "Some Protestants attempt to bridge the gap by appealing to motives of credibility—miracles, fulfilled prophecies, or the moral excellence of Scripture—to justify belief in the canon. Yet this approach also fails for the same fundamental reason: it confuses the concepts of divine revelation and inspiration. Motives of credibility can confirm the truthfulness of a messenger or message, but they cannot establish inspiration, which is a supernatural act of God that cannot be inferred solely from external signs.",
-          fr: "Certains protestants tentent de combler le fossé en faisant appel à des motifs de crédibilité — miracles, prophéties accomplies ou excellence morale de l'Écriture — pour justifier la croyance dans le canon. Pourtant, cette approche échoue également pour la même raison fondamentale : elle confond les concepts de révélation divine et d'inspiration. Les motifs de crédibilité peuvent confirmer la véracité d'un messager ou d'un message, mais ils ne peuvent établir l'inspiration, qui est un acte surnaturel de Dieu qui ne peut être déduit uniquement de signes extérieurs.",
-          es: "Algunos protestantes intentan salvar la brecha apelando a motivos de credibilidad —milagros, profecías cumplidas o la excelencia moral de la Escritura— para justificar la creencia en el canon. Sin embargo, este enfoque también fracasa por la misma razón fundamental: confunde los conceptos de revelación divina e inspiración. Los motivos de credibilidad pueden confirmar la veracidad de un mensajero o mensaje, pero no pueden establecer la inspiración, que es un acto sobrenatural de Dios que no puede inferirse únicamente de signos externos.",
-          de: "Einige Protestanten versuchen, die Lücke zu schließen, indem sie sich auf Glaubwürdigkeitsmotive berufen – Wunder, erfüllte Prophezeiungen oder die moralische Exzellenz der Schrift –, um den Glauben an den Kanon zu rechtfertigen. Doch dieser Ansatz scheitert aus demselben Grund: Er verwechselt die Konzepte der göttlichen Offenbarung und der Inspiration. Glaubwürdigkeitsmotive können die Wahrhaftigkeit eines Boten oder einer Botschaft bestätigen, aber sie können keine Inspiration begründen, die ein übernatürlicher Akt Gottes ist, der nicht allein aus äußeren Zeichen abgeleitet werden kann.",
-        },
-      },
-      c6: {
-        h3: {
-          en: "6. The Canon as a Historical Judgment",
-          fr: "6. Le Canon comme Jugement Historique",
-          es: "6. El Canon como Juicio Histórico",
-          de: "6. Der Kanon als Historisches Urteil",
-        },
-        p1: {
-          en: "Another fallback is to treat the canon as a historically reliable tradition—something that emerged organically from the Church's common recognition over time. This too collapses under scrutiny. If belief in the canon is based solely on historical investigation, then the assent to its inspiration is based on human reasoning, not divine faith. But divine inspiration is not a merely historical claim—it is a supernatural truth, and thus it demands a supernatural source of revelation.",
-          fr: "Une autre solution de repli consiste à traiter le canon comme une tradition historiquement fiable — quelque chose qui a émergé organiquement de la reconnaissance commune de l'Église au fil du temps. Cela s'effondre également sous l'examen. Si la croyance dans le canon est basée uniquement sur une enquête historique, alors l'assentiment à son inspiration est basé sur le raisonnement humain, et non sur la foi divine. Mais l'inspiration divine n'est pas une simple affirmation historique — c'est une vérité surnaturelle, et elle exige donc une source surnaturelle de révélation.",
-          es: "Otro recurso es tratar el canon como una tradición históricamente confiable, algo que surgió orgánicamente del reconocimiento común de la Iglesia a lo largo del tiempo. Esto también se derrumba bajo escrutinio. Si la creencia en el canon se basa únicamente en la investigación histórica, entonces el asentimiento a su inspiración se basa en el razonamiento humano, no en la fe divina. Pero la inspiración divina no es una mera afirmación histórica, es una verdad sobrenatural y, por lo tanto, exige una fuente sobrenatural de revelación.",
-          de: "Eine weitere Ausweichmöglichkeit besteht darin, den Kanon als historisch zuverlässige Tradition zu behandeln – etwas, das organisch aus der gemeinsamen Anerkennung der Kirche im Laufe der Zeit entstanden ist. Auch dies bricht bei genauerer Betrachtung zusammen. Wenn der Glaube an den Kanon ausschließlich auf historischer Untersuchung beruht, basiert die Zustimmung zu seiner Inspiration auf menschlicher Vernunft, nicht auf göttlichem Glauben. Aber göttliche Inspiration ist keine bloß historische Behauptung – sie ist eine übernatürliche Wahrheit und erfordert daher eine übernatürliche Offenbarungsquelle.",
-        },
+  en: "Some Protestants attempt to bridge the gap by appealing to motives of credibility, such as miracles, fulfilled prophecies, or the moral excellence of Scripture, to justify belief in the canon. Yet this approach also fails for the same fundamental reason: it confuses the concepts of divine revelation and inspiration. Motives of credibility can confirm the truthfulness of a messenger or message, but they cannot establish inspiration, which is a supernatural act of God that cannot be inferred solely from external signs.",
+  fr: "Certains protestants tentent de combler le fossé en faisant appel à des motifs de crédibilité, tels que les miracles, les prophéties accomplies ou l'excellence morale de l'Écriture, pour justifier la croyance dans le canon. Pourtant, cette approche échoue également pour la même raison fondamentale : elle confond les concepts de révélation divine et d'inspiration. Les motifs de crédibilité peuvent confirmer la véracité d'un messager ou d'un message, mais ils ne peuvent établir l'inspiration, qui est un acte surnaturel de Dieu ne pouvant être déduit uniquement de signes extérieurs.",
+  es: "Algunos protestantes intentan salvar la brecha apelando a motivos de credibilidad, como milagros, profecías cumplidas o la excelencia moral de la Escritura, para justificar la creencia en el canon. Sin embargo, este enfoque también fracasa por la misma razón fundamental: confunde los conceptos de revelación divina e inspiración. Los motivos de credibilidad pueden confirmar la veracidad de un mensajero o mensaje, pero no pueden establecer la inspiración, que es un acto sobrenatural de Dios que no puede inferirse únicamente de signos externos.",
+  de: "Einige Protestanten versuchen, die Lücke zu schließen, indem sie sich auf Glaubwürdigkeitsmotive berufen, wie Wunder, erfüllte Prophezeiungen oder die moralische Exzellenz der Schrift, um den Glauben an den Kanon zu rechtfertigen. Doch dieser Ansatz scheitert aus demselben Grund: Er verwechselt die Konzepte der göttlichen Offenbarung und der Inspiration. Glaubwürdigkeitsmotive können die Wahrhaftigkeit eines Boten oder einer Botschaft bestätigen, aber sie können keine Inspiration begründen, die ein übernatürlicher Akt Gottes ist, der nicht allein aus äußeren Zeichen abgeleitet werden kann.",
+},
+c6: {
+  h3: {
+    en: "6. The Canon as a Historical Judgment",
+    fr: "6. Le Canon comme Jugement Historique",
+    es: "6. El Canon como Juicio Histórico",
+    de: "6. Der Kanon als Historisches Urteil",
+  },
+  p1: {
+    en: "Another fallback is to treat the canon as a historically reliable tradition, something that emerged organically from the Church's common recognition over time. This too collapses under scrutiny. If belief in the canon is based solely on historical investigation, then the assent to its inspiration is based on human reasoning, not divine faith. But divine inspiration is not a merely historical claim, it is a supernatural truth, and thus it demands a supernatural source of revelation.",
+    fr: "Une autre solution de repli consiste à traiter le canon comme une tradition historiquement fiable, quelque chose qui a émergé organiquement de la reconnaissance commune de l'Église au fil du temps. Cela s'effondre également sous l'examen. Si la croyance dans le canon est basée uniquement sur une enquête historique, alors l'assentiment à son inspiration est basé sur le raisonnement humain et non sur la foi divine. Mais l'inspiration divine n'est pas une simple affirmation historique, c'est une vérité surnaturelle, et elle exige donc une source surnaturelle de révélation.",
+    es: "Otro recurso es tratar el canon como una tradición históricamente confiable, algo que surgió orgánicamente del reconocimiento común de la Iglesia a lo largo del tiempo. Esto también se derrumba bajo escrutinio. Si la creencia en el canon se basa únicamente en la investigación histórica, entonces el asentimiento a su inspiración se basa en el razonamiento humano, no en la fe divina. Pero la inspiración divina no es una mera afirmación histórica, es una verdad sobrenatural y por lo tanto exige una fuente sobrenatural de revelación.",
+    de: "Eine weitere Ausweichmöglichkeit besteht darin, den Kanon als historisch zuverlässige Tradition zu behandeln, etwas, das organisch aus der gemeinsamen Anerkennung der Kirche im Laufe der Zeit entstanden ist. Auch dies bricht bei genauerer Betrachtung zusammen. Wenn der Glaube an den Kanon ausschließlich auf historischer Untersuchung beruht, basiert die Zustimmung zu seiner Inspiration auf menschlicher Vernunft, nicht auf göttlichem Glauben. Aber göttliche Inspiration ist keine bloß historische Behauptung, sie ist eine übernatürliche Wahrheit und erfordert daher eine übernatürliche Offenbarungsquelle.",
+  },
+},
+        
       },
     },
     solution: {
       h2: {
-        en: "The Catholic Solution: Coherent and Consistent",
-        fr: "La Solution Catholique : Cohérente et Logique",
-        es: "La Solución Católica: Coherente y Consistente",
-        de: "Die Katholische Lösung: Kohärent und Konsistent",
+        en: "The Catholic Solution:",
+        fr: "La Solution Catholique :",
+        es: "La Solución Católica:",
+        de: "Die Katholische Lösung:",
       },
       p1: {
         en: "The Catholic position resolves all these difficulties.",
@@ -9337,11 +9339,11 @@ export const translations = {
         de: "Lehramtliche Autorität",
       },
       p5: {
-        en: "The Magisterium—the Church's teaching office—authentically interprets and proposes what has been revealed. This includes dogmas, moral teachings, and the canon of Scripture. The Church does not create inspiration; it discerns and declares what God has revealed.",
-        fr: "Le Magistère — la charge d'enseignement de l'Église — interprète authentiquement et propose ce qui a été révélé. Cela inclut les dogmes, les enseignements moraux et le canon de l'Écriture. L'Église ne crée pas l'inspiration ; elle discerne et déclare ce que Dieu a révélé.",
-        es: "El Magisterio —el oficio de enseñanza de la Iglesia— interpreta auténticamente y propone lo que ha sido revelado. Esto incluye dogmas, enseñanzas morales y el canon de la Escritura. La Iglesia no crea la inspiración; discierne y declara lo que Dios ha revelado.",
-        de: "Das Lehramt – das Lehramt der Kirche – legt authentisch aus und legt vor, was offenbart wurde. Dazu gehören Dogmen, Morallehren und der Kanon der Schrift. Die Kirche schafft keine Inspiration; sie unterscheidet und erklärt, was Gott offenbart hat.",
-      },
+  en: "The Magisterium, the Church's teaching office, authentically interprets and proposes what has been revealed. This includes dogmas, moral teachings, and the canon of Scripture. The Church does not create inspiration; it discerns and declares what God has revealed.",
+  fr: "Le Magistère, la charge d'enseignement de l'Église, interprète authentiquement et propose ce qui a été révélé. Cela inclut les dogmes, les enseignements moraux et le canon de l'Écriture. L'Église ne crée pas l'inspiration ; elle discerne et déclare ce que Dieu a révélé.",
+  es: "El Magisterio, el oficio de enseñanza de la Iglesia, interpreta auténticamente y propone lo que ha sido revelado. Esto incluye dogmas, enseñanzas morales y el canon de la Escritura. La Iglesia no crea la inspiración; discierne y declara lo que Dios ha revelado.",
+  de: "Das Lehramt, das Lehramt der Kirche, legt authentisch aus und legt vor, was offenbart wurde. Dazu gehören Dogmen, Morallehren und der Kanon der Schrift. Die Kirche schafft keine Inspiration; sie unterscheidet und erklärt, was Gott offenbart hat.",
+},
     },
     conclusion: {
       h2: {
@@ -9369,11 +9371,11 @@ export const translations = {
         de: "Zugeben, dass es keine konsistente Grundlage gibt, um zu glauben, dass die Bibel inspiriert ist.",
       },
       p2: {
-        en: "The only coherent path forward is the Catholic one. The canon of Scripture, like all dogmas of faith, must be received through divine revelation—preserved in sacred tradition and taught by the Church.",
-        fr: "La seule voie cohérente est la voie catholique. Le canon de l'Écriture, comme tous les dogmes de la foi, doit être reçu par la révélation divine — préservée dans la sainte tradition et enseignée par l'Église.",
-        es: "El único camino coherente a seguir es el católico. El canon de la Escritura, como todos los dogmas de fe, debe recibirse a través de la revelación divina, preservada en la sagrada tradición y enseñada por la Iglesia.",
-        de: "Der einzig kohärente Weg vorwärts ist der katholische. Der Kanon der Schrift, wie alle Glaubensdogmen, muss durch göttliche Offenbarung empfangen werden – bewahrt in der heiligen Tradition und gelehrt von der Kirche.",
-      },
+  en: "The only coherent path forward is the Catholic one. The canon of Scripture, like all dogmas of faith, must be received through divine revelation, preserved in sacred tradition and taught by the Church.",
+  fr: "La seule voie cohérente est la voie catholique. Le canon de l'Écriture, comme tous les dogmes de la foi, doit être reçu par la révélation divine, préservée dans la sainte tradition et enseignée par l'Église.",
+  es: "El único camino coherente a seguir es el católico. El canon de la Escritura, como todos los dogmas de fe, debe recibirse a través de la revelación divina, preservada en la sagrada tradición y enseñada por la Iglesia.",
+  de: "Der einzig kohärente Weg vorwärts ist der katholische. Der Kanon der Schrift muss, wie alle Glaubensdogmen, durch göttliche Offenbarung empfangen werden, bewahrt in der heiligen Tradition und gelehrt von der Kirche.",
+},
     },
     bridge: {
       h3: {
