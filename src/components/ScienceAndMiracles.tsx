@@ -9,8 +9,6 @@ import {
   Heart,
   CheckCircle,
   XCircle,
-  ChevronLeft,
-  ChevronRight,
   Maximize2
 } from "lucide-react";
 import { useLanguage } from "../lib/i18n/LanguageContext";
@@ -52,7 +50,7 @@ const YouTubeEmbed = ({
   </div>
 );
 
-// --- NEW PDF COMPONENT (React-PDF) ---
+// --- NEW PDF COMPONENT (Vertical Scroll) ---
 const PdfEmbed = ({
   src,
   title,
@@ -61,7 +59,6 @@ const PdfEmbed = ({
   title: string;
 }) => {
   const [numPages, setNumPages] = useState<number | null>(null);
-  const [pageNumber, setPageNumber] = useState(1);
   const [containerWidth, setContainerWidth] = useState<number>(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -69,6 +66,7 @@ const PdfEmbed = ({
   useEffect(() => {
     const resizeObserver = new ResizeObserver((entries) => {
       if (entries[0]) {
+        // Subtract padding/borders to ensure it fits perfectly
         setContainerWidth(entries[0].contentRect.width);
       }
     });
@@ -82,71 +80,51 @@ const PdfEmbed = ({
 
   function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
     setNumPages(numPages);
-    setPageNumber(1); 
   }
 
   return (
     <div 
-      className="w-full bg-gray-900 border border-gray-800 rounded-lg overflow-hidden my-8 shadow-xl" 
-      ref={containerRef}
+      className="w-full bg-gray-900 border border-gray-800 rounded-lg overflow-hidden my-8 shadow-xl flex flex-col h-[80vh]" 
     >
       {/* PDF Header / Controls */}
-      <div className="flex items-center justify-between px-4 py-3 bg-gray-800 border-b border-gray-700">
+      <div className="flex items-center justify-between px-4 py-3 bg-gray-800 border-b border-gray-700 shrink-0 z-10">
         <div className="flex items-center gap-2 overflow-hidden">
           <span className="text-red-400 font-bold text-xs uppercase tracking-wider border border-red-400/30 px-2 py-0.5 rounded">PDF</span>
           <span className="text-gray-200 text-sm font-medium truncate" title={title}>{title}</span>
+          {numPages && <span className="text-gray-500 text-xs ml-2">({numPages} pages)</span>}
         </div>
         
         <div className="flex items-center gap-1">
-           {/* Pagination Controls */}
-           <div className="flex items-center bg-gray-900 rounded-md border border-gray-700 mr-2">
-              <button
-                disabled={pageNumber <= 1}
-                onClick={() => setPageNumber(p => p - 1)}
-                className="p-1.5 text-gray-400 hover:text-white disabled:opacity-30 disabled:hover:text-gray-400 transition-colors"
-                aria-label="Previous page"
-              >
-                <ChevronLeft size={16} />
-              </button>
-              <span className="text-xs text-gray-300 font-mono px-2 min-w-[3rem] text-center border-x border-gray-700">
-                 {pageNumber} / {numPages || '-'}
-              </span>
-              <button
-                disabled={pageNumber >= (numPages || 1)}
-                onClick={() => setPageNumber(p => p + 1)}
-                className="p-1.5 text-gray-400 hover:text-white disabled:opacity-30 disabled:hover:text-gray-400 transition-colors"
-                aria-label="Next page"
-              >
-                <ChevronRight size={16} />
-              </button>
-           </div>
-
            {/* Download Link */}
            <a 
              href={src} 
              target="_blank" 
              rel="noopener noreferrer"
-             className="p-2 text-gray-400 hover:text-blue-400 transition-colors"
-             title="Download / Open in New Tab"
+             className="flex items-center gap-2 px-3 py-1.5 bg-gray-700 hover:bg-blue-600 text-gray-200 hover:text-white rounded text-xs font-medium transition-colors"
+             title="Download PDF"
            >
-             <Download size={18} />
+             <Download size={14} />
+             <span className="hidden sm:inline">Download</span>
            </a>
         </div>
       </div>
 
-      {/* PDF Document Viewer */}
-      <div className="bg-gray-500/10 min-h-[300px] relative flex justify-center">
+      {/* PDF Document Viewer - Scrollable Container */}
+      <div 
+        ref={containerRef}
+        className="flex-1 overflow-y-auto bg-gray-500/10 p-4 relative"
+      >
         <Document
           file={src}
           onLoadSuccess={onDocumentLoadSuccess}
           loading={
-            <div className="flex flex-col items-center justify-center h-48 gap-3 text-gray-400 animate-pulse">
+            <div className="flex flex-col items-center justify-center h-full gap-3 text-gray-400 animate-pulse mt-10">
                <BookOpen size={32} className="opacity-50" />
                <span className="text-sm">Loading Document...</span>
             </div>
           }
           error={
-            <div className="flex flex-col items-center justify-center h-48 gap-3 text-red-400 p-6 text-center">
+            <div className="flex flex-col items-center justify-center h-full gap-3 text-red-400 p-6 text-center mt-10">
               <XCircle size={32} />
               <p className="text-sm">Unable to load PDF preview.</p>
               <a href={src} target="_blank" rel="noopener noreferrer" className="text-xs underline hover:text-red-300">
@@ -154,16 +132,22 @@ const PdfEmbed = ({
               </a>
             </div>
           }
-          className="flex justify-center"
+          className="flex flex-col items-center gap-4"
         >
-          {/* We pass the container width to Page so it scales perfectly */}
-          <Page 
-            pageNumber={pageNumber} 
-            width={containerWidth || undefined} 
-            renderTextLayer={false}
-            renderAnnotationLayer={false}
-            className="shadow-lg max-w-full"
-          />
+          {/* Map through all pages and render them in a vertical stack */}
+          {numPages && Array.from(new Array(numPages), (el, index) => (
+            <Page 
+              key={`page_${index + 1}`}
+              pageNumber={index + 1} 
+              width={containerWidth ? containerWidth - 32 : undefined} // -32 for padding
+              renderTextLayer={false}
+              renderAnnotationLayer={false}
+              className="shadow-2xl border border-gray-200/5"
+              loading={
+                <div className="bg-gray-800 animate-pulse h-[800px] w-full mb-4 rounded-sm" />
+              }
+            />
+          ))}
         </Document>
       </div>
     </div>
