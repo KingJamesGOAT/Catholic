@@ -1775,11 +1775,11 @@ a10: {
           de: "Buch von Robert Spitzer",
         },
         desc: {
-          en: "This is currently the only volume that... highlights the profound significance of the scientific evidence in support of Jesus, the Eucharist, and Mary. ... The book makes it abundantly clear that the Catholic Church is not anti-science... science is not anti-God...",
-          fr: "C'est actuellement le seul volume qui... met en évidence la signification profonde des preuves scientifiques à l'appui de Jésus, de l'Eucharistie et de Marie. ... Le livre rend abondamment clair que l'Église catholique n'est pas anti-science... la science n'est pas anti-Dieu...",
-          es: "Este es actualmente el único volumen que... destaca el profundo significado de la evidencia científica en apoyo de Jesús, la Eucaristía y María. ... El libro deja muy claro que la Iglesia Católica no es anti-ciencia... la ciencia no es anti-Dios...",
-          de: "Dies ist derzeit der einzige Band, der... die tiefgreifende Bedeutung der wissenschaftlichen Beweise zur Unterstützung von Jesus, der Eucharistie und Maria hervorhebt. ... Das Buch macht überdeutlich, dass die katholische Kirche nicht wissenschaftsfeindlich ist... Wissenschaft ist nicht gottfeindlich...",
-        },
+  en: "This is currently the only volume that comprehensively synthesizes these findings and highlights the profound significance of the scientific evidence in support of Jesus, the Eucharist, and Mary. The book makes it abundantly clear that the Catholic Church is not anti-science, and that true science is not anti-God.",
+  fr: "C'est actuellement le seul volume qui synthétise complètement ces découvertes et met en évidence la signification profonde des preuves scientifiques à l'appui de Jésus, de l'Eucharistie et de Marie. Le livre rend abondamment clair que l'Église catholique n'est pas anti-science, et que la vraie science n'est pas anti-Dieu.",
+  es: "Este es actualmente el único volumen que sintetiza exhaustivamente estos hallazgos y destaca el profundo significado de la evidencia científica en apoyo de Jesús, la Eucaristía y María. El libro deja muy claro que la Iglesia Católica no es anti-ciencia, y que la verdadera ciencia no es anti-Dios.",
+  de: "Dies ist derzeit der einzige Band, der diese Erkenntnisse umfassend zusammenfasst und die tiefgreifende Bedeutung der wissenschaftlichen Beweise zur Unterstützung von Jesus, der Eucharistie und Maria hervorhebt. Das Buch macht überdeutlich, dass die katholische Kirche nicht wissenschaftsfeindlich ist und dass wahre Wissenschaft nicht gottfeindlich ist.",
+},
       },
       book2: {
         title: {
@@ -1795,11 +1795,11 @@ a10: {
           de: "Dr. Serafini",
         },
         desc: {
-          en: "Dr. Serafini... reviews scientific and forensic reports on... Buenos Aires (1996), Tixtla (2006), and Sokolka (2008)... He analyzes: Histological findings... Cardiac pathology... Immunological evidence... Dr. Serafini emphasizes that these studies were conducted blindly... ensuring objective results.",
-          fr: "Le Dr Serafini... passe en revue les rapports scientifiques et médico-légaux sur... Buenos Aires (1996), Tixtla (2006) et Sokolka (2008)... Il analyse : Résultats histologiques... Pathologie cardiaque... Preuves immunologiques... Le Dr Serafini souligne que ces études ont été menées en aveugle... garantissant des résultats objectifs.",
-          es: "El Dr. Serafini... revisa informes científicos y forenses sobre... Buenos Aires (1996), Tixtla (2006) y Sokolka (2008)... Analiza: Hallazgos histológicos... Patología cardíaca... Evidencia inmunológica... El Dr. Serafini enfatiza que estos estudios se realizaron a ciegas... asegurando resultados objetivos.",
-          de: "Dr. Serafini... überprüft wissenschaftliche und forensische Berichte über... Buenos Aires (1996), Tixtla (2006) und Sokolka (2008)... Er analysiert: Histologische Befunde... Herzpathologie... Immunologische Beweise... Dr. Serafini betont, dass diese Studien blind durchgeführt wurden... was objektive Ergebnisse gewährleistet.",
-        },
+  en: "Dr. Serafini rigorously reviews scientific and forensic reports on five major Eucharistic miracles, including Buenos Aires (1996), Tixtla (2006), and Sokolka (2008). He analyzes histological findings of human heart tissue, cardiac pathology indicating severe stress, and immunological evidence of white blood cells. Dr. Serafini emphasizes that these studies were conducted blindly, without the researchers knowing the origin of the samples, ensuring objective results.",
+  fr: "Le Dr Serafini passe en revue rigoureusement les rapports scientifiques et médico-légaux sur cinq miracles eucharistiques majeurs, dont Buenos Aires (1996), Tixtla (2006) et Sokolka (2008). Il analyse les résultats histologiques du tissu cardiaque humain, la pathologie cardiaque indiquant un stress sévère et les preuves immunologiques de globules blancs. Le Dr Serafini souligne que ces études ont été menées en aveugle, sans que les chercheurs ne connaissent l'origine des échantillons, garantissant des résultats objectifs.",
+  es: "El Dr. Serafini revisa rigurosamente los informes científicos y forenses sobre cinco milagros eucarísticos principales, incluidos Buenos Aires (1996), Tixtla (2006) y Sokolka (2008). Analiza los hallazgos histológicos de tejido cardíaco humano, la patología cardíaca que indica estrés severo y la evidencia inmunológica de glóbulos blancos. El Dr. Serafini enfatiza que estos estudios se realizaron a ciegas, sin que los investigadores conocieran el origen de las muestras, asegurando resultados objetivos.",
+  de: "Dr. Serafini überprüft rigoros wissenschaftliche und forensische Berichte über fünf große eucharistische Wunder, darunter Buenos Aires (1996), Tixtla (2006) und Sokolka (2008). Er analysiert histologische Befunde von menschlichem Herzgewebe, Herzpathologie, die auf schweren Stress hinweist, und immunologische Beweise für weiße Blutkörperchen. Dr. Serafini betont, dass diese Studien blind durchgeführt wurden, ohne dass die Forscher die Herkunft der Proben kannten, was objektive Ergebnisse gewährleistet.",
+},
       },
     },
   },
