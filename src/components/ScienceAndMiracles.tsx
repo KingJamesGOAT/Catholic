@@ -9,7 +9,8 @@ import {
   Heart,
   CheckCircle,
   XCircle,
-  Maximize2
+  ZoomIn,
+  ZoomOut
 } from "lucide-react";
 import { useLanguage } from "../lib/i18n/LanguageContext";
 import { t } from "../lib/i18n/translations";
@@ -48,7 +49,7 @@ const YouTubeEmbed = ({
   </div>
 );
 
-// --- NEW PDF COMPONENT (Fixed Height Scroll Box) ---
+// --- NEW PDF COMPONENT (Fixed Height + Zoom) ---
 const PdfEmbed = ({
   src,
   title,
@@ -58,13 +59,14 @@ const PdfEmbed = ({
 }) => {
   const [numPages, setNumPages] = useState<number | null>(null);
   const [containerWidth, setContainerWidth] = useState<number>(0);
+  const [scale, setScale] = useState<number>(1.0); // 1.0 = 100% width
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Responsive width handler
   useEffect(() => {
     const resizeObserver = new ResizeObserver((entries) => {
       if (entries[0]) {
-        // Subtract padding to ensure it fits perfectly
+        // Subtract padding to ensure it fits perfectly at scale 1.0
         setContainerWidth(entries[0].contentRect.width);
       }
     });
@@ -80,20 +82,47 @@ const PdfEmbed = ({
     setNumPages(numPages);
   }
 
+  // Zoom handlers
+  const handleZoomIn = () => setScale(prev => Math.min(prev + 0.2, 3.0)); // Max 300%
+  const handleZoomOut = () => setScale(prev => Math.max(prev - 0.2, 0.6)); // Min 60%
+
   return (
-    // UPDATED: Fixed height (h-[500px] mobile, h-[700px] desktop) instead of viewport height
+    // Fixed height container
     <div 
       className="w-full bg-gray-900 border border-gray-800 rounded-lg overflow-hidden my-8 shadow-xl flex flex-col h-[500px] md:h-[700px]" 
     >
       {/* PDF Header / Controls */}
       <div className="flex items-center justify-between px-4 py-3 bg-gray-800 border-b border-gray-700 shrink-0 z-10">
-        <div className="flex items-center gap-2 overflow-hidden">
+        <div className="flex items-center gap-2 overflow-hidden flex-1 mr-4">
           <span className="text-red-400 font-bold text-xs uppercase tracking-wider border border-red-400/30 px-2 py-0.5 rounded">PDF</span>
           <span className="text-gray-200 text-sm font-medium truncate" title={title}>{title}</span>
-          {numPages && <span className="text-gray-500 text-xs ml-2">({numPages} pages)</span>}
+          {numPages && <span className="text-gray-500 text-xs whitespace-nowrap hidden sm:inline">({numPages} pages)</span>}
         </div>
         
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-2">
+           {/* Zoom Controls */}
+           <div className="flex items-center bg-gray-900 rounded-md border border-gray-700 mr-2">
+              <button
+                onClick={handleZoomOut}
+                className="p-1.5 text-gray-400 hover:text-white transition-colors"
+                title="Zoom Out"
+                aria-label="Zoom Out"
+              >
+                <ZoomOut size={16} />
+              </button>
+              <span className="text-xs text-gray-300 font-mono w-12 text-center border-x border-gray-700">
+                 {Math.round(scale * 100)}%
+              </span>
+              <button
+                onClick={handleZoomIn}
+                className="p-1.5 text-gray-400 hover:text-white transition-colors"
+                title="Zoom In"
+                aria-label="Zoom In"
+              >
+                <ZoomIn size={16} />
+              </button>
+           </div>
+
            {/* Download Link */}
            <a 
              href={src} 
@@ -111,7 +140,7 @@ const PdfEmbed = ({
       {/* PDF Document Viewer - INTERNAL SCROLL */}
       <div 
         ref={containerRef}
-        className="flex-1 overflow-y-auto bg-gray-500/10 p-4 relative scroll-smooth"
+        className="flex-1 overflow-auto bg-gray-500/10 p-4 relative scroll-smooth text-center"
       >
         <Document
           file={src}
@@ -131,19 +160,26 @@ const PdfEmbed = ({
               </a>
             </div>
           }
-          className="flex flex-col items-center gap-6"
+          className="inline-flex flex-col items-center gap-6"
         >
           {/* Map through all pages and render them in a vertical stack */}
           {numPages && Array.from(new Array(numPages), (el, index) => (
             <Page 
               key={`page_${index + 1}`}
               pageNumber={index + 1} 
-              width={containerWidth ? containerWidth - 48 : undefined} // Padding adjustment
+              // Width calculation: (Container Width - Padding) * Scale Factor
+              width={containerWidth ? (containerWidth - 48) * scale : undefined} 
               renderTextLayer={false}
               renderAnnotationLayer={false}
-              className="shadow-2xl border border-gray-200/5 bg-white"
+              className="shadow-2xl border border-gray-200/5 bg-white transition-all duration-200 ease-out"
               loading={
-                <div className="bg-gray-800 animate-pulse h-[800px] w-full mb-4 rounded-sm" />
+                <div 
+                   className="bg-gray-800 animate-pulse mb-4 rounded-sm" 
+                   style={{ 
+                     width: containerWidth ? (containerWidth - 48) * scale : '100%',
+                     height: (containerWidth ? (containerWidth - 48) * scale : 500) * 1.4 // Approx A4 aspect ratio placeholder
+                   }} 
+                />
               }
             />
           ))}
