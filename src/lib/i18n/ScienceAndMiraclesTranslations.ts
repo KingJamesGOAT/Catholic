@@ -154,11 +154,11 @@ export const scienceAndMiraclesTranslations = {
           de: "Enthält räumliche 3D-Informationen (erkannt durch NASAs VP-8 Bildanalysator)",
         },
         li4: {
-          en: "No directionality — unlike brushstrokes or natural contact images",
-          fr: "Pas de directionnalité — contrairement aux coups de pinceau ou aux images de contact naturelles",
-          es: "Sin direccionalidad — a diferencia de las pinceladas o imágenes de contacto natural",
-          de: "Keine Richtungsabhängigkeit — im Gegensatz zu Pinselstrichen oder natürlichen Kontaktbildern",
-        },
+  en: "No directionality, unlike brushstrokes or natural contact images",
+  fr: "Pas de directionnalité, contrairement aux coups de pinceau ou aux images de contact naturelles",
+  es: "Sin direccionalidad, a diferencia de las pinceladas o imágenes de contacto natural",
+  de: "Keine Richtungsabhängigkeit, im Gegensatz zu Pinselstrichen oder natürlichen Kontaktbildern",
+},
         li5: {
           en: "Negative image properties: the image is more anatomically accurate in photographic negatives",
           fr: "Propriétés d'image négative : l'image est plus anatomiquement précise dans les négatifs photographiques",
