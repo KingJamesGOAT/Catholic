@@ -22,8 +22,6 @@ import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 
 // --- PDF Worker Configuration (CDN) ---
-// This forces the app to download the worker from a public CDN, 
-// bypassing Vercel/Vite build path issues.
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 type Topic = "shroud" | "marian" | "eucharistic";
@@ -50,7 +48,7 @@ const YouTubeEmbed = ({
   </div>
 );
 
-// --- NEW PDF COMPONENT (Vertical Scroll) ---
+// --- NEW PDF COMPONENT (Fixed Height Scroll Box) ---
 const PdfEmbed = ({
   src,
   title,
@@ -66,7 +64,7 @@ const PdfEmbed = ({
   useEffect(() => {
     const resizeObserver = new ResizeObserver((entries) => {
       if (entries[0]) {
-        // Subtract padding/borders to ensure it fits perfectly
+        // Subtract padding to ensure it fits perfectly
         setContainerWidth(entries[0].contentRect.width);
       }
     });
@@ -83,8 +81,9 @@ const PdfEmbed = ({
   }
 
   return (
+    // UPDATED: Fixed height (h-[500px] mobile, h-[700px] desktop) instead of viewport height
     <div 
-      className="w-full bg-gray-900 border border-gray-800 rounded-lg overflow-hidden my-8 shadow-xl flex flex-col h-[80vh]" 
+      className="w-full bg-gray-900 border border-gray-800 rounded-lg overflow-hidden my-8 shadow-xl flex flex-col h-[500px] md:h-[700px]" 
     >
       {/* PDF Header / Controls */}
       <div className="flex items-center justify-between px-4 py-3 bg-gray-800 border-b border-gray-700 shrink-0 z-10">
@@ -109,10 +108,10 @@ const PdfEmbed = ({
         </div>
       </div>
 
-      {/* PDF Document Viewer - Scrollable Container */}
+      {/* PDF Document Viewer - INTERNAL SCROLL */}
       <div 
         ref={containerRef}
-        className="flex-1 overflow-y-auto bg-gray-500/10 p-4 relative"
+        className="flex-1 overflow-y-auto bg-gray-500/10 p-4 relative scroll-smooth"
       >
         <Document
           file={src}
@@ -132,17 +131,17 @@ const PdfEmbed = ({
               </a>
             </div>
           }
-          className="flex flex-col items-center gap-4"
+          className="flex flex-col items-center gap-6"
         >
           {/* Map through all pages and render them in a vertical stack */}
           {numPages && Array.from(new Array(numPages), (el, index) => (
             <Page 
               key={`page_${index + 1}`}
               pageNumber={index + 1} 
-              width={containerWidth ? containerWidth - 32 : undefined} // -32 for padding
+              width={containerWidth ? containerWidth - 48 : undefined} // Padding adjustment
               renderTextLayer={false}
               renderAnnotationLayer={false}
-              className="shadow-2xl border border-gray-200/5"
+              className="shadow-2xl border border-gray-200/5 bg-white"
               loading={
                 <div className="bg-gray-800 animate-pulse h-[800px] w-full mb-4 rounded-sm" />
               }
