@@ -8650,886 +8650,756 @@ res2: {
     },
   },
   
-
-  solaScripturaImpossible = {
-  title: {
-    en: "Sola Scriptura is Impossible",
-    fr: "Sola Scriptura est Impossible",
-    es: "Sola Scriptura es Imposible",
-    de: "Sola Scriptura ist Unmöglich",
-  },
-  subtitle: {
-    en: "A Comprehensive Scholastic Critique",
-    fr: "Une Critique Scolastique Complète",
-    es: "Una Crítica Escolástica Exhaustiva",
-    de: "Eine Umfassende Scholastische Kritik",
-  },
-  quote: {
-    text: {
-      en: "Do you understand what you are reading? How can I, unless someone guides me?",
-      fr: "Comprends-tu ce que tu lis ? Comment le pourrais-je, si personne ne me guide ?",
-      es: "¿Entiendes lo que lees? ¿Cómo podré, si alguno no me enseñare?",
-      de: "Verstehst du auch, was du liest? Wie kann ich, wenn mich nicht jemand anleitet?",
-    },
-    source: {
-      en: "Acts 8:30-31",
-      fr: "Actes 8:30-31",
-      es: "Hechos 8:30-31",
-      de: "Apostelgeschichte 8:30-31",
-    },
-  },
-  intro: {
-    h2: {
-      en: "Introduction: The Difficult Task of Protestant-Catholic Apologetics",
-      fr: "Introduction : La Tâche Difficile de l'Apologétique Protestante-Catholique",
-      es: "Introducción: La Difícil Tarea de la Apologética Protestante-Católica",
-      de: "Einführung: Die Schwierige Aufgabe der Protestantisch-Katholischen Apologetik",
-    },
-    quote: {
-      en: "Anytime you make an apologetic argument against Protestantism, you are surrounded by a number of pitfalls that make it an almost impossible task.",
-      fr: "Chaque fois que vous avancez un argument apologétique contre le protestantisme, vous êtes entouré de nombreux pièges qui en font une tâche presque impossible.",
-      es: "Cada vez que se presenta un argumento apologético contra el protestantismo, se está rodeado de una serie de escollos que lo convierten en una tarea casi imposible.",
-      de: "Jedes Mal, wenn man ein apologetisches Argument gegen den Protestantismus vorbringt, ist man von einer Reihe von Fallstricken umgeben, die es zu einer fast unmöglichen Aufgabe machen.",
-    },
-    p1: {
-      en: `Whenever an apologetic argument is made against Protestantism, a number of pitfalls arise.
-Oversimplify the argument, and it loses depth. Make it overly complex, and it becomes inaccessible.
-If the argument is too broad, some Protestants will feel misrepresented.
-If too narrow, it fails to address Protestantism as a whole.`,
-      fr: `Chaque fois qu'un argument apologétique est avancé contre le protestantisme, un certain nombre d'écueils surgissent.
-Simplifiez à l'excès l'argument, et il perd de sa profondeur. Rendez-le trop complexe, et il devient inaccessible.
-Si l'argument est trop large, certains protestants se sentiront mal représentés.
-S'il est trop étroit, il ne parvient pas à aborder le protestantisme dans son ensemble.`,
-      es: `Cada vez que se presenta un argumento apologético contra el protestantismo, surgen una serie de escollos.
-Si se simplifica demasiado el argumento, pierde profundidad. Si se hace demasiado complejo, se vuelve inaccesible.
-Si el argumento es demasiado amplio, algunos protestantes se sentirán tergiversados.
-Si es demasiado estrecho, no logra abordar el protestantismo en su conjunto.`,
-      de: `Immer wenn ein apologetisches Argument gegen den Protestantismus vorgebracht wird, tauchen eine Reihe von Fallstricken auf.
-Vereinfacht man das Argument zu sehr, verliert es an Tiefe. Macht man es zu komplex, wird es unzugänglich.
-Ist das Argument zu weit gefasst, fühlen sich manche Protestanten falsch dargestellt.
-Ist es zu eng, verfehlt es, den Protestantismus als Ganzes anzusprechen.`,
-    },
-    p2: {
-      en: `Every decision in this work is made for the good of Protestant listeners and for the salvation of their souls.
-There is no intent to strawman or misrepresent, and no ignorance of Protestant sources.
-Charity is requested, and a sincere, open-minded examination.`,
-      fr: `Chaque décision dans ce travail est prise pour le bien des auditeurs protestants et pour le salut de leurs âmes.
-Il n'y a aucune intention de caricaturer ou de déformer, ni d'ignorer les sources protestantes.
-La charité est demandée, ainsi qu'un examen sincère et ouvert d'esprit.`,
-      es: `Cada decisión en este trabajo se toma por el bien de los oyentes protestantes y por la salvación de sus almas.
-No hay intención de crear hombres de paja ni de tergiversar, ni ignorancia de las fuentes protestantes.
-Se solicita caridad y un examen sincero y de mente abierta.`,
-      de: `Jede Entscheidung in dieser Arbeit wird zum Wohl der protestantischen Zuhörer und zum Heil ihrer Seelen getroffen.
-Es besteht keine Absicht, Strohmänner aufzubauen oder falsch darzustellen, und keine Unkenntnis protestantischer Quellen.
-Es wird um Nächstenliebe und eine aufrichtige, aufgeschlossene Prüfung gebeten.`,
-    },
-  },
-  video: {
+  solaScripturaImpossible: {
     title: {
       en: "Sola Scriptura is Impossible",
       fr: "Sola Scriptura est Impossible",
       es: "Sola Scriptura es Imposible",
       de: "Sola Scriptura ist Unmöglich",
     },
-  },
-  summary: {
-    h2: {
-      en: "Summary of the Argument",
-      fr: "Résumé de l'Argument",
-      es: "Resumen del Argumento",
-      de: "Zusammenfassung des Arguments",
-    },
-    p1: {
-      en: "The argument is simple:",
-      fr: "L'argument est simple :",
-      es: "El argumento es simple:",
-      de: "Das Argument ist einfach:",
-    },
-    callout: {
-      p1: {
-        en: "In the Protestant view, there is no consistent way to make an act of faith in the fact that the books of the New Testament are divinely inspired.",
-        fr: "Du point de vue protestant, il n'y a aucun moyen cohérent de faire un acte de foi dans le fait que les livres du Nouveau Testament sont divinement inspirés.",
-        es: "Desde el punto de vista protestante, no existe una forma coherente de hacer un acto de fe en el hecho de que los libros del Nuevo Testamento están divinamente inspirados.",
-        de: "Nach protestantischer Auffassung gibt es keine konsistente Möglichkeit, einen Glaubensakt hinsichtlich der Tatsache zu vollziehen, dass die Bücher des Neuen Testaments göttlich inspiriert sind.",
-      },
-      p2: {
-        en: "This is because that knowledge must come to us by divine revelation through sacred tradition, proposed authoritatively by the Magisterium, elements rejected by the Protestant rule of faith (<em>Sola Scriptura</em>).",
-        fr: "C'est parce que cette connaissance doit nous parvenir par la révélation divine à travers la sainte tradition, proposée avec autorité par le Magistère, éléments rejetés par la règle de foi protestante (<em>Sola Scriptura</em>).",
-        es: "Esto se debe a que ese conocimiento debe llegarnos por revelación divina a través de la sagrada tradición, propuesta autoritativamente por el Magisterio, elementos rechazados por la regla de fe protestante (<em>Sola Scriptura</em>).",
-        de: "Dies liegt daran, dass uns dieses Wissen durch göttliche Offenbarung durch die heilige Tradition übermittelt werden muss, die vom Lehramt autoritativ vorgelegt wird, Elemente, die von der protestantischen Glaubensregel (<em>Sola Scriptura</em>) abgelehnt werden.",
-      },
-    },
-    p2: {
-      en: `Common Protestant objections are anticipated: appeals to tradition, ecclesial authority, motives of credibility, or accusations of circularity.
-These will be answered clearly and fairly.`,
-      fr: `Les objections protestantes courantes sont anticipées : appels à la tradition, à l'autorité ecclésiale, aux motifs de crédibilité ou accusations de circularité.
-Celles-ci recevront une réponse claire et juste.`,
-      es: `Se anticipan las objeciones protestantes comunes: apelaciones a la tradición, la autoridad eclesial, los motivos de credibilidad o acusaciones de circularidad.
-Estas serán respondidas con claridad y justicia.`,
-      de: `Gängige protestantische Einwände werden erwartet: Berufungen auf Tradition, kirchliche Autorität, Glaubwürdigkeitsmotive oder Vorwürfe der Zirkularität.
-Diese werden klar und fair beantwortet.`,
-    },
-  },
-  presumption: {
-    h2: {
-      en: "Presumption of the Case and State of the Question",
-      fr: "Présomption de la Cause et État de la Question",
-      es: "Presunción del Caso y Estado de la Cuestión",
-      de: "Annahme des Falles und Stand der Frage",
-    },
-    p1: {
-      en: "Two classical rhetorical principles frame the debate:",
-      fr: "Deux principes rhétoriques classiques encadrent le débat :",
-      es: "Dos principios retóricos clásicos enmarcan el debate:",
-      de: "Zwei klassische rhetorische Prinzipien bilden den Rahmen der Debatte:",
-    },
-    presumptionCase: {
-      h3: {
-        en: "Presumption of the Case",
-        fr: "Présomption de la Cause",
-        es: "Presunción del Caso",
-        de: "Annahme des Falles",
-      },
-      p1: {
-        en: `Arguments are built on shared assumptions.
-Papal encyclicals are not cited against Protestants. Instead, Scripture, reason, and Protestant sources are used.
-Shared axioms on faith and revelation are the foundation.`,
-        fr: `Les arguments sont construits sur des hypothèses partagées.
-Les encycliques papales ne sont pas citées contre les protestants.
-Au lieu de cela, l'Écriture, la raison et les sources protestantes sont utilisées.
-Des axiomes partagés sur la foi et la révélation en sont le fondement.`,
-        es: `Los argumentos se construyen sobre supuestos compartidos.
-No se citan encíclicas papales contra los protestantes. En su lugar, se utilizan la Escritura, la razón y las fuentes protestantes.
-Los axiomas compartidos sobre la fe y la revelación son la base.`,
-        de: `Argumente werden auf gemeinsamen Annahmen aufgebaut.
-Päpstliche Enzykliken werden nicht gegen Protestanten zitiert. Stattdessen werden Schrift, Vernunft und protestantische Quellen verwendet.
-Gemeinsame Axiome über Glauben und Offenbarung bilden die Grundlage.`,
-      },
-    },
-    stateQuestion: {
-      h3: {
-        en: "State of the Question",
-        fr: "État de la Question",
-        es: "Estado de la Cuestión",
-        de: "Stand der Frage",
-      },
-      p1: {
-        en: "The issue is not proving Catholicism. It is evaluating whether the Protestant doctrine of <em>Sola Scriptura</em> can account for the canon of Scripture. Protestants must:",
-        fr: "Le problème n'est pas de prouver le catholicisme. Il s'agit d'évaluer si la doctrine protestante de <em>Sola Scriptura</em> peut expliquer le canon de l'Écriture. Les protestants doivent :",
-        es: "La cuestión no es probar el catolicismo. Es evaluar si la doctrina protestante de <em>Sola Scriptura</em> puede dar cuenta del canon de la Escritura. Los protestantes deben:",
-        de: "Es geht nicht darum, den Katholizismus zu beweisen. Es geht darum zu bewerten, ob die protestantische Lehre von <em>Sola Scriptura</em> den Kanon der Schrift erklären kann. Protestanten müssen:",
-      },
-      li1: {
-        en: "Prove their doctrine does not fall into contradiction.",
-        fr: "Prouver que leur doctrine ne tombe pas en contradiction.",
-        es: "Probar que su doctrina no cae en contradicción.",
-        de: "Beweisen, dass ihre Lehre nicht in Widerspruch gerät.",
-      },
-      li2: {
-        en: "Or show that the contradiction does not follow.",
-        fr: "Ou montrer que la contradiction ne s'ensuit pas.",
-        es: "O demostrar que la contradicción no se sigue.",
-        de: "Oder zeigen, dass der Widerspruch nicht folgt.",
-      },
-      p2: {
-        en: "Too often, Protestant replies do anything but address the actual state of the question.",
-        fr: "Trop souvent, les réponses protestantes font tout sauf aborder l'état réel de la question.",
-        es: "Con demasiada frecuencia, las respuestas protestantes hacen cualquier cosa menos abordar el estado real de la cuestión.",
-        de: "Allzu oft tun protestantische Antworten alles andere, als sich mit dem tatsächlichen Stand der Frage zu befassen.",
-      },
-    },
-  },
-  whatIsSS: {
-    h2: {
-      en: "What Is Sola Scriptura?",
-      fr: "Qu'est-ce que Sola Scriptura ?",
-      es: "¿Qué es Sola Scriptura?",
-      de: "Was ist Sola Scriptura?",
-    },
-    p1: {
-      en: "The doctrine under critique is not merely that Scripture is the only <strong>infallible</strong> rule of faith, but that:",
-      fr: "La doctrine critiquée n'est pas simplement que l'Écriture est la seule règle de foi <strong>infaillible</strong>, mais que :",
-      es: "La doctrina bajo crítica no es simplemente que la Escritura es la única regla de fe <strong>infalible</strong>, sino que:",
-      de: "Die kritisierte Lehre ist nicht nur, dass die Schrift die einzige <strong>unfehlbare</strong> Glaubensregel ist, sondern dass:",
-    },
-    callout: {
-      en: "Scripture alone is the rule of faith.",
-      fr: "L'Écriture seule est la règle de foi.",
-      es: "La Escritura sola es la regla de fe.",
-      de: "Die Schrift allein ist die Glaubensregel.",
-    },
-    p2: {
-      en: "This is the classical formulation. Confessions affirm this clearly:",
-      fr: "C'est la formulation classique. Les confessions l'affirment clairement :",
-      es: "Esta es la formulación clásica. Las confesiones lo afirman claramente:",
-      de: "Das ist die klassische Formulierung. Bekenntnisse bestätigen dies deutlich:",
-    },
-    confessions: {
-      c1: {
-        en: "<strong>Westminster Confession:</strong> Synods or councils are not to be made the rule of faith.",
-        fr: "<strong>Confession de Westminster :</strong> Les synodes ou conciles ne doivent pas être érigés en règle de foi.",
-        es: "<strong>Confesión de Westminster:</strong> Los sínodos o concilios no deben convertirse en la regla de fe.",
-        de: "<strong>Westminster-Bekenntnis:</strong> Synoden oder Konzilien dürfen nicht zur Glaubensregel gemacht werden.",
-      },
-      c2: {
-        en: "<strong>Westminster Larger Catechism:</strong> Scripture is the only rule of faith and obedience.",
-        fr: "<strong>Grand Catéchisme de Westminster :</strong> L'Écriture est la seule règle de foi et d'obéissance.",
-        es: "<strong>Catecismo Mayor de Westminster:</strong> La Escritura es la única regla de fe y obediencia.",
-        de: "<strong>Größerer Westminster-Katechismus:</strong> Die Schrift ist die einzige Regel des Glaubens und des Gehorsams.",
-      },
-      c3: {
-        en: "<strong>Helvetic Consensus:</strong> Scripture is the sole and complete rule.",
-        fr: "<strong>Consensus Helvétique :</strong> L'Écriture est la seule et complète règle.",
-        es: "<strong>Consenso Helvético:</strong> La Escritura es la única y completa regla.",
-        de: "<strong>Helvetischer Konsens:</strong> Die Schrift ist die alleinige und vollständige Regel.",
-      },
-      c4: {
-        en: "<strong>Formula of Concord:</strong> God's word alone is the guiding principle.",
-        fr: "<strong>Formule de Concorde :</strong> La parole de Dieu seule est le principe directeur.",
-        es: "<strong>Fórmula de la Concordia:</strong> Solo la palabra de Dios es el principio rector.",
-        de: "<strong>Konkordienformel:</strong> Gottes Wort allein ist der Leitfaden.",
-      },
-    },
-    p3: {
-      en: "Modern Protestant attempts to add the word <em>infallible</em> shift the meaning. This addition is inconsistent with classical theology. For example:",
-      fr: "Les tentatives protestantes modernes d'ajouter le mot <em>infaillible</em> déplacent le sens. Cet ajout est incompatible avec la théologie classique. Par exemple :",
-      es: "Los intentos protestantes modernos de añadir la palabra <em>infalible</em> cambian el significado. Esta adición es inconsistente con la teología clásica. Por ejemplo:",
-      de: "Moderne protestantische Versuche, das Wort <em>unfehlbar</em> hinzuzufügen, verschieben die Bedeutung. Diese Hinzufügung ist unvereinbar mit der klassischen Theologie. Zum Beispiel:",
-    },
-    li1: {
-      en: "Moses Amyraut and Richard Baxter believed infallibility could apply to councils.",
-      fr: "Moïse Amyraut et Richard Baxter croyaient que l'infaillibilité pouvait s'appliquer aux conciles.",
-      es: "Moses Amyraut y Richard Baxter creían que la infalibilidad podía aplicarse a los concilios.",
-      de: "Moses Amyraut und Richard Baxter glaubten, dass Unfehlbarkeit auch für Konzilien gelten könnte.",
-    },
-    li2: {
-      en: "Catholics distinguish between fallible and infallible rules of faith.",
-      fr: "Les catholiques distinguent entre les règles de foi faillibles et infaillibles.",
-      es: "Los católicos distinguen entre reglas de fe falibles e infalibles.",
-      de: "Katholiken unterscheiden zwischen fehlbaren und unfehlbaren Glaubensregeln.",
-    },
-    p4: {
-      en: "Being a rule of faith means having <strong>authenticity</strong>, the authority to bind conscience. Tradition and ecclesial authority may assist in interpretation, but in <em>Sola Scriptura</em> they do not bind.",
-      fr: "Être une règle de foi signifie avoir l'<strong>authenticité</strong>, l'autorité de lier la conscience. La tradition et l'autorité ecclésiale peuvent aider à l'interprétation, mais dans <em>Sola Scriptura</em>, elles ne lient pas.",
-      es: "Ser una regla de fe significa tener <strong>autenticidad</strong>, la autoridad para obligar la conciencia. La tradición y la autoridad eclesial pueden ayudar en la interpretación, pero en <em>Sola Scriptura</em> no obligan.",
-      de: "Eine Glaubensregel zu sein bedeutet, <strong>Authentizität</strong> zu haben, die Autorität, das Gewissen zu binden. Tradition und kirchliche Autorität können bei der Interpretation helfen, aber bei <em>Sola Scriptura</em> binden sie nicht.",
-    },
-  },
-  natureOfFaith: {
-    h2: {
-      en: "The Nature of Faith",
-      fr: "La Nature de la Foi",
-      es: "La Naturaleza de la Fe",
-      de: "Das Wesen des Glaubens",
-    },
-    p1: {
-      en: "Understanding <em>faith</em> is key. Dogmatic faith (not fiduciary faith) is distinct from sense perception, self-evident principles, or demonstration. Lude Le Blanc writes:",
-      fr: "Comprendre la <em>foi</em> est essentiel. La foi dogmatique (et non la foi fiduciaire) se distingue de la perception sensorielle, des principes évidents par eux-mêmes ou de la démonstration. Lude Le Blanc écrit :",
-      es: "Entender la <em>fe</em> es clave. La fe dogmática (no la fe fiduciaria) es distinta de la percepción sensorial, los principios autoevidentes o la demostración. Lude Le Blanc escribe:",
-      de: "Das Verständnis des <em>Glaubens</em> ist entscheidend. Der dogmatische Glaube (nicht der fiduziarische Glaube) unterscheidet sich von der Sinneswahrnehmung, selbstverständlichen Prinzipien oder der Demonstration. Lude Le Blanc schreibt:",
+    subtitle: {
+      en: "A Comprehensive Scholastic Critique",
+      fr: "Une Critique Scolastique Complète",
+      es: "Una Crítica Escolástica Exhaustiva",
+      de: "Eine Umfassende Scholastische Kritik",
     },
     quote: {
-      en: "We do not properly hold by faith those things which we perceive by sense, nor also those things which have been necessarily and evidently demonstrated to us.",
-      fr: "Nous ne tenons pas proprement par la foi les choses que nous percevons par les sens, ni non plus les choses qui nous ont été nécessairement et évidemment démontrées.",
-      es: "No sostenemos propiamente por fe aquellas cosas que percibimos por los sentidos, ni tampoco aquellas cosas que nos han sido demostrada necesaria y evidentemente.",
-      de: "Wir halten nicht eigentlich durch Glauben jene Dinge, die wir durch die Sinne wahrnehmen, noch auch jene Dinge, die uns notwendig und offensichtlich bewiesen wurden.",
-    },
-    source: {
-      en: "Lude Le Blanc",
-      fr: "Lude Le Blanc",
-      es: "Lude Le Blanc",
-      de: "Lude Le Blanc",
-    },
-    p2: {
-      en: "Faith includes:",
-      fr: "La foi inclut :",
-      es: "La fe incluye:",
-      de: "Glaube beinhaltet:",
-    },
-    elements: {
-      e1: {
-        label: {
-          en: "Principle",
-          fr: "Principe",
-          es: "Principio",
-          de: "Prinzip",
-        },
-        desc: {
-          en: "Grace stirred by the Holy Spirit",
-          fr: "La grâce mue par le Saint-Esprit",
-          es: "La gracia movida por el Espíritu Santo",
-          de: "Gnade, angeregt durch den Heiligen Geist",
-        },
-      },
-      e2: {
-        label: {
-          en: "Material Object",
-          fr: "Objet Matériel",
-          es: "Objeto Material",
-          de: "Materielles Objekt",
-        },
-        desc: {
-          en: "Supernatural truth",
-          fr: "Vérité surnaturelle",
-          es: "Verdad sobrenatural",
-          de: "Übernatürliche Wahrheit",
-        },
-      },
-      e3: {
-        label: {
-          en: "Formal Object",
-          fr: "Objet Formel",
-          es: "Objeto Formal",
-          de: "Formelles Objekt",
-        },
-        desc: {
-          en: "Believed as revealed by God",
-          fr: "Cru comme révélé par Dieu",
-          es: "Creído como revelado por Dios",
-          de: "Geglaubt als von Gott offenbart",
-        },
-      },
-    },
-    faithVsVision: {
-      h3: {
-        en: "Faith vs Vision",
-        fr: "Foi vs Vision",
-        es: "Fe vs Visión",
-        de: "Glaube vs. Schau",
-      },
-      p1: {
-        en: "What is believed by faith now will be known by sight in the beatific vision. When divine truths are seen directly, faith is abolished, not perfected.",
-        fr: "Ce qui est cru par la foi maintenant sera connu par la vue dans la vision béatifique. Lorsque les vérités divines sont vues directement, la foi est abolie, et non perfectionnée.",
-        es: "Lo que se cree por fe ahora, se conocerá por visión en la visión beatífica. Cuando las verdades divinas se ven directamente, la fe se anula, no se perfecciona.",
-        de: "Was jetzt im Glauben geglaubt wird, wird in der beseligenden Schau durch Sehen erkannt. Wenn göttliche Wahrheiten direkt gesehen werden, wird der Glaube abgeschafft, nicht vervollkommnet.",
-      },
-    },
-  },
-  definitions: {
-    h2: {
-      en: "Revelation, Infallibility, and Inspiration",
-      fr: "Révélation, Infaillibilité et Inspiration",
-      es: "Revelación, Infalibilidad e Inspiración",
-      de: "Offenbarung, Unfehlbarkeit und Inspiration",
-    },
-    p1: {
-      en: "These three terms must be distinguished:",
-      fr: "Ces trois termes doivent être distingués :",
-      es: "Estos tres términos deben distinguirse:",
-      de: "Diese drei Begriffe müssen unterschieden werden:",
-    },
-    terms: {
-      t1: {
-        term: {
-          en: "Divine Revelation",
-          fr: "Révélation Divine",
-          es: "Revelación Divina",
-          de: "Göttliche Offenbarung",
-        },
-        def: {
-          en: "God speaking to man, typically through prophets or apostles.",
-          fr: "Dieu parlant à l'homme, généralement par des prophètes ou des apôtres.",
-          es: "Dios hablando al hombre, típicamente a través de profetas o apóstoles.",
-          de: "Gott spricht zum Menschen, typischerweise durch Propheten oder Apostel.",
-        },
-      },
-      t2: {
-        term: {
-          en: "Infallibility",
-          fr: "Infaillibilité",
-          es: "Infalibilidad",
-          de: "Unfehlbarkeit",
-        },
-        def: {
-          en: "Freedom from error, either absolute or in a restricted domain.",
-          fr: "Absence d'erreur, soit absolue, soit dans un domaine restreint.",
-          es: "Libertad de error, ya sea absoluta o en un dominio restringido.",
-          de: "Freiheit von Irrtum, entweder absolut oder in einem begrenzten Bereich.",
-        },
-      },
-      t3: {
-        term: {
-          en: "Inspiration",
-          fr: "Inspiration",
-          es: "Inspiración",
-          de: "Inspiration",
-        },
-        def: {
-          en: "The very words are authored by God.",
-          fr: "Les mots mêmes sont écrits par Dieu.",
-          es: "Las mismas palabras tienen a Dios por autor.",
-          de: "Die Worte selbst sind von Gott verfasst.",
-        },
-      },
-    },
-    callout: {
-      p1: {
-        en: "A prophet may communicate revelation, even infallibly, without inspiration. For example, Paul may preach with divine authority without every word being divinely authored.",
-        fr: "Un prophète peut communiquer la révélation, même infailliblement, sans inspiration. Par exemple, Paul peut prêcher avec une autorité divine sans que chaque mot soit divinement écrit.",
-        es: "Un profeta puede comunicar la revelación, incluso infaliblemente, sin inspiración. Por ejemplo, Pablo puede predicar con autoridad divina sin que cada palabra sea de autoría divina.",
-        de: "Ein Prophet kann Offenbarung mitteilen, sogar unfehlbar, ohne Inspiration. Zum Beispiel kann Paulus mit göttlicher Autorität predigen, ohne dass jedes Wort göttlich verfasst ist.",
-      },
-      p2: {
-        en: "<strong>Inspiration is mysterious and interior.</strong> It is not publicly verifiable. Therefore, the knowledge that a book is inspired must come through divine revelation. This presents a problem for Protestants.",
-        fr: "<strong>L'inspiration est mystérieuse et intérieure.</strong> Elle n'est pas vérifiable publiquement. Par conséquent, la connaissance qu'un livre est inspiré doit provenir de la révélation divine. Cela pose un problème aux protestants.",
-        es: "<strong>La inspiración es misteriosa e interior.</strong> No es verificable públicamente. Por lo tanto, el conocimiento de que un libro es inspirado debe venir a través de la revelación divina. Esto presenta un problema para los protestantes.",
-        de: "<strong>Inspiration ist geheimnisvoll und innerlich.</strong> Sie ist nicht öffentlich nachprüfbar. Daher muss das Wissen, dass ein Buch inspiriert ist, durch göttliche Offenbarung kommen. Dies stellt ein Problem für Protestanten dar.",
-      },
-    },
-  },
-  argument: {
-    h2: {
-      en: "Restating the Argument Fully",
-      fr: "Reformulation Complète de l'Argument",
-      es: "Reexposición Completa del Argumento",
-      de: "Das Argument vollständig neu formuliert",
-    },
-    li1: {
-      en: "<em>Sola Scriptura</em> claims Scripture is the sole rule of faith.",
-      fr: "<em>Sola Scriptura</em> prétend que l'Écriture est la seule règle de foi.",
-      es: "<em>Sola Scriptura</em> afirma que la Escritura es la única regla de fe.",
-      de: "<em>Sola Scriptura</em> behauptet, die Schrift sei die alleinige Glaubensregel.",
-    },
-    li2: {
-      en: "The fact that a book is divinely inspired must be believed by faith.",
-      fr: "Le fait qu'un livre soit divinement inspiré doit être cru par la foi.",
-      es: "El hecho de que un libro esté divinamente inspirado debe creerse por fe.",
-      de: "Die Tatsache, dass ein Buch göttlich inspiriert ist, muss im Glauben angenommen werden.",
-    },
-    li3: {
-      en: "Faith requires divine revelation.",
-      fr: "La foi exige la révélation divine.",
-      es: "La fe requiere revelación divina.",
-      de: "Glaube erfordert göttliche Offenbarung.",
-    },
-    li4: {
-      en: "The inspiration of the New Testament books is not found in Scripture.",
-      fr: "L'inspiration des livres du Nouveau Testament ne se trouve pas dans l'Écriture.",
-      es: "La inspiración de los libros del Nuevo Testamento no se encuentra en la Escritura.",
-      de: "Die Inspiration der Bücher des Neuen Testaments findet sich nicht in der Schrift.",
-    },
-    li5: {
-      en: "<strong>Therefore</strong>, Protestants must appeal to an extrabiblical source of divine revelation.",
-      fr: "<strong>Par conséquent</strong>, les protestants doivent faire appel à une source extrabiblique de révélation divine.",
-      es: "<strong>Por lo tanto</strong>, los protestantes deben apelar a una fuente extrabíblica de revelación divina.",
-      de: "<strong>Daher</strong> müssen sich Protestanten auf eine außerbiblische Quelle göttlicher Offenbarung berufen.",
-    },
-    li6: {
-      en: "<strong>Therefore</strong>, <em>Sola Scriptura</em> cannot consistently account for the canon.",
-      fr: "<strong>Par conséquent</strong>, <em>Sola Scriptura</em> ne peut pas expliquer de manière cohérente le canon.",
-      es: "<strong>Por lo tanto</strong>, <em>Sola Scriptura</em> no puede dar cuenta consistentemente del canon.",
-      de: "<strong>Daher</strong> kann <em>Sola Scriptura</em> den Kanon nicht konsistent erklären.",
-    },
-    li7: {
-      en: "But <em>Sola Scriptura</em> rejects such sources.",
-      fr: "Mais <em>Sola Scriptura</em> rejette de telles sources.",
-      es: "Pero <em>Sola Scriptura</em> rechaza tales fuentes.",
-      de: "Aber <em>Sola Scriptura</em> lehnt solche Quellen ab.",
-    },
-    p1: {
-      en: "The Catholic account avoids this problem by appealing to divine revelation transmitted through sacred tradition and authoritatively taught by the Church.",
-      fr: "Le récit catholique évite ce problème en faisant appel à la révélation divine transmise par la sainte tradition et enseignée avec autorité par l'Église.",
-      es: "El relato católico evita este problema apelando a la revelación divina transmitida a través de la sagrada tradición y enseñada autoritativamente por la Iglesia.",
-      de: "Die katholische Darstellung vermeidet dieses Problem, indem sie sich auf die göttliche Offenbarung beruft, die durch die heilige Tradition überliefert und von der Kirche autoritativ gelehrt wird.",
-    },
-  },
-  tuQuoque: {
-    h2: {
-      en: "The Tu Quoque Objection: Does Catholicism Have the Same Problem?",
-      fr: "L'Objection Tu Quoque : le Catholicisme a-t-il le Même Problème ?",
-      es: "La Objeción Tu Quoque: ¿Tiene el Catolicismo el Mismo Problema?",
-      de: "Der Tu-Quoque-Einwand: Hat der Katholizismus das Gleiche Problem?",
-    },
-    p1: {
-      en: `Some Protestants will respond that Catholics have the same problem: if inspiration must be known through divine revelation, doesn't that create an infinite regress?
-Doesn't Catholicism also fall into circularity?`,
-      fr: `Certains protestants répondront que les catholiques ont le même problème : si l'inspiration doit être connue par la révélation divine, cela ne crée-t-il pas une régression à l'infini ?
-Le catholicisme ne tombe-t-il pas aussi dans la circularité ?`,
-      es: `Algunos protestantes responderán que los católicos tienen el mismo problema: si la inspiración debe conocerse a través de la revelación divina, ¿no crea eso una regresión infinita?
-¿No cae también el catolicismo en la circularidad?`,
-      de: `Einige Protestanten werden antworten, dass Katholiken dasselbe Problem haben: Wenn Inspiration durch göttliche Offenbarung erkannt werden muss, schafft das nicht einen unendlichen Regress?
-Fällt der Katholizismus nicht auch in Zirkularität?`,
-    },
-    callout: {
-      h4: {
-        en: "No. The Catholic model avoids these problems:",
-        fr: "Non. Le modèle catholique évite ces problèmes :",
-        es: "No. El modelo católico evita estos problemas:",
-        de: "Nein. Das katholische Modell vermeidet diese Probleme:",
-      },
-      li1: {
-        en: "<strong>We do not say</strong> that divine revelation needs a divine revelation to confirm it.",
-        fr: "<strong>Nous ne disons pas</strong> que la révélation divine a besoin d'une révélation divine pour la confirmer.",
-        es: "<strong>No decimos</strong> que la revelación divina necesite otra revelación divina que la confirme.",
-        de: "<strong>Wir sagen nicht</strong>, dass göttliche Offenbarung einer göttlichen Offenbarung bedarf, um sie zu bestätigen.",
-      },
-      li2: {
-        en: "Rather, we say that <em>inspiration</em> is a revealed fact which must be proposed for belief.",
-        fr: "Nous disons plutôt que l'<em>inspiration</em> est un fait révélé qui doit être proposé à la foi.",
-        es: "Más bien, decimos que la <em>inspiración</em> es un hecho revelado que debe ser propuesto para la fe.",
-        de: "Vielmehr sagen wir, dass <em>Inspiration</em> eine geoffenbarte Tatsache ist, die zum Glauben vorgelegt werden muss.",
-      },
-      li3: {
-        en: "The Church is a divine legate, authenticated by Christ, and thus can propose the canon.",
-        fr: "L'Église est un légat divin, authentifié par le Christ, et peut donc proposer le canon.",
-        es: "La Iglesia es un legado divino, autenticado por Cristo, y por lo tanto puede proponer el canon.",
-        de: "Die Kirche ist ein göttlicher Gesandter, von Christus beglaubigt, und kann daher den Kanon vorlegen.",
-      },
-    },
-    p2: {
-      en: "This is not circular because we begin with the historical reliability of the Gospels, establish Christ's authority through motives of credibility, and then proceed to the Church's authority as His appointed legate.",
-      fr: "Ce n'est pas circulaire car nous commençons par la fiabilité historique des Évangiles, établissons l'autorité du Christ par des motifs de crédibilité, puis procédons à l'autorité de l'Église en tant que Son légat désigné.",
-      es: "Esto no es circular porque comenzamos con la fiabilidad histórica de los Evangelios, establecemos la autoridad de Cristo a través de motivos de credibilidad, y luego procedemos a la autoridad de la Iglesia como Su legado designado.",
-      de: "Das ist nicht zirkulär, weil wir mit der historischen Zuverlässigkeit der Evangelien beginnen, Christi Autorität durch Glaubwürdigkeitsmotive etablieren und dann zur Autorität der Kirche als Seiner ernannten Gesandtin übergehen.",
-    },
-  },
-  counterarguments: {
-    h2: {
-      en: "Addressing Protestant Counterarguments",
-      fr: "Répondre aux Contre-Arguments Protestants",
-      es: "Abordando los Contraargumentos Protestantes",
-      de: "Behandlung Protestantischer Gegenargumente",
-    },
-    c1: {
-      h3: {
-        en: "1. Illumination of the Spirit",
-        fr: "1. Illumination de l'Esprit",
-        es: "1. Iluminación del Espíritu",
-        de: "1. Erleuchtung durch den Geist",
-      },
-      p1: {
-        en: `Some Protestants say the Spirit testifies internally to the canon.
-But this cannot supply the <strong>formal object</strong> of faith, that it is revealed by God.
-If the Spirit provides this directly, then each Christian receives a private revelation of the canon, which Protestants reject.
-If it does not, then the formal object is missing.`,
-        fr: `Certains protestants disent que l'Esprit témoigne intérieurement du canon.
-Mais cela ne peut pas fournir l'<strong>objet formel</strong> de la foi, qu'il est révélé par Dieu.
-Si l'Esprit fournit cela directement, alors chaque chrétien reçoit une révélation privée du canon, ce que les protestants rejettent.
-Si ce n'est pas le cas, alors l'objet formel est manquant.`,
-        es: `Algunos protestantes dicen que el Espíritu testifica internamente sobre el canon.
-Pero esto no puede suministrar el <strong>objeto formal</strong> de la fe, que es revelado por Dios.
-Si el Espíritu proporciona esto directamente, entonces cada cristiano recibe una revelación privada del canon, lo cual los protestantes rechazan.
-Si no lo hace, entonces falta el objeto formal.`,
-        de: `Einige Protestanten sagen, der Geist bezeuge innerlich den Kanon.
-Dies kann jedoch nicht das <strong>formale Objekt</strong> des Glaubens liefern, dass es von Gott offenbart ist.
-Wenn der Geist dies direkt bereitstellt, empfängt jeder Christ eine private Offenbarung des Kanons, was Protestanten ablehnen.
-Wenn nicht, fehlt das formale Objekt.`,
-      },
-    },
-    c2: {
-      h3: {
-        en: "2. Canon Contained in Scripture",
-        fr: "2. Canon Contenu dans l'Écriture",
-        es: "2. Canon Contenido en la Escritura",
-        de: "2. Kanon in der Schrift enthalten",
-      },
-      p1: {
-        en: `Others say the canon is revealed within Scripture.
-But not every book identifies itself. Third John, for example, never claims inspiration.
-Appeals to apostolic authorship also fail because not all books are apostolic, and not all apostolic writings are inspired.`,
-        fr: `D'autres disent que le canon est révélé dans l'Écriture.
-Mais tous les livres ne s'identifient pas. La Troisième Épître de Jean, par exemple, ne revendique jamais l'inspiration.
-Les appels à la paternité apostolique échouent également car tous les livres ne sont pas apostoliques, et tous les écrits apostoliques ne sont pas inspirés.`,
-        es: `Otros dicen que el canon se revela dentro de la Escritura.
-Pero no todos los libros se identifican a sí mismos. Tercera de Juan, por ejemplo, nunca reclama inspiración.
-Las apelaciones a la autoría apostólica también fracasan porque no todos los libros son apostólicos, y no todos los escritos apostólicos son inspirados.`,
-        de: `Andere sagen, der Kanon sei in der Schrift offenbart.
-Aber nicht jedes Buch identifiziert sich selbst. Der Dritte Johannesbrief zum Beispiel beansprucht nie Inspiration.
-Berufungen auf apostolische Autorschaft scheitern ebenfalls, weil nicht alle Bücher apostolisch sind und nicht alle apostolischen Schriften inspiriert sind.`,
-      },
-    },
-    c3: {
-      h3: {
-        en: "3. Internal Marks of Sublimity",
-        fr: "3. Marques Internes de Sublimité",
-        es: "3. Marcas Internas de Sublimidad",
-        de: "3. Interne Merkmale der Erhabenheit",
-      },
-      p1: {
-        en: `Some claim the canon can be known by the internal beauty or sublimity of Scripture.
-But this is a <strong>scientific</strong> judgment, not a judgment of faith. Supernatural truths are not known by natural reasoning.
-Further, many sublime texts are not canonical, and some canonical books lack apparent sublimity.`,
-        fr: `Certains prétendent que le canon peut être connu par la beauté interne ou la sublimité de l'Écriture.
-Mais c'est un jugement <strong>scientifique</strong>, pas un jugement de foi.
-Les vérités surnaturelles ne sont pas connues par le raisonnement naturel.
-De plus, de nombreux textes sublimes ne sont pas canoniques, et certains livres canoniques manquent de sublimité apparente.`,
-        es: `Algunos afirman que el canon puede conocerse por la belleza interna o la sublimidad de la Escritura.
-Pero este es un juicio <strong>científico</strong>, no un juicio de fe.
-Las verdades sobrenaturales no se conocen por el razonamiento natural.
-Además, muchos textos sublimes no son canónicos, y algunos libros canónicos carecen de sublimidad aparente.`,
-        de: `Einige behaupten, der Kanon könne durch die innere Schönheit oder Erhabenheit der Schrift erkannt werden.
-Dies ist jedoch ein <strong>wissenschaftliches</strong> Urteil, kein Glaubensurteil. Übernatürliche Wahrheiten werden nicht durch natürliche Vernunft erkannt.
-Ferner sind viele erhabene Texte nicht kanonisch, und einigen kanonischen Büchern fehlt es an offensichtlicher Erhabenheit.`,
-      },
-    },
-    c4: {
-      h3: {
-        en: "4. Historical Witness of the Church",
-        fr: "4. Témoignage Historique de l'Église",
-        es: "4. Testimonio Histórico de la Iglesia",
-        de: "4. Historisches Zeugnis der Kirche",
-      },
-      p1: {
-        en: `Some concede that the Church historically testified to the canon.
-But this raises the question: is belief in the canon an act of human faith or divine faith?
-If it is human, it cannot ground divine inspiration. If it is divine, then where is the revelation?
-If it is outside Scripture, <em>Sola Scriptura</em> collapses.`,
-        fr: `Certains concèdent que l'Église a historiquement témoigné du canon.
-Mais cela soulève la question : la croyance dans le canon est-elle un acte de foi humaine ou de foi divine ?
-Si elle est humaine, elle ne peut fonder l'inspiration divine. Si elle est divine, alors où est la révélation ?
-Si elle est en dehors de l'Écriture, <em>Sola Scriptura</em> s'effondre.`,
-        es: `Algunos conceden que la Iglesia testificó históricamente sobre el canon.
-Pero esto plantea la pregunta: ¿es la creencia en el canon un acto de fe humana o de fe divina?
-Si es humana, no puede fundamentar la inspiración divina. Si es divina, ¿dónde está la revelación?
-Si está fuera de la Escritura, <em>Sola Scriptura</em> se colapsa.`,
-        de: `Einige geben zu, dass die Kirche historisch den Kanon bezeugt hat.
-Dies wirft jedoch die Frage auf: Ist der Glaube an den Kanon ein Akt menschlichen Glaubens oder göttlichen Glaubens?
-Wenn er menschlich ist, kann er die göttliche Inspiration nicht begründen. Wenn er göttlich ist, wo ist dann die Offenbarung?
-Wenn sie außerhalb der Schrift liegt, bricht <em>Sola Scriptura</em> zusammen.`,
-      },
-    },
-    c5: {
-      h3: {
-        en: "5. The Appeal to Motives of Credibility Alone",
-        fr: "5. L'Appel aux Seuls Motifs de Crédibilité",
-        es: "5. La Apelación a los Motivos de Credibilidad Solamente",
-        de: "5. Die Berufung allein auf Glaubwürdigkeitsmotive",
-      },
-      p1: {
-        en: `Some Protestants attempt to bridge the gap by appealing to motives of credibility, such as miracles, fulfilled prophecies, or the moral excellence of Scripture, to justify belief in the canon.
-Yet this approach also fails for the same fundamental reason: it confuses the concepts of divine revelation and inspiration.
-Motives of credibility can confirm the truthfulness of a messenger or message, but they cannot establish inspiration, which is a supernatural act of God that cannot be inferred solely from external signs.`,
-        fr: `Certains protestants tentent de combler le fossé en faisant appel à des motifs de crédibilité, tels que les miracles, les prophéties accomplies ou l'excellence morale de l'Écriture, pour justifier la croyance dans le canon.
-Pourtant, cette approche échoue également pour la même raison fondamentale : elle confond les concepts de révélation divine et d'inspiration.
-Les motifs de crédibilité peuvent confirmer la véracité d'un messager ou d'un message, mais ils ne peuvent établir l'inspiration, qui est un acte surnaturel de Dieu ne pouvant être déduit uniquement de signes extérieurs.`,
-        es: `Algunos protestantes intentan salvar la brecha apelando a motivos de credibilidad, como milagros, profecías cumplidas o la excelencia moral de la Escritura, para justificar la creencia en el canon.
-Sin embargo, este enfoque también fracasa por la misma razón fundamental: confunde los conceptos de revelación divina e inspiración.
-Los motivos de credibilidad pueden confirmar la veracidad de un mensajero o mensaje, pero no pueden establecer la inspiración, que es un acto sobrenatural de Dios que no puede inferirse únicamente de signos externos.`,
-        de: `Einige Protestanten versuchen, die Lücke zu schließen, indem sie sich auf Glaubwürdigkeitsmotive berufen, wie Wunder, erfüllte Prophezeiungen oder die moralische Exzellenz der Schrift, um den Glauben an den Kanon zu rechtfertigen.
-Doch dieser Ansatz scheitert aus demselben Grund: Er verwechselt die Konzepte der göttlichen Offenbarung und der Inspiration.
-Glaubwürdigkeitsmotive können die Wahrhaftigkeit eines Boten oder einer Botschaft bestätigen, aber sie können keine Inspiration begründen, die ein übernatürlicher Akt Gottes ist, der nicht allein aus äußeren Zeichen abgeleitet werden kann.`,
-      },
-    },
-    c6: {
-      h3: {
-        en: "6. The Canon as a Historical Judgment",
-        fr: "6. Le Canon comme Jugement Historique",
-        es: "6. El Canon como Juicio Histórico",
-        de: "6. Der Kanon als Historisches Urteil",
-      },
-      p1: {
-        en: `Another fallback is to treat the canon as a historically reliable tradition, something that emerged organically from the Church's common recognition over time.
-This too collapses under scrutiny. If belief in the canon is based solely on historical investigation, then the assent to its inspiration is based on human reasoning, not divine faith.
-But divine inspiration is not a merely historical claim, it is a supernatural truth, and thus it demands a supernatural source of revelation.`,
-        fr: `Une autre solution de repli consiste à traiter le canon comme une tradition historiquement fiable, quelque chose qui a émergé organiquement de la reconnaissance commune de l'Église au fil du temps.
-Cela s'effondre également sous l'examen. Si la croyance dans le canon est basée uniquement sur une enquête historique, alors l'assentiment à son inspiration est basé sur le raisonnement humain et non sur la foi divine.
-Mais l'inspiration divine n'est pas une simple affirmation historique, c'est une vérité surnaturelle, et elle exige donc une source surnaturelle de révélation.`,
-        es: `Otro recurso es tratar el canon como una tradición históricamente confiable, algo que surgió orgánicamente del reconocimiento común de la Iglesia a lo largo del tiempo.
-Esto también se derrumba bajo escrutinio. Si la creencia en el canon se basa únicamente en la investigación histórica, entonces el asentimiento a su inspiración se basa en el razonamiento humano, no en la fe divina.
-Pero la inspiración divina no es una mera afirmación histórica, es una verdad sobrenatural y por lo tanto exige una fuente sobrenatural de revelación.`,
-        de: `Eine weitere Ausweichmöglichkeit besteht darin, den Kanon als historisch zuverlässige Tradition zu behandeln, etwas, das organisch aus der gemeinsamen Anerkennung der Kirche im Laufe der Zeit entstanden ist.
-Auch dies bricht bei genauerer Betrachtung zusammen. Wenn der Glaube an den Kanon ausschließlich auf historischer Untersuchung beruht, basiert die Zustimmung zu seiner Inspiration auf menschlicher Vernunft, nicht auf göttlichem Glauben.
-Aber göttliche Inspiration ist keine bloß historische Behauptung, sie ist eine übernatürliche Wahrheit und erfordert daher eine übernatürliche Offenbarungsquelle.`,
-      },
-    },
-  },
-  solution: {
-    h2: {
-      en: "The Catholic Solution:",
-      fr: "La Solution Catholique :",
-      es: "La Solución Católica:",
-      de: "Die Katholische Lösung:",
-    },
-    p1: {
-      en: "The Catholic position resolves all these difficulties.",
-      fr: "La position catholique résout toutes ces difficultés.",
-      es: "La posición católica resuelve todas estas dificultades.",
-      de: "Die katholische Position löst all diese Schwierigkeiten.",
-    },
-    h3: {
-      en: "Step-by-Step Coherence",
-      fr: "Cohérence Étape par Étape",
-      es: "Coherencia Paso a Paso",
-      de: "Schritt-für-Schritt-Kohärenz",
-    },
-    steps: {
-      s1: {
-        en: "Begin with the <strong>historical reliability</strong> of the Gospels, using the same critical methods applied to any ancient text.",
-        fr: "Commencez par la <strong>fiabilité historique</strong> des Évangiles, en utilisant les mêmes méthodes critiques appliquées à n'importe quel texte ancien.",
-        es: "Comience con la <strong>fiabilidad histórica</strong> de los Evangelios, utilizando los mismos métodos críticos aplicados a cualquier texto antiguo.",
-        de: "Beginnen Sie mit der <strong>historischen Zuverlässigkeit</strong> der Evangelien und wenden Sie dieselben kritischen Methoden an wie bei jedem antiken Text.",
-      },
-      s2: {
-        en: "From there, recognize the <strong>motives of credibility</strong> that confirm Christ's identity as the divine legate: His miracles, His resurrection, His fulfillment of prophecy.",
-        fr: "De là, reconnaissez les <strong>motifs de crédibilité</strong> qui confirment l'identité du Christ en tant que légat divin : Ses miracles, Sa résurrection, Son accomplissement des prophéties.",
-        es: "A partir de ahí, reconozca los <strong>motivos de credibilidad</strong> que confirman la identidad de Cristo como el legado divino: Sus milagros, Su resurrección, Su cumplimiento de la profecía.",
-        de: "Erkennen Sie von dort aus die <strong>Glaubwürdigkeitsmotive</strong>, die die Identität Christi als göttlichen Gesandten bestätigen: Seine Wunder, Seine Auferstehung, Seine Erfüllung der Prophezeiungen.",
-      },
-      s3: {
-        en: "Understand that Christ <strong>established a Church</strong> with divine authority, promising it the guidance of the Holy Spirit.",
-        fr: "Comprenez que le Christ <strong>a établi une Église</strong> avec une autorité divine, lui promettant la direction du Saint-Esprit.",
-        es: "Entienda que Cristo <strong>estableció una Iglesia</strong> con autoridad divina, prometiéndole la guía del Espíritu Santo.",
-        de: "Verstehen Sie, dass Christus <strong>eine Kirche gegründet</strong> hat mit göttlicher Autorität und ihr die Führung des Heiligen Geistes versprochen hat.",
-      },
-      s4: {
-        en: "Acknowledge that this Church, through its <strong>apostolic succession</strong> and fidelity to Christ's command, is a divine legate.",
-        fr: "Reconnaissez que cette Église, par sa <strong>succession apostolique</strong> et sa fidélité au commandement du Christ, est un légat divin.",
-        es: "Reconozca que esta Iglesia, a través de su <strong>sucesión apostólica</strong> y fidelidad al mandato de Cristo, es un legado divino.",
-        de: "Erkennen Sie an, dass diese Kirche durch ihre <strong>apostolische Sukzession</strong> und Treue zu Christi Gebot eine göttliche Gesandtin ist.",
-      },
-      s5: {
-        en: "Receive the canon of Scripture as proposed by that Church, as a <strong>divinely revealed truth</strong>.",
-        fr: "Recevez le canon de l'Écriture tel que proposé par cette Église, comme une <strong>vérité divinement révélée</strong>.",
-        es: "Reciba el canon de la Escritura propuesto por esa Iglesia, como una <strong>verdad divinamente revelada</strong>.",
-        de: "Empfangen Sie den Kanon der Schrift, wie er von dieser Kirche vorgelegt wird, als eine <strong>göttlich offenbarte Wahrheit</strong>.",
-      },
-    },
-    quote1: {
-      en: `We do not begin by supposing their inspiration to prove the Church from the Bible and the Bible from the Church.
-This is a gross mischaracterization.`,
-      fr: `Nous ne commençons pas par supposer leur inspiration pour prouver l'Église par la Bible et la Bible par l'Église.
-C'est une grossière déformation.`,
-      es: `No comenzamos suponiendo su inspiración para probar la Iglesia a partir de la Biblia y la Biblia a partir de la Iglesia.
-Esto es una grave tergiversación.`,
-      de: `Wir beginnen nicht damit, ihre Inspiration vorauszusetzen, um die Kirche aus der Bibel und die Bibel aus der Kirche zu beweisen.
-Das ist eine grobe Falschdarstellung.`,
-    },
-    p2: {
-      en: `This is not circular.
-We do not start with an infallible Church and derive an inspired Bible, nor do we start with an inspired Bible to prove the Church.
-Rather, both are affirmed through a chain of rational credibility leading to supernatural revelation.`,
-      fr: `Ce n'est pas circulaire.
-Nous ne commençons pas avec une Église infaillible pour en déduire une Bible inspirée, ni ne commençons avec une Bible inspirée pour prouver l'Église.
-Au contraire, les deux sont affirmés par une chaîne de crédibilité rationnelle menant à la révélation surnaturelle.`,
-      es: `Esto no es circular.
-No partimos de una Iglesia infalible para derivar una Biblia inspirada, ni partimos de una Biblia inspirada para probar la Iglesia.
-Más bien, ambos se afirman a través de una cadena de credibilidad racional que conduce a la revelación sobrenatural.`,
-      de: `Das ist nicht zirkulär.
-Wir beginnen nicht mit einer unfehlbaren Kirche und leiten daraus eine inspirierte Bibel ab, noch beginnen wir mit einer inspirierten Bibel, um die Kirche zu beweisen.
-Vielmehr werden beide durch eine Kette rationaler Glaubwürdigkeit bestätigt, die zur übernatürlichen Offenbarung führt.`,
-    },
-    h3tradition: {
-      en: "The Role of Sacred Tradition",
-      fr: "Le Rôle de la Sainte Tradition",
-      es: "El Papel de la Sagrada Tradición",
-      de: "Die Rolle der Heiligen Tradition",
-    },
-    p3: {
-      en: `Sacred Tradition is not an inspired text in the same sense as Scripture.
-It is the <strong>living transmission</strong> of divine revelation entrusted by Christ to the apostles and their successors.
-It is authoritative and divine in origin but not reducible to written words.`,
-      fr: `La Sainte Tradition n'est pas un texte inspiré au même titre que l'Écriture.
-C'est la <strong>transmission vivante</strong> de la révélation divine confiée par le Christ aux apôtres et à leurs successeurs.
-Elle est autorisée et d'origine divine, mais non réductible à des mots écrits.`,
-      es: `La Sagrada Tradición no es un texto inspirado en el mismo sentido que la Escritura.
-Es la <strong>transmisión viva</strong> de la revelación divina confiada por Cristo a los apóstoles y sus sucesores.
-Es autoritativa y de origen divino, pero no reducible a palabras escritas.`,
-      de: `Die Heilige Tradition ist kein inspirierter Text im selben Sinne wie die Schrift.
-Sie ist die <strong>lebendige Überlieferung</strong> der göttlichen Offenbarung, die von Christus den Aposteln und ihren Nachfolgern anvertraut wurde.
-Sie ist autoritativ und göttlichen Ursprungs, aber nicht auf geschriebene Worte reduzierbar.`,
-    },
-    quote2: {
       text: {
-        en: "Sacred Tradition and Sacred Scripture form one sacred deposit of the word of God, committed to the Church.",
-        fr: "La Sainte Tradition et la Sainte Écriture constituent un unique dépôt sacré de la parole de Dieu, confié à l'Église.",
-        es: "La Sagrada Tradición y la Sagrada Escritura forman un solo depósito sagrado de la palabra de Dios, confiado a la Iglesia.",
-        de: "Die Heilige Tradition und die Heilige Schrift bilden einen einzigen heiligen Schatz des Wortes Gottes, der der Kirche anvertraut ist.",
+        en: "Do you understand what you are reading? How can I, unless someone guides me?",
+        fr: "Comprends-tu ce que tu lis ? Comment le pourrais-je, si personne ne me guide ?",
+        es: "¿Entiendes lo que lees? ¿Cómo podré, si alguno no me enseñare?",
+        de: "Verstehst du auch, was du liest? Wie kann ich, wenn mich nicht jemand anleitet?",
       },
       source: {
-        en: "Dei Verbum §9",
-        fr: "Dei Verbum §9",
-        es: "Dei Verbum §9",
-        de: "Dei Verbum §9",
+        en: "Acts 8:30-31",
+        fr: "Actes 8:30-31",
+        es: "Hechos 8:30-31",
+        de: "Apostelgeschichte 8:30-31",
       },
     },
-    p4: {
-      en: `Tradition makes known what has been revealed, including the fact of inspiration for the canon.
-It does not replace revelation; it transmits it faithfully.`,
-      fr: `La Tradition fait connaître ce qui a été révélé, y compris le fait de l'inspiration pour le canon.
-Elle ne remplace pas la révélation ; elle la transmet fidèlement.`,
-      es: `La Tradición da a conocer lo que ha sido revelado, incluido el hecho de la inspiración para el canon.
-No reemplaza la revelación; la transmite fielmente.`,
-      de: `Die Tradition macht bekannt, was offenbart wurde, einschließlich der Tatsache der Inspiration für den Kanon.
-Sie ersetzt nicht die Offenbarung; sie übermittelt sie treu.`,
+    intro: {
+      h2: {
+        en: "Introduction: The Difficult Task of Protestant-Catholic Apologetics",
+        fr: "Introduction : La Tâche Difficile de l'Apologétique Protestante-Catholique",
+        es: "Introducción: La Difícil Tarea de la Apologética Protestante-Católica",
+        de: "Einführung: Die Schwierige Aufgabe der Protestantisch-Katholischen Apologetik",
+      },
+      quote: {
+        en: "Anytime you make an apologetic argument against Protestantism, you are surrounded by a number of pitfalls that make it an almost impossible task.",
+        fr: "Chaque fois que vous avancez un argument apologétique contre le protestantisme, vous êtes entouré de nombreux pièges qui en font une tâche presque impossible.",
+        es: "Cada vez que se presenta un argumento apologético contra el protestantismo, se está rodeado de una serie de escollos que lo convierten en una tarea casi imposible.",
+        de: "Jedes Mal, wenn man ein apologetisches Argument gegen den Protestantismus vorbringt, ist man von einer Reihe von Fallstricken umgeben, die es zu einer fast unmöglichen Aufgabe machen.",
+      },
+      p1: {
+        en: "Whenever an apologetic argument is made against Protestantism, a number of pitfalls arise. Oversimplify the argument, and it loses depth. Make it overly complex, and it becomes inaccessible. If the argument is too broad, some Protestants will feel misrepresented. If too narrow, it fails to address Protestantism as a whole.",
+        fr: "Chaque fois qu'un argument apologétique est avancé contre le protestantisme, un certain nombre d'écueils surgissent. Simplifiez à l'excès l'argument, et il perd de sa profondeur. Rendez-le trop complexe, et il devient inaccessible. Si l'argument est trop large, certains protestants se sentiront mal représentés. S'il est trop étroit, il ne parvient pas à aborder le protestantisme dans son ensemble.",
+        es: "Cada vez que se presenta un argumento apologético contra el protestantismo, surgen una serie de escollos. Si se simplifica demasiado el argumento, pierde profundidad. Si se hace demasiado complejo, se vuelve inaccesible. Si el argumento es demasiado amplio, algunos protestantes se sentirán tergiversados. Si es demasiado estrecho, no logra abordar el protestantismo en su conjunto.",
+        de: "Immer wenn ein apologetisches Argument gegen den Protestantismus vorgebracht wird, tauchen eine Reihe von Fallstricken auf. Vereinfacht man das Argument zu sehr, verliert es an Tiefe. Macht man es zu komplex, wird es unzugänglich. Ist das Argument zu weit gefasst, fühlen sich manche Protestanten falsch dargestellt. Ist es zu eng, verfehlt es, den Protestantismus als Ganzes anzusprechen.",
+      },
+      p2: {
+        en: "Every decision in this work is made for the good of Protestant listeners and for the salvation of their souls. There is no intent to strawman or misrepresent, and no ignorance of Protestant sources. Charity is requested, and a sincere, open-minded examination.",
+        fr: "Chaque décision dans ce travail est prise pour le bien des auditeurs protestants et pour le salut de leurs âmes. Il n'y a aucune intention de caricaturer ou de déformer, ni d'ignorer les sources protestantes. La charité est demandée, ainsi qu'un examen sincère et ouvert d'esprit.",
+        es: "Cada decisión en este trabajo se toma por el bien de los oyentes protestantes y por la salvación de sus almas. No hay intención de crear hombres de paja ni de tergiversar, ni ignorancia de las fuentes protestantes. Se solicita caridad y un examen sincero y de mente abierta.",
+        de: "Jede Entscheidung in dieser Arbeit wird zum Wohl der protestantischen Zuhörer und zum Heil ihrer Seelen getroffen. Es besteht keine Absicht, Strohmänner aufzubauen oder falsch darzustellen, und keine Unkenntnis protestantischer Quellen. Es wird um Nächstenliebe und eine aufrichtige, aufgeschlossene Prüfung gebeten.",
+      },
     },
-    h3magisterium: {
-      en: "Magisterial Authority",
-      fr: "Autorité Magistérielle",
-      es: "Autoridad Magisterial",
-      de: "Lehramtliche Autorität",
+    video: {
+      title: {
+        en: "Sola Scriptura is Impossible",
+        fr: "Sola Scriptura est Impossible",
+        es: "Sola Scriptura es Imposible",
+        de: "Sola Scriptura ist Unmöglich",
+      },
     },
-    p5: {
-      en: `The Magisterium, the Church's teaching office, authentically interprets and proposes what has been revealed.
-This includes dogmas, moral teachings, and the canon of Scripture. The Church does not create inspiration;
-it discerns and declares what God has revealed.`,
-      fr: `Le Magistère, la charge d'enseignement de l'Église, interprète authentiquement et propose ce qui a été révélé.
-Cela inclut les dogmes, les enseignements moraux et le canon de l'Écriture. L'Église ne crée pas l'inspiration ;
-elle discerne et déclare ce que Dieu a révélé.`,
-      es: `El Magisterio, el oficio de enseñanza de la Iglesia, interpreta auténticamente y propone lo que ha sido revelado.
-Esto incluye dogmas, enseñanzas morales y el canon de la Escritura. La Iglesia no crea la inspiración;
-discierne y declara lo que Dios ha revelado.`,
-      de: `Das Lehramt, das Lehramt der Kirche, legt authentisch aus und legt vor, was offenbart wurde.
-Dazu gehören Dogmen, Morallehren und der Kanon der Schrift. Die Kirche schafft keine Inspiration;
-sie unterscheidet und erklärt, was Gott offenbart hat.`,
+    summary: {
+      h2: {
+        en: "Summary of the Argument",
+        fr: "Résumé de l'Argument",
+        es: "Resumen del Argumento",
+        de: "Zusammenfassung des Arguments",
+      },
+      p1: {
+        en: "The argument is simple:",
+        fr: "L'argument est simple :",
+        es: "El argumento es simple:",
+        de: "Das Argument ist einfach:",
+      },
+      callout: {
+        p1: {
+          en: "In the Protestant view, there is no consistent way to make an act of faith in the fact that the books of the New Testament are divinely inspired.",
+          fr: "Du point de vue protestant, il n'y a aucun moyen cohérent de faire un acte de foi dans le fait que les livres du Nouveau Testament sont divinement inspirés.",
+          es: "Desde el punto de vista protestante, no existe una forma coherente de hacer un acto de fe en el hecho de que los libros del Nuevo Testamento están divinamente inspirados.",
+          de: "Nach protestantischer Auffassung gibt es keine konsistente Möglichkeit, einen Glaubensakt hinsichtlich der Tatsache zu vollziehen, dass die Bücher des Neuen Testaments göttlich inspiriert sind.",
+        },
+       p2: {
+  en: "This is because that knowledge must come to us by divine revelation through sacred tradition, proposed authoritatively by the Magisterium, elements rejected by the Protestant rule of faith (<em>Sola Scriptura</em>).",
+  fr: "C'est parce que cette connaissance doit nous parvenir par la révélation divine à travers la sainte tradition, proposée avec autorité par le Magistère, éléments rejetés par la règle de foi protestante (<em>Sola Scriptura</em>).",
+  es: "Esto se debe a que ese conocimiento debe llegarnos por revelación divina a través de la sagrada tradición, propuesta autoritativamente por el Magisterio, elementos rechazados por la regla de fe protestante (<em>Sola Scriptura</em>).",
+  de: "Dies liegt daran, dass uns dieses Wissen durch göttliche Offenbarung durch die heilige Tradition übermittelt werden muss, die vom Lehramt autoritativ vorgelegt wird, Elemente, die von der protestantischen Glaubensregel (<em>Sola Scriptura</em>) abgelehnt werden.",
+},
+      },
+      p2: {
+        en: "Common Protestant objections are anticipated: appeals to tradition, ecclesial authority, motives of credibility, or accusations of circularity. These will be answered clearly and fairly.",
+        fr: "Les objections protestantes courantes sont anticipées : appels à la tradition, à l'autorité ecclésiale, aux motifs de crédibilité ou accusations de circularité. Celles-ci recevront une réponse claire et juste.",
+        es: "Se anticipan las objeciones protestantes comunes: apelaciones a la tradición, la autoridad eclesial, los motivos de credibilidad o acusaciones de circularidad. Estas serán respondidas con claridad y justicia.",
+        de: "Gängige protestantische Einwände werden erwartet: Berufungen auf Tradition, kirchliche Autorität, Glaubwürdigkeitsmotive oder Vorwürfe der Zirkularität. Diese werden klar und fair beantwortet.",
+      },
     },
+    presumption: {
+      h2: {
+        en: "Presumption of the Case and State of the Question",
+        fr: "Présomption de la Cause et État de la Question",
+        es: "Presunción del Caso y Estado de la Cuestión",
+        de: "Annahme des Falles und Stand der Frage",
+      },
+      p1: {
+        en: "Two classical rhetorical principles frame the debate:",
+        fr: "Deux principes rhétoriques classiques encadrent le débat :",
+        es: "Dos principios retóricos clásicos enmarcan el debate:",
+        de: "Zwei klassische rhetorische Prinzipien bilden den Rahmen der Debatte:",
+      },
+      presumptionCase: {
+        h3: {
+          en: "Presumption of the Case",
+          fr: "Présomption de la Cause",
+          es: "Presunción del Caso",
+          de: "Annahme des Falles",
+        },
+        p1: {
+          en: "Arguments are built on shared assumptions. Papal encyclicals are not cited against Protestants. Instead, Scripture, reason, and Protestant sources are used. Shared axioms on faith and revelation are the foundation.",
+          fr: "Les arguments sont construits sur des hypothèses partagées. Les encycliques papales ne sont pas citées contre les protestants. Au lieu de cela, l'Écriture, la raison et les sources protestantes sont utilisées. Des axiomes partagés sur la foi et la révélation en sont le fondement.",
+          es: "Los argumentos se construyen sobre supuestos compartidos. No se citan encíclicas papales contra los protestantes. En su lugar, se utilizan la Escritura, la razón y las fuentes protestantes. Los axiomas compartidos sobre la fe y la revelación son la base.",
+          de: "Argumente werden auf gemeinsamen Annahmen aufgebaut. Päpstliche Enzykliken werden nicht gegen Protestanten zitiert. Stattdessen werden Schrift, Vernunft und protestantische Quellen verwendet. Gemeinsame Axiome über Glauben und Offenbarung bilden die Grundlage.",
+        },
+      },
+      stateQuestion: {
+        h3: {
+          en: "State of the Question",
+          fr: "État de la Question",
+          es: "Estado de la Cuestión",
+          de: "Stand der Frage",
+        },
+        p1: {
+          en: "The issue is not proving Catholicism. It is evaluating whether the Protestant doctrine of <em>Sola Scriptura</em> can account for the canon of Scripture. Protestants must:",
+          fr: "Le problème n'est pas de prouver le catholicisme. Il s'agit d'évaluer si la doctrine protestante de <em>Sola Scriptura</em> peut expliquer le canon de l'Écriture. Les protestants doivent :",
+          es: "La cuestión no es probar el catolicismo. Es evaluar si la doctrina protestante de <em>Sola Scriptura</em> puede dar cuenta del canon de la Escritura. Los protestantes deben:",
+          de: "Es geht nicht darum, den Katholizismus zu beweisen. Es geht darum zu bewerten, ob die protestantische Lehre von <em>Sola Scriptura</em> den Kanon der Schrift erklären kann. Protestanten müssen:",
+        },
+        li1: {
+          en: "Prove their doctrine does not fall into contradiction.",
+          fr: "Prouver que leur doctrine ne tombe pas en contradiction.",
+          es: "Probar que su doctrina no cae en contradicción.",
+          de: "Beweisen, dass ihre Lehre nicht in Widerspruch gerät.",
+        },
+        li2: {
+          en: "Or show that the contradiction does not follow.",
+          fr: "Ou montrer que la contradiction ne s'ensuit pas.",
+          es: "O demostrar que la contradicción no se sigue.",
+          de: "Oder zeigen, dass der Widerspruch nicht folgt.",
+        },
+        p2: {
+          en: "Too often, Protestant replies do anything but address the actual state of the question.",
+          fr: "Trop souvent, les réponses protestantes font tout sauf aborder l'état réel de la question.",
+          es: "Con demasiada frecuencia, las respuestas protestantes hacen cualquier cosa menos abordar el estado real de la cuestión.",
+          de: "Allzu oft tun protestantische Antworten alles andere, als sich mit dem tatsächlichen Stand der Frage zu befassen.",
+        },
+      },
+    },
+    whatIsSS: {
+      h2: {
+        en: "What Is Sola Scriptura?",
+        fr: "Qu'est-ce que Sola Scriptura ?",
+        es: "¿Qué es Sola Scriptura?",
+        de: "Was ist Sola Scriptura?",
+      },
+      p1: {
+        en: "The doctrine under critique is not merely that Scripture is the only <strong>infallible</strong> rule of faith, but that:",
+        fr: "La doctrine critiquée n'est pas simplement que l'Écriture est la seule règle de foi <strong>infaillible</strong>, mais que :",
+        es: "La doctrina bajo crítica no es simplemente que la Escritura es la única regla de fe <strong>infalible</strong>, sino que:",
+        de: "Die kritisierte Lehre ist nicht nur, dass die Schrift die einzige <strong>unfehlbare</strong> Glaubensregel ist, sondern dass:",
+      },
+      callout: {
+        en: "Scripture alone is the rule of faith.",
+        fr: "L'Écriture seule est la règle de foi.",
+        es: "La Escritura sola es la regla de fe.",
+        de: "Die Schrift allein ist die Glaubensregel.",
+      },
+      p2: {
+        en: "This is the classical formulation. Confessions affirm this clearly:",
+        fr: "C'est la formulation classique. Les confessions l'affirment clairement :",
+        es: "Esta es la formulación clásica. Las confesiones lo afirman claramente:",
+        de: "Das ist die klassische Formulierung. Bekenntnisse bestätigen dies deutlich:",
+      },
+      confessions: {
+        c1: {
+          en: "<strong>Westminster Confession:</strong> Synods or councils are not to be made the rule of faith.",
+          fr: "<strong>Confession de Westminster :</strong> Les synodes ou conciles ne doivent pas être érigés en règle de foi.",
+          es: "<strong>Confesión de Westminster:</strong> Los sínodos o concilios no deben convertirse en la regla de fe.",
+          de: "<strong>Westminster-Bekenntnis:</strong> Synoden oder Konzilien dürfen nicht zur Glaubensregel gemacht werden.",
+        },
+        c2: {
+          en: "<strong>Westminster Larger Catechism:</strong> Scripture is the only rule of faith and obedience.",
+          fr: "<strong>Grand Catéchisme de Westminster :</strong> L'Écriture est la seule règle de foi et d'obéissance.",
+          es: "<strong>Catecismo Mayor de Westminster:</strong> La Escritura es la única regla de fe y obediencia.",
+          de: "<strong>Größerer Westminster-Katechismus:</strong> Die Schrift ist die einzige Regel des Glaubens und des Gehorsams.",
+        },
+        c3: {
+          en: "<strong>Helvetic Consensus:</strong> Scripture is the sole and complete rule.",
+          fr: "<strong>Consensus Helvétique :</strong> L'Écriture est la seule et complète règle.",
+          es: "<strong>Consenso Helvético:</strong> La Escritura es la única y completa regla.",
+          de: "<strong>Helvetischer Konsens:</strong> Die Schrift ist die alleinige und vollständige Regel.",
+        },
+        c4: {
+          en: "<strong>Formula of Concord:</strong> God's word alone is the guiding principle.",
+          fr: "<strong>Formule de Concorde :</strong> La parole de Dieu seule est le principe directeur.",
+          es: "<strong>Fórmula de la Concordia:</strong> Solo la palabra de Dios es el principio rector.",
+          de: "<strong>Konkordienformel:</strong> Gottes Wort allein ist der Leitfaden.",
+        },
+      },
+      p3: {
+        en: "Modern Protestant attempts to add the word <em>infallible</em> shift the meaning. This addition is inconsistent with classical theology. For example:",
+        fr: "Les tentatives protestantes modernes d'ajouter le mot <em>infaillible</em> déplacent le sens. Cet ajout est incompatible avec la théologie classique. Par exemple :",
+        es: "Los intentos protestantes modernos de añadir la palabra <em>infalible</em> cambian el significado. Esta adición es inconsistente con la teología clásica. Por ejemplo:",
+        de: "Moderne protestantische Versuche, das Wort <em>unfehlbar</em> hinzuzufügen, verschieben die Bedeutung. Diese Hinzufügung ist unvereinbar mit der klassischen Theologie. Zum Beispiel:",
+      },
+      li1: {
+        en: "Moses Amyraut and Richard Baxter believed infallibility could apply to councils.",
+        fr: "Moïse Amyraut et Richard Baxter croyaient que l'infaillibilité pouvait s'appliquer aux conciles.",
+        es: "Moses Amyraut y Richard Baxter creían que la infalibilidad podía aplicarse a los concilios.",
+        de: "Moses Amyraut und Richard Baxter glaubten, dass Unfehlbarkeit auch für Konzilien gelten könnte.",
+      },
+      li2: {
+        en: "Catholics distinguish between fallible and infallible rules of faith.",
+        fr: "Les catholiques distinguent entre les règles de foi faillibles et infaillibles.",
+        es: "Los católicos distinguen entre reglas de fe falibles e infalibles.",
+        de: "Katholiken unterscheiden zwischen fehlbaren und unfehlbaren Glaubensregeln.",
+      },
+      p4: {
+  en: "Being a rule of faith means having <strong>authenticity</strong>, the authority to bind conscience. Tradition and ecclesial authority may assist in interpretation, but in <em>Sola Scriptura</em> they do not bind.",
+  fr: "Être une règle de foi signifie avoir l'<strong>authenticité</strong>, l'autorité de lier la conscience. La tradition et l'autorité ecclésiale peuvent aider à l'interprétation, mais dans <em>Sola Scriptura</em>, elles ne lient pas.",
+  es: "Ser una regla de fe significa tener <strong>autenticidad</strong>, la autoridad para obligar la conciencia. La tradición y la autoridad eclesial pueden ayudar en la interpretación, pero en <em>Sola Scriptura</em> no obligan.",
+  de: "Eine Glaubensregel zu sein bedeutet, <strong>Authentizität</strong> zu haben, die Autorität, das Gewissen zu binden. Tradition und kirchliche Autorität können bei der Interpretation helfen, aber bei <em>Sola Scriptura</em> binden sie nicht.",
+},
+    },
+    natureOfFaith: {
+      h2: {
+        en: "The Nature of Faith",
+        fr: "La Nature de la Foi",
+        es: "La Naturaleza de la Fe",
+        de: "Das Wesen des Glaubens",
+      },
+      p1: {
+        en: "Understanding <em>faith</em> is key. Dogmatic faith (not fiduciary faith) is distinct from sense perception, self-evident principles, or demonstration. Lude Le Blanc writes:",
+        fr: "Comprendre la <em>foi</em> est essentiel. La foi dogmatique (et non la foi fiduciaire) se distingue de la perception sensorielle, des principes évidents par eux-mêmes ou de la démonstration. Lude Le Blanc écrit :",
+        es: "Entender la <em>fe</em> es clave. La fe dogmática (no la fe fiduciaria) es distinta de la percepción sensorial, los principios autoevidentes o la demostración. Lude Le Blanc escribe:",
+        de: "Das Verständnis des <em>Glaubens</em> ist entscheidend. Der dogmatische Glaube (nicht der fiduziarische Glaube) unterscheidet sich von der Sinneswahrnehmung, selbstverständlichen Prinzipien oder der Demonstration. Lude Le Blanc schreibt:",
+      },
+      quote: {
+        en: "We do not properly hold by faith those things which we perceive by sense, nor also those things which have been necessarily and evidently demonstrated to us.",
+        fr: "Nous ne tenons pas proprement par la foi les choses que nous percevons par les sens, ni non plus les choses qui nous ont été nécessairement et évidemment démontrées.",
+        es: "No sostenemos propiamente por fe aquellas cosas que percibimos por los sentidos, ni tampoco aquellas cosas que nos han sido demostrada necesaria y evidentemente.",
+        de: "Wir halten nicht eigentlich durch Glauben jene Dinge, die wir durch die Sinne wahrnehmen, noch auch jene Dinge, die uns notwendig und offensichtlich bewiesen wurden.",
+      },
+      source: {
+        en: "Lude Le Blanc",
+        fr: "Lude Le Blanc",
+        es: "Lude Le Blanc",
+        de: "Lude Le Blanc",
+      },
+      p2: {
+        en: "Faith includes:",
+        fr: "La foi inclut :",
+        es: "La fe incluye:",
+        de: "Glaube beinhaltet:",
+      },
+      elements: {
+        e1: {
+          label: {
+            en: "Principle",
+            fr: "Principe",
+            es: "Principio",
+            de: "Prinzip",
+          },
+          desc: {
+            en: "Grace stirred by the Holy Spirit",
+            fr: "La grâce mue par le Saint-Esprit",
+            es: "La gracia movida por el Espíritu Santo",
+            de: "Gnade, angeregt durch den Heiligen Geist",
+          },
+        },
+        e2: {
+          label: {
+            en: "Material Object",
+            fr: "Objet Matériel",
+            es: "Objeto Material",
+            de: "Materielles Objekt",
+          },
+          desc: {
+            en: "Supernatural truth",
+            fr: "Vérité surnaturelle",
+            es: "Verdad sobrenatural",
+            de: "Übernatürliche Wahrheit",
+          },
+        },
+        e3: {
+          label: {
+            en: "Formal Object",
+            fr: "Objet Formel",
+            es: "Objeto Formal",
+            de: "Formelles Objekt",
+          },
+          desc: {
+            en: "Believed as revealed by God",
+            fr: "Cru comme révélé par Dieu",
+            es: "Creído como revelado por Dios",
+            de: "Geglaubt als von Gott offenbart",
+          },
+        },
+      },
+      faithVsVision: {
+        h3: {
+          en: "Faith vs Vision",
+          fr: "Foi vs Vision",
+          es: "Fe vs Visión",
+          de: "Glaube vs. Schau",
+        },
+        p1: {
+          en: "What is believed by faith now will be known by sight in the beatific vision. When divine truths are seen directly, faith is abolished, not perfected.",
+          fr: "Ce qui est cru par la foi maintenant sera connu par la vue dans la vision béatifique. Lorsque les vérités divines sont vues directement, la foi est abolie, et non perfectionnée.",
+          es: "Lo que se cree por fe ahora, se conocerá por visión en la visión beatífica. Cuando las verdades divinas se ven directamente, la fe se anula, no se perfecciona.",
+          de: "Was jetzt im Glauben geglaubt wird, wird in der beseligenden Schau durch Sehen erkannt. Wenn göttliche Wahrheiten direkt gesehen werden, wird der Glaube abgeschafft, nicht vervollkommnet.",
+        },
+      },
+    },
+    definitions: {
+      h2: {
+        en: "Revelation, Infallibility, and Inspiration",
+        fr: "Révélation, Infaillibilité et Inspiration",
+        es: "Revelación, Infalibilidad e Inspiración",
+        de: "Offenbarung, Unfehlbarkeit und Inspiration",
+      },
+      p1: {
+        en: "These three terms must be distinguished:",
+        fr: "Ces trois termes doivent être distingués :",
+        es: "Estos tres términos deben distinguirse:",
+        de: "Diese drei Begriffe müssen unterschieden werden:",
+      },
+      terms: {
+        t1: {
+          term: {
+            en: "Divine Revelation",
+            fr: "Révélation Divine",
+            es: "Revelación Divina",
+            de: "Göttliche Offenbarung",
+          },
+          def: {
+            en: "God speaking to man, typically through prophets or apostles.",
+            fr: "Dieu parlant à l'homme, généralement par des prophètes ou des apôtres.",
+            es: "Dios hablando al hombre, típicamente a través de profetas o apóstoles.",
+            de: "Gott spricht zum Menschen, typischerweise durch Propheten oder Apostel.",
+          },
+        },
+        t2: {
+          term: {
+            en: "Infallibility",
+            fr: "Infaillibilité",
+            es: "Infalibilidad",
+            de: "Unfehlbarkeit",
+          },
+          def: {
+            en: "Freedom from error, either absolute or in a restricted domain.",
+            fr: "Absence d'erreur, soit absolue, soit dans un domaine restreint.",
+            es: "Libertad de error, ya sea absoluta o en un dominio restringido.",
+            de: "Freiheit von Irrtum, entweder absolut oder in einem begrenzten Bereich.",
+          },
+        },
+        t3: {
+          term: {
+            en: "Inspiration",
+            fr: "Inspiration",
+            es: "Inspiración",
+            de: "Inspiration",
+          },
+          def: {
+            en: "The very words are authored by God.",
+            fr: "Les mots mêmes sont écrits par Dieu.",
+            es: "Las mismas palabras tienen a Dios por autor.",
+            de: "Die Worte selbst sind von Gott verfasst.",
+          },
+        },
+      },
+      callout: {
+        p1: {
+          en: "A prophet may communicate revelation, even infallibly, without inspiration. For example, Paul may preach with divine authority without every word being divinely authored.",
+          fr: "Un prophète peut communiquer la révélation, même infailliblement, sans inspiration. Par exemple, Paul peut prêcher avec une autorité divine sans que chaque mot soit divinement écrit.",
+          es: "Un profeta puede comunicar la revelación, incluso infaliblemente, sin inspiración. Por ejemplo, Pablo puede predicar con autoridad divina sin que cada palabra sea de autoría divina.",
+          de: "Ein Prophet kann Offenbarung mitteilen, sogar unfehlbar, ohne Inspiration. Zum Beispiel kann Paulus mit göttlicher Autorität predigen, ohne dass jedes Wort göttlich verfasst ist.",
+        },
+        p2: {
+          en: "<strong>Inspiration is mysterious and interior.</strong> It is not publicly verifiable. Therefore, the knowledge that a book is inspired must come through divine revelation. This presents a problem for Protestants.",
+          fr: "<strong>L'inspiration est mystérieuse et intérieure.</strong> Elle n'est pas vérifiable publiquement. Par conséquent, la connaissance qu'un livre est inspiré doit provenir de la révélation divine. Cela pose un problème aux protestants.",
+          es: "<strong>La inspiración es misteriosa e interior.</strong> No es verificable públicamente. Por lo tanto, el conocimiento de que un libro es inspirado debe venir a través de la revelación divina. Esto presenta un problema para los protestantes.",
+          de: "<strong>Inspiration ist geheimnisvoll und innerlich.</strong> Sie ist nicht öffentlich nachprüfbar. Daher muss das Wissen, dass ein Buch inspiriert ist, durch göttliche Offenbarung kommen. Dies stellt ein Problem für Protestanten dar.",
+        },
+      },
+    },
+    argument: {
+      h2: {
+        en: "Restating the Argument Fully",
+        fr: "Reformulation Complète de l'Argument",
+        es: "Reexposición Completa del Argumento",
+        de: "Das Argument vollständig neu formuliert",
+      },
+      li1: {
+        en: "<em>Sola Scriptura</em> claims Scripture is the sole rule of faith.",
+        fr: "<em>Sola Scriptura</em> prétend que l'Écriture est la seule règle de foi.",
+        es: "<em>Sola Scriptura</em> afirma que la Escritura es la única regla de fe.",
+        de: "<em>Sola Scriptura</em> behauptet, die Schrift sei die alleinige Glaubensregel.",
+      },
+      li2: {
+        en: "The fact that a book is divinely inspired must be believed by faith.",
+        fr: "Le fait qu'un livre soit divinement inspiré doit être cru par la foi.",
+        es: "El hecho de que un libro esté divinamente inspirado debe creerse por fe.",
+        de: "Die Tatsache, dass ein Buch göttlich inspiriert ist, muss im Glauben angenommen werden.",
+      },
+      li3: {
+        en: "Faith requires divine revelation.",
+        fr: "La foi exige la révélation divine.",
+        es: "La fe requiere revelación divina.",
+        de: "Glaube erfordert göttliche Offenbarung.",
+      },
+      li4: {
+        en: "The inspiration of the New Testament books is not found in Scripture.",
+        fr: "L'inspiration des livres du Nouveau Testament ne se trouve pas dans l'Écriture.",
+        es: "La inspiración de los libros del Nuevo Testamento no se encuentra en la Escritura.",
+        de: "Die Inspiration der Bücher des Neuen Testaments findet sich nicht in der Schrift.",
+      },
+      li5: {
+        en: "<strong>Therefore</strong>, Protestants must appeal to an extrabiblical source of divine revelation.",
+        fr: "<strong>Par conséquent</strong>, les protestants doivent faire appel à une source extrabiblique de révélation divine.",
+        es: "<strong>Por lo tanto</strong>, los protestantes deben apelar a una fuente extrabíblica de revelación divina.",
+        de: "<strong>Daher</strong> müssen sich Protestanten auf eine außerbiblische Quelle göttlicher Offenbarung berufen.",
+      },
+      li6: {
+        en: "<strong>Therefore</strong>, <em>Sola Scriptura</em> cannot consistently account for the canon.",
+        fr: "<strong>Par conséquent</strong>, <em>Sola Scriptura</em> ne peut pas expliquer de manière cohérente le canon.",
+        es: "<strong>Por lo tanto</strong>, <em>Sola Scriptura</em> no puede dar cuenta consistentemente del canon.",
+        de: "<strong>Daher</strong> kann <em>Sola Scriptura</em> den Kanon nicht konsistent erklären.",
+      },
+      li7: {
+        en: "But <em>Sola Scriptura</em> rejects such sources.",
+        fr: "Mais <em>Sola Scriptura</em> rejette de telles sources.",
+        es: "Pero <em>Sola Scriptura</em> rechaza tales fuentes.",
+        de: "Aber <em>Sola Scriptura</em> lehnt solche Quellen ab.",
+      },
+      p1: {
+        en: "The Catholic account avoids this problem by appealing to divine revelation transmitted through sacred tradition and authoritatively taught by the Church.",
+        fr: "Le récit catholique évite ce problème en faisant appel à la révélation divine transmise par la sainte tradition et enseignée avec autorité par l'Église.",
+        es: "El relato católico evita este problema apelando a la revelación divina transmitida a través de la sagrada tradición y enseñada autoritativamente por la Iglesia.",
+        de: "Die katholische Darstellung vermeidet dieses Problem, indem sie sich auf die göttliche Offenbarung beruft, die durch die heilige Tradition überliefert und von der Kirche autoritativ gelehrt wird.",
+      },
+    },
+    tuQuoque: {
+      h2: {
+        en: "The Tu Quoque Objection: Does Catholicism Have the Same Problem?",
+        fr: "L'Objection Tu Quoque : le Catholicisme a-t-il le Même Problème ?",
+        es: "La Objeción Tu Quoque: ¿Tiene el Catolicismo el Mismo Problema?",
+        de: "Der Tu-Quoque-Einwand: Hat der Katholizismus das Gleiche Problem?",
+      },
+      p1: {
+        en: "Some Protestants will respond that Catholics have the same problem: if inspiration must be known through divine revelation, doesn't that create an infinite regress? Doesn't Catholicism also fall into circularity?",
+        fr: "Certains protestants répondront que les catholiques ont le même problème : si l'inspiration doit être connue par la révélation divine, cela ne crée-t-il pas une régression à l'infini ? Le catholicisme ne tombe-t-il pas aussi dans la circularité ?",
+        es: "Algunos protestantes responderán que los católicos tienen el mismo problema: si la inspiración debe conocerse a través de la revelación divina, ¿no crea eso una regresión infinita? ¿No cae también el catolicismo en la circularidad?",
+        de: "Einige Protestanten werden antworten, dass Katholiken dasselbe Problem haben: Wenn Inspiration durch göttliche Offenbarung erkannt werden muss, schafft das nicht einen unendlichen Regress? Fällt der Katholizismus nicht auch in Zirkularität?",
+      },
+      callout: {
+        h4: {
+          en: "No. The Catholic model avoids these problems:",
+          fr: "Non. Le modèle catholique évite ces problèmes :",
+          es: "No. El modelo católico evita estos problemas:",
+          de: "Nein. Das katholische Modell vermeidet diese Probleme:",
+        },
+        li1: {
+          en: "<strong>We do not say</strong> that divine revelation needs a divine revelation to confirm it.",
+          fr: "<strong>Nous ne disons pas</strong> que la révélation divine a besoin d'une révélation divine pour la confirmer.",
+          es: "<strong>No decimos</strong> que la revelación divina necesite otra revelación divina que la confirme.",
+          de: "<strong>Wir sagen nicht</strong>, dass göttliche Offenbarung einer göttlichen Offenbarung bedarf, um sie zu bestätigen.",
+        },
+        li2: {
+          en: "Rather, we say that <em>inspiration</em> is a revealed fact which must be proposed for belief.",
+          fr: "Nous disons plutôt que l'<em>inspiration</em> est un fait révélé qui doit être proposé à la foi.",
+          es: "Más bien, decimos que la <em>inspiración</em> es un hecho revelado que debe ser propuesto para la fe.",
+          de: "Vielmehr sagen wir, dass <em>Inspiration</em> eine geoffenbarte Tatsache ist, die zum Glauben vorgelegt werden muss.",
+        },
+        li3: {
+          en: "The Church is a divine legate, authenticated by Christ, and thus can propose the canon.",
+          fr: "L'Église est un légat divin, authentifié par le Christ, et peut donc proposer le canon.",
+          es: "La Iglesia es un legado divino, autenticado por Cristo, y por lo tanto puede proponer el canon.",
+          de: "Die Kirche ist ein göttlicher Gesandter, von Christus beglaubigt, und kann daher den Kanon vorlegen.",
+        },
+      },
+      p2: {
+        en: "This is not circular because we begin with the historical reliability of the Gospels, establish Christ's authority through motives of credibility, and then proceed to the Church's authority as His appointed legate.",
+        fr: "Ce n'est pas circulaire car nous commençons par la fiabilité historique des Évangiles, établissons l'autorité du Christ par des motifs de crédibilité, puis procédons à l'autorité de l'Église en tant que Son légat désigné.",
+        es: "Esto no es circular porque comenzamos con la fiabilidad histórica de los Evangelios, establecemos la autoridad de Cristo a través de motivos de credibilidad, y luego procedemos a la autoridad de la Iglesia como Su legado designado.",
+        de: "Das ist nicht zirkulär, weil wir mit der historischen Zuverlässigkeit der Evangelien beginnen, Christi Autorität durch Glaubwürdigkeitsmotive etablieren und dann zur Autorität der Kirche als Seiner ernannten Gesandtin übergehen.",
+      },
+    },
+    counterarguments: {
+      h2: {
+        en: "Addressing Protestant Counterarguments",
+        fr: "Répondre aux Contre-Arguments Protestants",
+        es: "Abordando los Contraargumentos Protestantes",
+        de: "Behandlung Protestantischer Gegenargumente",
+      },
+      c1: {
+        h3: {
+          en: "1. Illumination of the Spirit",
+          fr: "1. Illumination de l'Esprit",
+          es: "1. Iluminación del Espíritu",
+          de: "1. Erleuchtung durch den Geist",
+        },
+        p1: {
+  en: "Some Protestants say the Spirit testifies internally to the canon. But this cannot supply the <strong>formal object</strong> of faith, that it is revealed by God. If the Spirit provides this directly, then each Christian receives a private revelation of the canon, which Protestants reject. If it does not, then the formal object is missing.",
+  fr: "Certains protestants disent que l'Esprit témoigne intérieurement du canon. Mais cela ne peut pas fournir l'<strong>objet formel</strong> de la foi, qu'il est révélé par Dieu. Si l'Esprit fournit cela directement, alors chaque chrétien reçoit une révélation privée du canon, ce que les protestants rejettent. Si ce n'est pas le cas, alors l'objet formel est manquant.",
+  es: "Algunos protestantes dicen que el Espíritu testifica internamente sobre el canon. Pero esto no puede suministrar el <strong>objeto formal</strong> de la fe, que es revelado por Dios. Si el Espíritu proporciona esto directamente, entonces cada cristiano recibe una revelación privada del canon, lo cual los protestantes rechazan. Si no lo hace, entonces falta el objeto formal.",
+  de: "Einige Protestanten sagen, der Geist bezeuge innerlich den Kanon. Dies kann jedoch nicht das <strong>formale Objekt</strong> des Glaubens liefern, dass es von Gott offenbart ist. Wenn der Geist dies direkt bereitstellt, empfängt jeder Christ eine private Offenbarung des Kanons, was Protestanten ablehnen. Wenn nicht, fehlt das formale Objekt.",
+},
+      },
+      c2: {
+        h3: {
+          en: "2. Canon Contained in Scripture",
+          fr: "2. Canon Contenu dans l'Écriture",
+          es: "2. Canon Contenido en la Escritura",
+          de: "2. Kanon in der Schrift enthalten",
+        },
+        p1: {
+          en: "Others say the canon is revealed within Scripture. But not every book identifies itself. Third John, for example, never claims inspiration. Appeals to apostolic authorship also fail because not all books are apostolic, and not all apostolic writings are inspired.",
+          fr: "D'autres disent que le canon est révélé dans l'Écriture. Mais tous les livres ne s'identifient pas. La Troisième Épître de Jean, par exemple, ne revendique jamais l'inspiration. Les appels à la paternité apostolique échouent également car tous les livres ne sont pas apostoliques, et tous les écrits apostoliques ne sont pas inspirés.",
+          es: "Otros dicen que el canon se revela dentro de la Escritura. Pero no todos los libros se identifican a sí mismos. Tercera de Juan, por ejemplo, nunca reclama inspiración. Las apelaciones a la autoría apostólica también fracasan porque no todos los libros son apostólicos, y no todos los escritos apostólicos son inspirados.",
+          de: "Andere sagen, der Kanon sei in der Schrift offenbart. Aber nicht jedes Buch identifiziert sich selbst. Der Dritte Johannesbrief zum Beispiel beansprucht nie Inspiration. Berufungen auf apostolische Autorschaft scheitern ebenfalls, weil nicht alle Bücher apostolisch sind und nicht alle apostolischen Schriften inspiriert sind.",
+        },
+      },
+      c3: {
+        h3: {
+          en: "3. Internal Marks of Sublimity",
+          fr: "3. Marques Internes de Sublimité",
+          es: "3. Marcas Internas de Sublimidad",
+          de: "3. Interne Merkmale der Erhabenheit",
+        },
+        p1: {
+          en: "Some claim the canon can be known by the internal beauty or sublimity of Scripture. But this is a <strong>scientific</strong> judgment, not a judgment of faith. Supernatural truths are not known by natural reasoning. Further, many sublime texts are not canonical, and some canonical books lack apparent sublimity.",
+          fr: "Certains prétendent que le canon peut être connu par la beauté interne ou la sublimité de l'Écriture. Mais c'est un jugement <strong>scientifique</strong>, pas un jugement de foi. Les vérités surnaturelles ne sont pas connues par le raisonnement naturel. De plus, de nombreux textes sublimes ne sont pas canoniques, et certains livres canoniques manquent de sublimité apparente.",
+          es: "Algunos afirman que el canon puede conocerse por la belleza interna o la sublimidad de la Escritura. Pero este es un juicio <strong>científico</strong>, no un juicio de fe. Las verdades sobrenaturales no se conocen por el razonamiento natural. Además, muchos textos sublimes no son canónicos, y algunos libros canónicos carecen de sublimidad aparente.",
+          de: "Einige behaupten, der Kanon könne durch die innere Schönheit oder Erhabenheit der Schrift erkannt werden. Dies ist jedoch ein <strong>wissenschaftliches</strong> Urteil, kein Glaubensurteil. Übernatürliche Wahrheiten werden nicht durch natürliche Vernunft erkannt. Ferner sind viele erhabene Texte nicht kanonisch, und einigen kanonischen Büchern fehlt es an offensichtlicher Erhabenheit.",
+        },
+      },
+      c4: {
+        h3: {
+          en: "4. Historical Witness of the Church",
+          fr: "4. Témoignage Historique de l'Église",
+          es: "4. Testimonio Histórico de la Iglesia",
+          de: "4. Historisches Zeugnis der Kirche",
+        },
+        p1: {
+          en: "Some concede that the Church historically testified to the canon. But this raises the question: is belief in the canon an act of human faith or divine faith? If it is human, it cannot ground divine inspiration. If it is divine, then where is the revelation? If it is outside Scripture, <em>Sola Scriptura</em> collapses.",
+          fr: "Certains concèdent que l'Église a historiquement témoigné du canon. Mais cela soulève la question : la croyance dans le canon est-elle un acte de foi humaine ou de foi divine ? Si elle est humaine, elle ne peut fonder l'inspiration divine. Si elle est divine, alors où est la révélation ? Si elle est en dehors de l'Écriture, <em>Sola Scriptura</em> s'effondre.",
+          es: "Algunos conceden que la Iglesia testificó históricamente sobre el canon. Pero esto plantea la pregunta: ¿es la creencia en el canon un acto de fe humana o de fe divina? Si es humana, no puede fundamentar la inspiración divina. Si es divina, ¿dónde está la revelación? Si está fuera de la Escritura, <em>Sola Scriptura</em> se colapsa.",
+          de: "Einige geben zu, dass die Kirche historisch den Kanon bezeugt hat. Dies wirft jedoch die Frage auf: Ist der Glaube an den Kanon ein Akt menschlichen Glaubens oder göttlichen Glaubens? Wenn er menschlich ist, kann er die göttliche Inspiration nicht begründen. Wenn er göttlich ist, wo ist dann die Offenbarung? Wenn sie außerhalb der Schrift liegt, bricht <em>Sola Scriptura</em> zusammen.",
+        },
+      },
+      c5: {
+        h3: {
+          en: "5. The Appeal to Motives of Credibility Alone",
+          fr: "5. L'Appel aux Seuls Motifs de Crédibilité",
+          es: "5. La Apelación a los Motivos de Credibilidad Solamente",
+          de: "5. Die Berufung allein auf Glaubwürdigkeitsmotive",
+        },
+        
+        p1: {
+  en: "Some Protestants attempt to bridge the gap by appealing to motives of credibility, such as miracles, fulfilled prophecies, or the moral excellence of Scripture, to justify belief in the canon. Yet this approach also fails for the same fundamental reason: it confuses the concepts of divine revelation and inspiration. Motives of credibility can confirm the truthfulness of a messenger or message, but they cannot establish inspiration, which is a supernatural act of God that cannot be inferred solely from external signs.",
+  fr: "Certains protestants tentent de combler le fossé en faisant appel à des motifs de crédibilité, tels que les miracles, les prophéties accomplies ou l'excellence morale de l'Écriture, pour justifier la croyance dans le canon. Pourtant, cette approche échoue également pour la même raison fondamentale : elle confond les concepts de révélation divine et d'inspiration. Les motifs de crédibilité peuvent confirmer la véracité d'un messager ou d'un message, mais ils ne peuvent établir l'inspiration, qui est un acte surnaturel de Dieu ne pouvant être déduit uniquement de signes extérieurs.",
+  es: "Algunos protestantes intentan salvar la brecha apelando a motivos de credibilidad, como milagros, profecías cumplidas o la excelencia moral de la Escritura, para justificar la creencia en el canon. Sin embargo, este enfoque también fracasa por la misma razón fundamental: confunde los conceptos de revelación divina e inspiración. Los motivos de credibilidad pueden confirmar la veracidad de un mensajero o mensaje, pero no pueden establecer la inspiración, que es un acto sobrenatural de Dios que no puede inferirse únicamente de signos externos.",
+  de: "Einige Protestanten versuchen, die Lücke zu schließen, indem sie sich auf Glaubwürdigkeitsmotive berufen, wie Wunder, erfüllte Prophezeiungen oder die moralische Exzellenz der Schrift, um den Glauben an den Kanon zu rechtfertigen. Doch dieser Ansatz scheitert aus demselben Grund: Er verwechselt die Konzepte der göttlichen Offenbarung und der Inspiration. Glaubwürdigkeitsmotive können die Wahrhaftigkeit eines Boten oder einer Botschaft bestätigen, aber sie können keine Inspiration begründen, die ein übernatürlicher Akt Gottes ist, der nicht allein aus äußeren Zeichen abgeleitet werden kann.",
+},
+c6: {
+  h3: {
+    en: "6. The Canon as a Historical Judgment",
+    fr: "6. Le Canon comme Jugement Historique",
+    es: "6. El Canon como Juicio Histórico",
+    de: "6. Der Kanon als Historisches Urteil",
   },
-  conclusion: {
-    h2: {
-      en: "Conclusion: A Call to Intellectual Honesty and Faith",
-      fr: "Conclusion : Un Appel à l'Honnêteté Intellectuelle et à la Foi",
-      es: "Conclusión: Un Llamado a la Honestidad Intelectual y a la Fe",
-      de: "Schlussfolgerung: Ein Aufruf zu Intellektueller Ehrlichkeit und Glauben",
-    },
-    p1: {
-      en: "Every Protestant must confront this dilemma:",
-      fr: "Chaque protestant doit affronter ce dilemme :",
-      es: "Todo protestante debe enfrentar este dilema:",
-      de: "Jeder Protestant muss sich diesem Dilemma stellen:",
-    },
-    li1: {
-      en: "Either abandon <em>Sola Scriptura</em>, or",
-      fr: "Soit abandonner <em>Sola Scriptura</em>, soit",
-      es: "O abandonar <em>Sola Scriptura</em>, o",
-      de: "Entweder <em>Sola Scriptura</em> aufgeben, oder",
-    },
-    li2: {
-      en: "Admit there is no consistent basis to believe the Bible is inspired.",
-      fr: "Admettre qu'il n'y a aucune base cohérente pour croire que la Bible est inspirée.",
-      es: "Admitir que no hay una base consistente para creer que la Biblia es inspirada.",
-      de: "Zugeben, dass es keine konsistente Grundlage gibt, um zu glauben, dass die Bibel inspiriert ist.",
-    },
-    p2: {
-      en: `The only coherent path forward is the Catholic one.
-The canon of Scripture, like all dogmas of faith, must be received through divine revelation, preserved in sacred tradition and taught by the Church.`,
-      fr: `La seule voie cohérente est la voie catholique.
-Le canon de l'Écriture, comme tous les dogmes de la foi, doit être reçu par la révélation divine, préservée dans la sainte tradition et enseignée par l'Église.`,
-      es: `El único camino coherente a seguir es el católico.
-El canon de la Escritura, como todos los dogmas de fe, debe recibirse a través de la revelación divina, preservada en la sagrada tradición y enseñada por la Iglesia.`,
-      de: `Der einzig kohärente Weg vorwärts ist der katholische.
-Der Kanon der Schrift muss, wie alle Glaubensdogmen, durch göttliche Offenbarung empfangen werden, bewahrt in der heiligen Tradition und gelehrt von der Kirche.`,
-    },
-  },
-  bridge: {
-    h3: {
-      en: "The Path Forward",
-      fr: "La Voie à Suivre",
-      es: "El Camino a Seguir",
-      de: "Der Weg nach Vorn",
-    },
-    p1: {
-      en: "Having established that <em>Sola Scriptura</em> is impossible in principle, we can now explore the positive case for the Catholic model of Scripture, Tradition, and Magisterium working together.",
-      fr: "Ayant établi que <em>Sola Scriptura</em> est impossible en principe, nous pouvons maintenant explorer le cas positif du modèle catholique de l'Écriture, de la Tradition et du Magistère fonctionnant ensemble.",
-      es: "Habiendo establecido que <em>Sola Scriptura</em> es imposible en principio, ahora podemos explorar el caso positivo del modelo católico de la Escritura, la Tradición y el Magisterio trabajando juntos.",
-      de: "Nachdem wir festgestellt haben, dass <em>Sola Scriptura</em> prinzipiell unmöglich ist, können wir nun den positiven Fall für das katholische Modell von Schrift, Tradition und Lehramt in ihrem Zusammenwirken untersuchen.",
-    },
-    p2: {
-      en: "The next topics will examine how the Church discerned the canon, why we have 73 books instead of 66, and the role of the Magisterium in preserving and interpreting divine revelation.",
-      fr: "Les prochains sujets examineront comment l'Église a discerné le canon, pourquoi nous avons 73 livres au lieu de 66, et le rôle du Magistère dans la préservation et l'interprétation de la révélation divine.",
-      es: "Los próximos temas examinarán cómo la Iglesia discernió el canon, por qué tenemos 73 libros en lugar de 66, y el papel del Magisterio en la preservación e interpretación de la revelación divina.",
-      de: "Die nächsten Themen werden untersuchen, wie die Kirche den Kanon unterschieden hat, warum wir 73 Bücher statt 66 haben, und die Rolle des Lehramtes bei der Bewahrung und Auslegung der göttlichen Offenbarung.",
-    },
+  p1: {
+    en: "Another fallback is to treat the canon as a historically reliable tradition, something that emerged organically from the Church's common recognition over time. This too collapses under scrutiny. If belief in the canon is based solely on historical investigation, then the assent to its inspiration is based on human reasoning, not divine faith. But divine inspiration is not a merely historical claim, it is a supernatural truth, and thus it demands a supernatural source of revelation.",
+    fr: "Une autre solution de repli consiste à traiter le canon comme une tradition historiquement fiable, quelque chose qui a émergé organiquement de la reconnaissance commune de l'Église au fil du temps. Cela s'effondre également sous l'examen. Si la croyance dans le canon est basée uniquement sur une enquête historique, alors l'assentiment à son inspiration est basé sur le raisonnement humain et non sur la foi divine. Mais l'inspiration divine n'est pas une simple affirmation historique, c'est une vérité surnaturelle, et elle exige donc une source surnaturelle de révélation.",
+    es: "Otro recurso es tratar el canon como una tradición históricamente confiable, algo que surgió orgánicamente del reconocimiento común de la Iglesia a lo largo del tiempo. Esto también se derrumba bajo escrutinio. Si la creencia en el canon se basa únicamente en la investigación histórica, entonces el asentimiento a su inspiración se basa en el razonamiento humano, no en la fe divina. Pero la inspiración divina no es una mera afirmación histórica, es una verdad sobrenatural y por lo tanto exige una fuente sobrenatural de revelación.",
+    de: "Eine weitere Ausweichmöglichkeit besteht darin, den Kanon als historisch zuverlässige Tradition zu behandeln, etwas, das organisch aus der gemeinsamen Anerkennung der Kirche im Laufe der Zeit entstanden ist. Auch dies bricht bei genauerer Betrachtung zusammen. Wenn der Glaube an den Kanon ausschließlich auf historischer Untersuchung beruht, basiert die Zustimmung zu seiner Inspiration auf menschlicher Vernunft, nicht auf göttlichem Glauben. Aber göttliche Inspiration ist keine bloß historische Behauptung, sie ist eine übernatürliche Wahrheit und erfordert daher eine übernatürliche Offenbarungsquelle.",
   },
 },
+        
+      },
+    },
+    solution: {
+      h2: {
+        en: "The Catholic Solution:",
+        fr: "La Solution Catholique :",
+        es: "La Solución Católica:",
+        de: "Die Katholische Lösung:",
+      },
+      p1: {
+        en: "The Catholic position resolves all these difficulties.",
+        fr: "La position catholique résout toutes ces difficultés.",
+        es: "La posición católica resuelve todas estas dificultades.",
+        de: "Die katholische Position löst all diese Schwierigkeiten.",
+      },
+      h3: {
+        en: "Step-by-Step Coherence",
+        fr: "Cohérence Étape par Étape",
+        es: "Coherencia Paso a Paso",
+        de: "Schritt-für-Schritt-Kohärenz",
+      },
+      steps: {
+        s1: {
+          en: "Begin with the <strong>historical reliability</strong> of the Gospels, using the same critical methods applied to any ancient text.",
+          fr: "Commencez par la <strong>fiabilité historique</strong> des Évangiles, en utilisant les mêmes méthodes critiques appliquées à n'importe quel texte ancien.",
+          es: "Comience con la <strong>fiabilidad histórica</strong> de los Evangelios, utilizando los mismos métodos críticos aplicados a cualquier texto antiguo.",
+          de: "Beginnen Sie mit der <strong>historischen Zuverlässigkeit</strong> der Evangelien und wenden Sie dieselben kritischen Methoden an wie bei jedem antiken Text.",
+        },
+        s2: {
+          en: "From there, recognize the <strong>motives of credibility</strong> that confirm Christ&apos;s identity as the divine legate: His miracles, His resurrection, His fulfillment of prophecy.",
+          fr: "De là, reconnaissez les <strong>motifs de crédibilité</strong> qui confirment l'identité du Christ en tant que légat divin : Ses miracles, Sa résurrection, Son accomplissement des prophéties.",
+          es: "A partir de ahí, reconozca los <strong>motivos de credibilidad</strong> que confirman la identidad de Cristo como el legado divino: Sus milagros, Su resurrección, Su cumplimiento de la profecía.",
+          de: "Erkennen Sie von dort aus die <strong>Glaubwürdigkeitsmotive</strong>, die die Identität Christi als göttlichen Gesandten bestätigen: Seine Wunder, Seine Auferstehung, Seine Erfüllung der Prophezeiungen.",
+        },
+        s3: {
+          en: "Understand that Christ <strong>established a Church</strong> with divine authority, promising it the guidance of the Holy Spirit.",
+          fr: "Comprenez que le Christ <strong>a établi une Église</strong> avec une autorité divine, lui promettant la direction du Saint-Esprit.",
+          es: "Entienda que Cristo <strong>estableció una Iglesia</strong> con autoridad divina, prometiéndole la guía del Espíritu Santo.",
+          de: "Verstehen Sie, dass Christus <strong>eine Kirche gegründet</strong> hat mit göttlicher Autorität und ihr die Führung des Heiligen Geistes versprochen hat.",
+        },
+        s4: {
+          en: "Acknowledge that this Church, through its <strong>apostolic succession</strong> and fidelity to Christ&apos;s command, is a divine legate.",
+          fr: "Reconnaissez que cette Église, par sa <strong>succession apostolique</strong> et sa fidélité au commandement du Christ, est un légat divin.",
+          es: "Reconozca que esta Iglesia, a través de su <strong>sucesión apostólica</strong> y fidelidad al mandato de Cristo, es un legado divino.",
+          de: "Erkennen Sie an, dass diese Kirche durch ihre <strong>apostolische Sukzession</strong> und Treue zu Christi Gebot eine göttliche Gesandtin ist.",
+        },
+        s5: {
+          en: "Receive the canon of Scripture as proposed by that Church, as a <strong>divinely revealed truth</strong>.",
+          fr: "Recevez le canon de l'Écriture tel que proposé par cette Église, comme une <strong>vérité divinement révélée</strong>.",
+          es: "Reciba el canon de la Escritura propuesto por esa Iglesia, como una <strong>verdad divinamente revelada</strong>.",
+          de: "Empfangen Sie den Kanon der Schrift, wie er von dieser Kirche vorgelegt wird, als eine <strong>göttlich offenbarte Wahrheit</strong>.",
+        },
+      },
+      quote1: {
+        en: "We do not begin by supposing their inspiration to prove the Church from the Bible and the Bible from the Church. This is a gross mischaracterization.",
+        fr: "Nous ne commençons pas par supposer leur inspiration pour prouver l'Église par la Bible et la Bible par l'Église. C'est une grossière déformation.",
+        es: "No comenzamos suponiendo su inspiración para probar la Iglesia a partir de la Biblia y la Biblia a partir de la Iglesia. Esto es una grave tergiversación.",
+        de: "Wir beginnen nicht damit, ihre Inspiration vorauszusetzen, um die Kirche aus der Bibel und die Bibel aus der Kirche zu beweisen. Das ist eine grobe Falschdarstellung.",
+      },
+      p2: {
+        en: "This is not circular. We do not start with an infallible Church and derive an inspired Bible, nor do we start with an inspired Bible to prove the Church. Rather, both are affirmed through a chain of rational credibility leading to supernatural revelation.",
+        fr: "Ce n'est pas circulaire. Nous ne commençons pas avec une Église infaillible pour en déduire une Bible inspirée, ni ne commençons avec une Bible inspirée pour prouver l'Église. Au contraire, les deux sont affirmés par une chaîne de crédibilité rationnelle menant à la révélation surnaturelle.",
+        es: "Esto no es circular. No partimos de una Iglesia infalible para derivar una Biblia inspirada, ni partimos de una Biblia inspirada para probar la Iglesia. Más bien, ambos se afirman a través de una cadena de credibilidad racional que conduce a la revelación sobrenatural.",
+        de: "Das ist nicht zirkulär. Wir beginnen nicht mit einer unfehlbaren Kirche und leiten daraus eine inspirierte Bibel ab, noch beginnen wir mit einer inspirierten Bibel, um die Kirche zu beweisen. Vielmehr werden beide durch eine Kette rationaler Glaubwürdigkeit bestätigt, die zur übernatürlichen Offenbarung führt.",
+      },
+      h3tradition: {
+        en: "The Role of Sacred Tradition",
+        fr: "Le Rôle de la Sainte Tradition",
+        es: "El Papel de la Sagrada Tradición",
+        de: "Die Rolle der Heiligen Tradition",
+      },
+      p3: {
+        en: "Sacred Tradition is not an inspired text in the same sense as Scripture. It is the <strong>living transmission</strong> of divine revelation entrusted by Christ to the apostles and their successors. It is authoritative and divine in origin but not reducible to written words.",
+        fr: "La Sainte Tradition n'est pas un texte inspiré au même titre que l'Écriture. C'est la <strong>transmission vivante</strong> de la révélation divine confiée par le Christ aux apôtres et à leurs successeurs. Elle est autorisée et d'origine divine, mais non réductible à des mots écrits.",
+        es: "La Sagrada Tradición no es un texto inspirado en el mismo sentido que la Escritura. Es la <strong>transmisión viva</strong> de la revelación divina confiada por Cristo a los apóstoles y sus sucesores. Es autoritativa y de origen divino, pero no reducible a palabras escritas.",
+        de: "Die Heilige Tradition ist kein inspirierter Text im selben Sinne wie die Schrift. Sie ist die <strong>lebendige Überlieferung</strong> der göttlichen Offenbarung, die von Christus den Aposteln und ihren Nachfolgern anvertraut wurde. Sie ist autoritativ und göttlichen Ursprungs, aber nicht auf geschriebene Worte reduzierbar.",
+      },
+      quote2: {
+        text: {
+          en: "Sacred Tradition and Sacred Scripture form one sacred deposit of the word of God, committed to the Church.",
+          fr: "La Sainte Tradition et la Sainte Écriture constituent un unique dépôt sacré de la parole de Dieu, confié à l'Église.",
+          es: "La Sagrada Tradición y la Sagrada Escritura forman un solo depósito sagrado de la palabra de Dios, confiado a la Iglesia.",
+          de: "Die Heilige Tradition und die Heilige Schrift bilden einen einzigen heiligen Schatz des Wortes Gottes, der der Kirche anvertraut ist.",
+        },
+        source: {
+          en: "Dei Verbum §9",
+          fr: "Dei Verbum §9",
+          es: "Dei Verbum §9",
+          de: "Dei Verbum §9",
+        },
+      },
+      p4: {
+        en: "Tradition makes known what has been revealed, including the fact of inspiration for the canon. It does not replace revelation; it transmits it faithfully.",
+        fr: "La Tradition fait connaître ce qui a été révélé, y compris le fait de l'inspiration pour le canon. Elle ne remplace pas la révélation ; elle la transmet fidèlement.",
+        es: "La Tradición da a conocer lo que ha sido revelado, incluido el hecho de la inspiración para el canon. No reemplaza la revelación; la transmite fielmente.",
+        de: "Die Tradition macht bekannt, was offenbart wurde, einschließlich der Tatsache der Inspiration für den Kanon. Sie ersetzt nicht die Offenbarung; sie übermittelt sie treu.",
+      },
+      h3magisterium: {
+        en: "Magisterial Authority",
+        fr: "Autorité Magistérielle",
+        es: "Autoridad Magisterial",
+        de: "Lehramtliche Autorität",
+      },
+      p5: {
+  en: "The Magisterium, the Church's teaching office, authentically interprets and proposes what has been revealed. This includes dogmas, moral teachings, and the canon of Scripture. The Church does not create inspiration; it discerns and declares what God has revealed.",
+  fr: "Le Magistère, la charge d'enseignement de l'Église, interprète authentiquement et propose ce qui a été révélé. Cela inclut les dogmes, les enseignements moraux et le canon de l'Écriture. L'Église ne crée pas l'inspiration ; elle discerne et déclare ce que Dieu a révélé.",
+  es: "El Magisterio, el oficio de enseñanza de la Iglesia, interpreta auténticamente y propone lo que ha sido revelado. Esto incluye dogmas, enseñanzas morales y el canon de la Escritura. La Iglesia no crea la inspiración; discierne y declara lo que Dios ha revelado.",
+  de: "Das Lehramt, das Lehramt der Kirche, legt authentisch aus und legt vor, was offenbart wurde. Dazu gehören Dogmen, Morallehren und der Kanon der Schrift. Die Kirche schafft keine Inspiration; sie unterscheidet und erklärt, was Gott offenbart hat.",
+},
+    },
+    conclusion: {
+      h2: {
+        en: "Conclusion: A Call to Intellectual Honesty and Faith",
+        fr: "Conclusion : Un Appel à l'Honnêteté Intellectuelle et à la Foi",
+        es: "Conclusión: Un Llamado a la Honestidad Intelectual y a la Fe",
+        de: "Schlussfolgerung: Ein Aufruf zu Intellektueller Ehrlichkeit und Glauben",
+      },
+      p1: {
+        en: "Every Protestant must confront this dilemma:",
+        fr: "Chaque protestant doit affronter ce dilemme :",
+        es: "Todo protestante debe enfrentar este dilema:",
+        de: "Jeder Protestant muss sich diesem Dilemma stellen:",
+      },
+      li1: {
+        en: "Either abandon <em>Sola Scriptura</em>, or",
+        fr: "Soit abandonner <em>Sola Scriptura</em>, soit",
+        es: "O abandonar <em>Sola Scriptura</em>, o",
+        de: "Entweder <em>Sola Scriptura</em> aufgeben, oder",
+      },
+      li2: {
+        en: "Admit there is no consistent basis to believe the Bible is inspired.",
+        fr: "Admettre qu'il n'y a aucune base cohérente pour croire que la Bible est inspirée.",
+        es: "Admitir que no hay una base consistente para creer que la Biblia es inspirada.",
+        de: "Zugeben, dass es keine konsistente Grundlage gibt, um zu glauben, dass die Bibel inspiriert ist.",
+      },
+      p2: {
+  en: "The only coherent path forward is the Catholic one. The canon of Scripture, like all dogmas of faith, must be received through divine revelation, preserved in sacred tradition and taught by the Church.",
+  fr: "La seule voie cohérente est la voie catholique. Le canon de l'Écriture, comme tous les dogmes de la foi, doit être reçu par la révélation divine, préservée dans la sainte tradition et enseignée par l'Église.",
+  es: "El único camino coherente a seguir es el católico. El canon de la Escritura, como todos los dogmas de fe, debe recibirse a través de la revelación divina, preservada en la sagrada tradición y enseñada por la Iglesia.",
+  de: "Der einzig kohärente Weg vorwärts ist der katholische. Der Kanon der Schrift muss, wie alle Glaubensdogmen, durch göttliche Offenbarung empfangen werden, bewahrt in der heiligen Tradition und gelehrt von der Kirche.",
+},
+    },
+    bridge: {
+      h3: {
+        en: "The Path Forward",
+        fr: "La Voie à Suivre",
+        es: "El Camino a Seguir",
+        de: "Der Weg nach Vorn",
+      },
+      p1: {
+        en: "Having established that <em>Sola Scriptura</em> is impossible in principle, we can now explore the positive case for the Catholic model of Scripture, Tradition, and Magisterium working together.",
+        fr: "Ayant établi que <em>Sola Scriptura</em> est impossible en principe, nous pouvons maintenant explorer le cas positif du modèle catholique de l'Écriture, de la Tradition et du Magistère fonctionnant ensemble.",
+        es: "Habiendo establecido que <em>Sola Scriptura</em> es imposible en principio, ahora podemos explorar el caso positivo del modelo católico de la Escritura, la Tradición y el Magisterio trabajando juntos.",
+        de: "Nachdem wir festgestellt haben, dass <em>Sola Scriptura</em> prinzipiell unmöglich ist, können wir nun den positiven Fall für das katholische Modell von Schrift, Tradition und Lehramt in ihrem Zusammenwirken untersuchen.",
+      },
+      p2: {
+        en: "The next topics will examine how the Church discerned the canon, why we have 73 books instead of 66, and the role of the Magisterium in preserving and interpreting divine revelation.",
+        fr: "Les prochains sujets examineront comment l'Église a discerné le canon, pourquoi nous avons 73 livres au lieu de 66, et le rôle du Magistère dans la préservation et l'interprétation de la révélation divine.",
+        es: "Los próximos temas examinarán cómo la Iglesia discernió el canon, por qué tenemos 73 libros en lugar de 66, y el papel del Magisterio en la preservación e interpretación de la revelación divina.",
+        de: "Die nächsten Themen werden untersuchen, wie die Kirche den Kanon unterschieden hat, warum wir 73 Bücher statt 66 haben, und die Rolle des Lehramtes bei der Bewahrung und Auslegung der göttlichen Offenbarung.",
+      },
+    },
+  },
   
 
   scholasticApproaches: {
