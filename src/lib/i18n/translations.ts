@@ -8649,8 +8649,9 @@ res2: {
       },
     },
   },
+  
 
-  export const solaScripturaImpossible = {
+  solaScripturaImpossible = {
   title: {
     en: "Sola Scriptura is Impossible",
     fr: "Sola Scriptura est Impossible",
