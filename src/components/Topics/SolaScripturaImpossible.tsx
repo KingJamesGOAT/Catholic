@@ -64,6 +64,25 @@ export default function SolaScripturaImpossible() {
     },
   ];
 
+  // --- AJOUTEZ CE CODE ICI ---
+  const counterArgs = [
+    trans.counterarguments.c1,
+    trans.counterarguments.c2,
+    trans.counterarguments.c3,
+    trans.counterarguments.c4,
+    trans.counterarguments.c5,
+    trans.counterarguments.c6,
+  ];
+
+  const solutionSteps = [
+    trans.solution.steps.s1,
+    trans.solution.steps.s2,
+    trans.solution.steps.s3,
+    trans.solution.steps.s4,
+    trans.solution.steps.s5,
+  ];
+  // ---------------------------
+  
   return (
     <TopicLayout
       title={t(trans.title, language)}
