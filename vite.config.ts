@@ -6,10 +6,10 @@ import Sitemap from 'vite-plugin-sitemap';
 export default defineConfig({
   plugins: [
     react(),
-    Sitemap({ 
-      hostname: 'https://catholicroute.com', 
-      outDir: 'build', // <--- THIS LINE FIXES THE ERROR
-    }) 
+    Sitemap({
+      hostname: 'https://catholicroute.com',
+      outDir: 'build', // Matches the build.outDir setting below
+    }),
   ],
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
@@ -57,7 +57,7 @@ export default defineConfig({
   },
   build: {
     target: 'esnext',
-    outDir: 'build',
+    outDir: 'build', // Explicitly tells Vite to use 'build' folder
   },
   server: {
     port: 3000,
