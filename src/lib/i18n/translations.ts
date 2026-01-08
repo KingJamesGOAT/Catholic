@@ -356,7 +356,6 @@ export const translations = {
       de: "Tippen zum Fortfahren",
     },
 
-    
     // 1. LOGIC
     logicTitle: {
       en: "Scripture & Tradition",
@@ -426,8 +425,6 @@ export const translations = {
       es: "Una exploración sistemática de 15 temas esenciales, desde la existencia de Dios hasta los dogmas de la Fe.",
       de: "Eine systematische Erkundung von 15 wesentlichen Themen, von der Existenz Gottes bis zu den Dogmen des Glaubens.",
     },
-
-    
 
     quote: {
       en: "You will know how people ought to conduct themselves in God’s household, which is the <span class='text-blue-400'>church</span> of the living God, <span class='text-blue-400'>the pillar and foundation of the truth.</span>",
@@ -1364,7 +1361,7 @@ export const translations = {
         es: "Durante décadas, se asumió popularmente que la ciencia había enterrado a Dios. Sin embargo, tres descubrimientos importantes en los siglos XX y XXI en cosmología, física y biología han cambiado la marea. La 'Hipótesis de Dios' ya no es un retiro a la ignorancia sino la mejor explicación para los datos específicos que encontramos en la naturaleza.",
         de: "Jahrzehntelang wurde angenommen, die Wissenschaft habe Gott begraben. Doch drei große Entdeckungen im 20. und 21. Jahrhundert in Kosmologie, Physik und Biologie haben das Blatt gewendet. Die 'Gotteshypothese' ist kein Rückzug in die Unwissenheit mehr, sondern die beste Erklärung für die spezifischen Daten, die wir in der Natur finden.",
       },
-      
+
       // Video 1
       video1Title: {
         en: "By Design: Behe, Lennox, and Meyer",
@@ -2355,11 +2352,6 @@ export const translations = {
           de: "Hatte Paulus einen psychischen Zusammenbruch?",
         },
         content: {
-
-
-
-
-          
           en: `
     <div class="space-y-4 text-gray-300">
       <p>Some skeptics argue Paul experienced a "conversion disorder" where deep subconscious guilt manifests as physical symptoms (like blindness) and hallucinations.</p>
@@ -2372,7 +2364,7 @@ export const translations = {
       </ul>
     </div>`,
 
-  fr: `
+          fr: `
     <div class="space-y-4 text-gray-300">
       <p>Certains sceptiques soutiennent que Paul a souffert d’un « trouble de conversion » où une profonde culpabilité subconsciente se manifeste par des symptômes physiques (comme la cécité) et des hallucinations.</p>
       <h4 class="text-red-400 font-semibold mt-4">Pourquoi cela échoue (Réfutations) :</h4>
@@ -2384,7 +2376,7 @@ export const translations = {
       </ul>
     </div>`,
 
-  es: `
+          es: `
     <div class="space-y-4 text-gray-300">
       <p>Algunos escépticos argumentan que Pablo experimentó un "trastorno de conversión" donde una culpa subconsciente profunda se manifiesta como síntomas físicos (como ceguera) y alucinaciones.</p>
       <h4 class="text-red-400 font-semibold mt-4">Por qué falla (Refutaciones):</h4>
@@ -2396,7 +2388,7 @@ export const translations = {
       </ul>
     </div>`,
 
-  de: `
+          de: `
     <div class="space-y-4 text-gray-300">
       <p>Einige Skeptiker argumentieren, Paulus habe eine „Konversionsstörung“ erlebt, bei der sich tiefe unterbewusste Schuldgefühle als körperliche Symptome (wie Blindheit) und Halluzinationen äußern.</p>
       <h4 class="text-red-400 font-semibold mt-4">Warum sie scheitert (Widerlegungen):</h4>
@@ -2406,14 +2398,7 @@ export const translations = {
         <li><strong>Überprüfung der äußeren Realität:</strong> Sie ignoriert die Tatsache, dass Paulus’ Reisebegleiter <em>ebenfalls</em> das Licht sahen und die Stimme hörten (Apg 9). Eine psychische Störung im Inneren von Paulus kann von außenstehenden Beobachtern nicht wahrgenommen werden.</li>
         <li><strong>Begrenzter Erklärungswert:</strong> Selbst wenn es auf Paulus zuträfe, erklärt es nichts über das leere Grab, die Bekehrung des Jakobus (der kein Verfolger war) oder die Erscheinungen vor den Zwölfen.</li>
       </ul>
-    </div>`
-          
-          
-          ,
-
-
-
-          
+    </div>`,
         },
       },
       wrongTomb: {
@@ -3541,11 +3526,11 @@ export const translations = {
         de: "Einer der häufigsten Züge in der protestantischen Apologetik ist es, den Anspruch der katholischen Kirche auf Unfehlbarkeit zu kritisieren, indem man auf Meinungsverschiedenheiten in der Kirchengeschichte, korrupte Päpste oder doktrinale Entwicklung hinweist. Von dort schließt das Argument, dass da die katholische Position fehlerhaft ist, <strong>Sola Scriptura wahr sein muss</strong>.",
       },
       para2: {
-  en: 'This reasoning commits the <strong>"You Lose, So I Win" fallacy</strong>, a form of <strong>false dichotomy</strong>. It assumes that there are only two options: Catholicism or Protestantism. If Catholicism is false, Protestantism must be true. But this does not logically follow.',
-  fr: "Ce raisonnement commet le <strong>sophisme « Vous perdez, donc je gagne »</strong>, une forme de <strong>faux dilemme</strong>. Il suppose qu'il n'y a que deux options : le catholicisme ou le protestantisme. Si le catholicisme est faux, le protestantisme doit être vrai. Mais cela ne s'ensuit pas logiquement.",
-  es: 'Este razonamiento comete la <strong>falacia "Tú pierdes, luego yo gano"</strong>, una forma de <strong>falso dilema</strong>. Asume que solo hay dos opciones: catolicismo o protestantismo. Si el catolicismo es falso, el protestantismo debe ser verdadero. Pero esto no se sigue lógicamente.',
-  de: 'Diese Argumentation begeht den <strong>„Du verlierst, also gewinne ich" Fehlschluss</strong>, eine Form des <strong>falschen Dilemmas</strong>. Sie nimmt an, dass es nur zwei Optionen gibt: Katholizismus oder Protestantismus. Wenn der Katholizismus falsch ist, muss der Protestantismus wahr sein. Aber das folgt nicht logisch daraus.',
-},
+        en: 'This reasoning commits the <strong>"You Lose, So I Win" fallacy</strong>, a form of <strong>false dichotomy</strong>. It assumes that there are only two options: Catholicism or Protestantism. If Catholicism is false, Protestantism must be true. But this does not logically follow.',
+        fr: "Ce raisonnement commet le <strong>sophisme « Vous perdez, donc je gagne »</strong>, une forme de <strong>faux dilemme</strong>. Il suppose qu'il n'y a que deux options : le catholicisme ou le protestantisme. Si le catholicisme est faux, le protestantisme doit être vrai. Mais cela ne s'ensuit pas logiquement.",
+        es: 'Este razonamiento comete la <strong>falacia "Tú pierdes, luego yo gano"</strong>, una forma de <strong>falso dilema</strong>. Asume que solo hay dos opciones: catolicismo o protestantismo. Si el catolicismo es falso, el protestantismo debe ser verdadero. Pero esto no se sigue lógicamente.',
+        de: 'Diese Argumentation begeht den <strong>„Du verlierst, also gewinne ich" Fehlschluss</strong>, eine Form des <strong>falschen Dilemmas</strong>. Sie nimmt an, dass es nur zwei Optionen gibt: Katholizismus oder Protestantismus. Wenn der Katholizismus falsch ist, muss der Protestantismus wahr sein. Aber das folgt nicht logisch daraus.',
+      },
       kreeftQuote: {
         en: "Refuting a position is not the same as proving its opposite.",
         fr: "Réfuter une position n'est pas la même chose que prouver son contraire.",
@@ -3647,11 +3632,11 @@ export const translations = {
         de: '<strong>Person A</strong> sagt: „Diese Brücke wurde von zertifizierten Ingenieuren gebaut und von Sicherheitsinspektoren genehmigt."',
       },
       personB: {
-  en: '<strong>Person B</strong> replies: "Well, maybe those engineers were wrong, so my homemade bridge is just as good."',
-  fr: "<strong>Personne B</strong> répond : « Eh bien, peut-être que ces ingénieurs se sont trompés, donc mon pont fait maison est tout aussi bon. »",
-  es: '<strong>Persona B</strong> responde: "Bueno, tal vez esos ingenieros estaban equivocados, así que mi puente casero es igual de bueno."',
-  de: '<strong>Person B</strong> antwortet: „Nun, vielleicht lagen diese Ingenieure falsch, also ist meine selbstgemachte Brücke genauso gut."',
-},
+        en: '<strong>Person B</strong> replies: "Well, maybe those engineers were wrong, so my homemade bridge is just as good."',
+        fr: "<strong>Personne B</strong> répond : « Eh bien, peut-être que ces ingénieurs se sont trompés, donc mon pont fait maison est tout aussi bon. »",
+        es: '<strong>Persona B</strong> responde: "Bueno, tal vez esos ingenieros estaban equivocados, así que mi puente casero es igual de bueno."',
+        de: '<strong>Person B</strong> antwortet: „Nun, vielleicht lagen diese Ingenieure falsch, also ist meine selbstgemachte Brücke genauso gut."',
+      },
       para2: {
         en: "Clearly, pointing out a potential flaw in A's position doesn't make B's position credible. B must demonstrate that <em>his own bridge is trustworthy</em>.",
         fr: "Clairement, signaler un défaut potentiel dans la position de A ne rend pas la position de B crédible. B doit démontrer que <em>son propre pont est digne de confiance</em>.",
@@ -3693,11 +3678,11 @@ export const translations = {
         de: "Schwächen in der darwinschen Evolution aufzuzeigen beweist nicht Intelligent Design.",
       },
       para2: {
-  en: "Each theory must be evaluated on its <strong>own merits</strong>, its internal coherence, evidential support, and explanatory power. Likewise, each model of Christian authority, Magisterium, Tradition, Sola Scriptura, must be tested not just by criticizing rivals, but by <strong>positively defending itself</strong>.",
-  fr: "Chaque théorie doit être évaluée sur ses <strong>propres mérites</strong>, sa cohérence interne, son soutien probant et son pouvoir explicatif. De même, chaque modèle d'autorité chrétienne, Magistère, Tradition, Sola Scriptura, doit être testé non seulement en critiquant ses rivaux, mais en <strong>se défendant positivement</strong>.",
-  es: "Cada teoría debe ser evaluada por sus <strong>propios méritos</strong>, su coherencia interna, apoyo evidencial y poder explicativo. Del mismo modo, cada modelo de autoridad cristiana, Magisterio, Tradición, Sola Scriptura, debe ser probado no solo criticando rivales, sino <strong>defendiéndose positivamente</strong>.",
-  de: "Jede Theorie muss nach ihren <strong>eigenen Vorzügen</strong> bewertet werden, ihrer internen Kohärenz, evidenziellen Unterstützung und Erklärungskraft. Ebenso muss jedes Modell christlicher Autorität, Lehramt, Tradition, Sola Scriptura, nicht nur durch Kritik an Rivalen getestet werden, sondern durch <strong>positive Selbstverteidigung</strong>.",
-},
+        en: "Each theory must be evaluated on its <strong>own merits</strong>, its internal coherence, evidential support, and explanatory power. Likewise, each model of Christian authority, Magisterium, Tradition, Sola Scriptura, must be tested not just by criticizing rivals, but by <strong>positively defending itself</strong>.",
+        fr: "Chaque théorie doit être évaluée sur ses <strong>propres mérites</strong>, sa cohérence interne, son soutien probant et son pouvoir explicatif. De même, chaque modèle d'autorité chrétienne, Magistère, Tradition, Sola Scriptura, doit être testé non seulement en critiquant ses rivaux, mais en <strong>se défendant positivement</strong>.",
+        es: "Cada teoría debe ser evaluada por sus <strong>propios méritos</strong>, su coherencia interna, apoyo evidencial y poder explicativo. Del mismo modo, cada modelo de autoridad cristiana, Magisterio, Tradición, Sola Scriptura, debe ser probado no solo criticando rivales, sino <strong>defendiéndose positivamente</strong>.",
+        de: "Jede Theorie muss nach ihren <strong>eigenen Vorzügen</strong> bewertet werden, ihrer internen Kohärenz, evidenziellen Unterstützung und Erklärungskraft. Ebenso muss jedes Modell christlicher Autorität, Lehramt, Tradition, Sola Scriptura, nicht nur durch Kritik an Rivalen getestet werden, sondern durch <strong>positive Selbstverteidigung</strong>.",
+      },
     },
 
     // Section 2: Can Science/History Determine Canon
@@ -3709,11 +3694,11 @@ export const translations = {
         de: '2. Kann „Wissenschaft" oder Geschichte den Kanon Bestimmen?',
       },
       para1: {
-  en: "Many Protestants argue that the biblical canon can be identified using <strong>historical criteria</strong>, such as early dates, apostolic authorship, orthodoxy, and widespread use in the early Church. According to this view, if we sift through the evidence like detectives or historians, we can deduce which books are inspired.",
-  fr: "De nombreux protestants soutiennent que le canon biblique peut être identifié en utilisant des <strong>critères historiques</strong>, tels que des dates anciennes, la paternité apostolique, l'orthodoxie et un usage répandu dans l'Église primitive. Selon cette vision, si nous examinons les preuves comme des détectives ou des historiens, nous pouvons déduire quels livres sont inspirés.",
-  es: "Muchos protestantes argumentan que el canon bíblico puede ser identificado usando <strong>criterios históricos</strong>, tales como fechas tempranas, autoría apostólica, ortodoxia y uso generalizado en la Iglesia primitiva. Según este punto de vista, si examinamos la evidencia como detectives o historiadores, podemos deducir qué libros están inspirados.",
-  de: "Viele Protestanten argumentieren, dass der biblische Kanon anhand <strong>historischer Kriterien</strong> identifiziert werden kann, wie etwa frühe Daten, apostolische Autorschaft, Orthodoxie und weit verbreitete Nutzung in der frühen Kirche. Nach dieser Ansicht können wir, wenn wir die Beweise wie Detektive oder Historiker durchsieben, ableiten, welche Bücher inspiriert sind.",
-},
+        en: "Many Protestants argue that the biblical canon can be identified using <strong>historical criteria</strong>, such as early dates, apostolic authorship, orthodoxy, and widespread use in the early Church. According to this view, if we sift through the evidence like detectives or historians, we can deduce which books are inspired.",
+        fr: "De nombreux protestants soutiennent que le canon biblique peut être identifié en utilisant des <strong>critères historiques</strong>, tels que des dates anciennes, la paternité apostolique, l'orthodoxie et un usage répandu dans l'Église primitive. Selon cette vision, si nous examinons les preuves comme des détectives ou des historiens, nous pouvons déduire quels livres sont inspirés.",
+        es: "Muchos protestantes argumentan que el canon bíblico puede ser identificado usando <strong>criterios históricos</strong>, tales como fechas tempranas, autoría apostólica, ortodoxia y uso generalizado en la Iglesia primitiva. Según este punto de vista, si examinamos la evidencia como detectives o historiadores, podemos deducir qué libros están inspirados.",
+        de: "Viele Protestanten argumentieren, dass der biblische Kanon anhand <strong>historischer Kriterien</strong> identifiziert werden kann, wie etwa frühe Daten, apostolische Autorschaft, Orthodoxie und weit verbreitete Nutzung in der frühen Kirche. Nach dieser Ansicht können wir, wenn wir die Beweise wie Detektive oder Historiker durchsieben, ableiten, welche Bücher inspiriert sind.",
+      },
       para2: {
         en: "At first, this seems like a promising strategy. But it ultimately <strong>fails to provide the certainty</strong> that Christians demand for something as crucial as the Word of God.",
         fr: "Au premier abord, cela semble être une stratégie prometteuse. Mais cela ne parvient finalement <strong>pas à fournir la certitude</strong> que les chrétiens exigent pour quelque chose d'aussi crucial que la Parole de Dieu.",
@@ -3743,11 +3728,11 @@ export const translations = {
         de: 'Dass wir objektiv bestimmen können, welche Bücher „apostolisch" und „orthodox" sind.',
       },
       assumption2: {
-  en: 'That we know which documents "contradict Scripture", even though that assumes we already have a stable canon.',
-  fr: "Que nous savons quels documents « contredisent l'Écriture », même si cela suppose que nous ayons déjà un canon stable.",
-  es: 'Que sabemos qué documentos "contradicen las Escrituras", aunque eso asume que ya tenemos un canon estable.',
-  de: 'Dass wir wissen, welche Dokumente „der Schrift widersprechen", obwohl das voraussetzt, dass wir bereits einen stabilen Kanon haben.',
-},
+        en: 'That we know which documents "contradict Scripture", even though that assumes we already have a stable canon.',
+        fr: "Que nous savons quels documents « contredisent l'Écriture », même si cela suppose que nous ayons déjà un canon stable.",
+        es: 'Que sabemos qué documentos "contradicen las Escrituras", aunque eso asume que ya tenemos un canon estable.',
+        de: 'Dass wir wissen, welche Dokumente „der Schrift widersprechen", obwohl das voraussetzt, dass wir bereits einen stabilen Kanon haben.',
+      },
       assumption3: {
         en: "That widespread early use is enough to determine divine inspiration.",
         fr: "Que l'usage primitif répandu suffit à déterminer l'inspiration divine.",
@@ -3771,11 +3756,11 @@ export const translations = {
         de: "Was Ist mit der Frühen Kirche?",
       },
       para1: {
-  en: "Some claim that the early Church recognized the canon based purely on these criteria: age, apostolicity, orthodoxy, and usage. But this isn't how the early Church actually functioned.",
-  fr: "Certains prétendent que l'Église primitive a reconnu le canon uniquement sur la base de ces critères : âge, apostolicité, orthodoxie et usage. Mais ce n'est pas ainsi que l'Église primitive fonctionnait réellement.",
-  es: "Algunos afirman que la Iglesia primitiva reconoció el canon basándose puramente en estos criterios: edad, apostolicidad, ortodoxia y uso. Pero así no es como la Iglesia primitiva realmente funcionaba.",
-  de: "Einige behaupten, dass die frühe Kirche den Kanon rein aufgrund dieser Kriterien erkannt hat: Alter, Apostolizität, Orthodoxie und Nutzung. Aber so funktionierte die frühe Kirche tatsächlich nicht.",
-},
+        en: "Some claim that the early Church recognized the canon based purely on these criteria: age, apostolicity, orthodoxy, and usage. But this isn't how the early Church actually functioned.",
+        fr: "Certains prétendent que l'Église primitive a reconnu le canon uniquement sur la base de ces critères : âge, apostolicité, orthodoxie et usage. Mais ce n'est pas ainsi que l'Église primitive fonctionnait réellement.",
+        es: "Algunos afirman que la Iglesia primitiva reconoció el canon basándose puramente en estos criterios: edad, apostolicidad, ortodoxia y uso. Pero así no es como la Iglesia primitiva realmente funcionaba.",
+        de: "Einige behaupten, dass die frühe Kirche den Kanon rein aufgrund dieser Kriterien erkannt hat: Alter, Apostolizität, Orthodoxie und Nutzung. Aber so funktionierte die frühe Kirche tatsächlich nicht.",
+      },
       para2: {
         en: "The councils of <strong>Hippo (393)</strong>, <strong>Carthage (397)</strong>, and later Florence and Trent didn't canonize books based on historical science. They did so through the <strong>apostolic authority of the Church</strong>, trusting that the Holy Spirit was guiding their decision (cf. John 16:13).",
         fr: "Les conciles d'<strong>Hippone (393)</strong>, de <strong>Carthage (397)</strong> et plus tard de Florence et de Trente n'ont pas canonisé les livres sur la base de la science historique. Ils l'ont fait par <strong>l'autorité apostolique de l'Église</strong>, croyant que le Saint-Esprit guidait leur décision (cf. Jean 16:13).",
@@ -3783,11 +3768,11 @@ export const translations = {
         de: "Die Konzile von <strong>Hippo (393)</strong>, <strong>Karthago (397)</strong> und später Florenz und Trient haben Bücher nicht aufgrund historischer Wissenschaft kanonisiert. Sie taten dies durch die <strong>apostolische Autorität der Kirche</strong>, im Vertrauen darauf, dass der Heilige Geist ihre Entscheidung leitete (vgl. Johannes 16:13).",
       },
       para3: {
-  en: "Even if certain books were believed to be apostolic, that belief wasn't based on archaeology, but on <strong>faith in the Church's living tradition</strong>.",
-  fr: "Même si certains livres étaient considérés comme apostoliques, cette croyance n'était pas basée sur l'archéologie, mais sur <strong>la foi dans la tradition vivante de l'Église</strong>.",
-  es: "Incluso si se creía que ciertos libros eran apostólicos, esa creencia no se basaba en la arqueología, sino en <strong>la fe en la tradición viva de la Iglesia</strong>.",
-  de: "Selbst wenn bestimmte Bücher als apostolisch galten, basierte dieser Glaube nicht auf Archäologie, sondern auf <strong>dem Glauben an die lebendige Tradition der Kirche</strong>.",
-},
+        en: "Even if certain books were believed to be apostolic, that belief wasn't based on archaeology, but on <strong>faith in the Church's living tradition</strong>.",
+        fr: "Même si certains livres étaient considérés comme apostoliques, cette croyance n'était pas basée sur l'archéologie, mais sur <strong>la foi dans la tradition vivante de l'Église</strong>.",
+        es: "Incluso si se creía que ciertos libros eran apostólicos, esa creencia no se basaba en la arqueología, sino en <strong>la fe en la tradición viva de la Iglesia</strong>.",
+        de: "Selbst wenn bestimmte Bücher als apostolisch galten, basierte dieser Glaube nicht auf Archäologie, sondern auf <strong>dem Glauben an die lebendige Tradition der Kirche</strong>.",
+      },
       para4: {
         en: "Historical research can support the faith. It can help us understand what the early Christians believed. But it can't <strong>guarantee</strong> which writings are <strong>theopneustos</strong> (God-breathed). That requires <strong>divine authority</strong>, not just historical consensus.",
         fr: "La recherche historique peut soutenir la foi. Elle peut nous aider à comprendre ce que les premiers chrétiens croyaient. Mais elle ne peut pas <strong>garantir</strong> quels écrits sont <strong>theopneustos</strong> (inspirés de Dieu). Cela nécessite une <strong>autorité divine</strong>, pas seulement un consensus historique.",
@@ -3817,11 +3802,11 @@ export const translations = {
         de: "Ich muss nicht unfehlbar sein, um zu wissen, dass Gott unfehlbar ist. Warum brauchen wir dann eine unfehlbare Kirche, um zu erkennen, welche Bücher zur Bibel gehören?",
       },
       para2: {
-  en: "At first glance, this sounds reasonable, for after all, we often accept truths that transcend our own fallibility. But this response conflates two very different concepts that need to be carefully distinguished:",
-  fr: "À première vue, cela semble raisonnable, car après tout, nous acceptons souvent des vérités qui transcendent notre propre faillibilité. Mais cette réponse confond deux concepts très différents qui doivent être soigneusement distingués :",
-  es: "A primera vista, esto suena razonable, pues después de todo, a menudo aceptamos verdades que trascienden nuestra propia falibilidad. Pero esta respuesta confunde dos conceptos muy diferentes que deben distinguirse cuidadosamente:",
-  de: "Auf den ersten Blick klingt dies vernünftig, denn schließlich akzeptieren wir oft Wahrheiten, die unsere eigene Fehlbarkeit übersteigen. Aber diese Antwort vermischt zwei sehr unterschiedliche Konzepte, die sorgfältig unterschieden werden müssen:",
-},
+        en: "At first glance, this sounds reasonable, for after all, we often accept truths that transcend our own fallibility. But this response conflates two very different concepts that need to be carefully distinguished:",
+        fr: "À première vue, cela semble raisonnable, car après tout, nous acceptons souvent des vérités qui transcendent notre propre faillibilité. Mais cette réponse confond deux concepts très différents qui doivent être soigneusement distingués :",
+        es: "A primera vista, esto suena razonable, pues después de todo, a menudo aceptamos verdades que trascienden nuestra propia falibilidad. Pero esta respuesta confunde dos conceptos muy diferentes que deben distinguirse cuidadosamente:",
+        de: "Auf den ersten Blick klingt dies vernünftig, denn schließlich akzeptieren wir oft Wahrheiten, die unsere eigene Fehlbarkeit übersteigen. Aber diese Antwort vermischt zwei sehr unterschiedliche Konzepte, die sorgfältig unterschieden werden müssen:",
+      },
       distinction1: {
         en: "The capacity of a fallible individual to recognize or assent to truth, and",
         fr: "La capacité d'un individu faillible à reconnaître ou à consentir à la vérité, et",
@@ -3872,11 +3857,11 @@ export const translations = {
         de: "Das Problem der Gewissheit in einem Fehlbaren Prozess",
       },
       p1: {
-  en: 'If the process by which the biblical canon was recognized was itself fallible, subject to error, disagreement, or human weakness, then the end result is only <em>probable</em> certainty about the canon, not absolute certainty. This introduces what philosophers call <strong class="text-white">epistemic uncertainty</strong>.',
-  fr: "Si le processus par lequel le canon biblique a été reconnu était lui-même faillible, sujet à l'erreur, au désaccord ou à la faiblesse humaine, alors le résultat final n'est qu'une <em>probabilité</em> de certitude sur le canon, pas une certitude absolue. Cela introduit ce que les philosophes appellent l' <strong class=\"text-white\">incertitude épistémique</strong>.",
-  es: 'Si el proceso por el cual se reconoció el canon bíblico fuera en sí mismo falible, sujeto a error, desacuerdo o debilidad humana, entonces el resultado final es solo <em>probable</em> certeza sobre el canon, no certeza absoluta. Esto introduce lo que los filósofos llaman <strong class="text-white">incertidumbre epistémica</strong>.',
-  de: 'Wenn der Prozess, durch den der biblische Kanon erkannt wurde, selbst fehlbar wäre, also anfällig für Fehler, Meinungsverschiedenheiten oder menschliche Schwäche, dann ist das Endergebnis nur <em>wahrscheinliche</em> Gewissheit über den Kanon, nicht absolute Gewissheit. Dies führt zu dem, was Philosophen die <strong class="text-white">epistemische Unsicherheit</strong> nennen.',
-},
+        en: 'If the process by which the biblical canon was recognized was itself fallible, subject to error, disagreement, or human weakness, then the end result is only <em>probable</em> certainty about the canon, not absolute certainty. This introduces what philosophers call <strong class="text-white">epistemic uncertainty</strong>.',
+        fr: "Si le processus par lequel le canon biblique a été reconnu était lui-même faillible, sujet à l'erreur, au désaccord ou à la faiblesse humaine, alors le résultat final n'est qu'une <em>probabilité</em> de certitude sur le canon, pas une certitude absolue. Cela introduit ce que les philosophes appellent l' <strong class=\"text-white\">incertitude épistémique</strong>.",
+        es: 'Si el proceso por el cual se reconoció el canon bíblico fuera en sí mismo falible, sujeto a error, desacuerdo o debilidad humana, entonces el resultado final es solo <em>probable</em> certeza sobre el canon, no certeza absoluta. Esto introduce lo que los filósofos llaman <strong class="text-white">incertidumbre epistémica</strong>.',
+        de: 'Wenn der Prozess, durch den der biblische Kanon erkannt wurde, selbst fehlbar wäre, also anfällig für Fehler, Meinungsverschiedenheiten oder menschliche Schwäche, dann ist das Endergebnis nur <em>wahrscheinliche</em> Gewissheit über den Kanon, nicht absolute Gewissheit. Dies führt zu dem, was Philosophen die <strong class="text-white">epistemische Unsicherheit</strong> nennen.',
+      },
       quote: {
         text: {
           en: '"Religious truths require a high standard of evidence; anything less than near certainty diminishes their authority and reliability."',
@@ -3892,11 +3877,11 @@ export const translations = {
         },
       },
       p2: {
-  en: "This uncertainty has real consequences: if the Church's recognition of the canon is fallible, then the foundation of Christian faith, the Word of God, is on shaky ground. Faith, in the Catholic understanding, is not a leap into the unknown but an assent to revealed truth, guaranteed by divine authority.",
-  fr: "Cette incertitude a des conséquences réelles : si la reconnaissance du canon par l'Église est faillible, alors le fondement de la foi chrétienne, la Parole de Dieu, est sur un terrain instable. La foi, dans la compréhension catholique, n'est pas un saut dans l'inconnu mais un assentiment à la vérité révélée, garantie par l'autorité divine.",
-  es: "Esta incertidumbre tiene consecuencias reales: si el reconocimiento del canon por parte de la Iglesia es falible, entonces el fundamento de la fe cristiana, la Palabra de Dios, está en terreno inestable. La fe, en la comprensión católica, no es un salto a lo desconocido sino un asentimiento a la verdad revelada, garantizada por la autoridad divina.",
-  de: "Diese Unsicherheit hat reale Konsequenzen: Wenn die Anerkennung des Kanons durch die Kirche fehlbar ist, dann steht das Fundament des christlichen Glaubens, das Wort Gottes, auf wackligem Boden. Der Glaube ist im katholischen Verständnis kein Sprung ins Ungewisse, sondern eine Zustimmung zur offenbarten Wahrheit, die durch göttliche Autorität gewährleistet wird.",
-},
+        en: "This uncertainty has real consequences: if the Church's recognition of the canon is fallible, then the foundation of Christian faith, the Word of God, is on shaky ground. Faith, in the Catholic understanding, is not a leap into the unknown but an assent to revealed truth, guaranteed by divine authority.",
+        fr: "Cette incertitude a des conséquences réelles : si la reconnaissance du canon par l'Église est faillible, alors le fondement de la foi chrétienne, la Parole de Dieu, est sur un terrain instable. La foi, dans la compréhension catholique, n'est pas un saut dans l'inconnu mais un assentiment à la vérité révélée, garantie par l'autorité divine.",
+        es: "Esta incertidumbre tiene consecuencias reales: si el reconocimiento del canon por parte de la Iglesia es falible, entonces el fundamento de la fe cristiana, la Palabra de Dios, está en terreno inestable. La fe, en la comprensión católica, no es un salto a lo desconocido sino un asentimiento a la verdad revelada, garantizada por la autoridad divina.",
+        de: "Diese Unsicherheit hat reale Konsequenzen: Wenn die Anerkennung des Kanons durch die Kirche fehlbar ist, dann steht das Fundament des christlichen Glaubens, das Wort Gottes, auf wackligem Boden. Der Glaube ist im katholischen Verständnis kein Sprung ins Ungewisse, sondern eine Zustimmung zur offenbarten Wahrheit, die durch göttliche Autorität gewährleistet wird.",
+      },
     },
     section3C: {
       h3: {
@@ -4028,11 +4013,11 @@ export const translations = {
         },
         quote: {
           text: {
-  en: "The formation of the canon was not a matter of private judgment but a corporate, ecclesial decision, showing that the church's authority was indispensable.",
-  fr: "La formation du canon n'était pas une question de jugement privé mais une décision collégiale et ecclésiale, montrant que l'autorité de l'Église était indispensable.",
-  es: "La formación del canon no fue una cuestión de juicio privado sino una decisión corporativa y eclesial, demostrando que la autoridad de la iglesia era indispensable.",
-  de: "Die Bildung des Kanons war keine Frage des privaten Urteils, sondern eine korporative, kirchliche Entscheidung, was zeigt, dass die Autorität der Kirche unverzichtbar war.",
-},
+            en: "The formation of the canon was not a matter of private judgment but a corporate, ecclesial decision, showing that the church's authority was indispensable.",
+            fr: "La formation du canon n'était pas une question de jugement privé mais une décision collégiale et ecclésiale, montrant que l'autorité de l'Église était indispensable.",
+            es: "La formación del canon no fue una cuestión de juicio privado sino una decisión corporativa y eclesial, demostrando que la autoridad de la iglesia era indispensable.",
+            de: "Die Bildung des Kanons war keine Frage des privaten Urteils, sondern eine korporative, kirchliche Entscheidung, was zeigt, dass die Autorität der Kirche unverzichtbar war.",
+          },
           source: {
             en: "Michael J. Kruger, The Question of Canon, 2003",
             fr: "Michael J. Kruger, The Question of Canon, 2003",
@@ -4084,14 +4069,14 @@ export const translations = {
         de: "Philosophische Überlegungen zu Autorität und Unfehlbarkeit",
       },
       p1: {
-  en: 'From a philosophical standpoint, consider the epistemological challenge of <strong class="text-white">foundationalism</strong>, the view that knowledge rests on certain basic, self-evident truths or reliable authorities. If the Church\'s authority to define the canon is not infallible, the entire foundation of Scripture becomes suspect.',
-  fr: "D'un point de vue philosophique, considérez le défi épistémologique du <strong class=\"text-white\">fondationnalisme</strong>, la vue selon laquelle la connaissance repose sur certaines vérités de base, évidentes en soi ou sur des autorités fiables. Si l'autorité de l'Église pour définir le canon n'est pas infaillible, le fondement même de l'Écriture devient suspect.",
-  es: 'Desde un punto de vista filosófico, considere el desafío epistemológico del <strong class="text-white">fundacionalismo</strong>, la visión de que el conocimiento se basa en ciertas verdades básicas, autoevidentes o autoridades fiables. Si la autoridad de la Iglesia para definir el canon no es infalible, la base misma de la Escritura se vuelve sospechosa.',
-  de: 'Aus philosophischer Sicht betrachten Sie die erkenntnistheoretische Herausforderung des <strong class="text-white">Fundationalismus</strong>, der Ansicht, dass Wissen auf bestimmten grundlegenden, selbstverständlichen Wahrheiten oder zuverlässigen Autoritäten beruht. Wenn die Autorität der Kirche zur Definition des Kanons nicht unfehlbar ist, wird das gesamte Fundament der Schrift verdächtig.',
-},
+        en: 'From a philosophical standpoint, consider the epistemological challenge of <strong class="text-white">foundationalism</strong>, the view that knowledge rests on certain basic, self-evident truths or reliable authorities. If the Church\'s authority to define the canon is not infallible, the entire foundation of Scripture becomes suspect.',
+        fr: "D'un point de vue philosophique, considérez le défi épistémologique du <strong class=\"text-white\">fondationnalisme</strong>, la vue selon laquelle la connaissance repose sur certaines vérités de base, évidentes en soi ou sur des autorités fiables. Si l'autorité de l'Église pour définir le canon n'est pas infaillible, le fondement même de l'Écriture devient suspect.",
+        es: 'Desde un punto de vista filosófico, considere el desafío epistemológico del <strong class="text-white">fundacionalismo</strong>, la visión de que el conocimiento se basa en ciertas verdades básicas, autoevidentes o autoridades fiables. Si la autoridad de la Iglesia para definir el canon no es infalible, la base misma de la Escritura se vuelve sospechosa.',
+        de: 'Aus philosophischer Sicht betrachten Sie die erkenntnistheoretische Herausforderung des <strong class="text-white">Fundationalismus</strong>, der Ansicht, dass Wissen auf bestimmten grundlegenden, selbstverständlichen Wahrheiten oder zuverlässigen Autoritäten beruht. Wenn die Autorität der Kirche zur Definition des Kanons nicht unfehlbar ist, wird das gesamte Fundament der Schrift verdächtig.',
+      },
       quote: {
         text: {
-          en: 'An infallible Scripture requires an infallible interpreter. Without a stable, authoritative custodian, the Bible becomes a source of endless dispute and confusion.',
+          en: "An infallible Scripture requires an infallible interpreter. Without a stable, authoritative custodian, the Bible becomes a source of endless dispute and confusion.",
           fr: "« Une Écriture infaillible nécessite un interprète infaillible. Sans un gardien stable et faisant autorité, la Bible devient une source de disputes et de confusion sans fin. »",
           es: '"Una Escritura infalible requiere un intérprete infalible. Sin un custodio estable y autorizado, la Biblia se convierte en una fuente de disputa y confusión interminables."',
           de: '„Eine unfehlbare Schrift erfordert einen unfehlbaren Interpreten. Ohne einen stabilen, autoritativen Hüter wird die Bibel zu einer Quelle endloser Streitigkeiten und Verwirrung."',
@@ -4158,11 +4143,11 @@ export const translations = {
         de: "Schlussfolgerung",
       },
       para1: {
-  en: 'The question of the canon cannot be settled by fallacies or by historical guesswork. The "You Lose, So I Win" fallacy, so often used against Catholic claims, does not vindicate Sola Scriptura. <strong>Disproving one model of authority does not prove another.</strong>',
-  fr: "La question du canon ne peut être réglée par des sophismes ou par des conjectures historiques. Le sophisme « Vous perdez, donc je gagne », si souvent utilisé contre les revendications catholiques, ne justifie pas la Sola Scriptura. <strong>Réfuter un modèle d'autorité ne prouve pas un autre.</strong>",
-  es: 'La cuestión del canon no puede resolverse mediante falacias o conjeturas históricas. La falacia "Tú pierdes, luego yo gano", tan a menudo usada contra las afirmaciones católicas, no vindica la Sola Scriptura. <strong>Refutar un modelo de autoridad no prueba otro.</strong>',
-  de: 'Die Frage des Kanons kann nicht durch Fehlschlüsse oder historische Vermutungen geklärt werden. Der „Du verlierst, also gewinne ich"-Fehlschluss, so oft gegen katholische Ansprüche verwendet, rechtfertigt Sola Scriptura nicht. <strong>Ein Autoritätsmodell zu widerlegen beweist kein anderes.</strong>',
-},
+        en: 'The question of the canon cannot be settled by fallacies or by historical guesswork. The "You Lose, So I Win" fallacy, so often used against Catholic claims, does not vindicate Sola Scriptura. <strong>Disproving one model of authority does not prove another.</strong>',
+        fr: "La question du canon ne peut être réglée par des sophismes ou par des conjectures historiques. Le sophisme « Vous perdez, donc je gagne », si souvent utilisé contre les revendications catholiques, ne justifie pas la Sola Scriptura. <strong>Réfuter un modèle d'autorité ne prouve pas un autre.</strong>",
+        es: 'La cuestión del canon no puede resolverse mediante falacias o conjeturas históricas. La falacia "Tú pierdes, luego yo gano", tan a menudo usada contra las afirmaciones católicas, no vindica la Sola Scriptura. <strong>Refutar un modelo de autoridad no prueba otro.</strong>',
+        de: 'Die Frage des Kanons kann nicht durch Fehlschlüsse oder historische Vermutungen geklärt werden. Der „Du verlierst, also gewinne ich"-Fehlschluss, so oft gegen katholische Ansprüche verwendet, rechtfertigt Sola Scriptura nicht. <strong>Ein Autoritätsmodell zu widerlegen beweist kein anderes.</strong>',
+      },
       para2: {
         en: 'And appealing to "scientific" or historical methods to define the canon can, at best, give us <strong>probability</strong>, not <strong>certainty</strong>. It leaves us with human opinion, not divine assurance.',
         fr: "Et faire appel à des méthodes « scientifiques » ou historiques pour définir le canon peut, au mieux, nous donner une <strong>probabilité</strong>, pas une <strong>certitude</strong>. Cela nous laisse avec l'opinion humaine, pas l'assurance divine.",
@@ -4206,11 +4191,11 @@ export const translations = {
         de: "Und Gott schützt diese Kirche vor Irrtümern in wesentlichen Heilsfragen.",
       },
       finalStatement: {
-  en: "An infallible canon can function as a rule of faith only if it is defined and proposed by an <strong>infallible ecclesial authority</strong>.",
-  fr: "Un canon infaillible ne peut servir de règle de foi que s'il est défini et proposé par une <strong>autorité ecclésiale infaillible</strong>.",
-  es: "Un canon infalible solo puede funcionar como regla de fe si es definido y propuesto por una <strong>autoridad eclesial infalible</strong>.",
-  de: "Ein unfehlbarer Kanon kann nur dann als Glaubensregel fungieren, wenn er von einer <strong>unfehlbaren kirchlichen Autorität</strong> definiert und vorgelegt wird.",
-},
+        en: "An infallible canon can function as a rule of faith only if it is defined and proposed by an <strong>infallible ecclesial authority</strong>.",
+        fr: "Un canon infaillible ne peut servir de règle de foi que s'il est défini et proposé par une <strong>autorité ecclésiale infaillible</strong>.",
+        es: "Un canon infalible solo puede funcionar como regla de fe si es definido y propuesto por una <strong>autoridad eclesial infalible</strong>.",
+        de: "Ein unfehlbarer Kanon kann nur dann als Glaubensregel fungieren, wenn er von einer <strong>unfehlbaren kirchlichen Autorität</strong> definiert und vorgelegt wird.",
+      },
     },
 
     // Bridge to Next Topic
@@ -4974,11 +4959,11 @@ export const translations = {
         de: "Einführung",
       },
       p1: {
-  en: "Among the most enduring theological controversies between the Catholic Church and the Eastern Orthodox Church is the doctrine of the <strong>Filioque</strong>, the assertion that the Holy Spirit proceeds from the Father <strong>and the Son</strong>. While often dismissed as a minor linguistic or political disagreement, deeper study reveals that this doctrine touches the very heart of the mystery of the Trinity.",
-  fr: "Parmi les controverses théologiques les plus durables entre l'Église catholique et l'Église orthodoxe orientale se trouve la doctrine du <strong>Filioque</strong>, l'affirmation que le Saint-Esprit procède du Père <strong>et du Fils</strong>. Bien que souvent rejetée comme un désaccord linguistique ou politique mineur, une étude plus approfondie révèle que cette doctrine touche au cœur même du mystère de la Trinité.",
-  es: "Una de las controversias teológicas más duraderas entre la Iglesia Católica y la Iglesia Ortodoxa Oriental es la doctrina del <strong>Filioque</strong>, la afirmación de que el Espíritu Santo procede del Padre <strong>y del Hijo</strong>. Aunque a menudo se descarta como un desacuerdo lingüístico o político menor, un estudio más profundo revela que esta doctrina toca el corazón mismo del misterio de la Trinidad.",
-  de: "Eine der beständigsten theologischen Kontroversen zwischen der katholischen Kirche und der östlich-orthodoxen Kirche ist die Lehre vom <strong>Filioque</strong>, die Behauptung, dass der Heilige Geist vom Vater <strong>und dem Sohn</strong> ausgeht. Obwohl oft als geringfügige sprachliche oder politische Meinungsverschiedenheit abgetan, zeigt eine tiefere Untersuchung, dass diese Lehre das Herzstück des Geheimnisses der Trinität berührt.",
-},
+        en: "Among the most enduring theological controversies between the Catholic Church and the Eastern Orthodox Church is the doctrine of the <strong>Filioque</strong>, the assertion that the Holy Spirit proceeds from the Father <strong>and the Son</strong>. While often dismissed as a minor linguistic or political disagreement, deeper study reveals that this doctrine touches the very heart of the mystery of the Trinity.",
+        fr: "Parmi les controverses théologiques les plus durables entre l'Église catholique et l'Église orthodoxe orientale se trouve la doctrine du <strong>Filioque</strong>, l'affirmation que le Saint-Esprit procède du Père <strong>et du Fils</strong>. Bien que souvent rejetée comme un désaccord linguistique ou politique mineur, une étude plus approfondie révèle que cette doctrine touche au cœur même du mystère de la Trinité.",
+        es: "Una de las controversias teológicas más duraderas entre la Iglesia Católica y la Iglesia Ortodoxa Oriental es la doctrina del <strong>Filioque</strong>, la afirmación de que el Espíritu Santo procede del Padre <strong>y del Hijo</strong>. Aunque a menudo se descarta como un desacuerdo lingüístico o político menor, un estudio más profundo revela que esta doctrina toca el corazón mismo del misterio de la Trinidad.",
+        de: "Eine der beständigsten theologischen Kontroversen zwischen der katholischen Kirche und der östlich-orthodoxen Kirche ist die Lehre vom <strong>Filioque</strong>, die Behauptung, dass der Heilige Geist vom Vater <strong>und dem Sohn</strong> ausgeht. Obwohl oft als geringfügige sprachliche oder politische Meinungsverschiedenheit abgetan, zeigt eine tiefere Untersuchung, dass diese Lehre das Herzstück des Geheimnisses der Trinität berührt.",
+      },
       p2: {
         en: "One of the most powerful defenses of the <em>Filioque</em> comes from 19th-century Catholic theologian <strong>Joseph Scheeben</strong>, a representative of the so-called <em>Collegio Romano</em> theologians.",
         fr: "L'une des défenses les plus puissantes du <em>Filioque</em> provient du théologien catholique du XIXe siècle <strong>Joseph Scheeben</strong>, un représentant des théologiens dits du <em>Collegio Romano</em>.",
@@ -5134,11 +5119,11 @@ export const translations = {
           de: "Es zerbricht die Einheit der vollkommenen Gemeinschaft zwischen Vater und Sohn, durch die der Sohn alles mit dem Vater gemeinsam haben muss, außer der Vaterschaft.",
         },
         explanation: {
-  en: "The Father gives to the Son all that He has, including the power to spirate the Spirit. Denying this makes the Son a lesser reflection of the Father.",
-  fr: "Le Père donne au Fils tout ce qu'Il a, y compris le pouvoir de spirer l'Esprit. Nier cela fait du Fils un reflet moindre du Père.",
-  es: "El Padre da al Hijo todo lo que Él tiene, incluido el poder de espirar al Espíritu. Negar esto convierte al Hijo en un reflejo menor del Padre.",
-  de: "Der Vater gibt dem Sohn alles, was Er hat, einschließlich der Macht, den Geist zu hauchen. Dies zu leugnen macht den Sohn zu einem geringeren Abbild des Vaters.",
-},
+          en: "The Father gives to the Son all that He has, including the power to spirate the Spirit. Denying this makes the Son a lesser reflection of the Father.",
+          fr: "Le Père donne au Fils tout ce qu'Il a, y compris le pouvoir de spirer l'Esprit. Nier cela fait du Fils un reflet moindre du Père.",
+          es: "El Padre da al Hijo todo lo que Él tiene, incluido el poder de espirar al Espíritu. Negar esto convierte al Hijo en un reflejo menor del Padre.",
+          de: "Der Vater gibt dem Sohn alles, was Er hat, einschließlich der Macht, den Geist zu hauchen. Dies zu leugnen macht den Sohn zu einem geringeren Abbild des Vaters.",
+        },
       },
       arg3: {
         title: {
@@ -5154,11 +5139,11 @@ export const translations = {
           de: "Es spaltet die unteilbare Einheit des Vaters... plötzlich neben seiner Vaterschaft stehend, muss eine Person genauso konstituieren wie letztere.",
         },
         explanation: {
-  en: "If the Father's role as source of the Spirit is unrelated to His role as Father of the Son, then two distinct identities are posited in the Father, a theological absurdity.",
-  fr: "Si le rôle du Père en tant que source de l'Esprit est sans rapport avec Son rôle de Père du Fils, alors deux identités distinctes sont posées dans le Père, une absurdité théologique.",
-  es: "Si el papel del Padre como fuente del Espíritu no está relacionado con Su papel como Padre del Hijo, entonces se postulan dos identidades distintas en el Padre, un absurdo teológico.",
-  de: "Wenn die Rolle des Vaters als Quelle des Geistes nicht mit Seiner Rolle als Vater des Sohnes zusammenhängt, werden zwei unterschiedliche Identitäten im Vater postuliert, eine theologische Absurdität.",
-},
+          en: "If the Father's role as source of the Spirit is unrelated to His role as Father of the Son, then two distinct identities are posited in the Father, a theological absurdity.",
+          fr: "Si le rôle du Père en tant que source de l'Esprit est sans rapport avec Son rôle de Père du Fils, alors deux identités distinctes sont posées dans le Père, une absurdité théologique.",
+          es: "Si el papel del Padre como fuente del Espíritu no está relacionado con Su papel como Padre del Hijo, entonces se postulan dos identidades distintas en el Padre, un absurdo teológico.",
+          de: "Wenn die Rolle des Vaters als Quelle des Geistes nicht mit Seiner Rolle als Vater des Sohnes zusammenhängt, werden zwei unterschiedliche Identitäten im Vater postuliert, eine theologische Absurdität.",
+        },
       },
     },
     destroysUnity: {
@@ -5316,7 +5301,7 @@ export const translations = {
       },
     },
 
-  biblical: {
+    biblical: {
       h2: {
         en: "Biblical Evidence for the Filioque",
         fr: "Preuves Bibliques du Filioque",
@@ -5634,11 +5619,11 @@ export const translations = {
           de: "1. Das Wesen der Offenbarung",
         },
         p1: {
-  en: "Revelation is the communication of divine truths by God to man, truths necessary for salvation. As Ludwig Ott explains:",
-  fr: "La Révélation est la communication des vérités divines par Dieu à l'homme, des vérités nécessaires au salut. Comme l'explique Ludwig Ott :",
-  es: "La Revelación es la comunicación de verdades divinas por Dios al hombre, verdades necesarias para la salvación. Como explica Ludwig Ott:",
-  de: "Offenbarung ist die Mitteilung göttlicher Wahrheiten durch Gott an den Menschen, Wahrheiten, die zum Heil notwendig sind. Wie Ludwig Ott erklärt:",
-},
+          en: "Revelation is the communication of divine truths by God to man, truths necessary for salvation. As Ludwig Ott explains:",
+          fr: "La Révélation est la communication des vérités divines par Dieu à l'homme, des vérités nécessaires au salut. Comme l'explique Ludwig Ott :",
+          es: "La Revelación es la comunicación de verdades divinas por Dios al hombre, verdades necesarias para la salvación. Como explica Ludwig Ott:",
+          de: "Offenbarung ist die Mitteilung göttlicher Wahrheiten durch Gott an den Menschen, Wahrheiten, die zum Heil notwendig sind. Wie Ludwig Ott erklärt:",
+        },
         ottQuote: {
           en: "&quot;Revelation is a fruitful principle of supernatural knowledge and life... a supreme law of faith, thought and action for all men... through which they are to be united in one kingdom of truth and holiness.&quot;",
           fr: "« La Révélation est un principe fécond de connaissance et de vie surnaturelles... une loi suprême de foi, de pensée et d'action pour tous les hommes... par laquelle ils doivent être unis en un seul royaume de vérité et de sainteté. »",
@@ -5659,12 +5644,12 @@ export const translations = {
               es: "Comunicación Divina",
               de: "Göttliche Mitteilung",
             },
-           desc: {
-  en: "Revelation is the communication of divine truths by God to man, truths necessary for salvation.",
-  fr: "La Révélation est la communication des vérités divines par Dieu à l'homme, des vérités nécessaires au salut.",
-  es: "La Revelación es la comunicación de verdades divinas por Dios al hombre, verdades necesarias para la salvación.",
-  de: "Offenbarung ist die Mitteilung göttlicher Wahrheiten durch Gott an den Menschen, Wahrheiten, die zum Heil notwendig sind.",
-},
+            desc: {
+              en: "Revelation is the communication of divine truths by God to man, truths necessary for salvation.",
+              fr: "La Révélation est la communication des vérités divines par Dieu à l'homme, des vérités nécessaires au salut.",
+              es: "La Revelación es la comunicación de verdades divinas por Dios al hombre, verdades necesarias para la salvación.",
+              de: "Offenbarung ist die Mitteilung göttlicher Wahrheiten durch Gott an den Menschen, Wahrheiten, die zum Heil notwendig sind.",
+            },
           },
           p2: {
             title: {
@@ -6352,11 +6337,11 @@ export const translations = {
       },
       callout: {
         p1: {
-  en: "The Catholic Church alone corresponds to the vitality and catholicity of the word of God. In her Magisterium, the Word of Christ continues to speak, not as a dead letter or private interpretation, but through living ambassadors of truth.",
-  fr: "Seule l'Église catholique correspond à la vitalité et à la catholicité de la parole de Dieu. Dans son Magistère, la Parole du Christ continue de parler, non comme une lettre morte ou une interprétation privée, mais à travers des ambassadeurs vivants de la vérité.",
-  es: "Solo la Iglesia Católica corresponde a la vitalidad y catolicidad de la palabra de Dios. En su Magisterio, la Palabra de Cristo continúa hablando, no como una letra muerta o una interpretación privada, sino a través de embajadores vivos de la verdad.",
-  de: "Die katholische Kirche allein entspricht der Vitalität und Katholizität des Wortes Gottes. In ihrem Lehramt spricht das Wort Christi weiter, nicht als toter Buchstabe oder private Interpretation, sondern durch lebendige Botschafter der Wahrheit.",
-},
+          en: "The Catholic Church alone corresponds to the vitality and catholicity of the word of God. In her Magisterium, the Word of Christ continues to speak, not as a dead letter or private interpretation, but through living ambassadors of truth.",
+          fr: "Seule l'Église catholique correspond à la vitalité et à la catholicité de la parole de Dieu. Dans son Magistère, la Parole du Christ continue de parler, non comme une lettre morte ou une interprétation privée, mais à travers des ambassadeurs vivants de la vérité.",
+          es: "Solo la Iglesia Católica corresponde a la vitalidad y catolicidad de la palabra de Dios. En su Magisterio, la Palabra de Cristo continúa hablando, no como una letra muerta o una interpretación privada, sino a través de embajadores vivos de la verdad.",
+          de: "Die katholische Kirche allein entspricht der Vitalität und Katholizität des Wortes Gottes. In ihrem Lehramt spricht das Wort Christi weiter, nicht als toter Buchstabe oder private Interpretation, sondern durch lebendige Botschafter der Wahrheit.",
+        },
       },
     },
     visual: {
@@ -6423,11 +6408,11 @@ export const translations = {
         de: "Im Laufe der Geschichte hat das Lehramt wesentliche christliche Lehren definiert und verteidigt. Von der Natur der Trinität bis zur Göttlichkeit Christi, vom Kanon der Schrift bis zu moralischen Lehren hat die Lehrautorität der Kirche den Glauben rein erhalten.",
       },
       p2: {
-  en: "One of the most important doctrines the Magisterium has preserved is the full doctrine of the Trinity, including a clause that some Orthodox Christians reject. Let's see why this matters.",
-  fr: "L'une des doctrines les plus importantes que le Magistère ait préservées est la doctrine complète de la Trinité, y compris une clause que certains chrétiens orthodoxes rejettent. Voyons pourquoi cela est important.",
-  es: "Una de las doctrinas más importantes que el Magisterio ha preservado es la doctrina completa de la Trinidad, incluida una cláusula que algunos cristianos ortodoxos rechazan. Veamos por qué esto importa.",
-  de: "Eine der wichtigsten Lehren, die das Lehramt bewahrt hat, ist die vollständige Lehre von der Trinität, einschließlich einer Klausel, die einige orthodoxe Christen ablehnen. Sehen wir uns an, warum das ist wichtig.",
-},
+        en: "One of the most important doctrines the Magisterium has preserved is the full doctrine of the Trinity, including a clause that some Orthodox Christians reject. Let's see why this matters.",
+        fr: "L'une des doctrines les plus importantes que le Magistère ait préservées est la doctrine complète de la Trinité, y compris une clause que certains chrétiens orthodoxes rejettent. Voyons pourquoi cela est important.",
+        es: "Una de las doctrinas más importantes que el Magisterio ha preservado es la doctrina completa de la Trinidad, incluida una cláusula que algunos cristianos ortodoxos rechazan. Veamos por qué esto importa.",
+        de: "Eine der wichtigsten Lehren, die das Lehramt bewahrt hat, ist die vollständige Lehre von der Trinität, einschließlich einer Klausel, die einige orthodoxe Christen ablehnen. Sehen wir uns an, warum das ist wichtig.",
+      },
     },
   },
 
@@ -6460,11 +6445,11 @@ export const translations = {
     },
     intro: {
       p1: {
-  en: "The Catholic Church teaches that St. Peter was the first Pope, the visible head of the Church on earth, appointed by Christ Himself. This belief is rooted in Scripture, affirmed by early Christian writings, and sustained through an unbroken line of successors in Rome.",
-  fr: "L'Église catholique enseigne que Saint Pierre fut le premier Pape, le chef visible de l'Église sur terre, désigné par le Christ Lui-même. Cette croyance est enracinée dans l'Écriture, affirmée par les écrits des premiers chrétiens, et maintenue à travers une lignée ininterrompue de successeurs à Rome.",
-  es: "La Iglesia Católica enseña que San Pedro fue el primer Papa, la cabeza visible de la Iglesia en la tierra, designado por Cristo mismo. Esta creencia está arraigada en la Escritura, afirmada por los primeros escritos cristianos, y sostenida a través de una línea ininterrumpida de sucesores en Roma.",
-  de: "Die katholische Kirche lehrt, dass der heilige Petrus der erste Papst war, das sichtbare Oberhaupt der Kirche auf Erden, von Christus selbst eingesetzt. Dieser Glaube ist in der Schrift verwurzelt, von frühchristlichen Schriften bestätigt und durch eine ununterbrochene Linie von Nachfolgern in Rom aufrechterhalten.",
-},
+        en: "The Catholic Church teaches that St. Peter was the first Pope, the visible head of the Church on earth, appointed by Christ Himself. This belief is rooted in Scripture, affirmed by early Christian writings, and sustained through an unbroken line of successors in Rome.",
+        fr: "L'Église catholique enseigne que Saint Pierre fut le premier Pape, le chef visible de l'Église sur terre, désigné par le Christ Lui-même. Cette croyance est enracinée dans l'Écriture, affirmée par les écrits des premiers chrétiens, et maintenue à travers une lignée ininterrompue de successeurs à Rome.",
+        es: "La Iglesia Católica enseña que San Pedro fue el primer Papa, la cabeza visible de la Iglesia en la tierra, designado por Cristo mismo. Esta creencia está arraigada en la Escritura, afirmada por los primeros escritos cristianos, y sostenida a través de una línea ininterrumpida de sucesores en Roma.",
+        de: "Die katholische Kirche lehrt, dass der heilige Petrus der erste Papst war, das sichtbare Oberhaupt der Kirche auf Erden, von Christus selbst eingesetzt. Dieser Glaube ist in der Schrift verwurzelt, von frühchristlichen Schriften bestätigt und durch eine ununterbrochene Linie von Nachfolgern in Rom aufrechterhalten.",
+      },
       callout: {
         text: {
           en: "The Lord made Simon alone, whom he named Peter, the rock of his Church. He gave him the keys of his Church and instituted him shepherd of the whole flock.",
@@ -6521,11 +6506,11 @@ export const translations = {
       },
       evidence: {
         e1: {
-  en: "Peter's name is mentioned over 150 times, more than all the other apostles combined.",
-  fr: "Le nom de Pierre est mentionné plus de 150 fois, plus que tous les autres apôtres réunis.",
-  es: "El nombre de Pedro se menciona más de 150 veces, más que todos los demás apóstoles juntos.",
-  de: "Petrus' Name wird über 150 Mal erwähnt, öfter als alle anderen Apostel zusammen.",
-},
+          en: "Peter's name is mentioned over 150 times, more than all the other apostles combined.",
+          fr: "Le nom de Pierre est mentionné plus de 150 fois, plus que tous les autres apôtres réunis.",
+          es: "El nombre de Pedro se menciona más de 150 veces, más que todos los demás apóstoles juntos.",
+          de: "Petrus' Name wird über 150 Mal erwähnt, öfter als alle anderen Apostel zusammen.",
+        },
         e2: {
           en: "He is always listed first in apostolic lists (e.g., Matthew 10:2).",
           fr: "Il est toujours listé en premier dans les listes apostoliques (par ex., Matthieu 10:2).",
@@ -6535,11 +6520,11 @@ export const translations = {
       },
       matthew: {
         h3: {
-  en: "Matthew 16:18–19: The Foundational Text",
-  fr: "Matthieu 16:18–19 : Le texte fondamental",
-  es: "Mateo 16:18–19: El texto fundacional",
-  de: "Matthäus 16:18–19: Der grundlegende Text",
-},
+          en: "Matthew 16:18–19: The Foundational Text",
+          fr: "Matthieu 16:18–19 : Le texte fondamental",
+          es: "Mateo 16:18–19: El texto fundacional",
+          de: "Matthäus 16:18–19: Der grundlegende Text",
+        },
         quote: {
           en: "You are Peter, and on this rock I will build my Church... I will give you the keys of the kingdom of heaven...",
           fr: "« Tu es Pierre, et sur cette pierre je bâtirai mon Église... Je te donnerai les clefs du royaume des cieux... »",
@@ -6560,11 +6545,11 @@ export const translations = {
             de: '„Petrus" (Griechisch: <em>Petros</em>) bedeutet Fels.',
           },
           p2: {
-  en: "Jesus changes Simon's name, a biblical act denoting mission (cf. Abram → Abraham).",
-  fr: "Jésus change le nom de Simon, un acte biblique dénotant une mission (cf. Abram → Abraham).",
-  es: "Jesús cambia el nombre de Simón, un acto bíblico que denota misión (cf. Abram → Abraham).",
-  de: "Jesus ändert Simons Namen, ein biblischer Akt, der eine Mission kennzeichnet (vgl. Abram → Abraham).",
-},
+            en: "Jesus changes Simon's name, a biblical act denoting mission (cf. Abram → Abraham).",
+            fr: "Jésus change le nom de Simon, un acte biblique dénotant une mission (cf. Abram → Abraham).",
+            es: "Jesús cambia el nombre de Simón, un acto bíblico que denota misión (cf. Abram → Abraham).",
+            de: "Jesus ändert Simons Namen, ein biblischer Akt, der eine Mission kennzeichnet (vgl. Abram → Abraham).",
+          },
           p3: {
             en: "The &quot;keys&quot; symbolize authority (cf. Isaiah 22:22).",
             fr: "Les « clés » symbolisent l'autorité (cf. Isaïe 22:22).",
@@ -6887,20 +6872,19 @@ export const translations = {
         es: "La Sucesión Continúa",
         de: "Die Nachfolge Geht Weiter",
       },
-      
+
       p1: {
-  en: "Peter's authority didn't die with him, but was passed on through apostolic succession to his successors in Rome. This unbroken line continues to the present day with Pope Francis as the 266th successor of Peter.",
-  fr: "L'autorité de Pierre n'est pas morte avec lui, mais a été transmise par succession apostolique à ses successeurs à Rome. Cette lignée ininterrompue se poursuit jusqu'à nos jours avec le Pape François comme 266e successeur de Pierre.",
-  es: "La autoridad de Pedro no murió con él, sino que fue transmitida a través de la sucesión apostólica a sus sucesores en Roma. Esta línea ininterrumpida continúa hasta el día de hoy con el Papa Francisco como el 266º sucesor de Pedro.",
-  de: "Petrus' Autorität starb nicht mit ihm, sondern wurde durch apostolische Sukzession an seine Nachfolger in Rom weitergegeben. Diese ununterbrochene Linie setzt sich bis heute fort mit Papst Franziskus als dem 266. Nachfolger Petri.",
-},
-p2: {
-  en: "The papacy isn't just about one man's authority, but concerns the Church's teaching authority as a whole. Let's explore what that means and how the Magisterium functions.",
-  fr: "La papauté ne concerne pas seulement l'autorité d'un seul homme, mais l'autorité d'enseignement de l'Église dans son ensemble. Explorons ce que cela signifie et comment fonctionne le Magistère.",
-  es: "El papado no se trata solo de la autoridad de un hombre, sino de la autoridad de enseñanza de la Iglesia en su conjunto. Exploremos lo que eso significa y cómo funciona el Magisterio.",
-  de: "Beim Papsttum geht es nicht nur um die Autorität eines Mannes, sondern um die Lehrautorität der Kirche als Ganzes. Lassen Sie uns untersuchen, was das bedeutet und wie das Lehramt funktioniert.",
-},
-      
+        en: "Peter's authority didn't die with him, but was passed on through apostolic succession to his successors in Rome. This unbroken line continues to the present day with Pope Francis as the 266th successor of Peter.",
+        fr: "L'autorité de Pierre n'est pas morte avec lui, mais a été transmise par succession apostolique à ses successeurs à Rome. Cette lignée ininterrompue se poursuit jusqu'à nos jours avec le Pape François comme 266e successeur de Pierre.",
+        es: "La autoridad de Pedro no murió con él, sino que fue transmitida a través de la sucesión apostólica a sus sucesores en Roma. Esta línea ininterrumpida continúa hasta el día de hoy con el Papa Francisco como el 266º sucesor de Pedro.",
+        de: "Petrus' Autorität starb nicht mit ihm, sondern wurde durch apostolische Sukzession an seine Nachfolger in Rom weitergegeben. Diese ununterbrochene Linie setzt sich bis heute fort mit Papst Franziskus als dem 266. Nachfolger Petri.",
+      },
+      p2: {
+        en: "The papacy isn't just about one man's authority, but concerns the Church's teaching authority as a whole. Let's explore what that means and how the Magisterium functions.",
+        fr: "La papauté ne concerne pas seulement l'autorité d'un seul homme, mais l'autorité d'enseignement de l'Église dans son ensemble. Explorons ce que cela signifie et comment fonctionne le Magistère.",
+        es: "El papado no se trata solo de la autoridad de un hombre, sino de la autoridad de enseñanza de la Iglesia en su conjunto. Exploremos lo que eso significa y cómo funciona el Magisterio.",
+        de: "Beim Papsttum geht es nicht nur um die Autorität eines Mannes, sondern um die Lehrautorität der Kirche als Ganzes. Lassen Sie uns untersuchen, was das bedeutet und wie das Lehramt funktioniert.",
+      },
     },
   },
 
@@ -6939,17 +6923,17 @@ p2: {
         de: "Warum Dies Wichtig Ist",
       },
       p1: {
-  en: "The difference between the <strong>Catholic Bible</strong> (73 books) and the <strong> Protestant Bible</strong> (66 books) is one of the most common, and most misunderstood, issues in Christian theology. Protestants often accuse Catholics of &quot;adding books&quot; at the Council of Trent. But history, scholarship, and early Church authority all tell a very different story.",
-  fr: "La différence entre la <strong>Bible catholique</strong> (73 livres) et la <strong>Bible protestante</strong> (66 livres) est l'une des questions les plus courantes, et les plus mal comprises, de la théologie chrétienne. Les protestants accusent souvent les catholiques d'avoir « ajouté des livres » au Concile de Trente. Mais l'histoire, l'érudition et l'autorité de l'Église primitive racontent toutes une histoire très différente.",
-  es: "La diferencia entre la <strong>Biblia Católica</strong> (73 libros) y la <strong>Biblia Protestante</strong> (66 libros) es uno de los temas más comunes, y más incomprendidos, de la teología cristiana. Los protestantes a menudo acusan a los católicos de &quot;añadir libros&quot; en el Concilio de Trento. Pero la historia, la erudición y la autoridad de la Iglesia primitiva cuentan una historia muy diferente.",
-  de: "Der Unterschied zwischen der <strong>katholischen Bibel</strong> (73 Bücher) und der <strong>protestantischen Bibel</strong> (66 Bücher) ist eines der häufigsten, und am meisten missverstandenen, Themen der christlichen Theologie. Protestanten werfen Katholiken oft vor, beim Konzil von Trient „Bücher hinzugefügt“ zu haben. Aber Geschichte, Wissenschaft und die Autorität der frühen Kirche erzählen alle eine ganz andere Geschichte.",
-},
+        en: "The difference between the <strong>Catholic Bible</strong> (73 books) and the <strong> Protestant Bible</strong> (66 books) is one of the most common, and most misunderstood, issues in Christian theology. Protestants often accuse Catholics of &quot;adding books&quot; at the Council of Trent. But history, scholarship, and early Church authority all tell a very different story.",
+        fr: "La différence entre la <strong>Bible catholique</strong> (73 livres) et la <strong>Bible protestante</strong> (66 livres) est l'une des questions les plus courantes, et les plus mal comprises, de la théologie chrétienne. Les protestants accusent souvent les catholiques d'avoir « ajouté des livres » au Concile de Trente. Mais l'histoire, l'érudition et l'autorité de l'Église primitive racontent toutes une histoire très différente.",
+        es: "La diferencia entre la <strong>Biblia Católica</strong> (73 libros) y la <strong>Biblia Protestante</strong> (66 libros) es uno de los temas más comunes, y más incomprendidos, de la teología cristiana. Los protestantes a menudo acusan a los católicos de &quot;añadir libros&quot; en el Concilio de Trento. Pero la historia, la erudición y la autoridad de la Iglesia primitiva cuentan una historia muy diferente.",
+        de: "Der Unterschied zwischen der <strong>katholischen Bibel</strong> (73 Bücher) und der <strong>protestantischen Bibel</strong> (66 Bücher) ist eines der häufigsten, und am meisten missverstandenen, Themen der christlichen Theologie. Protestanten werfen Katholiken oft vor, beim Konzil von Trient „Bücher hinzugefügt“ zu haben. Aber Geschichte, Wissenschaft und die Autorität der frühen Kirche erzählen alle eine ganz andere Geschichte.",
+      },
       callout: {
-  en: "The Catholic Church never added books, but preserved the full canon received from the early Church.",
-  fr: "L'Église catholique n'a jamais ajouté de livres, mais a préservé le canon complet reçu de l'Église primitive.",
-  es: "La Iglesia Católica nunca añadió libros, sino que preservó el canon completo recibido de la Iglesia primitiva.",
-  de: "Die katholische Kirche hat nie Bücher hinzugefügt, sondern den vollständigen Kanon bewahrt, den sie von der frühen Kirche empfangen hat.",
-},
+        en: "The Catholic Church never added books, but preserved the full canon received from the early Church.",
+        fr: "L'Église catholique n'a jamais ajouté de livres, mais a préservé le canon complet reçu de l'Église primitive.",
+        es: "La Iglesia Católica nunca añadió libros, sino que preservó el canon completo recibido de la Iglesia primitiva.",
+        de: "Die katholische Kirche hat nie Bücher hinzugefügt, sondern den vollständigen Kanon bewahrt, den sie von der frühen Kirche empfangen hat.",
+      },
     },
     video1: {
       title: {
@@ -7023,19 +7007,19 @@ p2: {
         de: "Sowie längere Fassungen von <strong>Daniel</strong> und <strong>Esther</strong>.",
       },
       callout: {
-  en: "These books were received and used in the Church’s Scriptures for over a millennium, until the Reformation, when <strong>Martin Luther</strong> and other Reformers, on theological grounds, denied them canonical status.",
-  fr: "Ces livres ont été reçus et utilisés dans les Écritures de l'Église pendant plus d'un millénaire, jusqu'à la Réforme, lorsque <strong>Martin Luther</strong> et d'autres réformateurs, pour des motifs théologiques, leur ont refusé le statut canonique.",
-  es: "Estos libros fueron recibidos y utilizados en las Escrituras de la Iglesia durante más de un milenio, hasta la Reforma, cuando <strong>Martín Lutero</strong> y otros reformadores, por motivos teológicos, les negaron el estatus canónico.",
-  de: "Diese Bücher wurden über ein Jahrtausend lang in den Schriften der Kirche empfangen und verwendet, bis zur Reformation, als <strong>Martin Luther</strong> und andere Reformatoren ihnen aus theologischen Gründen den kanonischen Status absprachen.",
-},
+        en: "These books were received and used in the Church’s Scriptures for over a millennium, until the Reformation, when <strong>Martin Luther</strong> and other Reformers, on theological grounds, denied them canonical status.",
+        fr: "Ces livres ont été reçus et utilisés dans les Écritures de l'Église pendant plus d'un millénaire, jusqu'à la Réforme, lorsque <strong>Martin Luther</strong> et d'autres réformateurs, pour des motifs théologiques, leur ont refusé le statut canonique.",
+        es: "Estos libros fueron recibidos y utilizados en las Escrituras de la Iglesia durante más de un milenio, hasta la Reforma, cuando <strong>Martín Lutero</strong> y otros reformadores, por motivos teológicos, les negaron el estatus canónico.",
+        de: "Diese Bücher wurden über ein Jahrtausend lang in den Schriften der Kirche empfangen und verwendet, bis zur Reformation, als <strong>Martin Luther</strong> und andere Reformatoren ihnen aus theologischen Gründen den kanonischen Status absprachen.",
+      },
     },
     arguments: {
       h2: {
-  en: "Protestant Arguments and the Catholic Response",
-  fr: "Arguments protestants et la réponse catholique",
-  es: "Argumentos protestantes y la respuesta católica",
-  de: "Protestantische Argumente und die katholische Antwort",
-},
+        en: "Protestant Arguments and the Catholic Response",
+        fr: "Arguments protestants et la réponse catholique",
+        es: "Argumentos protestantes y la respuesta católica",
+        de: "Protestantische Argumente und die katholische Antwort",
+      },
       o1: {
         obj: {
           en: "The Jews didn't accept these books",
@@ -7050,11 +7034,11 @@ p2: {
           de: "Es gab keinen einzigen, universell anerkannten jüdischen Kanon zur Zeit Jesu. Gelehrte identifizieren mindestens fünf verschiedene jüdische Kanons, die im 1. Jahrhundert in Gebrauch waren: die pharisäische, sadduzäische, samaritanische, Qumran- und die Septuaginta-Tradition.",
         },
         res2: {
-  en: "The Septuagint, a Greek translation of the Hebrew Scriptures that included the Deuterocanonical books, was the version most often quoted by the New Testament authors.",
-  fr: "La Septante, une traduction grecque des Écritures hébraïques qui incluait les livres deutérocanoniques, était la version la plus souvent citée par les auteurs du Nouveau Testament.",
-  es: "La Septuaginta, una traducción griega de las Escrituras hebreas que incluía los libros deuterocanónicos, fue la versión más citada por los autores del Nuevo Testamento.",
-  de: "Die Septuaginta, eine griechische Übersetzung der hebräischen Schriften, die die deuterokanonischen Bücher enthielt, war die Version, die von den Autoren des Neuen Testaments am häufigsten zitiert wurde.",
-},
+          en: "The Septuagint, a Greek translation of the Hebrew Scriptures that included the Deuterocanonical books, was the version most often quoted by the New Testament authors.",
+          fr: "La Septante, une traduction grecque des Écritures hébraïques qui incluait les livres deutérocanoniques, était la version la plus souvent citée par les auteurs du Nouveau Testament.",
+          es: "La Septuaginta, una traducción griega de las Escrituras hebreas que incluía los libros deuterocanónicos, fue la versión más citada por los autores del Nuevo Testamento.",
+          de: "Die Septuaginta, eine griechische Übersetzung der hebräischen Schriften, die die deuterokanonischen Bücher enthielt, war die Version, die von den Autoren des Neuen Testaments am häufigsten zitiert wurde.",
+        },
         quote: {
           text: {
             en: "The New Testament authors almost always use the Septuagint to access the Jewish scriptures.",
@@ -7120,24 +7104,24 @@ p2: {
           de: "Das gilt auch für viele unbestrittene Bücher in protestantischen Bibeln. Bücher wie Richter, Esra, Esther, Obadja, Nahum, und Zefanja werden ebenfalls nie explizit im Neuen Testament zitiert.",
         },
         res2: {
-  en: "The Deuterocanonicals are often referenced or echoed: Hebrews 11 alludes to 2 Maccabees 6–7; Wisdom 2 prophesies about the righteous man being killed, fulfilled in Christ; Jesus celebrates Hanukkah in John 10:22–23, a feast only described in 1 Maccabees.",
-  fr: "Les Deutérocanoniques sont souvent référencés ou évoqués : Hébreux 11 fait allusion à 2 Maccabées 6–7 ; Sagesse 2 prophétise la mort du juste, accomplie dans le Christ ; Jésus célèbre Hanoukka dans Jean 10:22–23, une fête décrite uniquement dans 1 Maccabées.",
-  es: "Los Deuterocanónicos a menudo se referencian o se hacen eco de ellos: Hebreos 11 alude a 2 Macabeos 6–7; Sabiduría 2 profetiza sobre la muerte del justo, cumplida en Cristo; Jesús celebra Janucá en Juan 10:22–23, una fiesta descrita solo en 1 Macabeos.",
-  de: "Auf die Deuterokanonika wird oft verwiesen oder angespielt: Hebräer 11 spielt auf 2 Makkabäer 6–7 an; Weisheit 2 prophezeit den Tod des Gerechten, erfüllt in Christus; Jesus feiert Chanukka in Johannes 10:22–23, ein Fest, das nur in 1 Makkabäer beschrieben wird.",
-},
+          en: "The Deuterocanonicals are often referenced or echoed: Hebrews 11 alludes to 2 Maccabees 6–7; Wisdom 2 prophesies about the righteous man being killed, fulfilled in Christ; Jesus celebrates Hanukkah in John 10:22–23, a feast only described in 1 Maccabees.",
+          fr: "Les Deutérocanoniques sont souvent référencés ou évoqués : Hébreux 11 fait allusion à 2 Maccabées 6–7 ; Sagesse 2 prophétise la mort du juste, accomplie dans le Christ ; Jésus célèbre Hanoukka dans Jean 10:22–23, une fête décrite uniquement dans 1 Maccabées.",
+          es: "Los Deuterocanónicos a menudo se referencian o se hacen eco de ellos: Hebreos 11 alude a 2 Macabeos 6–7; Sabiduría 2 profetiza sobre la muerte del justo, cumplida en Cristo; Jesús celebra Janucá en Juan 10:22–23, una fiesta descrita solo en 1 Macabeos.",
+          de: "Auf die Deuterokanonika wird oft verwiesen oder angespielt: Hebräer 11 spielt auf 2 Makkabäer 6–7 an; Weisheit 2 prophezeit den Tod des Gerechten, erfüllt in Christus; Jesus feiert Chanukka in Johannes 10:22–23, ein Fest, das nur in 1 Makkabäer beschrieben wird.",
+        },
         quote: {
           text: {
-  en: "Wisdom 2 is really explicitly Christological in a way that would be very hard to predict.",
-  fr: "Sagesse 2 est vraiment explicitement christologique, d'une manière qui serait très difficile à prédire.",
-  es: "Sabiduría 2 es realmente explícitamente cristológico, de una manera que sería muy difícil de predecir.",
-  de: "Weisheit 2 ist wirklich explizit christologisch, auf eine Weise, die sehr schwer vorherzusagen wäre.",
-},
-source: {
-  en: "Dr. Brant Pitre",
-  fr: "Dr Brant Pitre",
-  es: "Dr. Brant Pitre",
-  de: "Dr. Brant Pitre",
-},
+            en: "Wisdom 2 is really explicitly Christological in a way that would be very hard to predict.",
+            fr: "Sagesse 2 est vraiment explicitement christologique, d'une manière qui serait très difficile à prédire.",
+            es: "Sabiduría 2 es realmente explícitamente cristológico, de una manera que sería muy difícil de predecir.",
+            de: "Weisheit 2 ist wirklich explizit christologisch, auf eine Weise, die sehr schwer vorherzusagen wäre.",
+          },
+          source: {
+            en: "Dr. Brant Pitre",
+            fr: "Dr Brant Pitre",
+            es: "Dr. Brant Pitre",
+            de: "Dr. Brant Pitre",
+          },
         },
       },
 
@@ -7149,17 +7133,17 @@ source: {
           de: "Der heilige Hieronymus lehnte die deuterokanonischen Bücher ab",
         },
         res1: {
-  en: "Jerome, influenced by the rabbinic canon, initially expressed doubts about these books. However, Jerome ultimately submitted to the judgment of the Church, and translated all the Deuterocanonical books into Latin for inclusion in the Vulgate.",
-  fr: "Jérôme, influencé par le canon rabbinique, a d'abord exprimé des doutes sur ces livres. Cependant, Jérôme s'est finalement soumis au jugement de l'Église, et a traduit tous les livres deutérocanoniques en latin pour les inclure dans la Vulgate.",
-  es: "Jerónimo, influenciado por el canon rabínico, inicialmente expresó dudas sobre estos libros. Sin embargo, Jerónimo finalmente se sometió al juicio de la Iglesia, y tradujo todos los libros deuterocanónicos al latín para incluirlos en la Vulgata.",
-  de: "Hieronymus, beeinflusst vom rabbinischen Kanon, äußerte anfangs Zweifel an diesen Büchern. Jedoch unterwarf sich Hieronymus letztendlich dem Urteil der Kirche, und übersetzte alle deuterokanonischen Bücher ins Lateinische zur Aufnahme in die Vulgata.",
-},
-res2: {
-  en: "Despite his initial reservations, Jerome quoted from the Deuterocanonical books as Scripture in his later works. Most importantly, Jerome's early private opinion was not binding, whereas the consistent canon affirmed by councils and tradition was.",
-  fr: "Malgré ses réserves initiales, Jérôme a cité les livres deutérocanoniques comme Écriture dans ses œuvres ultérieures. Plus important encore, l'opinion privée précoce de Jérôme n'était pas contraignante, contrairement au canon cohérent affirmé par les conciles et la tradition.",
-  es: "A pesar de sus reservas iniciales, Jerónimo citó los libros deuterocanónicos como Escritura en sus obras posteriores. Lo más importante es que la opinión privada temprana de Jerónimo no era vinculante, mientras que el canon consistente afirmado por los concilios y la tradición sí lo era.",
-  de: "Trotz seiner anfänglichen Vorbehalte zitierte Hieronymus in seinen späteren Werken aus den deuterokanonischen Büchern als Heilige Schrift. Am wichtigsten ist, dass Hieronymus' frühe Privatmeinung nicht bindend war, wohingegen der von Konzilien und Tradition bestätigte konsistente Kanon es war.",
-},
+          en: "Jerome, influenced by the rabbinic canon, initially expressed doubts about these books. However, Jerome ultimately submitted to the judgment of the Church, and translated all the Deuterocanonical books into Latin for inclusion in the Vulgate.",
+          fr: "Jérôme, influencé par le canon rabbinique, a d'abord exprimé des doutes sur ces livres. Cependant, Jérôme s'est finalement soumis au jugement de l'Église, et a traduit tous les livres deutérocanoniques en latin pour les inclure dans la Vulgate.",
+          es: "Jerónimo, influenciado por el canon rabínico, inicialmente expresó dudas sobre estos libros. Sin embargo, Jerónimo finalmente se sometió al juicio de la Iglesia, y tradujo todos los libros deuterocanónicos al latín para incluirlos en la Vulgata.",
+          de: "Hieronymus, beeinflusst vom rabbinischen Kanon, äußerte anfangs Zweifel an diesen Büchern. Jedoch unterwarf sich Hieronymus letztendlich dem Urteil der Kirche, und übersetzte alle deuterokanonischen Bücher ins Lateinische zur Aufnahme in die Vulgata.",
+        },
+        res2: {
+          en: "Despite his initial reservations, Jerome quoted from the Deuterocanonical books as Scripture in his later works. Most importantly, Jerome's early private opinion was not binding, whereas the consistent canon affirmed by councils and tradition was.",
+          fr: "Malgré ses réserves initiales, Jérôme a cité les livres deutérocanoniques comme Écriture dans ses œuvres ultérieures. Plus important encore, l'opinion privée précoce de Jérôme n'était pas contraignante, contrairement au canon cohérent affirmé par les conciles et la tradition.",
+          es: "A pesar de sus reservas iniciales, Jerónimo citó los libros deuterocanónicos como Escritura en sus obras posteriores. Lo más importante es que la opinión privada temprana de Jerónimo no era vinculante, mientras que el canon consistente afirmado por los concilios y la tradición sí lo era.",
+          de: "Trotz seiner anfänglichen Vorbehalte zitierte Hieronymus in seinen späteren Werken aus den deuterokanonischen Büchern als Heilige Schrift. Am wichtigsten ist, dass Hieronymus' frühe Privatmeinung nicht bindend war, wohingegen der von Konzilien und Tradition bestätigte konsistente Kanon es war.",
+        },
 
         quote: {
           text: {
@@ -7234,11 +7218,11 @@ res2: {
       },
       callout: {
         p1: {
-  en: "No. The Council of Trent (1546) did not add books, but confirmed infallibly what had always been taught.",
-  fr: "Non. Le Concile de Trente (1546) n'a pas ajouté de livres, mais a confirmé infailliblement ce qui avait toujours été enseigné.",
-  es: "No. El Concilio de Trento (1546) no añadió libros, sino que confirmó infaliblemente lo que siempre se había enseñado.",
-  de: "Nein. Das Konzil von Trient (1546) hat keine Bücher hinzugefügt, sondern unfehlbar bestätigt, was immer gelehrt worden war.",
-},
+          en: "No. The Council of Trent (1546) did not add books, but confirmed infallibly what had always been taught.",
+          fr: "Non. Le Concile de Trente (1546) n'a pas ajouté de livres, mais a confirmé infailliblement ce qui avait toujours été enseigné.",
+          es: "No. El Concilio de Trento (1546) no añadió libros, sino que confirmó infaliblemente lo que siempre se había enseñado.",
+          de: "Nein. Das Konzil von Trient (1546) hat keine Bücher hinzugefügt, sondern unfehlbar bestätigt, was immer gelehrt worden war.",
+        },
         p2: {
           en: "The same canon was already affirmed at multiple earlier councils.",
           fr: "Le même canon avait déjà été affirmé lors de plusieurs conciles antérieurs.",
@@ -7306,12 +7290,12 @@ res2: {
             es: "397 d.C.",
             de: "397 n. Chr.",
           },
-         desc: {
-  en: "Confirmed Canon 36, listing the 73 books of the Bible used in the Catholic Church today, specifically 46 Old Testament books (including the Deuterocanonical books) and 27 New Testament books. Acts signed by St. Augustine.",
-  fr: "A confirmé le Canon 36, listant les 73 livres de la Bible utilisés aujourd'hui dans l'Église catholique, soit 46 livres de l'Ancien Testament (y compris les livres deutérocanoniques) et 27 livres du Nouveau Testament. Actes signés par Saint Augustin.",
-  es: "Confirmó el Canon 36, enumerando los 73 libros de la Biblia utilizados en la Iglesia Católica hoy en día, concretamente 46 del Antiguo Testamento (incluidos los libros deuterocanónicos) y 27 del Nuevo Testamento. Actas firmadas por San Agustín.",
-  de: "Bestätigte Kanon 36, der die 73 Bücher der Bibel auflistet, die heute in der katholischen Kirche verwendet werden, nämlich 46 Bücher des Alten Testaments (einschließlich der deuterokanonischen Bücher) und 27 Bücher des Neuen Testaments. Akten unterzeichnet vom Hl. Augustinus.",
-},
+          desc: {
+            en: "Confirmed Canon 36, listing the 73 books of the Bible used in the Catholic Church today, specifically 46 Old Testament books (including the Deuterocanonical books) and 27 New Testament books. Acts signed by St. Augustine.",
+            fr: "A confirmé le Canon 36, listant les 73 livres de la Bible utilisés aujourd'hui dans l'Église catholique, soit 46 livres de l'Ancien Testament (y compris les livres deutérocanoniques) et 27 livres du Nouveau Testament. Actes signés par Saint Augustin.",
+            es: "Confirmó el Canon 36, enumerando los 73 libros de la Biblia utilizados en la Iglesia Católica hoy en día, concretamente 46 del Antiguo Testamento (incluidos los libros deuterocanónicos) y 27 del Nuevo Testamento. Actas firmadas por San Agustín.",
+            de: "Bestätigte Kanon 36, der die 73 Bücher der Bibel auflistet, die heute in der katholischen Kirche verwendet werden, nämlich 46 Bücher des Alten Testaments (einschließlich der deuterokanonischen Bücher) und 27 Bücher des Neuen Testaments. Akten unterzeichnet vom Hl. Augustinus.",
+          },
         },
         c4: {
           name: {
@@ -7355,11 +7339,11 @@ res2: {
         },
       },
       q1: {
-  en: "&quot;This wasn&apos;t adding to scripture, but infallibly reasserting what had already been taught.&quot;",
-  fr: "« Ce n'était pas ajouter à l'écriture, mais réaffirmer infailliblement ce qui avait déjà été enseigné. »",
-  es: '"Esto no fue añadir a la escritura, sino reafirmar infaliblemente lo que ya se había enseñado."',
-  de: '„Das war kein Hinzufügen zur Schrift, sondern eine unfehlbare Bestätigung dessen, was bereits gelehrt worden war.“',
-},
+        en: "&quot;This wasn&apos;t adding to scripture, but infallibly reasserting what had already been taught.&quot;",
+        fr: "« Ce n'était pas ajouter à l'écriture, mais réaffirmer infailliblement ce qui avait déjà été enseigné. »",
+        es: '"Esto no fue añadir a la escritura, sino reafirmar infaliblemente lo que ya se había enseñado."',
+        de: "„Das war kein Hinzufügen zur Schrift, sondern eine unfehlbare Bestätigung dessen, was bereits gelehrt worden war.“",
+      },
     },
     video3: {
       title: {
@@ -7405,11 +7389,11 @@ res2: {
             de: "Kanon 36",
           },
           desc: {
-  en: 'Confirmed listing the <strong className="text-white">73 books</strong> of the Bible used in the Catholic Church today, comprising <strong className="text-white">46 Old Testament</strong> (including the Deuterocanonical books) and <strong className="text-white">27 New Testament</strong> books.',
-  fr: 'A confirmé la liste des <strong class="text-white">73 livres</strong> de la Bible utilisés aujourd\'hui dans l\'Église catholique, soit <strong class="text-white">46 livres de l\'Ancien Testament</strong> (y compris les livres deutérocanoniques) et <strong class="text-white">27 livres du Nouveau Testament</strong>.',
-  es: 'Confirmó la lista de los <strong class="text-white">73 libros</strong> de la Biblia utilizados en la Iglesia Católica hoy en día, concretamente <strong class="text-white">46 del Antiguo Testamento</strong> (incluidos los libros deuterocanónicos) y <strong class="text-white">27 del Nuevo Testamento</strong>.',
-  de: 'Bestätigte die Auflistung der <strong class="text-white">73 Bücher</strong> der Bibel, die heute in der katholischen Kirche verwendet werden, nämlich <strong class="text-white">46 Bücher des Alten Testaments</strong> (einschließlich der deuterokanonischen Bücher) und <strong class="text-white">27 Bücher des Neuen Testaments</strong>.',
-},
+            en: 'Confirmed listing the <strong className="text-white">73 books</strong> of the Bible used in the Catholic Church today, comprising <strong className="text-white">46 Old Testament</strong> (including the Deuterocanonical books) and <strong className="text-white">27 New Testament</strong> books.',
+            fr: 'A confirmé la liste des <strong class="text-white">73 livres</strong> de la Bible utilisés aujourd\'hui dans l\'Église catholique, soit <strong class="text-white">46 livres de l\'Ancien Testament</strong> (y compris les livres deutérocanoniques) et <strong class="text-white">27 livres du Nouveau Testament</strong>.',
+            es: 'Confirmó la lista de los <strong class="text-white">73 libros</strong> de la Biblia utilizados en la Iglesia Católica hoy en día, concretamente <strong class="text-white">46 del Antiguo Testamento</strong> (incluidos los libros deuterocanónicos) y <strong class="text-white">27 del Nuevo Testamento</strong>.',
+            de: 'Bestätigte die Auflistung der <strong class="text-white">73 Bücher</strong> der Bibel, die heute in der katholischen Kirche verwendet werden, nämlich <strong class="text-white">46 Bücher des Alten Testaments</strong> (einschließlich der deuterokanonischen Bücher) und <strong class="text-white">27 Bücher des Neuen Testaments</strong>.',
+          },
         },
         p3: {
           title: {
@@ -7526,11 +7510,11 @@ res2: {
           de: "Wenn der Heilige Geist die Kirche geleitet hat, den Kanon des Neuen Testaments zu bestätigen, warum sollten wir Ihm nicht auch zutrauen, den Kanon des Alten Testaments zu leiten?",
         },
         q1: {
-  en: "&quot;We either trust that the Holy Spirit guided that process, or we don&apos;t.&quot;",
-  fr: "« Soit nous croyons que le Saint-Esprit a guidé ce processus, soit nous n'y croyons pas. »",
-  es: '"O confiamos en que el Espíritu Santo guio ese proceso, o no lo hacemos."',
-  de: '„Entweder vertrauen wir darauf, dass der Heilige Geist diesen Prozess geleitet hat, oder wir tun es nicht.“',
-},
+          en: "&quot;We either trust that the Holy Spirit guided that process, or we don&apos;t.&quot;",
+          fr: "« Soit nous croyons que le Saint-Esprit a guidé ce processus, soit nous n'y croyons pas. »",
+          es: '"O confiamos en que el Espíritu Santo guio ese proceso, o no lo hacemos."',
+          de: "„Entweder vertrauen wir darauf, dass der Heilige Geist diesen Prozess geleitet hat, oder wir tun es nicht.“",
+        },
       },
       p2: {
         en: "The Catholic Bible stands not on late innovation, but on <strong>ancient fidelity</strong>.",
@@ -7637,11 +7621,11 @@ res2: {
         de: "Dies bringt uns zurück zur Grundfrage: <em>Wer hat die Autorität zu bestimmen, was die Heilige Schrift ist?</em>",
       },
       p2: {
-  en: "If you accept the Catholic Church&apos;s authority in determining the New Testament canon, why reject its authority regarding the Old Testament? And if you reject the Church&apos;s authority entirely, on what basis do you know which books are inspired? This question of authority is central to everything, and it leads us to explore the role of the Magisterium.",
-  fr: "Si vous acceptez l'autorité de l'Église catholique pour déterminer le canon du Nouveau Testament, pourquoi rejeter son autorité concernant l'Ancien Testament ? Et si vous rejetez entièrement l'autorité de l'Église, sur quelle base savez-vous quels livres sont inspirés ? Cette question d'autorité est centrale à tout, et elle nous amène à explorer le rôle du Magistère.",
-  es: "Si aceptas la autoridad de la Iglesia Católica para determinar el canon del Nuevo Testamento, ¿por qué rechazar su autoridad con respecto al Antiguo Testamento? Y si rechazas la autoridad de la Iglesia por completo, ¿sobre qué base sabes qué libros son inspirados? Esta cuestión de autoridad es central en todo, y nos lleva a explorar el papel del Magisterio.",
-  de: "Wenn Sie die Autorität der katholischen Kirche bei der Bestimmung des neutestamentlichen Kanons akzeptieren, warum lehnen Sie dann ihre Autorität in Bezug auf das Alte Testament ab? Und wenn Sie die Autorität der Kirche gänzlich ablehnen, auf welcher Grundlage wissen Sie dann, welche Bücher inspiriert sind? Diese Autoritätsfrage ist von zentraler Bedeutung für alles, und sie führt uns dazu, die Rolle des Lehramtes zu erkunden.",
-},
+        en: "If you accept the Catholic Church&apos;s authority in determining the New Testament canon, why reject its authority regarding the Old Testament? And if you reject the Church&apos;s authority entirely, on what basis do you know which books are inspired? This question of authority is central to everything, and it leads us to explore the role of the Magisterium.",
+        fr: "Si vous acceptez l'autorité de l'Église catholique pour déterminer le canon du Nouveau Testament, pourquoi rejeter son autorité concernant l'Ancien Testament ? Et si vous rejetez entièrement l'autorité de l'Église, sur quelle base savez-vous quels livres sont inspirés ? Cette question d'autorité est centrale à tout, et elle nous amène à explorer le rôle du Magistère.",
+        es: "Si aceptas la autoridad de la Iglesia Católica para determinar el canon del Nuevo Testamento, ¿por qué rechazar su autoridad con respecto al Antiguo Testamento? Y si rechazas la autoridad de la Iglesia por completo, ¿sobre qué base sabes qué libros son inspirados? Esta cuestión de autoridad es central en todo, y nos lleva a explorar el papel del Magisterio.",
+        de: "Wenn Sie die Autorität der katholischen Kirche bei der Bestimmung des neutestamentlichen Kanons akzeptieren, warum lehnen Sie dann ihre Autorität in Bezug auf das Alte Testament ab? Und wenn Sie die Autorität der Kirche gänzlich ablehnen, auf welcher Grundlage wissen Sie dann, welche Bücher inspiriert sind? Diese Autoritätsfrage ist von zentraler Bedeutung für alles, und sie führt uns dazu, die Rolle des Lehramtes zu erkunden.",
+      },
     },
   },
 
@@ -8357,11 +8341,11 @@ res2: {
         de: "Einführung",
       },
       p1: {
-  en: "The Protestant principle of <em>sola scriptura</em>, asserting that Scripture alone is the final authority in Christian faith, faces a critical and often overlooked problem: <strong>How do we know which books belong in the Bible?</strong>",
-  fr: "Le principe protestant de <em>sola scriptura</em>, selon lequel l'Écriture seule est l'autorité finale en matière de foi chrétienne, est confronté à un problème critique et souvent négligé : <strong>Comment savons-nous quels livres appartiennent à la Bible ?</strong>",
-  es: "El principio protestante de <em>sola scriptura</em>, que sostiene que la Escritura por sí sola es la autoridad final en la fe cristiana, se enfrenta a un problema crítico y a menudo pasado por alto: <strong>¿Cómo sabemos qué libros pertenecen a la Biblia?</strong>",
-  de: "Das protestantische Prinzip <em>sola scriptura</em>, wonach die Schrift allein die letzte Autorität im christlichen Glauben ist, steht vor einem kritischen und oft übersehenen Problem: <strong>Woher wissen wir, welche Bücher zur Bibel gehören?</strong>",
-},
+        en: "The Protestant principle of <em>sola scriptura</em>, asserting that Scripture alone is the final authority in Christian faith, faces a critical and often overlooked problem: <strong>How do we know which books belong in the Bible?</strong>",
+        fr: "Le principe protestant de <em>sola scriptura</em>, selon lequel l'Écriture seule est l'autorité finale en matière de foi chrétienne, est confronté à un problème critique et souvent négligé : <strong>Comment savons-nous quels livres appartiennent à la Bible ?</strong>",
+        es: "El principio protestante de <em>sola scriptura</em>, que sostiene que la Escritura por sí sola es la autoridad final en la fe cristiana, se enfrenta a un problema crítico y a menudo pasado por alto: <strong>¿Cómo sabemos qué libros pertenecen a la Biblia?</strong>",
+        de: "Das protestantische Prinzip <em>sola scriptura</em>, wonach die Schrift allein die letzte Autorität im christlichen Glauben ist, steht vor einem kritischen und oft übersehenen Problem: <strong>Woher wissen wir, welche Bücher zur Bibel gehören?</strong>",
+      },
       p2: {
         en: "This is not a trivial question. It goes to the very core of what it means to trust the Bible as the word of God. If the Bible does not define its own boundaries, then <em>sola scriptura</em> rests on an external process that cannot itself be justified by Scripture alone.",
         fr: "Ce n'est pas une question triviale. Elle touche au cœur même de ce que signifie faire confiance à la Bible en tant que parole de Dieu. Si la Bible ne définit pas ses propres limites, alors <em>sola scriptura</em> repose sur un processus externe qui ne peut lui-même être justifié par l'Écriture seule.",
@@ -8598,12 +8582,12 @@ res2: {
           es: "Esto afirma que la cualidad divina de los libros es evidente por sí misma, como una 'luz que brilla en la oscuridad'.",
           de: "Dies behauptet, die göttliche Qualität der Bücher sei selbstverständlich, wie ein 'Licht, das in der Finsternis scheint'.",
         },
-       p2: {
-  en: "<strong>Problem:</strong> This is historically false. The early Church fathers, holy men closer to the source, disputed these books for centuries. If it wasn't 'self-evident' to them, it certainly isn't to us.",
-  fr: "<strong>Problème :</strong> C'est historiquement faux. Les pères de l'Église primitive, des hommes saints plus proches de la source, ont disputé ces livres pendant des siècles. Si ce n'était pas « évident » pour eux, ça ne l'est certainement pas pour nous.",
-  es: "<strong>Problema:</strong> Esto es históricamente falso. Los padres de la Iglesia primitiva, hombres santos más cercanos a la fuente, disputaron estos libros durante siglos. Si no era 'evidente' para ellos, ciertamente no lo es para nosotros.",
-  de: "<strong>Problem:</strong> Das ist historisch falsch. Die frühen Kirchenväter, heilige Männer näher an der Quelle, haben jahrhundertelang über diese Bücher gestritten. Wenn es für sie nicht 'selbstverständlich' war, ist es das für uns sicherlich nicht.",
-},
+        p2: {
+          en: "<strong>Problem:</strong> This is historically false. The early Church fathers, holy men closer to the source, disputed these books for centuries. If it wasn't 'self-evident' to them, it certainly isn't to us.",
+          fr: "<strong>Problème :</strong> C'est historiquement faux. Les pères de l'Église primitive, des hommes saints plus proches de la source, ont disputé ces livres pendant des siècles. Si ce n'était pas « évident » pour eux, ça ne l'est certainement pas pour nous.",
+          es: "<strong>Problema:</strong> Esto es históricamente falso. Los padres de la Iglesia primitiva, hombres santos más cercanos a la fuente, disputaron estos libros durante siglos. Si no era 'evidente' para ellos, ciertamente no lo es para nosotros.",
+          de: "<strong>Problem:</strong> Das ist historisch falsch. Die frühen Kirchenväter, heilige Männer näher an der Quelle, haben jahrhundertelang über diese Bücher gestritten. Wenn es für sie nicht 'selbstverständlich' war, ist es das für uns sicherlich nicht.",
+        },
       },
     },
     conclusion: {
@@ -8649,7 +8633,7 @@ res2: {
       },
     },
   },
-  
+
   solaScripturaImpossible: {
     title: {
       en: "Sola Scriptura is Impossible",
@@ -8731,12 +8715,12 @@ res2: {
           es: "Desde el punto de vista protestante, no existe una forma coherente de hacer un acto de fe en el hecho de que los libros del Nuevo Testamento están divinamente inspirados.",
           de: "Nach protestantischer Auffassung gibt es keine konsistente Möglichkeit, einen Glaubensakt hinsichtlich der Tatsache zu vollziehen, dass die Bücher des Neuen Testaments göttlich inspiriert sind.",
         },
-       p2: {
-  en: "This is because that knowledge must come to us by divine revelation through sacred tradition, proposed authoritatively by the Magisterium, elements rejected by the Protestant rule of faith (<em>Sola Scriptura</em>).",
-  fr: "C'est parce que cette connaissance doit nous parvenir par la révélation divine à travers la sainte tradition, proposée avec autorité par le Magistère, éléments rejetés par la règle de foi protestante (<em>Sola Scriptura</em>).",
-  es: "Esto se debe a que ese conocimiento debe llegarnos por revelación divina a través de la sagrada tradición, propuesta autoritativamente por el Magisterio, elementos rechazados por la regla de fe protestante (<em>Sola Scriptura</em>).",
-  de: "Dies liegt daran, dass uns dieses Wissen durch göttliche Offenbarung durch die heilige Tradition übermittelt werden muss, die vom Lehramt autoritativ vorgelegt wird, Elemente, die von der protestantischen Glaubensregel (<em>Sola Scriptura</em>) abgelehnt werden.",
-},
+        p2: {
+          en: "This is because that knowledge must come to us by divine revelation through sacred tradition, proposed authoritatively by the Magisterium, elements rejected by the Protestant rule of faith (<em>Sola Scriptura</em>).",
+          fr: "C'est parce que cette connaissance doit nous parvenir par la révélation divine à travers la sainte tradition, proposée avec autorité par le Magistère, éléments rejetés par la règle de foi protestante (<em>Sola Scriptura</em>).",
+          es: "Esto se debe a que ese conocimiento debe llegarnos por revelación divina a través de la sagrada tradición, propuesta autoritativamente por el Magisterio, elementos rechazados por la regla de fe protestante (<em>Sola Scriptura</em>).",
+          de: "Dies liegt daran, dass uns dieses Wissen durch göttliche Offenbarung durch die heilige Tradition übermittelt werden muss, die vom Lehramt autoritativ vorgelegt wird, Elemente, die von der protestantischen Glaubensregel (<em>Sola Scriptura</em>) abgelehnt werden.",
+        },
       },
       p2: {
         en: "Common Protestant objections are anticipated: appeals to tradition, ecclesial authority, motives of credibility, or accusations of circularity. These will be answered clearly and fairly.",
@@ -8875,11 +8859,11 @@ res2: {
         de: "Katholiken unterscheiden zwischen fehlbaren und unfehlbaren Glaubensregeln.",
       },
       p4: {
-  en: "Being a rule of faith means having <strong>authenticity</strong>, the authority to bind conscience. Tradition and ecclesial authority may assist in interpretation, but in <em>Sola Scriptura</em> they do not bind.",
-  fr: "Être une règle de foi signifie avoir l'<strong>authenticité</strong>, l'autorité de lier la conscience. La tradition et l'autorité ecclésiale peuvent aider à l'interprétation, mais dans <em>Sola Scriptura</em>, elles ne lient pas.",
-  es: "Ser una regla de fe significa tener <strong>autenticidad</strong>, la autoridad para obligar la conciencia. La tradición y la autoridad eclesial pueden ayudar en la interpretación, pero en <em>Sola Scriptura</em> no obligan.",
-  de: "Eine Glaubensregel zu sein bedeutet, <strong>Authentizität</strong> zu haben, die Autorität, das Gewissen zu binden. Tradition und kirchliche Autorität können bei der Interpretation helfen, aber bei <em>Sola Scriptura</em> binden sie nicht.",
-},
+        en: "Being a rule of faith means having <strong>authenticity</strong>, the authority to bind conscience. Tradition and ecclesial authority may assist in interpretation, but in <em>Sola Scriptura</em> they do not bind.",
+        fr: "Être une règle de foi signifie avoir l'<strong>authenticité</strong>, l'autorité de lier la conscience. La tradition et l'autorité ecclésiale peuvent aider à l'interprétation, mais dans <em>Sola Scriptura</em>, elles ne lient pas.",
+        es: "Ser una regla de fe significa tener <strong>autenticidad</strong>, la autoridad para obligar la conciencia. La tradición y la autoridad eclesial pueden ayudar en la interpretación, pero en <em>Sola Scriptura</em> no obligan.",
+        de: "Eine Glaubensregel zu sein bedeutet, <strong>Authentizität</strong> zu haben, die Autorität, das Gewissen zu binden. Tradition und kirchliche Autorität können bei der Interpretation helfen, aber bei <em>Sola Scriptura</em> binden sie nicht.",
+      },
     },
     natureOfFaith: {
       h2: {
@@ -9160,11 +9144,11 @@ res2: {
           de: "1. Erleuchtung durch den Geist",
         },
         p1: {
-  en: "Some Protestants say the Spirit testifies internally to the canon. But this cannot supply the <strong>formal object</strong> of faith, that it is revealed by God. If the Spirit provides this directly, then each Christian receives a private revelation of the canon, which Protestants reject. If it does not, then the formal object is missing.",
-  fr: "Certains protestants disent que l'Esprit témoigne intérieurement du canon. Mais cela ne peut pas fournir l'<strong>objet formel</strong> de la foi, qu'il est révélé par Dieu. Si l'Esprit fournit cela directement, alors chaque chrétien reçoit une révélation privée du canon, ce que les protestants rejettent. Si ce n'est pas le cas, alors l'objet formel est manquant.",
-  es: "Algunos protestantes dicen que el Espíritu testifica internamente sobre el canon. Pero esto no puede suministrar el <strong>objeto formal</strong> de la fe, que es revelado por Dios. Si el Espíritu proporciona esto directamente, entonces cada cristiano recibe una revelación privada del canon, lo cual los protestantes rechazan. Si no lo hace, entonces falta el objeto formal.",
-  de: "Einige Protestanten sagen, der Geist bezeuge innerlich den Kanon. Dies kann jedoch nicht das <strong>formale Objekt</strong> des Glaubens liefern, dass es von Gott offenbart ist. Wenn der Geist dies direkt bereitstellt, empfängt jeder Christ eine private Offenbarung des Kanons, was Protestanten ablehnen. Wenn nicht, fehlt das formale Objekt.",
-},
+          en: "Some Protestants say the Spirit testifies internally to the canon. But this cannot supply the <strong>formal object</strong> of faith, that it is revealed by God. If the Spirit provides this directly, then each Christian receives a private revelation of the canon, which Protestants reject. If it does not, then the formal object is missing.",
+          fr: "Certains protestants disent que l'Esprit témoigne intérieurement du canon. Mais cela ne peut pas fournir l'<strong>objet formel</strong> de la foi, qu'il est révélé par Dieu. Si l'Esprit fournit cela directement, alors chaque chrétien reçoit une révélation privée du canon, ce que les protestants rejettent. Si ce n'est pas le cas, alors l'objet formel est manquant.",
+          es: "Algunos protestantes dicen que el Espíritu testifica internamente sobre el canon. Pero esto no puede suministrar el <strong>objeto formal</strong> de la fe, que es revelado por Dios. Si el Espíritu proporciona esto directamente, entonces cada cristiano recibe una revelación privada del canon, lo cual los protestantes rechazan. Si no lo hace, entonces falta el objeto formal.",
+          de: "Einige Protestanten sagen, der Geist bezeuge innerlich den Kanon. Dies kann jedoch nicht das <strong>formale Objekt</strong> des Glaubens liefern, dass es von Gott offenbart ist. Wenn der Geist dies direkt bereitstellt, empfängt jeder Christ eine private Offenbarung des Kanons, was Protestanten ablehnen. Wenn nicht, fehlt das formale Objekt.",
+        },
       },
       c2: {
         h3: {
@@ -9215,29 +9199,26 @@ res2: {
           es: "5. La Apelación a los Motivos de Credibilidad Solamente",
           de: "5. Die Berufung allein auf Glaubwürdigkeitsmotive",
         },
-        
         p1: {
-  en: "Some Protestants attempt to bridge the gap by appealing to motives of credibility, such as miracles, fulfilled prophecies, or the moral excellence of Scripture, to justify belief in the canon. Yet this approach also fails for the same fundamental reason: it confuses the concepts of divine revelation and inspiration. Motives of credibility can confirm the truthfulness of a messenger or message, but they cannot establish inspiration, which is a supernatural act of God that cannot be inferred solely from external signs.",
-  fr: "Certains protestants tentent de combler le fossé en faisant appel à des motifs de crédibilité, tels que les miracles, les prophéties accomplies ou l'excellence morale de l'Écriture, pour justifier la croyance dans le canon. Pourtant, cette approche échoue également pour la même raison fondamentale : elle confond les concepts de révélation divine et d'inspiration. Les motifs de crédibilité peuvent confirmer la véracité d'un messager ou d'un message, mais ils ne peuvent établir l'inspiration, qui est un acte surnaturel de Dieu ne pouvant être déduit uniquement de signes extérieurs.",
-  es: "Algunos protestantes intentan salvar la brecha apelando a motivos de credibilidad, como milagros, profecías cumplidas o la excelencia moral de la Escritura, para justificar la creencia en el canon. Sin embargo, este enfoque también fracasa por la misma razón fundamental: confunde los conceptos de revelación divina e inspiración. Los motivos de credibilidad pueden confirmar la veracidad de un mensajero o mensaje, pero no pueden establecer la inspiración, que es un acto sobrenatural de Dios que no puede inferirse únicamente de signos externos.",
-  de: "Einige Protestanten versuchen, die Lücke zu schließen, indem sie sich auf Glaubwürdigkeitsmotive berufen, wie Wunder, erfüllte Prophezeiungen oder die moralische Exzellenz der Schrift, um den Glauben an den Kanon zu rechtfertigen. Doch dieser Ansatz scheitert aus demselben Grund: Er verwechselt die Konzepte der göttlichen Offenbarung und der Inspiration. Glaubwürdigkeitsmotive können die Wahrhaftigkeit eines Boten oder einer Botschaft bestätigen, aber sie können keine Inspiration begründen, die ein übernatürlicher Akt Gottes ist, der nicht allein aus äußeren Zeichen abgeleitet werden kann.",
+          en: "Some Protestants attempt to bridge the gap by appealing to motives of credibility, such as miracles, fulfilled prophecies, or the moral excellence of Scripture, to justify belief in the canon. Yet this approach also fails for the same fundamental reason: it confuses the concepts of divine revelation and inspiration. Motives of credibility can confirm the truthfulness of a messenger or message, but they cannot establish inspiration, which is a supernatural act of God that cannot be inferred solely from external signs.",
+          fr: "Certains protestants tentent de combler le fossé en faisant appel à des motifs de crédibilité, tels que les miracles, les prophéties accomplies ou l'excellence morale de l'Écriture, pour justifier la croyance dans le canon. Pourtant, cette approche échoue également pour la même raison fondamentale : elle confond les concepts de révélation divine et d'inspiration. Les motifs de crédibilité peuvent confirmer la véracité d'un messager ou d'un message, mais ils ne peuvent établir l'inspiration, qui est un acte surnatural de Dieu ne pouvant être déduit uniquement de signes extérieurs.",
+          es: "Algunos protestantes intentan salvar la brecha apelando a motivos de credibilidad, como milagros, profecías cumplidas o la excelencia moral de la Escritura, para justificar la creencia en el canon. Sin embargo, este enfoque también fracasa por la misma razón fundamental: confunde los conceptos de revelación divina e inspiración. Los motivos de credibilidad pueden confirmar la veracidad de un mensajero o mensaje, pero no pueden establecer la inspiración, que es un acto sobrenatural de Dios que no puede inferirse únicamente de signos externos.",
+          de: "Einige Protestanten versuchen, die Lücke zu schließen, indem sie sich auf Glaubwürdigkeitsmotive berufen, wie Wunder, erfüllte Prophezeiungen oder die moralische Exzellenz der Schrift, um den Glauben an den Kanon zu rechtfertigen. Doch dieser Ansatz scheitert aus demselben Grund: Er verwechselt die Konzepte der göttlichen Offenbarung und der Inspiration. Glaubwürdigkeitsmotive können die Wahrhaftigkeit eines Boten oder einer Botschaft bestätigen, aber sie können keine Inspiration begründen, die ein übernatürlicher Akt Gottes ist, der nicht allein aus äußeren Zeichen abgeleitet werden kann.",
+        },
       },
-  },
-c6: {
-  h3: {
-    en: "6. The Canon as a Historical Judgment",
-    fr: "6. Le Canon comme Jugement Historique",
-    es: "6. El Canon como Juicio Histórico",
-    de: "6. Der Kanon als Historisches Urteil",
-  },
-  p1: {
-    en: "Another fallback is to treat the canon as a historically reliable tradition, something that emerged organically from the Church's common recognition over time. This too collapses under scrutiny. If belief in the canon is based solely on historical investigation, then the assent to its inspiration is based on human reasoning, not divine faith. But divine inspiration is not a merely historical claim, it is a supernatural truth, and thus it demands a supernatural source of revelation.",
-    fr: "Une autre solution de repli consiste à traiter le canon comme une tradition historiquement fiable, quelque chose qui a émergé organiquement de la reconnaissance commune de l'Église au fil du temps. Cela s'effondre également sous l'examen. Si la croyance dans le canon est basée uniquement sur une enquête historique, alors l'assentiment à son inspiration est basé sur le raisonnement humain et non sur la foi divine. Mais l'inspiration divine n'est pas une simple affirmation historique, c'est une vérité surnaturelle, et elle exige donc une source surnaturelle de révélation.",
-    es: "Otro recurso es tratar el canon como una tradición históricamente confiable, algo que surgió orgánicamente del reconocimiento común de la Iglesia a lo largo del tiempo. Esto también se derrumba bajo escrutinio. Si la creencia en el canon se basa únicamente en la investigación histórica, entonces el asentimiento a su inspiración se basa en el razonamiento humano, no en la fe divina. Pero la inspiración divina no es una mera afirmación histórica, es una verdad sobrenatural y por lo tanto exige una fuente sobrenatural de revelación.",
-    de: "Eine weitere Ausweichmöglichkeit besteht darin, den Kanon als historisch zuverlässige Tradition zu behandeln, etwas, das organisch aus der gemeinsamen Anerkennung der Kirche im Laufe der Zeit entstanden ist. Auch dies bricht bei genauerer Betrachtung zusammen. Wenn der Glaube an den Kanon ausschließlich auf historischer Untersuchung beruht, basiert die Zustimmung zu seiner Inspiration auf menschlicher Vernunft, nicht auf göttlichem Glauben. Aber göttliche Inspiration ist keine bloß historische Behauptung, sie ist eine übernatürliche Wahrheit und erfordert daher eine übernatürliche Offenbarungsquelle.",
-  },
-},
-        
+      c6: {
+        h3: {
+          en: "6. The Canon as a Historical Judgment",
+          fr: "6. Le Canon comme Jugement Historique",
+          es: "6. El Canon como Juicio Histórico",
+          de: "6. Der Kanon als Historisches Urteil",
+        },
+        p1: {
+          en: "Another fallback is to treat the canon as a historically reliable tradition, something that emerged organically from the Church's common recognition over time. This too collapses under scrutiny. If belief in the canon is based solely on historical investigation, then the assent to its inspiration is based on human reasoning, not divine faith. But divine inspiration is not a merely historical claim, it is a supernatural truth, and thus it demands a supernatural source of revelation.",
+          fr: "Une autre solution de repli consiste à traiter le canon comme une tradition historiquement fiable, quelque chose qui a émergé organiquement de la reconnaissance commune de l'Église au fil du temps. Cela s'effondre également sous l'examen. Si la croyance dans le canon est basée uniquement sur une enquête historique, alors l'assentiment à son inspiration est basé sur le raisonnement humain et non sur la foi divine. Mais l'inspiration divine n'est pas une simple affirmation historique, c'est une vérité surnaturelle, et elle exige donc une source surnaturelle de révélation.",
+          es: "Otro recurso es tratar el canon como una tradición históricamente confiable, algo que surgió orgánicamente del reconocimiento común de la Iglesia a lo largo del tiempo. Esto también se derrumba bajo escrutinio. Si la creencia en el canon se basa únicamente en la investigación histórica, entonces el asentimiento a su inspiración se basa en el razonamiento humano, no en la fe divina. Pero la inspiración divina no es una mera afirmación histórica, es una verdad sobrenatural y por lo tanto exige una fuente sobrenatural de revelación.",
+          de: "Eine weitere Ausweichmöglichkeit besteht darin, den Kanon als historisch zuverlässige Tradition zu behandeln, etwas, das organisch aus der gemeinsamen Anerkennung der Kirche im Laufe der Zeit entstanden ist. Auch dies bricht bei genauerer Betrachtung zusammen. Wenn der Glaube an den Kanon ausschließlich auf historischer Untersuchung beruht, basiert die Zustimmung zu seiner Inspiration auf menschlicher Vernunft, nicht auf göttlichem Glauben. Aber göttliche Inspiration ist keine bloß historische Behauptung, sie ist eine übernatürliche Wahrheit und erfordert daher eine übernatürliche Offenbarungsquelle.",
+        },
       },
     },
     solution: {
@@ -9342,11 +9323,11 @@ c6: {
         de: "Lehramtliche Autorität",
       },
       p5: {
-  en: "The Magisterium, the Church's teaching office, authentically interprets and proposes what has been revealed. This includes dogmas, moral teachings, and the canon of Scripture. The Church does not create inspiration; it discerns and declares what God has revealed.",
-  fr: "Le Magistère, la charge d'enseignement de l'Église, interprète authentiquement et propose ce qui a été révélé. Cela inclut les dogmes, les enseignements moraux et le canon de l'Écriture. L'Église ne crée pas l'inspiration ; elle discerne et déclare ce que Dieu a révélé.",
-  es: "El Magisterio, el oficio de enseñanza de la Iglesia, interpreta auténticamente y propone lo que ha sido revelado. Esto incluye dogmas, enseñanzas morales y el canon de la Escritura. La Iglesia no crea la inspiración; discierne y declara lo que Dios ha revelado.",
-  de: "Das Lehramt, das Lehramt der Kirche, legt authentisch aus und legt vor, was offenbart wurde. Dazu gehören Dogmen, Morallehren und der Kanon der Schrift. Die Kirche schafft keine Inspiration; sie unterscheidet und erklärt, was Gott offenbart hat.",
-},
+        en: "The Magisterium, the Church's teaching office, authentically interprets and proposes what has been revealed. This includes dogmas, moral teachings, and the canon of Scripture. The Church does not create inspiration; it discerns and declares what God has revealed.",
+        fr: "Le Magistère, la charge d'enseignement de l'Église, interprète authentiquement et propose ce qui a été révélé. Cela inclut les dogmes, les enseignements moraux et le canon de l'Écriture. L'Église ne crée pas l'inspiration ; elle discerne et déclare ce que Dieu a révélé.",
+        es: "El Magisterio, el oficio de enseñanza de la Iglesia, interpreta auténticamente y propone lo que ha sido revelado. Esto incluye dogmas, enseñanzas morales y el canon de la Escritura. La Iglesia no crea la inspiración; discierne y declara lo que Dios ha revelado.",
+        de: "Das Lehramt, das Lehramt der Kirche, legt authentisch aus und legt vor, was offenbart wurde. Dazu gehören Dogmen, Morallehren und der Kanon der Schrift. Die Kirche schafft keine Inspiration; sie unterscheidet und erklärt, was Gott offenbart hat.",
+      },
     },
     conclusion: {
       h2: {
@@ -9374,11 +9355,11 @@ c6: {
         de: "Zugeben, dass es keine konsistente Grundlage gibt, um zu glauben, dass die Bibel inspiriert ist.",
       },
       p2: {
-  en: "The only coherent path forward is the Catholic one. The canon of Scripture, like all dogmas of faith, must be received through divine revelation, preserved in sacred tradition and taught by the Church.",
-  fr: "La seule voie cohérente est la voie catholique. Le canon de l'Écriture, comme tous les dogmes de la foi, doit être reçu par la révélation divine, préservée dans la sainte tradition et enseignée par l'Église.",
-  es: "El único camino coherente a seguir es el católico. El canon de la Escritura, como todos los dogmas de fe, debe recibirse a través de la revelación divina, preservada en la sagrada tradición y enseñada por la Iglesia.",
-  de: "Der einzig kohärente Weg vorwärts ist der katholische. Der Kanon der Schrift muss, wie alle Glaubensdogmen, durch göttliche Offenbarung empfangen werden, bewahrt in der heiligen Tradition und gelehrt von der Kirche.",
-},
+        en: "The only coherent path forward is the Catholic one. The canon of Scripture, like all dogmas of faith, must be received through divine revelation, preserved in sacred tradition and taught by the Church.",
+        fr: "La seule voie cohérente est la voie catholique. Le canon de l'Écriture, comme tous les dogmes de la foi, doit être reçu par la révélation divine, préservée dans la sainte tradition et enseignée par l'Église.",
+        es: "El único camino coherente a seguir es el católico. El canon de la Escritura, como todos los dogmas de fe, debe recibirse a través de la revelación divina, preservada en la sagrada tradición y enseñada por la Iglesia.",
+        de: "Der einzig kohärente Weg vorwärts ist der katholische. Der Kanon der Schrift muss, wie alle Glaubensdogmen, durch göttliche Offenbarung empfangen werden, bewahrt in der heiligen Tradition und gelehrt von der Kirche.",
+      },
     },
     bridge: {
       h3: {
@@ -9401,7 +9382,6 @@ c6: {
       },
     },
   },
-  
 
   scholasticApproaches: {
     title: {
@@ -9438,11 +9418,11 @@ c6: {
         de: "Einführung",
       },
       p1: {
-  en: "For over five centuries, adherents of Protestantism have advanced the thesis of <em>Sola Scriptura</em>, the assertion that Sacred Scripture alone constitutes the sole infallible norm of Christian faith and practice. While this claim purports to safeguard the primacy and sufficiency of the biblical witness and to guard against ecclesiastical error, it suffers from critical philosophical, theological, historical, and epistemological deficiencies.",
-  fr: "Depuis plus de cinq siècles, les adeptes du protestantisme avancent la thèse de <em>Sola Scriptura</em>, l'affirmation selon laquelle la Sainte Écriture constitue à elle seule la seule norme infaillible de la foi et de la pratique chrétiennes. Bien que cette affirmation prétende sauvegarder la primauté et la suffisance du témoignage biblique et se prémunir contre l'erreur ecclésiastique, elle souffre de graves carences philosophiques, théologiques, historiques et épistémologiques.",
-  es: "Durante más de cinco siglos, los adherentes al protestantismo han avanzado la tesis de <em>Sola Scriptura</em>, la afirmación de que la Sagrada Escritura por sí sola constituye la única norma infalible de la fe y la práctica cristianas. Si bien esta afirmación pretende salvaguardar la primacía y suficiencia del testimonio bíblico y proteger contra el error eclesiástico, adolece de deficiencias filosóficas, teológicas, históricas y epistemológicas críticas.",
-  de: "Seit über fünf Jahrhunderten vertreten Anhänger des Protestantismus die These von <em>Sola Scriptura</em>, die Behauptung, dass die Heilige Schrift allein die einzige unfehlbare Norm des christlichen Glaubens und der Praxis darstellt. Während dieser Anspruch vorgibt, den Primat und die Hinlänglichkeit des biblischen Zeugnisses zu wahren und vor kirchlichem Irrtum zu schützen, leidet er unter schwerwiegenden philosophischen, theologischen, historischen und erkenntnistheoretischen Mängeln.",
-},
+        en: "For over five centuries, adherents of Protestantism have advanced the thesis of <em>Sola Scriptura</em>, the assertion that Sacred Scripture alone constitutes the sole infallible norm of Christian faith and practice. While this claim purports to safeguard the primacy and sufficiency of the biblical witness and to guard against ecclesiastical error, it suffers from critical philosophical, theological, historical, and epistemological deficiencies.",
+        fr: "Depuis plus de cinq siècles, les adeptes du protestantisme avancent la thèse de <em>Sola Scriptura</em>, l'affirmation selon laquelle la Sainte Écriture constitue à elle seule la seule norme infaillible de la foi et de la pratique chrétiennes. Bien que cette affirmation prétende sauvegarder la primauté et la suffisance du témoignage biblique et se prémunir contre l'erreur ecclésiastique, elle souffre de graves carences philosophiques, théologiques, historiques et épistémologiques.",
+        es: "Durante más de cinco siglos, los adherentes al protestantismo han avanzado la tesis de <em>Sola Scriptura</em>, la afirmación de que la Sagrada Escritura por sí sola constituye la única norma infalible de la fe y la práctica cristianas. Si bien esta afirmación pretende salvaguardar la primacía y suficiencia del testimonio bíblico y proteger contra el error eclesiástico, adolece de deficiencias filosóficas, teológicas, históricas y epistemológicas críticas.",
+        de: "Seit über fünf Jahrhunderten vertreten Anhänger des Protestantismus die These von <em>Sola Scriptura</em>, die Behauptung, dass die Heilige Schrift allein die einzige unfehlbare Norm des christlichen Glaubens und der Praxis darstellt. Während dieser Anspruch vorgibt, den Primat und die Hinlänglichkeit des biblischen Zeugnisses zu wahren und vor kirchlichem Irrtum zu schützen, leidet er unter schwerwiegenden philosophischen, theologischen, historischen und erkenntnistheoretischen Mängeln.",
+      },
       p2: {
         en: "As this essay shall argue, <strong>Sola Scriptura is not merely a problematic theological construct, but one that is, upon closer analysis, self-defeating and internally incoherent</strong>.",
         fr: "Comme cet essai le démontrera, <strong>Sola Scriptura n'est pas simplement une construction théologique problématique, mais une construction qui, après une analyse plus approfondie, s'auto-réfute et est intrinsèquement incohérente</strong>.",
@@ -9476,11 +9456,11 @@ c6: {
         de: "Die protestantische Behauptung besagt im Wesentlichen, dass fehlbare Menschen, denen es an einer unfehlbaren interpretativen Autorität mangelt, dennoch zu einer endgültigen und verbindlichen Anerkennung des Schriftkanons gelangen können. Dieser Schritt vermischt nicht nur subjektive Wahrnehmung mit objektiver Gewissheit, sondern verwischt auch die metaphysische Unterscheidung zwischen dem <em>actus credentis</em> (Akt des Glaubens) und den <em>motiva credibilitatis</em> (Gründen der Glaubwürdigkeit).",
       },
       p3: {
-  en: "While some Catholic apologists have articulated this argument in simplistic or rhetorical terms, its more robust formulation, found in the writings of <strong>Stapleton</strong>, <strong>Franzelin</strong>, <strong>Schaben</strong>, and modern apologists such as <strong>Gary Michuta</strong>, exposes the problem with far greater precision.",
-  fr: "Bien que certains apologistes catholiques aient articulé cet argument en termes simplistes ou rhétoriques, sa formulation plus robuste, que l'on trouve dans les écrits de <strong>Stapleton</strong>, <strong>Franzelin</strong>, <strong>Schaben</strong> et des apologistes modernes tels que <strong>Gary Michuta</strong>, expose le problème avec beaucoup plus de précision.",
-  es: "Si bien algunos apologistas católicos han articulado este argumento en términos simplistas o retóricos, su formulación más robusta, encontrada en los escritos de <strong>Stapleton</strong>, <strong>Franzelin</strong>, <strong>Schaben</strong> y apologistas modernos como <strong>Gary Michuta</strong>, expone el problema con mucha mayor precisión.",
-  de: "Während einige katholische Apologeten dieses Argument in vereinfachten oder rhetorischen Begriffen formuliert haben, legt seine robustere Formulierung, wie sie in den Schriften von <strong>Stapleton</strong>, <strong>Franzelin</strong>, <strong>Schaben</strong> und modernen Apologeten wie <strong>Gary Michuta</strong> zu finden ist, das Problem mit weitaus größerer Präzision dar.",
-},
+        en: "While some Catholic apologists have articulated this argument in simplistic or rhetorical terms, its more robust formulation, found in the writings of <strong>Stapleton</strong>, <strong>Franzelin</strong>, <strong>Schaben</strong>, and modern apologists such as <strong>Gary Michuta</strong>, exposes the problem with far greater precision.",
+        fr: "Bien que certains apologistes catholiques aient articulé cet argument en termes simplistes ou rhétoriques, sa formulation plus robuste, que l'on trouve dans les écrits de <strong>Stapleton</strong>, <strong>Franzelin</strong>, <strong>Schaben</strong> et des apologistes modernes tels que <strong>Gary Michuta</strong>, expose le problème avec beaucoup plus de précision.",
+        es: "Si bien algunos apologistas católicos han articulado este argumento en términos simplistas o retóricos, su formulación más robusta, encontrada en los escritos de <strong>Stapleton</strong>, <strong>Franzelin</strong>, <strong>Schaben</strong> y apologistas modernos como <strong>Gary Michuta</strong>, expone el problema con mucha mayor precisión.",
+        de: "Während einige katholische Apologeten dieses Argument in vereinfachten oder rhetorischen Begriffen formuliert haben, legt seine robustere Formulierung, wie sie in den Schriften von <strong>Stapleton</strong>, <strong>Franzelin</strong>, <strong>Schaben</strong> und modernen Apologeten wie <strong>Gary Michuta</strong> zu finden ist, das Problem mit weitaus größerer Präzision dar.",
+      },
       p4: {
         en: "The equivocation arises from conflating the fallibility of the knower (the subject) with the fallibility of the known (the object). A fallible agent may indeed assent to an infallible proposition, but only if that proposition is made known via an infallible source.",
         fr: "L'équivoque provient de la confusion entre la faillibilité de celui qui connaît (le sujet) et la faillibilité de ce qui est connu (l'objet). Un agent faillible peut en effet adhérer à une proposition infaillible, mais seulement si cette proposition est rendue connue par une source infaillible.",
@@ -9494,12 +9474,12 @@ c6: {
           es: "El Asunto Central",
           de: "Das Zentrale Problem",
         },
-p1: {
-  en: "The central issue is not whether individuals are fallible, but whether the identification of the canon can, in principle, be known without an act of divine revelation. Since inspiration is by nature a supernatural datum, a gratuitous intervention of God within the human psyche, it cannot be apprehended through empirical investigation or philosophical reasoning alone. Its recognition necessarily demands supernatural testimony.",
-  fr: "Le problème central n'est pas de savoir si les individus sont faillibles, mais si l'identification du canon peut, en principe, être connue sans un acte de révélation divine. Puisque l'inspiration est par nature une donnée surnaturelle, une intervention gratuite de Dieu dans la psyché humaine, elle ne peut être appréhendée par la seule investigation empirique ou le seul raisonnement philosophique. Sa reconnaissance exige nécessairement un témoignage surnaturel.",
-  es: "El asunto central no es si los individuos son falibles, sino si la identificación del canon puede, en principio, conocerse sin un acto de revelación divina. Dado que la inspiración es por naturaleza un dato sobrenatural, una intervención gratuita de Dios dentro de la psique humana, no puede ser aprehendida únicamente a través de la investigación empírica o el razonamiento filosófico. Su reconocimiento exige necesariamente un testimonio sobrenatural.",
-  de: "Das zentrale Problem ist nicht, ob Individuen fehlbar sind, sondern ob die Identifizierung des Kanons prinzipiell ohne einen Akt göttlicher Offenbarung erkannt werden kann. Da Inspiration von Natur aus ein übernatürliches Datum ist, ein ungeschuldeter Eingriff Gottes in die menschliche Psyche, kann sie nicht allein durch empirische Untersuchung oder philosophisches Denken erfasst werden. Ihre Anerkennung erfordert notwendigerweise ein übernatürliches Zeugnis.",
-},
+        p1: {
+          en: "The central issue is not whether individuals are fallible, but whether the identification of the canon can, in principle, be known without an act of divine revelation. Since inspiration is by nature a supernatural datum, a gratuitous intervention of God within the human psyche, it cannot be apprehended through empirical investigation or philosophical reasoning alone. Its recognition necessarily demands supernatural testimony.",
+          fr: "Le problème central n'est pas de savoir si les individus sont faillibles, mais si l'identification du canon peut, en principe, être connue sans un acte de révélation divine. Puisque l'inspiration est par nature une donnée surnaturelle, une intervention gratuite de Dieu dans la psyché humaine, elle ne peut être appréhendée par la seule investigation empirique ou le seul raisonnement philosophique. Sa reconnaissance exige nécessairement un témoignage surnaturel.",
+          es: "El asunto central no es si los individuos son falibles, sino si la identificación del canon puede, en principio, conocerse sin un acto de revelación divina. Dado que la inspiración es por naturaleza un dato sobrenatural, una intervención gratuita de Dios dentro de la psique humana, no puede ser aprehendida únicamente a través de la investigación empírica o el razonamiento filosófico. Su reconocimiento exige necesariamente un testimonio sobrenatural.",
+          de: "Das zentrale Problem ist nicht, ob Individuen fehlbar sind, sondern ob die Identifizierung des Kanons prinzipiell ohne einen Akt göttlicher Offenbarung erkannt werden kann. Da Inspiration von Natur aus ein übernatürliches Datum ist, ein ungeschuldeter Eingriff Gottes in die menschliche Psyche, kann sie nicht allein durch empirische Untersuchung oder philosophisches Denken erfasst werden. Ihre Anerkennung erfordert notwendigerweise ein übernatürliches Zeugnis.",
+        },
       },
     },
     section2: {
@@ -9517,7 +9497,7 @@ p1: {
       },
       franzelin: {
         quote: {
-          en: 'Inspiration is a supernatural psychological fact in the mind of a man which, like other internal facts immediately known to God, is known only to the inspired person. Therefore, inspiration cannot be made known to other men except through its external effects or by testimony worthy of faith.',
+          en: "Inspiration is a supernatural psychological fact in the mind of a man which, like other internal facts immediately known to God, is known only to the inspired person. Therefore, inspiration cannot be made known to other men except through its external effects or by testimony worthy of faith.",
           fr: "« L'inspiration est un fait psychologique surnaturel dans l'esprit d'un homme qui, comme d'autres faits internes immédiatement connus de Dieu, n'est connu que de la personne inspirée. Par conséquent, l'inspiration ne peut être portée à la connaissance d'autres hommes que par ses effets externes ou par un témoignage digne de foi. »",
           es: '"La inspiración es un hecho psicológico sobrenatural en la mente de un hombre que, al igual que otros hechos internos conocidos inmediatamente por Dios, solo es conocido por la persona inspirada. Por lo tanto, la inspiración no puede darse a conocer a otros hombres excepto a través de sus efectos externos o por un testimonio digno de fe."',
           de: '„Inspiration ist eine übernatürliche psychologische Tatsache im Geist eines Menschen, die, wie andere interne, Gott unmittelbar bekannte Tatsachen, nur der inspirierten Person bekannt ist. Daher kann Inspiration anderen Menschen nur durch ihre äußeren Wirkungen oder durch ein glaubwürdiges Zeugnis bekannt gemacht werden."',
@@ -9530,11 +9510,11 @@ p1: {
         },
       },
       p2: {
-  en: "While certain external indicators, such as doctrinal orthodoxy, literary loftiness, or profound spiritual efficacy, may be characteristic of inspired texts, <strong>they are not exclusive to them</strong>. Countless theological and patristic writings display these qualities without thereby qualifying as divinely inspired Scripture.",
-  fr: "Bien que certains indicateurs externes, tels que l'orthodoxie doctrinale, l'élévation littéraire ou une profonde efficacité spirituelle, puissent être caractéristiques des textes inspirés, <strong>ils ne leur sont pas exclusifs</strong>. D'innombrables écrits théologiques et patristiques présentent ces qualités sans pour autant être qualifiés d'Écriture divinement inspirée.",
-  es: "Si bien ciertos indicadores externos, como la ortodoxia doctrinal, la elevación literaria o la profunda eficacia espiritual, pueden ser característicos de los textos inspirados, <strong>no son exclusivos de ellos</strong>. Innumerables escritos teológicos y patrísticos muestran estas cualidades sin por ello ser calificados como Escritura divinamente inspirada.",
-  de: "Während bestimmte äußere Anzeichen, wie lehrmäßige Orthodoxie, literarische Erhabenheit oder tiefgreifende spirituelle Wirksamkeit, charakteristisch für inspirierte Texte sein können, sind sie <strong>nicht ausschließlich</strong> auf sie beschränkt. Zahllose theologische und patristische Schriften weisen diese Eigenschaften auf, ohne sich dadurch als göttlich inspirierte Schrift zu qualifizieren.",
-},
+        en: "While certain external indicators, such as doctrinal orthodoxy, literary loftiness, or profound spiritual efficacy, may be characteristic of inspired texts, <strong>they are not exclusive to them</strong>. Countless theological and patristic writings display these qualities without thereby qualifying as divinely inspired Scripture.",
+        fr: "Bien que certains indicateurs externes, tels que l'orthodoxie doctrinale, l'élévation littéraire ou une profonde efficacité spirituelle, puissent être caractéristiques des textes inspirés, <strong>ils ne leur sont pas exclusifs</strong>. D'innombrables écrits théologiques et patristiques présentent ces qualités sans pour autant être qualifiés d'Écriture divinement inspirée.",
+        es: "Si bien ciertos indicadores externos, como la ortodoxia doctrinal, la elevación literaria o la profunda eficacia espiritual, pueden ser característicos de los textos inspirados, <strong>no son exclusivos de ellos</strong>. Innumerables escritos teológicos y patrísticos muestran estas cualidades sin por ello ser calificados como Escritura divinamente inspirada.",
+        de: "Während bestimmte äußere Anzeichen, wie lehrmäßige Orthodoxie, literarische Erhabenheit oder tiefgreifende spirituelle Wirksamkeit, charakteristisch für inspirierte Texte sein können, sind sie <strong>nicht ausschließlich</strong> auf sie beschränkt. Zahllose theologische und patristische Schriften weisen diese Eigenschaften auf, ohne sich dadurch als göttlich inspirierte Schrift zu qualifizieren.",
+      },
       p3: {
         en: "Thus, inspiration cannot be inferred merely from observable attributes; its recognition must be grounded in a divinely sanctioned epistemological framework.",
         fr: "Ainsi, l'inspiration ne peut être déduite simplement d'attributs observables ; sa reconnaissance doit être fondée sur un cadre épistémologique divinement sanctionné.",
@@ -9563,7 +9543,7 @@ p1: {
       },
       westminster: {
         quote: {
-          en: 'The whole counsel of God concerning all things necessary for His own glory, man\'s salvation, faith and life, is either expressly set down in Scripture, or by good and necessary consequence may be deduced from Scripture.',
+          en: "The whole counsel of God concerning all things necessary for His own glory, man's salvation, faith and life, is either expressly set down in Scripture, or by good and necessary consequence may be deduced from Scripture.",
           fr: "« Tout le conseil de Dieu concernant toutes les choses nécessaires à Sa propre gloire, au salut de l'homme, à la foi et à la vie, est soit expressément énoncé dans l'Écriture, soit peut être déduit de l'Écriture par une conséquence bonne et nécessaire. »",
           es: '"El consejo completo de Dios tocante a todas las cosas necesarias para Su propia gloria, la salvación del hombre, la fe y la vida, está expresamente expuesto en la Escritura, o por buena y necesaria consecuencia puede deducirse de la Escritura."',
           de: '„Der ganze Ratschluss Gottes, alles, was zu seiner Ehre und zum Heil, Glauben und Leben des Menschen notwendig ist, ist entweder ausdrücklich in der Schrift dargelegt oder kann durch gute und notwendige Folgerung aus der Schrift abgeleitet werden."',
@@ -9582,17 +9562,17 @@ p1: {
         de: "Jedoch <strong>liefert die Schrift selbst kein göttlich inspiriertes Inhaltsverzeichnis</strong>. Die Identifizierung des Kanons wird nicht durch die Schrift etabliert; sie wird vielmehr stillschweigend vorausgesetzt.",
       },
       p3: {
-  en: "Protestant attempts to reconstruct the Canon through internal criteria, such as apostolic authorship, conformity with orthodoxy, or spiritual efficacy, inevitably fail because these criteria are neither necessary nor sufficient for inspiration. Moreover, they rest on subjective interpretive judgments, which are susceptible to error and disagreement.",
-  fr: "Les tentatives protestantes de reconstruire le Canon à l'aide de critères internes, tels que la paternité apostolique, la conformité à l'orthodoxie ou l'efficacité spirituelle, échouent inévitablement parce que ces critères ne sont ni nécessaires ni suffisants pour l'inspiration. De plus, ils reposent sur des jugements interprétatifs subjectifs, susceptibles d'erreur et de désaccord.",
-  es: "Los intentos protestantes de reconstruir el Canon a través de criterios internos, como la autoría apostólica, la conformidad con la ortodoxia o la eficacia espiritual, fracasan inevitablemente porque estos criterios no son ni necesarios ni suficientes para la inspiración. Además, se basan en juicios interpretativos subjetivos, que son susceptibles de error y desacuerdo.",
-  de: "Protestantische Versuche, den Kanon durch interne Kriterien, wie apostolische Autorschaft, Übereinstimmung mit der Orthodoxie oder spirituelle Wirksamkeit, zu rekonstruieren, scheitern unweigerlich, da diese Kriterien weder notwendig noch hinreichend für die Inspiration sind. Darüber hinaus beruhen sie auf subjektiven interpretativen Urteilen, die fehleranfällig und umstritten sind.",
-},
-p4: {
-  en: "Even if a text demonstrates profound theological coherence and ecclesial utility, such features cannot constitute conclusive proof of its inspired status. Countless non-canonical works, from the <em>Shepherd of Hermas</em> to the epistles of St. Ignatius of Antioch, possess such qualities and were venerated in early Christianity, yet were ultimately excluded from the Canon.",
-  fr: "Même si un texte démontre une cohérence théologique profonde et une utilité ecclésiale, de telles caractéristiques ne peuvent constituer une preuve concluante de son statut inspiré. D'innombrables œuvres non canoniques, du <em>Pasteur d'Hermas</em> aux épîtres de Saint Ignace d'Antioche, possèdent de telles qualités et étaient vénérées dans le christianisme primitif, mais ont finalement été exclues du Canon.",
-  es: "Incluso si un texto demuestra una profunda coherencia teológica y utilidad eclesial, tales características no pueden constituir una prueba concluyente de su estado inspirado. Innumerables obras no canónicas, desde el <em>Pastor de Hermas</em> hasta las epístolas de San Ignacio de Antioquía, poseen tales cualidades y fueron veneradas en el cristianismo primitivo, pero finalmente fueron excluidas del Canon.",
-  de: "Selbst wenn ein Text tiefgreifende theologische Kohärenz und kirchlichen Nutzen aufweist, können solche Merkmale keinen schlüssigen Beweis für seinen inspirierten Status darstellen. Zahllose nichtkanonische Werke, vom <em>Hirten des Hermas</em> bis zu den Briefen des Heiligen Ignatius von Antiochien, besitzen solche Qualitäten und wurden im frühen Christentum verehrt, wurden aber letztendlich vom Kanon ausgeschlossen.",
-},
+        en: "Protestant attempts to reconstruct the Canon through internal criteria, such as apostolic authorship, conformity with orthodoxy, or spiritual efficacy, inevitably fail because these criteria are neither necessary nor sufficient for inspiration. Moreover, they rest on subjective interpretive judgments, which are susceptible to error and disagreement.",
+        fr: "Les tentatives protestantes de reconstruire le Canon à l'aide de critères internes, tels que la paternité apostolique, la conformité à l'orthodoxie ou l'efficacité spirituelle, échouent inévitablement parce que ces critères ne sont ni nécessaires ni suffisants pour l'inspiration. De plus, ils reposent sur des jugements interprétatifs subjectifs, susceptibles d'erreur et de désaccord.",
+        es: "Los intentos protestantes de reconstruir el Canon a través de criterios internos, como la autoría apostólica, la conformidad con la ortodoxia o la eficacia espiritual, fracasan inevitablemente porque estos criterios no son ni necesarios ni suficientes para la inspiración. Además, se basan en juicios interpretativos subjetivos, que son susceptibles de error y desacuerdo.",
+        de: "Protestantische Versuche, den Kanon durch interne Kriterien, wie apostolische Autorschaft, Übereinstimmung mit der Orthodoxie oder spirituelle Wirksamkeit, zu rekonstruieren, scheitern unweigerlich, da diese Kriterien weder notwendig noch hinreichend für die Inspiration sind. Darüber hinaus beruhen sie auf subjektiven interpretativen Urteilen, die fehleranfällig und umstritten sind.",
+      },
+      p4: {
+        en: "Even if a text demonstrates profound theological coherence and ecclesial utility, such features cannot constitute conclusive proof of its inspired status. Countless non-canonical works, from the <em>Shepherd of Hermas</em> to the epistles of St. Ignatius of Antioch, possess such qualities and were venerated in early Christianity, yet were ultimately excluded from the Canon.",
+        fr: "Même si un texte démontre une cohérence théologique profonde et une utilité ecclésiale, de telles caractéristiques ne peuvent constituer une preuve concluante de son statut inspiré. D'innombrables œuvres non canoniques, du <em>Pasteur d'Hermas</em> aux épîtres de Saint Ignace d'Antioche, possèdent de telles qualités et étaient vénérées dans le christianisme primitif, mais ont finalement été exclues du Canon.",
+        es: "Incluso si un texto demuestra una profunda coherencia teológica y utilidad eclesial, tales características no pueden constituir una prueba concluyente de su estado inspirado. Innumerables obras no canónicas, desde el <em>Pastor de Hermas</em> hasta las epístolas de San Ignacio de Antioquía, poseen tales cualidades y fueron veneradas en el cristianismo primitivo, pero finalmente fueron excluidas del Canon.",
+        de: "Selbst wenn ein Text tiefgreifende theologische Kohärenz und kirchlichen Nutzen aufweist, können solche Merkmale keinen schlüssigen Beweis für seinen inspirierten Status darstellen. Zahllose nichtkanonische Werke, vom <em>Hirten des Hermas</em> bis zu den Briefen des Heiligen Ignatius von Antiochien, besitzen solche Qualitäten und wurden im frühen Christentum verehrt, wurden aber letztendlich vom Kanon ausgeschlossen.",
+      },
     },
     section4: {
       h2: {
@@ -9654,11 +9634,11 @@ p4: {
         de: "Die katholische Kirche bietet eine kohärente Alternative: <strong>Der Kanon wird durch die göttliche Offenbarung erkannt und bestätigt, die durch die Heilige Tradition vermittelt und vom Lehramt der Kirche unfehlbar bewahrt wird</strong>.",
       },
       p2: {
-  en: "The recognition of the Canon is not an act of human deduction, but an act of <em>fides divina</em>, faith in the authority of God who reveals, and in the ecclesial organ that transmits that revelation.",
-  fr: "La reconnaissance du Canon n'est pas un acte de déduction humaine, mais un acte de <em>fides divina</em>, la foi en l'autorité de Dieu qui révèle et en l'organe ecclésial qui transmet cette révélation.",
-  es: "El reconocimiento del Canon no es un acto de deducción humana, sino un acto de <em>fides divina</em>, la fe en la autoridad de Dios que revela y en el órgano eclesial que transmite esa revelación.",
-  de: "Die Anerkennung des Kanons ist kein Akt menschlicher Schlussfolgerung, sondern ein Akt der <em>fides divina</em>, des Glaubens an die Autorität Gottes, der offenbart, und an das kirchliche Organ, das diese Offenbarung übermittelt.",
-},
+        en: "The recognition of the Canon is not an act of human deduction, but an act of <em>fides divina</em>, faith in the authority of God who reveals, and in the ecclesial organ that transmits that revelation.",
+        fr: "La reconnaissance du Canon n'est pas un acte de déduction humaine, mais un acte de <em>fides divina</em>, la foi en l'autorité de Dieu qui révèle et en l'organe ecclésial qui transmet cette révélation.",
+        es: "El reconocimiento del Canon no es un acto de deducción humana, sino un acto de <em>fides divina</em>, la fe en la autoridad de Dios que revela y en el órgano eclesial que transmite esa revelación.",
+        de: "Die Anerkennung des Kanons ist kein Akt menschlicher Schlussfolgerung, sondern ein Akt der <em>fides divina</em>, des Glaubens an die Autorität Gottes, der offenbart, und an das kirchliche Organ, das diese Offenbarung übermittelt.",
+      },
       augustine: {
         quote: {
           en: '"I would not believe in the Gospel myself if the authority of the Catholic Church did not influence me to do so."',
@@ -9783,11 +9763,11 @@ p4: {
           de: "Noch kann sie durch <strong>wahrscheinliche Meinung</strong> erkannt werden, da die verwendeten Kriterien (z. B. literarische Schönheit, moralische Unterweisung, apostolische Nähe) nicht ausschließlich für inspirierte Texte gelten.",
         },
         li3: {
-  en: "Therefore, the only sufficient epistemological category by which the inspiration of Scripture can be known is <strong>faith</strong>, specifically <em>divine faith</em> grounded in God's own testimony as mediated through Revelation.",
-  fr: "Par conséquent, la seule catégorie épistémologique suffisante par laquelle l'inspiration de l'Écriture peut être connue est la <strong>foi</strong>, spécifiquement la <em>foi divine</em> fondée sur le témoignage de Dieu lui-même tel que médiatisé par la Révélation.",
-  es: "Por lo tanto, la única categoría epistemológica suficiente por la cual se puede conocer la inspiración de la Escritura es la <strong>fe</strong>, específicamente la <em>fe divina</em> basada en el propio testimonio de Dios mediado a través de la Revelación.",
-  de: "Daher ist die einzige ausreichende erkenntnistheoretische Kategorie, durch die die Inspiration der Schrift erkannt werden kann, der <strong>Glaube</strong>, insbesondere der <em>göttliche Glaube</em>, der auf Gottes eigenem Zeugnis basiert, das durch die Offenbarung vermittelt wird.",
-},
+          en: "Therefore, the only sufficient epistemological category by which the inspiration of Scripture can be known is <strong>faith</strong>, specifically <em>divine faith</em> grounded in God's own testimony as mediated through Revelation.",
+          fr: "Par conséquent, la seule catégorie épistémologique suffisante par laquelle l'inspiration de l'Écriture peut être connue est la <strong>foi</strong>, spécifiquement la <em>foi divine</em> fondée sur le témoignage de Dieu lui-même tel que médiatisé par la Révélation.",
+          es: "Por lo tanto, la única categoría epistemológica suficiente por la cual se puede conocer la inspiración de la Escritura es la <strong>fe</strong>, específicamente la <em>fe divina</em> basada en el propio testimonio de Dios mediado a través de la Revelación.",
+          de: "Daher ist die einzige ausreichende erkenntnistheoretische Kategorie, durch die die Inspiration der Schrift erkannt werden kann, der <strong>Glaube</strong>, insbesondere der <em>göttliche Glaube</em>, der auf Gottes eigenem Zeugnis basiert, das durch die Offenbarung vermittelt wird.",
+        },
       },
       callout2: {
         h3: {
@@ -9903,11 +9883,11 @@ p4: {
           de: "Die Katholische Alternative",
         },
         p1: {
-  en: "In contrast, Catholicism offers a coherent and theologically integrated vision: the Word of God is transmitted through both Scripture and Tradition, interpreted authentically by the Church established by Christ. This triadic structure, <strong>Scripture, Tradition, and Magisterium</strong>, provides the epistemic foundation for certitude in divine Revelation.",
-  fr: "En revanche, le catholicisme offre une vision cohérente et théologiquement intégrée : la Parole de Dieu est transmise à la fois par l'Écriture et la Tradition, interprétée authentiquement par l'Église établie par le Christ. Cette structure triadique, <strong>Écriture, Tradition et Magistère</strong>, fournit le fondement épistémique pour la certitude dans la Révélation divine.",
-  es: "En contraste, el catolicismo ofrece una visión coherente y teológicamente integrada: la Palabra de Dios se transmite a través de la Escritura y la Tradición, interpretada auténticamente por la Iglesia establecida por Cristo. Esta estructura triádica, <strong>Escritura, Tradición y Magisterio</strong>, proporciona el fundamento epistémico para la certeza en la Revelación divina.",
-  de: "Im Gegensatz dazu bietet der Katholizismus eine kohärente und theologisch integrierte Vision: Das Wort Gottes wird durch Schrift und Tradition übermittelt und von der von Christus eingesetzten Kirche authentisch interpretiert. Diese triadische Struktur, <strong>Schrift, Tradition und Lehramt</strong>, bildet die erkenntnistheoretische Grundlage für die Gewissheit in der göttlichen Offenbarung.",
-},
+          en: "In contrast, Catholicism offers a coherent and theologically integrated vision: the Word of God is transmitted through both Scripture and Tradition, interpreted authentically by the Church established by Christ. This triadic structure, <strong>Scripture, Tradition, and Magisterium</strong>, provides the epistemic foundation for certitude in divine Revelation.",
+          fr: "En revanche, le catholicisme offre une vision cohérente et théologiquement intégrée : la Parole de Dieu est transmise à la fois par l'Écriture et la Tradition, interprétée authentiquement par l'Église établie par le Christ. Cette structure triadique, <strong>Écriture, Tradition et Magistère</strong>, fournit le fondement épistémique pour la certitude dans la Révélation divine.",
+          es: "En contraste, el catolicismo ofrece una visión coherente y teológicamente integrada: la Palabra de Dios se transmite a través de la Escritura y la Tradición, interpretada auténticamente por la Iglesia establecida por Cristo. Esta estructura triádica, <strong>Escritura, Tradición y Magisterio</strong>, proporciona el fundamento epistémico para la certeza en la Revelación divina.",
+          de: "Im Gegensatz dazu bietet der Katholizismus eine kohärente und theologisch integrierte Vision: Das Wort Gottes wird durch Schrift und Tradition übermittelt und von der von Christus eingesetzten Kirche authentisch interpretiert. Diese triadische Struktur, <strong>Schrift, Tradition und Lehramt</strong>, bildet die erkenntnistheoretische Grundlage für die Gewissheit in der göttlichen Offenbarung.",
+        },
         scripture: {
           en: "Scripture",
           fr: "Écriture",
@@ -9970,11 +9950,11 @@ p4: {
         de: "Die Scholastische Tradition",
       },
       p1: {
-  en: "The scholastic theologians, including Thomas Aquinas, Bonaventure, and Duns Scotus, developed sophisticated philosophical frameworks for understanding divine revelation. Their approaches consistently affirmed that Scripture must be interpreted within the context of the Church's living Tradition and teaching authority.",
-  fr: "Les théologiens scolastiques, dont Thomas d'Aquin, Bonaventure et Duns Scot, ont développé des cadres philosophiques sophistiqués pour comprendre la révélation divine. Leurs approches affirmaient constamment que l'Écriture doit être interprétée dans le contexte de la Tradition vivante et de l'autorité d'enseignement de l'Église.",
-  es: "Los teólogos escolásticos, incluidos Tomás de Aquino, Buenaventura y Duns Escoto, desarrollaron marcos filosóficos sofisticados para comprender la revelación divina. Sus enfoques afirmaron consistentemente que la Escritura debe interpretarse dentro del contexto de la Tradición viva y la autoridad de enseñanza de la Iglesia.",
-  de: "Die scholastischen Theologen, einschließlich Thomas von Aquin, Bonaventura und Duns Scotus, entwickelten anspruchsvolle philosophische Rahmenwerke zum Verständnis der göttlichen Offenbarung. Ihre Ansätze bestätigten durchweg, dass die Schrift im Kontext der lebendigen Tradition und der Lehrautorität der Kirche interpretiert werden muss.",
-},
+        en: "The scholastic theologians, including Thomas Aquinas, Bonaventure, and Duns Scotus, developed sophisticated philosophical frameworks for understanding divine revelation. Their approaches consistently affirmed that Scripture must be interpreted within the context of the Church's living Tradition and teaching authority.",
+        fr: "Les théologiens scolastiques, dont Thomas d'Aquin, Bonaventure et Duns Scot, ont développé des cadres philosophiques sophistiqués pour comprendre la révélation divine. Leurs approches affirmaient constamment que l'Écriture doit être interprétée dans le contexte de la Tradition vivante et de l'autorité d'enseignement de l'Église.",
+        es: "Los teólogos escolásticos, incluidos Tomás de Aquino, Buenaventura y Duns Escoto, desarrollaron marcos filosóficos sofisticados para comprender la revelación divina. Sus enfoques afirmaron consistentemente que la Escritura debe interpretarse dentro del contexto de la Tradición viva y la autoridad de enseñanza de la Iglesia.",
+        de: "Die scholastischen Theologen, einschließlich Thomas von Aquin, Bonaventura und Duns Scotus, entwickelten anspruchsvolle philosophische Rahmenwerke zum Verständnis der göttlichen Offenbarung. Ihre Ansätze bestätigten durchweg, dass die Schrift im Kontext der lebendigen Tradition und der Lehrautorität der Kirche interpretiert werden muss.",
+      },
       p2: {
         en: "Having examined the rigorous philosophical and theological case against Sola Scriptura, we can now explore the positive case for Catholic authority and the role of the Magisterium.",
         fr: "Ayant examiné le cas philosophique et théologique rigoureux contre Sola Scriptura, nous pouvons maintenant explorer le cas positif de l'autorité catholique et le rôle du Magistère.",
@@ -10387,11 +10367,11 @@ p4: {
           de: "Es gibt kein letztes Wort zur Lehre, nur endlose Interpretationen.",
         },
         quote2: {
-  en: "\"Each doctrinal dispute inevitably results in new denominational splits. This pattern of fragmentation isn't simply due to human imperfection, but is precisely what we would predict given Sola Scriptura's fundamental premise.\"",
-  fr: "« Chaque différend doctrinal aboutit inévitablement à de nouvelles scissions confessionnelles. Ce schéma de fragmentation n'est pas simplement dû à l'imperfection humaine, mais c'est précisément ce que nous prédirions compte tenu de la prémisse fondamentale de Sola Scriptura. »",
-  es: "\"Cada disputa doctrinal resulta inevitablemente en nuevas divisiones denominacionales. Este patrón de fragmentación no se debe simplemente a la imperfección humana, sino que es precisamente lo que predeciríamos dada la premisa fundamental de la Sola Scriptura.\"",
-  de: "\"Jeder Lehrstreit führt unweigerlich zu neuen konfessionellen Spaltungen. Dieses Muster der Zersplitterung ist nicht einfach auf menschliche Unvollkommenheit zurückzuführen, sondern es ist genau das, was wir angesichts der Grundprämisse von Sola Scriptura erwarten würden.\"",
-},
+          en: "\"Each doctrinal dispute inevitably results in new denominational splits. This pattern of fragmentation isn't simply due to human imperfection, but is precisely what we would predict given Sola Scriptura's fundamental premise.\"",
+          fr: "« Chaque différend doctrinal aboutit inévitablement à de nouvelles scissions confessionnelles. Ce schéma de fragmentation n'est pas simplement dû à l'imperfection humaine, mais c'est précisément ce que nous prédirions compte tenu de la prémisse fondamentale de Sola Scriptura. »",
+          es: '"Cada disputa doctrinal resulta inevitablemente en nuevas divisiones denominacionales. Este patrón de fragmentación no se debe simplemente a la imperfección humana, sino que es precisamente lo que predeciríamos dada la premisa fundamental de la Sola Scriptura."',
+          de: '"Jeder Lehrstreit führt unweigerlich zu neuen konfessionellen Spaltungen. Dieses Muster der Zersplitterung ist nicht einfach auf menschliche Unvollkommenheit zurückzuführen, sondern es ist genau das, was wir angesichts der Grundprämisse von Sola Scriptura erwarten würden."',
+        },
       },
       consequences: {
         heading: {
@@ -10419,11 +10399,11 @@ p4: {
           de: '<strong>Evangelistischer Skandal:</strong> Das geteilte Zeugnis des Christentums untergräbt die Botschaft des Evangeliums. Jesus betete, „damit sie eins seien... damit die Welt glaube" (Johannes 17:21).',
         },
         quote: {
-  en: '"If God\'s intention were really Sola Scriptura, why would the fruit of that intention be a landscape of perpetual doctrinal chaos and uncertainty, the very opposite of the unity Christ prayed for?"',
-  fr: "« Si l'intention de Dieu était réellement Sola Scriptura, pourquoi le fruit de cette intention serait-il un paysage de chaos doctrinal perpétuel et d'incertitude, l'opposé même de l'unité pour laquelle Christ a prié ? »",
-  es: '"Si la intención de Dios fuera realmente Sola Scriptura, ¿por qué el fruto de esa intención sería un paisaje de perpetuo caos doctrinal e incertidumbre, exactamente lo contrario de la unidad por la que Cristo oró?"',
-  de: '„Wenn Gottes Absicht wirklich Sola Scriptura wäre, warum wäre die Frucht dieser Absicht eine Landschaft perpetuellen doktrinären Chaos und Unsicherheit, genau das Gegenteil der Einheit, für die Christus gebetet hat?"',
-},
+          en: '"If God\'s intention were really Sola Scriptura, why would the fruit of that intention be a landscape of perpetual doctrinal chaos and uncertainty, the very opposite of the unity Christ prayed for?"',
+          fr: "« Si l'intention de Dieu était réellement Sola Scriptura, pourquoi le fruit de cette intention serait-il un paysage de chaos doctrinal perpétuel et d'incertitude, l'opposé même de l'unité pour laquelle Christ a prié ? »",
+          es: '"Si la intención de Dios fuera realmente Sola Scriptura, ¿por qué el fruto de esa intención sería un paisaje de perpetuo caos doctrinal e incertidumbre, exactamente lo contrario de la unidad por la que Cristo oró?"',
+          de: '„Wenn Gottes Absicht wirklich Sola Scriptura wäre, warum wäre die Frucht dieser Absicht eine Landschaft perpetuellen doktrinären Chaos und Unsicherheit, genau das Gegenteil der Einheit, für die Christus gebetet hat?"',
+        },
       },
     },
     arg7: {
@@ -10465,11 +10445,11 @@ p4: {
           de: "Jeder Gläubige muss wesentliche Lehren wie Taufe, Eucharistie, Erlösung, Prädestination usw. bestimmen.",
         },
         b2: {
-  en: "One must <strong>privately judge</strong> between conflicting theologians or pastors, none of whom are infallible.",
-  fr: "On doit <strong>juger en privé</strong> entre des théologiens ou des pasteurs en conflit, dont aucun n'est infaillible.",
-  es: "Uno debe <strong>juzgar privadamente</strong> entre teólogos o pastores en conflicto, ninguno de los cuales es infalible.",
-  de: "Man muss <strong>privat urteilen</strong> zwischen widersprüchlichen Theologen oder Pastoren, von denen keiner unfehlbar ist.",
-},
+          en: "One must <strong>privately judge</strong> between conflicting theologians or pastors, none of whom are infallible.",
+          fr: "On doit <strong>juger en privé</strong> entre des théologiens ou des pasteurs en conflit, dont aucun n'est infaillible.",
+          es: "Uno debe <strong>juzgar privadamente</strong> entre teólogos o pastores en conflicto, ninguno de los cuales es infalible.",
+          de: "Man muss <strong>privat urteilen</strong> zwischen widersprüchlichen Theologen oder Pastoren, von denen keiner unfehlbar ist.",
+        },
         b3: {
           en: "There is no living, visible Church authority to settle disagreements with finality.",
           fr: "Il n'y a pas d'autorité ecclésiale vivante et visible pour régler les désaccords avec finalité.",
@@ -10509,11 +10489,11 @@ p4: {
           de: '<strong>Sie sind zutiefst uneinig:</strong> <span class="text-gray-400"> Selbst renommierte Persönlichkeiten wie Luther und Calvin waren sich über grundlegende Lehren wie die Natur der Eucharistie uneinig.</span>',
         },
         quote: {
-  en: "\"You're forced back into deciding who's correct, based on your own fallible judgment.\"",
-  fr: "« Vous êtes obligé de décider qui a raison, sur la base de votre propre jugement faillible. »",
-  es: '"Te ves forzado a decidir quién tiene razón, basándote en tu propio juicio falible."',
-  de: '„Du bist gezwungen zu entscheiden, wer Recht hat, basierend auf deinem eigenen fehlbaren Urteil."',
-},
+          en: "\"You're forced back into deciding who's correct, based on your own fallible judgment.\"",
+          fr: "« Vous êtes obligé de décider qui a raison, sur la base de votre propre jugement faillible. »",
+          es: '"Te ves forzado a decidir quién tiene razón, basándote en tu propio juicio falible."',
+          de: '„Du bist gezwungen zu entscheiden, wer Recht hat, basierend auf deinem eigenen fehlbaren Urteil."',
+        },
       },
       contrast: {
         heading: {
@@ -10523,11 +10503,11 @@ p4: {
           de: "Katholischer Kontrast: Ein Grundlegendes Urteil",
         },
         p1: {
-  en: "Catholics also exercise private judgment, but only once. A Catholic makes a single foundational decision: to trust the Church established by Christ. After that, doctrinal and moral questions are answered with consistency.",
-  fr: "Les catholiques exercent également leur jugement privé, mais une seule fois. Un catholique prend une seule décision fondamentale : faire confiance à l'Église établie par le Christ. Après cela, les questions doctrinales et morales reçoivent une réponse cohérente.",
-  es: "Los católicos también ejercen el juicio privado, pero una sola vez. Un católico toma una única decisión fundamental: confiar en la Iglesia establecida por Cristo. Después de eso, las preguntas doctrinales y morales se responden con coherencia.",
-  de: "Katholiken üben auch ein privates Urteil aus, aber nur einmal. Ein Katholik trifft eine einzige grundlegende Entscheidung: der von Christus gegründeten Kirche zu vertrauen. Danach werden lehrmäßige und moralische Fragen konsistent beantwortet.",
-},
+          en: "Catholics also exercise private judgment, but only once. A Catholic makes a single foundational decision: to trust the Church established by Christ. After that, doctrinal and moral questions are answered with consistency.",
+          fr: "Les catholiques exercent également leur jugement privé, mais une seule fois. Un catholique prend une seule décision fondamentale : faire confiance à l'Église établie par le Christ. Après cela, les questions doctrinales et morales reçoivent une réponse cohérente.",
+          es: "Los católicos también ejercen el juicio privado, pero una sola vez. Un católico toma una única decisión fundamental: confiar en la Iglesia establecida por Cristo. Después de eso, las preguntas doctrinales y morales se responden con coherencia.",
+          de: "Katholiken üben auch ein privates Urteil aus, aber nur einmal. Ein Katholik trifft eine einzige grundlegende Entscheidung: der von Christus gegründeten Kirche zu vertrauen. Danach werden lehrmäßige und moralische Fragen konsistent beantwortet.",
+        },
         quote1: {
           en: "\"Catholics make one foundational judgment. Okay, they identify Christ's true Church. It's like carefully choosing a reliable GPS only once. After that, difficult doctrinal questions are authoritatively clarified.\"",
           fr: "« Les catholiques posent un jugement fondamental unique. D'accord, ils identifient la véritable Église du Christ. C'est comme choisir avec soin un GPS fiable une seule fois. Après cela, les questions doctrinales difficiles sont clarifiées avec autorité. »",
@@ -12139,7 +12119,7 @@ p4: {
         de: "Reformationsgeschichte Erkunden",
       },
     },
-    
+
     bridge: {
       heading: {
         en: "What We Find Instead",
@@ -12168,7 +12148,7 @@ export function t(
     | { en?: string; fr?: string; es?: string; de?: string }
     | string
     | undefined,
-  lang: Language,
+  lang: Language
 ): string {
   // If nothing is passed → avoid crash
   if (!obj) return "";
