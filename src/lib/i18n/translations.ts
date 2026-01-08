@@ -9221,7 +9221,8 @@ res2: {
   fr: "Certains protestants tentent de combler le fossé en faisant appel à des motifs de crédibilité, tels que les miracles, les prophéties accomplies ou l'excellence morale de l'Écriture, pour justifier la croyance dans le canon. Pourtant, cette approche échoue également pour la même raison fondamentale : elle confond les concepts de révélation divine et d'inspiration. Les motifs de crédibilité peuvent confirmer la véracité d'un messager ou d'un message, mais ils ne peuvent établir l'inspiration, qui est un acte surnaturel de Dieu ne pouvant être déduit uniquement de signes extérieurs.",
   es: "Algunos protestantes intentan salvar la brecha apelando a motivos de credibilidad, como milagros, profecías cumplidas o la excelencia moral de la Escritura, para justificar la creencia en el canon. Sin embargo, este enfoque también fracasa por la misma razón fundamental: confunde los conceptos de revelación divina e inspiración. Los motivos de credibilidad pueden confirmar la veracidad de un mensajero o mensaje, pero no pueden establecer la inspiración, que es un acto sobrenatural de Dios que no puede inferirse únicamente de signos externos.",
   de: "Einige Protestanten versuchen, die Lücke zu schließen, indem sie sich auf Glaubwürdigkeitsmotive berufen, wie Wunder, erfüllte Prophezeiungen oder die moralische Exzellenz der Schrift, um den Glauben an den Kanon zu rechtfertigen. Doch dieser Ansatz scheitert aus demselben Grund: Er verwechselt die Konzepte der göttlichen Offenbarung und der Inspiration. Glaubwürdigkeitsmotive können die Wahrhaftigkeit eines Boten oder einer Botschaft bestätigen, aber sie können keine Inspiration begründen, die ein übernatürlicher Akt Gottes ist, der nicht allein aus äußeren Zeichen abgeleitet werden kann.",
-},
+      },
+  },
 c6: {
   h3: {
     en: "6. The Canon as a Historical Judgment",
