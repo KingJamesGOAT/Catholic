@@ -64,7 +64,6 @@ export default function SolaScripturaImpossible() {
     },
   ];
 
-  // --- AJOUTEZ CE CODE ICI ---
   const counterArgs = [
     trans.counterarguments.c1,
     trans.counterarguments.c2,
@@ -81,8 +80,7 @@ export default function SolaScripturaImpossible() {
     trans.solution.steps.s4,
     trans.solution.steps.s5,
   ];
-  // ---------------------------
-  
+
   return (
     <TopicLayout
       title={t(trans.title, language)}
@@ -611,110 +609,25 @@ export default function SolaScripturaImpossible() {
           {t(trans.counterarguments.h2, language)}
         </h2>
 
-        {/* Illumination of Spirit */}
-        <div className="mb-8">
-          <div className="flex items-start gap-4 mb-4">
-            <XCircle
-              className="text-red-400 flex-shrink-0 mt-1"
-              size={24}
+        {counterArgs.map((item, index) => (
+          <div key={index} className="mb-8">
+            <div className="flex items-start gap-4 mb-4">
+              <XCircle
+                className="text-red-400 flex-shrink-0 mt-1"
+                size={24}
+              />
+              <h3 className="text-white">
+                {t(item.h3, language)}
+              </h3>
+            </div>
+            <p
+              className="text-gray-300"
+              dangerouslySetInnerHTML={{
+                __html: t(item.p1, language),
+              }}
             />
-            <h3 className="text-white">
-              {t(trans.counterarguments.c1.h3, language)}
-            </h3>
           </div>
-          <p
-            className="text-gray-300"
-            dangerouslySetInnerHTML={{
-              __html: t(trans.counterarguments.c1.p1, language),
-            }}
-          />
-        </div>
-
-        {/* Canon in Scripture */}
-        <div className="mb-8">
-          <div className="flex items-start gap-4 mb-4">
-            <XCircle
-              className="text-red-400 flex-shrink-0 mt-1"
-              size={24}
-            />
-            <h3 className="text-white">
-              {t(trans.counterarguments.c2.h3, language)}
-            </h3>
-          </div>
-          <p className="text-gray-300">
-            {t(trans.counterarguments.c2.p1, language)}
-          </p>
-        </div>
-
-        {/* Internal Marks */}
-        <div className="mb-8">
-          <div className="flex items-start gap-4 mb-4">
-            <XCircle
-              className="text-red-400 flex-shrink-0 mt-1"
-              size={24}
-            />
-            <h3 className="text-white">
-              {t(trans.counterarguments.c3.h3, language)}
-            </h3>
-          </div>
-          <p
-            className="text-gray-300"
-            dangerouslySetInnerHTML={{
-              __html: t(trans.counterarguments.c3.p1, language),
-            }}
-          />
-        </div>
-
-        {/* Historical Witness */}
-        <div className="mb-8">
-          <div className="flex items-start gap-4 mb-4">
-            <XCircle
-              className="text-red-400 flex-shrink-0 mt-1"
-              size={24}
-            />
-            <h3 className="text-white">
-              {t(trans.counterarguments.c4.h3, language)}
-            </h3>
-          </div>
-          <p
-            className="text-gray-300"
-            dangerouslySetInnerHTML={{
-              __html: t(trans.counterarguments.c4.p1, language),
-            }}
-          />
-        </div>
-
-        {/* Motives of Credibility */}
-        <div className="mb-8">
-          <div className="flex items-start gap-4 mb-4">
-            <XCircle
-              className="text-red-400 flex-shrink-0 mt-1"
-              size={24}
-            />
-            <h3 className="text-white">
-              {t(trans.counterarguments.c5.h3, language)}
-            </h3>
-          </div>
-          <p className="text-gray-300">
-            {t(trans.counterarguments.c5.p1, language)}
-          </p>
-        </div>
-
-        {/* Historical Judgment */}
-        <div className="mb-8">
-          <div className="flex items-start gap-4 mb-4">
-            <XCircle
-              className="text-red-400 flex-shrink-0 mt-1"
-              size={24}
-            />
-            <h3 className="text-white">
-              {t(trans.counterarguments.c6.h3, language)}
-            </h3>
-          </div>
-          <p className="text-gray-300">
-            {t(trans.counterarguments.c6.p1, language)}
-          </p>
-        </div>
+        ))}
       </motion.section>
 
       <Separator className="my-16 bg-gray-800" />
@@ -739,105 +652,28 @@ export default function SolaScripturaImpossible() {
         </h3>
 
         <div className="space-y-4">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="flex items-start gap-4 bg-gradient-to-r from-green-900/20 to-green-900/5 border border-green-800 rounded-lg p-4"
-          >
-            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-900/50 border border-green-700 flex items-center justify-center">
-              <span className="text-green-300 font-mono text-sm">
-                1
-              </span>
-            </div>
-            <p
-              className="text-gray-300"
-              dangerouslySetInnerHTML={{
-                __html: t(trans.solution.steps.s1, language),
-              }}
-            />
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="flex items-start gap-4 bg-gradient-to-r from-green-900/20 to-green-900/5 border border-green-800 rounded-lg p-4"
-          >
-            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-900/50 border border-green-700 flex items-center justify-center">
-              <span className="text-green-300 font-mono text-sm">
-                2
-              </span>
-            </div>
-            <p
-              className="text-gray-300"
-              dangerouslySetInnerHTML={{
-                __html: t(trans.solution.steps.s2, language),
-              }}
-            />
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex items-start gap-4 bg-gradient-to-r from-green-900/20 to-green-900/5 border border-green-800 rounded-lg p-4"
-          >
-            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-900/50 border border-green-700 flex items-center justify-center">
-              <span className="text-green-300 font-mono text-sm">
-                3
-              </span>
-            </div>
-            <p
-              className="text-gray-300"
-              dangerouslySetInnerHTML={{
-                __html: t(trans.solution.steps.s3, language),
-              }}
-            />
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex items-start gap-4 bg-gradient-to-r from-green-900/20 to-green-900/5 border border-green-800 rounded-lg p-4"
-          >
-            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-900/50 border border-green-700 flex items-center justify-center">
-              <span className="text-green-300 font-mono text-sm">
-                4
-              </span>
-            </div>
-            <p
-              className="text-gray-300"
-              dangerouslySetInnerHTML={{
-                __html: t(trans.solution.steps.s4, language),
-              }}
-            />
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="flex items-start gap-4 bg-gradient-to-r from-green-900/20 to-green-900/5 border border-green-800 rounded-lg p-4"
-          >
-            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-900/50 border border-green-700 flex items-center justify-center">
-              <span className="text-green-300 font-mono text-sm">
-                5
-              </span>
-            </div>
-            <p
-              className="text-gray-300"
-              dangerouslySetInnerHTML={{
-                __html: t(trans.solution.steps.s5, language),
-              }}
-            />
-          </motion.div>
+          {solutionSteps.map((step, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="flex items-start gap-4 bg-gradient-to-r from-green-900/20 to-green-900/5 border border-green-800 rounded-lg p-4"
+            >
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-900/50 border border-green-700 flex items-center justify-center">
+                <span className="text-green-300 font-mono text-sm">
+                  {index + 1}
+                </span>
+              </div>
+              <p
+                className="text-gray-300"
+                dangerouslySetInnerHTML={{
+                  __html: t(step, language),
+                }}
+              />
+            </motion.div>
+          ))}
         </div>
 
         <div className="bg-gray-900/50 border-l-4 border-purple-600 p-6 rounded-r-lg my-8">
