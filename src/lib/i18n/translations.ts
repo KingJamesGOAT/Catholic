@@ -10146,10 +10146,10 @@ export const translations = {
         de: "9. Sola Scriptura wurde in der frühen Kirche nicht gelehrt oder praktiziert",
       },
       p1: {
-        en: "If Scripture alone were the infallible guide for the Church, we would expect the earliest Christians— including the Apostles and their successors—to have taught and practiced this model. However, the historical record shows no such development. Instead, the early Church clearly operated with a model that combined Scripture, oral tradition, and authoritative Church teaching.",
-        fr: "Si l'Écriture seule était le guide infaillible de l'Église, nous nous attendrions à ce que les premiers chrétiens — y compris les Apôtres et leurs successeurs — aient enseigné et pratiqué ce modèle. Cependant, les archives historiques ne montrent aucun développement de ce type. Au lieu de cela, l'Église primitive fonctionnait clairement avec un modèle qui combinait l'Écriture, la tradition orale et l'enseignement faisant autorité de l'Église.",
-        es: "Si solo la Escritura fuera la guía infalible de la Iglesia, esperaríamos que los primeros cristianos—incluidos los Apóstoles y sus sucesores—hubieran enseñado y practicado este modelo. Sin embargo, el registro histórico no muestra tal desarrollo. En cambio, la Iglesia primitiva operaba claramente con un modelo que combinaba la Escritura, la tradición oral y la enseñanza autorizada de la Iglesia.",
-        de: "Wenn die Schrift allein der unfehlbare Leitfaden für die Kirche wäre, würden wir erwarten, dass die frühesten Christen – einschließlich der Apostel und ihrer Nachfolger – dieses Modell gelehrt und praktiziert hätten. Die historischen Aufzeichnungen zeigen jedoch keine solche Entwicklung. Stattdessen funktionierte die frühe Kirche eindeutig nach einem Modell, das Schrift, mündliche Überlieferung und maßgebliche kirchliche Lehre kombinierte.",
+        en: "If Scripture alone were the infallible guide for the Church, we would expect the earliest Christians, including the Apostles and their successors, to have taught and practiced this model. However, the historical record shows no such development. Instead, the early Church clearly operated with a model that combined Scripture, oral tradition, and authoritative Church teaching.",
+        fr: "Si l'Écriture seule était le guide infaillible de l'Église, nous nous attendrions à ce que les premiers chrétiens, y compris les Apôtres et leurs successeurs, aient enseigné et pratiqué ce modèle. Cependant, les archives historiques ne montrent aucun développement de ce type. Au lieu de cela, l'Église primitive fonctionnait clairement avec un modèle qui combinait l'Écriture, la tradition orale et l'enseignement faisant autorité de l'Église.",
+        es: "Si solo la Escritura fuera la guía infalible de la Iglesia, esperaríamos que los primeros cristianos, incluidos los Apóstoles y sus sucesores, hubieran enseñado y practicado este modelo. Sin embargo, el registro histórico no muestra tal desarrollo. En cambio, la Iglesia primitiva operaba claramente con un modelo que combinaba la Escritura, la tradición oral y la enseñanza autorizada de la Iglesia.",
+        de: "Wenn die Schrift allein der unfehlbare Leitfaden für die Kirche wäre, würden wir erwarten, dass die frühesten Christen, einschließlich der Apostel und ihrer Nachfolger, dieses Modell gelehrt und praktiziert hätten. Die historischen Aufzeichnungen zeigen jedoch keine solche Entwicklung. Stattdessen funktionierte die frühe Kirche eindeutig nach einem Modell, das Schrift, mündliche Überlieferung und maßgebliche kirchliche Lehre kombinierte.",
       },
       quote1: {
         en: '"When we look at history, that\'s simply not what we find. Instead, the early Church consistently appealed to oral tradition, apostolic succession, and authoritative Church councils alongside Scripture."',
@@ -10216,10 +10216,10 @@ export const translations = {
         },
       },
       quote2: {
-        en: '"The absence of explicit and widespread early support for Sola Scriptura is actually pretty telling. In other words, Sola Scriptura is missing precisely where we\'d most expect to find it—at the very foundations of Christianity itself."',
+        en: '"The absence of explicit and widespread early support for Sola Scriptura is actually pretty telling. In other words, Sola Scriptura is missing precisely where we\'d most expect to find it, at the very foundations of Christianity itself."',
         fr: "« L'absence de soutien précoce explicite et répandu pour Sola Scriptura est en fait assez révélatrice. En d'autres termes, Sola Scriptura est absente précisément là où nous nous attendrions le plus à la trouver : aux fondements mêmes du christianisme. »",
         es: '"La ausencia de un apoyo temprano explícito y generalizado a Sola Scriptura es en realidad bastante reveladora. En otras palabras, Sola Scriptura falta precisamente donde más esperaríamos encontrarla: en los cimientos mismos del cristianismo."',
-        de: '„Das Fehlen einer expliziten und weit verbreiteten frühen Unterstützung für Sola Scriptura ist eigentlich ziemlich aufschlussreich. Mit anderen Worten, Sola Scriptura fehlt genau dort, wo wir es am meisten erwarten würden – an den Grundfesten des Christentums selbst."',
+        de: '„Das Fehlen einer expliziten und weit verbreiteten frühen Unterstützung für Sola Scriptura ist eigentlich ziemlich aufschlussreich. Mit anderen Worten, Sola Scriptura fehlt genau dort, wo wir es am meisten erwarten würden, an den Grundfesten des Christentums selbst."',
       },
       p2: {
         en: "The implication is critical: a doctrine that claims to be essential cannot be retroactively inserted into history. The early Church's reliance on apostolic tradition and ecclesial teaching authorities strongly undermines any claim that Scripture was ever meant to stand alone.",
@@ -10228,6 +10228,7 @@ export const translations = {
         de: "Die Implikation ist entscheidend: Eine Lehre, die behauptet, wesentlich zu sein, kann nicht rückwirkend in die Geschichte eingefügt werden. Die Abhängigkeit der frühen Kirche von der apostolischen Tradition und den kirchlichen Lehrautoritäten untergräbt stark jede Behauptung, dass die Schrift jemals dazu bestimmt war, allein zu stehen.",
       },
     },
+    
     arg8: {
       heading: {
         en: "8. Sola Scriptura Results in Doctrinal Fragmentation",
