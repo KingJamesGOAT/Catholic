@@ -6,7 +6,7 @@ import LanguageSelector from '../LanguageSelector';
 import { useLanguage } from '../../lib/i18n/LanguageContext';
 import { translations, t } from '../../lib/i18n/translations';
 import { cn } from '../ui/utils';
-import Logo from '../Logo'; // <--- NEW IMPORT
+import Logo from '../Logo'; // <--- Make sure this import is here
 
 interface NavigationProps {
   currentTopicIndex: number;
@@ -163,26 +163,26 @@ export default function Navigation({
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16 md:h-20">
             
-            {/* --- MODIFIED LOGO SECTION STARTS HERE --- */}
+            {/* --- UPDATED LOGO SECTION --- */}
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="cursor-pointer flex items-center gap-2 md:gap-3"
               onClick={handleLogoClick}
             >
-              {/* Logo: Smaller on mobile (w-8), larger on desktop (w-10) */}
+              {/* Logo: Visible always */}
               <Logo className="w-8 h-8 md:w-10 md:h-10 text-white shrink-0" />
               
-              <div className="flex flex-col justify-center">
-                {/* Font adjusted: text-base for mobile, bold, nowrap */}
-                <h1 className="text-white font-bold tracking-wider text-base md:text-xl whitespace-nowrap leading-none">
+              {/* Text: HIDDEN on mobile (hidden), Visible on Desktop (md:flex) */}
+              <div className="hidden md:flex flex-col justify-center">
+                <h1 className="text-white font-bold tracking-wider text-xl whitespace-nowrap leading-none">
                   {t(trans.nav.title, language)}
                 </h1>
-                <p className="text-xs text-gray-500 hidden sm:block mt-0.5">
+                <p className="text-xs text-gray-500 mt-0.5">
                   {t(trans.nav.subtitle, language)}
                 </p>
               </div>
             </motion.div>
-            {/* --- MODIFIED LOGO SECTION ENDS HERE --- */}
+            {/* --------------------------- */}
 
             <div className="flex items-center gap-4">
               
