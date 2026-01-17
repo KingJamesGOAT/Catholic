@@ -331,8 +331,8 @@ export default function WhyNotSolaScriptura({ onReformationClick }: TopicCompone
         className="mb-16"
       >
         <h2 className="text-white mb-6">
-          {t(trans.args.arg9Title, language)}
-        </h2>
+  {t(trans.arg9.heading, language)}
+</h2>
         <div className="space-y-6 text-gray-300 leading-relaxed">
           <p>{t(trans.arg9.p1, language)}</p>
           
