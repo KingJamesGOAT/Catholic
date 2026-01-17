@@ -442,6 +442,11 @@ export default function WhyNotSolaScriptura({ onReformationClick }: TopicCompone
               <p className="text-gray-400 mt-4 italic text-sm md:text-base text-center">
                 {t(trans.arg8.stats.s4, language)}
               </p>
+
+              <p className="text-gray-500 mt-2 text-xs text-center border-t border-red-800/30 pt-2">
+                Source: Center for Study of Global Christianity (2023)
+              </p>
+              
             </div>
           </div>
           <p>{t(trans.arg8.p2, language)}</p>{" "}
