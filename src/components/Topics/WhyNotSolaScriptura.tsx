@@ -320,6 +320,66 @@ export default function WhyNotSolaScriptura({ onReformationClick }: TopicCompone
           ))}
         </div>
       </motion.section>
+
+      <Separator className="my-16 bg-gray-800" />
+      {/* Argument 9 */}
+      <motion.section
+        id="arg9"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="mb-16"
+      >
+        <h2 className="text-white mb-6">
+          {t(trans.args.arg9Title, language)}
+        </h2>
+        <div className="space-y-6 text-gray-300 leading-relaxed">
+          <p>{t(trans.arg9.p1, language)}</p>
+          
+          <div className="bg-gray-900/50 border-l-4 border-purple-600 p-6 rounded-r-lg">
+            <p className="text-gray-300 italic">
+              {t(trans.arg9.quote1, language)}
+            </p>
+          </div>
+
+          <div className="bg-gray-900/30 border border-gray-800 rounded-lg p-6">
+            <h3 className="text-white mb-4">
+              {t(trans.arg9.evidenceHeading, language)}
+            </h3>
+            <ul className="space-y-3">
+              {arg9Evidence.map((item, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <History className="text-blue-400 flex-shrink-0 mt-1" size={20} />
+                  <span dangerouslySetInnerHTML={{ __html: item }} />
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="bg-blue-900/10 border border-blue-800 rounded-lg p-6">
+            <h3 className="text-white mb-4">
+              {t(trans.arg9.summary.heading, language)}
+            </h3>
+            <ul className="space-y-2">
+              {arg9Summary.map((item, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <CheckCircle className="text-blue-400 flex-shrink-0 mt-1" size={20} />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="bg-gray-900/50 border-l-4 border-blue-600 p-4 rounded-r-lg mt-4">
+              <p className="text-gray-300 italic">
+                {t(trans.arg9.quote2, language)}
+              </p>
+            </div>
+          </div>
+          
+          <p>{t(trans.arg9.p2, language)}</p>
+        </div>
+      </motion.section>
+
+      
       <Separator className="my-16 bg-gray-800" />
       {/* Argument 8 */}{" "}
       <motion.section
