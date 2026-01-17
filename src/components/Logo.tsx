@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 
 export default function Logo({ className = "w-12 h-12" }: { className?: string }) {
-  // This configuration makes the lines "draw" themselves
+  // Animation variants
   const draw = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: (i: number) => ({
@@ -16,10 +16,9 @@ export default function Logo({ className = "w-12 h-12" }: { className?: string }
 
   return (
     <div className={`relative flex items-center justify-center ${className}`}>
-      {/* Background Glow Effect */}
+      {/* Background Glow */}
       <div className="absolute inset-0 bg-white/5 blur-xl rounded-full" />
 
-      {/* The Actual SVG */}
       <motion.svg
         viewBox="0 0 100 100"
         fill="none"
@@ -31,7 +30,7 @@ export default function Logo({ className = "w-12 h-12" }: { className?: string }
         initial="hidden"
         animate="visible"
       >
-        {/* Vertical Line (Rho stem) */}
+        {/* Vertical Line */}
         <motion.path
           d="M50 15 V90"
           variants={draw}
