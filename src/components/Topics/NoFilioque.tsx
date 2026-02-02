@@ -166,13 +166,28 @@ export default function NoFilioque({ onComplete }: NoFilioqueProps) {
       </div>
 
       {/* Video */}
-      <div className="mb-16">
-        <div className="aspect-video w-full rounded-lg overflow-hidden bg-gray-900 border border-gray-800">
+      <div className="mb-16 grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Original Video: No Filioque No Trinity */}
+        <div className="aspect-video w-full rounded-lg overflow-hidden bg-gray-900 border border-gray-800 shadow-lg hover:shadow-xl hover:border-gray-700 transition-all duration-300">
           <iframe
             width="100%"
             height="100%"
             src="https://www.youtube.com/embed/I3ApIImWI4E"
             title={t(trans.video.title, language)}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full h-full"
+          ></iframe>
+        </div>
+
+        {/* Second Video: Filioque History */}
+        <div className="aspect-video w-full rounded-lg overflow-hidden bg-gray-900 border border-gray-800 shadow-lg hover:shadow-xl hover:border-gray-700 transition-all duration-300">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/Ni-WEF7i5F8"
+            title="History of the Filioque Controversy"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
