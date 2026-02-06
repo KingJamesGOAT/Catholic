@@ -60,6 +60,7 @@ const GlossaryPage = lazy(loadGlossary);
 const DoctrineExplorer = lazy(loadDoctrine);
 const TraditionalLatinMass = lazy(loadTLM);
 const ReformationHistory = lazy(loadReformation); // NEW
+const HistoryTimeline = lazy(() => import("./components/HistoryTimeline"));
 
 const ExistenceOfGod = lazy(loadExistenceOfGod);
 const ProofOfResurrection = lazy(loadProofOfResurrection);
@@ -237,7 +238,8 @@ type View =
   | "glossary"
   | "doctrine"
   | "tlm"
-  | "reformation"; // NEW
+  | "reformation" // NEW
+  | "timeline"; // <--- Add this
 
 function AppContent() {
   // Core State
@@ -543,6 +545,12 @@ function AppContent() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  // --- ADD THIS ---
+  const handleTimelineClick = () => {
+    handleViewChange("timeline");
+  };
+  // ----------------
+
   const handleBackToHome = () => {
     setCurrentTopicIndex(-1);
     handleViewChange("home");
@@ -562,6 +570,13 @@ function AppContent() {
         onDoctrineClick={() => handleViewChange("doctrine")}
         onTLMClick={() => handleViewChange("tlm")}
         onReformationClick={() => handleViewChange("reformation")} // NEW
+
+        // --- ADD THESE TWO LINES ---
+        onTimelineClick={handleTimelineClick}
+        showTimeline={currentView === "timeline"}
+        // ---------------------------
+
+
         onLogoClick={handleBackToHome}
         onSearchClick={() => setIsSearchOpen(true)}
         onHoverStart={handleHoverStart}
@@ -602,6 +617,11 @@ function AppContent() {
         {currentView === "doctrine" && <DoctrineExplorer />}
         {currentView === "tlm" && <TraditionalLatinMass />}
         {currentView === "reformation" && <ReformationHistory />} {/* NEW */}
+
+        {/* --- ADD THIS BLOCK --- */}
+        {currentView === "timeline" && <HistoryTimeline />}
+        {/* ---------------------- */}
+        
       </Suspense>
 
       {currentView === "topic" && currentTopicIndex >= 0 && (
@@ -725,7 +745,7 @@ function AppContent() {
           </p>
         </div>
       </footer>
-      
+
     </div>
   );
 }
