@@ -194,32 +194,45 @@ export default function MarianDogma({ onScienceClick }: TopicComponentProps) {
       </section>
 
       {/* Dogma 4: Assumption */}
-      <section className="mb-16 scroll-mt-20" id="assumption">
-        <div className="bg-gray-900/30 border border-gray-800 rounded-xl overflow-hidden">
-             <div className="bg-gray-900/80 p-4 border-b border-gray-800 flex items-center justify-between">
-                 <h3 className="text-xl font-bold text-white">4. {t(trans.assumptionTitle, language)}</h3>
-                 <span className="text-xs font-mono text-blue-400 border border-blue-900 bg-blue-900/20 px-2 py-1 rounded">AD 1950</span>
-            </div>
-            <div className="p-6 grid md:grid-cols-2 gap-6">
-                <div className="space-y-4">
-                     <p className="text-gray-300">{t(trans.assumptionContent, language)}</p>
-                     <ul className="list-disc pl-5 space-y-2 text-gray-400 text-sm">
-                        <li>{t(trans.assumptionPoint1, language)}</li>
-                        <li>{t(trans.assumptionPoint2, language)}</li>
-                     </ul>
-                </div>
-                <div className="aspect-video rounded-lg overflow-hidden bg-black">
-                    <iframe
-                        className="w-full h-full"
-                        src="https://www.youtube.com/embed/PFc0Jndw-ng"
-                        title="Assumption of Mary"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                    />
-                </div>
-            </div>
+<section className="mb-16 scroll-mt-20" id="assumption">
+  <div className="bg-gray-900/30 border border-gray-800 rounded-xl overflow-hidden">
+    <div className="bg-gray-900/80 p-4 border-b border-gray-800 flex items-center justify-between">
+      <h3 className="text-xl font-bold text-white">4. {t(trans.assumptionTitle, language)}</h3>
+      <span className="text-xs font-mono text-blue-400 border border-blue-900 bg-blue-900/20 px-2 py-1 rounded">AD 1950</span>
+    </div>
+    <div className="p-6 space-y-6">
+      <div className="space-y-4">
+        <p className="text-gray-300">{t(trans.assumptionContent, language)}</p>
+        <ul className="list-disc pl-5 space-y-2 text-gray-400 text-sm">
+          <li>{t(trans.assumptionPoint1, language)}</li>
+          <li>{t(trans.assumptionPoint2, language)}</li>
+        </ul>
+      </div>
+
+      {/* Responsive Video Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="aspect-video rounded-lg overflow-hidden bg-black border border-gray-800 shadow-lg">
+          <iframe
+            className="w-full h-full"
+            src="https://www.youtube.com/embed/PFc0Jndw-ng"
+            title="Assumption of Mary - Part 1"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
         </div>
-      </section>
+        <div className="aspect-video rounded-lg overflow-hidden bg-black border border-gray-800 shadow-lg">
+          <iframe
+            className="w-full h-full"
+            src="https://www.youtube.com/embed/c6mQwU2dpiw"
+            title="Assumption of Mary - Part 2"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Other Doctrines */}
       <section className="mb-12 text-gray-300">
