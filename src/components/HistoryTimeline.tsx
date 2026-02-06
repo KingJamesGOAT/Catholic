@@ -26,18 +26,17 @@ import { cn } from './ui/utils';
 const DATA_START_YEAR = 0;
 const DATA_END_YEAR = 2100;
 
-// Default sizes (Desktop)
-const DESKTOP_LANE_HEIGHT = 90;
-const DESKTOP_EVENT_GAP = 12;
+// Base sizes (Max height when zoomed out)
+const DESKTOP_BASE_HEIGHT = 90;
+const MOBILE_BASE_HEIGHT = 45;
 
-// Mobile sizes (Compact)
-const MOBILE_LANE_HEIGHT = 55;
-const MOBILE_EVENT_GAP = 6;
+const DESKTOP_EVENT_GAP = 12;
+const MOBILE_EVENT_GAP = 4;
 
 export default function HistoryTimeline() {
   const { language } = useLanguage();
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedType, setSelectedType] = useState<'all' | 'council' | 'saint' | 'pope' | 'writing'>('all');
+  const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
   const [selectedEvent, setSelectedEvent] = useState<TimelineEvent | null>(null);
   
   // Controls state
@@ -48,27 +47,33 @@ export default function HistoryTimeline() {
 
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const miniMapRef = useRef<HTMLDivElement>(null);
-  
-  // Drag state
   const isDraggingMiniMap = useRef(false);
 
   // --- RESPONSIVE CONSTANTS ---
   const isMobile = containerWidth < 768;
-  const currentLaneHeight = isMobile ? MOBILE_LANE_HEIGHT : DESKTOP_LANE_HEIGHT;
   const currentEventGap = isMobile ? MOBILE_EVENT_GAP : DESKTOP_EVENT_GAP;
 
-  // --- 1. ZOOM LIMITS ---
+  // --- 1. DYNAMIC HEIGHT CALCULATION ---
+  const currentLaneHeight = useMemo(() => {
+    if (isMobile) {
+      // Mobile: Scale from 45px down to 30px
+      return Math.max(30, MOBILE_BASE_HEIGHT - (pixelsPerYear * 0.8));
+    } else {
+      // Desktop: Scale from 90px down to 50px
+      return Math.max(50, DESKTOP_BASE_HEIGHT - (pixelsPerYear * 2));
+    }
+  }, [isMobile, pixelsPerYear]);
+
+  // --- 2. ZOOM LIMITS ---
   const minZoom = useMemo(() => {
-    // MOBILE ADJUSTMENT: Only show max 500 years at a time when fully unzoomed
     if (isMobile) {
       return containerWidth / 500;
     }
-    // DESKTOP: Show full history
     return containerWidth / (DATA_END_YEAR - DATA_START_YEAR);
   }, [containerWidth, isMobile]);
 
   const maxZoom = useMemo(() => {
-    return containerWidth / 100; // Max zoom: 100 years fills screen
+    return containerWidth / 50; 
   }, [containerWidth]);
 
   useEffect(() => {
@@ -87,7 +92,7 @@ export default function HistoryTimeline() {
     return () => window.removeEventListener('resize', updateWidth);
   }, []);
 
-  // --- 2. MINI-MAP LOGIC ---
+  // --- 3. MINI-MAP LOGIC ---
   const totalContentWidth = (DATA_END_YEAR - DATA_START_YEAR) * pixelsPerYear;
   const safeTotalWidth = totalContentWidth || 1; 
   const thumbWidthPercent = Math.min(100, (containerWidth / safeTotalWidth) * 100);
@@ -106,7 +111,7 @@ export default function HistoryTimeline() {
     scrollContainerRef.current.scrollLeft = newScrollLeft;
   };
 
-  // --- 3. POINTER EVENT HANDLERS (MiniMap Only) ---
+  // --- 4. POINTER EVENT HANDLERS ---
   const handleMiniMapPointerDown = (e: React.PointerEvent) => {
     e.preventDefault();
     isDraggingMiniMap.current = true;
@@ -132,7 +137,7 @@ export default function HistoryTimeline() {
     (e.target as HTMLElement).releasePointerCapture(e.pointerId);
   };
 
-  // --- 4. NAVIGATION HANDLERS ---
+  // --- 5. NAVIGATION HANDLERS ---
   const handleNavigate = (direction: 'left' | 'right') => {
     if (!scrollContainerRef.current) return;
     const container = scrollContainerRef.current;
@@ -175,7 +180,21 @@ export default function HistoryTimeline() {
     }
   };
 
-  // --- 5. FILTER DATA ---
+  const toggleFilter = (type: string) => {
+    if (type === 'all') {
+      setSelectedTypes([]); 
+      return;
+    }
+    setSelectedTypes(prev => {
+      if (prev.includes(type)) {
+        return prev.filter(t => t !== type);
+      } else {
+        return [...prev, type];
+      }
+    });
+  };
+
+  // --- 6. FILTER & LAYOUT ---
   const filteredEvents = useMemo(() => {
     const councils = COUNCILS || [];
     const saints = SAINTS || [];
@@ -190,7 +209,7 @@ export default function HistoryTimeline() {
     ];
     
     return all.filter(event => {
-      if (selectedType !== 'all' && event.type !== selectedType) return false;
+      if (selectedTypes.length > 0 && !selectedTypes.includes(event.type)) return false;
       
       const searchLower = searchQuery.toLowerCase();
       const name = event.name?.[language]?.toLowerCase() || "";
@@ -199,9 +218,8 @@ export default function HistoryTimeline() {
       
       return name.includes(searchLower) || description.includes(searchLower) || year.includes(searchLower);
     }).sort((a, b) => a.startYear - b.startYear);
-  }, [selectedType, searchQuery, language]);
+  }, [selectedTypes, searchQuery, language]);
 
-  // --- 6. LAYOUT ENGINE ---
   const { positionedEvents, totalLanes } = useMemo(() => {
     const lanes: number[] = []; 
     
@@ -210,8 +228,10 @@ export default function HistoryTimeline() {
 
       const startPixel = (event.startYear - DATA_START_YEAR) * pixelsPerYear;
       const duration = (event.endYear || event.startYear) - event.startYear;
-      const widthPixel = Math.max(duration * pixelsPerYear, isMobile ? 100 : 140); 
-      const endPixel = startPixel + widthPixel + 20;
+      
+      const minWidth = isMobile ? 80 : 140;
+      const widthPixel = Math.max(duration * pixelsPerYear, minWidth);
+      const endPixel = startPixel + widthPixel + (isMobile ? 10 : 20);
 
       let laneIndex = -1;
 
@@ -261,7 +281,9 @@ export default function HistoryTimeline() {
   };
 
   const getIcon = (type: string) => {
-    const size = isMobile ? 12 : 16;
+    // Make icons smaller on mobile (8px to 10px) to save space
+    const size = isMobile ? Math.min(10, currentLaneHeight * 0.4) : Math.min(16, currentLaneHeight * 0.3);
+    
     switch(type) {
       case 'council': return <ScrollText size={size} className="text-indigo-100" />;
       case 'saint': return <User size={size} className="text-amber-100" />;
@@ -304,26 +326,45 @@ export default function HistoryTimeline() {
       <div className="container mx-auto w-full max-w-7xl bg-[#121212] border border-gray-800 p-4 rounded-xl shadow-lg">
         <div className="flex flex-col lg:flex-row gap-4 justify-between items-center">
           
-          {/* Filters */}
+          {/* Filters (Multi-Select) */}
           <div className="flex flex-wrap justify-center gap-2">
-             {(['all', 'council', 'saint', 'pope', 'writing'] as const).map(type => (
-               <button
-                key={type}
-                onClick={() => setSelectedType(type)}
-                className={cn(
-                  "px-3 py-1.5 text-xs md:text-sm rounded-lg transition-all capitalize font-medium border",
-                  selectedType === type
-                    ? type === 'all' ? "bg-blue-600 border-blue-500 text-white shadow-lg" 
-                    : type === 'council' ? "bg-indigo-600 border-indigo-500 text-white shadow-lg"
-                    : type === 'saint' ? "bg-amber-600 border-amber-500 text-white shadow-lg"
-                    : type === 'pope' ? "bg-red-600 border-red-500 text-white shadow-lg"
-                    : "bg-green-600 border-green-500 text-white shadow-lg" 
-                    : "bg-[#1a1a1a] border-gray-700 text-gray-400 hover:text-white hover:bg-gray-800"
-                )}
-               >
-                 {TIMELINE_UI.filters[type][language]}
-               </button>
-             ))}
+             <button
+               onClick={() => toggleFilter('all')}
+               className={cn(
+                 "px-3 py-1.5 text-xs md:text-sm rounded-lg transition-all capitalize font-medium border",
+                 selectedTypes.length === 0 
+                   ? "bg-blue-600 border-blue-500 text-white shadow-lg" 
+                   : "bg-[#1a1a1a] border-gray-700 text-gray-400 hover:text-white hover:bg-gray-800"
+               )}
+             >
+               {TIMELINE_UI.filters['all'][language]}
+             </button>
+
+             {(['council', 'saint', 'pope', 'writing'] as const).map(type => {
+               const isActive = selectedTypes.includes(type);
+               let activeClass = "";
+               if (isActive) {
+                 if (type === 'council') activeClass = "bg-indigo-600 border-indigo-500 text-white shadow-lg";
+                 else if (type === 'saint') activeClass = "bg-amber-600 border-amber-500 text-white shadow-lg";
+                 else if (type === 'pope') activeClass = "bg-red-600 border-red-500 text-white shadow-lg";
+                 else if (type === 'writing') activeClass = "bg-green-600 border-green-500 text-white shadow-lg";
+               }
+
+               return (
+                <button
+                  key={type}
+                  onClick={() => toggleFilter(type)}
+                  className={cn(
+                    "px-3 py-1.5 text-xs md:text-sm rounded-lg transition-all capitalize font-medium border",
+                    isActive 
+                      ? activeClass
+                      : "bg-[#1a1a1a] border-gray-700 text-gray-400 hover:text-white hover:bg-gray-800"
+                  )}
+                >
+                  {TIMELINE_UI.filters[type][language]}
+                </button>
+               );
+             })}
           </div>
 
           {/* Nav Tools */}
@@ -481,7 +522,7 @@ export default function HistoryTimeline() {
                             onClick={() => setSelectedEvent(event as TimelineEvent)}
                             className={cn(
                                 "absolute rounded-lg border flex flex-col justify-center cursor-pointer shadow-lg overflow-hidden transition-all z-10 event-card",
-                                isMobile ? "px-2" : "px-4", // Smaller padding on mobile
+                                isMobile ? "px-1.5" : "px-4", 
                                 colors.bg,
                                 colors.border,
                                 colors.hover
@@ -493,21 +534,28 @@ export default function HistoryTimeline() {
                                 height: `${currentLaneHeight}px`
                             }}
                         >
-                            <div className="flex items-start gap-2 h-full pt-2 md:pt-3">
+                            <div className="flex items-start gap-2 h-full pt-1">
                                 <span className="shrink-0 mt-0.5">{getIcon(event.type)}</span>
-                                <div className="flex flex-col min-w-0">
+                                <div className="flex flex-col min-w-0 justify-center h-full">
                                     <span className={cn(
                                       "font-bold text-white shadow-black drop-shadow-md leading-tight whitespace-normal line-clamp-2",
-                                      isMobile ? "text-[11px]" : "text-sm"
+                                      // Explicitly smaller text on mobile (8px) with tight leading
+                                      isMobile 
+                                        ? "text-[8px] leading-[9px]" 
+                                        : (currentLaneHeight < 60 ? "text-xs" : "text-sm")
                                     )}>
                                         {event.name[language]}
                                     </span>
-                                    <span className={cn(
-                                      "truncate text-white/80 mt-0.5",
-                                      isMobile ? "text-[9px]" : "text-[10px]"
-                                    )}>
-                                        {event.startYear} {event.endYear && event.endYear !== event.startYear ? `- ${event.endYear}` : ''}
-                                    </span>
+                                    {/* Hide years if card is too short vertically */}
+                                    {currentLaneHeight > 35 && (
+                                      <span className={cn(
+                                        "truncate text-white/80 mt-0.5",
+                                        // Explicitly smaller year text on mobile (7px)
+                                        isMobile ? "text-[7px]" : "text-[10px]"
+                                      )}>
+                                          {event.startYear} {event.endYear && event.endYear !== event.startYear ? `- ${event.endYear}` : ''}
+                                      </span>
+                                    )}
                                 </div>
                             </div>
                             <div className="absolute bottom-0 left-0 h-1 w-full bg-black/20" />
