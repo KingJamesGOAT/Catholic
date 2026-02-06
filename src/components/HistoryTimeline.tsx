@@ -28,7 +28,7 @@ const DATA_END_YEAR = 2100;
 
 // Base sizes (Max height when zoomed out)
 const DESKTOP_BASE_HEIGHT = 90;
-const MOBILE_BASE_HEIGHT = 45;
+const MOBILE_BASE_HEIGHT = 50; // Increased slightly to accommodate wrapping text safely
 
 const DESKTOP_EVENT_GAP = 12;
 const MOBILE_EVENT_GAP = 4;
@@ -56,8 +56,9 @@ export default function HistoryTimeline() {
   // --- 1. DYNAMIC HEIGHT CALCULATION ---
   const currentLaneHeight = useMemo(() => {
     if (isMobile) {
-      // Mobile: Scale from 45px down to 30px
-      return Math.max(30, MOBILE_BASE_HEIGHT - (pixelsPerYear * 0.8));
+      // Mobile: Scale from 50px down to 35px min
+      // This ensures 3 lines of text always fit without overlap
+      return Math.max(35, MOBILE_BASE_HEIGHT - (pixelsPerYear * 0.5));
     } else {
       // Desktop: Scale from 90px down to 50px
       return Math.max(50, DESKTOP_BASE_HEIGHT - (pixelsPerYear * 2));
@@ -229,7 +230,8 @@ export default function HistoryTimeline() {
       const startPixel = (event.startYear - DATA_START_YEAR) * pixelsPerYear;
       const duration = (event.endYear || event.startYear) - event.startYear;
       
-      const minWidth = isMobile ? 80 : 140;
+      // On mobile, keep cards narrow to show more context, text will wrap
+      const minWidth = isMobile ? 65 : 140; 
       const widthPixel = Math.max(duration * pixelsPerYear, minWidth);
       const endPixel = startPixel + widthPixel + (isMobile ? 10 : 20);
 
@@ -281,7 +283,7 @@ export default function HistoryTimeline() {
   };
 
   const getIcon = (type: string) => {
-    // Make icons smaller on mobile (8px to 10px) to save space
+    // Dynamic icon size based on current lane height
     const size = isMobile ? Math.min(10, currentLaneHeight * 0.4) : Math.min(16, currentLaneHeight * 0.3);
     
     switch(type) {
@@ -522,7 +524,8 @@ export default function HistoryTimeline() {
                             onClick={() => setSelectedEvent(event as TimelineEvent)}
                             className={cn(
                                 "absolute rounded-lg border flex flex-col justify-center cursor-pointer shadow-lg overflow-hidden transition-all z-10 event-card",
-                                isMobile ? "px-1.5" : "px-4", 
+                                // Mobile: Reduced padding & alignment tweaks
+                                isMobile ? "px-1.5 py-1 justify-start" : "px-4 justify-center", 
                                 colors.bg,
                                 colors.border,
                                 colors.hover
@@ -534,25 +537,23 @@ export default function HistoryTimeline() {
                                 height: `${currentLaneHeight}px`
                             }}
                         >
-                            <div className="flex items-start gap-2 h-full pt-1">
+                            <div className="flex items-start gap-2 h-full">
                                 <span className="shrink-0 mt-0.5">{getIcon(event.type)}</span>
                                 <div className="flex flex-col min-w-0 justify-center h-full">
                                     <span className={cn(
-                                      "font-bold text-white shadow-black drop-shadow-md leading-tight whitespace-normal line-clamp-2",
-                                      // Explicitly smaller text on mobile (8px) with tight leading
+                                      "text-white shadow-black drop-shadow-md leading-tight",
+                                      // Mobile: Text wraps freely, smaller font, not bold
+                                      // Desktop: Clamped to 2 lines, bold
                                       isMobile 
-                                        ? "text-[8px] leading-[9px]" 
-                                        : (currentLaneHeight < 60 ? "text-xs" : "text-sm")
+                                        ? "text-[9px] font-normal leading-[10px] whitespace-normal" 
+                                        : "font-bold " + (currentLaneHeight < 60 ? "text-xs line-clamp-2" : "text-sm line-clamp-2")
                                     )}>
                                         {event.name[language]}
                                     </span>
-                                    {/* Hide years if card is too short vertically */}
-                                    {currentLaneHeight > 35 && (
-                                      <span className={cn(
-                                        "truncate text-white/80 mt-0.5",
-                                        // Explicitly smaller year text on mobile (7px)
-                                        isMobile ? "text-[7px]" : "text-[10px]"
-                                      )}>
+                                    
+                                    {/* Hide date completely on mobile */}
+                                    {!isMobile && currentLaneHeight > 35 && (
+                                      <span className="truncate text-white/80 mt-0.5 text-[10px]">
                                           {event.startYear} {event.endYear && event.endYear !== event.startYear ? `- ${event.endYear}` : ''}
                                       </span>
                                     )}
