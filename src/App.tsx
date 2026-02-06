@@ -716,6 +716,16 @@ function AppContent() {
       )}
       <AboutOverlay />
       <Toaster />
+
+{/* NEW FOOTER CODE */}
+      <footer className="w-full py-12 mt-auto border-t border-gray-900 bg-black">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-gray-600 text-sm font-light tracking-widest">
+            © 2026 <span className="text-gray-400">CatholicRoute</span>
+          </p>
+        </div>
+      </footer>
+      
     </div>
   );
 }
