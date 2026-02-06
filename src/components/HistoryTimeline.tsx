@@ -17,7 +17,7 @@ import {
   ChevronRight,
   CircleHelp,
   Tag,
-  CornerDownLeft // NEW ICON
+  CornerDownLeft
 } from 'lucide-react';
 import { useLanguage } from '../lib/i18n/LanguageContext';
 
@@ -413,7 +413,6 @@ export default function HistoryTimeline() {
     if(scrollContainerRef.current) {
         startX.current = e.pageX - scrollContainerRef.current.offsetLeft;
         scrollLeftStart.current = scrollContainerRef.current.scrollLeft;
-        // Optional: Change cursor style dynamically if needed
         scrollContainerRef.current.style.cursor = 'grabbing';
     }
   };
@@ -432,7 +431,7 @@ export default function HistoryTimeline() {
     if (!isDraggingTimeline.current || !scrollContainerRef.current) return;
     e.preventDefault();
     const x = e.pageX - scrollContainerRef.current.offsetLeft;
-    const walk = (x - startX.current); // 1:1 scroll speed
+    const walk = (x - startX.current); 
     scrollContainerRef.current.scrollLeft = scrollLeftStart.current - walk;
   };
 
@@ -648,6 +647,7 @@ export default function HistoryTimeline() {
       <div className="container mx-auto w-full max-w-[98%] lg:max-w-7xl flex-1 flex flex-col min-h-[60vh]">
         <div className="relative w-full h-full flex-1 border border-gray-700 rounded-xl bg-[#080808] shadow-2xl overflow-hidden flex flex-col select-none">
           <div 
+            // FIX: Changed touchAction from 'pan-y' to 'auto' so browser handles horizontal touch scroll natively
             className="flex-1 w-full overflow-x-auto overflow-y-auto relative timeline-scrollbar cursor-grab active:cursor-grabbing" 
             ref={scrollContainerRef} 
             onScroll={handleMainScroll}
@@ -655,7 +655,7 @@ export default function HistoryTimeline() {
             onMouseMove={handleTimelineMouseMove}
             onMouseUp={handleTimelineMouseUp}
             onMouseLeave={handleTimelineMouseLeave}
-            style={{ scrollBehavior: 'auto', touchAction: 'pan-y' }}
+            style={{ scrollBehavior: 'auto', touchAction: 'auto' }}
           >
             <div className="relative" style={{ width: `${totalContentWidth}px`, height: '100%', minHeight: `${containerStyleHeight}px` }}>
               <div className="absolute inset-0 pointer-events-none opacity-20" style={{ backgroundImage: `linear-gradient(to right, #333 1px, transparent 1px)`, backgroundSize: `${100 * pixelsPerYear}px 100%` }} />
