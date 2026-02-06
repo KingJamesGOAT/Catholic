@@ -1,12 +1,20 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Check, Circle, Sparkles, Search, MoreVertical, ScrollText, Gavel, BookA, Church, History } from 'lucide-react';
+import { Menu, X, Check, Circle, Sparkles, Search, MoreVertical, ScrollText, Gavel, BookA, Church, History, ChevronDown } from 'lucide-react';
 import { topics } from '../../App';
 import LanguageSelector from '../LanguageSelector';
 import { useLanguage } from '../../lib/i18n/LanguageContext';
 import { translations, t } from '../../lib/i18n/translations';
 import { cn } from '../ui/utils';
-import Logo from '../Logo'; // <--- Make sure this import is here
+import Logo from '../Logo';
+
+// Import des composants Dropdown
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "../ui/dropdown-menu";
 
 interface NavigationProps {
   currentTopicIndex: number;
@@ -27,7 +35,11 @@ interface NavigationProps {
   onTLMClick?: () => void;
   showTLM?: boolean;
   onReformationClick?: () => void; 
-  showReformation?: boolean;       
+  showReformation?: boolean;
+  
+  onTimelineClick?: () => void; 
+  showTimeline?: boolean;
+
   onLogoClick: () => void;
 }
 
@@ -51,6 +63,8 @@ export default function Navigation({
   showTLM = false,
   onReformationClick, 
   showReformation = false, 
+  onTimelineClick,
+  showTimeline = false,
   onLogoClick
 }: NavigationProps) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -90,15 +104,12 @@ export default function Navigation({
   let progressShadowStyle = '0 0 10px rgba(37,99,235,0.5)'; // Default Blue Glow
 
   if (showTLM) {
-    // Latin Mass Orange (#fe9a00)
     progressColorClass = 'bg-[#fe9a00]'; 
     progressShadowStyle = '0 0 10px rgba(254,154,0,0.5)';
   } else if (showDoctrine) {
-    // Scripture & Tradition Indigo (#4f39f6)
-    progressColorClass = 'bg-[#4f39f6]';
+    progressColorClass = 'bg-[#4f39f6]'; // Indigo for Doctrine
     progressShadowStyle = '0 0 10px rgba(79,57,246,0.5)';
   } else if (showReformation) { 
-    // Reformation Green (#16a34a)
     progressColorClass = 'bg-green-600';
     progressShadowStyle = '0 0 10px rgba(22,163,74,0.5)';
   }
@@ -163,16 +174,13 @@ export default function Navigation({
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16 md:h-20">
             
-            {/* --- UPDATED LOGO SECTION --- */}
+            {/* --- LOGO SECTION --- */}
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="cursor-pointer flex items-center gap-2 md:gap-3"
               onClick={handleLogoClick}
             >
-              {/* Logo: Visible always */}
               <Logo className="w-8 h-8 md:w-10 md:h-10 text-white shrink-0" />
-              
-              {/* Text: HIDDEN on mobile (hidden), Visible on Desktop (md:flex) */}
               <div className="hidden md:flex flex-col justify-center">
                 <h1 className="text-white font-bold tracking-wider text-xl whitespace-nowrap leading-none">
                   {t(trans.nav.title, language)}
@@ -182,7 +190,6 @@ export default function Navigation({
                 </p>
               </div>
             </motion.div>
-            {/* --------------------------- */}
 
             <div className="flex items-center gap-4">
               
@@ -197,53 +204,89 @@ export default function Navigation({
 
               <div className="w-px h-6 bg-gray-800 hidden md:block" />
 
-              {/* MAIN GROUP: Science, Early Church, Doctrine */}
+              {/* --- GROUPE DESKTOP (Cadre gris restauré) --- */}
               <div className="hidden md:flex rounded-lg border border-gray-700 bg-gray-900/50 p-1">
+                
+                {/* 1. Science */}
                 <button
                   onClick={() => handleSpecialPageClick('science')}
                   className={cn(
-                    "px-3 py-2 rounded-md text-sm transition-colors duration-200 whitespace-nowrap",
-                    showScience ? "bg-blue-600 text-white hover:bg-blue-700" : "text-gray-400 hover:bg-gray-800/50 hover:text-white"
+                    "px-3 py-2 rounded-md text-sm transition-colors duration-200 whitespace-nowrap font-medium",
+                    showScience ? "bg-blue-600 text-white shadow-lg" : "text-gray-400 hover:bg-gray-800/50 hover:text-white"
                   )}
                 >
                   {t(trans.nav.scienceAndMiracles, language)}
                 </button>
-                <button
-                  onClick={() => handleSpecialPageClick('earlyChurch')}
-                  className={cn(
-                    "px-3 py-2 rounded-md text-sm transition-colors duration-200 whitespace-nowrap",
-                    showEarlyChurch ? "bg-blue-600 text-white hover:bg-blue-700" : "text-gray-400 hover:bg-gray-800/50 hover:text-white"
-                  )}
-                >
-                  {t(trans.nav.earlyChurch, language)}
-                </button>
+
+                {/* 2. History Dropdown (Corrigé pour visibilité) */}
+                <DropdownMenu>
+                  <DropdownMenuTrigger 
+                    className={cn(
+                      "flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 outline-none select-none",
+                      (showEarlyChurch || showReformation || showTimeline) 
+                        ? "bg-blue-600 text-white shadow-lg" 
+                        : "text-gray-400 hover:text-white hover:bg-gray-800/50"
+                    )}
+                  >
+                    <span>{trans.nav.history ? trans.nav.history[language] : "History"}</span>
+                    <ChevronDown size={14} className="opacity-70" />
+                  </DropdownMenuTrigger>
+                  
+                  {/* STYLE DU MENU DÉROULANT FORCÉ ICI : Fond sombre + Bordure Grise */}
+                  <DropdownMenuContent 
+                    className="bg-gray-900 border border-gray-700 text-gray-100 mt-2 w-56 shadow-2xl rounded-lg z-50 p-1"
+                    align="start"
+                    sideOffset={5}
+                  >
+                    {/* Timeline */}
+                    <DropdownMenuItem 
+                      onClick={() => { setMenuOpen(false); if(onTimelineClick) onTimelineClick(); }} 
+                      className="cursor-pointer hover:bg-gray-800 focus:bg-gray-800 focus:text-white py-2.5 px-2 rounded-md transition-colors"
+                    >
+                      <span className={cn(showTimeline ? "text-blue-400 font-bold" : "")}>
+                        {translations.timeline.menuLabel[language]}
+                      </span>
+                    </DropdownMenuItem>
+                    
+                    {/* Early Church */}
+                    <DropdownMenuItem 
+                      onClick={() => handleSpecialPageClick('earlyChurch')} 
+                      className="cursor-pointer hover:bg-gray-800 focus:bg-gray-800 focus:text-white py-2.5 px-2 rounded-md transition-colors"
+                    >
+                      <span className={cn(showEarlyChurch ? "text-blue-400 font-bold" : "")}>
+                        {t(trans.nav.earlyChurch, language)}
+                      </span>
+                    </DropdownMenuItem>
+                    
+                    {/* Reformation */}
+                    <DropdownMenuItem 
+                      onClick={() => handleSpecialPageClick('reformation')} 
+                      className="cursor-pointer hover:bg-gray-800 focus:bg-gray-800 focus:text-white py-2.5 px-2 rounded-md transition-colors"
+                    >
+                      <span className={cn(showReformation ? "text-blue-400 font-bold" : "")}>
+                        {t(trans.nav.reformation, language)}
+                      </span>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+
+                {/* 3. Doctrine */}
                 <button
                   onClick={() => handleSpecialPageClick('doctrine')}
                   className={cn(
-                    "px-3 py-2 rounded-md text-sm transition-colors duration-200 whitespace-nowrap",
-                    showDoctrine ? "bg-indigo-600 text-white hover:bg-indigo-700" : "text-gray-400 hover:bg-gray-800/50 hover:text-white"
+                    "px-3 py-2 rounded-md text-sm transition-colors duration-200 whitespace-nowrap font-medium",
+                    showDoctrine ? "bg-indigo-600 text-white shadow-lg" : "text-gray-400 hover:bg-gray-800/50 hover:text-white"
                   )}
                 >
                   {t(trans.nav.scriptureFathers, language)}
                 </button>
-                {/* NEW: Reformation Button (Greenish) - DESKTOP */}
-                <button
-                  onClick={() => handleSpecialPageClick('reformation')}
-                  className={cn(
-                    "px-3 py-2 rounded-md text-sm transition-colors duration-200 whitespace-nowrap",
-                    showReformation ? "bg-green-600 text-white hover:bg-green-700" : "text-gray-400 hover:bg-gray-800/50 hover:text-white"
-                  )}
-                >
-                  {/* Uses the short translation "Reformation" */}
-                  {t(trans.nav.reformation, language)}
-                </button>
               </div>
 
-              {/* STANDALONE BUTTON: Latin Mass (Desktop only) */}
+              {/* 4. Latin Mass (Bouton séparé comme avant) */}
               <button
                   onClick={() => handleSpecialPageClick('tlm')}
                   className={cn(
-                    "hidden md:flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors duration-200 whitespace-nowrap border",
+                    "hidden md:flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors duration-200 whitespace-nowrap border font-medium",
                     showTLM 
                       ? "bg-[#fe9a00] border-[#fe9a00] text-black shadow-[0_0_15px_rgba(254,154,0,0.3)] hover:bg-[#fe9a00]/90" 
                       : "bg-transparent border-gray-700 text-gray-300 hover:border-[#fe9a00] hover:text-[#fe9a00] hover:bg-[#fe9a00]/10"
@@ -254,18 +297,7 @@ export default function Navigation({
                   <span>{t(trans.nav.latinMass, language)}</span>
               </button>
               
-              
-              <button
-                onClick={() => setMenuOpen(true)}
-                className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 text-sm hidden md:flex"
-              >
-                <Menu size={20} />
-                <span>{t(trans.nav.allTopics, language)}</span>
-              </button>
-              
-              <LanguageSelector />
-
-              {/* MOBILE KEBAB MENU BUTTON */}
+              {/* Mobile Menu Trigger */}
               <button
                 className="text-gray-400 hover:text-white transition-colors md:hidden"
                 onClick={() => setKebabMenuOpen(!kebabMenuOpen)}
@@ -275,12 +307,22 @@ export default function Navigation({
               </button>
 
               <button
+                onClick={() => setMenuOpen(true)}
+                className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 text-sm hidden md:flex"
+              >
+                <Menu size={20} />
+                <span>{t(trans.nav.allTopics, language)}</span>
+              </button>
+
+              <button
                 className="text-gray-400 hover:text-white transition-colors md:hidden"
                 onClick={() => setMenuOpen(!menuOpen)}
                 aria-label="All topics"
               >
                 {menuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
+              
+              <LanguageSelector />
             </div>
           </div>
 
@@ -445,8 +487,9 @@ export default function Navigation({
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -10, scale: 0.95 }}
               transition={{ duration: 0.15, ease: "easeOut" }}
-              className="fixed top-20 right-4 z-50 w-64 bg-gray-900 border border-gray-700 rounded-lg shadow-xl p-2"
+              className="fixed top-20 right-4 z-50 w-72 bg-gray-900 border border-gray-700 rounded-lg shadow-xl p-2 max-h-[80vh] overflow-y-auto"
             >
+              {/* Science */}
               <button
                 onClick={() => handleSpecialPageClick('science')}
                 className="flex items-center gap-3 w-full text-left px-3 py-3 rounded-md text-gray-300 hover:bg-blue-600 hover:text-white transition-colors"
@@ -454,13 +497,40 @@ export default function Navigation({
                 <Sparkles size={18} />
                 <span>{t(trans.nav.scienceAndMiracles, language)}</span>
               </button>
-              <button
-                onClick={() => handleSpecialPageClick('earlyChurch')}
-                className="flex items-center gap-3 w-full text-left px-3 py-3 rounded-md text-gray-300 hover:bg-blue-600 hover:text-white transition-colors"
-              >
-                <ScrollText size={18} />
-                <span>{t(trans.nav.earlyChurch, language)}</span>
-              </button>
+
+              {/* History Group */}
+              <div className="mt-2 mb-1 px-3 text-[10px] font-bold text-gray-500 uppercase tracking-widest">
+                {trans.nav.history ? trans.nav.history[language] : "History"}
+              </div>
+              
+              <div className="space-y-1 pl-2 border-l border-gray-800 ml-3">
+                 {/* Timeline */}
+                 <button 
+                   onClick={() => { setKebabMenuOpen(false); if(onTimelineClick) onTimelineClick(); }}
+                   className={cn("block w-full text-left px-3 py-2 rounded-md text-sm", showTimeline ? "text-amber-400 bg-white/5" : "text-gray-400 hover:text-white")}
+                 >
+                    {translations.timeline.menuLabel[language]}
+                 </button>
+
+                 {/* Early Church */}
+                 <button 
+                   onClick={() => handleSpecialPageClick('earlyChurch')}
+                   className={cn("block w-full text-left px-3 py-2 rounded-md text-sm", showEarlyChurch ? "text-amber-400 bg-white/5" : "text-gray-400 hover:text-white")}
+                 >
+                   {t(trans.nav.earlyChurch, language)}
+                 </button>
+
+                 {/* Reformation */}
+                 <button 
+                   onClick={() => handleSpecialPageClick('reformation')}
+                   className={cn("block w-full text-left px-3 py-2 rounded-md text-sm", showReformation ? "text-amber-400 bg-white/5" : "text-gray-400 hover:text-white")}
+                 >
+                   {t(trans.nav.reformation, language)}
+                 </button>
+              </div>
+
+              {/* Doctrine */}
+              <div className="h-px bg-gray-800 my-2" />
               <button
                 onClick={() => handleSpecialPageClick('doctrine')}
                 className="flex items-center gap-3 w-full text-left px-3 py-3 rounded-md text-gray-300 hover:bg-indigo-600 hover:text-white transition-colors"
@@ -469,20 +539,7 @@ export default function Navigation({
                 <span>{t(trans.nav.scriptureFathers, language)}</span>
               </button>
 
-              {/* NEW: Reformation Button (Mobile - Greenish on Hover) */}
-              <button
-                onClick={() => handleSpecialPageClick('reformation')}
-                className="flex items-center gap-3 w-full text-left px-3 py-3 rounded-md text-gray-300 hover:bg-green-600 hover:text-white transition-colors"
-              >
-                <History size={18} />
-                {/* Uses the long translation "Reformation History" */}
-                <span>{t(trans.nav.reformationHistory, language)}</span>
-              </button>
-
-              {/* SEPARATOR 1 */}
-              <div className="h-px bg-gray-700 my-1" />
-
-              {/* LATIN MASS - AMBER COLOR */}
+              {/* Latin Mass */}
               <button
                 onClick={() => handleSpecialPageClick('tlm')}
                 className="flex items-center gap-3 w-full text-left px-3 py-3 rounded-md text-[#fe9a00] hover:bg-[#fe9a00] hover:text-black transition-colors"
@@ -491,9 +548,9 @@ export default function Navigation({
                 <span>{t(trans.nav.latinMass, language)}</span>
               </button>
 
-              {/* SEPARATOR 2 */}
-              <div className="h-px bg-gray-700 my-1" />
+              <div className="h-px bg-gray-800 my-2" />
 
+              {/* Glossary */}
               <button
                 onClick={() => handleSpecialPageClick('glossary')}
                 className="flex items-center gap-3 w-full text-left px-3 py-3 rounded-md text-gray-300 hover:bg-yellow-600 hover:text-black transition-colors"
