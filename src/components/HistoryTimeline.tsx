@@ -25,8 +25,14 @@ import { cn } from './ui/utils';
 // --- CONFIGURATION ---
 const DATA_START_YEAR = 0;
 const DATA_END_YEAR = 2100;
-const LANE_HEIGHT = 90; 
-const EVENT_GAP = 12;   
+
+// Default sizes (Desktop)
+const DESKTOP_LANE_HEIGHT = 90;
+const DESKTOP_EVENT_GAP = 12;
+
+// Mobile sizes (Compact)
+const MOBILE_LANE_HEIGHT = 55;
+const MOBILE_EVENT_GAP = 6;
 
 export default function HistoryTimeline() {
   const { language } = useLanguage();
@@ -43,16 +49,26 @@ export default function HistoryTimeline() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const miniMapRef = useRef<HTMLDivElement>(null);
   
-  // Only keep dragging for MiniMap
+  // Drag state
   const isDraggingMiniMap = useRef(false);
+
+  // --- RESPONSIVE CONSTANTS ---
+  const isMobile = containerWidth < 768;
+  const currentLaneHeight = isMobile ? MOBILE_LANE_HEIGHT : DESKTOP_LANE_HEIGHT;
+  const currentEventGap = isMobile ? MOBILE_EVENT_GAP : DESKTOP_EVENT_GAP;
 
   // --- 1. ZOOM LIMITS ---
   const minZoom = useMemo(() => {
+    // MOBILE ADJUSTMENT: Only show max 500 years at a time when fully unzoomed
+    if (isMobile) {
+      return containerWidth / 500;
+    }
+    // DESKTOP: Show full history
     return containerWidth / (DATA_END_YEAR - DATA_START_YEAR);
-  }, [containerWidth]);
+  }, [containerWidth, isMobile]);
 
   const maxZoom = useMemo(() => {
-    return containerWidth / 100; 
+    return containerWidth / 100; // Max zoom: 100 years fills screen
   }, [containerWidth]);
 
   useEffect(() => {
@@ -117,12 +133,10 @@ export default function HistoryTimeline() {
   };
 
   // --- 4. NAVIGATION HANDLERS ---
-  
-  // NEW: Navigate Left/Right by one screen width
   const handleNavigate = (direction: 'left' | 'right') => {
     if (!scrollContainerRef.current) return;
     const container = scrollContainerRef.current;
-    const scrollAmount = container.clientWidth; // The exact width of the current view
+    const scrollAmount = container.clientWidth;
     const currentScroll = container.scrollLeft;
     
     container.scrollTo({
@@ -196,7 +210,7 @@ export default function HistoryTimeline() {
 
       const startPixel = (event.startYear - DATA_START_YEAR) * pixelsPerYear;
       const duration = (event.endYear || event.startYear) - event.startYear;
-      const widthPixel = Math.max(duration * pixelsPerYear, 140); 
+      const widthPixel = Math.max(duration * pixelsPerYear, isMobile ? 100 : 140); 
       const endPixel = startPixel + widthPixel + 20;
 
       let laneIndex = -1;
@@ -223,7 +237,7 @@ export default function HistoryTimeline() {
     }).filter(e => e !== null);
 
     return { positionedEvents: positioned, totalLanes: lanes.length };
-  }, [filteredEvents, pixelsPerYear]);
+  }, [filteredEvents, pixelsPerYear, isMobile]);
 
   // --- 7. HELPER STYLES ---
   const getColors = (type: string) => {
@@ -247,17 +261,18 @@ export default function HistoryTimeline() {
   };
 
   const getIcon = (type: string) => {
+    const size = isMobile ? 12 : 16;
     switch(type) {
-      case 'council': return <ScrollText size={16} className="text-indigo-100" />;
-      case 'saint': return <User size={16} className="text-amber-100" />;
-      case 'pope': return <Crown size={16} className="text-red-100" />;
-      case 'writing': return <BookOpen size={16} className="text-green-100" />;
-      default: return <HistoryIcon size={16} />;
+      case 'council': return <ScrollText size={size} className="text-indigo-100" />;
+      case 'saint': return <User size={size} className="text-amber-100" />;
+      case 'pope': return <Crown size={size} className="text-red-100" />;
+      case 'writing': return <BookOpen size={size} className="text-green-100" />;
+      default: return <HistoryIcon size={size} />;
     }
   };
 
   // --- 8. RENDER ---
-  const containerStyleHeight = Math.max(totalLanes * (LANE_HEIGHT + EVENT_GAP) + 150, 500);
+  const containerStyleHeight = Math.max(totalLanes * (currentLaneHeight + currentEventGap) + 150, 500);
   const tickInterval = pixelsPerYear < 2 ? 100 : pixelsPerYear < 5 ? 50 : pixelsPerYear < 10 ? 25 : 10;
   const ticks = [];
   for (let y = DATA_START_YEAR; y <= DATA_END_YEAR; y += tickInterval) {
@@ -405,7 +420,6 @@ export default function HistoryTimeline() {
 
       {/* 4. TIMELINE CONTAINER */}
       <div className="container mx-auto w-full max-w-[98%] lg:max-w-7xl flex-1 flex flex-col min-h-[60vh]">
-        {/* Changed overflow-y-hidden to overflow-y-auto so vertical scroll works if needed */}
         <div className="relative w-full h-full flex-1 border border-gray-700 rounded-xl bg-[#080808] shadow-2xl overflow-hidden flex flex-col select-none">
           
           <div 
@@ -466,7 +480,8 @@ export default function HistoryTimeline() {
                             whileHover={{ scale: 1.02, zIndex: 50 }}
                             onClick={() => setSelectedEvent(event as TimelineEvent)}
                             className={cn(
-                                "absolute rounded-lg border flex flex-col justify-center px-4 cursor-pointer shadow-lg overflow-hidden transition-all z-10 event-card",
+                                "absolute rounded-lg border flex flex-col justify-center cursor-pointer shadow-lg overflow-hidden transition-all z-10 event-card",
+                                isMobile ? "px-2" : "px-4", // Smaller padding on mobile
                                 colors.bg,
                                 colors.border,
                                 colors.hover
@@ -474,22 +489,28 @@ export default function HistoryTimeline() {
                             style={{
                                 left: `${event.x}px`,
                                 width: `${event.width}px`,
-                                top: `${event.lane * (LANE_HEIGHT + EVENT_GAP)}px`,
-                                height: `${LANE_HEIGHT}px`
+                                top: `${event.lane * (currentLaneHeight + currentEventGap)}px`,
+                                height: `${currentLaneHeight}px`
                             }}
                         >
-                            <div className="flex items-start gap-3 h-full pt-3">
+                            <div className="flex items-start gap-2 h-full pt-2 md:pt-3">
                                 <span className="shrink-0 mt-0.5">{getIcon(event.type)}</span>
                                 <div className="flex flex-col min-w-0">
-                                    <span className="text-sm font-bold text-white shadow-black drop-shadow-md leading-tight whitespace-normal line-clamp-2">
+                                    <span className={cn(
+                                      "font-bold text-white shadow-black drop-shadow-md leading-tight whitespace-normal line-clamp-2",
+                                      isMobile ? "text-[11px]" : "text-sm"
+                                    )}>
                                         {event.name[language]}
                                     </span>
-                                    <span className="text-[10px] truncate text-white/80 mt-1">
+                                    <span className={cn(
+                                      "truncate text-white/80 mt-0.5",
+                                      isMobile ? "text-[9px]" : "text-[10px]"
+                                    )}>
                                         {event.startYear} {event.endYear && event.endYear !== event.startYear ? `- ${event.endYear}` : ''}
                                     </span>
                                 </div>
                             </div>
-                            <div className="absolute bottom-0 left-0 h-1.5 w-full bg-black/20" />
+                            <div className="absolute bottom-0 left-0 h-1 w-full bg-black/20" />
                         </motion.div>
                     );
                 })}
