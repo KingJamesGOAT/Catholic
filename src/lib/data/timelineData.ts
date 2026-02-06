@@ -19,30 +19,91 @@ export interface TimelineEvent {
 // --- UI TRANSLATIONS ---
 export const TIMELINE_UI = {
   title: {
-    en: "Church Timeline",
-    fr: "Chronologie de l'Église",
-    es: "Cronología de la Iglesia",
-    de: "Zeitleiste der Kirche",
+    en: "Catholic History Timeline",
+    fr: "Frise Chronologique Catholique",
+    es: "Cronología de la Historia Católica",
+    de: "Zeitleiste der katholischen Geschichte"
   },
   subtitle: {
-    en: "Explore 2000 years of Catholic History",
-    fr: "Explorez 2000 ans d'histoire catholique",
-    es: "Explora 2000 años de historia católica",
-    de: "Entdecken Sie 2000 Jahre katholischer Geschichte",
-  },
-  searchPlaceholder: {
-    en: "Search events...",
-    fr: "Rechercher...",
-    es: "Buscar eventos...",
-    de: "Ereignisse suchen...",
+    en: "Explore the Councils, Saints, Popes, and Writings through the ages.",
+    fr: "Explorez les Conciles, Saints, Papes et Écrits à travers les âges.",
+    es: "Explora los Concilios, Santos, Papas y Escritos a través de los siglos.",
+    de: "Erkunden Sie Konzile, Heilige, Päpste und Schriften durch die Zeitalter."
   },
   filters: {
     all: { en: "All", fr: "Tous", es: "Todos", de: "Alle" },
     council: { en: "Councils", fr: "Conciles", es: "Concilios", de: "Konzile" },
     saint: { en: "Saints", fr: "Saints", es: "Santos", de: "Heilige" },
     pope: { en: "Popes", fr: "Papes", es: "Papas", de: "Päpste" },
-    // ADDED WRITINGS TRANSLATION
-    writing: { en: "Writings", fr: "Écrits", es: "Escritos", de: "Schriften" },
+    writing: { en: "Writings", fr: "Écrits", es: "Escritos", de: "Schriften" }
+  },
+  searchPlaceholder: {
+    en: "Search events, years...",
+    fr: "Rechercher événements, années...",
+    es: "Buscar eventos, años...",
+    de: "Ereignisse, Jahre suchen..."
+  },
+  // --- HELP MENU ---
+  searchHelpTitle: {
+    en: "Search Cheatsheet",
+    fr: "Aide Recherche",
+    es: "Guía de Búsqueda",
+    de: "Suchhilfe"
+  },
+  helpCategory: {
+    en: "Filter type",
+    fr: "Filtrer par type",
+    es: "Filtrar por tipo",
+    de: "Nach Typ filtern"
+  },
+  helpText: {
+    en: "Contains text",
+    fr: "Contient le texte",
+    es: "Contiene texto",
+    de: "Enthält Text"
+  },
+  helpAfter: {
+    en: "After year",
+    fr: "Après l'année",
+    es: "Después del año",
+    de: "Nach Jahr"
+  },
+  helpBefore: {
+    en: "Before year",
+    fr: "Avant l'année",
+    es: "Antes del año",
+    de: "Vor Jahr"
+  },
+  helpRange: {
+    en: "Year range",
+    fr: "Entre années",
+    es: "Rango de años",
+    de: "Jahresbereich"
+  },
+  helpCentury: {
+    en: "Century",
+    fr: "Siècle",
+    es: "Siglo",
+    de: "Jahrhundert"
+  },
+  helpExact: {
+    en: "Exact year",
+    fr: "Année exacte",
+    es: "Año exacto",
+    de: "Genaues Jahr"
+  },
+  // --- LOGIC TOGGLE ---
+  logicAny: {
+    en: "Match Any (OR)",
+    fr: "Au choix (OU)",
+    es: "Cualquiera (O)",
+    de: "Beliebig (ODER)"
+  },
+  logicAll: {
+    en: "Match All (AND)",
+    fr: "Tout (ET)",
+    es: "Todos (Y)",
+    de: "Alle (UND)"
   }
 };
 
