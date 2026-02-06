@@ -686,7 +686,7 @@ export default function HistoryTimeline() {
                             style={{ left: `${event.x}px`, width: `${event.width}px`, top: `${event.lane * (currentLaneHeight + currentEventGap)}px`, height: `${currentLaneHeight}px` }}
                         >
                             <div className="flex items-start gap-2 h-full">
-                                <span className="shrink-0 mt-0.5">{getIcon(event.type)}</span>
+                                <span className="shrink-0 mt-0.5 hidden md:block">{getIcon(event.type)}</span>
                                 <div className="flex flex-col min-w-0 justify-center h-full">
                                     <span className={cn("text-white shadow-black drop-shadow-md leading-tight", isMobile ? "text-[9px] font-normal leading-[10px] whitespace-normal" : "font-bold " + (currentLaneHeight < 60 ? "text-xs line-clamp-2" : "text-sm line-clamp-2"))}>
                                         {event.name[language]}
