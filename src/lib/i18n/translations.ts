@@ -188,6 +188,22 @@ export const translations = {
     },
   },
 
+  // Add this new section for the Timeline page
+    timeline: {
+      title: { 
+        en: "Timeline of the Church", 
+        fr: "Chronologie de l'Église", 
+        es: "Cronología de la Iglesia", 
+        de: "Zeitleiste der Kirche" 
+      },
+      menuLabel: {
+        en: "General Timeline",
+        fr: "Chronologie Générale",
+        es: "Cronología General",
+        de: "Allgemeine Zeitleiste"
+      }
+    },
+
   // Navigation & Common
   nav: {
     title: {
@@ -214,6 +230,13 @@ export const translations = {
       es: "Iglesia Primitiva",
       de: "Frühe Kirche",
     },
+
+    history: { 
+        en: "History", 
+        fr: "Histoire", 
+        es: "Historia", 
+        de: "Geschichte" 
+      },
 
     // --- ADD THIS BLOCK ---
     scriptureFathers: {
@@ -245,6 +268,8 @@ export const translations = {
       es: "Reforma",
       de: "Reformation",
     },
+
+    
 
     // ADD THIS (Used for Mobile)
     reformationHistory: {
