@@ -50,7 +50,7 @@ export default function HistoryTimeline() {
   
   // Smart Search State
   const [searchTags, setSearchTags] = useState<SearchTag[]>([]);
-  const [searchMode, setSearchMode] = useState<'OR' | 'AND'>('OR'); // NEW: Logic toggle
+  const [searchMode, setSearchMode] = useState<'OR' | 'AND'>('OR');
   const [suggestions, setSuggestions] = useState<(TimelineEvent | { isCommand: true; label: string; value: string; type: string })[]>([]);
   const [activeSuggestionIndex, setActiveSuggestionIndex] = useState(0);
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -318,7 +318,6 @@ export default function HistoryTimeline() {
           return false;
         };
 
-        // NEW LOGIC SWITCH: OR (some) vs AND (every)
         const hasMatch = searchMode === 'OR' 
           ? searchTags.some(tagMatches) 
           : searchTags.every(tagMatches);
@@ -362,11 +361,13 @@ export default function HistoryTimeline() {
 
   // --- 6. SCROLL & ZOOM LOGIC ---
   const handleMainScroll = () => { if (scrollContainerRef.current) setScrollLeft(scrollContainerRef.current.scrollLeft); };
+  
   const jumpToPercentage = (percentage: number) => {
     if (!scrollContainerRef.current) return;
     const maxScroll = scrollContainerRef.current.scrollWidth - containerWidth;
     scrollContainerRef.current.scrollLeft = Math.max(0, Math.min(maxScroll, percentage * maxScroll));
   };
+  
   const handleZoom = (dir: 'in' | 'out' | 'reset') => {
     setPixelsPerYear(prev => {
       if (dir === 'reset') return minZoom; 
@@ -374,13 +375,28 @@ export default function HistoryTimeline() {
       return Math.min(Math.max(dir === 'in' ? prev * factor : prev / factor, minZoom), maxZoom);
     });
   };
+  
   const jumpToYear = () => {
     const year = parseInt(targetYear);
     if (isNaN(year) || !scrollContainerRef.current) return;
     const pixelPos = (Math.min(Math.max(year, DATA_START_YEAR), DATA_END_YEAR) - DATA_START_YEAR) * pixelsPerYear;
     scrollContainerRef.current.scrollTo({ left: Math.max(0, pixelPos - containerWidth / 2), behavior: 'smooth' });
   };
+  
   const handleKeyDown = (e: React.KeyboardEvent) => { if (e.key === 'Enter') jumpToYear(); };
+  
+  // FIX: Use scrollBy instead of scrollTo for reliable relative scrolling
+  const handleNavigate = (direction: 'left' | 'right') => {
+    if (!scrollContainerRef.current) return;
+    const container = scrollContainerRef.current;
+    const scrollAmount = container.clientWidth * 0.8; // Move 80% of width for better UX
+    
+    container.scrollBy({
+      left: direction === 'right' ? scrollAmount : -scrollAmount,
+      behavior: 'smooth'
+    });
+  };
+
   const toggleFilter = (type: string) => {
     if (type === 'all') { setSelectedTypes([]); return; }
     setSelectedTypes(prev => prev.includes(type) ? prev.filter(t => t !== type) : [...prev, type]);
@@ -425,7 +441,7 @@ export default function HistoryTimeline() {
       {/* TITLE */}
       <div className="container mx-auto text-center">
         <h1 className="text-3xl md:text-4xl font-bold flex items-center justify-center gap-3">
-          <HistoryIcon className="text-blue-500" size={32} />
+          <HistoryIcon className="text-blue-500 hidden md:block" size={32} />
           {TIMELINE_UI.title[language]}
         </h1>
         <p className="text-gray-400 mt-2 text-sm md:text-base">{TIMELINE_UI.subtitle[language]}</p>
@@ -445,8 +461,8 @@ export default function HistoryTimeline() {
 
         {/* Main Controls */}
         <div className="flex flex-col md:flex-row items-center gap-4 justify-between w-full">
-          {/* Search Bar */}
-          <div className="w-full md:flex-1 relative z-50">
+          {/* Search Bar - Fixed Z-Index to avoid popping over top nav */}
+          <div className="w-full md:flex-1 relative z-30">
             {/* Active Tags */}
             {searchTags.length > 0 && (
               <div className="flex flex-wrap gap-2 mb-2">
