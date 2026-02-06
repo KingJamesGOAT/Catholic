@@ -16,7 +16,8 @@ import {
   ChevronLeft,
   ChevronRight,
   CircleHelp,
-  Tag
+  Tag,
+  CornerDownLeft // NEW ICON
 } from 'lucide-react';
 import { useLanguage } from '../lib/i18n/LanguageContext';
 
@@ -69,6 +70,11 @@ export default function HistoryTimeline() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const miniMapRef = useRef<HTMLDivElement>(null);
   const isDraggingMiniMap = useRef(false);
+  
+  // Drag to Scroll Refs (PC)
+  const isDraggingTimeline = useRef(false);
+  const startX = useRef(0);
+  const scrollLeftStart = useRef(0);
 
   // --- RESPONSIVE CONSTANTS ---
   const isMobile = containerWidth < 768;
@@ -144,7 +150,7 @@ export default function HistoryTimeline() {
 
     let matches: any[] = [];
 
-    // A. COMMAND MODE (starts with /)
+    // A. COMMAND MODE
     if (query.startsWith('/')) {
       const cmd = query.slice(1).toLowerCase();
       const commands = [
@@ -159,7 +165,7 @@ export default function HistoryTimeline() {
         matches.push({ isCommand: true, label: `Contains text: "${cmd}"`, value: cmd, type: 'text' });
       }
     } 
-    // B. OPERATOR MODE (>, <, =)
+    // B. OPERATOR MODE
     else if (query.startsWith('>') || query.startsWith('<') || query.startsWith('=')) {
       const operator = query[0];
       const val = query.slice(1);
@@ -174,7 +180,7 @@ export default function HistoryTimeline() {
         matches.push({ isCommand: true, label, value: val, type });
       }
     }
-    // C. RANGE MODE (1000-1200)
+    // C. RANGE MODE
     else if (/^\d{1,4}-\d{1,4}$/.test(query)) {
       const [start, end] = query.split('-');
       if (parseInt(start) < parseInt(end)) {
@@ -186,7 +192,7 @@ export default function HistoryTimeline() {
         });
       }
     }
-    // D. CENTURY MODE (12c, 12th, 1st)
+    // D. CENTURY MODE
     else if (/^\d{1,2}(c|th|st|nd|rd)$/i.test(query)) {
       const century = parseInt(query.match(/\d+/)?.[0] || '0');
       if (century > 0) {
@@ -385,11 +391,10 @@ export default function HistoryTimeline() {
   
   const handleKeyDown = (e: React.KeyboardEvent) => { if (e.key === 'Enter') jumpToYear(); };
   
-  // FIX: Use scrollBy instead of scrollTo for reliable relative scrolling
   const handleNavigate = (direction: 'left' | 'right') => {
     if (!scrollContainerRef.current) return;
     const container = scrollContainerRef.current;
-    const scrollAmount = container.clientWidth * 0.8; // Move 80% of width for better UX
+    const scrollAmount = container.clientWidth * 0.8; 
     
     container.scrollBy({
       left: direction === 'right' ? scrollAmount : -scrollAmount,
@@ -402,7 +407,36 @@ export default function HistoryTimeline() {
     setSelectedTypes(prev => prev.includes(type) ? prev.filter(t => t !== type) : [...prev, type]);
   };
 
-  // --- 7. UI HELPERS ---
+  // --- 7. MOUSE DRAG SCROLL HANDLERS ---
+  const handleTimelineMouseDown = (e: React.MouseEvent) => {
+    isDraggingTimeline.current = true;
+    if(scrollContainerRef.current) {
+        startX.current = e.pageX - scrollContainerRef.current.offsetLeft;
+        scrollLeftStart.current = scrollContainerRef.current.scrollLeft;
+        // Optional: Change cursor style dynamically if needed
+        scrollContainerRef.current.style.cursor = 'grabbing';
+    }
+  };
+
+  const handleTimelineMouseLeave = () => {
+    isDraggingTimeline.current = false;
+    if(scrollContainerRef.current) scrollContainerRef.current.style.cursor = 'grab';
+  };
+
+  const handleTimelineMouseUp = () => {
+    isDraggingTimeline.current = false;
+    if(scrollContainerRef.current) scrollContainerRef.current.style.cursor = 'grab';
+  };
+
+  const handleTimelineMouseMove = (e: React.MouseEvent) => {
+    if (!isDraggingTimeline.current || !scrollContainerRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - scrollContainerRef.current.offsetLeft;
+    const walk = (x - startX.current); // 1:1 scroll speed
+    scrollContainerRef.current.scrollLeft = scrollLeftStart.current - walk;
+  };
+
+  // --- 8. UI HELPERS ---
   const getColors = (type: string) => {
     switch(type) {
       case 'council': return { bg: 'bg-indigo-600', border: 'border-indigo-400', hover: 'hover:bg-indigo-500' };
@@ -461,8 +495,8 @@ export default function HistoryTimeline() {
 
         {/* Main Controls */}
         <div className="flex flex-col md:flex-row items-center gap-4 justify-between w-full">
-          {/* Search Bar - Fixed Z-Index to avoid popping over top nav */}
-          <div className="w-full md:flex-1 relative z-30">
+          {/* Search Bar - Z-Index 40 to sit below Top Nav (50) but above Timeline (20) */}
+          <div className="w-full md:flex-1 relative z-40">
             {/* Active Tags */}
             {searchTags.length > 0 && (
               <div className="flex flex-wrap gap-2 mb-2">
@@ -488,7 +522,7 @@ export default function HistoryTimeline() {
                 className="bg-transparent border-none outline-none text-sm text-white placeholder-gray-600 w-full"
               />
               
-              {/* NEW: Logic Toggle Button */}
+              {/* Logic Toggle Button */}
               {searchTags.length > 1 && (
                  <button 
                    onClick={() => setSearchMode(m => m === 'OR' ? 'AND' : 'OR')}
@@ -512,7 +546,7 @@ export default function HistoryTimeline() {
               )}
             </div>
 
-            {/* Help Dropdown */}
+            {/* Help Dropdown - Z-Index 40 to float above timeline */}
             <AnimatePresence>
               {showHelp && (
                 <motion.div 
@@ -520,7 +554,7 @@ export default function HistoryTimeline() {
                   initial={{ opacity: 0, y: 5 }} 
                   animate={{ opacity: 1, y: 0 }} 
                   exit={{ opacity: 0, y: 5 }} 
-                  className="absolute top-full right-0 mt-2 w-72 bg-gray-900 border border-gray-700 rounded-lg shadow-2xl p-4 z-50 text-xs text-gray-300"
+                  className="absolute top-full right-0 mt-2 w-72 bg-gray-900 border border-gray-700 rounded-lg shadow-2xl p-4 z-40 text-xs text-gray-300"
                 >
                   <div className="flex justify-between items-center mb-2"><h4 className="font-bold text-white">{TIMELINE_UI.searchHelpTitle[language]}</h4><button onClick={() => setShowHelp(false)}><X size={14}/></button></div>
                   <ul className="space-y-2">
@@ -536,10 +570,10 @@ export default function HistoryTimeline() {
               )}
             </AnimatePresence>
 
-            {/* Suggestions Dropdown */}
+            {/* Suggestions Dropdown - Z-Index 40 to float above timeline */}
             <AnimatePresence>
               {showSuggestions && suggestions.length > 0 && (
-                <motion.ul initial={{ opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 5 }} className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-lg shadow-2xl overflow-hidden z-50">
+                <motion.ul initial={{ opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 5 }} className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-lg shadow-2xl overflow-hidden z-40">
                   {suggestions.map((item, idx) => (
                     <li 
                       key={idx}
@@ -574,7 +608,7 @@ export default function HistoryTimeline() {
                   <button onClick={() => handleNavigate('left')} className="bg-[#0a0a0a] border border-gray-700 hover:bg-gray-800 rounded-lg p-3 text-gray-300"><ChevronLeft size={20} /></button>
                   <div className="flex items-center bg-[#0a0a0a] rounded-lg border border-gray-700 px-3 py-2">
                     <input type="number" placeholder="Year" value={targetYear} onChange={(e) => setTargetYear(e.target.value)} onKeyDown={handleKeyDown} className="bg-transparent border-none outline-none text-sm text-white placeholder-gray-600 w-16 text-center"/>
-                    <button onClick={jumpToYear} className="bg-gray-800 hover:bg-gray-700 rounded p-1 text-white ml-1"><ArrowRight size={16} /></button>
+                    <button onClick={jumpToYear} className="bg-gray-800 hover:bg-gray-700 rounded p-1 text-white ml-1"><CornerDownLeft size={16} /></button>
                   </div>
                   <button onClick={() => handleNavigate('right')} className="bg-[#0a0a0a] border border-gray-700 hover:bg-gray-800 rounded-lg p-3 text-gray-300"><ChevronRight size={20} /></button>
                 </div>
@@ -585,7 +619,7 @@ export default function HistoryTimeline() {
                   <button onClick={() => handleNavigate('left')} className="bg-[#0a0a0a] border border-gray-700 hover:bg-gray-800 rounded-lg p-2 text-gray-300"><ChevronLeft size={16} /></button>
                   <div className="flex items-center bg-[#0a0a0a] rounded-lg border border-gray-700 px-3 py-1.5">
                     <input type="number" placeholder="Year" value={targetYear} onChange={(e) => setTargetYear(e.target.value)} onKeyDown={handleKeyDown} className="bg-transparent border-none outline-none text-sm text-white placeholder-gray-600 w-16"/>
-                    <button onClick={jumpToYear} className="bg-gray-800 hover:bg-gray-700 rounded p-1 text-white ml-1"><ArrowRight size={14} /></button>
+                    <button onClick={jumpToYear} className="bg-gray-800 hover:bg-gray-700 rounded p-1 text-white ml-1"><CornerDownLeft size={14} /></button>
                   </div>
                   <button onClick={() => handleNavigate('right')} className="bg-[#0a0a0a] border border-gray-700 hover:bg-gray-800 rounded-lg p-2 text-gray-300"><ChevronRight size={16} /></button>
                 </div>
@@ -613,10 +647,21 @@ export default function HistoryTimeline() {
       {/* TIMELINE */}
       <div className="container mx-auto w-full max-w-[98%] lg:max-w-7xl flex-1 flex flex-col min-h-[60vh]">
         <div className="relative w-full h-full flex-1 border border-gray-700 rounded-xl bg-[#080808] shadow-2xl overflow-hidden flex flex-col select-none">
-          <div className="flex-1 w-full overflow-x-auto overflow-y-auto relative timeline-scrollbar" ref={scrollContainerRef} onScroll={handleMainScroll} style={{ scrollBehavior: 'auto', touchAction: 'pan-y' }}>
+          <div 
+            className="flex-1 w-full overflow-x-auto overflow-y-auto relative timeline-scrollbar cursor-grab active:cursor-grabbing" 
+            ref={scrollContainerRef} 
+            onScroll={handleMainScroll}
+            onMouseDown={handleTimelineMouseDown}
+            onMouseMove={handleTimelineMouseMove}
+            onMouseUp={handleTimelineMouseUp}
+            onMouseLeave={handleTimelineMouseLeave}
+            style={{ scrollBehavior: 'auto', touchAction: 'pan-y' }}
+          >
             <div className="relative" style={{ width: `${totalContentWidth}px`, height: '100%', minHeight: `${containerStyleHeight}px` }}>
               <div className="absolute inset-0 pointer-events-none opacity-20" style={{ backgroundImage: `linear-gradient(to right, #333 1px, transparent 1px)`, backgroundSize: `${100 * pixelsPerYear}px 100%` }} />
-              <div className="sticky top-0 left-0 right-0 h-12 border-b border-gray-800 bg-[#0a0a0a]/95 backdrop-blur-md z-30 flex items-end shadow-md pointer-events-none">
+              
+              {/* Sticky Top Axis - Reduced to Z-20 so dropdowns (Z-40) cover it */}
+              <div className="sticky top-0 left-0 right-0 h-12 border-b border-gray-800 bg-[#0a0a0a]/95 backdrop-blur-md z-20 flex items-end shadow-md pointer-events-none">
                  {ticks.map(year => (
                    <div key={year} className="absolute bottom-0 flex flex-col items-center" style={{ left: `${(year - DATA_START_YEAR) * pixelsPerYear}px` }}>
                      <div className="h-3 w-px bg-gray-500" />
@@ -634,7 +679,8 @@ export default function HistoryTimeline() {
                     return (
                         <motion.div
                             key={event.id}
-                            initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} whileHover={{ scale: 1.02, zIndex: 50 }}
+                            initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} 
+                            whileHover={{ scale: 1.02, zIndex: 15 }}
                             onClick={() => setSelectedEvent(event as TimelineEvent)}
                             className={cn("absolute rounded-lg border flex flex-col cursor-pointer shadow-lg transition-all z-10 event-card", isHighlighted ? "ring-2 ring-white shadow-white/20" : "", isMobile ? "px-1.5 py-1 justify-start overflow-hidden" : "px-4 justify-center", colors.bg, colors.border, colors.hover)}
                             style={{ left: `${event.x}px`, width: `${event.width}px`, top: `${event.lane * (currentLaneHeight + currentEventGap)}px`, height: `${currentLaneHeight}px` }}
