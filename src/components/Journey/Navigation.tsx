@@ -507,7 +507,7 @@ export default function Navigation({
                  {/* Timeline */}
                  <button 
                    onClick={() => { setKebabMenuOpen(false); if(onTimelineClick) onTimelineClick(); }}
-                   className={cn("block w-full text-left px-3 py-2 rounded-md text-sm", showTimeline ? "text-amber-400 bg-white/5" : "text-gray-400 hover:text-white")}
+                   className={cn("block w-full text-left px-3 py-2 rounded-md text-sm", showTimeline ? "text-blue-400 bg-white/5" : "text-gray-400 hover:text-white")}
                  >
                     {translations.timeline.menuLabel[language]}
                  </button>
@@ -515,7 +515,7 @@ export default function Navigation({
                  {/* Early Church */}
                  <button 
                    onClick={() => handleSpecialPageClick('earlyChurch')}
-                   className={cn("block w-full text-left px-3 py-2 rounded-md text-sm", showEarlyChurch ? "text-amber-400 bg-white/5" : "text-gray-400 hover:text-white")}
+                   className={cn("block w-full text-left px-3 py-2 rounded-md text-sm", showEarlyChurch ? "text-blue-400 bg-white/5" : "text-gray-400 hover:text-white")}
                  >
                    {t(trans.nav.earlyChurch, language)}
                  </button>
@@ -523,7 +523,7 @@ export default function Navigation({
                  {/* Reformation */}
                  <button 
                    onClick={() => handleSpecialPageClick('reformation')}
-                   className={cn("block w-full text-left px-3 py-2 rounded-md text-sm", showReformation ? "text-amber-400 bg-white/5" : "text-gray-400 hover:text-white")}
+                   className={cn("block w-full text-left px-3 py-2 rounded-md text-sm", showReformation ? "text-blue-400 bg-white/5" : "text-gray-400 hover:text-white")}
                  >
                    {t(trans.nav.reformation, language)}
                  </button>
