@@ -35,7 +35,8 @@ export const TIMELINE_UI = {
     council: { en: "Councils", fr: "Conciles", es: "Concilios", de: "Konzile" },
     saint: { en: "Saints", fr: "Saints", es: "Santos", de: "Heilige" },
     pope: { en: "Popes", fr: "Papes", es: "Papas", de: "Päpste" },
-    writing: { en: "Writings", fr: "Écrits", es: "Escritos", de: "Schriften" }
+    writing: { en: "Writings", fr: "Écrits", es: "Escritos", de: "Schriften" },
+    king: { en: "Kings", fr: "Rois", es: "Reyes", de: "Könige" }
   },
   searchPlaceholder: {
     en: "Search events, years...",
@@ -7897,5 +7898,1180 @@ export const WRITINGS: TimelineEvent[] = [
       es: "Francisco. Encíclica sobre el Amor humano y divino del Corazón de Jesús.", 
       de: "Franziskus. Enzyklika über die menschliche und göttliche Liebe des Herzens Jesu." 
     } 
+  },
+
+  {
+    id: 'w_luther_95theses',
+    startYear: 1517,
+    endYear: 1517,
+    type: 'writing',
+    name: { en: "The 95 Theses", fr: "Les 95 Thèses", es: "Las 95 Tesis", de: "Die 95 Thesen" },
+    description: {
+      en: "Martin Luther's list of propositions that sparked the Protestant revolt. While ostensibly about the abuse of indulgences, they contained the seeds of rebellion against papal authority. This document marks the tragic beginning of the fracture of Western Christendom and the rise of heresy.",
+      fr: "La liste de propositions de Martin Luther qui a déclenché la révolte protestante. Bien qu'apparemment sur l'abus des indulgences, elles contenaient les germes de la rébellion contre l'autorité papale. Ce document marque le début tragique de la fracture de la chrétienté occidentale et la montée de l'hérésie.",
+      es: "La lista de proposiciones de Martín Lutero que provocó la revuelta protestante. Aunque aparentemente sobre el abuso de las indulgencias, contenían las semillas de la rebelión contra la autoridad papal. Este documento marca el trágico comienzo de la fractura de la cristiandad occidental y el auge de la herejía.",
+      de: "Martin Luthers Liste von Thesen, die den protestantischen Aufstand auslöste. Obwohl scheinbar über den Missbrauch von Ablässen, enthielten sie die Saat der Rebellion gegen die päpstliche Autorität. Dieses Dokument markiert den tragischen Beginn des Bruchs der westlichen Christenheit und den Aufstieg der Häresie."
+    }
+  },
+  {
+    id: 'w_luther_babylon',
+    startYear: 1520,
+    endYear: 1520,
+    type: 'writing',
+    name: { en: "On the Babylonian Captivity of the Church", fr: "Prélude sur la captivité babylonienne de l'Église", es: "La cautividad babilónica de la Iglesia", de: "Von der babylonischen Gefangenschaft der Kirche" },
+    description: {
+      en: "A radical text by Luther attacking the sacramental system. He reduced the seven sacraments to only two or three and denied the sacrificial nature of the Mass. This work demonstrated his complete break with Catholic tradition and his intent to dismantle the Church's means of grace.",
+      fr: "Un texte radical de Luther attaquant le système sacramentel. Il a réduit les sept sacrements à seulement deux ou trois et a nié la nature sacrificielle de la Messe. Cette œuvre a démontré sa rupture complète avec la tradition catholique et son intention de démanteler les moyens de grâce de l'Église.",
+      es: "Un texto radical de Lutero atacando el sistema sacramental. Redujo los siete sacramentos a solo dos o tres y negó la naturaleza sacrificial de la Misa. Esta obra demostró su ruptura completa con la tradición católica y su intención de desmantelar los medios de gracia de la Iglesia.",
+      de: "Ein radikaler Text von Luther, der das sakramentale System angreift. Er reduzierte die sieben Sakramente auf nur zwei oder drei und leugnete den Opfercharakter der Messe. Dieses Werk zeigte seinen vollständigen Bruch mit der katholischen Tradition und seine Absicht, die Gnadenmittel der Kirche zu demontieren."
+    }
+  },
+  {
+    id: 'w_leo_exsurge',
+    startYear: 1520,
+    endYear: 1520,
+    type: 'writing',
+    name: { en: "Exsurge Domine", fr: "Exsurge Domine", es: "Exsurge Domine", de: "Exsurge Domine" },
+    description: {
+      en: "The Papal Bull issued by Pope Leo X condemning the errors of Martin Luther. It calls upon the Lord to rise up against the 'foxes that seek to destroy the vineyard'. It offered Luther a chance to recant his heresies, which he arrogantly refused by burning the document publicly.",
+      fr: "La bulle papale émise par le pape Léon X condamnant les erreurs de Martin Luther. Elle appelle le Seigneur à se lever contre les 'renards qui cherchent à détruire la vigne'. Elle offrait à Luther une chance de rétracter ses hérésies, ce qu'il refusa avec arrogance en brûlant le document publiquement.",
+      es: "La Bula Papal emitida por el Papa León X condenando los errores de Martín Lutero. Llama al Señor a levantarse contra los 'zorros que buscan destruir la viña'. Ofreció a Lutero la oportunidad de retractarse de sus herejías, lo cual rechazó arrogantemente quemando el documento públicamente.",
+      de: "Die päpstliche Bulle von Papst Leo X., die die Irrtümer Martin Luthers verurteilt. Sie ruft den Herrn an, sich gegen die 'Füchse, die den Weinberg zerstören wollen', zu erheben. Sie bot Luther die Chance, seine Häresien zu widerrufen, was er arrogant ablehnte, indem er das Dokument öffentlich verbrannte."
+    }
+  },
+  {
+    id: 'w_fisher_defense',
+    startYear: 1521,
+    endYear: 1521,
+    type: 'writing',
+    name: { en: "Defense of the Seven Sacraments", fr: "Défense des sept sacrements", es: "Defensa de los siete sacramentos", de: "Verteidigung der sieben Sakramente" },
+    description: {
+      en: "A theological treatise officially attributed to Henry VIII but largely drafted by St. John Fisher and St. Thomas More. It systematically refuted Luther's attacks on the sacraments and the Mass, earning the King the title 'Defender of the Faith' before his own tragic apostasy.",
+      fr: "Un traité théologique officiellement attribué à Henri VIII mais largement rédigé par St John Fisher et St Thomas More. Il réfutait systématiquement les attaques de Luther contre les sacrements et la Messe, valant au roi le titre de 'Défenseur de la Foi' avant sa propre apostasie tragique.",
+      es: "Un tratado teológico atribuido oficialmente a Enrique VIII pero redactado en gran parte por San Juan Fisher y Santo Tomás Moro. Refutaba sistemáticamente los ataques de Lutero a los sacramentos y la Misa, ganando para el Rey el título de 'Defensor de la Fe' antes de su propia apostasía trágica.",
+      de: "Eine theologische Abhandlung, die offiziell Heinrich VIII. zugeschrieben wird, aber größtenteils von Hl. John Fisher und Hl. Thomas Morus verfasst wurde. Sie widerlegte systematisch Luthers Angriffe auf die Sakramente und die Messe und brachte dem König den Titel 'Verteidiger des Glaubens' ein."
+    }
+  },
+  {
+    id: 'w_erasmus_freewill',
+    startYear: 1524,
+    endYear: 1524,
+    type: 'writing',
+    name: { en: "On the Freedom of the Will", fr: "Du libre arbitre", es: "Sobre el libre albedrío", de: "Vom freien Willen" },
+    description: {
+      en: "Erasmus of Rotterdam's brilliant critique of Luther's doctrine of predestination. He argued from Scripture and Tradition that grace does not destroy human freedom but cooperates with it. Luther responded with vitriol, denying that humans have any role in their own salvation.",
+      fr: "Critique brillante d'Érasme de Rotterdam sur la doctrine de la prédestination de Luther. Il a soutenu à partir de l'Écriture et de la Tradition que la grâce ne détruit pas la liberté humaine mais coopère avec elle. Luther a répondu avec virulence, niant que les humains aient un rôle dans leur propre salut.",
+      es: "La brillante crítica de Erasmo de Rotterdam a la doctrina de la predestinación de Lutero. Argumentó desde la Escritura y la Tradición que la gracia no destruye la libertad humana sino que coopera con ella. Lutero respondió con virulencia, negando que los humanos tengan algún papel en su propia salvación.",
+      de: "Erasmus von Rotterdams brillante Kritik an Luthers Prädestinationslehre. Er argumentierte aus Schrift und Tradition, dass die Gnade die menschliche Freiheit nicht zerstört, sondern mit ihr zusammenarbeitet. Luther antwortete mit Vitriol und leugnete, dass Menschen eine Rolle in ihrem eigenen Heil haben."
+    }
+  },
+  {
+    id: 'w_luther_bondage',
+    startYear: 1525,
+    endYear: 1525,
+    type: 'writing',
+    name: { en: "The Bondage of the Will", fr: "Du serf arbitre", es: "La esclavitud de la voluntad", de: "De servo arbitrio" },
+    description: {
+      en: "Luther's response to Erasmus, revealing the darkest aspects of his theology. He denied free will entirely, asserting that humans are beasts ridden either by God or Satan with no choice. This grim fatalism undermines moral responsibility and contradicts the love of God.",
+      fr: "Réponse de Luther à Érasme, révélant les aspects les plus sombres de sa théologie. Il a nié entièrement le libre arbitre, affirmant que les humains sont des bêtes montées soit par Dieu soit par Satan sans choix. Ce fatalisme sombre sape la responsabilité morale et contredit l'amour de Dieu.",
+      es: "La respuesta de Lutero a Erasmo, revelando los aspectos más oscuros de su teología. Negó el libre albedrío por completo, afirmando que los humanos son bestias montadas por Dios o por Satanás sin elección. Este fatalismo sombrío socava la responsabilidad moral y contradice el amor de Dios.",
+      de: "Luthers Antwort auf Erasmus, die die dunkelsten Aspekte seiner Theologie offenbart. Er leugnete den freien Willen vollständig und behauptete, Menschen seien Tiere, die entweder von Gott oder Satan geritten werden, ohne Wahl. Dieser düstere Fatalismus untergräbt die moralische Verantwortung."
+    }
+  },
+  {
+    id: 'w_zwingli_religion',
+    startYear: 1525,
+    endYear: 1525,
+    type: 'writing',
+    name: { en: "Commentary on True and False Religion", fr: "Commentaire sur la vraie et la fausse religion", es: "Comentario sobre la verdadera y la falsa religión", de: "Kommentar über die wahre und falsche Religion" },
+    description: {
+      en: "Huldrych Zwingli's manifesto which reduced the Eucharist to a mere symbol, stripping the liturgy of all mystery. He promoted iconoclasm, leading to the destruction of countless sacred statues and paintings, erasing centuries of Christian artistic heritage in Switzerland.",
+      fr: "Manifeste de Huldrych Zwingli qui réduisait l'Eucharistie à un simple symbole, dépouillant la liturgie de tout mystère. Il a promu l'iconoclasme, conduisant à la destruction d'innombrables statues et peintures sacrées, effaçant des siècles de patrimoine artistique chrétien en Suisse.",
+      es: "Manifiesto de Huldrych Zwingli que redujo la Eucaristía a un mero símbolo, despojando a la liturgia de todo misterio. Promovió la iconoclasia, lo que llevó a la destrucción de innumerables estatuas y pinturas sagradas, borrando siglos de patrimonio artístico cristiano en Suiza.",
+      de: "Huldrych Zwinglis Manifest, das die Eucharistie auf ein bloßes Symbol reduzierte und die Liturgie jedes Geheimnisses beraubte. Er förderte den Bildersturm, was zur Zerstörung unzähliger heiliger Statuen und Gemälde führte und Jahrhunderte christlichen Erbes in der Schweiz auslöschte."
+    }
+  },
+  {
+    id: 'w_tyndale_bible',
+    startYear: 1526,
+    endYear: 1526,
+    type: 'writing',
+    name: { en: "Tyndale Bible", fr: "Bible de Tyndale", es: "Biblia de Tyndale", de: "Tyndale-Bibel" },
+    description: {
+      en: "An unauthorized English translation of the New Testament. Tyndale deliberately mistranslated key words to undermine Catholic doctrine, changing 'priest' to 'elder' and 'church' to 'congregation'. It was used as a tool to confuse the faithful and spread Protestant errors in England.",
+      fr: "Une traduction anglaise non autorisée du Nouveau Testament. Tyndale a délibérément mal traduit des mots clés pour saper la doctrine catholique, changeant 'prêtre' en 'ancien' et 'église' en 'congrégation'. Elle a été utilisée comme un outil pour confondre les fidèles et répandre les erreurs protestantes.",
+      es: "Una traducción inglesa no autorizada del Nuevo Testamento. Tyndale tradujo mal deliberadamente palabras clave para socavar la doctrina católica, cambiando 'sacerdote' por 'anciano' e 'iglesia' por 'congregación'. Fue utilizada como herramienta para confundir a los fieles y difundir errores protestantes.",
+      de: "Eine nicht autorisierte englische Übersetzung des Neuen Testaments. Tyndale übersetzte Schlüsselwörter absichtlich falsch, um die katholische Lehre zu untergraben, und änderte 'Priester' in 'Ältester' und 'Kirche' in 'Versammlung'. Sie wurde genutzt, um die Gläubigen zu verwirren und protestantische Irrtümer zu verbreiten."
+    }
+  },
+  {
+    id: 'w_more_dialogue',
+    startYear: 1529,
+    endYear: 1529,
+    type: 'writing',
+    name: { en: "A Dialogue Concerning Heresies", fr: "Un dialogue concernant les hérésies", es: "Un diálogo sobre las herejías", de: "Ein Dialog über Häresien" },
+    description: {
+      en: "St. Thomas More's vigorous defense of the Church against Tyndale and Luther. He defends the veneration of images, pilgrimages, and the authority of the Church to interpret Scripture. More exposes the logical inconsistencies and social dangers of the new heresies.",
+      fr: "La défense vigoureuse de l'Église par St Thomas More contre Tyndale et Luther. Il défend la vénération des images, les pèlerinages et l'autorité de l'Église pour interpréter l'Écriture. More expose les incohérences logiques et les dangers sociaux des nouvelles hérésies.",
+      es: "La vigorosa defensa de la Iglesia por Santo Tomás Moro contra Tyndale y Lutero. Defiende la veneración de imágenes, las peregrinaciones y la autoridad de la Iglesia para interpretar las Escrituras. Moro expone las inconsistencias lógicas y los peligros sociales de las nuevas herejías.",
+      de: "Die energische Verteidigung der Kirche durch Hl. Thomas Morus gegen Tyndale und Luther. Er verteidigt die Verehrung von Bildern, Wallfahrten und die Autorität der Kirche zur Auslegung der Schrift. Morus deckt die logischen Inkonsistenzen und sozialen Gefahren der neuen Häresien auf."
+    }
+  },
+  {
+    id: 'w_calvin_institutes',
+    startYear: 1536,
+    endYear: 1559,
+    type: 'writing',
+    name: { en: "Institutes of the Christian Religion", fr: "Institution de la religion chrétienne", es: "Institución de la religión cristiana", de: "Institutio Christianae Religionis" },
+    description: {
+      en: "John Calvin's systematic presentation of Protestant theology. It presents a grim view of God as an arbitrary tyrant who predestines souls to hell regardless of their actions. It attacks the Mass, the priesthood, and the papacy, laying the foundation for a rigid and joyless theocracy.",
+      fr: "Présentation systématique de la théologie protestante par Jean Calvin. Elle présente une vision sombre de Dieu comme un tyran arbitraire qui prédestine les âmes à l'enfer quelles que soient leurs actions. Elle attaque la Messe, la prêtrise et la papauté, posant les bases d'une théocratie rigide.",
+      es: "La presentación sistemática de la teología protestante de Juan Calvino. Presenta una visión sombría de Dios como un tirano arbitrario que predestina almas al infierno sin importar sus acciones. Ataca la Misa, el sacerdocio y el papado, sentando las bases de una teocracia rígida.",
+      de: "Johannes Calvins systematische Darstellung der protestantischen Theologie. Sie präsentiert ein düsteres Bild von Gott als willkürlichem Tyrannen, der Seelen unabhängig von ihren Taten zur Hölle vorbestimmt. Sie greift die Messe, das Priestertum und das Papsttum an und legt das Fundament für eine starre Theokratie."
+    }
+  },
+  {
+    id: 'w_ignatius_exercises',
+    startYear: 1548,
+    endYear: 1548,
+    type: 'writing',
+    name: { en: "The Spiritual Exercises", fr: "Les Exercices Spirituels", es: "Ejercicios Espirituales", de: "Die Exerzitien" },
+    description: {
+      en: "The masterpiece of St. Ignatius of Loyola, founder of the Jesuits. These meditations teach total submission to God and the Church ('Thinking with the Church'). They became the spiritual engine of the Counter-Reformation, producing countless saints and missionaries who reclaimed Europe for the Faith.",
+      fr: "Le chef-d'œuvre de St Ignace de Loyola, fondateur des Jésuites. Ces méditations enseignent la soumission totale à Dieu et à l'Église ('Sentir avec l'Église'). Elles sont devenues le moteur spirituel de la Contre-Réforme, produisant d'innombrables saints et missionnaires.",
+      es: "La obra maestra de San Ignacio de Loyola, fundador de los Jesuitas. Estas meditaciones enseñan la sumisión total a Dios y a la Iglesia ('Sentir con la Iglesia'). Se convirtieron en el motor espiritual de la Contrarreforma, produciendo innumerables santos y misioneros.",
+      de: "Das Meisterwerk des Hl. Ignatius von Loyola, Gründer der Jesuiten. Diese Meditationen lehren die völlige Unterwerfung unter Gott und die Kirche ('Denken mit der Kirche'). Sie wurden zum geistlichen Motor der Gegenreformation und brachten zahllose Heilige und Missionare hervor."
+    }
+  },
+  {
+    id: 'w_cranmer_prayerbook',
+    startYear: 1549,
+    endYear: 1552,
+    type: 'writing',
+    name: { en: "The Book of Common Prayer", fr: "Le Livre de la prière commune", es: "El Libro de Oración Común", de: "Das Buch des gemeinsamen Gebets" },
+    description: {
+      en: "Imposed by Thomas Cranmer on England, this book dismantled the ancient Catholic liturgy. It systematically removed all references to the Mass as a sacrifice and denied the Real Presence, replacing the holy altar with a mere table and confusing the faithful into heresy through lex orandi, lex credendi.",
+      fr: "Imposé par Thomas Cranmer en Angleterre, ce livre a démantelé l'ancienne liturgie catholique. Il a systématiquement supprimé toutes les références à la Messe comme sacrifice et nié la Présence Réelle, remplaçant le saint autel par une simple table et confondant les fidèles dans l'hérésie.",
+      es: "Impuesto por Thomas Cranmer en Inglaterra, este libro desmanteló la antigua liturgia católica. Eliminó sistemáticamente todas las referencias a la Misa como sacrificio y negó la Presencia Real, reemplazando el santo altar por una simple mesa y confundiendo a los fieles en la herejía.",
+      de: "Von Thomas Cranmer England aufgezwungen, demontierte dieses Buch die alte katholische Liturgie. Es entfernte systematisch alle Verweise auf die Messe als Opfer und leugnete die Realpräsenz, ersetzte den heiligen Altar durch einen bloßen Tisch und führte die Gläubigen in die Häresie."
+    }
+  },
+  {
+    id: 'w_foxe_martyrs',
+    startYear: 1563,
+    endYear: 1563,
+    type: 'writing',
+    name: { en: "Foxe's Book of Martyrs", fr: "Le Livre des Martyrs de Foxe", es: "El libro de los mártires de Foxe", de: "Foxes Buch der Märtyrer" },
+    description: {
+      en: "A highly propagandistic work by John Foxe used to incite anti-Catholic hatred in England. It exaggerated Protestant suffering while ignoring the brutal torture and execution of Catholic priests and laypeople by the English state. It cemented a false narrative of Catholic cruelty.",
+      fr: "Une œuvre hautement propagandiste de John Foxe utilisée pour inciter à la haine anti-catholique en Angleterre. Elle a exagéré la souffrance protestante tout en ignorant la torture brutale et l'exécution de prêtres et laïcs catholiques par l'État anglais. Elle a cimenté un faux récit de cruauté catholique.",
+      es: "Una obra altamente propagandística de John Foxe utilizada para incitar al odio anticatólico en Inglaterra. Exageró el sufrimiento protestante mientras ignoraba la brutal tortura y ejecución de sacerdotes y laicos católicos por el estado inglés. Cimentó una falsa narrativa de crueldad católica.",
+      de: "Ein hochgradig propagandistisches Werk von John Foxe, das genutzt wurde, um antikatholischen Hass in England zu schüren. Es übertrieb das protestantische Leiden und ignorierte die brutale Folter und Hinrichtung katholischer Priester durch den englischen Staat."
+    }
+  },
+  {
+    id: 'w_trent_catechism',
+    startYear: 1566,
+    endYear: 1566,
+    type: 'writing',
+    name: { en: "The Roman Catechism", fr: "Le Catéchisme Romain", es: "El Catecismo Romano", de: "Der Römische Katechismus" },
+    description: {
+      en: "Commissioned by the Council of Trent to combat the spread of Protestant errors. It provided a clear, systematic, and authoritative explanation of Catholic doctrine for pastors. It served as the gold standard for religious instruction for four hundred years, ensuring doctrinal purity.",
+      fr: "Commandé par le Concile de Trente pour combattre la propagation des erreurs protestantes. Il fournissait une explication claire, systématique et autorisée de la doctrine catholique pour les pasteurs. Il a servi d'étalon-or pour l'instruction religieuse pendant quatre cents ans.",
+      es: "Encargado por el Concilio de Trento para combatir la propagación de errores protestantes. Proporcionó una explicación clara, sistemática y autorizada de la doctrina católica para los pastores. Sirvió como el estándar de oro para la instrucción religiosa durante cuatrocientos años.",
+      de: "Beauftragt vom Konzil von Trient, um die Verbreitung protestantischer Irrtümer zu bekämpfen. Er bot eine klare, systematische und autoritative Erklärung der katholischen Lehre für Pastoren. Er diente vierhundert Jahre lang als Goldstandard für den Religionsunterricht."
+    }
+  },
+  {
+    id: 'w_teresa_castle',
+    startYear: 1577,
+    endYear: 1577,
+    type: 'writing',
+    name: { en: "The Interior Castle", fr: "Le Château intérieur", es: "Las Moradas", de: "Die innere Burg" },
+    description: {
+      en: "St. Teresa of Avila's mystical masterpiece describing the soul's journey through seven mansions to union with God. In an age of rebellion and noise, Teresa called the Church back to the silence of prayer and the pursuit of holiness, showing that the true reform is internal.",
+      fr: "Le chef-d'œuvre mystique de St Thérèse d'Avila décrivant le voyage de l'âme à travers sept demeures vers l'union avec Dieu. À une époque de rébellion, Thérèse a rappelé l'Église au silence de la prière et à la poursuite de la sainteté, montrant que la vraie réforme est intérieure.",
+      es: "La obra maestra mística de Santa Teresa de Ávila que describe el viaje del alma a través de siete moradas hasta la unión con Dios. En una época de rebelión, Teresa llamó a la Iglesia al silencio de la oración y la búsqueda de la santidad, mostrando que la verdadera reforma es interior.",
+      de: "Das mystische Meisterwerk der Hl. Teresa von Ávila, das die Reise der Seele durch sieben Wohnungen zur Vereinigung mit Gott beschreibt. In einer Zeit der Rebellion rief Teresa die Kirche zurück zur Stille des Gebets und zeigte, dass die wahre Reform innerlich ist."
+    }
+  },
+  {
+    id: 'w_john_cross_night',
+    startYear: 1579,
+    endYear: 1579,
+    type: 'writing',
+    name: { en: "Dark Night of the Soul", fr: "La Nuit obscure", es: "Noche oscura del alma", de: "Die dunkle Nacht der Seele" },
+    description: {
+      en: "A profound spiritual classic by St. John of the Cross explaining how God purifies the soul through trials and dryness. It provided a roadmap for authentic sanctity, contrasting the 'cheap grace' of the reformers with the demanding but rewarding path of the Cross.",
+      fr: "Un classique spirituel profond de St Jean de la Croix expliquant comment Dieu purifie l'âme par des épreuves. Il a fourni une feuille de route pour une sainteté authentique, contrastant la 'grâce bon marché' des réformateurs avec le chemin exigeant mais gratifiant de la Croix.",
+      es: "Un clásico espiritual profundo de San Juan de la Cruz que explica cómo Dios purifica el alma a través de pruebas. Proporcionó una hoja de ruta para la santidad auténtica, contrastando la 'gracia barata' de los reformadores con el camino exigente pero gratificante de la Cruz.",
+      de: "Ein tiefgründiger geistlicher Klassiker des Hl. Johannes vom Kreuz, der erklärt, wie Gott die Seele durch Prüfungen reinigt. Er bot einen Fahrplan für authentische Heiligkeit und kontrastierte die 'billige Gnade' der Reformatoren mit dem anspruchsvollen Weg des Kreuzes."
+    }
+  },
+  {
+    id: 'w_campion_decem',
+    startYear: 1581,
+    endYear: 1581,
+    type: 'writing',
+    name: { en: "Decem Rationes (Ten Reasons)", fr: "Dix raisons", es: "Diez Razones", de: "Zehn Gründe" },
+    description: {
+      en: "A pamphlet written by the martyr St. Edmund Campion challenging the Anglican clergy to a debate. He listed ten reasons why Protestantism is philosophically and theologically bankrupt. It was secretly printed and distributed at Oxford, causing a sensation before his brutal execution.",
+      fr: "Un pamphlet écrit par le martyr St Edmond Campion défiant le clergé anglican à un débat. Il a énuméré dix raisons pour lesquelles le protestantisme est philosophiquement et théologiquement en faillite. Il a été secrètement imprimé et distribué à Oxford avant son exécution brutale.",
+      es: "Un panfleto escrito por el mártir San Edmundo Campion desafiando al clero anglicano a un debate. Enumeró diez razones por las que el protestantismo está filosófica y teológicamente en bancarrota. Fue impreso y distribuido secretamente en Oxford antes de su brutal ejecución.",
+      de: "Eine Streitschrift des Märtyrers Hl. Edmund Campion, die den anglikanischen Klerus zu einer Debatte herausforderte. Er führte zehn Gründe auf, warum der Protestantismus bankrott ist. Sie wurde heimlich in Oxford verteilt und sorgte vor seiner brutalen Hinrichtung für Aufsehen."
+    }
+  },
+  {
+    id: 'w_allen_defense',
+    startYear: 1584,
+    endYear: 1584,
+    type: 'writing',
+    name: { en: "Defense of English Catholics", fr: "Défense des catholiques anglais", es: "Defensa de los católicos ingleses", de: "Verteidigung der englischen Katholiken" },
+    description: {
+      en: "Written by Cardinal William Allen, founder of the seminary at Douai. It refuted the English government's claim that Catholics were punished for treason rather than religion. He documented the systematic persecution of the Faith and justified the missionary efforts to save souls in England.",
+      fr: "Écrit par le cardinal William Allen. Il réfutait l'affirmation du gouvernement anglais selon laquelle les catholiques étaient punis pour trahison plutôt que pour religion. Il a documenté la persécution systématique de la Foi et justifié les efforts missionnaires pour sauver les âmes en Angleterre.",
+      es: "Escrito por el Cardenal William Allen. Refutaba la afirmación del gobierno inglés de que los católicos eran castigados por traición y no por religión. Documentó la persecución sistemática de la Fe y justificó los esfuerzos misioneros para salvar almas en Inglaterra.",
+      de: "Geschrieben von Kardinal William Allen. Sie widerlegte die Behauptung der englischen Regierung, Katholiken würden wegen Verrats und nicht wegen ihrer Religion bestraft. Er dokumentierte die systematische Verfolgung des Glaubens und rechtfertigte die missionarischen Bemühungen."
+    }
+  },
+  {
+    id: 'w_sanders_schism',
+    startYear: 1585,
+    endYear: 1585,
+    type: 'writing',
+    name: { en: "Rise and Growth of the Anglican Schism", fr: "Origine et progrès du schisme anglican", es: "Origen y progreso del cisma anglicano", de: "Ursprung und Fortschritt des anglikanischen Schismas" },
+    description: {
+      en: "A historical account by Nicholas Sanders exposing the lust, greed, and political maneuvering behind Henry VIII's break with Rome. It shattered the myth of a theological reformation, revealing the sordid origins of the Church of England as a product of royal adultery and theft.",
+      fr: "Un compte rendu historique de Nicholas Sanders exposant la luxure et l'avidité derrière la rupture d'Henri VIII avec Rome. Il a brisé le mythe d'une réforme théologique, révélant les origines sordides de l'Église d'Angleterre comme un produit de l'adultère royal et du vol.",
+      es: "Un relato histórico de Nicholas Sanders que expone la lujuria y la codicia detrás de la ruptura de Enrique VIII con Roma. Destrozó el mito de una reforma teológica, revelando los orígenes sórdidos de la Iglesia de Inglaterra como producto del adulterio real y el robo.",
+      de: "Ein historischer Bericht von Nicholas Sanders, der die Lust und Gier hinter Heinrichs VIII. Bruch mit Rom aufdeckt. Er zerstörte den Mythos einer theologischen Reformation und enthüllte die schmutzigen Ursprünge der Kirche von England als Produkt von königlichem Ehebruch und Diebstahl."
+    }
+  },
+  {
+    id: 'w_bellarmine_controversies',
+    startYear: 1586,
+    endYear: 1593,
+    type: 'writing',
+    name: { en: "Disputations on the Controversies", fr: "Disputes sur les controverses", es: "Disputas sobre las controversias", de: "Disputationen über die Kontroversen" },
+    description: {
+      en: "The definitive intellectual response to Protestantism by St. Robert Bellarmine. This massive work systematically dismantled every Protestant argument against the Papacy, the Church, and the Sacraments. It was so effective that Protestant universities created special chairs solely to attempt to refute it.",
+      fr: "La réponse intellectuelle définitive au protestantisme par St Robert Bellarmin. Cette œuvre massive a systématiquement démantelé chaque argument protestant contre la Papauté et les Sacrements. Elle était si efficace que les universités protestantes ont créé des chaires spéciales pour tenter de la réfuter.",
+      es: "La respuesta intelectual definitiva al protestantismo por San Roberto Belarmino. Esta obra masiva desmanteló sistemáticamente cada argumento protestante contra el Papado y los Sacramentos. Fue tan efectiva que las universidades protestantes crearon cátedras especiales solo para intentar refutarla.",
+      de: "Die definitive intellektuelle Antwort auf den Protestantismus von Hl. Robert Bellarmin. Dieses massive Werk demontierte systematisch jedes protestantische Argument gegen das Papsttum. Es war so effektiv, dass protestantische Universitäten spezielle Lehrstühle schufen, nur um zu versuchen, es zu widerlegen."
+    }
+  },
+  {
+    id: 'w_baronius_annales',
+    startYear: 1588,
+    endYear: 1607,
+    type: 'writing',
+    name: { en: "Annales Ecclesiastici", fr: "Annales Ecclesiastici", es: "Annales Ecclesiastici", de: "Annales Ecclesiastici" },
+    description: {
+      en: "A monumental history of the Church written by Cardinal Caesar Baronius to refute the 'Magdeburg Centuries', a Protestant history that claimed the Church had become corrupt. Baronius used vast archives to prove the continuity of Catholic teaching and practice from the Apostolic age.",
+      fr: "Une histoire monumentale de l'Église écrite par le cardinal Caesar Baronius pour réfuter les 'Centuries de Magdebourg', une histoire protestante prétendant que l'Église était devenue corrompue. Baronius a utilisé de vastes archives pour prouver la continuité de l'enseignement catholique.",
+      es: "Una historia monumental de la Iglesia escrita por el Cardenal César Baronio para refutar las 'Centurias de Magdeburgo'. Baronio utilizó vastos archivos para probar la continuidad de la enseñanza y práctica católica desde la era Apostólica.",
+      de: "Eine monumentale Kirchengeschichte von Kardinal Caesar Baronius, um die 'Magdeburger Zenturien' zu widerlegen. Baronius nutzte riesige Archive, um die Kontinuität der katholischen Lehre und Praxis seit dem apostolischen Zeitalter zu beweisen."
+    }
+  },
+  {
+    id: 'w_sales_controversy',
+    startYear: 1595,
+    endYear: 1596,
+    type: 'writing',
+    name: { en: "The Catholic Controversy", fr: "Les Controverses", es: "La Controversia Católica", de: "Die katholische Kontroverse" },
+    description: {
+      en: "A collection of tracts by St. Francis de Sales used to convert the Calvinist region of Chablais. With gentleness and logic, he showed the lack of authority in Protestant ministers and the necessity of the Catholic Church. His efforts famously brought 72,000 Protestants back to the Faith.",
+      fr: "Une collection de tracts de St François de Sales utilisée pour convertir la région calviniste du Chablais. Avec douceur et logique, il a montré le manque d'autorité des ministres protestants et la nécessité de l'Église catholique. Ses efforts ont ramené 72 000 protestants à la Foi.",
+      es: "Una colección de tratados de San Francisco de Sales utilizada para convertir la región calvinista de Chablais. Con dulzura y lógica, mostró la falta de autoridad de los ministros protestantes. Sus esfuerzos devolvieron a 72.000 protestantes a la Fe.",
+      de: "Eine Sammlung von Traktaten des Hl. Franz von Sales zur Bekehrung der calvinistischen Region Chablais. Mit Sanftmut und Logik zeigte er den Mangel an Autorität protestantischer Pastoren auf. Seine Bemühungen brachten 72.000 Protestanten zurück zum Glauben."
+    }
+  },
+  {
+    id: 'w_sales_devout',
+    startYear: 1609,
+    endYear: 1609,
+    type: 'writing',
+    name: { en: "Introduction to the Devout Life", fr: "Introduction à la vie dévote", es: "Introducción a la vida devota", de: "Anleitung zum frommen Leben" },
+    description: {
+      en: "A classic by St. Francis de Sales showing that holiness is possible for laypeople in the world, not just monks. It countered the Protestant claim that Catholicism created a spiritual elite while neglecting the common man. It teaches how to turn daily work and trials into prayer.",
+      fr: "Un classique de St François de Sales montrant que la sainteté est possible pour les laïcs dans le monde. Il contrait l'affirmation protestante selon laquelle le catholicisme créait une élite spirituelle. Il enseigne comment transformer le travail quotidien et les épreuves en prière.",
+      es: "Un clásico de San Francisco de Sales que muestra que la santidad es posible para los laicos en el mundo. Contrarrestó la afirmación protestante de que el catolicismo creaba una élite espiritual. Enseña cómo convertir el trabajo diario y las pruebas en oración.",
+      de: "Ein Klassiker des Hl. Franz von Sales, der zeigt, dass Heiligkeit für Laien in der Welt möglich ist. Er widersprach der protestantischen Behauptung, der Katholizismus schaffe eine geistliche Elite. Er lehrt, wie man tägliche Arbeit und Prüfungen in Gebet verwandelt."
+    }
+  },
+  {
+    id: 'w_montfort_mary',
+    startYear: 1712,
+    endYear: 1712,
+    type: 'writing',
+    name: { en: "True Devotion to Mary", fr: "Traité de la vraie dévotion à la Sainte Vierge", es: "Tratado de la verdadera devoción", de: "Abhandlung über die wahre Marienverehrung" },
+    description: {
+      en: "St. Louis de Montfort's treatise defending Marian devotion against Jansenists and Protestants who minimized her role. He argues that the surest and easiest way to Jesus is through Mary, advocating for a total consecration to her as the 'Slave of Jesus in Mary'.",
+      fr: "Traité de St Louis-Marie Grignion de Montfort défendant la dévotion mariale contre les jansénistes et les protestants. Il soutient que le chemin le plus sûr vers Jésus passe par Marie, prônant une consécration totale à elle en tant qu''Esclave de Jésus en Marie'.",
+      es: "Tratado de San Luis de Montfort defendiendo la devoción mariana contra jansenistas y protestantes. Argumenta que el camino más seguro hacia Jesús es a través de María, abogando por una consagración total a ella como 'Esclavo de Jesús en María'.",
+      de: "Die Abhandlung des Hl. Louis de Montfort verteidigt die Marienverehrung gegen Jansenisten und Protestanten. Er argumentiert, dass der sicherste Weg zu Jesus über Maria führt, und plädiert für eine völlige Weihe an sie als 'Sklave Jesu in Maria'."
+    }
+  },
+  {
+    id: 'w_liguori_glories',
+    startYear: 1750,
+    endYear: 1750,
+    type: 'writing',
+    name: { en: "The Glories of Mary", fr: "Les Gloires de Marie", es: "Las Glorias de María", de: "Die Herrlichkeiten Mariens" },
+    description: {
+      en: "St. Alphonsus Liguori's passionate defense of the Virgin Mary as the Mediatrix of all Graces. Written to counter cold rationalism and Protestant skepticism, it compiles centuries of Church Fathers and saints' teachings to prove Mary's powerful intercession for sinners.",
+      fr: "La défense passionnée de St Alphonse de Liguori de la Vierge Marie comme Médiatrice de toutes grâces. Écrit pour contrer le rationalisme froid et le scepticisme protestant, il compile des siècles d'enseignements pour prouver la puissante intercession de Marie.",
+      es: "La apasionada defensa de San Alfonso María de Ligorio de la Virgen María como Mediadora de todas las Gracias. Escrito para contrarrestar el racionalismo frío y el escepticismo protestante, compila siglos de enseñanzas para probar la poderosa intercesión de María.",
+      de: "Die leidenschaftliche Verteidigung der Jungfrau Maria als Mittlerin aller Gnaden durch den Hl. Alfons von Liguori. Geschrieben gegen kalten Rationalismus und protestantische Skepsis, beweist es Marias mächtige Fürsprache für Sünder."
+    }
+  },
+  {
+    id: 'w_newman_development',
+    startYear: 1845,
+    endYear: 1845,
+    type: 'writing',
+    name: { en: "Essay on the Development of Christian Doctrine", fr: "Essai sur le développement de la doctrine chrétienne", es: "Ensayo sobre el desarrollo de la doctrina cristiana", de: "Über die Entwicklung der Glaubenslehre" },
+    description: {
+      en: "Written by John Henry Newman as he converted from Anglicanism to Catholicism. He demonstrates that Protestantism is a static corruption, whereas Catholicism is the vibrant, organic growth of the original seed planted by Christ. He famously concluded: 'To be deep in history is to cease to be a Protestant'.",
+      fr: "Écrit par John Henry Newman lors de sa conversion de l'anglicanisme au catholicisme. Il démontre que le protestantisme est une corruption statique, tandis que le catholicisme est la croissance organique de la semence originale. Il a conclu : 'Approfondir l'histoire, c'est cesser d'être protestant'.",
+      es: "Escrito por John Henry Newman durante su conversión del anglicanismo. Demuestra que el protestantismo es una corrupción estática, mientras que el catolicismo es el crecimiento orgánico de la semilla original. Concluyó famosamente: 'Profundizar en la historia es dejar de ser protestante'.",
+      de: "Geschrieben von John Henry Newman während seiner Konversion. Er zeigt, dass der Protestantismus eine statische Korruption ist, während der Katholizismus das organische Wachstum der ursprünglichen Saat ist. Er schloss berühmt: 'Tief in der Geschichte zu sein bedeutet, aufzuhören, Protestant zu sein'."
+    }
+  },
+  {
+    id: 'w_piusix_syllabus',
+    startYear: 1864,
+    endYear: 1864,
+    type: 'writing',
+    name: { en: "Syllabus of Errors", fr: "Syllabus", es: "Syllabus", de: "Syllabus errorum" },
+    description: {
+      en: "A list of 80 condemned propositions by Pope Pius IX. It targeted the errors of modernism, liberalism, and socialism which grew out of the Protestant rebellion. It firmly asserted the Church's right to govern herself and rejected the idea that the Pope must reconcile himself with 'progress' and modern civilization.",
+      fr: "Une liste de 80 propositions condamnées par le pape Pie IX. Elle visait les erreurs du modernisme, du libéralisme et du socialisme issues de la rébellion protestante. Elle affirmait fermement le droit de l'Église à se gouverner elle-même et rejetait l'idée que le Pape doive se réconcilier avec le 'progrès'.",
+      es: "Una lista de 80 proposiciones condenadas por el Papa Pío IX. Apuntaba a los errores del modernismo y liberalismo surgidos de la rebelión protestante. Afirmó firmemente el derecho de la Iglesia a gobernarse a sí misma y rechazó la idea de que el Papa deba reconciliarse con el 'progreso'.",
+      de: "Eine Liste von 80 verurteilten Thesen von Papst Pius IX. Sie richtete sich gegen die Irrtümer des Modernismus und Liberalismus, die aus der protestantischen Rebellion erwuchsen. Sie bekräftigte das Recht der Kirche auf Selbstverwaltung und lehnte die Anpassung an den 'Fortschritt' ab."
+    }
+  },
+  {
+    id: 'w_leo_aeterni',
+    startYear: 1879,
+    endYear: 1879,
+    type: 'writing',
+    name: { en: "Aeterni Patris", fr: "Aeterni Patris", es: "Aeterni Patris", de: "Aeterni Patris" },
+    description: {
+      en: "Encyclical by Pope Leo XIII restoring the philosophy of St. Thomas Aquinas. Against the confusion of modern philosophies birthed by the Reformation's subjectivism, the Pope pointed to Thomism as the surest guide for faith and reason, launching a massive intellectual revival in the Church.",
+      fr: "Encyclique du pape Léon XIII restaurant la philosophie de St Thomas d'Aquin. Contre la confusion des philosophies modernes nées du subjectivisme de la Réforme, le Pape a désigné le thomisme comme le guide le plus sûr, lançant un renouveau intellectuel massif.",
+      es: "Encíclica del Papa León XIII restaurando la filosofía de Santo Tomás de Aquino. Contra la confusión de las filosofías modernas nacidas del subjetivismo de la Reforma, el Papa señaló al tomismo como la guía más segura, lanzando un renacimiento intelectual masivo.",
+      de: "Enzyklika von Papst Leo XIII. zur Wiederherstellung der Philosophie des Hl. Thomas von Aquin. Gegen die Verwirrung moderner Philosophien, die aus dem Subjektivismus der Reformation entstanden, wies der Papst auf den Thomismus als sichersten Führer hin."
+    }
+  },
+  {
+    id: 'w_piusx_pascendi',
+    startYear: 1907,
+    endYear: 1907,
+    type: 'writing',
+    name: { en: "Pascendi Dominici Gregis", fr: "Pascendi Dominici Gregis", es: "Pascendi Dominici Gregis", de: "Pascendi Dominici Gregis" },
+    description: {
+      en: "St. Pius X's encyclical condemning Modernism as the 'synthesis of all heresies'. It exposed how Protestant critical methods were infiltrating the Church to destroy dogma from within. The Pope imposed the Oath Against Modernism to protect the clergy from these insidious errors.",
+      fr: "Encyclique de St Pie X condamnant le modernisme comme la 'synthèse de toutes les hérésies'. Elle exposait comment les méthodes critiques protestantes infiltraient l'Église pour détruire le dogme de l'intérieur. Le Pape a imposé le Serment antimoderniste pour protéger le clergé.",
+      es: "Encíclica de San Pío X condenando el Modernismo como la 'síntesis de todas las herejías'. Expuso cómo los métodos críticos protestantes se infiltraban en la Iglesia para destruir el dogma desde dentro. El Papa impuso el Juramento Antimodernista para proteger al clero.",
+      de: "Enzyklika des Hl. Pius X., die den Modernismus als 'Synthese aller Häresien' verurteilt. Sie deckte auf, wie protestantische kritische Methoden die Kirche infiltrierten, um das Dogma von innen zu zerstören. Der Papst führte den Antimodernisteneid ein, um den Klerus zu schützen."
+    }
+  }
+
+];
+// 2. Add this new array at the very bottom of the file:
+export const KINGS: TimelineEvent[] = [
+  {
+    id: 'k_constantine',
+    startYear: 306,
+    endYear: 337,
+    type: 'king',
+    name: { en: "Constantine the Great", fr: "Constantin le Grand", es: "Constantino el Grande", de: "Konstantin der Große" },
+    description: {
+      en: "The first Christian Roman Emperor. He issued the Edict of Milan in 313, granting freedom to the Church and ending centuries of persecution. He convened the Council of Nicaea to resolve the Arian heresy and built the original St. Peter's Basilica.",
+      fr: "Le premier empereur romain chrétien. Il a promulgué l'Édit de Milan en 313, accordant la liberté à l'Église et mettant fin à des siècles de persécution. Il a convoqué le Concile de Nicée pour résoudre l'hérésie arienne et a construit la première basilique Saint-Pierre.",
+      es: "El primer emperador romano cristiano. Promulgó el Edicto de Milán en 313, otorgando libertad a la Iglesia y poniendo fin a siglos de persecución. Convocó el Concilio de Nicea para resolver la herejía arriana y construyó la antigua Basílica de San Pedro.",
+      de: "Der erste christliche römische Kaiser. Er erließ 313 das Edikt von Mailand, das der Kirche Freiheit gewährte und Jahrhunderte der Verfolgung beendete. Er berief das Konzil von Nicäa ein, um die arianische Häresie zu lösen, und baute den alten Petersdom."
+    }
+  },
+  {
+    id: 'k_theodosius',
+    startYear: 379,
+    endYear: 395,
+    type: 'king',
+    name: { en: "Theodosius I", fr: "Théodose Ier", es: "Teodosio I", de: "Theodosius I." },
+    description: {
+      en: "He established Nicene Christianity as the official state religion of the Roman Empire with the Edict of Thessalonica. He famously submitted to the penance imposed by St. Ambrose of Milan after the Massacre of Thessalonica, demonstrating that even emperors are subject to God's law.",
+      fr: "Il a établi le christianisme de Nicée comme religion d'État officielle de l'Empire romain avec l'Édit de Thessalonique. Il s'est soumis à la pénitence imposée par St Ambroise de Milan, démontrant que même les empereurs sont soumis à la loi de Dieu.",
+      es: "Estableció el cristianismo niceno como la religión oficial del estado del Imperio Romano. Se sometió famosamente a la penitencia impuesta por San Ambrosio de Milán, demostrando que incluso los emperadores están sujetos a la ley de Dios.",
+      de: "Er etablierte das nicaeanische Christentum als offizielle Staatsreligion des Römischen Reiches. Er unterwarf sich berühmt der Buße, die ihm vom Hl. Ambrosius von Mailand auferlegt wurde, und zeigte damit, dass auch Kaiser dem Gesetz Gottes unterworfen sind."
+    }
+  },
+  {
+    id: 'k_clovis',
+    startYear: 481,
+    endYear: 511,
+    type: 'king',
+    name: { en: "Clovis I", fr: "Clovis Ier", es: "Clodoveo I", de: "Chlodwig I." },
+    description: {
+      en: "King of the Franks and the first Germanic king to accept Catholic baptism rather than Arianism. His conversion at Reims led to the title 'Eldest Daughter of the Church' for France and paved the way for the Christianization of Western Europe.",
+      fr: "Roi des Francs et premier roi germanique à accepter le baptême catholique plutôt que l'arianisme. Sa conversion à Reims a valu à la France le titre de 'Fille aînée de l'Église' et a ouvert la voie à la christianisation de l'Europe occidentale.",
+      es: "Rey de los francos y primer rey germánico en aceptar el bautismo católico en lugar del arrianismo. Su conversión en Reims llevó al título de 'Hija mayor de la Iglesia' para Francia y allanó el camino para la cristianización de Europa Occidental.",
+      de: "König der Franken und der erste germanische König, der die katholische Taufe anstelle des Arianismus annahm. Seine Bekehrung in Reims führte zum Titel 'Älteste Tochter der Kirche' für Frankreich und ebnete den Weg für die Christianisierung Westeuropas."
+    }
+  },
+  {
+    id: 'k_justinian',
+    startYear: 527,
+    endYear: 565,
+    type: 'king',
+    name: { en: "Justinian I", fr: "Justinien Ier", es: "Justiniano I", de: "Justinian I." },
+    description: {
+      en: "Byzantine Emperor who sought to restore the Empire's greatness. He constructed the Hagia Sophia and codified Roman Law (Corpus Juris Civilis), which became the foundation of civil law in Christian Europe. He worked to suppress paganism and heresy.",
+      fr: "Empereur byzantin qui a cherché à restaurer la grandeur de l'Empire. Il a construit Sainte-Sophie et codifié le droit romain, qui est devenu le fondement du droit civil dans l'Europe chrétienne. Il a œuvré pour supprimer le paganisme et l'hérésie.",
+      es: "Emperador bizantino que buscó restaurar la grandeza del Imperio. Construyó Santa Sofía y codificó el Derecho Romano, que se convirtió en la base del derecho civil en la Europa cristiana. Trabajó para suprimir el paganismo y la herejía.",
+      de: "Byzantinischer Kaiser, der die Größe des Reiches wiederherstellen wollte. Er baute die Hagia Sophia und kodifizierte das römische Recht, das zur Grundlage des Zivilrechts im christlichen Europa wurde. Er arbeitete daran, das Heidentum und die Häresie zu unterdrücken."
+    }
+  },
+  {
+    id: 'k_recared',
+    startYear: 586,
+    endYear: 601,
+    type: 'king',
+    name: { en: "Reccared I", fr: "Récarède Ier", es: "Recaredo I", de: "Rekkar I." },
+    description: {
+      en: "Visigothic King of Spain who renounced the Arian heresy and converted to Catholicism at the Third Council of Toledo in 589. This pivotal moment united the Visigothic nobility with the Hispano-Roman population under the Catholic faith.",
+      fr: "Roi wisigoth d'Espagne qui a renoncé à l'hérésie arienne et s'est converti au catholicisme au troisième concile de Tolède en 589. Ce moment charnière a uni la noblesse wisigothe à la population hispano-romaine sous la foi catholique.",
+      es: "Rey visigodo de España que renunció a la herejía arriana y se convirtió al catolicismo en el Tercer Concilio de Toledo en 589. Este momento crucial unió a la nobleza visigoda con la población hispano-romana bajo la fe católica.",
+      de: "Westgotenkönig von Spanien, der der arianischen Häresie abschwor und 589 auf dem Dritten Konzil von Toledo zum Katholizismus konvertierte. Dieser entscheidende Moment vereinte den westgotischen Adel mit der hispano-römischen Bevölkerung unter dem katholischen Glauben."
+    }
+  },
+  {
+    id: 'k_heraclius',
+    startYear: 610,
+    endYear: 641,
+    type: 'king',
+    name: { en: "Heraclius", fr: "Héraclius", es: "Heraclio", de: "Herakleios" },
+    description: {
+      en: "Byzantine Emperor who defeated the Persian Empire and recovered the True Cross, returning it to Jerusalem in triumph. This event is commemorated in the Feast of the Exaltation of the Holy Cross.",
+      fr: "Empereur byzantin qui a vaincu l'Empire perse et récupéré la Vraie Croix, la ramenant à Jérusalem en triomphe. Cet événement est commémoré lors de la fête de l'Exaltation de la Sainte Croix.",
+      es: "Emperador bizantino que derrotó al Imperio Persa y recuperó la Vera Cruz, devolviéndola a Jerusalén en triunfo. Este evento se conmemora en la Fiesta de la Exaltación de la Santa Cruz.",
+      de: "Byzantinischer Kaiser, der das Perserreich besiegte und das Wahre Kreuz zurückgewann und es im Triumph nach Jerusalem zurückbrachte. Dieses Ereignis wird am Fest der Kreuzerhöhung gefeiert."
+    }
+  },
+  {
+    id: 'k_charles_martel',
+    startYear: 718,
+    endYear: 741,
+    type: 'king',
+    name: { en: "Charles Martel", fr: "Charles Martel", es: "Carlos Martel", de: "Karl Martell" },
+    description: {
+      en: "Though technically Mayor of the Palace, he ruled the Franks and saved Christendom by defeating the Islamic Umayyad invasion at the Battle of Tours in 732. His victory halted the Muslim advance into Western Europe.",
+      fr: "Bien que techniquement Maire du Palais, il a dirigé les Francs et sauvé la chrétienté en battant l'invasion islamique omeyyade à la bataille de Poitiers en 732. Sa victoire a stoppé l'avance musulmane en Europe occidentale.",
+      es: "Aunque técnicamente Mayordomo de Palacio, gobernó a los francos y salvó a la cristiandad al derrotar la invasión islámica omeya en la Batalla de Tours en 732. Su victoria detuvo el avance musulmán en Europa Occidental.",
+      de: "Obwohl technisch Hausmeier, regierte er die Franken und rettete das Christentum, indem er die islamische Invasion in der Schlacht von Tours 732 besiegte. Sein Sieg stoppte den muslimischen Vormarsch nach Westeuropa."
+    }
+  },
+  {
+    id: 'k_pepin',
+    startYear: 751,
+    endYear: 768,
+    type: 'king',
+    name: { en: "Pepin the Short", fr: "Pépin le Bref", es: "Pipino el Breve", de: "Pippin der Jüngere" },
+    description: {
+      en: "Father of Charlemagne and the first Carolingian King. He defeated the Lombards and issued the 'Donation of Pepin', granting the Pope temporal rule over central Italy, creating the Papal States which protected the independence of the Papacy for a millennium.",
+      fr: "Père de Charlemagne et premier roi carolingien. Il a vaincu les Lombards et a fait la 'Donation de Pépin', accordant au Pape le règne temporel sur l'Italie centrale, créant les États pontificaux qui ont protégé l'indépendance de la Papauté pendant un millénaire.",
+      es: "Padre de Carlomagno y primer rey carolingio. Derrotó a los lombardos y emitió la 'Donación de Pipino', otorgando al Papa el gobierno temporal sobre el centro de Italia, creando los Estados Pontificios que protegieron la independencia del Papado.",
+      de: "Vater von Karl dem Großen und erster karolingischer König. Er besiegte die Langobarden und erließ die 'Pippinische Schenkung', die dem Papst die weltliche Herrschaft über Mittelitalien gewährte und den Kirchenstaat schuf."
+    }
+  },
+  {
+    id: 'k_charlemagne',
+    startYear: 768,
+    endYear: 814,
+    type: 'king',
+    name: { en: "Charlemagne", fr: "Charlemagne", es: "Carlomagno", de: "Karl der Große" },
+    description: {
+      en: "King of the Franks and Holy Roman Emperor. He united much of Western Europe and initiated the Carolingian Renaissance, promoting education, liturgy, and ecclesiastical reform. He is considered the 'Father of Europe' and protector of the Church.",
+      fr: "Roi des Francs et Empereur romain germanique. Il a unifié une grande partie de l'Europe occidentale et lancé la Renaissance carolingienne, promouvant l'éducation et la réforme ecclésiastique. Il est considéré comme le 'Père de l'Europe'.",
+      es: "Rey de los francos y Emperador del Sacro Imperio Romano Germánico. Unificó gran parte de Europa occidental e inició el Renacimiento carolingio. Es considerado el 'Padre de Europa' y protector de la Iglesia.",
+      de: "König der Franken und Römisch-deutscher Kaiser. Er einigte weite Teile Westeuropas und initiierte die karolingische Renaissance, förderte Bildung und Kirchenreform. Er gilt als 'Vater Europas' und Beschützer der Kirche."
+    }
+  },
+  {
+    id: 'k_alfred',
+    startYear: 871,
+    endYear: 899,
+    type: 'king',
+    name: { en: "Alfred the Great", fr: "Alfred le Grand", es: "Alfredo el Grande", de: "Alfred der Große" },
+    description: {
+      en: "King of Wessex who defended England against the Viking Danes. A devout Catholic, he translated pastoral and theological works into English and established a legal code based on the Ten Commandments and Christian ethics.",
+      fr: "Roi du Wessex qui a défendu l'Angleterre contre les Vikings. Catholique dévot, il a traduit des œuvres théologiques en anglais et établi un code juridique basé sur les Dix Commandements et l'éthique chrétienne.",
+      es: "Rey de Wessex que defendió Inglaterra contra los vikingos. Católico devoto, tradujo obras teológicas al inglés y estableció un código legal basado en los Diez Mandamientos y la ética cristiana.",
+      de: "König von Wessex, der England gegen die Wikinger verteidigte. Als frommer Katholik übersetzte er theologische Werke ins Englische und etablierte ein Gesetzbuch, das auf den Zehn Geboten basierte."
+    }
+  },
+  {
+    id: 'k_otto_i',
+    startYear: 936,
+    endYear: 973,
+    type: 'king',
+    name: { en: "Otto I the Great", fr: "Otton Ier le Grand", es: "Otón I el Grande", de: "Otto I. der Große" },
+    description: {
+      en: "He restored the Holy Roman Empire, viewing himself as the protector of Christendom. He defeated the pagan Magyars at the Battle of Lechfeld (955), ending their invasions and opening Central Europe to missionary work.",
+      fr: "Il a restauré le Saint-Empire romain germanique, se considérant comme le protecteur de la chrétienté. Il a vaincu les Magyars païens à la bataille de Lechfeld (955), mettant fin à leurs invasions et ouvrant l'Europe centrale aux missionnaires.",
+      es: "Restauró el Sacro Imperio Romano Germánico, viéndose a sí mismo como el protector de la cristiandad. Derrotó a los magiares paganos en la Batalla de Lechfeld (955), poniendo fin a sus invasiones.",
+      de: "Er restaurierte das Heilige Römische Reich und sah sich als Beschützer der Christenheit. Er besiegte die heidnischen Magyaren in der Schlacht auf dem Lechfeld (955) und beendete deren Invasionen."
+    }
+  },
+  {
+    id: 'k_vladimir',
+    startYear: 980,
+    endYear: 1015,
+    type: 'king',
+    name: { en: "St. Vladimir the Great", fr: "Saint Vladimir le Grand", es: "San Vladimiro el Grande", de: "Hl. Wladimir der Große" },
+    description: {
+      en: "Grand Prince of Kiev who converted from paganism to Christianity in 988. He baptized the Rus' people in the Dnieper River, destroying pagan idols and laying the foundation for Christianity in Russia and Ukraine.",
+      fr: "Grand-Prince de Kiev qui s'est converti du paganisme au christianisme en 988. Il a baptisé le peuple Rus' dans le Dniepr, détruisant les idoles païennes et posant les bases du christianisme en Russie et en Ukraine.",
+      es: "Gran Príncipe de Kiev que se convirtió del paganismo al cristianismo en 988. Bautizó al pueblo Rus en el río Dniéper, destruyendo ídolos paganos y sentando las bases del cristianismo en Rusia y Ucrania.",
+      de: "Großfürst von Kiew, der 988 vom Heidentum zum Christentum konvertierte. Er taufte das Volk der Rus im Dnjepr, zerstörte heidnische Götzen und legte den Grundstein für das Christentum in Russland."
+    }
+  },
+  {
+    id: 'k_stephen_hungary',
+    startYear: 997,
+    endYear: 1038,
+    type: 'king',
+    name: { en: "St. Stephen I", fr: "Saint Étienne Ier", es: "San Esteban I", de: "Hl. Stephan I." },
+    description: {
+      en: "The first King of Hungary, crowned by the Pope. He dedicated his kingdom to the Virgin Mary and Christianized the Magyar people, establishing bishoprics and monasteries. He is the patron saint of Hungary.",
+      fr: "Le premier roi de Hongrie, couronné par le pape. Il a consacré son royaume à la Vierge Marie et christianisé le peuple magyar, établissant des évêchés et des monastères. Il est le saint patron de la Hongrie.",
+      es: "El primer rey de Hungría, coronado por el Papa. Dedicó su reino a la Virgen María y cristianizó al pueblo magiar, estableciendo obispados y monasterios. Es el santo patrón de Hungría.",
+      de: "Der erste König von Ungarn, vom Papst gekrönt. Er weihte sein Königreich der Jungfrau Maria und christianisierte das ungarische Volk, indem er Bistümer und Klöster gründete."
+    }
+  },
+  {
+    id: 'k_olaf_ii',
+    startYear: 1015,
+    endYear: 1028,
+    type: 'king',
+    name: { en: "St. Olaf II", fr: "Saint Olaf II", es: "San Olaf II", de: "Hl. Olaf II." },
+    description: {
+      en: "King of Norway and martyr. He completed the conversion of Norway to Christianity, replacing pagan laws with Christian ones. His shrine at Nidaros became one of the major pilgrimage sites of Northern Europe.",
+      fr: "Roi de Norvège et martyr. Il a achevé la conversion de la Norvège au christianisme, remplaçant les lois païennes par des lois chrétiennes. Son sanctuaire à Nidaros est devenu un lieu de pèlerinage majeur.",
+      es: "Rey de Noruega y mártir. Completó la conversión de Noruega al cristianismo, reemplazando las leyes paganas por cristianas. Su santuario en Nidaros se convirtió en un importante lugar de peregrinación.",
+      de: "König von Norwegen und Märtyrer. Er vollendete die Bekehrung Norwegens zum Christentum und ersetzte heidnische Gesetze durch christliche. Sein Schrein in Nidaros wurde zu einem wichtigen Wallfahrtsort."
+    }
+  },
+  {
+    id: 'k_henry_ii',
+    startYear: 1014,
+    endYear: 1024,
+    type: 'king',
+    name: { en: "St. Henry II", fr: "Saint Henri II", es: "San Enrique II", de: "Hl. Heinrich II." },
+    description: {
+      en: "Holy Roman Emperor and the only one to be canonized. Known for his ascetic life and support of church reform, he founded the Diocese of Bamberg and lived in a chaste marriage with Empress St. Cunigunde.",
+      fr: "Empereur romain germanique et le seul à être canonisé. Connu pour sa vie ascétique et son soutien à la réforme de l'Église, il a fondé le diocèse de Bamberg et a vécu un mariage chaste avec l'impératrice sainte Cunégonde.",
+      es: "Emperador del Sacro Imperio y el único canonizado. Conocido por su vida ascética y apoyo a la reforma eclesiástica, fundó la Diócesis de Bamberg y vivió en un matrimonio casto con la Emperatriz Santa Cunegunda.",
+      de: "Römisch-deutscher Kaiser und der einzige, der heiliggesprochen wurde. Bekannt für sein asketisches Leben und die Unterstützung der Kirchenreform, gründete er das Bistum Bamberg."
+    }
+  },
+  {
+    id: 'k_edward_confessor',
+    startYear: 1042,
+    endYear: 1066,
+    type: 'king',
+    name: { en: "St. Edward the Confessor", fr: "Saint Édouard le Confesseur", es: "San Eduardo el Confesor", de: "Hl. Eduard der Bekenner" },
+    description: {
+      en: "One of the last Anglo-Saxon kings of England. Renowned for his piety and gift of healing, he rebuilt Westminster Abbey. His reign was remembered as an era of peace and justice before the Norman Conquest.",
+      fr: "L'un des derniers rois anglo-saxons d'Angleterre. Renommé pour sa piété et son don de guérison, il a reconstruit l'abbaye de Westminster. Son règne est resté dans les mémoires comme une ère de paix.",
+      es: "Uno de los últimos reyes anglosajones de Inglaterra. Reconocido por su piedad y don de curación, reconstruyó la Abadía de Westminster. Su reinado fue recordado como una era de paz y justicia.",
+      de: "Einer der letzten angelsächsischen Könige von England. Bekannt für seine Frömmigkeit und Gabe der Heilung, baute er die Westminster Abbey wieder auf. Seine Herrschaft galt als Ära des Friedens."
+    }
+  },
+  {
+    id: 'k_ladislaus',
+    startYear: 1077,
+    endYear: 1095,
+    type: 'king',
+    name: { en: "St. Ladislaus I", fr: "Saint Ladislas Ier", es: "San Ladislao I", de: "Hl. Ladislaus I." },
+    description: {
+      en: "King of Hungary, known as the embodiment of the knightly ideal. He defended his kingdom against pagan Cumans and strengthened the Church's position, enforcing clerical celibacy and moral discipline.",
+      fr: "Roi de Hongrie, connu comme l'incarnation de l'idéal chevaleresque. Il a défendu son royaume contre les Coumans païens et renforcé la position de l'Église, imposant le célibat clérical.",
+      es: "Rey de Hungría, conocido como la encarnación del ideal caballeresco. Defendió su reino contra los cumanos paganos y fortaleció la posición de la Iglesia, imponiendo el celibato clerical.",
+      de: "König von Ungarn, bekannt als Verkörperung des ritterlichen Ideals. Er verteidigte sein Königreich gegen heidnische Kumanen und stärkte die Position der Kirche, indem er den klerikalen Zölibat durchsetzte."
+    }
+  },
+  {
+    id: 'k_godfrey',
+    startYear: 1099,
+    endYear: 1100,
+    type: 'king',
+    name: { en: "Godfrey of Bouillon", fr: "Godefroy de Bouillon", es: "Godofredo de Bouillón", de: "Gottfried von Bouillon" },
+    description: {
+      en: "Leader of the First Crusade and first ruler of the Kingdom of Jerusalem. He refused the title of King, saying he could not wear a crown of gold where his Savior wore a crown of thorns, taking the title 'Advocate of the Holy Sepulchre'.",
+      fr: "Chef de la première croisade et premier souverain du royaume de Jérusalem. Il a refusé le titre de roi, disant qu'il ne pouvait pas porter une couronne d'or là où son Sauveur portait une couronne d'épines.",
+      es: "Líder de la Primera Cruzada y primer gobernante del Reino de Jerusalén. Rechazó el título de Rey, diciendo que no podía llevar una corona de oro donde su Salvador llevó una corona de espinas.",
+      de: "Anführer des Ersten Kreuzzugs und erster Herrscher des Königreichs Jerusalem. Er lehnte den Königstitel ab, da er keine Goldkrone tragen wollte, wo sein Erlöser eine Dornenkrone trug."
+    }
+  },
+  {
+    id: 'k_baldwin_iv',
+    startYear: 1174,
+    endYear: 1185,
+    type: 'king',
+    name: { en: "Baldwin IV (The Leper King)", fr: "Baudouin IV le Lépreux", es: "Balduino IV el Leproso", de: "Balduin IV. der Aussätzige" },
+    description: {
+      en: "King of Jerusalem who suffered from debilitating leprosy. Despite his suffering, he was a brilliant military commander who famously defeated Saladin at the Battle of Montgisard in 1177 with a vastly inferior force, defending the Holy Land until his death.",
+      fr: "Roi de Jérusalem souffrant de la lèpre. Malgré sa souffrance, il était un commandant militaire brillant qui a vaincu Saladin à la bataille de Montgisard en 1177 avec une force très inférieure, défendant la Terre Sainte jusqu'à sa mort.",
+      es: "Rey de Jerusalén que sufría de lepra debilitante. A pesar de su sufrimiento, fue un comandante militar brillante que derrotó a Saladino en la Batalla de Montgisard en 1177 con una fuerza muy inferior.",
+      de: "König von Jerusalem, der an Lepra litt. Trotz seines Leidens war er ein brillanter militärischer Befehlshaber, der Saladin 1177 in der Schlacht von Montgisard mit einer weit unterlegenen Streitmacht besiegte."
+    }
+  },
+  {
+    id: 'k_louis_ix',
+    startYear: 1226,
+    endYear: 1270,
+    type: 'king',
+    name: { en: "St. Louis IX", fr: "Saint Louis", es: "San Luis IX", de: "Hl. Ludwig IX." },
+    description: {
+      en: "King of France and a model of the Christian monarch. Renowned for his charity, sense of justice, and piety. He built the Sainte-Chapelle to house the Crown of Thorns and died while on Crusade in Tunis.",
+      fr: "Roi de France et modèle du monarque chrétien. Renommé pour sa charité, son sens de la justice et sa piété. Il a construit la Sainte-Chapelle pour abriter la Couronne d'épines et est mort en croisade.",
+      es: "Rey de Francia y modelo de monarca cristiano. Reconocido por su caridad, sentido de la justicia y piedad. Construyó la Sainte-Chapelle para albergar la Corona de Espinas.",
+      de: "König von Frankreich und Modell des christlichen Monarchen. Bekannt für seine Nächstenliebe, seinen Gerechtigkeitssinn und seine Frömmigkeit. Er baute die Sainte-Chapelle."
+    }
+  },
+  {
+    id: 'k_ferdinand_iii',
+    startYear: 1217,
+    endYear: 1252,
+    type: 'king',
+    name: { en: "St. Ferdinand III", fr: "Saint Ferdinand III", es: "San Fernando III", de: "Hl. Ferdinand III." },
+    description: {
+      en: "King of Castile and Leon who united the two kingdoms. A great warrior of the Reconquista, he recaptured Cordoba and Seville from the Moors while founding the University of Salamanca and building the Cathedral of Burgos.",
+      fr: "Roi de Castille et de Léon qui a uni les deux royaumes. Grand guerrier de la Reconquista, il a repris Cordoue et Séville aux Maures tout en fondant l'Université de Salamanque et en construisant la cathédrale de Burgos.",
+      es: "Rey de Castilla y León que unió los dos reinos. Gran guerrero de la Reconquista, recuperó Córdoba y Sevilla de los moros, fundó la Universidad de Salamanca y construyó la Catedral de Burgos.",
+      de: "König von Kastilien und León. Ein großer Krieger der Reconquista, der Córdoba und Sevilla von den Mauren zurückeroberte, während er die Universität von Salamanca gründete."
+    }
+  },
+  {
+    id: 'k_rudolf_i',
+    startYear: 1273,
+    endYear: 1291,
+    type: 'king',
+    name: { en: "Rudolf I of Habsburg", fr: "Rodolphe Ier de Habsbourg", es: "Rodolfo I de Habsburgo", de: "Rudolf I. von Habsburg" },
+    description: {
+      en: "The first Habsburg King of the Romans. He famously demonstrated his devotion to the Eucharist by offering his horse to a priest carrying the Blessed Sacrament to a dying man, walking beside him in mud. This act of humility defined the Habsburg dynasty's Catholic identity.",
+      fr: "Le premier roi des Romains de la maison de Habsbourg. Il a démontré sa dévotion à l'Eucharistie en offrant son cheval à un prêtre portant le Saint-Sacrement à un mourant.",
+      es: "El primer rey de los romanos de la casa de Habsburgo. Demostró su devoción a la Eucaristía ofreciendo su caballo a un sacerdote que llevaba el Santísimo Sacramento a un moribundo.",
+      de: "Der erste Habsburger römisch-deutsche König. Er zeigte seine Hingabe an die Eucharistie, indem er einem Priester, der das Allerheiligste zu einem Sterbenden trug, sein Pferd anbot."
+    }
+  },
+  {
+    id: 'k_wenceslaus',
+    startYear: 921,
+    endYear: 935,
+    type: 'king',
+    name: { en: "St. Wenceslaus I", fr: "Saint Venceslas Ier", es: "San Wenceslao I", de: "Hl. Wenzel I." },
+    description: {
+      en: "Duke of Bohemia known as 'Good King Wenceslas'. He was a man of deep faith who personally grew the wheat and grapes for the Holy Mass. He was martyred by his brother for his faith and is the patron saint of the Czech Republic.",
+      fr: "Duc de Bohême, homme d'une foi profonde qui cultivait personnellement le blé et le raisin pour la Sainte Messe. Il a été martyrisé par son frère pour sa foi.",
+      es: "Duque de Bohemia, conocido como el 'Buen Rey Wenceslao'. Fue un hombre de profunda fe que cultivaba personalmente el trigo y las uvas para la Santa Misa. Fue martirizado por su hermano.",
+      de: "Herzog von Böhmen, bekannt als 'Guter König Wenzel'. Er war ein Mann von tiefem Glauben, der persönlich den Weizen und die Trauben für die Heilige Messe anbaute."
+    }
+  },
+  {
+    id: 'k_canute_iv',
+    startYear: 1080,
+    endYear: 1086,
+    type: 'king',
+    name: { en: "St. Canute IV", fr: "Saint Knut IV", es: "San Canuto IV", de: "Hl. Knut IV." },
+    description: {
+      en: "King of Denmark and martyr. He strongly supported the Church, enforced tithes, and was killed by rebels inside a church while kneeling before the altar. He is the patron saint of Denmark.",
+      fr: "Roi de Danemark et martyr. Il a soutenu l'Église, imposé la dîme et a été tué par des rebelles à l'intérieur d'une église alors qu'il était agenouillé devant l'autel.",
+      es: "Rey de Dinamarca y mártir. Apoyó fuertemente a la Iglesia, impuso diezmos y fue asesinado por rebeldes dentro de una iglesia mientras se arrodillaba ante el altar.",
+      de: "König von Dänemark und Märtyrer. Er unterstützte die Kirche stark, setzte den Zehnten durch und wurde von Rebellen in einer Kirche getötet, als er vor dem Altar kniete."
+    }
+  },
+  {
+    id: 'k_jadwiga',
+    startYear: 1384,
+    endYear: 1399,
+    type: 'king',
+    name: { en: "St. Jadwiga", fr: "Sainte Edwige", es: "Santa Eduviges", de: "Hl. Hedwig" },
+    description: {
+      en: "Crowned 'King' of Poland (to signify she was a monarch in her own right). She married Grand Duke Jogaila of Lithuania on the condition of his baptism, leading to the Christianization of Lithuania, the last pagan country in Europe.",
+      fr: "Couronnée 'Roi' de Pologne. Elle a épousé le grand-duc Jogaila de Lituanie à la condition de son baptême, conduisant à la christianisation de la Lituanie, le dernier pays païen d'Europe.",
+      es: "Coronada 'Rey' de Polonia. Se casó con el Gran Duque Jogaila de Lituania con la condición de su bautismo, lo que llevó a la cristianización de Lituania, el último país pagano de Europa.",
+      de: "Gekrönt zum 'König' von Polen. Sie heiratete Großfürst Jogaila von Litauen unter der Bedingung seiner Taufe, was zur Christianisierung Litauens führte."
+    }
+  },
+  {
+    id: 'k_isabella_ferdinand',
+    startYear: 1474,
+    endYear: 1504,
+    type: 'king',
+    name: { en: "The Catholic Monarchs", fr: "Les Rois Catholiques", es: "Los Reyes Católicos", de: "Die Katholischen Könige" },
+    description: {
+      en: "Isabella I of Castile and Ferdinand II of Aragon. They completed the Reconquista in 1492, taking Granada. They sponsored Columbus's voyage which opened the Americas to evangelization and reformed the Spanish Church, shielding it from later Protestant heresies.",
+      fr: "Isabelle I de Castille et Ferdinand II d'Aragon. Ils ont achevé la Reconquista en 1492. Ils ont parrainé le voyage de Colomb qui a ouvert les Amériques à l'évangélisation et réformé l'Église espagnole.",
+      es: "Isabel I de Castilla y Fernando II de Aragón. Completaron la Reconquista en 1492. Patrocinaron el viaje de Colón que abrió las Américas a la evangelización y reformaron la Iglesia española.",
+      de: "Isabella I. von Kastilien und Ferdinand II. von Aragon. Sie vollendeten die Reconquista 1492. Sie sponserten Kolumbus' Reise, die Amerika für die Evangelisierung öffnete."
+    }
+  },
+  {
+    id: 'k_charles_v',
+    startYear: 1519,
+    endYear: 1556,
+    type: 'king',
+    name: { en: "Emperor Charles V", fr: "Charles Quint", es: "Carlos V", de: "Karl V." },
+    description: {
+      en: "Holy Roman Emperor at the outbreak of the Protestant Reformation. He presided over the Diet of Worms, defending the Catholic faith against Luther. He oversaw the evangelization of the Americas and eventually abdicated to prepare his soul for death.",
+      fr: "Empereur romain germanique au début de la Réforme protestante. Il a présidé la Diète de Worms, défendant la foi catholique contre Luther. Il a supervisé l'évangélisation des Amériques et a finalement abdiqué.",
+      es: "Emperador del Sacro Imperio al estallar la Reforma protestante. Presidió la Dieta de Worms, defendiendo la fe católica contra Lutero. Supervisó la evangelización de las Américas.",
+      de: "Römisch-deutscher Kaiser zu Beginn der Reformation. Er leitete den Reichstag zu Worms und verteidigte den katholischen Glauben gegen Luther. Er beaufsichtigte die Evangelisierung Amerikas."
+    }
+  },
+  {
+    id: 'k_philip_ii',
+    startYear: 1556,
+    endYear: 1598,
+    type: 'king',
+    name: { en: "Philip II of Spain", fr: "Philippe II", es: "Felipe II", de: "Philipp II." },
+    description: {
+      en: "The champion of the Counter-Reformation. He built the Escorial as a monastery-palace, sent the Spanish Armada to restore Catholicism in England, and organized the Holy League which defeated the Ottoman Turks at the Battle of Lepanto.",
+      fr: "Le champion de la Contre-Réforme. Il a construit l'Escorial, envoyé l'Invincible Armada pour restaurer le catholicisme en Angleterre et organisé la Sainte Ligue qui a vaincu les Turcs ottomans à la bataille de Lépante.",
+      es: "El campeón de la Contrarreforma. Construyó el Escorial, envió la Armada Invencible para restaurar el catolicismo en Inglaterra y organizó la Liga Santa que derrotó a los turcos otomanos en Lepanto.",
+      de: "Der Vorkämpfer der Gegenreformation. Er baute den Escorial, sandte die Spanische Armada aus, um den Katholizismus in England wiederherzustellen, und organisierte die Heilige Liga (Sieg bei Lepanto)."
+    }
+  },
+  {
+    id: 'k_john_sobieski',
+    startYear: 1674,
+    endYear: 1696,
+    type: 'king',
+    name: { en: "John III Sobieski", fr: "Jean III Sobieski", es: "Juan III Sobieski", de: "Johann III. Sobieski" },
+    description: {
+      en: "King of Poland who saved Christian Europe from the Ottoman Turks at the Battle of Vienna on September 11, 1683. He led the largest cavalry charge in history, declaring 'Veni, vidi, Deus vicit' (I came, I saw, God conquered).",
+      fr: "Roi de Pologne qui a sauvé l'Europe chrétienne des Turcs ottomans à la bataille de Vienne le 11 septembre 1683. Il a mené la plus grande charge de cavalerie de l'histoire, déclarant 'Veni, vidi, Deus vicit'.",
+      es: "Rey de Polonia que salvó a la Europa cristiana de los turcos otomanos en la Batalla de Viena el 11 de septiembre de 1683. Lideró la mayor carga de caballería de la historia.",
+      de: "König von Polen, der das christliche Europa in der Schlacht am Kahlenberg (Wien) 1683 vor den Osmanen rettete. Er führte den größten Kavallerieangriff der Geschichte an."
+    }
+  },
+  {
+    id: 'k_blessed_karl',
+    startYear: 1916,
+    endYear: 1918,
+    type: 'king',
+    name: { en: "Blessed Karl of Austria", fr: "Bienheureux Charles d'Autriche", es: "Beato Carlos de Austria", de: "Seliger Karl von Österreich" },
+    description: {
+      en: "The last Emperor of Austria and King of Hungary. A man of peace who tried to end World War I. He ruled according to the social teaching of the Church and died in poverty and exile, offering his suffering for his people.",
+      fr: "Le dernier empereur d'Autriche. Homme de paix qui a tenté de mettre fin à la Première Guerre mondiale. Il a gouverné selon la doctrine sociale de l'Église et est mort en exil, offrant ses souffrances pour son peuple.",
+      es: "El último emperador de Austria. Un hombre de paz que intentó poner fin a la Primera Guerra Mundial. Gobernó según la doctrina social de la Iglesia y murió en el exilio.",
+      de: "Der letzte Kaiser von Österreich. Ein Mann des Friedens, der versuchte, den Ersten Weltkrieg zu beenden. Er regierte nach der Soziallehre der Kirche und starb im Exil."
+    }
+  },
+  {
+    id: 'k_boudouin',
+    startYear: 1951,
+    endYear: 1993,
+    type: 'king',
+    name: { en: "Baudouin of Belgium", fr: "Baudouin de Belgique", es: "Balduino de Bélgica", de: "Baudouin von Belgien" },
+    description: {
+      en: "Known for his deep Catholic faith. He famously abdicated for 36 hours in 1990 to avoid signing a law legalizing abortion, declaring that his conscience would not allow him to approve the killing of the unborn.",
+      fr: "Connu pour sa profonde foi catholique. Il a abdiqué pendant 36 heures en 1990 pour éviter de signer une loi légalisant l'avortement, déclarant que sa conscience ne lui permettait pas d'approuver cela.",
+      es: "Conocido por su profunda fe católica. Abdicó durante 36 horas en 1990 para evitar firmar una ley que legalizaba el aborto, declarando que su conciencia no se lo permitía.",
+      de: "Bekannt für seinen tiefen katholischen Glauben. Er dankte 1990 für 36 Stunden ab, um ein Gesetz zur Legalisierung der Abtreibung nicht unterzeichnen zu müssen."
+    }
+  },
+  {
+    id: 'k_stephen_great',
+    startYear: 1457,
+    endYear: 1504,
+    type: 'king',
+    name: { en: "Stephen the Great", fr: "Étienne le Grand", es: "Esteban el Grande", de: "Stefan der Große" },
+    description: {
+      en: "Prince of Moldavia and a defender of Christianity against the Ottoman Empire. He fought 36 battles against the Ottomans, winning 34, and built a church or monastery for every victory. Pope Sixtus IV named him 'Verus Christianae Fidei Athleta' (True Champion of the Christian Faith).",
+      fr: "Prince de Moldavie et défenseur du christianisme contre l'Empire ottoman. Il a remporté 34 batailles sur 36 et construit une église pour chaque victoire. Le pape Sixte IV l'a nommé 'Véritable Champion de la Foi Chrétienne'.",
+      es: "Príncipe de Moldavia y defensor del cristianismo contra el Imperio Otomano. Ganó 34 de 36 batallas y construyó una iglesia por cada victoria. El Papa Sixto IV lo llamó 'Verdadero Campeón de la Fe Cristiana'.",
+      de: "Fürst von Moldau und Verteidiger des Christentums gegen das Osmanische Reich. Er gewann 34 von 36 Schlachten und baute für jeden Sieg eine Kirche."
+    }
+  },
+  {
+    id: 'k_scanderbeg',
+    startYear: 1443,
+    endYear: 1468,
+    type: 'king',
+    name: { en: "George Castriot Skanderbeg", fr: "Georges Castriot Skanderbeg", es: "Jorge Castriota Skanderbeg", de: "Georg Kastriota Skanderbeg" },
+    description: {
+      en: "Albanian nobleman who defected from the Ottomans to lead a 25-year rebellion against the Turks. He stopped Ottoman expansion into Italy and Western Europe, earning the title 'Athlete of Christ' from the Pope.",
+      fr: "Noble albanais qui a mené une rébellion de 25 ans contre les Turcs. Il a stoppé l'expansion ottomane vers l'Italie et l'Europe occidentale, gagnant le titre d''Athlète du Christ'.",
+      es: "Noble albanés que lideró una rebelión de 25 años contra los turcos. Detuvo la expansión otomana hacia Italia y Europa Occidental, ganando el título de 'Atleta de Cristo'.",
+      de: "Albanischer Adliger, der einen 25-jährigen Aufstand gegen die Türken anführte. Er stoppte die osmanische Expansion nach Italien und Westeuropa."
+    }
+  },
+  {
+    id: 'k_richard_lionheart',
+    startYear: 1189,
+    endYear: 1199,
+    type: 'king',
+    name: { en: "Richard I the Lionheart", fr: "Richard Cœur de Lion", es: "Ricardo Corazón de León", de: "Richard Löwenherz" },
+    description: {
+      en: "King of England and central figure of the Third Crusade. Though he failed to retake Jerusalem, his victories secured the coastal crusader states and allowed Christian pilgrims access to the Holy City.",
+      fr: "Roi d'Angleterre et figure centrale de la troisième croisade. Bien qu'il n'ait pas réussi à reprendre Jérusalem, ses victoires ont permis aux pèlerins chrétiens d'accéder à la Ville Sainte.",
+      es: "Rey de Inglaterra y figura central de la Tercera Cruzada. Aunque no logró retomar Jerusalén, sus victorias aseguraron el acceso de los peregrinos cristianos a la Ciudad Santa.",
+      de: "König von England und zentrale Figur des Dritten Kreuzzugs. Obwohl er Jerusalem nicht zurückerobern konnte, sicherten seine Siege den christlichen Pilgern den Zugang zur Heiligen Stadt."
+    }
+  },
+  {
+    id: 'k_louis_xiv',
+    startYear: 1643,
+    endYear: 1715,
+    type: 'king',
+    name: { en: "Louis XIV", fr: "Louis XIV", es: "Luis XIV", de: "Ludwig XIV." },
+    description: {
+      en: "The 'Sun King' of France. While he had conflicts with the Pope over Gallicanism, he vehemently opposed Protestantism, revoking the Edict of Nantes to restore Catholic unity in France.",
+      fr: "Le 'Roi Soleil'. Bien qu'il ait eu des conflits avec le Pape sur le gallicanisme, il s'est opposé avec véhémence au protestantisme, révoquant l'Édit de Nantes pour restaurer l'unité catholique.",
+      es: "El 'Rey Sol'. Aunque tuvo conflictos con el Papa sobre el galicanismo, se opuso vehementemente al protestantismo, revocando el Edicto de Nantes para restaurar la unidad católica.",
+      de: "Der 'Sonnenkönig'. Obwohl er Konflikte mit dem Papst hatte, lehnte er den Protestantismus vehement ab und widerrief das Edikt von Nantes, um die katholische Einheit wiederherzustellen."
+    }
+  },
+  {
+    id: 'k_alfonso_vi',
+    startYear: 1065,
+    endYear: 1109,
+    type: 'king',
+    name: { en: "Alfonso VI", fr: "Alphonse VI", es: "Alfonso VI", de: "Alfons VI." },
+    description: {
+      en: "King of Leon and Castile who conquered the city of Toledo in 1085, a major milestone in the Reconquista. He promoted the Cluniac reforms and replaced the Mozarabic rite with the Roman rite to align Spain closer with the Papacy.",
+      fr: "Roi de Léon et de Castille qui a conquis Tolède en 1085. Il a promu les réformes clunisiennes et remplacé le rite mozarabe par le rite romain pour aligner l'Espagne sur la Papauté.",
+      es: "Rey de León y Castilla que conquistó Toledo en 1085. Promovió las reformas cluniacenses y reemplazó el rito mozárabe por el rito romano.",
+      de: "König von León und Kastilien, der 1085 Toledo eroberte. Er förderte die cluniazensischen Reformen und ersetzte den mozarabischen Ritus durch den römischen."
+    }
+  },
+  {
+    id: 'k_sigismund_iii',
+    startYear: 1587,
+    endYear: 1632,
+    type: 'king',
+    name: { en: "Sigismund III Vasa", fr: "Sigismond III Vasa", es: "Segismundo III Vasa", de: "Sigismund III. Wasa" },
+    description: {
+      en: "King of Poland and Sweden. A zealous Catholic who strove to re-Catholicize Sweden and expand the faith in the East. He moved the capital to Warsaw and strongly supported the Jesuits.",
+      fr: "Roi de Pologne et de Suède. Catholique zélé qui s'est efforcé de recatholiciser la Suède et d'étendre la foi à l'Est. Il a déplacé la capitale à Varsovie et soutenu les Jésuites.",
+      es: "Rey de Polonia y Suecia. Un católico celoso que se esforzó por recatolizar Suecia. Trasladó la capital a Varsovia y apoyó firmemente a los jesuitas.",
+      de: "König von Polen und Schweden. Ein eifriger Katholik, der versuchte, Schweden zu rekatholisieren. Er verlegte die Hauptstadt nach Warschau und unterstützte die Jesuiten."
+    }
+  },
+  {
+    id: 'k_eric_ix',
+    startYear: 1156,
+    endYear: 1160,
+    type: 'king',
+    name: { en: "St. Eric IX", fr: "Saint Éric IX", es: "San Erik IX", de: "Hl. Erik IX." },
+    description: {
+      en: "King of Sweden who led a crusade to Finland to spread Christianity. He codified Swedish laws based on Gospel principles and was martyred after attending Mass on Ascension Day.",
+      fr: "Roi de Suède qui a mené une croisade en Finlande. Il a codifié les lois suédoises basées sur l'Évangile et a été martyrisé après avoir assisté à la messe.",
+      es: "Rey de Suecia que lideró una cruzada a Finlandia. Codificó las leyes suecas basadas en el Evangelio y fue martirizado después de asistir a Misa.",
+      de: "König von Schweden, der einen Kreuzzug nach Finnland führte. Er kodifizierte schwedische Gesetze auf der Grundlage des Evangeliums und wurde nach der Messe gemartert."
+    }
+  },
+  {
+    id: 'k_simeon_i',
+    startYear: 893,
+    endYear: 927,
+    type: 'king',
+    name: { en: "Simeon I the Great", fr: "Siméon Ier le Grand", es: "Simeón I el Grande", de: "Simeon I. der Große" },
+    description: {
+      en: "Tsar of Bulgaria who presided over the Golden Age of Bulgarian culture. He promoted the translation of Christian texts into Glagolitic and Cyrillic, establishing the Old Church Slavonic literary tradition.",
+      fr: "Tsar de Bulgarie qui a présidé à l'âge d'or de la culture bulgare. Il a promu la traduction de textes chrétiens, établissant la tradition littéraire du vieux slave.",
+      es: "Zar de Bulgaria que presidió la Edad de Oro de la cultura búlgara. Promovió la traducción de textos cristianos, estableciendo la tradición literaria del antiguo eslavo eclesiástico.",
+      de: "Zar von Bulgarien, der das Goldene Zeitalter der bulgarischen Kultur leitete. Er förderte die Übersetzung christlicher Texte und begründete die kirchenslawische Tradition."
+    }
+  },
+  {
+    id: 'k_louis_great',
+    startYear: 1342,
+    endYear: 1382,
+    type: 'king',
+    name: { en: "Louis I the Great", fr: "Louis Ier le Grand", es: "Luis I el Grande", de: "Ludwig I. der Große" },
+    description: {
+      en: "King of Hungary and Poland. A champion of the Church who fought against the Ottomans and Venetian influence. He founded the University of Pécs and was a major patron of Gothic art.",
+      fr: "Roi de Hongrie et de Pologne. Champion de l'Église qui a combattu les Ottomans. Il a fondé l'Université de Pécs et a été un mécène majeur de l'art gothique.",
+      es: "Rey de Hungría y Polonia. Campeón de la Iglesia que luchó contra los otomanos. Fundó la Universidad de Pécs y fue un gran mecenas del arte gótico.",
+      de: "König von Ungarn und Polen. Ein Vorkämpfer der Kirche, der gegen die Osmanen kämpfte. Er gründete die Universität Pécs und war ein Förderer der Gotik."
+    }
+  },
+  {
+    id: 'k_bela_iv',
+    startYear: 1235,
+    endYear: 1270,
+    type: 'king',
+    name: { en: "Béla IV", fr: "Béla IV", es: "Bela IV", de: "Béla IV." },
+    description: {
+      en: "King of Hungary known as the 'Second Founder of the State'. After the Mongol devastation, he rebuilt the country and its churches. He was a tertiary Franciscan and the father of St. Kinga and St. Margaret of Hungary.",
+      fr: "Roi de Hongrie, 'Second fondateur de l'État'. Après la dévastation mongole, il a reconstruit le pays et ses églises. Père de sainte Kinga et sainte Marguerite.",
+      es: "Rey de Hungría, 'Segundo Fundador del Estado'. Tras la devastación mongola, reconstruyó el país y sus iglesias. Padre de Santa Kinga y Santa Margarita.",
+      de: "König von Ungarn, 'Zweiter Staatsgründer'. Nach der mongolischen Verwüstung baute er das Land und seine Kirchen wieder auf. Vater der Hl. Kinga und Hl. Margareta."
+    }
+  },
+  {
+    id: 'k_henry_iii_hre',
+    startYear: 1046,
+    endYear: 1056,
+    type: 'king',
+    name: { en: "Henry III (HRE)", fr: "Henri III", es: "Enrique III", de: "Heinrich III." },
+    description: {
+      en: "Holy Roman Emperor who deeply believed in the divine right of kings to reform the Church. He deposed three rival popes at the Synod of Sutri to end a schism, paving the way for the Gregorian Reforms.",
+      fr: "Empereur romain germanique qui croyait profondément au droit divin pour réformer l'Église. Il a déposé trois papes rivaux au synode de Sutri pour mettre fin à un schisme.",
+      es: "Emperador del Sacro Imperio. Depuso a tres papas rivales en el Sínodo de Sutri para poner fin a un cisma, allanando el camino para las Reformas Gregorianas.",
+      de: "Römisch-deutscher Kaiser. Er setzte auf der Synode von Sutri drei rivalisierende Päpste ab, um ein Schisma zu beenden, und ebnete den Weg für die Gregorianischen Reformen."
+    }
+  },
+  {
+    id: 'k_james_ii',
+    startYear: 1685,
+    endYear: 1688,
+    type: 'king',
+    name: { en: "James II", fr: "Jacques II", es: "Jacobo II", de: "Jakob II." },
+    description: {
+      en: "The last Catholic monarch of England, Scotland, and Ireland. He attempted to grant religious liberty to Catholics but was overthrown in the 'Glorious Revolution' by Protestant forces, leading to the penal laws against Catholics.",
+      fr: "Le dernier monarque catholique d'Angleterre. Il a tenté d'accorder la liberté religieuse aux catholiques mais a été renversé lors de la 'Glorieuse Révolution' par les forces protestantes.",
+      es: "El último monarca católico de Inglaterra. Intentó otorgar libertad religiosa a los católicos pero fue derrocado en la 'Revolución Gloriosa' por fuerzas protestantes.",
+      de: "Der letzte katholische Monarch von England. Er versuchte, den Katholiken Religionsfreiheit zu gewähren, wurde aber in der 'Glorreichen Revolution' gestürzt."
+    }
+  },
+  {
+    id: 'k_carloman',
+    startYear: 768,
+    endYear: 771,
+    type: 'king',
+    name: { en: "Carloman I", fr: "Carloman Ier", es: "Carlomán I", de: "Karlmann I." },
+    description: {
+      en: "Brother of Charlemagne. Though their relationship was strained, his death allowed for the unification of the Frankish kingdom. He was a patron of monasteries and supported the mission of St. Boniface.",
+      fr: "Frère de Charlemagne. Sa mort a permis l'unification du royaume franc. Il était un mécène des monastères et soutenait la mission de saint Boniface.",
+      es: "Hermano de Carlomagno. Su muerte permitió la unificación del reino franco. Fue mecenas de monasterios y apoyó la misión de San Bonifacio.",
+      de: "Bruder von Karl dem Großen. Sein Tod ermöglichte die Vereinigung des Frankenreichs. Er war ein Förderer von Klöstern und unterstützte die Mission des Hl. Bonifatius."
+    }
+  },
+  {
+    id: 'k_boris_i',
+    startYear: 852,
+    endYear: 889,
+    type: 'king',
+    name: { en: "St. Boris I", fr: "Saint Boris Ier", es: "San Boris I", de: "Hl. Boris I." },
+    description: {
+      en: "Ruler of Bulgaria who Christianized his nation. He abdicated to become a monk but returned briefly to depose his pagan son before retiring to the monastery again. He welcomed the disciples of Cyril and Methodius.",
+      fr: "Souverain de Bulgarie qui a christianisé sa nation. Il a abdiqué pour devenir moine. Il a accueilli les disciples de Cyrille et Méthode.",
+      es: "Gobernante de Bulgaria que cristianizó su nación. Abdicó para convertirse en monje. Acogió a los discípulos de Cirilo y Metodio.",
+      de: "Herrscher von Bulgarien, der seine Nation christianisierte. Er dankte ab, um Mönch zu werden. Er nahm die Schüler von Kyrill und Method auf."
+    }
+  },
+  {
+    id: 'k_afonso_i',
+    startYear: 1139,
+    endYear: 1185,
+    type: 'king',
+    name: { en: "Afonso I of Portugal", fr: "Alphonse Ier de Portugal", es: "Alfonso I de Portugal", de: "Alfons I. von Portugal" },
+    description: {
+      en: "The first King of Portugal. He conquered Lisbon from the Moors with the help of Crusaders and dedicated his kingdom to St. Michael and later to the Virgin Mary, establishing the independent Catholic nation of Portugal.",
+      fr: "Le premier roi du Portugal. Il a conquis Lisbonne sur les Maures et a consacré son royaume à saint Michel puis à la Vierge Marie, établissant la nation catholique du Portugal.",
+      es: "El primer rey de Portugal. Conquistó Lisboa de los moros y dedicó su reino a San Miguel y más tarde a la Virgen María, estableciendo la nación católica de Portugal.",
+      de: "Der erste König von Portugal. Er eroberte Lissabon von den Mauren und weihte sein Königreich dem Hl. Michael und später der Jungfrau Maria."
+    }
+  },
+  {
+    id: 'k_mathilda',
+    startYear: 1046,
+    endYear: 1115,
+    type: 'king',
+    name: { en: "Matilda of Tuscany", fr: "Mathilde de Toscane", es: "Matilde de Toscana", de: "Mathilde von Tuszien" },
+    description: {
+      en: "Though a Margravine, she ruled vast territories and was the military protector of the Papacy during the Investiture Controversy. She personally led troops in battle to defend Pope Gregory VII against the Emperor.",
+      fr: "Bien que Margravine, elle gouvernait de vastes territoires et était la protectrice militaire de la Papauté. Elle a personnellement mené des troupes pour défendre le pape Grégoire VII.",
+      es: "Aunque Margravina, gobernó vastos territorios y fue la protectora militar del Papado. Lideró personalmente tropas para defender al Papa Gregorio VII.",
+      de: "Obwohl Markgräfin, regierte sie riesige Gebiete und war die militärische Beschützerin des Papsttums. Sie führte persönlich Truppen, um Papst Gregor VII. zu verteidigen."
+    }
+  },
+  {
+    id: 'k_zita',
+    startYear: 1916,
+    endYear: 1918,
+    type: 'king',
+    name: { en: "Servant of God Zita", fr: "Zita de Bourbon-Parme", es: "Sierva de Dios Zita", de: "Dienerin Gottes Zita" },
+    description: {
+      en: "Empress of Austria and Queen of Hungary alongside Blessed Karl. She supported his peace efforts and raised their eight children in the faith during exile. Her cause for canonization is underway.",
+      fr: "Impératrice d'Autriche aux côtés du bienheureux Charles. Elle a soutenu ses efforts de paix et élevé leurs huit enfants dans la foi pendant l'exil. Sa cause de canonisation est en cours.",
+      es: "Emperatriz de Austria junto al Beato Carlos. Apoyó sus esfuerzos de paz y crió a sus ocho hijos en la fe durante el exilio. Su causa de canonización está en marcha.",
+      de: "Kaiserin von Österreich an der Seite des Seligen Karl. Sie unterstützte seine Friedensbemühungen und erzog ihre acht Kinder im Glauben. Ihr Seligsprechungsprozess läuft."
+    }
+  },
+  {
+    id: 'k_louis_xiii',
+    startYear: 1610,
+    endYear: 1643,
+    type: 'king',
+    name: { en: "Louis XIII", fr: "Louis XIII", es: "Luis XIII", de: "Ludwig XIII." },
+    description: {
+      en: "King of France who consecrated his entire kingdom to the Virgin Mary in 1638 in thanksgiving for the pregnancy of his wife after years of childlessness. This led to the tradition of the Feast of the Assumption in France.",
+      fr: "Roi de France qui a consacré son royaume à la Vierge Marie en 1638 en action de grâce pour la grossesse de sa femme. Cela a conduit à la tradition de la fête de l'Assomption en France.",
+      es: "Rey de Francia que consagró todo su reino a la Virgen María en 1638 en acción de gracias por el embarazo de su esposa. Esto llevó a la tradición de la Fiesta de la Asunción.",
+      de: "König von Frankreich, der 1638 sein ganzes Königreich der Jungfrau Maria weihte, als Dank für die Schwangerschaft seiner Frau."
+    }
+  },
+  {
+    id: 'k_edward_martyr',
+    startYear: 975,
+    endYear: 978,
+    type: 'king',
+    name: { en: "St. Edward the Martyr", fr: "Saint Édouard le Martyr", es: "San Eduardo el Mártir", de: "Hl. Eduard der Märtyrer" },
+    description: {
+      en: "King of England murdered at a young age. His support for the monastic reforms of St. Dunstan led to resentment among nobles. Miracles reported at his tomb led to his rapid canonization.",
+      fr: "Roi d'Angleterre assassiné jeune. Son soutien aux réformes monastiques a suscité du ressentiment. Des miracles rapportés sur sa tombe ont conduit à sa canonisation rapide.",
+      es: "Rey de Inglaterra asesinado a una edad temprana. Su apoyo a las reformas monásticas provocó resentimiento. Los milagros en su tumba llevaron a su rápida canonización.",
+      de: "König von England, der in jungen Jahren ermordet wurde. Seine Unterstützung für die Klosterreformen führte zu Ressentiments. Wunder an seinem Grab führten zur Heiligsprechung."
+    }
+  },
+  {
+    id: 'k_ferdinand_arag',
+    startYear: 1412,
+    endYear: 1416,
+    type: 'king',
+    name: { en: "Ferdinand I of Aragon", fr: "Ferdinand Ier d'Aragon", es: "Fernando I de Aragón", de: "Ferdinand I. von Aragon" },
+    description: {
+      en: "Known as Ferdinand the Honest. He helped resolve the Western Schism by withdrawing support from the Antipope Benedict XIII, forcing the path to unity under a single Pope at the Council of Constance.",
+      fr: "Connu sous le nom de Ferdinand le Juste. Il a aidé à résoudre le Grand Schisme d'Occident en retirant son soutien à l'antipape Benoît XIII.",
+      es: "Conocido como Fernando de Antequera. Ayudó a resolver el Cisma de Occidente retirando el apoyo al antipapa Benedicto XIII.",
+      de: "Bekannt als Ferdinand der Ehrliche. Er half, das Abendländische Schisma zu beenden, indem er dem Gegenpapst Benedikt XIII. die Unterstützung entzog."
+    }
+  },
+  {
+    id: 'k_manuel_i',
+    startYear: 1495,
+    endYear: 1521,
+    type: 'king',
+    name: { en: "Manuel I", fr: "Manuel Ier", es: "Manuel I", de: "Manuel I." },
+    description: {
+      en: "King of Portugal during the age of discovery. He sponsored Vasco da Gama and sent missionaries to Brazil, Africa, and India, initiating the global spread of Catholicism.",
+      fr: "Roi du Portugal à l'ère des découvertes. Il a parrainé Vasco de Gama et envoyé des missionnaires au Brésil, en Afrique et en Inde, initiant la diffusion mondiale du catholicisme.",
+      es: "Rey de Portugal durante la era de los descubrimientos. Patrocinó a Vasco da Gama y envió misioneros a Brasil, África e India, iniciando la expansión global del catolicismo.",
+      de: "König von Portugal im Zeitalter der Entdeckungen. Er sponserte Vasco da Gama und sandte Missionare nach Brasilien, Afrika und Indien."
+    }
+  },
+  {
+    id: 'k_brian_boru',
+    startYear: 1002,
+    endYear: 1014,
+    type: 'king',
+    name: { en: "Brian Boru", fr: "Brian Boru", es: "Brian Boru", de: "Brian Boru" },
+    description: {
+      en: "High King of Ireland who ended the domination of the High Kingship by the Uí Néill and defeated the Vikings at Clontarf. He was a patron of the Church, restoring monasteries destroyed by Norse raiders.",
+      fr: "Haut-Roi d'Irlande qui a vaincu les Vikings à Clontarf. Il était un mécène de l'Église, restaurant les monastères détruits par les raids nordiques.",
+      es: "Gran Rey de Irlanda que derrotó a los vikingos en Clontarf. Fue un mecenas de la Iglesia, restaurando monasterios destruidos por los asaltantes nórdicos.",
+      de: "Hochkönig von Irland, der die Wikinger bei Clontarf besiegte. Er war ein Förderer der Kirche und restaurierte von den Nordmännern zerstörte Klöster."
+    }
+  },
+  {
+    id: 'k_john_i_port',
+    startYear: 1385,
+    endYear: 1433,
+    type: 'king',
+    name: { en: "John I of Portugal", fr: "Jean Ier de Portugal", es: "Juan I de Portugal", de: "Johann I. von Portugal" },
+    description: {
+      en: "Founder of the Aviz dynasty. He led Portugal to victory against Castile at Aljubarrota, attributing the win to the Virgin Mary and building the magnificent Batalha Monastery in thanksgiving.",
+      fr: "Fondateur de la dynastie d'Aviz. Il a mené le Portugal à la victoire à Aljubarrota, attribuant la victoire à la Vierge Marie et construisant le monastère de Batalha en action de grâce.",
+      es: "Fundador de la dinastía Avís. Lideró a Portugal a la victoria en Aljubarrota, atribuyendo el triunfo a la Virgen María y construyendo el Monasterio de Batalha.",
+      de: "Gründer der Aviz-Dynastie. Er führte Portugal zum Sieg bei Aljubarrota, schrieb den Sieg der Jungfrau Maria zu und baute das Kloster Batalha."
+    }
+  },
+  {
+    id: 'k_sobieski_daughter',
+    startYear: 1700,
+    endYear: 1735,
+    type: 'king',
+    name: { en: "Maria Clementina Sobieska", fr: "Marie-Clémentine Sobieska", es: "María Clementina Sobieska", de: "Maria Clementina Sobieska" },
+    description: {
+      en: "Titular Queen of England (Jacobite). Granddaughter of John III Sobieski. She was known for her intense piety and charity in Rome. Pope Clement XII ordered a state funeral for her, and she is one of the few laypeople buried in St. Peter's Basilica.",
+      fr: "Reine titulaire d'Angleterre. Petite-fille de Jean III Sobieski. Elle était connue pour sa piété intense à Rome. Elle est l'une des rares laïques enterrées dans la basilique Saint-Pierre.",
+      es: "Reina titular de Inglaterra. Nieta de Juan III Sobieski. Conocida por su intensa piedad en Roma. Es una de las pocas laicas enterradas en la Basílica de San Pedro.",
+      de: "Titular-Königin von England. Enkelin von Johann III. Sobieski. Bekannt für ihre Frömmigkeit. Sie ist eine der wenigen Laien, die im Petersdom begraben sind."
+    }
+  },
+  {
+    id: 'k_louis_xvi',
+    startYear: 1774,
+    endYear: 1793,
+    type: 'king',
+    name: { en: "Louis XVI", fr: "Louis XVI", es: "Luis XVI", de: "Ludwig XVI." },
+    description: {
+      en: "King of France martyred by the French Revolution. He refused to enforce the Civil Constitution of the Clergy which aimed to destroy the Church. He died forgiving his executioners, a model of Christian resignation.",
+      fr: "Roi de France martyrisé par la Révolution. Il a refusé d'appliquer la Constitution civile du clergé. Il est mort en pardonnant à ses bourreaux, modèle de résignation chrétienne.",
+      es: "Rey de Francia martirizado por la Revolución. Se negó a imponer la Constitución Civil del Clero. Murió perdonando a sus verdugos, modelo de resignación cristiana.",
+      de: "König von Frankreich, von der Revolution gemartert. Er weigerte sich, die Zivilverfassung des Klerus durchzusetzen. Er starb und vergab seinen Henkern."
+    }
+  },
+  {
+    id: 'k_henry_ven',
+    startYear: 1870,
+    endYear: 1883,
+    type: 'king',
+    name: { en: "Henri, Count of Chambord", fr: "Henri d'Artois", es: "Enrique de Artois", de: "Henri d'Artois" },
+    description: {
+      en: "The Legitimist pretender to the French throne. He famously refused to become King if it meant accepting the tricolor flag of the Revolution, insisting on the white flag of the Catholic monarchy and the sovereignty of God over the state.",
+      fr: "Le prétendant légitimiste au trône de France. Il a refusé de devenir roi s'il devait accepter le drapeau tricolore, insistant sur le drapeau blanc de la monarchie catholique.",
+      es: "El pretendiente legitimista al trono francés. Se negó a ser rey si eso significaba aceptar la bandera tricolor, insistiendo en la bandera blanca de la monarquía católica.",
+      de: "Der legitimistische Thronprätendent Frankreichs. Er weigerte sich, König zu werden, wenn er die Trikolore akzeptieren müsste, und bestand auf der weißen Flagge."
+    }
+  },
+  {
+    id: 'k_garcia_moreno',
+    startYear: 1861,
+    endYear: 1875,
+    type: 'king',
+    name: { en: "Gabriel Garcia Moreno", fr: "Gabriel Garcia Moreno", es: "Gabriel García Moreno", de: "Gabriel Garcia Moreno" },
+    description: {
+      en: "President of Ecuador who ruled as a Catholic statesman. He consecrated Ecuador to the Sacred Heart of Jesus and was assassinated by Freemasons leaving the Cathedral, crying out 'God does not die!'.",
+      fr: "Président de l'Équateur qui a gouverné en homme d'État catholique. Il a consacré l'Équateur au Sacré-Cœur et a été assassiné en criant 'Dieu ne meurt pas !'.",
+      es: "Presidente de Ecuador que gobernó como estadista católico. Consagró Ecuador al Sagrado Corazón y fue asesinado gritando '¡Dios no muere!'.",
+      de: "Präsident von Ecuador, der als katholischer Staatsmann regierte. Er weihte Ecuador dem Heiligsten Herzen Jesu und wurde ermordet, wobei er rief: 'Gott stirbt nicht!'."
+    }
+  },
+  {
+    id: 'k_tamar',
+    startYear: 1184,
+    endYear: 1213,
+    type: 'king',
+    name: { en: "St. Tamar the Great", fr: "Sainte Tamar", es: "Santa Tamar", de: "Hl. Tamar" },
+    description: {
+      en: "Queen Regnant of Georgia who presided over its Golden Age. She defended her kingdom against Muslim invasions and was a great patron of churches and monasteries. She is canonized in the Orthodox Church but respected by Catholics.",
+      fr: "Reine régnante de Géorgie. Elle a défendu son royaume contre les invasions musulmanes et a été une grande mécène des églises. Elle est respectée par les catholiques.",
+      es: "Reina reinante de Georgia. Defendió su reino contra las invasiones musulmanas y fue una gran mecenas de iglesias. Es respetada por los católicos.",
+      de: "Regierende Königin von Georgien. Sie verteidigte ihr Königreich gegen muslimische Invasionen und war eine große Förderin von Kirchen."
+    }
+  },
+  {
+    id: 'k_mieszko',
+    startYear: 960,
+    endYear: 992,
+    type: 'king',
+    name: { en: "Mieszko I", fr: "Mieszko Ier", es: "Mieszko I", de: "Mieszko I." },
+    description: {
+      en: "Duke of Poland who accepted Baptism in 966, an event known as the 'Baptism of Poland'. This act brought Poland into the orbit of Western Latin culture and Catholicism, defining its history for a millennium.",
+      fr: "Duc de Pologne qui a accepté le baptême en 966. Cet acte a fait entrer la Pologne dans l'orbite de la culture latine occidentale et du catholicisme.",
+      es: "Duque de Polonia que aceptó el bautismo en 966. Este acto llevó a Polonia a la órbita de la cultura latina occidental y el catolicismo.",
+      de: "Herzog von Polen, der 966 die Taufe annahm. Dieser Akt brachte Polen in den Orbit der westlichen lateinischen Kultur und des Katholizismus."
+    }
+  },
+  {
+    id: 'k_james_v',
+    startYear: 1513,
+    endYear: 1542,
+    type: 'king',
+    name: { en: "James V of Scotland", fr: "Jacques V d'Écosse", es: "Jacobo V de Escocia", de: "Jakob V. von Schottland" },
+    description: {
+      en: "King of Scotland who resisted the pressure from his uncle Henry VIII to break with Rome. He defended the Catholic faith in Scotland until his death, leaving the throne to Mary, Queen of Scots.",
+      fr: "Roi d'Écosse qui a résisté à la pression de son oncle Henri VIII pour rompre avec Rome. Il a défendu la foi catholique en Écosse jusqu'à sa mort.",
+      es: "Rey de Escocia que resistió la presión de su tío Enrique VIII para romper con Roma. Defendió la fe católica en Escocia hasta su muerte.",
+      de: "König von Schottland, der dem Druck seines Onkels Heinrich VIII. widerstand, mit Rom zu brechen. Er verteidigte den katholischen Glauben bis zu seinem Tod."
+    }
   }
 ];
