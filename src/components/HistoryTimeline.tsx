@@ -730,17 +730,17 @@ export default function HistoryTimeline() {
         </div>
       </div>
 
-      {/* TIMELINE */}
+{/* TIMELINE */}
       <div className="container mx-auto w-full max-w-[98%] lg:max-w-7xl flex-1 flex flex-col min-h-[60vh]">
-        <div className="relative w-full h-full flex-1 border border-gray-700 rounded-xl bg-[#080808] shadow-2xl overflow-hidden flex flex-col select-none">
-          
-          {/* FIXED: Moved "No events" message OUTSIDE scroll container so it's always visible */}
-          {positionedEvents.length === 0 && (
-            <div className={cn("absolute z-50 left-1/2 top-16 -translate-x-1/2 text-gray-500 text-center w-full px-4", isMobile ? "text-sm" : "text-lg")}>
-              No events match the selected filters.
-            </div>
-          )}
+        
+        {/* MOVED HERE: Now sits just above the timeline container so it is always visible */}
+        {positionedEvents.length === 0 && (
+          <div className="w-full text-center mb-4 py-2 text-gray-500 text-lg font-medium bg-gray-900/50 border border-gray-800 rounded-lg">
+            No events match the selected filters.
+          </div>
+        )}
 
+        <div className="relative w-full h-full flex-1 border border-gray-700 rounded-xl bg-[#080808] shadow-2xl overflow-hidden flex flex-col select-none">
           <div 
             className="flex-1 w-full overflow-x-auto overflow-y-auto relative timeline-scrollbar cursor-grab active:cursor-grabbing" 
             ref={scrollContainerRef} 
@@ -751,7 +751,6 @@ export default function HistoryTimeline() {
             onMouseLeave={handleTimelineMouseLeave}
             style={{ scrollBehavior: 'auto', touchAction: 'auto' }}
           >
-            {/* FIXED: Added overflow-hidden to clip events extending past 2100 */}
             <div className="relative overflow-hidden" style={{ width: `${totalContentWidth}px`, height: '100%', minHeight: `${containerStyleHeight}px` }}>
               <div className="absolute inset-0 pointer-events-none opacity-20" style={{ backgroundImage: `linear-gradient(to right, #333 1px, transparent 1px)`, backgroundSize: `${100 * pixelsPerYear}px 100%` }} />
               
@@ -808,13 +807,23 @@ export default function HistoryTimeline() {
         </div>
       </div>
 
+
+
+
       {/* MODAL */}
       <AnimatePresence>
-        {selectedEvent && (
+
+
+       {selectedEvent && (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" onClick={() => setSelectedEvent(null)}>
-            <motion.div initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: 50, opacity: 0 }} onClick={(e) => e.stopPropagation()} className="bg-[#111] border border-gray-700 rounded-2xl w-[90%] max-w-md shadow-2xl overflow-hidden relative">
+            {/* CHANGED: Updated className with bg-[#0a0a0a]/95 and backdrop-blur-xl for better readability */}
+            <motion.div initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: 50, opacity: 0 }} onClick={(e) => e.stopPropagation()} className="bg-[#0a0a0a]/95 backdrop-blur-xl border border-gray-700 rounded-2xl w-[90%] max-w-md shadow-2xl overflow-hidden relative">
               <div className={cn("h-32 relative flex items-end p-6 border-b", getColors(selectedEvent.type).bg, getColors(selectedEvent.type).border)}>
                 <button onClick={() => setSelectedEvent(null)} className="absolute top-4 right-4 bg-black/40 hover:bg-black/70 rounded-full p-2 text-white transition-colors z-50"><X size={20} /></button>
+
+
+
+                
                 <div className="relative z-10 w-full"><div className="text-xs uppercase tracking-widest font-bold mb-2 flex items-center gap-2 text-white/90">{getIcon(selectedEvent.type)} {selectedEvent.type}</div><h2 className="text-3xl font-bold text-white leading-none">{selectedEvent.name[language]}</h2></div>
               </div>
               <div className="p-8">
