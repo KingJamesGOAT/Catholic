@@ -17,7 +17,8 @@ import {
   ChevronRight,
   CircleHelp,
   Tag,
-  CornerDownLeft
+  CornerDownLeft,
+  RotateCcw
 } from 'lucide-react';
 import { useLanguage } from '../lib/i18n/LanguageContext';
 
@@ -492,143 +493,154 @@ export default function HistoryTimeline() {
            ))}
         </div>
 
-        {/* Main Controls */}
-        <div className="flex flex-col md:flex-row items-center gap-4 justify-between w-full">
-          {/* Search Bar - Z-Index 40 to sit below Top Nav (50) but above Timeline (20) */}
-          <div className="w-full md:flex-1 relative z-40">
-            {/* Active Tags */}
-            {searchTags.length > 0 && (
-              <div className="flex flex-wrap gap-2 mb-2">
-                {searchTags.map(tag => (
-                  <span key={tag.id} className="inline-flex items-center gap-1 bg-blue-900/50 text-blue-200 border border-blue-700 px-2 py-1 rounded-md text-xs">
-                    {tag.kind === 'event' ? <HistoryIcon size={10} /> : <Tag size={10} />}
-                    {tag.kind === 'event' ? tag.name : tag.label}
-                    <button onClick={() => removeSearchTag(tag.id)} className="hover:text-white"><X size={12} /></button>
-                  </span>
-                ))}
-              </div>
-            )}
-
-            <div className="relative group flex items-center bg-[#0a0a0a] rounded-lg border border-gray-700 px-3 py-2 focus-within:border-blue-500 transition-all w-full">
-              <Search size={16} className="text-gray-500 shrink-0 mr-2" />
-              <input 
-                ref={searchInputRef}
-                type="text" 
-                placeholder={TIMELINE_UI.searchPlaceholder[language]}
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                onKeyDown={handleSearchKeyDown}
-                className="bg-transparent border-none outline-none text-sm text-white placeholder-gray-600 w-full"
-              />
-              
-              {/* Logic Toggle Button */}
-              {searchTags.length > 1 && (
-                 <button 
-                   onClick={() => setSearchMode(m => m === 'OR' ? 'AND' : 'OR')}
-                   className={cn(
-                     "ml-2 text-[10px] font-bold px-1.5 py-0.5 rounded border transition-colors uppercase whitespace-nowrap",
-                     searchMode === 'AND' 
-                       ? "bg-blue-900/50 border-blue-500 text-blue-200" 
-                       : "bg-gray-800 border-gray-600 text-gray-400 hover:text-white"
-                   )}
-                   title={searchMode === 'OR' ? TIMELINE_UI.logicAny[language] : TIMELINE_UI.logicAll[language]}
-                 >
-                   {searchMode}
-                 </button>
-              )}
-
-              <button onClick={() => setShowHelp(!showHelp)} className="text-gray-500 hover:text-blue-400 transition-colors ml-2" title="Search Options">
-                <CircleHelp size={16} />
+        {/* Layout Fix: Outer container flex-col, but inner row maintains button alignment */}
+        <div className="flex flex-col gap-2 w-full">
+          
+          {/* Tag Row */}
+          {searchTags.length > 0 && (
+            <div className="flex flex-wrap items-center gap-2 mb-1">
+              {searchTags.map(tag => (
+                <span key={tag.id} className="inline-flex items-center gap-1 bg-blue-900/50 text-blue-200 border border-blue-700 px-2 py-1 rounded-md text-xs">
+                  {tag.kind === 'event' ? <HistoryIcon size={10} /> : <Tag size={10} />}
+                  {tag.kind === 'event' ? tag.name : tag.label}
+                  <button onClick={() => removeSearchTag(tag.id)} className="hover:text-white"><X size={12} /></button>
+                </span>
+              ))}
+              <button 
+                onClick={() => setSearchTags([])} 
+                className="inline-flex items-center gap-1.5 bg-red-900/20 text-red-400 border border-red-900/50 px-2 py-1 rounded-md text-xs hover:bg-red-900/40 hover:text-red-300 transition-colors"
+              >
+                <RotateCcw size={10} />
+                Reset all
               </button>
-              {(searchQuery || searchTags.length > 0) && (
-                <button onClick={() => {setSearchQuery(''); setSearchTags([]); setSearchMode('OR');}} className="text-gray-500 hover:text-white transition-colors ml-2"><X size={14} /></button>
-              )}
+            </div>
+          )}
+
+          {/* Main Controls Row: Search Box and Navigation/Zoom aligned horizontally */}
+          <div className="flex flex-col md:flex-row items-center gap-4 justify-between w-full">
+            
+            {/* Search Bar Container */}
+            <div className="w-full md:flex-1 relative z-30">
+              <div className="relative group flex items-center bg-[#0a0a0a] rounded-lg border border-gray-700 px-3 py-2 focus-within:border-blue-500 transition-all w-full">
+                <Search size={16} className="text-gray-500 shrink-0 mr-2" />
+                <input 
+                  ref={searchInputRef}
+                  type="text" 
+                  placeholder={TIMELINE_UI.searchPlaceholder[language]}
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onKeyDown={handleSearchKeyDown}
+                  className="bg-transparent border-none outline-none text-sm text-white placeholder-gray-600 w-full"
+                />
+                
+                {searchTags.length > 1 && (
+                   <button 
+                     onClick={() => setSearchMode(m => m === 'OR' ? 'AND' : 'OR')}
+                     className={cn(
+                       "ml-2 text-[10px] font-bold px-1.5 py-0.5 rounded border transition-colors uppercase whitespace-nowrap",
+                       searchMode === 'AND' 
+                         ? "bg-blue-900/50 border-blue-500 text-blue-200" 
+                         : "bg-gray-800 border-gray-600 text-gray-400 hover:text-white"
+                     )}
+                     title={searchMode === 'OR' ? TIMELINE_UI.logicAny[language] : TIMELINE_UI.logicAll[language]}
+                   >
+                     {searchMode}
+                   </button>
+                )}
+
+                <button onClick={() => setShowHelp(!showHelp)} className="text-gray-500 hover:text-blue-400 transition-colors ml-2" title="Search Options">
+                  <CircleHelp size={16} />
+                </button>
+                {(searchQuery || searchTags.length > 0) && (
+                  <button onClick={() => {setSearchQuery(''); setSearchTags([]); setSearchMode('OR');}} className="text-gray-500 hover:text-white transition-colors ml-2"><X size={14} /></button>
+                )}
+              </div>
+
+              {/* Suggestions Dropdown (Absolute to not push buttons) */}
+              <AnimatePresence>
+                {showSuggestions && suggestions.length > 0 && (
+                  <motion.ul initial={{ opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 5 }} className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-lg shadow-2xl overflow-hidden z-30">
+                    {suggestions.map((item, idx) => (
+                      <li 
+                        key={idx}
+                        onClick={() => addSearchTag(item)}
+                        className={cn("px-4 py-3 cursor-pointer border-b border-gray-800 last:border-0 flex items-center justify-between transition-colors", idx === activeSuggestionIndex ? "bg-blue-600 text-white" : "text-gray-100 hover:bg-gray-800")}
+                      >
+                        {'isCommand' in item ? (
+                          <div className="flex items-center gap-2"><Tag size={14} className="opacity-70"/><span className="font-bold">{item.label}</span></div>
+                        ) : (
+                          <>
+                            <div className="flex items-center gap-2"><span className="text-xs opacity-50 uppercase w-12">{item.type}</span><span className="font-medium text-sm">{item.name[language]}</span></div>
+                            <span className="text-xs opacity-50">{item.startYear}</span>
+                          </>
+                        )}
+                      </li>
+                    ))}
+                  </motion.ul>
+                )}
+              </AnimatePresence>
+
+              {/* Help Dropdown */}
+              <AnimatePresence>
+                {showHelp && (
+                  <motion.div 
+                    ref={helpRef}
+                    initial={{ opacity: 0, y: 5 }} 
+                    animate={{ opacity: 1, y: 0 }} 
+                    exit={{ opacity: 0, y: 5 }} 
+                    className="absolute top-full right-0 mt-2 w-72 bg-gray-900 border border-gray-700 rounded-lg shadow-2xl p-4 z-30 text-xs text-gray-300"
+                  >
+                    <div className="flex justify-between items-center mb-2"><h4 className="font-bold text-white">{TIMELINE_UI.searchHelpTitle[language]}</h4><button onClick={() => setShowHelp(false)}><X size={14}/></button></div>
+                    <ul className="space-y-2">
+                      <li className="flex justify-between"><span><code>/category</code></span> <span className="text-gray-500">{TIMELINE_UI.helpCategory[language]}</span></li>
+                      <li className="flex justify-between"><span><code>/text</code></span> <span className="text-gray-500">{TIMELINE_UI.helpText[language]}</span></li>
+                      <li className="flex justify-between"><span><code>1000-1200</code></span> <span className="text-gray-500">{TIMELINE_UI.helpRange[language]}</span></li>
+                      <li className="flex justify-between"><span><code>13c / 13th</code></span> <span className="text-gray-500">{TIMELINE_UI.helpCentury[language]}</span></li>
+                      <li className="flex justify-between"><span><code>&gt; 1000</code></span> <span className="text-gray-500">{TIMELINE_UI.helpAfter[language]}</span></li>
+                      <li className="flex justify-between"><span><code>&lt; 500</code></span> <span className="text-gray-500">{TIMELINE_UI.helpBefore[language]}</span></li>
+                      <li className="flex justify-between"><span><code>= 1517</code></span> <span className="text-gray-500">{TIMELINE_UI.helpExact[language]}</span></li>
+                    </ul>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
 
-            {/* Help Dropdown - Z-Index 40 to float above timeline */}
-            <AnimatePresence>
-              {showHelp && (
-                <motion.div 
-                  ref={helpRef}
-                  initial={{ opacity: 0, y: 5 }} 
-                  animate={{ opacity: 1, y: 0 }} 
-                  exit={{ opacity: 0, y: 5 }} 
-                  className="absolute top-full right-0 mt-2 w-72 bg-gray-900 border border-gray-700 rounded-lg shadow-2xl p-4 z-40 text-xs text-gray-300"
-                >
-                  <div className="flex justify-between items-center mb-2"><h4 className="font-bold text-white">{TIMELINE_UI.searchHelpTitle[language]}</h4><button onClick={() => setShowHelp(false)}><X size={14}/></button></div>
-                  <ul className="space-y-2">
-                    <li className="flex justify-between"><span><code>/category</code></span> <span className="text-gray-500">{TIMELINE_UI.helpCategory[language]}</span></li>
-                    <li className="flex justify-between"><span><code>/text</code></span> <span className="text-gray-500">{TIMELINE_UI.helpText[language]}</span></li>
-                    <li className="flex justify-between"><span><code>1000-1200</code></span> <span className="text-gray-500">{TIMELINE_UI.helpRange[language]}</span></li>
-                    <li className="flex justify-between"><span><code>13c / 13th</code></span> <span className="text-gray-500">{TIMELINE_UI.helpCentury[language]}</span></li>
-                    <li className="flex justify-between"><span><code>&gt; 1000</code></span> <span className="text-gray-500">{TIMELINE_UI.helpAfter[language]}</span></li>
-                    <li className="flex justify-between"><span><code>&lt; 500</code></span> <span className="text-gray-500">{TIMELINE_UI.helpBefore[language]}</span></li>
-                    <li className="flex justify-between"><span><code>= 1517</code></span> <span className="text-gray-500">{TIMELINE_UI.helpExact[language]}</span></li>
-                  </ul>
-                </motion.div>
-              )}
-            </AnimatePresence>
-
-            {/* Suggestions Dropdown - Z-Index 40 to float above timeline */}
-            <AnimatePresence>
-              {showSuggestions && suggestions.length > 0 && (
-                <motion.ul initial={{ opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 5 }} className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-lg shadow-2xl overflow-hidden z-40">
-                  {suggestions.map((item, idx) => (
-                    <li 
-                      key={idx}
-                      onClick={() => addSearchTag(item)}
-                      className={cn("px-4 py-3 cursor-pointer border-b border-gray-800 last:border-0 flex items-center justify-between transition-colors", idx === activeSuggestionIndex ? "bg-blue-600 text-white" : "text-gray-100 hover:bg-gray-800")}
-                    >
-                      {'isCommand' in item ? (
-                        <div className="flex items-center gap-2"><Tag size={14} className="opacity-70"/><span className="font-bold">{item.label}</span></div>
-                      ) : (
-                        <>
-                          <div className="flex items-center gap-2"><span className="text-xs opacity-50 uppercase w-12">{item.type}</span><span className="font-medium text-sm">{item.name[language]}</span></div>
-                          <span className="text-xs opacity-50">{item.startYear}</span>
-                        </>
-                      )}
-                    </li>
-                  ))}
-                </motion.ul>
-              )}
-            </AnimatePresence>
-          </div>
-
-          {/* Buttons */}
-          <div className="flex flex-col md:flex-row items-center gap-3 w-full md:w-auto">
-            {isMobile ? (
-              <div className="w-full flex flex-col gap-3">
-                <div className="flex justify-center items-center gap-1 bg-[#0a0a0a] rounded-lg p-1 border border-gray-700 self-center">
-                  <button onClick={() => handleZoom('out')} disabled={pixelsPerYear <= minZoom} className="p-3 hover:bg-gray-800 disabled:opacity-30 rounded text-gray-300"><ZoomOut size={20}/></button>
-                  <button onClick={() => handleZoom('reset')} className="p-3 hover:bg-gray-800 rounded text-gray-300"><Maximize2 size={20}/></button>
-                  <button onClick={() => handleZoom('in')} disabled={pixelsPerYear >= maxZoom} className="p-3 hover:bg-gray-800 disabled:opacity-30 rounded text-gray-300"><ZoomIn size={20}/></button>
-                </div>
-                <div className="flex justify-center items-center gap-2">
-                  <button onClick={() => handleNavigate('left')} className="bg-[#0a0a0a] border border-gray-700 hover:bg-gray-800 rounded-lg p-3 text-gray-300"><ChevronLeft size={20} /></button>
-                  <div className="flex items-center bg-[#0a0a0a] rounded-lg border border-gray-700 px-3 py-2">
-                    <input type="number" placeholder="Year" value={targetYear} onChange={(e) => setTargetYear(e.target.value)} onKeyDown={handleKeyDown} className="bg-transparent border-none outline-none text-sm text-white placeholder-gray-600 w-16 text-center"/>
-                    <button onClick={jumpToYear} className="bg-gray-800 hover:bg-gray-700 rounded p-1 text-white ml-1"><CornerDownLeft size={16} /></button>
+            {/* Buttons & Year Jumper */}
+            <div className="flex flex-col md:flex-row items-center gap-3 w-full md:w-auto">
+              {isMobile ? (
+                <div className="w-full flex flex-col gap-3">
+                  <div className="flex justify-center items-center gap-1 bg-[#0a0a0a] rounded-lg p-1 border border-gray-700 self-center">
+                    <button onClick={() => handleZoom('out')} disabled={pixelsPerYear <= minZoom} className="p-3 hover:bg-gray-800 disabled:opacity-30 rounded text-gray-300"><ZoomOut size={20}/></button>
+                    <button onClick={() => handleZoom('reset')} className="p-3 hover:bg-gray-800 rounded text-gray-300"><Maximize2 size={20}/></button>
+                    <button onClick={() => handleZoom('in')} disabled={pixelsPerYear >= maxZoom} className="p-3 hover:bg-gray-800 disabled:opacity-30 rounded text-gray-300"><ZoomIn size={20}/></button>
                   </div>
-                  <button onClick={() => handleNavigate('right')} className="bg-[#0a0a0a] border border-gray-700 hover:bg-gray-800 rounded-lg p-3 text-gray-300"><ChevronRight size={20} /></button>
-                </div>
-              </div>
-            ) : (
-              <>
-                <div className="flex items-center gap-2">
-                  <button onClick={() => handleNavigate('left')} className="bg-[#0a0a0a] border border-gray-700 hover:bg-gray-800 rounded-lg p-2 text-gray-300"><ChevronLeft size={16} /></button>
-                  <div className="flex items-center bg-[#0a0a0a] rounded-lg border border-gray-700 px-3 py-1.5">
-                    <input type="number" placeholder="Year" value={targetYear} onChange={(e) => setTargetYear(e.target.value)} onKeyDown={handleKeyDown} className="bg-transparent border-none outline-none text-sm text-white placeholder-gray-600 w-16"/>
-                    <button onClick={jumpToYear} className="bg-gray-800 hover:bg-gray-700 rounded p-1 text-white ml-1"><CornerDownLeft size={14} /></button>
+                  <div className="flex justify-center items-center gap-2">
+                    <button onClick={() => handleNavigate('left')} className="bg-[#0a0a0a] border border-gray-700 hover:bg-gray-800 rounded-lg p-3 text-gray-300"><ChevronLeft size={20} /></button>
+                    <div className="flex items-center bg-[#0a0a0a] rounded-lg border border-gray-700 px-3 py-2">
+                      <input type="number" placeholder="Year" value={targetYear} onChange={(e) => setTargetYear(e.target.value)} onKeyDown={handleKeyDown} className="bg-transparent border-none outline-none text-sm text-white placeholder-gray-600 w-16 text-center"/>
+                      <button onClick={jumpToYear} className="bg-gray-800 hover:bg-gray-700 rounded p-1 text-white ml-1"><CornerDownLeft size={16} /></button>
+                    </div>
+                    <button onClick={() => handleNavigate('right')} className="bg-[#0a0a0a] border border-gray-700 hover:bg-gray-800 rounded-lg p-3 text-gray-300"><ChevronRight size={20} /></button>
                   </div>
-                  <button onClick={() => handleNavigate('right')} className="bg-[#0a0a0a] border border-gray-700 hover:bg-gray-800 rounded-lg p-2 text-gray-300"><ChevronRight size={16} /></button>
                 </div>
-                <div className="flex items-center gap-1 bg-[#0a0a0a] rounded-lg p-1 border border-gray-700">
-                  <button onClick={() => handleZoom('out')} disabled={pixelsPerYear <= minZoom} className="p-2 hover:bg-gray-800 disabled:opacity-30 rounded text-gray-300"><ZoomOut size={18}/></button>
-                  <button onClick={() => handleZoom('reset')} className="p-2 hover:bg-gray-800 rounded text-gray-300"><Maximize2 size={18}/></button>
-                  <button onClick={() => handleZoom('in')} disabled={pixelsPerYear >= maxZoom} className="p-2 hover:bg-gray-800 disabled:opacity-30 rounded text-gray-300"><ZoomIn size={18}/></button>
-                </div>
-              </>
-            )}
+              ) : (
+                <>
+                  <div className="flex items-center gap-2">
+                    <button onClick={() => handleNavigate('left')} className="bg-[#0a0a0a] border border-gray-700 hover:bg-gray-800 rounded-lg p-2 text-gray-300"><ChevronLeft size={16} /></button>
+                    <div className="flex items-center bg-[#0a0a0a] rounded-lg border border-gray-700 px-3 py-1.5">
+                      <input type="number" placeholder="Year" value={targetYear} onChange={(e) => setTargetYear(e.target.value)} onKeyDown={handleKeyDown} className="bg-transparent border-none outline-none text-sm text-white placeholder-gray-600 w-16"/>
+                      <button onClick={jumpToYear} className="bg-gray-800 hover:bg-gray-700 rounded p-1 text-white ml-1"><CornerDownLeft size={14} /></button>
+                    </div>
+                    <button onClick={() => handleNavigate('right')} className="bg-[#0a0a0a] border border-gray-700 hover:bg-gray-800 rounded-lg p-2 text-gray-300"><ChevronRight size={16} /></button>
+                  </div>
+                  <div className="flex items-center gap-1 bg-[#0a0a0a] rounded-lg p-1 border border-gray-700">
+                    <button onClick={() => handleZoom('out')} disabled={pixelsPerYear <= minZoom} className="p-2 hover:bg-gray-800 disabled:opacity-30 rounded text-gray-300"><ZoomOut size={18}/></button>
+                    <button onClick={() => handleZoom('reset')} className="p-2 hover:bg-gray-800 rounded text-gray-300"><Maximize2 size={18}/></button>
+                    <button onClick={() => handleZoom('in')} disabled={pixelsPerYear >= maxZoom} className="p-2 hover:bg-gray-800 disabled:opacity-30 rounded text-gray-300"><ZoomIn size={18}/></button>
+                  </div>
+                </>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -647,7 +659,6 @@ export default function HistoryTimeline() {
       <div className="container mx-auto w-full max-w-[98%] lg:max-w-7xl flex-1 flex flex-col min-h-[60vh]">
         <div className="relative w-full h-full flex-1 border border-gray-700 rounded-xl bg-[#080808] shadow-2xl overflow-hidden flex flex-col select-none">
           <div 
-            // FIX: Changed touchAction from 'pan-y' to 'auto' so browser handles horizontal touch scroll natively
             className="flex-1 w-full overflow-x-auto overflow-y-auto relative timeline-scrollbar cursor-grab active:cursor-grabbing" 
             ref={scrollContainerRef} 
             onScroll={handleMainScroll}
@@ -660,7 +671,7 @@ export default function HistoryTimeline() {
             <div className="relative" style={{ width: `${totalContentWidth}px`, height: '100%', minHeight: `${containerStyleHeight}px` }}>
               <div className="absolute inset-0 pointer-events-none opacity-20" style={{ backgroundImage: `linear-gradient(to right, #333 1px, transparent 1px)`, backgroundSize: `${100 * pixelsPerYear}px 100%` }} />
               
-              {/* Sticky Top Axis - Reduced to Z-20 so dropdowns (Z-40) cover it */}
+              {/* Sticky Top Axis - Reduced to Z-20 */}
               <div className="sticky top-0 left-0 right-0 h-12 border-b border-gray-800 bg-[#0a0a0a]/95 backdrop-blur-md z-20 flex items-end shadow-md pointer-events-none">
                  {ticks.map(year => (
                    <div key={year} className="absolute bottom-0 flex flex-col items-center" style={{ left: `${(year - DATA_START_YEAR) * pixelsPerYear}px` }}>
@@ -682,13 +693,23 @@ export default function HistoryTimeline() {
                             initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} 
                             whileHover={{ scale: 1.02, zIndex: 15 }}
                             onClick={() => setSelectedEvent(event as TimelineEvent)}
-                            className={cn("absolute rounded-lg border flex flex-col cursor-pointer shadow-lg transition-all z-10 event-card", isHighlighted ? "ring-2 ring-white shadow-white/20" : "", isMobile ? "px-1.5 py-1 justify-start overflow-hidden" : "px-4 justify-center", colors.bg, colors.border, colors.hover)}
+                            className={cn(
+                              "absolute rounded-lg border flex flex-col cursor-pointer shadow-lg transition-all z-10 event-card", 
+                              isHighlighted ? "ring-2 ring-white shadow-white/20" : "", 
+                              isMobile ? "px-1.5 py-0.5 justify-start overflow-hidden" : "px-4 justify-center", 
+                              colors.bg, colors.border, colors.hover
+                            )}
                             style={{ left: `${event.x}px`, width: `${event.width}px`, top: `${event.lane * (currentLaneHeight + currentEventGap)}px`, height: `${currentLaneHeight}px` }}
                         >
                             <div className="flex items-start gap-2 h-full">
                                 <span className="shrink-0 mt-0.5 hidden md:block">{getIcon(event.type)}</span>
                                 <div className="flex flex-col min-w-0 justify-center h-full">
-                                    <span className={cn("text-white shadow-black drop-shadow-md leading-tight", isMobile ? "text-[9px] font-normal leading-[10px] whitespace-normal" : "font-bold " + (currentLaneHeight < 60 ? "text-xs line-clamp-2" : "text-sm line-clamp-2"))}>
+                                    <span className={cn(
+                                      "text-white shadow-black drop-shadow-md", 
+                                      isMobile 
+                                        ? "text-[8px] font-medium leading-[9px] tracking-tight whitespace-normal" 
+                                        : "font-bold leading-tight " + (currentLaneHeight < 60 ? "text-xs line-clamp-2" : "text-sm line-clamp-2")
+                                    )}>
                                         {event.name[language]}
                                     </span>
                                     {!isMobile && currentLaneHeight > 35 && <span className="truncate text-white/80 mt-0.5 text-[10px]">{event.startYear} {event.endYear && event.endYear !== event.startYear ? `- ${event.endYear}` : ''}</span>}
