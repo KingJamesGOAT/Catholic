@@ -61,6 +61,7 @@ export default function HistoryTimeline() {
   // Refs
   const searchInputRef = useRef<HTMLInputElement>(null);
   const helpRef = useRef<HTMLDivElement>(null); 
+  const hasInitializedZoom = useRef(false); // Track initial zoom setting
 
   // Controls state
   const [pixelsPerYear, setPixelsPerYear] = useState(2); 
@@ -106,7 +107,15 @@ export default function HistoryTimeline() {
   useEffect(() => {
     const updateWidth = () => {
       if (scrollContainerRef.current) {
-        setContainerWidth(scrollContainerRef.current.clientWidth);
+        const width = scrollContainerRef.current.clientWidth;
+        setContainerWidth(width);
+
+        // Initial Zoom Logic: roughly 300 years visible on Desktop/Tablet
+        if (!hasInitializedZoom.current && width >= 768) {
+            // width / 300 gives the pixelsPerYear needed to show 300 years exactly
+            setPixelsPerYear(width / 300);
+            hasInitializedZoom.current = true;
+        }
       }
     };
     updateWidth();
@@ -225,9 +234,10 @@ export default function HistoryTimeline() {
 
   const addSearchTag = (item: any) => {
     let targetScrollYear: number | null = null;
+    let newTag: SearchTag;
 
     if (item.isCommand) {
-      const newTag: SearchTag = {
+      newTag = {
         kind: 'filter',
         id: `filter-${item.type}-${item.value}-${Date.now()}`,
         label: item.label.replace('Filter: ', '').replace('Range: ', ''),
@@ -244,7 +254,7 @@ export default function HistoryTimeline() {
       }
 
     } else {
-      const newTag: SearchTag = {
+      newTag = {
         kind: 'event',
         id: item.id,
         name: item.name[language],
@@ -252,6 +262,52 @@ export default function HistoryTimeline() {
       };
       setSearchTags(prev => [...prev, newTag]);
       targetScrollYear = item.startYear;
+    }
+
+    // Logic: If targetScrollYear wasn't set by a year filter, find the first event that matches the NEW tag set
+    if (targetScrollYear === null) {
+        const tempTags = [...searchTags, newTag];
+        const firstMatch = allEvents.find(event => {
+            // Re-using filter logic here to find first match
+            if (tempTags.length > 0) {
+                const tagMatches = (tag: SearchTag) => {
+                  if (tag.kind === 'event') return tag.id === event.id;
+                  if (tag.kind === 'filter') {
+                    if (tag.type === 'category') return event.type === tag.value;
+                    if (tag.type === 'text') {
+                      const q = tag.value.toLowerCase();
+                      return event.name[language].toLowerCase().includes(q) || 
+                             event.description[language].toLowerCase().includes(q);
+                    }
+                    if (tag.type === 'year_gt') return event.startYear > parseInt(tag.value);
+                    if (tag.type === 'year_lt') return event.startYear < parseInt(tag.value);
+                    if (tag.type === 'year_exact') {
+                        // Check if exact year is within event duration
+                        const target = parseInt(tag.value);
+                        const end = event.endYear || event.startYear;
+                        return target >= event.startYear && target <= end;
+                    }
+                    if (tag.type === 'year_range') {
+                      const [start, end] = tag.value.split('-').map(Number);
+                      return event.startYear >= start && event.startYear <= end;
+                    }
+                  }
+                  return false;
+                };
+        
+                const hasMatch = searchMode === 'OR' 
+                  ? tempTags.some(tagMatches) 
+                  : tempTags.every(tagMatches);
+        
+                if (!hasMatch) return false;
+            }
+            if (selectedTypes.length > 0 && !selectedTypes.includes(event.type)) return false;
+            return true;
+        });
+
+        if (firstMatch) {
+            targetScrollYear = firstMatch.startYear;
+        }
     }
 
     if (targetScrollYear !== null && !isNaN(targetScrollYear) && scrollContainerRef.current) {
@@ -316,7 +372,14 @@ export default function HistoryTimeline() {
             }
             if (tag.type === 'year_gt') return event.startYear > parseInt(tag.value);
             if (tag.type === 'year_lt') return event.startYear < parseInt(tag.value);
-            if (tag.type === 'year_exact') return event.startYear === parseInt(tag.value);
+            
+            // UPDATED: Check if the exact year falls anywhere within the event range
+            if (tag.type === 'year_exact') {
+                const target = parseInt(tag.value);
+                const end = event.endYear || event.startYear;
+                return target >= event.startYear && target <= end;
+            }
+
             if (tag.type === 'year_range') {
               const [start, end] = tag.value.split('-').map(Number);
               return event.startYear >= start && event.startYear <= end;
@@ -345,7 +408,10 @@ export default function HistoryTimeline() {
       if (event.startYear === undefined) return null;
       const startPixel = (event.startYear - DATA_START_YEAR) * pixelsPerYear;
       const duration = (event.endYear || event.startYear) - event.startYear;
-      const minWidth = isMobile ? 125 : 140; 
+
+      // Logic updated for mobile: At least 20 years worth of pixels OR 60px minimum for readability
+      const minWidth = isMobile ? Math.max(20 * pixelsPerYear, 60) : 140; 
+      
       const widthPixel = Math.max(duration * pixelsPerYear, minWidth);
       const endPixel = startPixel + widthPixel + (isMobile ? 10 : 20);
 
@@ -683,7 +749,11 @@ export default function HistoryTimeline() {
               <div className="sticky top-12 left-0 right-0 h-0.5 bg-blue-600/50 shadow-[0_0_10px_rgba(37,99,235,0.5)] z-20 pointer-events-none" />
 
               <div className="absolute top-16 left-0 right-0 bottom-4">
-                {positionedEvents.length === 0 && <div className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-gray-500 text-lg">No events match the selected filters.</div>}
+                {positionedEvents.length === 0 && (
+                  <div className={cn("absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-gray-500 text-center w-full px-4", isMobile ? "text-sm" : "text-lg")}>
+                    No events match the selected filters.
+                  </div>
+                )}
                 {positionedEvents.map((event) => {
                     const colors = getColors(event.type);
                     const isHighlighted = searchTags.some(t => t.kind === 'event' && t.id === event.id);
