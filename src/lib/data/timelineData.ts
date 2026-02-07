@@ -7073,19 +7073,7 @@ export const WRITINGS: TimelineEvent[] = [
       de: "Hl. Ludwig von Montfort. Erklärt die vollkommene Hingabe an Jesus durch Maria." 
     } 
   },
-  { 
-    id: 'w_liguori_glories', 
-    startYear: 1750, 
-    endYear: 1750, 
-    type: 'writing', 
-    name: { en: "The Glories of Mary", fr: "Les Gloires de Marie", es: "Las Glorias de María", de: "Die Herrlichkeiten Mariens" }, 
-    description: { 
-      en: "St. Alphonsus Liguori. A classic defense of Marian devotion and a commentary on the Salve Regina.", 
-      fr: "St Alphonse de Liguori. Défense classique de la dévotion mariale et commentaire du Salve Regina.", 
-      es: "San Alfonso María de Ligorio. Defensa clásica de la devoción mariana y comentario a la Salve.", 
-      de: "Hl. Alfons von Liguori. Klassische Verteidigung der Marienverehrung und Kommentar zum Salve Regina." 
-    } 
-  },
+  
   { 
     id: 'w_newman_development', 
     startYear: 1845, 
@@ -8049,19 +8037,7 @@ export const WRITINGS: TimelineEvent[] = [
       de: "Johannes Calvins systematische Darstellung der protestantischen Theologie. Sie präsentiert ein düsteres Bild von Gott als willkürlichem Tyrannen, der Seelen unabhängig von ihren Taten zur Hölle vorbestimmt. Sie greift die Messe, das Priestertum und das Papsttum an und legt das Fundament für eine starre Theokratie."
     }
   },
-  {
-    id: 'w_ignatius_exercises',
-    startYear: 1548,
-    endYear: 1548,
-    type: 'writing',
-    name: { en: "The Spiritual Exercises", fr: "Les Exercices Spirituels", es: "Ejercicios Espirituales", de: "Die Exerzitien" },
-    description: {
-      en: "The masterpiece of St. Ignatius of Loyola, founder of the Jesuits. These meditations teach total submission to God and the Church ('Thinking with the Church'). They became the spiritual engine of the Counter-Reformation, producing countless saints and missionaries who reclaimed Europe for the Faith.",
-      fr: "Le chef-d'œuvre de St Ignace de Loyola, fondateur des Jésuites. Ces méditations enseignent la soumission totale à Dieu et à l'Église ('Sentir avec l'Église'). Elles sont devenues le moteur spirituel de la Contre-Réforme, produisant d'innombrables saints et missionnaires.",
-      es: "La obra maestra de San Ignacio de Loyola, fundador de los Jesuitas. Estas meditaciones enseñan la sumisión total a Dios y a la Iglesia ('Sentir con la Iglesia'). Se convirtieron en el motor espiritual de la Contrarreforma, produciendo innumerables santos y misioneros.",
-      de: "Das Meisterwerk des Hl. Ignatius von Loyola, Gründer der Jesuiten. Diese Meditationen lehren die völlige Unterwerfung unter Gott und die Kirche ('Denken mit der Kirche'). Sie wurden zum geistlichen Motor der Gegenreformation und brachten zahllose Heilige und Missionare hervor."
-    }
-  },
+  
   {
     id: 'w_cranmer_prayerbook',
     startYear: 1549,
@@ -8101,19 +8077,7 @@ export const WRITINGS: TimelineEvent[] = [
       de: "Beauftragt vom Konzil von Trient, um die Verbreitung protestantischer Irrtümer zu bekämpfen. Er bot eine klare, systematische und autoritative Erklärung der katholischen Lehre für Pastoren. Er diente vierhundert Jahre lang als Goldstandard für den Religionsunterricht."
     }
   },
-  {
-    id: 'w_teresa_castle',
-    startYear: 1577,
-    endYear: 1577,
-    type: 'writing',
-    name: { en: "The Interior Castle", fr: "Le Château intérieur", es: "Las Moradas", de: "Die innere Burg" },
-    description: {
-      en: "St. Teresa of Avila's mystical masterpiece describing the soul's journey through seven mansions to union with God. In an age of rebellion and noise, Teresa called the Church back to the silence of prayer and the pursuit of holiness, showing that the true reform is internal.",
-      fr: "Le chef-d'œuvre mystique de St Thérèse d'Avila décrivant le voyage de l'âme à travers sept demeures vers l'union avec Dieu. À une époque de rébellion, Thérèse a rappelé l'Église au silence de la prière et à la poursuite de la sainteté, montrant que la vraie réforme est intérieure.",
-      es: "La obra maestra mística de Santa Teresa de Ávila que describe el viaje del alma a través de siete moradas hasta la unión con Dios. En una época de rebelión, Teresa llamó a la Iglesia al silencio de la oración y la búsqueda de la santidad, mostrando que la verdadera reforma es interior.",
-      de: "Das mystische Meisterwerk der Hl. Teresa von Ávila, das die Reise der Seele durch sieben Wohnungen zur Vereinigung mit Gott beschreibt. In einer Zeit der Rebellion rief Teresa die Kirche zurück zur Stille des Gebets und zeigte, dass die wahre Reform innerlich ist."
-    }
-  },
+  
   {
     id: 'w_john_cross_night',
     startYear: 1579,
@@ -8205,19 +8169,7 @@ export const WRITINGS: TimelineEvent[] = [
       de: "Eine Sammlung von Traktaten des Hl. Franz von Sales zur Bekehrung der calvinistischen Region Chablais. Mit Sanftmut und Logik zeigte er den Mangel an Autorität protestantischer Pastoren auf. Seine Bemühungen brachten 72.000 Protestanten zurück zum Glauben."
     }
   },
-  {
-    id: 'w_sales_devout',
-    startYear: 1609,
-    endYear: 1609,
-    type: 'writing',
-    name: { en: "Introduction to the Devout Life", fr: "Introduction à la vie dévote", es: "Introducción a la vida devota", de: "Anleitung zum frommen Leben" },
-    description: {
-      en: "A classic by St. Francis de Sales showing that holiness is possible for laypeople in the world, not just monks. It countered the Protestant claim that Catholicism created a spiritual elite while neglecting the common man. It teaches how to turn daily work and trials into prayer.",
-      fr: "Un classique de St François de Sales montrant que la sainteté est possible pour les laïcs dans le monde. Il contrait l'affirmation protestante selon laquelle le catholicisme créait une élite spirituelle. Il enseigne comment transformer le travail quotidien et les épreuves en prière.",
-      es: "Un clásico de San Francisco de Sales que muestra que la santidad es posible para los laicos en el mundo. Contrarrestó la afirmación protestante de que el catolicismo creaba una élite espiritual. Enseña cómo convertir el trabajo diario y las pruebas en oración.",
-      de: "Ein Klassiker des Hl. Franz von Sales, der zeigt, dass Heiligkeit für Laien in der Welt möglich ist. Er widersprach der protestantischen Behauptung, der Katholizismus schaffe eine geistliche Elite. Er lehrt, wie man tägliche Arbeit und Prüfungen in Gebet verwandelt."
-    }
-  },
+  
   {
     id: 'w_montfort_mary',
     startYear: 1712,
@@ -8244,19 +8196,7 @@ export const WRITINGS: TimelineEvent[] = [
       de: "Die leidenschaftliche Verteidigung der Jungfrau Maria als Mittlerin aller Gnaden durch den Hl. Alfons von Liguori. Geschrieben gegen kalten Rationalismus und protestantische Skepsis, beweist es Marias mächtige Fürsprache für Sünder."
     }
   },
-  {
-    id: 'w_newman_development',
-    startYear: 1845,
-    endYear: 1845,
-    type: 'writing',
-    name: { en: "Essay on the Development of Christian Doctrine", fr: "Essai sur le développement de la doctrine chrétienne", es: "Ensayo sobre el desarrollo de la doctrina cristiana", de: "Über die Entwicklung der Glaubenslehre" },
-    description: {
-      en: "Written by John Henry Newman as he converted from Anglicanism to Catholicism. He demonstrates that Protestantism is a static corruption, whereas Catholicism is the vibrant, organic growth of the original seed planted by Christ. He famously concluded: 'To be deep in history is to cease to be a Protestant'.",
-      fr: "Écrit par John Henry Newman lors de sa conversion de l'anglicanisme au catholicisme. Il démontre que le protestantisme est une corruption statique, tandis que le catholicisme est la croissance organique de la semence originale. Il a conclu : 'Approfondir l'histoire, c'est cesser d'être protestant'.",
-      es: "Escrito por John Henry Newman durante su conversión del anglicanismo. Demuestra que el protestantismo es una corrupción estática, mientras que el catolicismo es el crecimiento orgánico de la semilla original. Concluyó famosamente: 'Profundizar en la historia es dejar de ser protestante'.",
-      de: "Geschrieben von John Henry Newman während seiner Konversion. Er zeigt, dass der Protestantismus eine statische Korruption ist, während der Katholizismus das organische Wachstum der ursprünglichen Saat ist. Er schloss berühmt: 'Tief in der Geschichte zu sein bedeutet, aufzuhören, Protestant zu sein'."
-    }
-  },
+
   {
     id: 'w_piusix_syllabus',
     startYear: 1864,
@@ -8281,19 +8221,6 @@ export const WRITINGS: TimelineEvent[] = [
       fr: "Encyclique du pape Léon XIII restaurant la philosophie de St Thomas d'Aquin. Contre la confusion des philosophies modernes nées du subjectivisme de la Réforme, le Pape a désigné le thomisme comme le guide le plus sûr, lançant un renouveau intellectuel massif.",
       es: "Encíclica del Papa León XIII restaurando la filosofía de Santo Tomás de Aquino. Contra la confusión de las filosofías modernas nacidas del subjetivismo de la Reforma, el Papa señaló al tomismo como la guía más segura, lanzando un renacimiento intelectual masivo.",
       de: "Enzyklika von Papst Leo XIII. zur Wiederherstellung der Philosophie des Hl. Thomas von Aquin. Gegen die Verwirrung moderner Philosophien, die aus dem Subjektivismus der Reformation entstanden, wies der Papst auf den Thomismus als sichersten Führer hin."
-    }
-  },
-  {
-    id: 'w_piusx_pascendi',
-    startYear: 1907,
-    endYear: 1907,
-    type: 'writing',
-    name: { en: "Pascendi Dominici Gregis", fr: "Pascendi Dominici Gregis", es: "Pascendi Dominici Gregis", de: "Pascendi Dominici Gregis" },
-    description: {
-      en: "St. Pius X's encyclical condemning Modernism as the 'synthesis of all heresies'. It exposed how Protestant critical methods were infiltrating the Church to destroy dogma from within. The Pope imposed the Oath Against Modernism to protect the clergy from these insidious errors.",
-      fr: "Encyclique de St Pie X condamnant le modernisme comme la 'synthèse de toutes les hérésies'. Elle exposait comment les méthodes critiques protestantes infiltraient l'Église pour détruire le dogme de l'intérieur. Le Pape a imposé le Serment antimoderniste pour protéger le clergé.",
-      es: "Encíclica de San Pío X condenando el Modernismo como la 'síntesis de todas las herejías'. Expuso cómo los métodos críticos protestantes se infiltraban en la Iglesia para destruir el dogma desde dentro. El Papa impuso el Juramento Antimodernista para proteger al clero.",
-      de: "Enzyklika des Hl. Pius X., die den Modernismus als 'Synthese aller Häresien' verurteilt. Sie deckte auf, wie protestantische kritische Methoden die Kirche infiltrierten, um das Dogma von innen zu zerstören. Der Papst führte den Antimodernisteneid ein, um den Klerus zu schützen."
     }
   }
 
