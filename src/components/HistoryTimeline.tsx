@@ -339,18 +339,13 @@ export default function HistoryTimeline() {
     });
   }, [allEvents, selectedTypes, searchTags, language, searchMode]);
 
-
-
   const { positionedEvents, totalLanes } = useMemo(() => {
     const lanes: number[] = []; 
     const positioned = filteredEvents.map(event => {
       if (event.startYear === undefined) return null;
       const startPixel = (event.startYear - DATA_START_YEAR) * pixelsPerYear;
       const duration = (event.endYear || event.startYear) - event.startYear;
-
-      // Logic updated for mobile: 20 years minimum visual width
-      const minWidth = isMobile ? (20 * pixelsPerYear) : 140; 
-      
+      const minWidth = isMobile ? 125 : 140; 
       const widthPixel = Math.max(duration * pixelsPerYear, minWidth);
       const endPixel = startPixel + widthPixel + (isMobile ? 10 : 20);
 
@@ -370,8 +365,6 @@ export default function HistoryTimeline() {
     }).filter(e => e !== null);
     return { positionedEvents: positioned, totalLanes: lanes.length };
   }, [filteredEvents, pixelsPerYear, isMobile]);
-
-  
 
   // --- 6. SCROLL & ZOOM LOGIC ---
   const handleMainScroll = () => { if (scrollContainerRef.current) setScrollLeft(scrollContainerRef.current.scrollLeft); };
