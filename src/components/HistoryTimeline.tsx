@@ -535,6 +535,9 @@ export default function HistoryTimeline() {
   const ticks = [];
   for (let y = DATA_START_YEAR; y <= DATA_END_YEAR; y += tickInterval) ticks.push(y);
 
+  // FIXED: Clamped Scroll Left to prevent elastic scroll from moving visual bar outside
+  const clampedScrollLeft = Math.max(0, Math.min(scrollLeft, totalContentWidth - containerWidth));
+
   return (
     <div className="w-full min-h-screen bg-[#050505] text-white pt-24 px-4 pb-12 flex flex-col gap-6">
       <style>{`
@@ -722,7 +725,8 @@ export default function HistoryTimeline() {
           ref={miniMapRef} onPointerDown={(e)=>{e.preventDefault();isDraggingMiniMap.current=true;(e.target as HTMLElement).setPointerCapture(e.pointerId);if(miniMapRef.current){const r=miniMapRef.current.getBoundingClientRect();jumpToPercentage((e.clientX-r.left)/r.width);}}} onPointerMove={(e)=>{if(isDraggingMiniMap.current&&miniMapRef.current){e.preventDefault();const r=miniMapRef.current.getBoundingClientRect();jumpToPercentage((e.clientX-r.left)/r.width);}}} onPointerUp={(e)=>{isDraggingMiniMap.current=false;(e.target as HTMLElement).releasePointerCapture(e.pointerId);}} onPointerLeave={(e)=>{isDraggingMiniMap.current=false;(e.target as HTMLElement).releasePointerCapture(e.pointerId);}}
         >
           <div className="absolute inset-0 flex items-center justify-between px-3 pointer-events-none z-0"><span className="text-[10px] text-gray-500 font-mono font-bold">0 AD</span><span className="text-[10px] text-gray-500 font-mono font-bold">2100</span></div>
-          <div className="absolute top-0 bottom-0 bg-blue-600 border-x border-white/20 z-10 cursor-grab active:cursor-grabbing hover:bg-blue-500 transition-colors rounded-sm shadow-lg pointer-events-none" style={{ left: `${(scrollLeft / (totalContentWidth||1)) * 100}%`, width: `${Math.min(100, (containerWidth / (totalContentWidth||1)) * 100)}%` }} />
+          {/* FIXED: Using clampedScrollLeft to ensure bar stays within bounds even with elastic scrolling */}
+          <div className="absolute top-0 bottom-0 bg-blue-600 border-x border-white/20 z-10 cursor-grab active:cursor-grabbing hover:bg-blue-500 transition-colors rounded-sm shadow-lg pointer-events-none" style={{ left: `${(clampedScrollLeft / (totalContentWidth||1)) * 100}%`, width: `${Math.min(100, (containerWidth / (totalContentWidth||1)) * 100)}%` }} />
         </div>
       </div>
 
@@ -730,7 +734,7 @@ export default function HistoryTimeline() {
       <div className="container mx-auto w-full max-w-[98%] lg:max-w-7xl flex-1 flex flex-col min-h-[60vh]">
         <div className="relative w-full h-full flex-1 border border-gray-700 rounded-xl bg-[#080808] shadow-2xl overflow-hidden flex flex-col select-none">
           
-          {/* UPDATED: "No events" message moved here (OUTSIDE scroll container) */}
+          {/* FIXED: Moved "No events" message OUTSIDE scroll container so it's always visible */}
           {positionedEvents.length === 0 && (
             <div className={cn("absolute z-50 left-1/2 top-16 -translate-x-1/2 text-gray-500 text-center w-full px-4", isMobile ? "text-sm" : "text-lg")}>
               No events match the selected filters.
@@ -747,10 +751,11 @@ export default function HistoryTimeline() {
             onMouseLeave={handleTimelineMouseLeave}
             style={{ scrollBehavior: 'auto', touchAction: 'auto' }}
           >
-            <div className="relative" style={{ width: `${totalContentWidth}px`, height: '100%', minHeight: `${containerStyleHeight}px` }}>
+            {/* FIXED: Added overflow-hidden to clip events extending past 2100 */}
+            <div className="relative overflow-hidden" style={{ width: `${totalContentWidth}px`, height: '100%', minHeight: `${containerStyleHeight}px` }}>
               <div className="absolute inset-0 pointer-events-none opacity-20" style={{ backgroundImage: `linear-gradient(to right, #333 1px, transparent 1px)`, backgroundSize: `${100 * pixelsPerYear}px 100%` }} />
               
-              {/* Sticky Top Axis - Reduced to Z-20 */}
+              {/* Sticky Top Axis */}
               <div className="sticky top-0 left-0 right-0 h-12 border-b border-gray-800 bg-[#0a0a0a]/95 backdrop-blur-md z-20 flex items-end shadow-md pointer-events-none">
                  {ticks.map(year => (
                    <div key={year} className="absolute bottom-0 flex flex-col items-center" style={{ left: `${(year - DATA_START_YEAR) * pixelsPerYear}px` }}>
