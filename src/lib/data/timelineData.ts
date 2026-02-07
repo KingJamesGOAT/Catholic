@@ -5851,7 +5851,26 @@ export const POPES: TimelineEvent[] = [
       es: "Primer Papa jesuita y latinoamericano. Misericordia, pobres, ecología ('Laudato Si').", 
       de: "Erster Jesuit und Lateinamerikaner. Barmherzigkeit, Arme, Schöpfung ('Laudato Si')." 
     } 
-  }
+  },
+
+ {
+  id: 'p267',
+  startYear: 2026,
+  endYear: 2026,
+  type: 'pope',
+  name: {
+    en: "Leo XIV",
+    fr: "Léon XIV",
+    es: "León XIV",
+    de: "Leo XIV"
+  },
+  description: {
+    en: "Successor of Pope Francis. Emphasizes spiritual renewal, dialogue, and continuity of moral teaching in the modern world.",
+    fr: "Successeur du pape François. Met l’accent sur le renouveau spirituel, le dialogue et la continuité de l’enseignement moral dans le monde moderne.",
+    es: "Sucesor del papa Francisco. Enfatiza la renovación espiritual, el diálogo y la continuidad de la enseñanza moral en el mundo moderno.",
+    de: "Nachfolger von Papst Franziskus. Betont geistliche Erneuerung, Dialog und die Kontinuität der moralischen Lehre in der modernen Welt."
+  }
+}
 
 ];
 
