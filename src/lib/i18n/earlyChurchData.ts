@@ -1974,12 +1974,12 @@ export const earlyChurchTopics: EarlyChurchTopic[] = [
   },
 
   {
-    id: "papacy-invincibility",
-    title: {
-      en: "The Papacy and the Invincibility of the Church",
-      fr: "La Papauté et l'Invincibilité de l'Église",
-      es: "El Papado y la Invencibilidad de la Iglesia",
-      de: "Das Papsttum und die Unbesiegbarkeit der Kirche",
+    "id": "papacy-indefectibility",
+    "title": {
+        "en": "The Papacy and the Indefectibility of the Church",
+        "fr": "La Papauté et l'Indéfectibilité de l'Église",
+        "es": "El Papado y la Indefectibilidad de la Iglesia",
+        "de": "Das Papsttum und die Unzerstörbarkeit der Kirche"
     },
     shortTitle: {
       en: "Papacy",
