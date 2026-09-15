@@ -4364,10 +4364,10 @@ export const POPES: TimelineEvent[] = [
     type: 'pope', 
     name: { en: "St. Leo IX", fr: "Saint Léon IX", es: "San León IX", de: "Hl. Leo IX." }, 
     description: { 
-      en: "A great reformer who traveled Europe fighting simony and clerical marriage. During his reign, the Great Schism with the East (1054) occurred.", 
-      fr: "Grand réformateur, il parcourut l'Europe contre la simonie. Durant son règne survint le Grand Schisme avec l'Orient (1054).", 
-      es: "Gran reformador que viajó por Europa contra la simonía. Durante su reinado ocurrió el Gran Cisma con Oriente (1054).", 
-      de: "Großer Reformer, bekämpfte Simonie in Europa. Während seiner Zeit geschah das Morgenländische Schisma (1054)." 
+      en: "A major reformer who traveled Europe renewing Church discipline. He sought unity with the Christian East, though the events marking the Great Schism of 1054 occurred shortly after his death.", 
+      fr: "Grand réformateur, il parcourut l'Europe pour restaurer la discipline dans l'Église. Soucieux de l'unité chrétienne, c'est peu après sa mort que survinrent les événements du Grand Schisme de 1054.", 
+      es: "Gran reformador que recorrió Europa para renovar la disciplina eclesial. Buscó la unidad con el Oriente cristiano, aunque los sucesos del Gran Cisma de 1054 ocurrieron poco después de su muerte.", 
+      de: "Bedeutender Reformpapst, der durch Europa reiste, um die kirchliche Ordnung zu erneuern. Er bemühte sich um die Einheit der Kirche; das Schisma von 1054 brach kurz nach seinem Tod aus." 
     } 
   },
   { 
