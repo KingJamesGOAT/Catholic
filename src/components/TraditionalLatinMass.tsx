@@ -161,60 +161,38 @@ export default function TraditionalLatinMass({ onBack }: TraditionalLatinMassPro
 
 
       {/* French-only YouTube Playlist */}
-{language === "fr" && (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.5 }}
-    className="mb-24"
-  >
-    {/* Playlist Header */}
-    <div className="text-center mb-8">
-      <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 rounded-full border border-[#fe9a00]/30 bg-[#fe9a00]/10 text-[#fe9a00] text-sm font-medium">
-        <Play size={14} className="fill-current" />
-        Série vidéo
-      </div>
+        {language === "fr" && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mb-24"
+          >
+            {/* Playlist Title */}
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 tracking-tight">
+                LA MESSE, TRÉSOR DE LA FOI
+              </h2>
 
-      <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 tracking-tight">
-        LA MESSE, TRÉSOR DE LA FOI
-      </h2>
+              <p className="text-[#fe9a00] font-serif italic text-lg">
+                Une série de Claves
+              </p>
+            </div>
 
-      <p className="text-[#fe9a00] font-serif italic text-lg">
-        Une série de Claves
-      </p>
-    </div>
-
-    {/* YouTube Playlist Player */}
-    <div className="relative w-full max-w-5xl mx-auto rounded-2xl overflow-hidden border border-gray-800 shadow-2xl bg-gray-900">
-
-      <div className="aspect-video w-full">
-        <iframe
-          src="https://www.youtube.com/embed?listType=playlist&list=PL6NDK3UYRshoamZtcZPY2NHGx4zNFPeQ8&hl=fr&controls=1"
-          title="La Messe, trésor de la foi - Claves"
-          className="w-full h-full border-0"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        />
-      </div>
-
-    </div>
-
-    {/* Open Playlist on YouTube */}
-    <div className="flex justify-center mt-6">
-      <a
-        href="https://youtube.com/playlist?list=PL6NDK3UYRshoamZtcZPY2NHGx4zNFPeQ8"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-gray-700 bg-gray-900 text-gray-200 hover:border-[#fe9a00]/50 hover:text-[#fe9a00] transition-all duration-300"
-      >
-        <Play size={16} className="fill-current" />
-        Voir toutes les vidéos
-      </a>
-    </div>
-  </motion.div>
-)}
+            {/* Embedded YouTube Playlist */}
+<div className="relative w-full max-w-5xl mx-auto aspect-video rounded-2xl overflow-hidden border border-gray-800 shadow-2xl bg-gray-900">
+  <iframe
+    src="https://www.youtube.com/embed?listType=playlist&list=PL6NDK3UYRshoamZtcZPY2NHGx4zNFPeQ8&hl=fr&controls=1"
+    title="La Messe, trésor de la foi - Claves"
+    className="absolute inset-0 w-full h-full border-0"
+    loading="lazy"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowFullScreen
+  />
+</div>
+          </motion.div>
+        )}
         
 
         {/* Deep Dive Section */}
