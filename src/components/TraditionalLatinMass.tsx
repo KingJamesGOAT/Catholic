@@ -159,6 +159,42 @@ export default function TraditionalLatinMass({ onBack }: TraditionalLatinMassPro
           </div>
         </div>
 
+
+      {/* French-only YouTube Playlist */}
+        {language === "fr" && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mb-24"
+          >
+            {/* Playlist Title */}
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 tracking-tight">
+                LA MESSE, TRÉSOR DE LA FOI
+              </h2>
+
+              <p className="text-[#fe9a00] font-serif italic text-lg">
+                Une série de Claves
+              </p>
+            </div>
+
+            {/* Embedded YouTube Playlist */}
+            <div className="relative w-full max-w-5xl mx-auto aspect-video rounded-2xl overflow-hidden border border-gray-800 shadow-2xl bg-gray-900">
+              <iframe
+                src="https://www.youtube.com/embed?listType=playlist&list=PL6NDK3UYRshoamZtcZPY2NHGx4zNFPeQ8&hl=fr"
+                title="La Messe, trésor de la foi - Claves"
+                className="absolute inset-0 w-full h-full border-0"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          </motion.div>
+        )}
+        
+
         {/* Deep Dive Section */}
         <div className="space-y-8">
           <motion.div 
