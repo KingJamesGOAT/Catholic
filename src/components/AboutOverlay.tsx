@@ -387,7 +387,10 @@ export default function AboutOverlay() {
             </button>
 
             {/* Tabs Grid */}
-            <div className="grid grid-cols-3 gap-2 bg-gray-900/50 p-1 rounded-xl border border-gray-800/50 mr-8">
+            <div
+              className="grid grid-cols-3 gap-2 bg-gray-900/50 p-1 rounded-xl border border-gray-800/50 mr-8"
+              style={{ gridTemplateColumns: "repeat(3, minmax(0, 1fr))" }}
+            >
               {(
                 ["mission", "author", "channels"] as const
               ).map((tab) => (
