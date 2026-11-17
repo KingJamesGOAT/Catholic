@@ -1,7 +1,5 @@
 
-  # Catholic Foundations Website Design
-
-  This is a code bundle for Catholic Foundations Website Design. The original project is available at https://www.figma.com/design/E0Rw33EfVNeuwUi0up5USr/Catholic-Foundations-Website-Design.
+  # Catholic Foundations Website
 
   ## Running the code
 
