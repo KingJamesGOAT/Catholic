@@ -5,7 +5,6 @@ import {
   X,
   Target,
   User,
-  Mail,
   Menu,
   MoreVertical,
   Search,
@@ -17,7 +16,7 @@ import { aboutTranslations } from "../lib/i18n/aboutTranslations";
 import { t } from "../lib/i18n/translations";
 import { useIsMobile } from "./ui/use-mobile";
 
-type Tab = "mission" | "author" | "contact" | "channels";
+type Tab = "mission" | "author" | "channels";
 
 export default function AboutOverlay() {
   const [isOpen, setIsOpen] = useState(false);
@@ -278,42 +277,6 @@ export default function AboutOverlay() {
           </motion.div>
         );
 
-      case "contact":
-        return (
-          <motion.div
-            key="contact"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="space-y-6"
-          >
-            <div className="flex flex-col items-center md:items-start">
-              <div className="w-12 h-12 rounded-full bg-green-900/30 flex items-center justify-center mb-4 border border-green-500/30">
-                <Mail className="text-green-400" size={24} />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-2">
-                {t(trans.contact.title, language)}
-              </h3>
-            </div>
-            <p className="text-gray-300 leading-relaxed text-sm md:text-lg">
-              {t(trans.contact.text, language)}
-            </p>
-
-            <a
-              href={`mailto:${trans.contact.email}`}
-              className="inline-flex items-center gap-3 px-6 py-4 bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-xl transition-all group w-full md:w-auto justify-center"
-            >
-              <Mail
-                size={20}
-                className="text-gray-400 group-hover:text-white transition-colors"
-              />
-              <span className="text-blue-400 font-medium group-hover:text-blue-300 break-all">
-                {trans.contact.email}
-              </span>
-            </a>
-          </motion.div>
-        );
-
       case "channels":
         return (
           <motion.div
@@ -381,7 +344,7 @@ export default function AboutOverlay() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         className="fixed bottom-6 left-6 z-50 h-11 min-w-[44px] px-0 md:px-4 flex items-center justify-center rounded-full bg-black/20 backdrop-blur-xl border border-white/10 text-white/60 transition-all duration-300 hover:bg-black/40 hover:text-white hover:border-white/20 shadow-2xl gap-2"
-        aria-label="About & Contact"
+        aria-label={t(trans.infoButton, language)}
       >
         <Info strokeWidth={1.5} size={20} />
         <span className="hidden md:inline font-medium text-sm">
@@ -424,9 +387,9 @@ export default function AboutOverlay() {
             </button>
 
             {/* Tabs Grid */}
-            <div className="grid grid-cols-4 gap-2 bg-gray-900/50 p-1 rounded-xl border border-gray-800/50 mr-8">
+            <div className="grid grid-cols-3 gap-2 bg-gray-900/50 p-1 rounded-xl border border-gray-800/50 mr-8">
               {(
-                ["mission", "author", "contact", "channels"] as const
+                ["mission", "author", "channels"] as const
               ).map((tab) => (
                 <button
                   key={tab}

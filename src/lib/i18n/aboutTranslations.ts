@@ -86,28 +86,6 @@ export const aboutTranslations = {
   de: "Mein Name ist Steve Benjamin. Ich bin 23 Jahre alt und studiere Medieningenieurwesen in der Schweiz. Ich wuchs in einem evangelikalen Elternhaus auf und gründete eine Jugendgruppe, in der wir andere herausforderten, ihren Glauben zu verteidigen. Dort wurde mir klar, dass den protestantischen Antworten zur frühen Kirche und zum biblischen Kanon oft die Tiefe fehlte.\n\nMitte 2024 begann ich, meine eigene Position zu hinterfragen, angezogen von der intellektuellen Ehrlichkeit der katholischen Apologetik zu Themen wie der Eucharistie, dem Papsttum und Maria. Das Lesen der Kirchenväter war ein Wendepunkt, insbesondere des Hl. Ignatius zur Eucharistie, des Hl. Clemens zur Autorität und des Hl. Irenäus zur Häresie.\n\nAnfang 2025 nahm ich den katholischen Glauben an. Es war eine logische Schlussfolgerung, die ich nicht vermeiden konnte. Eine Zeit lang versuchte ich, Ausreden zu finden, um in meinem protestantischen Glauben zu bleiben, weil ich Angst hatte, meine Gemeinschaft zu verlieren. Aber am Ende hatte ich mein Leben auf der Suche nach der Wahrheit aufgebaut, und als ich sie fand, musste ich sie demütig annehmen.",
 },
   },
-  contact: {
-    button: {
-      en: "Contact",
-      fr: "Contact",
-      es: "Contacto",
-      de: "Kontakt",
-    },
-    title: {
-      en: "Connect",
-      fr: "Connecter",
-      es: "Conectar",
-      de: "Verbinden",
-    },
-    text: {
-      en: "If you want to contact me for questions or just to share your own journey, please feel free to reach out via email.",
-      fr: "Si vous souhaitez me contacter pour des questions ou simplement pour partager votre propre parcours, n'hésitez pas à me joindre par email.",
-      es: "Si deseas contactarme para preguntas o simplemente para compartir tu propio viaje, no dudes en comunicarte por correo electrónico.",
-      de: "Wenn Sie mich wegen Fragen kontaktieren oder einfach nur Ihre eigene Reise teilen möchten, können Sie mich gerne per E-Mail erreichen.",
-    },
-    email: "catholicfoundations.contact@gmail.com",
-  },
-
   channels: {
     button: {
       en: "Channels",
@@ -125,9 +103,9 @@ export const aboutTranslations = {
 
   // --- ADD THIS PART ---
   infoButton: {
-    en: "Info & Contact",
-    fr: "Infos & Contact",
-    es: "Info y Contacto",
-    de: "Info & Kontakt",
+    en: "Info",
+    fr: "Infos",
+    es: "Info",
+    de: "Info",
   },
 };
